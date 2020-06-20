@@ -1,26 +1,27 @@
 ---
-title: "Manuscript Title"
+title: "PhenoPLIER: transfer learning for transcriptome-wide association studies"
 keywords:
-  - markdown
-  - publishing
-  - manubot
+  - transfer learning
+  - MultiPLIER
+  - PhenomeXcan
+  - TWAS
 lang: en-US
 authors:
-  - github: johndoe
-    name: John Doe
-    initials: JD
-    orcid: XXXX-XXXX-XXXX-XXXX
-    twitter: johndoe
-    email: john.doe@something.com
+  - github: miltondp
+    name: Milton Pividori
+    initials: MP
+    orcid: 0000-0002-3035-4403
+    twitter: miltondp
+    email: miltondp@gmail.com
     affiliations:
-      - Department of Something, University of Whatever
-    funders:
-      - Grant XXXXXXXX
-  - github: janeroe
-    name: Jane Roe
-    initials: JR
-    orcid: XXXX-XXXX-XXXX-XXXX
-    email: jane.roe@whatever.edu
+      - Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA
+#    funders:
+#      - Grant XXXXXXXX
+  - github: cgreene
+    name: Casey Greene
+    initials: CG
+    orcid: 0000-0001-8713-9213
+    twitter: GreeneScientist
+    email: greenescientist@gmail.com
     affiliations:
-      - Department of Something, University of Whatever
-      - Department of Whatever, University of Something
+      - Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA
