@@ -1,22 +1,26 @@
 [
-{
-  "id": "url:https://github.com/manubot/rootstock",
-  "type": "webpage",
-  "URL": "https://github.com/manubot/rootstock",
-  "title": "manubot/rootstock GitHub repository",
-  "container-title": "GitHub",
-  "issued": {
-    "date-parts": [
-      [
-        2019
-      ]
-    ]
-  },
-  "author": [
-    {
-      "given": "Daniel",
-      "family": "Himmelstein"
-    }
-  ]
-}
+  {
+    "type": "article-journal",
+    "id": "Vinh2010",
+    "container-title": "Journal of Machine Learning Research",
+    "author": [
+      {
+        "family": "Vinh",
+        "given": "Nguyen Xuan"
+      },
+      {
+        "family": "Epps",
+        "given": "Julien"
+      },
+      {
+        "family": "Bailey",
+        "given": "James"
+      }
+    ],
+    "volume": "95",
+    "issue": "11",
+    "page": "2837-2854",
+    "title": "Information Theoretic Measures for Clusterings Comparison: Variants, Properties, Normalization and Correction for Chance",
+    "URL": "http://www.jmlr.org/papers/v11/vinh10a.html"
+  }
 ]
