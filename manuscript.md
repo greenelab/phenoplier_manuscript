@@ -4,7 +4,7 @@ author-meta:
 - Jane Roe
 bibliography:
 - content/manual-references.json
-date-meta: '2020-06-18'
+date-meta: '2020-07-02'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -23,9 +23,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Manuscript Title" />
 
-  <meta name="dc.date" content="2020-06-18" />
+  <meta name="dc.date" content="2020-07-02" />
 
-  <meta name="citation_publication_date" content="2020-06-18" />
+  <meta name="citation_publication_date" content="2020-07-02" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -67,11 +67,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/5ccfc7b99cd52817f82a6372c6200b25aa3bfbaf/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/86dd17189eb93d81b708f77068a218a0cd3f6616/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/5ccfc7b99cd52817f82a6372c6200b25aa3bfbaf/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/86dd17189eb93d81b708f77068a218a0cd3f6616/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/5ccfc7b99cd52817f82a6372c6200b25aa3bfbaf/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/86dd17189eb93d81b708f77068a218a0cd3f6616/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,10 +103,10 @@ title: Manuscript Title
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/5ccfc7b99cd52817f82a6372c6200b25aa3bfbaf/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/86dd17189eb93d81b708f77068a218a0cd3f6616/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@5ccfc7b](https://github.com/greenelab/phenoplier_manuscript/tree/5ccfc7b99cd52817f82a6372c6200b25aa3bfbaf)
-on June 18, 2020.
+from [greenelab/phenoplier_manuscript@86dd171](https://github.com/greenelab/phenoplier_manuscript/tree/86dd17189eb93d81b708f77068a218a0cd3f6616)
+on July 2, 2020.
 </em></small>
 
 ## Authors

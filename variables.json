@@ -7,12 +7,12 @@
       "manubot"
     ],
     "lang": "en-US",
-    "date-meta": "2020-06-18",
+    "date-meta": "2020-07-02",
     "author-meta": [
       "John Doe",
       "Jane Roe"
     ],
-    "header-includes": "<!--\nManubot generated metadata rendered from header-includes-template.html.\nSuggest improvements at https://github.com/manubot/manubot/blob/master/manubot/process/header-includes-template.html\n-->\n<meta name=\"dc.format\" content=\"text/html\" />\n<meta name=\"dc.title\" content=\"Manuscript Title\" />\n<meta name=\"citation_title\" content=\"Manuscript Title\" />\n<meta property=\"og:title\" content=\"Manuscript Title\" />\n<meta property=\"twitter:title\" content=\"Manuscript Title\" />\n<meta name=\"dc.date\" content=\"2020-06-18\" />\n<meta name=\"citation_publication_date\" content=\"2020-06-18\" />\n<meta name=\"dc.language\" content=\"en-US\" />\n<meta name=\"citation_language\" content=\"en-US\" />\n<meta name=\"dc.relation.ispartof\" content=\"Manubot\" />\n<meta name=\"dc.publisher\" content=\"Manubot\" />\n<meta name=\"citation_journal_title\" content=\"Manubot\" />\n<meta name=\"citation_technical_report_institution\" content=\"Manubot\" />\n<meta name=\"citation_author\" content=\"John Doe\" />\n<meta name=\"citation_author_institution\" content=\"Department of Something, University of Whatever\" />\n<meta name=\"citation_author_orcid\" content=\"XXXX-XXXX-XXXX-XXXX\" />\n<meta name=\"twitter:creator\" content=\"@johndoe\" />\n<meta name=\"citation_author\" content=\"Jane Roe\" />\n<meta name=\"citation_author_institution\" content=\"Department of Something, University of Whatever\" />\n<meta name=\"citation_author_institution\" content=\"Department of Whatever, University of Something\" />\n<meta name=\"citation_author_orcid\" content=\"XXXX-XXXX-XXXX-XXXX\" />\n<link rel=\"canonical\" href=\"https://greenelab.github.io/phenoplier_manuscript/\" />\n<meta property=\"og:url\" content=\"https://greenelab.github.io/phenoplier_manuscript/\" />\n<meta property=\"twitter:url\" content=\"https://greenelab.github.io/phenoplier_manuscript/\" />\n<meta name=\"citation_fulltext_html_url\" content=\"https://greenelab.github.io/phenoplier_manuscript/\" />\n<meta name=\"citation_pdf_url\" content=\"https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"application/pdf\" href=\"https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"text/html\" href=\"https://greenelab.github.io/phenoplier_manuscript/v/5ccfc7b99cd52817f82a6372c6200b25aa3bfbaf/\" />\n<meta name=\"manubot_html_url_versioned\" content=\"https://greenelab.github.io/phenoplier_manuscript/v/5ccfc7b99cd52817f82a6372c6200b25aa3bfbaf/\" />\n<meta name=\"manubot_pdf_url_versioned\" content=\"https://greenelab.github.io/phenoplier_manuscript/v/5ccfc7b99cd52817f82a6372c6200b25aa3bfbaf/manuscript.pdf\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"twitter:card\" content=\"summary_large_image\" />\n<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\" href=\"https://manubot.org/favicon-192x192.png\" />\n<link rel=\"mask-icon\" href=\"https://manubot.org/safari-pinned-tab.svg\" color=\"#ad1457\" />\n<meta name=\"theme-color\" content=\"#ad1457\" />\n<!-- end Manubot generated metadata -->",
+    "header-includes": "<!--\nManubot generated metadata rendered from header-includes-template.html.\nSuggest improvements at https://github.com/manubot/manubot/blob/master/manubot/process/header-includes-template.html\n-->\n<meta name=\"dc.format\" content=\"text/html\" />\n<meta name=\"dc.title\" content=\"Manuscript Title\" />\n<meta name=\"citation_title\" content=\"Manuscript Title\" />\n<meta property=\"og:title\" content=\"Manuscript Title\" />\n<meta property=\"twitter:title\" content=\"Manuscript Title\" />\n<meta name=\"dc.date\" content=\"2020-07-02\" />\n<meta name=\"citation_publication_date\" content=\"2020-07-02\" />\n<meta name=\"dc.language\" content=\"en-US\" />\n<meta name=\"citation_language\" content=\"en-US\" />\n<meta name=\"dc.relation.ispartof\" content=\"Manubot\" />\n<meta name=\"dc.publisher\" content=\"Manubot\" />\n<meta name=\"citation_journal_title\" content=\"Manubot\" />\n<meta name=\"citation_technical_report_institution\" content=\"Manubot\" />\n<meta name=\"citation_author\" content=\"John Doe\" />\n<meta name=\"citation_author_institution\" content=\"Department of Something, University of Whatever\" />\n<meta name=\"citation_author_orcid\" content=\"XXXX-XXXX-XXXX-XXXX\" />\n<meta name=\"twitter:creator\" content=\"@johndoe\" />\n<meta name=\"citation_author\" content=\"Jane Roe\" />\n<meta name=\"citation_author_institution\" content=\"Department of Something, University of Whatever\" />\n<meta name=\"citation_author_institution\" content=\"Department of Whatever, University of Something\" />\n<meta name=\"citation_author_orcid\" content=\"XXXX-XXXX-XXXX-XXXX\" />\n<link rel=\"canonical\" href=\"https://greenelab.github.io/phenoplier_manuscript/\" />\n<meta property=\"og:url\" content=\"https://greenelab.github.io/phenoplier_manuscript/\" />\n<meta property=\"twitter:url\" content=\"https://greenelab.github.io/phenoplier_manuscript/\" />\n<meta name=\"citation_fulltext_html_url\" content=\"https://greenelab.github.io/phenoplier_manuscript/\" />\n<meta name=\"citation_pdf_url\" content=\"https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"application/pdf\" href=\"https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"text/html\" href=\"https://greenelab.github.io/phenoplier_manuscript/v/86dd17189eb93d81b708f77068a218a0cd3f6616/\" />\n<meta name=\"manubot_html_url_versioned\" content=\"https://greenelab.github.io/phenoplier_manuscript/v/86dd17189eb93d81b708f77068a218a0cd3f6616/\" />\n<meta name=\"manubot_pdf_url_versioned\" content=\"https://greenelab.github.io/phenoplier_manuscript/v/86dd17189eb93d81b708f77068a218a0cd3f6616/manuscript.pdf\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"twitter:card\" content=\"summary_large_image\" />\n<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\" href=\"https://manubot.org/favicon-192x192.png\" />\n<link rel=\"mask-icon\" href=\"https://manubot.org/safari-pinned-tab.svg\" color=\"#ad1457\" />\n<meta name=\"theme-color\" content=\"#ad1457\" />\n<!-- end Manubot generated metadata -->",
     "bibliography": [
       "content/manual-references.json"
     ],
@@ -22,7 +22,7 @@
     "manubot-clear-requests-cache": false
   },
   "manubot": {
-    "date": "June 18, 2020",
+    "date": "July 2, 2020",
     "authors": [
       {
         "github": "johndoe",
@@ -72,17 +72,17 @@
       "repo_slug": "greenelab/phenoplier_manuscript",
       "repo_owner": "greenelab",
       "repo_name": "phenoplier_manuscript",
-      "commit": "5ccfc7b99cd52817f82a6372c6200b25aa3bfbaf",
-      "triggering_commit": "5ccfc7b99cd52817f82a6372c6200b25aa3bfbaf",
-      "build_url": "https://github.com/greenelab/phenoplier_manuscript/commit/5ccfc7b99cd52817f82a6372c6200b25aa3bfbaf/checks",
+      "commit": "86dd17189eb93d81b708f77068a218a0cd3f6616",
+      "triggering_commit": "86dd17189eb93d81b708f77068a218a0cd3f6616",
+      "build_url": "https://github.com/greenelab/phenoplier_manuscript/commit/86dd17189eb93d81b708f77068a218a0cd3f6616/checks",
       "job_url": "https://github.com/greenelab/phenoplier_manuscript/runs/run3"
     },
     "html_url": "https://greenelab.github.io/phenoplier_manuscript/",
     "pdf_url": "https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf",
-    "html_url_versioned": "https://greenelab.github.io/phenoplier_manuscript/v/5ccfc7b99cd52817f82a6372c6200b25aa3bfbaf/",
-    "pdf_url_versioned": "https://greenelab.github.io/phenoplier_manuscript/v/5ccfc7b99cd52817f82a6372c6200b25aa3bfbaf/manuscript.pdf",
+    "html_url_versioned": "https://greenelab.github.io/phenoplier_manuscript/v/86dd17189eb93d81b708f77068a218a0cd3f6616/",
+    "pdf_url_versioned": "https://greenelab.github.io/phenoplier_manuscript/v/86dd17189eb93d81b708f77068a218a0cd3f6616/manuscript.pdf",
     "manubot_version": "0.3.1",
-    "rootstock_commit": "adc7b8bca102594d8e7d46d93071c4018f0c6944",
+    "rootstock_commit": "ce827c7789163dca33dfa3bd2df7aa828e57485d",
     "manuscript_stats": {
       "word_count": 246
     }
