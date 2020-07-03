@@ -4,11 +4,11 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="John Doe" />
-  <meta name="author" content="Jane Roe" />
-  <meta name="dcterms.date" content="2020-07-02" />
-  <meta name="keywords" content="markdown, publishing, manubot" />
-  <title>Manuscript Title</title>
+  <meta name="author" content="Milton Pividori" />
+  <meta name="author" content="Casey S. Greene" />
+  <meta name="dcterms.date" content="2020-07-03" />
+  <meta name="keywords" content="transfer learning, MultiPLIER, PhenomeXcan, TWAS" />
+  <title>PhenoPLIER: integrating transcriptome-wide association studies with machine learning</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -25,35 +25,36 @@
   Suggest improvements at https://github.com/manubot/manubot/blob/master/manubot/process/header-includes-template.html
   -->
   <meta name="dc.format" content="text/html" />
-  <meta name="dc.title" content="Manuscript Title" />
-  <meta name="citation_title" content="Manuscript Title" />
-  <meta property="og:title" content="Manuscript Title" />
-  <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2020-07-02" />
-  <meta name="citation_publication_date" content="2020-07-02" />
+  <meta name="dc.title" content="PhenoPLIER: integrating transcriptome-wide association studies with machine learning" />
+  <meta name="citation_title" content="PhenoPLIER: integrating transcriptome-wide association studies with machine learning" />
+  <meta property="og:title" content="PhenoPLIER: integrating transcriptome-wide association studies with machine learning" />
+  <meta property="twitter:title" content="PhenoPLIER: integrating transcriptome-wide association studies with machine learning" />
+  <meta name="dc.date" content="2020-07-03" />
+  <meta name="citation_publication_date" content="2020-07-03" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
   <meta name="dc.publisher" content="Manubot" />
   <meta name="citation_journal_title" content="Manubot" />
   <meta name="citation_technical_report_institution" content="Manubot" />
-  <meta name="citation_author" content="John Doe" />
-  <meta name="citation_author_institution" content="Department of Something, University of Whatever" />
-  <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" />
-  <meta name="twitter:creator" content="@johndoe" />
-  <meta name="citation_author" content="Jane Roe" />
-  <meta name="citation_author_institution" content="Department of Something, University of Whatever" />
-  <meta name="citation_author_institution" content="Department of Whatever, University of Something" />
-  <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" />
+  <meta name="citation_author" content="Milton Pividori" />
+  <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA 19104" />
+  <meta name="citation_author_orcid" content="0000-0002-3035-4403" />
+  <meta name="twitter:creator" content="@miltondp" />
+  <meta name="citation_author" content="Casey S. Greene" />
+  <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104" />
+  <meta name="citation_author_institution" content="Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Philadelphia, PA, USA 19102" />
+  <meta name="citation_author_orcid" content="0000-0001-8713-9213" />
+  <meta name="twitter:creator" content="@GreeneScientist" />
   <link rel="canonical" href="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta property="og:url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta property="twitter:url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/86dd17189eb93d81b708f77068a218a0cd3f6616/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/86dd17189eb93d81b708f77068a218a0cd3f6616/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/86dd17189eb93d81b708f77068a218a0cd3f6616/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/11b238c045659083e95dc2a2d51178a4f180ec07/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/11b238c045659083e95dc2a2d51178a4f180ec07/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/11b238c045659083e95dc2a2d51178a4f180ec07/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -63,35 +64,38 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Manuscript Title</h1>
+<h1 class="title">PhenoPLIER: integrating transcriptome-wide association studies with machine learning</h1>
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/phenoplier_manuscript/v/86dd17189eb93d81b708f77068a218a0cd3f6616/">permalink</a>)
+(<a href="https://greenelab.github.io/phenoplier_manuscript/v/11b238c045659083e95dc2a2d51178a4f180ec07/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/86dd17189eb93d81b708f77068a218a0cd3f6616">greenelab/phenoplier_manuscript@86dd171</a>
-on July 2, 2020.
+from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/11b238c045659083e95dc2a2d51178a4f180ec07">greenelab/phenoplier_manuscript@11b238c</a>
+on July 3, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
-<li><p><strong>John Doe</strong><br>
+<li><p><strong>Milton Pividori</strong><br>
 <img src="images/orcid.svg" class="inline_icon" alt="ORCID icon" />
-<a href="https://orcid.org/XXXX-XXXX-XXXX-XXXX">XXXX-XXXX-XXXX-XXXX</a>
+<a href="https://orcid.org/0000-0002-3035-4403">0000-0002-3035-4403</a>
 · <img src="images/github.svg" class="inline_icon" alt="GitHub icon" />
-<a href="https://github.com/johndoe">johndoe</a>
+<a href="https://github.com/miltondp">miltondp</a>
 · <img src="images/twitter.svg" class="inline_icon" alt="Twitter icon" />
-<a href="https://twitter.com/johndoe">johndoe</a><br>
+<a href="https://twitter.com/miltondp">miltondp</a><br>
 <small>
-Department of Something, University of Whatever
-· Funded by Grant XXXXXXXX
+Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA 19104
+· Funded by The Gordon and Betty Moore Foundation GBMF 4552; The National Human Genome Research Institute (R01 HG010067)
 </small></p></li>
-<li><p><strong>Jane Roe</strong><br>
+<li><p><strong>Casey S. Greene</strong><br>
 <img src="images/orcid.svg" class="inline_icon" alt="ORCID icon" />
-<a href="https://orcid.org/XXXX-XXXX-XXXX-XXXX">XXXX-XXXX-XXXX-XXXX</a>
+<a href="https://orcid.org/0000-0001-8713-9213">0000-0001-8713-9213</a>
 · <img src="images/github.svg" class="inline_icon" alt="GitHub icon" />
-<a href="https://github.com/janeroe">janeroe</a><br>
+<a href="https://github.com/cgreene">cgreene</a>
+· <img src="images/twitter.svg" class="inline_icon" alt="Twitter icon" />
+<a href="https://twitter.com/GreeneScientist">GreeneScientist</a><br>
 <small>
-Department of Something, University of Whatever; Department of Whatever, University of Something
+Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104; Childhood Cancer Data Lab, Alex’s Lemonade Stand Foundation, Philadelphia, PA, USA 19102
+· Funded by The Gordon and Betty Moore Foundation GBMF 4552; The National Human Genome Research Institute (R01 HG010067); The National Cancer Institute (R01 CA237170)
 </small></p></li>
 </ul>
 <h2 class="page_break_before" id="abstract">Abstract</h2>
