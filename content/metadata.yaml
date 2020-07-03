@@ -1,5 +1,5 @@
 ---
-title: "PhenoPLIER: transfer learning for transcriptome-wide association studies"
+title: "PhenoPLIER: integrating transcriptome-wide association studies with machine learning"
 keywords:
   - transfer learning
   - MultiPLIER
@@ -14,14 +14,20 @@ authors:
     twitter: miltondp
     email: miltondp@gmail.com
     affiliations:
-      - Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA
-#    funders:
-#      - Grant XXXXXXXX
+      - Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA 19104
+    funders:
+      - The Gordon and Betty Moore Foundation GBMF 4552
+      - The National Human Genome Research Institute (R01 HG010067)
   - github: cgreene
-    name: Casey Greene
-    initials: CG
+    name: Casey S. Greene
+    initials: CSG
     orcid: 0000-0001-8713-9213
     twitter: GreeneScientist
     email: greenescientist@gmail.com
     affiliations:
-      - Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA
+      - Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104
+      - Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Philadelphia, PA, USA 19102
+    funders:
+      - The Gordon and Betty Moore Foundation GBMF 4552
+      - The National Human Genome Research Institute (R01 HG010067)
+      - The National Cancer Institute (R01 CA237170)
