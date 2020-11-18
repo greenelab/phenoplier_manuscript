@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Milton Pividori" />
   <meta name="author" content="Casey S. Greene" />
-  <meta name="dcterms.date" content="2020-07-08" />
+  <meta name="dcterms.date" content="2020-11-18" />
   <meta name="keywords" content="transfer learning, MultiPLIER, PhenomeXcan, TWAS" />
   <title>PhenoPLIER: integrating transcriptome-wide association studies with machine learning</title>
   <style>
@@ -29,8 +29,8 @@
   <meta name="citation_title" content="PhenoPLIER: integrating transcriptome-wide association studies with machine learning" />
   <meta property="og:title" content="PhenoPLIER: integrating transcriptome-wide association studies with machine learning" />
   <meta property="twitter:title" content="PhenoPLIER: integrating transcriptome-wide association studies with machine learning" />
-  <meta name="dc.date" content="2020-07-08" />
-  <meta name="citation_publication_date" content="2020-07-08" />
+  <meta name="dc.date" content="2020-11-18" />
+  <meta name="citation_publication_date" content="2020-11-18" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -52,9 +52,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/a296e236265e30abd8255e687924df3f9365a7bd/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/a296e236265e30abd8255e687924df3f9365a7bd/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/a296e236265e30abd8255e687924df3f9365a7bd/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/835bbfca0fbbff7f4a55eb90d5b877dbe26b07f6/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/835bbfca0fbbff7f4a55eb90d5b877dbe26b07f6/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/835bbfca0fbbff7f4a55eb90d5b877dbe26b07f6/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -70,10 +70,10 @@
 Text in <span style="color: red">red</span> or with <span class="red">red</span> background are internal comments</span></p>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/phenoplier_manuscript/v/a296e236265e30abd8255e687924df3f9365a7bd/">permalink</a>)
+(<a href="https://greenelab.github.io/phenoplier_manuscript/v/835bbfca0fbbff7f4a55eb90d5b877dbe26b07f6/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/a296e236265e30abd8255e687924df3f9365a7bd">greenelab/phenoplier_manuscript@a296e23</a>
-on July 8, 2020.
+from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/835bbfca0fbbff7f4a55eb90d5b877dbe26b07f6">greenelab/phenoplier_manuscript@835bbfc</a>
+on November 18, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -491,7 +491,8 @@ Nguyen Xuan Vinh, Julien Epps, James Bailey<br />
     }
 
     /* figure image element */
-    figure img {
+    figure > img,
+    figure > svg {
         max-width: 100%;
         display: block;
         margin-left: auto;
@@ -499,7 +500,8 @@ Nguyen Xuan Vinh, Julien Epps, James Bailey<br />
     }
 
     /* figure auto-number */
-    img + figcaption > span:first-of-type {
+    img + figcaption > span:first-of-type,
+    svg + figcaption > span:first-of-type {
         font-weight: bold;
         margin-right: 5px;
     }
@@ -1079,7 +1081,8 @@ Nguyen Xuan Vinh, Julien Epps, James Bailey<br />
         }
 
         /* tooltip copy of <img> */
-        #tooltip_content > figure > img {
+        #tooltip_content > figure > img,
+        #tooltip_content > figure > svg {
             max-height: 260px;
         }
 
@@ -1330,7 +1333,7 @@ Nguyen Xuan Vinh, Julien Epps, James Bailey<br />
 
     @media only screen {
         /* regular <img> in document when hovered */
-        .lightbox_document_img:hover {
+        img.lightbox_document_img:hover {
             cursor: pointer;
         }
 
@@ -3012,8 +3015,6 @@ Nguyen Xuan Vinh, Julien Epps, James Bailey<br />
             window.addEventListener('load', start);
     })();
 </script>
-<!-- table of contents plugin -->
-
 <script>
     (function() {
         // /////////////////////////
@@ -3036,10 +3037,13 @@ Nguyen Xuan Vinh, Julien Epps, James Bailey<br />
             // which types of elements to add links for, in
             // "document.querySelector" format
             typesQuery: 'h1, h2, h3',
-            // whether default behavior is to be closed ('false'), open
-            // ('true'), or only open when screen wide enough to fit panel
-            // ('auto'). note: still always starts closed when page loads.
-            open: 'auto',
+            // whether toc starts open. use 'true' or 'false', or 'auto' to
+            // use 'true' behavior when screen wide enough and 'false' when not
+            startOpen: 'false',
+            // whether toc closes when clicking on toc link. use 'true' or
+            // 'false', or 'auto' to use 'false' behavior when screen wide
+            // enough and 'true' when not
+            clickClose: 'auto',
             // if list item is more than this many characters, text will be
             // truncated
             charLimit: '50',
@@ -3064,13 +3068,21 @@ Nguyen Xuan Vinh, Julien Epps, James Bailey<br />
             if (!panel)
                 return;
             makeEntries(panel);
+            // attach panel to document after making entries, so 'toc' heading
+            // in panel isn't included in toc
             document.body.insertBefore(panel, document.body.firstChild);
 
-            closePanel();
+            // initial panel state
+            if (
+                options.startOpen === 'true' ||
+                (options.startOpen === 'auto' && !isSmallScreen())
+            )
+                openPanel();
+            else
+                closePanel();
 
             // attach click, scroll, and hash change listeners to window
             window.addEventListener('click', onClick);
-            window.addEventListener('touchstart', onClick);
             window.addEventListener('scroll', onScroll);
             window.addEventListener('hashchange', onScroll);
             window.addEventListener('keyup', onKeyUp);
@@ -3088,25 +3100,10 @@ Nguyen Xuan Vinh, Julien Epps, James Bailey<br />
             return window.innerWidth < 816 + 260 * 2;
         }
 
-        // open/close panel based on option and screen size
-        function openOrClosePanel() {
-            if (
-                options.open === 'true' ||
-                (options.open === 'auto' && !isSmallScreen())
-            )
-                openPanel();
-            else
-                closePanel();
-        }
-
         // when mouse is clicked anywhere in window
         function onClick() {
-            const panel = document.getElementById('toc_panel');
-            if (!panel)
-                return;
-
-            if (panel.dataset.open === 'true')
-                openOrClosePanel();
+            if (isSmallScreen())
+                closePanel();
         }
 
         // when window is scrolled or hash changed
@@ -3188,8 +3185,8 @@ Nguyen Xuan Vinh, Julien Epps, James Bailey<br />
             button.classList.add('icon_button');
 
             // create header text
-            const text = document.createElement('h3');
-            text.innerHTML = 'View Table of Contents';
+            const text = document.createElement('h4');
+            text.innerHTML = 'Table of Contents';
 
             // create container for toc list
             const list = document.createElement('div');
@@ -3266,8 +3263,14 @@ Nguyen Xuan Vinh, Julien Epps, James Bailey<br />
         }
 
         // when link is clicked
-        function onLinkClick() {
-            openOrClosePanel();
+        function onLinkClick(event) {
+            if (
+                options.clickClose === 'true' ||
+                (options.clickClose === 'auto' && isSmallScreen())
+            )
+                closePanel();
+            else
+                openPanel();
         }
 
         // open panel if closed, close if opened
@@ -4077,7 +4080,7 @@ Nguyen Xuan Vinh, Julien Epps, James Bailey<br />
             window.addEventListener('load', start);
     })();
 </script>
-<!-- math plugin configuration -->
+<!-- mathjax plugin configuration -->
 
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -4085,12 +4088,16 @@ Nguyen Xuan Vinh, Julien Epps, James Bailey<br />
         "HTML-CSS": { linebreaks: { automatic: true } },
         "SVG": { linebreaks: { automatic: true } },
         "fast-preview": { disabled: true }
-    });
+  });
 </script>
 
-<!-- math plugin -->
+<!-- mathjax plugin -->
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+    integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A=="
+    crossorigin="anonymous"
+>
     // /////////////////////////
     // DESCRIPTION
     // /////////////////////////

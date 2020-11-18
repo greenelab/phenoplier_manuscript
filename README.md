@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/greenelab/phenoplier_manuscript/tree/gh-pages) branch hosts the contents of this directory at <https://greenelab.github.io/phenoplier_manuscript/>.
-The permalink for this webpage version is <https://greenelab.github.io/phenoplier_manuscript/v/a296e236265e30abd8255e687924df3f9365a7bd/>.
+The permalink for this webpage version is <https://greenelab.github.io/phenoplier_manuscript/v/835bbfca0fbbff7f4a55eb90d5b877dbe26b07f6/>.
 To redirect to the permalink for the latest manuscript version at anytime, use the link <https://greenelab.github.io/phenoplier_manuscript/v/freeze/>.
 
 ## Files
@@ -35,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`a296e236265e30abd8255e687924df3f9365a7bd`](https://github.com/greenelab/phenoplier_manuscript/commit/a296e236265e30abd8255e687924df3f9365a7bd).
+[`835bbfca0fbbff7f4a55eb90d5b877dbe26b07f6`](https://github.com/greenelab/phenoplier_manuscript/commit/835bbfca0fbbff7f4a55eb90d5b877dbe26b07f6).
