@@ -1,0 +1,5 @@
+#!/bin/bash
+
+export BUILD_PDF=false
+export BUILD_DOCX=false
+
