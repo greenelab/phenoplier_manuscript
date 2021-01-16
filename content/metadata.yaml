@@ -1,6 +1,7 @@
 ---
-title: "PhenoPLIER: integrating transcriptome-wide association studies with machine learning"
+title: "Integrating transcriptome-wide association studies with gene co-expression patterns"
 keywords:
+  - gene co-expression
   - transfer learning
   - MultiPLIER
   - PhenomeXcan
@@ -18,6 +19,17 @@ authors:
     funders:
       - The Gordon and Betty Moore Foundation GBMF 4552
       - The National Human Genome Research Institute (R01 HG010067)
+  - name: Marylyn D. Ritchie
+    initials: MDR
+    orcid: 0000-0002-1208-1720
+    twitter: MarylynRitchie
+    email: marylyn@pennmedicine.upenn.edu
+    affiliations:
+      - Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA
+    # funders:
+    #   - The Gordon and Betty Moore Foundation GBMF 4552
+    #   - The National Human Genome Research Institute (R01 HG010067)
+    #   - The National Cancer Institute (R01 CA237170)
   - github: cgreene
     name: Casey S. Greene
     initials: CSG
