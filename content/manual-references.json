@@ -22,5 +22,24 @@
     "page": "2837-2854",
     "title": "Information Theoretic Measures for Clusterings Comparison: Variants, Properties, Normalization and Correction for Chance",
     "URL": "http://www.jmlr.org/papers/v11/vinh10a.html"
+  },
+  {
+    "type": "article-journal",
+    "id": "Strehl2002",
+    "container-title": "Journal of Machine Learning Research",
+    "author": [
+      {
+        "family": "Strehl",
+        "given": "Alexander"
+      },
+      {
+        "family": "Joydeep",
+        "given": "Ghosh"
+      }
+    ],
+    "volume": "3",
+    "page": "583-617",
+    "title": "Cluster Ensembles – A Knowledge Reuse Framework for Combining Multiple Partitions",
+    "URL": "https://www.jmlr.org/papers/v3/strehl02a.html"
   }
 ]
