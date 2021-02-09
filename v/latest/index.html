@@ -57,27 +57,34 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/e24fd8104cafffab9158dd91c2128dbd6a7f7bcc/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/e24fd8104cafffab9158dd91c2128dbd6a7f7bcc/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/e24fd8104cafffab9158dd91c2128dbd6a7f7bcc/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/8520e8669798beffeffa36a22c5874a5cda29fed/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/8520e8669798beffeffa36a22c5874a5cda29fed/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/8520e8669798beffeffa36a22c5874a5cda29fed/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
   <link rel="mask-icon" href="https://manubot.org/safari-pinned-tab.svg" color="#ad1457" />
   <meta name="theme-color" content="#ad1457" />
   <!-- end Manubot generated metadata -->
+  
+  <!-- pandoc-eqnos: equation style -->
+  <style>
+    .eqnos { display: inline-block; position: relative; width: 100%; }
+    .eqnos br { display: none; }
+    .eqnos-number { position: absolute; right: 0em; top: 50%; line-height: 0; }
+  </style>
 </head>
 <body>
 <header id="title-block-header">
 <h1 class="title">Integrating transcriptome-wide association studies with gene co-expression patterns</h1>
 </header>
 <p><span class="banner lightblue"><i class="fas fa-info-circle fa-lg"></i> <strong>Draft manuscript</strong><br>
-Text in <span style="color: red">red</span> or with <span class="red">red</span> background are internal comments</span></p>
+Text in <span style="color: red">red</span>/<span class="red">red</span> are internal comments</span></p>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/phenoplier_manuscript/v/e24fd8104cafffab9158dd91c2128dbd6a7f7bcc/">permalink</a>)
+(<a href="https://greenelab.github.io/phenoplier_manuscript/v/8520e8669798beffeffa36a22c5874a5cda29fed/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/e24fd8104cafffab9158dd91c2128dbd6a7f7bcc">greenelab/phenoplier_manuscript@e24fd81</a>
+from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/8520e8669798beffeffa36a22c5874a5cda29fed">greenelab/phenoplier_manuscript@8520e86</a>
 on February 9, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -115,156 +122,357 @@ Center for Health AI, University of Colorado School of Medicine, Aurora, CO, 800
 </ul>
 <h2 class="page_break_before" id="abstract">Abstract</h2>
 <h2 id="results">Results</h2>
-<h3 id="integrating-gene-expression-patterns-with-transcription-wide-association-studies">Integrating gene expression patterns with transcription-wide association studies</h3>
-<div style="color: red">
-<p>Here we introduce our framework to perform the integration.</p>
-<ol type="1">
-<li>Brief background on MultiPLIER and PhenomeXcan.</li>
-<li>Explanation of the framework depicted in Figure <a href="#fig:entire_process">1</a> and its components.</li>
-<li>Description of initial set of results matching previous findings (neutrophil counts).</li>
-</ol>
-</div>
+<!--
+
+Some papers that might be interesting:
+
+https://www.nature.com/articles/s41591-020-01221-5
+Air pollution linked to neurodegeneration markers
+
+-->
+<h3 id="phenoplier-integrates-twas-with-gene-co-expression-patterns">PhenoPLIER integrates TWAS with gene co-expression patterns</h3>
 <div id="fig:entire_process" class="fignos">
 <figure>
-<img src="images/entire_process/entire_process.svg?sanitize=true" style="height:5in" alt="" /><figcaption><span>Figure 1:</span> <strong>Schematic of the PhenoPLIER framework.</strong>
+<img src="images/entire_process/entire_process.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 1:</span> <strong>Schematic of the PhenoPLIER framework.</strong>
 <!--  -->
-The integration process (middle) between MultiPLIER <span class="citation" data-cites="14rnBunuZ">[<a href="#ref-14rnBunuZ" role="doc-biblioref">1</a>]</span> (top) and
-PhenomeXcan <span class="citation" data-cites="147c7GYQ">[<a href="#ref-147c7GYQ" role="doc-biblioref">2</a>]</span> (bottom) outputs matrix <span class="math inline">\(\mathbf{T}\)</span>. LV603 was previously
-found to be strongly associated with neutrophil estimates when projecting a dataset of systemic
-lupus erythematosus (SLE) whole blood (WB) into MultiPLIER. After integration, this LV is also
-highly associated with blood count traits, with neutrophil counts at the top.
+<strong>a)</strong> The integration process between gene co-expression patterns from
+MultiPLIER <span class="citation" data-cites="14rnBunuZ">[<a href="#ref-14rnBunuZ" role="doc-biblioref">1</a>]</span> (top) and TWAS results from
+PhenomeXcan <span class="citation" data-cites="lY5ln3dB">[<a href="#ref-lY5ln3dB" role="doc-biblioref">2</a>]</span>. PhenoPLIER projects gene-based
+association results on ~4,000 traits to a latent space learned from a
+large gene expression compendium (recount2 <span class="citation" data-cites="6SPTvFXq">[<a href="#ref-6SPTvFXq" role="doc-biblioref">3</a>]</span>). This
+generates matrix <span class="math inline">\(\mathbf{\hat{M}}\)</span>, where each trait is now described by
+latent variables/gene modules.
+<!--  -->
+<strong>b)</strong> After the integration process, we found that neutrophil counts and other
+white blood cells (bottom) were ranked among the top 10 traits for an LV that
+was termed a neutrophil signature in the original MultiPLIER study. Genes in
+this LV were found to be expressed in related cell types (top).
+<code class="red">Improve cell types/tissues figure</code>
 <!--  --></figcaption>
 </figure>
 </div>
-<h3 id="projecting-associations-into-a-gene-expression-latent-space-reveals-expected-and-novel-trait-clusters">Projecting associations into a gene expression latent space reveals expected and novel trait clusters</h3>
+<p>MultiPLIER <span class="citation" data-cites="14rnBunuZ">[<a href="#ref-14rnBunuZ" role="doc-biblioref">1</a>]</span> is a recent computational strategy
+that extracts patterns of co-expressed genes from large gene expression
+datasets. The approach uses an unsupervised matrix factorization method that was
+employed to extract latent variables from recount2 <span class="citation" data-cites="6SPTvFXq">[<a href="#ref-6SPTvFXq" role="doc-biblioref">3</a>]</span>.
+<!--  -->
+The latent variables (LVs), essentially gene modules, then revealed biological
+processes associated with disease severity in rare disease datasets that were
+too small for effective model training. These gene sets aligned well with known
+biological pathways and predicted cell type composition, even though the
+approach was not explicitly designed for this goal.</p>
+<p>Although the authors showed that certain patterns learned by MultiPLIER resemble
+known biology, most of the LVs identified are completely unknown. Since genes in
+these modules vary together in certain cell types and tissues, it’s expected
+that they may also function together <span class="citation" data-cites="1FVd2WW6G DN7TyZzb">[<a href="#ref-1FVd2WW6G" role="doc-biblioref">4</a>,<a href="#ref-DN7TyZzb" role="doc-biblioref">5</a>]</span>.
+<!--  -->
+To test whether patterns in the expression space match those in the TWAS space,
+we used PhenomeXcan <span class="citation" data-cites="lY5ln3dB">[<a href="#ref-lY5ln3dB" role="doc-biblioref">2</a>]</span>, a massive transcriptome-wide
+association studies (TWAS) resource obtained from the UK Biobank
+<span class="citation" data-cites="nmJxPpE5">[<a href="#ref-nmJxPpE5" role="doc-biblioref">6</a>]</span> and other cohorts (Figure <a href="#fig:entire_process">1</a>
+a). These results were projected to the low-dimensional gene representation
+learned by MultiPLIER using:</p>
+<p><span id="eq:proj" class="eqnos"><span class="math display">\[\hat{\mathbf{M}} = (\mathbf{Z}^{\top} \mathbf{Z} + \lambda_{2} \mathbf{I})^{-1} \mathbf{Z}^{\top} \mathbf{M},\]</span><span class="eqnos-number">(1)</span></span> </p>
+<p>where <span class="math inline">\(\mathbf{M}^{n \times t}\)</span> has gene-trait associations from MultiXcan
+<span class="citation" data-cites="1FFzCXo1s">[<a href="#ref-1FFzCXo1s" role="doc-biblioref">7</a>]</span> (standardized effect sizes) for <span class="math inline">\(n\)</span> genes
+and <span class="math inline">\(t\)</span> traits, <span class="math inline">\(\mathbf{Z}^{n \times l}\)</span> are the gene loadings with <span class="math inline">\(l\)</span> latent
+variables, <span class="math inline">\(\lambda_2\)</span> is the regularization parameter used in the training
+step, and <span class="math inline">\(\hat{\mathbf{M}}^{l \times t}\)</span> is finally the projection of
+<span class="math inline">\(\mathbf{M}\)</span> into the latent space: all traits in PhenomeXcan are now described
+by LVs, thus we can potentially infer the effects of gene modules on different
+human traits. Since the MultiPLIER models also provide the conditions (such as
+cell types and tissues) in which genes in a module are concurringly expressed,
+our approach would also allow to infer the context in which the gene module
+affects a trait or disease.</p>
+<p>In the original MultiPLIER study <span class="citation" data-cites="14rnBunuZ">[<a href="#ref-14rnBunuZ" role="doc-biblioref">1</a>]</span>, the authors
+found an LV significantly associated with previously known neutrophil gene-sets
+and highly correlated with neutrophil estimates from gene expression.
+<!--  -->
+We analyzed this LV using our approach (Figure <a href="#fig:entire_process">1</a> b), and found
+that 1) neutrophil counts and other white blood cell traits from PhenomeXcan
+<span class="citation" data-cites="lY5ln3dB">[<a href="#ref-lY5ln3dB" role="doc-biblioref">2</a>]</span> were ranked among the top 10 traits for this LV,
+and 2) that the genes in this LV are expressed in neuotrophil cells (see more
+details in the supplementary material).
+<!--  -->
+These initial results strongly suggest that shared patterns exist in the gene
+expression space (which has no GTEx samples) and the TWAS space (with gene
+models trained using GTEx v8), and that the approach also allows to infer the
+context-specific effects of gene modules on complex traits.
+<!--  -->
+We will also show how the approach can aid translational efforts by mapping
+pharmacological perturbations to this latent space, enabling to observe which
+compounds affect the transcriptional activity of gene modules.</p>
 <div style="color: red">
-<p>In this section, we already introduced some evidence that the proposal could work. The next step
-(this section) is to cluster traits using the LVs as features.</p>
-<ol type="1">
-<li>Briefly explain idea of clustering traits using LVs.</li>
-<li>Explain methods here, and then we see whether that should be moved elsewhere.
-<ol type="1">
-<li>Dimentionality reduction using UMAP.</li>
-<li>Spectral clustering approach.</li>
-<li>Stability measure to detect best number of clusters.</li>
-<li>Approach to interpret clusters by training a decision tree classifier.</li>
-</ol></li>
-<li>We should have a set of expected results. For instance:
-<ol type="1">
-<li>Keratometry measurements are clustered together.</li>
-<li>Heel bone mineral density are also clustered together.</li>
-<li>See other clusters.</li>
-</ol></li>
-<li>We should also include some “novel” clusters, or expected clusters with some novel traits in it.
-<ol type="1">
-<li>Lipids cluster? I’m working on this now.</li>
-</ol></li>
-<li>Once we focus on a cluster, we provide an interpreation of why those traits are clustered
-together (which LVs are driving the association). Here we’ll need to explain the method we might
-be using for this (decision trees on the original data). This could be a separate section.</li>
-</ol>
+<ul>
+<li>Minor: LV603 is neutrophil-associated, but it is not significantly associated
+with other myeloid lineage cell types (see Figure S2A in MultiPLIER study).
+Maybe we can add a genes-traits figure of MultiXcan and fastENLOC results to
+see this better.</li>
+</ul>
 </div>
-<div id="fig:traits_clusters" class="fignos">
+<h3 id="clusters-of-traits-in-the-gene-module-space-are-affected-by-shared-transcriptional-processes">Clusters of traits in the gene module space are affected by shared transcriptional processes</h3>
+<div id="fig:clusering:design" class="fignos">
 <figure>
-<img src="images/lvs_clustering/traits_clustering.png" style="height:5in" alt="" /><figcaption><span>Figure 2:</span> <strong>Clustering of traits using matrix <span class="math inline">\(\mathbf{T}^{\top}\)</span>.</strong>
+<img src="images/clustering/clustering_design.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 2:</span> <strong>Cluster analysis on traits from PhenomeXcan.</strong>
 <!--  -->
-Estimation of number of clusters using the consensus index method <span class="citation" data-cites="1HaffUr3r">[<a href="#ref-1HaffUr3r" role="doc-biblioref">3</a>]</span>. A spectral clustering
-approach was used on matrix <span class="math inline">\(\mathbf{T}^{\top}\)</span> to group traits. The algorithm was run 100 times for
-each <span class="math inline">\(k\)</span> value from 2 to 20, and the averaged adjusted Rand-index is reported in <span class="math inline">\(y\)</span>-axis (top). A
-partition with <span class="math inline">\(k=13\)</span> was obtained from <span class="math inline">\(\mathbf{T}^{\top}\)</span> (bottom), where ketatometry and heel
-bone mineral density measurements clearly separate from the rest of traits. <code class="red">Add svg version</code>
+<strong>a)</strong> The projection of TWAS results for 3,749 traits to the latent
+representation learned from recount2 are the input data to the clustering
+process. A linear (PCA) and non-linear (UMAP) dimensionality reduction
+techniques are applied to the input data, and the three data versions are
+processed by five different clustering algorithms. These algorithms derive
+partitions from the data using different sets of parameters (such as the number
+of clusters), leading to an ensemble of 4,428 partitions. A coassociation matrix
+is derived by counting how many times a pair of traits were grouped together in
+the ensemble. Finally, a consensus function is applied to the coassociation
+matrix to generate consolidated partitions with different number of clusters.
+These final solutions are represented in the clustering tree (Figure
+<a href="#fig:clustering:tree">3</a>).
+<!--  -->
+<strong>b)</strong> The clusters found by the consensus function are used as labels to train
+a decision tree classifier on the original input data (latent representation),
+which detects the most important LVs that differentiate groups of traits.
 <!--  --></figcaption>
 </figure>
 </div>
-<div id="fig:kera_features" class="fignos">
+<p>All traits in PhenomeXcan were projected into the latent space learned from
+recount2 using Equation (<a href="#eq:proj">1</a>). We conducted cluster analysis using this new
+representation to find groups of traits that are similarly affected by the same
+transcriptional processes.
+<!--  -->
+To avoid using a single clustering algorithm (which implies using a single
+assumption about the structure of the data), we employed a consensus clustering
+approach where different methods with varying sets parameters are applied on the
+same data, and later combined into a consolidated solution
+<span class="citation" data-cites="8js8Q3pF 17CbjLzCP uw3AnEgA">[<a href="#ref-8js8Q3pF" role="doc-biblioref">8</a>,<a href="#ref-17CbjLzCP" role="doc-biblioref">9</a>,<a href="#ref-uw3AnEgA" role="doc-biblioref">10</a>]</span>
+(Figure <a href="#fig:clusering:design">2</a>).
+<!--  -->
+An important property for a successful application of a consensus clustering
+approach is the diversity of the ensemble, understood as the level of
+disagreement between the base clustering solutions
+<span class="citation" data-cites="8js8Q3pF rcTMvL18 t5p3UpxZ">[<a href="#ref-8js8Q3pF" role="doc-biblioref">8</a>,<a href="#ref-rcTMvL18" role="doc-biblioref">11</a>,<a href="#ref-t5p3UpxZ" role="doc-biblioref">12</a>]</span>. A diverse set of solutions can be generated by
+using different data representations (such as dimensionality reductions methods
+or subsets of features), clustering algorithms with distinct assumptions
+(<span class="math inline">\(k\)</span>-means, for instance, assumes hyperspherical clusters), and a varying set of
+algorithm’s parameters (such as the number of clusters or the initial random
+seeds).
+<!--  -->
+In our approach, we performed cluster analysis using five different clustering
+algorithms on three representations of the input data (the original data with
+987 latent variables, its projection into the top 50 principal components, and
+the embedding learned by UMAP <span class="citation" data-cites="157h5hA34">[<a href="#ref-157h5hA34" role="doc-biblioref">13</a>]</span> using 50 components) (see
+Figure <a href="#fig:clusering:design">2</a> a). The clustering methods used cover a wide range
+of different assumptions on cluster shapes and a varying set of parameters such
+as the number of clusters (from 2 to 60), the width of the Gaussian kernel in
+spectral clustering, and other method-specific parameters (see the supplementary
+material for more details).
+<!--  -->
+The process generated an ensemble with 4,428 clustering solutions for all
+traits. This ensemble was used to derive a coassociation matrix between traits
+by counting the number of times a pair of traits was clustered together.
+Finally, a consensus function was applied on the coassociation matrix to derive
+a consolidated solution using the information in the ensemble. For these final
+partitions, we did not select a specific number of clusters, but instead used
+a clustering tree <span class="citation" data-cites="xhtEAzx6">[<a href="#ref-xhtEAzx6" role="doc-biblioref">14</a>]</span> (Figure
+<a href="#fig:clustering:tree">3</a>) to examine how traits were grouped using multiple
+resolutions.
+<!--  -->
+Finally, for the interpretation of the clusters, we trained a decision tree
+classifier (a highly interpretable machine learning model) on the original
+input data using the clusters found as labels. This approach allowed us to
+quickly identify the most important gene modules for the groups of traits found.
+<!--  -->
+More details of the clustering process are available in the supplementary
+material.</p>
+<div id="fig:clustering:tree" class="fignos">
 <figure>
-<img src="images/lvs_clustering/traits_clustering_features.png" style="height:5.5in" alt="" /><figcaption><span>Figure 3:</span> <strong>The top discriminating latent variables for the keratometry cluster.</strong>
+<img src="images/clustering/clustering_tree.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 3:</span> <strong>Clustering tree using multiple resolutions.</strong>
 <!--  -->
-For clustering interpretation, a decision tree classifier was trained using the original data
-(<span class="math inline">\(\mathbf{T}^{\top}\)</span>), the keratometry cluster as positive class, and the rest of traits as
-negative class. The top associated latent variable was LV136, followed by LV767 and LV612 (which
-were detected by removing LV136 and LV767 from the training data, respectively).
-<!--  -->
-<code class="red">Add svg version.</code>
+Clustering tree of the consensus partitions at different resolutions (from 4 to
+36 clusters). Each row represents a partition of the traits, and each circle is
+a cluster from that partition where its size indicates the size of the cluster.
+Arrows indicate how traits in one cluster move across clusters from different
+resolutions.
 <!--  --></figcaption>
 </figure>
 </div>
-<h3 id="analysis-of-keratometry-cluster-reveals-groups-of-genes-associated-with-cardiovascular-related-traits">Analysis of keratometry cluster reveals groups of genes associated with cardiovascular-related traits</h3>
+<p>A clustering tree of the consensus solutions at different
+resolutions is shown in Figure <a href="#fig:clustering:tree">3</a>. For each <span class="math inline">\(k\)</span> (the number of
+clusters), the consensus partition that maximized the agreement with the
+ensemble was selected (see supplementary material). Since it is expected to find
+a subset of resolutions that better represent the patterns among traits, we further
+filtered the consensus partitions by taking those with an agreement value higher
+than the median, which included partitions from 4 to 36 clusters.</p>
+<p>The clusering tree shows four clear branches (from left to right):
+bone-densitometry of heel and keratometry measurements (curvature of the corneal
+surface), haematological assays on platelets and red blood cells, the
+“complex” branch, and anthropometric traits.
+<!--  -->
+The complex branch includes stable clusters at different resolutions, such as 1)
+white blood cell traits, 2) nutrients intake and diet-related, 3) cardiovascular
+diseases (coronary artery disease, myocardial infarction, angina pectoris, among
+others) and related medications, 4) mental health traits related to anxiety, 5)
+asthma, allergic rhinitis, and atopic dermatitis, 6) schizophrenia, educational
+outcomes and fluid intelligence score, 7) breath spirometry, 8) autoimmune
+diseases (celiac disease, hypothyroidism, psoriasis, rheumatoid arthritis,
+systemic lupus erythematosus, among others), 9) skin and hair color, and 10)
+hypertension. In the following sections, we select some of these stable clusters
+to analyze which transcriptional processes are specific to some groups of
+traits.</p>
+<h4 id="cardiovascular-traits">Cardiovascular traits</h4>
 <div style="color: red">
-<p>In this section, we build on our previous results to analyze a single or a couple of LVs. The idea
-is to show raw MultiXcan/fastENLOC results and how individual genes in the module are associated
-with the traits. Based on this, we could provide an interpretation (if possible) on how genes could
-be affecting different and related traits/diseases.</p>
-<p>These are some articles I found relating the trait categories in Figure <a href="#fig:lv136_traits">4</a> (LV136).</p>
-<ol type="1">
-<li>Ocular problems and cardiovascular diseases:
-<ol type="1">
-<li><a href="https://doi.org/10.1155/2017/7125760">(2017) The Relationship Between Cardiovascular Autonomic Dysfunction and Ocular Abnormality
-in Chinese T2DM</a></li>
-<li><a href="https://doi.org/10.1111/aos.13765">(2018) Looking into the eye of patients with chronic obstructive pulmonary disease: an
-opportunity for better microvascular profiling of these complex
-patients</a>
-<ol type="1">
-<li>This one also relates spirometry.</li>
-</ol></li>
-<li><a href="https://doi.org/10.3233/rnn-180880">(2018) Residual Vision Activation and the Brain-Eye-Vascular Triad: Dysregulation,
-Plasticity and Restoration in Low Vision and Blindness - A
-Review</a></li>
-<li><a href="https://doi.org/10.4103/ijo.ijo_330_17">(2017) Evaluating Ocular Blood Flow</a></li>
-</ol></li>
-<li>Spirometry and CVD:
-<ol type="1">
-<li><a href="https://doi.org/10.1016/j.resinv.2019.01.006">(2019) Mysterious link between the restrictive ventilatory impairment in spirometry and
-cardiovascular disease</a></li>
-<li><a href="https://doi.org/10.1016/j.jacc.2018.06.049">(2018) Declining Lung Function and Cardiovascular
-Risk</a></li>
-<li><a href="https://doi.org/10.1513/AnnalsATS.201807-494ED">(2018) Restrictive Spirometry and Cardiovascular Risk: Cause or
-Comorbidity?</a></li>
-<li><a href="https://doi.org/10.1016/j.jsha.2011.01.003">(2011) Assessment of pulmonary function tests in cardiac
-patients</a></li>
-<li>It would be nice to see if the direction of effect of these genes are positive for CVD and
-negative for FEV1.</li>
-</ol></li>
-</ol>
-</div>
-<div id="fig:lv136_traits" class="fignos">
-<figure>
-<img src="images/lvs_analysis/lv136/lv136_traits_multixcan_fastenloc.svg" alt="" /><figcaption><span>Figure 4:</span> <strong>Traits and diseases associated with top genes in LV136.</strong>
-<!--  -->
-Categories of the top 40 traits associated with genes in LV136 (left), and associations of traits
-with the top 20 genes in LV136 (right): S-MultiXcan associations (<span class="math inline">\(-\log_{10}(p\mathrm{-value})\)</span>,
-thresholded at 10) are shown with gradients, whereas fastENLOC colocalization probabilities are
-depicted with different circle sizes (only for <span class="math inline">\(&gt;5\mathrm{\%}\)</span>). Colors used for trait categories
-are the same in both subfigures.
-<!--  --></figcaption>
-</figure>
+<p>See if we are going to analyze this cluster.</p>
+<p>The figures below include examples of the type of figure we can include here:</p>
+<ul>
+<li>Show the LVs that are distinct for this cluster (maybe a small decision tree
+for some of the clusters).</li>
+<li>For those LV, show which cell types/tissues are important (such as Figure
+<a href="#fig:lv136_conditions">4</a> below).</li>
+<li>For some of these LVs, we can include the list of other traits also related
+and gene association results (such as Figure <a href="#fig:lv136_traits">5</a>).</li>
+</ul>
 </div>
 <div id="fig:lv136_conditions" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv136/lv136_cell_types.svg" style="height:3in" alt="" /><figcaption><span>Figure 5:</span> <strong>Cell types found in top five studies (recount2) associated with LV136.</strong>
+<img src="images/lvs_analysis/lv136/lv136_cell_types.svg" style="width:50.0%" alt="" /><figcaption><span>Figure 4:</span> <strong>Cell types/tissues associated with genes in LV136.</strong></figcaption>
+</figure>
+</div>
+<div id="fig:lv136_traits" class="fignos">
+<figure>
+<img src="images/lvs_analysis/lv136/lv136_traits_multixcan_fastenloc.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 5:</span> <strong>Traits associated with genes in LV136.</strong></figcaption>
+</figure>
+</div>
+<h4 id="schizophrenia-educational-attainment-and-intelligence">Schizophrenia, educational attainment and intelligence</h4>
+<div style="color: red">
+<p>See if we are going to analyze this cluster.</p>
+</div>
+<h4 id="asthma-and-allergies">Asthma and allergies</h4>
+<div style="color: red">
+<p>See if we are going to analyze this cluster.</p>
+</div>
+<!-- ::: {style="color: red"}
+Notes:
+
+- this paper should be a good source to explain the asthma cluster:
+https://www.nature.com/articles/ng.3985
+::: -->
+<h3 id="replication-using-penn-medicine-biobank">Replication using Penn Medicine BioBank</h3>
+<div style="color: red">
+<p>Maybe we can incorporate <strong>Binglan’s TWAS results on PMBB</strong> and see if expected
+traits-clusters are correctly predicted.</p>
+</div>
+<!-- #### Keratometry cluster reveals gene-sets associated with cardiovascular-related traits -->
+<!-- 1. Ocular problems and cardiovascular diseases:
+    1. [(2017) The Relationship Between Cardiovascular Autonomic Dysfunction and Ocular Abnormality
+       in Chinese T2DM](https://doi.org/10.1155/2017/7125760)
+    1. [(2018) Looking into the eye of patients with chronic obstructive pulmonary disease: an
+       opportunity for better microvascular profiling of these complex
+       patients](https://doi.org/10.1111/aos.13765)
+        1. This one also relates spirometry.
+    1. [(2018) Residual Vision Activation and the Brain-Eye-Vascular Triad: Dysregulation,
+       Plasticity and Restoration in Low Vision and Blindness - A
+       Review](https://doi.org/10.3233/rnn-180880)
+    1. [(2017) Evaluating Ocular Blood Flow](https://doi.org/10.4103/ijo.ijo_330_17)
+1. Spirometry and CVD:
+    1. [(2019) Mysterious link between the restrictive ventilatory impairment in spirometry and
+       cardiovascular disease](https://doi.org/10.1016/j.resinv.2019.01.006)
+    1. [(2018) Declining Lung Function and Cardiovascular
+       Risk](https://doi.org/10.1016/j.jacc.2018.06.049)
+    1. [(2018) Restrictive Spirometry and Cardiovascular Risk: Cause or
+       Comorbidity?](https://doi.org/10.1513/AnnalsATS.201807-494ED)
+    1. [(2011) Assessment of pulmonary function tests in cardiac
+       patients](https://doi.org/10.1016/j.jsha.2011.01.003)
+    1. It would be nice to see if the direction of effect of these genes are positive for CVD and
+       negative for FEV1. -->
+<h3 id="phenoplier-improves-drug-disease-prediction">PhenoPLIER improves drug-disease prediction</h3>
+<div id="fig:drug_disease:auc_pr" class="fignos">
+<figure>
+<img src="images/drug_disease_prediction/auc_pr.png" style="width:100.0%" alt="" /><figcaption><span>Figure 6:</span> <strong>Drug-disease prediction.</strong>
 <!--  -->
-Genes associated with LV136 are highly expressed in MSC, osteoblast and fibroblast when considering
-all conditions for the given cell types in the top five studies in recount2.
+Explain.
 <!--  -->
-MSC: mesenchymal stem cells; iPSC: induced pluripotent stem cells; ESC: embryonic stem cells.
-<!--  -->
-<code class="red">We should consider more studies maybe, not just the top 5.</code>
-<code class="red">Remove colors.</code>
+AUC: area under the curve; AP: average precision.
 <!--  --></figcaption>
 </figure>
 </div>
-<h3 id="clustering-of-lvs-gene-modules-with-similar-trait-associations">Clustering of LVs (gene modules) with similar trait associations</h3>
+<p>We showed that the latent representation learned in a large gene expression data
+set is helpful to link novel gene sets to complex diseases and the cell types
+where they are expressed.
+<!--  -->
+We reasoned that this representation might be also useful to more
+accurately predict the potential therapeutic effects of drugs. If the gene
+patterns captured by MultiPLIER represent real and possibily unknown biological
+pathways, then our approach might actually produce a more accurate estimation of
+the effects of a perturbed molecular mechanisms on disease, and also how
+pharmacological perturbations affect the process activity.
+<!--  -->
+This would, in addition to connecting gene modules with their context-specific
+effects on complex traits, identify which compounds might provide an avenue to
+alter a dysregulated process activity for therapeutical utility.</p>
+<p>To test this hypothesis, we used a gold standard of drug-disease medical
+indications <span class="citation" data-cites="O21tn8vf 10KA5jTBQ">[<a href="#ref-O21tn8vf" role="doc-biblioref">15</a>,<a href="#ref-10KA5jTBQ" role="doc-biblioref">16</a>]</span> to evaluate
+and compare the prediction performance of both the original gene-disease
+associations from PhenomeXcan, and its projection representing gene
+module-disease associations.
+<!--  -->
+To test this, we used the transcriptional responses to small molecule
+perturbations profiled in LINCS L1000 <span class="citation" data-cites="F7lIlh2N">[<a href="#ref-F7lIlh2N" role="doc-biblioref">17</a>]</span>, which
+were further processed to obtain consensus signatures and map to DrubBank IDs
+<span class="citation" data-cites="6PR8LEXK O21tn8vf 1DJZvtwP1">[<a href="#ref-O21tn8vf" role="doc-biblioref">15</a>,<a href="#ref-6PR8LEXK" role="doc-biblioref">18</a>,<a href="#ref-1DJZvtwP1" role="doc-biblioref">19</a>]</span>.
+<!--  -->
+To compute a drug-disease score, we followed a similar procedure used previously
+<span class="citation" data-cites="17oeJ0CXy">[<a href="#ref-17oeJ0CXy" role="doc-biblioref">20</a>]</span> to anti-correlates gene-traits associations from TWAS and
+expression profiles of drugs using their signed <span class="math inline">\(z\)</span>-scores (see the
+supplementary material). Here we used the dot product between gene-traits
+<span class="math inline">\(z\)</span>-scores and the consensus <span class="math inline">\(z\)</span>-scores in LINCS L1000, which led to a score for
+each drug-disease pair. (<code class="red">Add more details?</code>).
+<!--  -->
+To obtain a drug-disease association for the gene module-mapped TWAS results, we
+first projected LINCS L1000 data into this latent representation using Equation
+(<a href="#eq:proj">1</a>), thus leading to a matrix with the expression profiles of drugs
+mapped to latent variables. This can be interpreted as the effects of compounds
+on gene modules activity. Then, similarly as before, we anti-correlated gene
+module-traits scores and module expression profiles of drugs.</p>
+<p><code class="red">(Add number of drugs, diseases, and final number of mappings)</code>
+<!--  -->
+<!-- Both $\matr{D}$ and $\hat{\matr{D}}$ contain scores for 1170 drugs and 4091 traits,
+which were further mapped to 56 unique Disease Ontology IDs. -->
+<!--  -->
+<!-- Then I assessed the performance of these two approaches using a manually curated list of
+drug-disease associations~\autocite{Himmelstein2017, HimmelsteinPharmaDB2016}.
+97 diseases and 601 compounds in PharmarcotherapyDB~\autocite{Himmelstein2017,
+HimmelsteinPharmaDB2016},
+which contains 755 disease-modifying therapies and 243
+non-indications. After integrating this gold-standard list with the predictions, I
+obtained 458 positive and 136 negative cases for evaluation.
+--></p>
+<!-- Finally, I obtained drug-disease predictions using both the original (gene-based) and
+projected (gene module-based) associations: $\matr{D}=\matr{L}^{\top}\matr{M}$ and
+$\hat{\matr{D}}=\hat{\matr{L}}^{\top}\hat{\matr{M}}$, respectively. -->
+<!--  -->
+<p>The ROC and Precision-Recall (PR) curves comparing both approaches are shown in
+Figure <a href="#fig:drug_disease:auc_pr">6</a>. Notably, the gene module-based approach
+proposed here clearly outperformed the gene-based one, with an area under the
+curve (AUC) of 0.615 vs 0.573, and an average precision (AP) of 0.851 vs 0.841.
+<!--  -->
+This is particularly striking given that the projected TWAS results represent a
+reduced or compressed version of the complete gene-based associations,
+suggesting that a gene module perspective can be more informative, for instance,
+for drug-repurposing scenarios using genetic studies.</p>
 <div style="color: red">
-<p>I’m not sure if it’s a good idea to include this, but I leave it here just in case.</p>
-<p>The idea here is to cluster LVs by seeing how are they associated with different traits. So, taking
-the keratometry cluster shown before as an example, here LV136, LV767, LV612 (and possibly others)
-would be clustered together. The use case would be to start from a trait of interest and see the
-cluster of LVs associated with it.</p>
+<p>Another analysis here could be:</p>
+<ul>
+<li>Try the prediction again by keeping well-aligned LVs only. Do we get the same
+prediction performance?</li>
+</ul>
 </div>
-<h3 id="drugs-associated-with-gene-modules">Drugs associated with gene modules</h3>
-<div style="color: red">
-<p>This section includes the projection of Connectivity Map into the MultiPLIER space.</p>
-</div>
+<!-- ::: {style="color: red"}
+Papers to read:
+- "SubtypeDrug: a software package for prioritization of candidate cancer
+  subtype-specific drugs" https://doi.org/10.1093/bioinformatics/btab011 It
+  might be interesting to see how the predict drug-disease associations when
+  they say "evaluation of drug-disease reverse association"
+::: -->
+<h2 id="discussion">Discussion</h2>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" class="references hanging-indent" role="doc-bibliography">
@@ -274,17 +482,178 @@ Jaclyn N. Taroni, Peter C. Grayson, Qiwen Hu, Sean Eddy, Matthias Kretzler, Pete
 <em>Cell Systems</em> (2019-05) <a href="https://doi.org/gf75g5">https://doi.org/gf75g5</a> <br />
 DOI: <a href="https://doi.org/10.1016/j.cels.2019.04.003">10.1016/j.cels.2019.04.003</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31121115">31121115</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6538307">PMC6538307</a></p>
 </div>
-<div id="ref-147c7GYQ">
+<div id="ref-lY5ln3dB">
 <p>2. <strong>PhenomeXcan: Mapping the genome to the phenome through the transcriptome</strong> <br />
-Milton Pividori, Padma S. Rajagopal, Alvaro Barbeira, Yanyu Liang, Owen Melia, Lisa Bastarache, YoSon Park, Xiaoquan Wen, Hae K. Im, The GTEx Consortium<br />
-<em>Cold Spring Harbor Laboratory</em> (2020-03-13) <a href="https://doi.org/gg334k">https://doi.org/gg334k</a> <br />
-DOI: <a href="https://doi.org/10.1101/833210">10.1101/833210</a></p>
+Milton Pividori, Padma S. Rajagopal, Alvaro Barbeira, Yanyu Liang, Owen Melia, Lisa Bastarache, YoSon Park, GTEx Consortium, Xiaoquan Wen, Hae K. Im<br />
+<em>Science Advances</em> (2020-09) <a href="https://doi.org/ghbvbf">https://doi.org/ghbvbf</a> <br />
+DOI: <a href="https://doi.org/10.1126/sciadv.aba2083">10.1126/sciadv.aba2083</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32917697">32917697</a></p>
 </div>
-<div id="ref-1HaffUr3r">
-<p>3. <strong>Information Theoretic Measures for Clusterings Comparison: Variants, Properties, Normalization and Correction for Chance</strong> <br />
-Nguyen Xuan Vinh, Julien Epps, James Bailey<br />
-<em>Journal of Machine Learning Research</em> <a href="http://www.jmlr.org/papers/v11/vinh10a.html">http://www.jmlr.org/papers/v11/vinh10a.html</a></p>
+<div id="ref-6SPTvFXq">
+<p>3. <strong>Reproducible RNA-seq analysis using recount2</strong> <br />
+Leonardo Collado-Torres, Abhinav Nellore, Kai Kammers, Shannon E Ellis, Margaret A Taub, Kasper D Hansen, Andrew E Jaffe, Ben Langmead, Jeffrey T Leek<br />
+<em>Nature Biotechnology</em> (2017-04-11) <a href="https://doi.org/gf75hp">https://doi.org/gf75hp</a> <br />
+DOI: <a href="https://doi.org/10.1038/nbt.3838">10.1038/nbt.3838</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28398307">28398307</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6742427">PMC6742427</a></p>
 </div>
+<div id="ref-1FVd2WW6G">
+<p>4. <strong>Finding function: evaluation methods for functional genomic data</strong> <br />
+Chad L Myers, Daniel R Barrett, Matthew A Hibbs, Curtis Huttenhower, Olga G Troyanskaya<br />
+<em>BMC Genomics</em> (2006-07-25) <a href="https://doi.org/fg6wnk">https://doi.org/fg6wnk</a> <br />
+DOI: <a href="https://doi.org/10.1186/1471-2164-7-187">10.1186/1471-2164-7-187</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/16869964">16869964</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1560386">PMC1560386</a></p>
+</div>
+<div id="ref-DN7TyZzb">
+<p>5. <strong>The CAFA challenge reports improved protein function prediction and new functional annotations for hundreds of genes through experimental screens</strong> <br />
+Naihui Zhou, Yuxiang Jiang, Timothy R. Bergquist, Alexandra J. Lee, Balint Z. Kacsoh, Alex W. Crocker, Kimberley A. Lewis, George Georghiou, Huy N. Nguyen, Md Nafiz Hamid, … Iddo Friedberg<br />
+<em>Genome Biology</em> (2019-11-19) <a href="https://doi.org/ggnxpz">https://doi.org/ggnxpz</a> <br />
+DOI: <a href="https://doi.org/10.1186/s13059-019-1835-8">10.1186/s13059-019-1835-8</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31744546">31744546</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6864930">PMC6864930</a></p>
+</div>
+<div id="ref-nmJxPpE5">
+<p>6. <strong>The UK Biobank resource with deep phenotyping and genomic data</strong> <br />
+Clare Bycroft, Colin Freeman, Desislava Petkova, Gavin Band, Lloyd T. Elliott, Kevin Sharp, Allan Motyer, Damjan Vukcevic, Olivier Delaneau, Jared O’Connell, … Jonathan Marchini<br />
+<em>Nature</em> (2018-10-10) <a href="https://doi.org/gfb7h2">https://doi.org/gfb7h2</a> <br />
+DOI: <a href="https://doi.org/10.1038/s41586-018-0579-z">10.1038/s41586-018-0579-z</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30305743">30305743</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6786975">PMC6786975</a></p>
+</div>
+<div id="ref-1FFzCXo1s">
+<p>7. <strong>Integrating predicted transcriptome from multiple tissues improves association detection</strong> <br />
+Alvaro N. Barbeira, Milton Pividori, Jiamao Zheng, Heather E. Wheeler, Dan L. Nicolae, Hae Kyung Im<br />
+<em>PLOS Genetics</em> (2019-01-22) <a href="https://doi.org/ghs8vx">https://doi.org/ghs8vx</a> <br />
+DOI: <a href="https://doi.org/10.1371/journal.pgen.1007889">10.1371/journal.pgen.1007889</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30668570">30668570</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6358100">PMC6358100</a></p>
+</div>
+<div id="ref-8js8Q3pF">
+<p>8. <strong>Diversity control for improving the analysis of consensus clustering</strong> <br />
+Milton Pividori, Georgina Stegmayer, Diego H. Milone<br />
+<em>Information Sciences</em> (2016-09) <a href="https://doi.org/ghtqbk">https://doi.org/ghtqbk</a> <br />
+DOI: <a href="https://doi.org/10.1016/j.ins.2016.04.027">10.1016/j.ins.2016.04.027</a></p>
+</div>
+<div id="ref-17CbjLzCP">
+<p>9. <strong>Clustering ensembles: models of consensus and weak partitions</strong> <br />
+A. Topchy, A. K. Jain, W. Punch<br />
+<em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em> (2005-12) <a href="https://doi.org/c8z32x">https://doi.org/c8z32x</a> <br />
+DOI: <a href="https://doi.org/10.1109/tpami.2005.237">10.1109/tpami.2005.237</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/16355656">16355656</a></p>
+</div>
+<div id="ref-uw3AnEgA">
+<p>10. <strong>Cluster Ensembles – A Knowledge Reuse Framework for Combining Multiple Partitions</strong> <br />
+Alexander Strehl, Ghosh Joydeep<br />
+<em>Journal of Machine Learning Research</em> <a href="https://www.jmlr.org/papers/v3/strehl02a.html">https://www.jmlr.org/papers/v3/strehl02a.html</a></p>
+</div>
+<div id="ref-rcTMvL18">
+<p>11. <strong>A Link-Based Approach to the Cluster Ensemble Problem</strong> <br />
+Natthakan Iam-On, Tossapon Boongoen, Simon Garrett, Chris Price<br />
+<em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em> (2011-12) <a href="https://doi.org/cqgkh3">https://doi.org/cqgkh3</a> <br />
+DOI: <a href="https://doi.org/10.1109/tpami.2011.84">10.1109/tpami.2011.84</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/21576752">21576752</a></p>
+</div>
+<div id="ref-t5p3UpxZ">
+<p>12. <strong>Hybrid clustering solution selection strategy</strong> <br />
+Zhiwen Yu, Le Li, Yunjun Gao, Jane You, Jiming Liu, Hau-San Wong, Guoqiang Han<br />
+<em>Pattern Recognition</em> (2014-10) <a href="https://doi.org/ghtzwt">https://doi.org/ghtzwt</a> <br />
+DOI: <a href="https://doi.org/10.1016/j.patcog.2014.04.005">10.1016/j.patcog.2014.04.005</a></p>
+</div>
+<div id="ref-157h5hA34">
+<p>13. <strong>UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction</strong> <br />
+Leland McInnes, John Healy, James Melville<br />
+<em>arXiv</em> (2020-09-21) <a href="https://arxiv.org/abs/1802.03426">https://arxiv.org/abs/1802.03426</a></p>
+</div>
+<div id="ref-xhtEAzx6">
+<p>14. <strong>Clustering trees: a visualization for evaluating clusterings at multiple resolutions</strong> <br />
+Luke Zappia, Alicia Oshlack<br />
+<em>GigaScience</em> (2018-07) <a href="https://doi.org/gfzqf5">https://doi.org/gfzqf5</a> <br />
+DOI: <a href="https://doi.org/10.1093/gigascience/giy083">10.1093/gigascience/giy083</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30010766">30010766</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6057528">PMC6057528</a></p>
+</div>
+<div id="ref-O21tn8vf">
+<p>15. <strong>Systematic integration of biomedical knowledge prioritizes drugs for repurposing</strong> <br />
+Daniel Scott Himmelstein, Antoine Lizee, Christine Hessler, Leo Brueggeman, Sabrina L Chen, Dexter Hadley, Ari Green, Pouya Khankhanian, Sergio E Baranzini<br />
+<em>eLife</em> (2017-09-22) <a href="https://doi.org/cdfk">https://doi.org/cdfk</a> <br />
+DOI: <a href="https://doi.org/10.7554/elife.26726">10.7554/elife.26726</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28936969">28936969</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5640425">PMC5640425</a></p>
+</div>
+<div id="ref-10KA5jTBQ">
+<p>16. <strong>Dhimmel/Indications V1.0. Pharmacotherapydb: The Open Catalog Of Drug Therapies For Disease</strong> <br />
+Daniel S. Himmelstein, Pouya Khankhanian, Christine S. Hessler, Ari J. Green, Sergio E. Baranzini<br />
+<em>Zenodo</em> (2016-03-15) <a href="https://doi.org/f3mqwb">https://doi.org/f3mqwb</a> <br />
+DOI: <a href="https://doi.org/10.5281/zenodo.47664">10.5281/zenodo.47664</a></p>
+</div>
+<div id="ref-F7lIlh2N">
+<p>17. <strong>A Next Generation Connectivity Map: L1000 Platform and the First 1,000,000 Profiles</strong> <br />
+Aravind Subramanian, Rajiv Narayan, Steven M. Corsello, David D. Peck, Ted E. Natoli, Xiaodong Lu, Joshua Gould, John F. Davis, Andrew A. Tubelli, Jacob K. Asiedu, … Todd R. Golub<br />
+<em>Cell</em> (2017-11) <a href="https://doi.org/cgwt">https://doi.org/cgwt</a> <br />
+DOI: <a href="https://doi.org/10.1016/j.cell.2017.10.049">10.1016/j.cell.2017.10.049</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29195078">29195078</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5990023">PMC5990023</a></p>
+</div>
+<div id="ref-6PR8LEXK">
+<p>18. <strong>DrugBank 4.0: shedding new light on drug metabolism</strong> <br />
+Vivian Law, Craig Knox, Yannick Djoumbou, Tim Jewison, An Chi Guo, Yifeng Liu, Adam Maciejewski, David Arndt, Michael Wilson, Vanessa Neveu, … David S. Wishart<br />
+<em>Nucleic Acids Research</em> (2014-01) <a href="https://doi.org/f3mn6d">https://doi.org/f3mn6d</a> <br />
+DOI: <a href="https://doi.org/10.1093/nar/gkt1068">10.1093/nar/gkt1068</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24203711">24203711</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3965102">PMC3965102</a></p>
+</div>
+<div id="ref-1DJZvtwP1">
+<p>19. <strong>Dhimmel/Lincs V2.0: Refined Consensus Signatures From Lincs L1000</strong> <br />
+Daniel Himmelstein, Leo Brueggeman, Sergio Baranzini<br />
+<em>Zenodo</em> (2016-03-08) <a href="https://doi.org/f3mqvr">https://doi.org/f3mqvr</a> <br />
+DOI: <a href="https://doi.org/10.5281/zenodo.47223">10.5281/zenodo.47223</a></p>
+</div>
+<div id="ref-17oeJ0CXy">
+<p>20. <strong>Analysis of genome-wide association data highlights candidates for drug repositioning in psychiatry</strong> <br />
+Hon-Cheong So, Carlos Kwan-Long Chau, Wan-To Chiu, Kin-Sang Ho, Cho-Pong Lo, Stephanie Ho-Yue Yim, Pak-Chung Sham<br />
+<em>Nature Neuroscience</em> (2017-08-14) <a href="https://doi.org/gbrssh">https://doi.org/gbrssh</a> <br />
+DOI: <a href="https://doi.org/10.1038/nn.4618">10.1038/nn.4618</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28805813">28805813</a></p>
+</div>
+<div id="ref-Ki2ij7zE">
+<p>21. <strong>Pathway-level information extractor (PLIER) for gene expression data</strong> <br />
+Weiguang Mao, Elena Zaslavsky, Boris M. Hartmann, Stuart C. Sealfon, Maria Chikina<br />
+<em>Nature Methods</em> (2019-06-27) <a href="https://doi.org/gf75g6">https://doi.org/gf75g6</a> <br />
+DOI: <a href="https://doi.org/10.1038/s41592-019-0456-1">10.1038/s41592-019-0456-1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31249421">31249421</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7262669">PMC7262669</a></p>
+</div>
+</div>
+<h2 id="supplementary-material">Supplementary material</h2>
+<h3 id="pathway-level-information-extractor-plier">Pathway-level information extractor (PLIER)</h3>
+<p>MultiPLIER <span class="citation" data-cites="14rnBunuZ">[<a href="#ref-14rnBunuZ" role="doc-biblioref">1</a>]</span>, the computational strategy used in
+this work, extracts patterns of co-expressed genes on large gene expression
+datasets. MultiPLIER applies the pathway-level information extractor method
+(PLIER) <span class="citation" data-cites="Ki2ij7zE">[<a href="#ref-Ki2ij7zE" role="doc-biblioref">21</a>]</span> to the recount2 data
+<span class="citation" data-cites="6SPTvFXq">[<a href="#ref-6SPTvFXq" role="doc-biblioref">3</a>]</span>, which performs unsupervised learning using prior
+knowledge to reduce technical noise. Via a matrix factorization approach, PLIER
+deconvolutes the gene expression data into a set of latent variables (LV) that
+each represent a gene module (i.e. a set of genes with coordinated expression
+patterns).</p>
+<p><code class="red">COMPLETE</code></p>
+<h3 id="top-latent-variables-associated-to-neutrophils">Top latent variables associated to neutrophils</h3>
+<div id="fig:supp:neutrophils_top20lvs" class="fignos">
+<figure>
+<img src="images/supplementary_material/lv603_neutrophils/neutrophils_top20_lvs.png" alt="" /><figcaption><span>Figure 7:</span> <strong>Correlation of neutrophil counts with top LVs associated with neutrophils traits.</strong>
+<!-- Description --></figcaption>
+</figure>
+</div>
+<div id="fig:supp:signif_neutrophils_counts" class="fignos">
+<figure>
+<img src="images/supplementary_material/lv603_neutrophils/significance_neutrophil.png" style="height:3in" alt="" /><figcaption><span>Figure 8:</span> <strong>Significance of neutrophil counts correlation.</strong>
+<!-- Description --></figcaption>
+</figure>
+</div>
+<h3 id="consensus-clustering-of-traits-in-phenomexcan">Consensus clustering of traits in PhenomeXcan</h3>
+<h4 id="dimensionality-reduction">Dimensionality reduction</h4>
+<h4 id="ensemble-creation-clustering-algorithms-and-parameters">Ensemble creation: clustering algorithms and parameters</h4>
+<div style="color: red">
+<ul>
+<li>list of methods and its parameters</li>
+</ul>
+</div>
+<h4 id="ensemble-combination-and-consensus-functions">Ensemble combination and consensus functions</h4>
+<div style="color: red">
+<ul>
+<li>evidence accumulation approach</li>
+<li>we also used a spectral clustering approach</li>
+<li>for each k, we picked the partition that maximized the agreement with the ensemble</li>
+<li>show figure where we select the ks that are greater than the median</li>
+</ul>
+</div>
+<h4 id="clusters-interpretation">Clusters interpretation</h4>
+<div style="color: red">
+<ul>
+<li>we remove each LV and run the decision tree classifier again</li>
+</ul>
+</div>
+<h3 id="drug-disease-predictions">Drug-disease predictions</h3>
+<div style="color: red">
+<ul>
+<li>anti-correlation using dot product of s-predixcan on all tissues and lincs</li>
+</ul>
 </div>
 <!-- default theme -->
 
