@@ -19,6 +19,8 @@ keratometry
 ketatometry
 LV
 LVs
+Marylyn
+MarylynRitchie
 mesenchymal
 microvascular
 miltondp
@@ -30,6 +32,7 @@ PhenomeXcan
 PhenoPLIER
 Pividori
 pluripotent
+Ritchie
 SLE
 spirometry
 subfigures

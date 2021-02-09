@@ -1,10 +1,11 @@
 ---
 author-meta:
 - Milton Pividori
+- Marylyn D. Ritchie
 - Casey S. Greene
 bibliography:
 - content/manual-references.json
-date-meta: '2020-11-18'
+date-meta: '2021-02-09'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -15,17 +16,17 @@ header-includes: '<!--
 
   <meta name="dc.format" content="text/html" />
 
-  <meta name="dc.title" content="PhenoPLIER: integrating transcriptome-wide association studies with machine learning" />
+  <meta name="dc.title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
 
-  <meta name="citation_title" content="PhenoPLIER: integrating transcriptome-wide association studies with machine learning" />
+  <meta name="citation_title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
 
-  <meta property="og:title" content="PhenoPLIER: integrating transcriptome-wide association studies with machine learning" />
+  <meta property="og:title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
 
-  <meta property="twitter:title" content="PhenoPLIER: integrating transcriptome-wide association studies with machine learning" />
+  <meta property="twitter:title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
 
-  <meta name="dc.date" content="2020-11-18" />
+  <meta name="dc.date" content="2021-02-09" />
 
-  <meta name="citation_publication_date" content="2020-11-18" />
+  <meta name="citation_publication_date" content="2021-02-09" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -47,11 +48,19 @@ header-includes: '<!--
 
   <meta name="twitter:creator" content="@miltondp" />
 
+  <meta name="citation_author" content="Marylyn D. Ritchie" />
+
+  <meta name="citation_author_institution" content="Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA" />
+
+  <meta name="citation_author_orcid" content="0000-0002-1208-1720" />
+
+  <meta name="twitter:creator" content="@MarylynRitchie" />
+
   <meta name="citation_author" content="Casey S. Greene" />
 
-  <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
+  <meta name="citation_author_institution" content="Center for Health AI, University of Colorado School of Medicine, Aurora, CO, 80045, USA" />
 
-  <meta name="citation_author_institution" content="Childhood Cancer Data Lab, Alex&#39;s Lemonade Stand Foundation, Philadelphia, PA 19102, USA" />
+  <meta name="citation_author_institution" content="Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, CO, 80045, USA" />
 
   <meta name="citation_author_orcid" content="0000-0001-8713-9213" />
 
@@ -69,11 +78,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/835bbfca0fbbff7f4a55eb90d5b877dbe26b07f6/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/e24fd8104cafffab9158dd91c2128dbd6a7f7bcc/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/835bbfca0fbbff7f4a55eb90d5b877dbe26b07f6/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/e24fd8104cafffab9158dd91c2128dbd6a7f7bcc/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/835bbfca0fbbff7f4a55eb90d5b877dbe26b07f6/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/e24fd8104cafffab9158dd91c2128dbd6a7f7bcc/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -87,6 +96,7 @@ header-includes: '<!--
 
   <!-- end Manubot generated metadata -->'
 keywords:
+- gene co-expression
 - transfer learning
 - MultiPLIER
 - PhenomeXcan
@@ -96,7 +106,7 @@ manubot-clear-requests-cache: false
 manubot-output-bibliography: output/references.json
 manubot-output-citekeys: output/citations.tsv
 manubot-requests-cache-path: ci/cache/requests-cache
-title: 'PhenoPLIER: integrating transcriptome-wide association studies with machine learning'
+title: Integrating transcriptome-wide association studies with gene co-expression patterns
 ...
 
 
@@ -111,10 +121,10 @@ Text in <span style="color: red">red</span> or with <span class="red">red</span>
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/835bbfca0fbbff7f4a55eb90d5b877dbe26b07f6/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/e24fd8104cafffab9158dd91c2128dbd6a7f7bcc/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@835bbfc](https://github.com/greenelab/phenoplier_manuscript/tree/835bbfca0fbbff7f4a55eb90d5b877dbe26b07f6)
-on November 18, 2020.
+from [greenelab/phenoplier_manuscript@e24fd81](https://github.com/greenelab/phenoplier_manuscript/tree/e24fd8104cafffab9158dd91c2128dbd6a7f7bcc)
+on February 9, 2021.
 </em></small>
 
 ## Authors
@@ -133,6 +143,15 @@ on November 18, 2020.
      · Funded by The Gordon and Betty Moore Foundation GBMF 4552; The National Human Genome Research Institute (R01 HG010067)
   </small>
 
++ **Marylyn D. Ritchie**<br>
+    ![ORCID icon](images/orcid.svg){.inline_icon}
+    [0000-0002-1208-1720](https://orcid.org/0000-0002-1208-1720)
+    · ![Twitter icon](images/twitter.svg){.inline_icon}
+    [MarylynRitchie](https://twitter.com/MarylynRitchie)<br>
+  <small>
+     Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA
+  </small>
+
 + **Casey S. Greene**<br>
     ![ORCID icon](images/orcid.svg){.inline_icon}
     [0000-0001-8713-9213](https://orcid.org/0000-0001-8713-9213)
@@ -141,8 +160,8 @@ on November 18, 2020.
     · ![Twitter icon](images/twitter.svg){.inline_icon}
     [GreeneScientist](https://twitter.com/GreeneScientist)<br>
   <small>
-     Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA; Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Philadelphia, PA 19102, USA
-     · Funded by The Gordon and Betty Moore Foundation GBMF 4552; The National Human Genome Research Institute (R01 HG010067); The National Cancer Institute (R01 CA237170)
+     Center for Health AI, University of Colorado School of Medicine, Aurora, CO, 80045, USA; Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, CO, 80045, USA
+     · Funded by The Gordon and Betty Moore Foundation (GBMF 4552); The National Human Genome Research Institute (R01 HG010067); The National Cancer Institute (R01 CA237170)
   </small>
 
 
