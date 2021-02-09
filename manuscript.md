@@ -78,11 +78,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/e24fd8104cafffab9158dd91c2128dbd6a7f7bcc/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/8520e8669798beffeffa36a22c5874a5cda29fed/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/e24fd8104cafffab9158dd91c2128dbd6a7f7bcc/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/8520e8669798beffeffa36a22c5874a5cda29fed/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/e24fd8104cafffab9158dd91c2128dbd6a7f7bcc/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/8520e8669798beffeffa36a22c5874a5cda29fed/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -115,15 +115,15 @@ title: Integrating transcriptome-wide association studies with gene co-expressio
 
 [
 <i class="fas fa-info-circle fa-lg"></i> **Draft manuscript**<br>
-Text in <span style="color: red">red</span> or with <span class="red">red</span> background are internal comments
+Text in <span style="color: red">red</span>/<span class="red">red</span> are internal comments
 ]{.banner .lightblue}
 
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/e24fd8104cafffab9158dd91c2128dbd6a7f7bcc/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/8520e8669798beffeffa36a22c5874a5cda29fed/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@e24fd81](https://github.com/greenelab/phenoplier_manuscript/tree/e24fd8104cafffab9158dd91c2128dbd6a7f7bcc)
+from [greenelab/phenoplier_manuscript@8520e86](https://github.com/greenelab/phenoplier_manuscript/tree/8520e8669798beffeffa36a22c5874a5cda29fed)
 on February 9, 2021.
 </em></small>
 
@@ -173,93 +173,285 @@ on February 9, 2021.
 
 ## Results
 
+<!--
 
-### Integrating gene expression patterns with transcription-wide association studies
+Some papers that might be interesting:
 
-::: {style="color: red"}
-Here we introduce our framework to perform the integration.
+https://www.nature.com/articles/s41591-020-01221-5
+Air pollution linked to neurodegeneration markers
 
- 1. Brief background on MultiPLIER and PhenomeXcan.
- 1. Explanation of the framework depicted in Figure @fig:entire_process and its components.
- 1. Description of initial set of results matching previous findings (neutrophil counts).
-:::
+-->
 
+
+### PhenoPLIER integrates TWAS with gene co-expression patterns
 
 ![
 **Schematic of the PhenoPLIER framework.**
 <!--  -->
-The integration process (middle) between MultiPLIER [@doi:10.1016/j.cels.2019.04.003] (top) and
-PhenomeXcan [@doi:10.1101/833210] (bottom) outputs matrix $\mathbf{T}$. LV603 was previously
-found to be strongly associated with neutrophil estimates when projecting a dataset of systemic
-lupus erythematosus (SLE) whole blood (WB) into MultiPLIER. After integration, this LV is also
-highly associated with blood count traits, with neutrophil counts at the top.
+**a)** The integration process between gene co-expression patterns from
+MultiPLIER [@doi:10.1016/j.cels.2019.04.003] (top) and TWAS results from
+PhenomeXcan [@doi:10.1126/sciadv.aba2083]. PhenoPLIER projects gene-based
+association results on \~4,000 traits to a latent space learned from a
+large gene expression compendium (recount2 [@doi:10.1038/nbt.3838]). This
+generates matrix $\mathbf{\hat{M}}$, where each trait is now described by
+latent variables/gene modules.
 <!--  -->
-](images/entire_process/entire_process.svg?sanitize=true "PhenoPLIER
-framework"){#fig:entire_process height=5in}
+**b)** After the integration process, we found that neutrophil counts and other
+white blood cells (bottom) were ranked among the top 10 traits for an LV that
+was termed a neutrophil signature in the original MultiPLIER study. Genes in
+this LV were found to be expressed in related cell types (top).
+`Improve cell types/tissues figure`{.red}
+<!--  -->
+](images/entire_process/entire_process.svg "PhenoPLIER
+framework"){#fig:entire_process width="100%"}
 
 
-### Projecting associations into a gene expression latent space reveals expected and novel trait clusters
+MultiPLIER [@doi:10.1016/j.cels.2019.04.003] is a recent computational strategy
+that extracts patterns of co-expressed genes from large gene expression
+datasets. The approach uses an unsupervised matrix factorization method that was
+employed to extract latent variables from recount2 [@doi:10.1038/nbt.3838].
+<!--  -->
+The latent variables (LVs), essentially gene modules, then revealed biological
+processes associated with disease severity in rare disease datasets that were
+too small for effective model training. These gene sets aligned well with known
+biological pathways and predicted cell type composition, even though the
+approach was not explicitly designed for this goal.
+
+
+Although the authors showed that certain patterns learned by MultiPLIER resemble
+known biology, most of the LVs identified are completely unknown. Since genes in
+these modules vary together in certain cell types and tissues, it's expected
+that they may also function together [@doi:10.1186/1471-2164-7-187;
+@doi:10.1186/s13059-019-1835-8].
+<!--  -->
+To test whether patterns in the expression space match those in the TWAS space,
+we used PhenomeXcan [@doi:10.1126/sciadv.aba2083], a massive transcriptome-wide
+association studies (TWAS) resource obtained from the UK Biobank
+[@doi:10.1038/s41586-018-0579-z] and other cohorts (Figure @fig:entire_process
+a). These results were projected to the low-dimensional gene representation
+learned by MultiPLIER using:
+
+$$\hat{\mathbf{M}} = (\mathbf{Z}^{\top} \mathbf{Z} + \lambda_{2} \mathbf{I})^{-1} \mathbf{Z}^{\top} \mathbf{M},$$ {#eq:proj}
+
+where $\mathbf{M}^{n \times t}$ has gene-trait associations from MultiXcan
+[@doi:10.1371/journal.pgen.1007889] (standardized effect sizes) for $n$ genes
+and $t$ traits, $\mathbf{Z}^{n \times l}$ are the gene loadings with $l$ latent
+variables, $\lambda_2$ is the regularization parameter used in the training
+step, and $\hat{\mathbf{M}}^{l \times t}$ is finally the projection of
+$\mathbf{M}$ into the latent space: all traits in PhenomeXcan are now described
+by LVs, thus we can potentially infer the effects of gene modules on different
+human traits. Since the MultiPLIER models also provide the conditions (such as
+cell types and tissues) in which genes in a module are concurringly expressed,
+our approach would also allow to infer the context in which the gene module
+affects a trait or disease.
+
+
+In the original MultiPLIER study [@doi:10.1016/j.cels.2019.04.003], the authors
+found an LV significantly associated with previously known neutrophil gene-sets
+and highly correlated with neutrophil estimates from gene expression.
+<!--  -->
+We analyzed this LV using our approach (Figure @fig:entire_process b), and found
+that 1) neutrophil counts and other white blood cell traits from PhenomeXcan
+[@doi:10.1126/sciadv.aba2083] were ranked among the top 10 traits for this LV,
+and 2) that the genes in this LV are expressed in neuotrophil cells (see more
+details in the supplementary material).
+<!--  -->
+These initial results strongly suggest that shared patterns exist in the gene
+expression space (which has no GTEx samples) and the TWAS space (with gene
+models trained using GTEx v8), and that the approach also allows to infer the
+context-specific effects of gene modules on complex traits.
+<!--  -->
+We will also show how the approach can aid translational efforts by mapping
+pharmacological perturbations to this latent space, enabling to observe which
+compounds affect the transcriptional activity of gene modules.
+
 
 ::: {style="color: red"}
-In this section, we already introduced some evidence that the proposal could work. The next step
-(this section) is to cluster traits using the LVs as features.
+- Minor: LV603 is neutrophil-associated, but it is not significantly associated
+  with other myeloid lineage cell types (see Figure S2A in MultiPLIER study).
+  Maybe we can add a genes-traits figure of MultiXcan and fastENLOC results to
+  see this better.
+:::
 
-1. Briefly explain idea of clustering traits using LVs.
-1. Explain methods here, and then we see whether that should be moved elsewhere.
-    1. Dimentionality reduction using UMAP.
-    1. Spectral clustering approach.
-    1. Stability measure to detect best number of clusters.
-    1. Approach to interpret clusters by training a decision tree classifier.
-1. We should have a set of expected results. For instance:
-    1. Keratometry measurements are clustered together.
-    1. Heel bone mineral density are also clustered together.
-    1. See other clusters.
-1. We should also include some "novel" clusters, or expected clusters with some novel traits in it.
-    1. Lipids cluster? I'm working on this now.
-1. Once we focus on a cluster, we provide an interpreation of why those traits are clustered
-   together (which LVs are driving the association). Here we'll need to explain the method we might
-   be using for this (decision trees on the original data). This could be a separate section.
+
+### Clusters of traits in the gene module space are affected by shared transcriptional processes
+
+![
+**Cluster analysis on traits from PhenomeXcan.**
+<!--  -->
+**a)** The projection of TWAS results for 3,749 traits to the latent
+representation learned from recount2 are the input data to the clustering
+process. A linear (PCA) and non-linear (UMAP) dimensionality reduction
+techniques are applied to the input data, and the three data versions are
+processed by five different clustering algorithms. These algorithms derive
+partitions from the data using different sets of parameters (such as the number
+of clusters), leading to an ensemble of 4,428 partitions. A coassociation matrix
+is derived by counting how many times a pair of traits were grouped together in
+the ensemble. Finally, a consensus function is applied to the coassociation
+matrix to generate consolidated partitions with different number of clusters.
+These final solutions are represented in the clustering tree (Figure
+@fig:clustering:tree).
+<!--  -->
+**b)** The clusters found by the consensus function are used as labels to train
+a decision tree classifier on the original input data (latent representation),
+which detects the most important LVs that differentiate groups of traits.
+<!--  -->
+](images/clustering/clustering_design.svg "Cluster analysis on
+traits"){#fig:clusering:design width="100%"}
+
+
+All traits in PhenomeXcan were projected into the latent space learned from
+recount2 using Equation (@eq:proj). We conducted cluster analysis using this new
+representation to find groups of traits that are similarly affected by the same
+transcriptional processes.
+<!--  -->
+To avoid using a single clustering algorithm (which implies using a single
+assumption about the structure of the data), we employed a consensus clustering
+approach where different methods with varying sets parameters are applied on the
+same data, and later combined into a consolidated solution
+[@doi:10.1016/j.ins.2016.04.027; @doi:10.1109/TPAMI.2005.237; @Strehl2002]
+(Figure @fig:clusering:design).
+<!--  -->
+An important property for a successful application of a consensus clustering
+approach is the diversity of the ensemble, understood as the level of
+disagreement between the base clustering solutions
+[@doi:10.1016/j.ins.2016.04.027; @doi:10.1109/TPAMI.2011.84;
+@doi:10.1016/j.patcog.2014.04.005]. A diverse set of solutions can be generated by
+using different data representations (such as dimensionality reductions methods
+or subsets of features), clustering algorithms with distinct assumptions
+($k$-means, for instance, assumes hyperspherical clusters), and a varying set of
+algorithm's parameters (such as the number of clusters or the initial random
+seeds).
+<!--  -->
+In our approach, we performed cluster analysis using five different clustering
+algorithms on three representations of the input data (the original data with
+987 latent variables, its projection into the top 50 principal components, and
+the embedding learned by UMAP [@arxiv:1802.03426] using 50 components) (see
+Figure @fig:clusering:design a). The clustering methods used cover a wide range
+of different assumptions on cluster shapes and a varying set of parameters such
+as the number of clusters (from 2 to 60), the width of the Gaussian kernel in
+spectral clustering, and other method-specific parameters (see the supplementary
+material for more details).
+<!--  -->
+The process generated an ensemble with 4,428 clustering solutions for all
+traits. This ensemble was used to derive a coassociation matrix between traits
+by counting the number of times a pair of traits was clustered together.
+Finally, a consensus function was applied on the coassociation matrix to derive
+a consolidated solution using the information in the ensemble. For these final
+partitions, we did not select a specific number of clusters, but instead used
+a clustering tree [@doi:10.1093/gigascience/giy083] (Figure
+@fig:clustering:tree) to examine how traits were grouped using multiple
+resolutions.
+<!--  -->
+Finally, for the interpretation of the clusters, we trained a decision tree
+classifier (a highly interpretable machine learning model) on the original
+input data using the clusters found as labels. This approach allowed us to
+quickly identify the most important gene modules for the groups of traits found.
+<!--  -->
+More details of the clustering process are available in the supplementary
+material.
+
+
+![
+**Clustering tree using multiple resolutions.**
+<!--  -->
+Clustering tree of the consensus partitions at different resolutions (from 4 to
+36 clusters). Each row represents a partition of the traits, and each circle is
+a cluster from that partition where its size indicates the size of the cluster.
+Arrows indicate how traits in one cluster move across clusters from different
+resolutions.
+<!--  -->
+](images/clustering/clustering_tree.svg "Clustering tree using the
+consensus solutions for traits"){#fig:clustering:tree width="100%"}
+
+
+A clustering tree of the consensus solutions at different
+resolutions is shown in Figure @fig:clustering:tree. For each $k$ (the number of
+clusters), the consensus partition that maximized the agreement with the
+ensemble was selected (see supplementary material). Since it is expected to find
+a subset of resolutions that better represent the patterns among traits, we further
+filtered the consensus partitions by taking those with an agreement value higher
+than the median, which included partitions from 4 to 36 clusters.
+
+
+The clusering tree shows four clear branches (from left to right):
+bone-densitometry of heel and keratometry measurements (curvature of the corneal
+surface), haematological assays on platelets and red blood cells, the
+"complex" branch, and anthropometric traits.
+<!--  -->
+The complex branch includes stable clusters at different resolutions, such as 1)
+white blood cell traits, 2) nutrients intake and diet-related, 3) cardiovascular
+diseases (coronary artery disease, myocardial infarction, angina pectoris, among
+others) and related medications, 4) mental health traits related to anxiety, 5)
+asthma, allergic rhinitis, and atopic dermatitis, 6) schizophrenia, educational
+outcomes and fluid intelligence score, 7) breath spirometry, 8) autoimmune
+diseases (celiac disease, hypothyroidism, psoriasis, rheumatoid arthritis,
+systemic lupus erythematosus, among others), 9) skin and hair color, and 10)
+hypertension. In the following sections, we select some of these stable clusters
+to analyze which transcriptional processes are specific to some groups of
+traits.
+
+
+#### Cardiovascular traits
+
+::: {style="color: red"}
+See if we are going to analyze this cluster.
+
+The figures below include examples of the type of figure we can include here:
+
+- Show the LVs that are distinct for this cluster (maybe a small decision tree
+  for some of the clusters).
+- For those LV, show which cell types/tissues are important (such as Figure
+  @fig:lv136_conditions below).
+- For some of these LVs, we can include the list of other traits also related
+  and gene association results (such as Figure @fig:lv136_traits).
 :::
 
 
 ![
-**Clustering of traits using matrix $\mathbf{T}^{\top}$.**
-<!--  -->
-Estimation of number of clusters using the consensus index method [@Vinh2010]. A spectral clustering
-approach was used on matrix $\mathbf{T}^{\top}$ to group traits. The algorithm was run 100 times for
-each $k$ value from 2 to 20, and the averaged adjusted Rand-index is reported in $y$-axis (top). A
-partition with $k=13$ was obtained from $\mathbf{T}^{\top}$ (bottom), where ketatometry and heel
-bone mineral density measurements clearly separate from the rest of traits. `Add svg version`{.red}
-<!--  -->
-](images/lvs_clustering/traits_clustering.png "Traits partition with k=13"){#fig:traits_clusters
-height=5in}
+**Cell types/tissues associated with genes in LV136.**
+](images/lvs_analysis/lv136/lv136_cell_types.svg "Conditions associated with LV136 in
+PhenoPLIER"){#fig:lv136_conditions width="50%"}
 
 
 ![
-**The top discriminating latent variables for the keratometry cluster.**
-<!--  -->
-For clustering interpretation, a decision tree classifier was trained using the original data
-($\mathbf{T}^{\top}$), the keratometry cluster as positive class, and the rest of traits as
-negative class. The top associated latent variable was LV136, followed by LV767 and LV612 (which
-were detected by removing LV136 and LV767 from the training data, respectively).
-<!--  -->
-`Add svg version.`{.red}
-<!--  -->
-](images/lvs_clustering/traits_clustering_features.png "Features discriminating keratometry
-cluster"){#fig:kera_features height=5.5in}
+**Traits associated with genes in LV136.**
+](images/lvs_analysis/lv136/lv136_traits_multixcan_fastenloc.svg "Traits/diseases associated with
+LV136 in PhenoPLIER"){#fig:lv136_traits width="100%"}
 
 
-### Analysis of keratometry cluster reveals groups of genes associated with cardiovascular-related traits
+#### Schizophrenia, educational attainment and intelligence
 
 ::: {style="color: red"}
-In this section, we build on our previous results to analyze a single or a couple of LVs. The idea
-is to show raw MultiXcan/fastENLOC results and how individual genes in the module are associated
-with the traits. Based on this, we could provide an interpretation (if possible) on how genes could
-be affecting different and related traits/diseases.
+See if we are going to analyze this cluster.
+:::
 
-These are some articles I found relating the trait categories in Figure @fig:lv136_traits (LV136).
 
-1. Ocular problems and cardiovascular diseases:
+#### Asthma and allergies
+
+::: {style="color: red"}
+See if we are going to analyze this cluster.
+:::
+
+<!-- ::: {style="color: red"}
+Notes:
+
+- this paper should be a good source to explain the asthma cluster:
+https://www.nature.com/articles/ng.3985
+::: -->
+
+
+### Replication using Penn Medicine BioBank
+
+::: {style="color: red"}
+Maybe we can incorporate **Binglan's TWAS results on PMBB** and see if expected
+traits-clusters are correctly predicted.
+:::
+
+
+<!-- #### Keratometry cluster reveals gene-sets associated with cardiovascular-related traits -->
+
+<!-- 1. Ocular problems and cardiovascular diseases:
     1. [(2017) The Relationship Between Cardiovascular Autonomic Dysfunction and Ocular Abnormality
        in Chinese T2DM](https://doi.org/10.1155/2017/7125760)
     1. [(2018) Looking into the eye of patients with chronic obstructive pulmonary disease: an
@@ -280,58 +472,181 @@ These are some articles I found relating the trait categories in Figure @fig:lv1
     1. [(2011) Assessment of pulmonary function tests in cardiac
        patients](https://doi.org/10.1016/j.jsha.2011.01.003)
     1. It would be nice to see if the direction of effect of these genes are positive for CVD and
-       negative for FEV1.
-:::
+       negative for FEV1. -->
 
 
-![
-**Traits and diseases associated with top genes in LV136.**
-<!--  -->
-Categories of the top 40 traits associated with genes in LV136 (left), and associations of traits
-with the top 20 genes in LV136 (right): S-MultiXcan associations ($-\log_{10}(p\mathrm{-value})$,
-thresholded at 10) are shown with gradients, whereas fastENLOC colocalization probabilities are
-depicted with different circle sizes (only for $>5\mathrm{\%}$). Colors used for trait categories
-are the same in both subfigures.
-<!--  -->
-](images/lvs_analysis/lv136/lv136_traits_multixcan_fastenloc.svg "Traits/diseases associated with
-LV136 in PhenoPLIER"){#fig:lv136_traits}
-
+### PhenoPLIER improves drug-disease prediction
 
 ![
-**Cell types found in top five studies (recount2) associated with LV136.**
+**Drug-disease prediction.**
 <!--  -->
-Genes associated with LV136 are highly expressed in MSC, osteoblast and fibroblast when considering
-all conditions for the given cell types in the top five studies in recount2.
+Explain.
 <!--  -->
-MSC: mesenchymal stem cells; iPSC: induced pluripotent stem cells; ESC: embryonic stem cells.
+AUC: area under the curve; AP: average precision.
 <!--  -->
-`We should consider more studies maybe, not just the top 5.`{.red}
-`Remove colors.`{.red}
-<!--  -->
-](images/lvs_analysis/lv136/lv136_cell_types.svg "Conditions associated with LV136 in
-PhenoPLIER"){#fig:lv136_conditions height=3in}
+](images/drug_disease_prediction/auc_pr.png "AUC-PR of drug-disease
+associations"){#fig:drug_disease:auc_pr width="100%"}
 
 
-### Clustering of LVs (gene modules) with similar trait associations
+We showed that the latent representation learned in a large gene expression data
+set is helpful to link novel gene sets to complex diseases and the cell types
+where they are expressed.
+<!--  -->
+We reasoned that this representation might be also useful to more
+accurately predict the potential therapeutic effects of drugs. If the gene
+patterns captured by MultiPLIER represent real and possibily unknown biological
+pathways, then our approach might actually produce a more accurate estimation of
+the effects of a perturbed molecular mechanisms on disease, and also how
+pharmacological perturbations affect the process activity.
+<!--  -->
+This would, in addition to connecting gene modules with their context-specific
+effects on complex traits, identify which compounds might provide an avenue to
+alter a dysregulated process activity for therapeutical utility.
+
+
+To test this hypothesis, we used a gold standard of drug-disease medical
+indications [@doi:10.7554/eLife.26726; @doi:10.5281/zenodo.47664] to evaluate
+and compare the prediction performance of both the original gene-disease
+associations from PhenomeXcan, and its projection representing gene
+module-disease associations.
+<!--  -->
+To test this, we used the transcriptional responses to small molecule
+perturbations profiled in LINCS L1000 [@doi:10.1016/j.cell.2017.10.049], which
+were further processed to obtain consensus signatures and map to DrubBank IDs
+[@doi:10.1093/nar/gkt1068; @doi:10.7554/eLife.26726; @doi:10.5281/zenodo.47223].
+<!--  -->
+To compute a drug-disease score, we followed a similar procedure used previously
+[@doi:10.1038/nn.4618] to anti-correlates gene-traits associations from TWAS and
+expression profiles of drugs using their signed $z$-scores (see the
+supplementary material). Here we used the dot product between gene-traits
+$z$-scores and the consensus $z$-scores in LINCS L1000, which led to a score for
+each drug-disease pair. (`Add more details?`{.red}).
+<!--  -->
+To obtain a drug-disease association for the gene module-mapped TWAS results, we
+first projected LINCS L1000 data into this latent representation using Equation
+(@eq:proj), thus leading to a matrix with the expression profiles of drugs
+mapped to latent variables. This can be interpreted as the effects of compounds
+on gene modules activity. Then, similarly as before, we anti-correlated gene
+module-traits scores and module expression profiles of drugs.
+
+`(Add number of drugs, diseases, and final number of mappings)`{.red}
+<!--  -->
+<!-- Both $\matr{D}$ and $\hat{\matr{D}}$ contain scores for 1170 drugs and 4091 traits,
+which were further mapped to 56 unique Disease Ontology IDs. -->
+<!--  -->
+<!-- Then I assessed the performance of these two approaches using a manually curated list of
+drug-disease associations~\autocite{Himmelstein2017, HimmelsteinPharmaDB2016}.
+97 diseases and 601 compounds in PharmarcotherapyDB~\autocite{Himmelstein2017,
+HimmelsteinPharmaDB2016},
+which contains 755 disease-modifying therapies and 243
+non-indications. After integrating this gold-standard list with the predictions, I
+obtained 458 positive and 136 negative cases for evaluation.
+-->
+
+
+<!-- Finally, I obtained drug-disease predictions using both the original (gene-based) and
+projected (gene module-based) associations: $\matr{D}=\matr{L}^{\top}\matr{M}$ and
+$\hat{\matr{D}}=\hat{\matr{L}}^{\top}\hat{\matr{M}}$, respectively. -->
+<!--  -->
+
+The ROC and Precision-Recall (PR) curves comparing both approaches are shown in
+Figure @fig:drug_disease:auc_pr. Notably, the gene module-based approach
+proposed here clearly outperformed the gene-based one, with an area under the
+curve (AUC) of 0.615 vs 0.573, and an average precision (AP) of 0.851 vs 0.841.
+<!--  -->
+This is particularly striking given that the projected TWAS results represent a
+reduced or compressed version of the complete gene-based associations,
+suggesting that a gene module perspective can be more informative, for instance,
+for drug-repurposing scenarios using genetic studies.
+
+
 
 ::: {style="color: red"}
-I'm not sure if it's a good idea to include this, but I leave it here just in case.
+Another analysis here could be:
 
-The idea here is to cluster LVs by seeing how are they associated with different traits. So, taking
-the keratometry cluster shown before as an example, here LV136, LV767, LV612 (and possibly others)
-would be clustered together. The use case would be to start from a trait of interest and see the
-cluster of LVs associated with it.
+- Try the prediction again by keeping well-aligned LVs only. Do we get the same
+  prediction performance?
 :::
 
+<!-- ::: {style="color: red"}
+Papers to read:
+- "SubtypeDrug: a software package for prioritization of candidate cancer
+  subtype-specific drugs" https://doi.org/10.1093/bioinformatics/btab011 It
+  might be interesting to see how the predict drug-disease associations when
+  they say "evaluation of drug-disease reverse association"
+::: -->
 
-### Drugs associated with gene modules
 
-::: {style="color: red"}
-This section includes the projection of Connectivity Map into the MultiPLIER space.
-:::
+## Discussion
 
 
 ## References {.page_break_before}
 
 <!-- Explicitly insert bibliography here -->
 <div id="refs"></div>
+
+
+## Supplementary material
+
+### Pathway-level information extractor (PLIER)
+
+MultiPLIER [@doi:10.1016/j.cels.2019.04.003], the computational strategy used in
+this work, extracts patterns of co-expressed genes on large gene expression
+datasets. MultiPLIER applies the pathway-level information extractor method
+(PLIER) [@doi:10.1038/s41592-019-0456-1] to the recount2 data
+[@doi:10.1038/nbt.3838], which performs unsupervised learning using prior
+knowledge to reduce technical noise. Via a matrix factorization approach, PLIER
+deconvolutes the gene expression data into a set of latent variables (LV) that
+each represent a gene module (i.e. a set of genes with coordinated expression
+patterns).
+
+`COMPLETE`{.red}
+
+
+### Top latent variables associated to neutrophils
+
+![
+**Correlation of neutrophil counts with top LVs associated with neutrophils traits.**
+<!-- Description -->
+](images/supplementary_material/lv603_neutrophils/neutrophils_top20_lvs.png "Top
+20 LVs associated with neutrophils"){#fig:supp:neutrophils_top20lvs}
+
+![
+**Significance of neutrophil counts correlation.**
+<!-- Description -->
+](images/supplementary_material/lv603_neutrophils/significance_neutrophil.png "Significance of neutrophil counts
+correlation"){#fig:supp:signif_neutrophils_counts height=3in}
+
+
+### Consensus clustering of traits in PhenomeXcan
+
+#### Dimensionality reduction
+
+#### Ensemble creation: clustering algorithms and parameters
+
+::: {style="color: red"}
+- list of methods and its parameters
+:::
+
+#### Ensemble combination and consensus functions
+
+::: {style="color: red"}
+- evidence accumulation approach
+- we also used a spectral clustering approach
+- for each k, we picked the partition that maximized the agreement with the ensemble
+- show figure where we select the ks that are greater than the median
+:::
+
+
+#### Clusters interpretation
+
+::: {style="color: red"}
+- we remove each LV and run the decision tree classifier again
+:::
+
+
+### Drug-disease predictions
+
+::: {style="color: red"}
+- anti-correlation using dot product of s-predixcan on all tissues and lincs
+:::
