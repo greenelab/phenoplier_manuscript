@@ -38,8 +38,8 @@
    fit-margin-left="0"
    fit-margin-right="0"
    fit-margin-bottom="0"
-   inkscape:zoom="0.28693182"
-   inkscape:cx="-171.17555"
+   inkscape:zoom="1.1477273"
+   inkscape:cx="371.07708"
    inkscape:cy="354.63308"
    inkscape:window-x="8"
    inkscape:window-y="32"
@@ -3629,7 +3629,7 @@
    class="BoundingBox"
    x="16283"
    y="9863"
-   width="3693"
+   width="3694"
    height="1792"
    id="rect1429"
    style="fill:none;stroke:none" />
@@ -4113,14 +4113,14 @@
    id="id44">
         <rect
    class="BoundingBox"
-   x="4643"
+   x="4712"
    y="17139"
    width="1654"
    height="765"
    id="rect1632"
    style="fill:none;stroke:none" />
         <path
-   d="m 5470,17902 h -826 v -762 h 1651 v 762 z"
+   d="m 5539,17902 h -826 v -762 h 1651 v 762 z"
    id="path1634"
    inkscape:connector-curvature="0"
    style="fill:none;stroke:#000000" />
@@ -4133,7 +4133,7 @@
      id="tspan1640"
      style="font-weight:400;font-size:318px;font-family:'Liberation Sans', sans-serif"><tspan
        class="TextPosition"
-       x="4750"
+       x="4819"
        y="17631"
        id="tspan1638"><tspan
          id="tspan1636"
@@ -4148,14 +4148,14 @@
    id="id45">
         <rect
    class="BoundingBox"
-   x="9143"
+   x="9212"
    y="17139"
    width="1654"
    height="765"
    id="rect1647"
    style="fill:none;stroke:none" />
         <path
-   d="m 9970,17902 h -826 v -762 h 1651 v 762 z"
+   d="m 10039,17902 h -826 v -762 h 1651 v 762 z"
    id="path1649"
    inkscape:connector-curvature="0"
    style="fill:none;stroke:#000000" />
@@ -4168,7 +4168,7 @@
      id="tspan1655"
      style="font-weight:400;font-size:318px;font-family:'Liberation Sans', sans-serif"><tspan
        class="TextPosition"
-       x="9338"
+       x="9407"
        y="17631"
        id="tspan1653"><tspan
          id="tspan1651"
@@ -4183,14 +4183,14 @@
    id="id46">
         <rect
    class="BoundingBox"
-   x="14243"
+   x="14212"
    y="17139"
    width="1654"
    height="765"
    id="rect1662"
    style="fill:none;stroke:none" />
         <path
-   d="m 15070,17902 h -826 v -762 h 1651 v 762 z"
+   d="m 15039,17902 h -826 v -762 h 1651 v 762 z"
    id="path1664"
    inkscape:connector-curvature="0"
    style="fill:none;stroke:#000000" />
@@ -4203,7 +4203,7 @@
      id="tspan1676"
      style="font-weight:400;font-size:318px;font-family:'Liberation Sans', sans-serif"><tspan
        class="TextPosition"
-       x="14670"
+       x="14639"
        y="17631"
        id="tspan1674"><tspan
          id="tspan1666"
@@ -4263,17 +4263,17 @@
    class="BoundingBox"
    x="3923"
    y="17901"
-   width="1549"
+   width="1618"
    height="840"
    id="rect1698"
    style="fill:none;stroke:none" />
         <path
-   d="m 5470,17902 -1301,705"
+   d="m 5539,17902 -1367,709"
    id="path1700"
    inkscape:connector-curvature="0"
    style="fill:none;stroke:#3465a4" />
         <path
-   d="m 4258,18729 -335,11 192,-275 z"
+   d="m 4258,18735 -335,5 197,-271 z"
    id="path1702"
    inkscape:connector-curvature="0"
    style="fill:#3465a4;stroke:none" />
@@ -4286,19 +4286,19 @@
    id="id49">
         <rect
    class="BoundingBox"
-   x="5469"
+   x="5538"
    y="17901"
-   width="612"
+   width="543"
    height="753"
    id="rect1707"
    style="fill:none;stroke:none" />
         <path
-   d="m 5470,17902 433,534"
+   d="m 5539,17902 377,524"
    id="path1709"
    inkscape:connector-curvature="0"
    style="fill:none;stroke:#3465a4" />
         <path
-   d="m 6007,18326 73,327 -306,-138 z"
+   d="m 6026,18322 54,331 -297,-156 z"
    id="path1711"
    inkscape:connector-curvature="0"
    style="fill:#3465a4;stroke:none" />
@@ -4313,17 +4313,17 @@
    class="BoundingBox"
    x="9002"
    y="17901"
-   width="970"
+   width="1039"
    height="754"
    id="rect1716"
    style="fill:none;stroke:none" />
         <path
-   d="m 9970,17902 -747,580"
+   d="m 10039,17902 -810,588"
    id="path1718"
    inkscape:connector-curvature="0"
    style="fill:none;stroke:#3465a4" />
         <path
-   d="m 9331,18588 -329,66 145,-303 z"
+   d="m 9333,18599 -331,55 155,-298 z"
    id="path1720"
    inkscape:connector-curvature="0"
    style="fill:#3465a4;stroke:none" />
@@ -4336,19 +4336,19 @@
    id="id51">
         <rect
    class="BoundingBox"
-   x="9969"
+   x="10038"
    y="17901"
-   width="914"
+   width="845"
    height="755"
    id="rect1725"
    style="fill:none;stroke:none" />
         <path
-   d="m 9970,17902 696,575"
+   d="m 10039,17902 634,566"
    id="path1727"
    inkscape:connector-curvature="0"
    style="fill:none;stroke:#3465a4" />
         <path
-   d="m 10746,18348 136,307 -327,-75 z"
+   d="m 10758,18343 124,312 -324,-88 z"
    id="path1729"
    inkscape:connector-curvature="0"
    style="fill:#3465a4;stroke:none" />
@@ -4508,17 +4508,17 @@
    class="BoundingBox"
    x="14223"
    y="17901"
-   width="849"
+   width="818"
    height="640"
    id="rect1791"
    style="fill:none;stroke:none" />
         <path
-   d="m 15070,17902 -623,470"
+   d="m 15039,17902 -595,466"
    id="path1793"
    inkscape:connector-curvature="0"
    style="fill:none;stroke:#3465a4" />
         <path
-   d="m 14553,18479 -330,61 149,-300 z"
+   d="m 14552,18473 -329,67 144,-303 z"
    id="path1795"
    inkscape:connector-curvature="0"
    style="fill:#3465a4;stroke:none" />
@@ -4531,19 +4531,19 @@
    id="id58">
         <rect
    class="BoundingBox"
-   x="15069"
+   x="15038"
    y="17901"
-   width="655"
+   width="686"
    height="640"
    id="rect1800"
    style="fill:none;stroke:none" />
         <path
-   d="m 15070,17902 453,442"
+   d="m 15039,17902 479,447"
    id="path1802"
    inkscape:connector-curvature="0"
    style="fill:none;stroke:#3465a4" />
         <path
-   d="m 15613,18223 110,317 -319,-102 z"
+   d="m 15606,18226 117,314 -322,-95 z"
    id="path1804"
    inkscape:connector-curvature="0"
    style="fill:#3465a4;stroke:none" />
@@ -4787,11 +4787,11 @@
          id="tspan1889"
          style="fill:#000000;stroke:none">Cardiovascular</tspan></tspan><tspan
        class="TextPosition"
-       x="5733"
+       x="5447"
        y="19449"
        id="tspan1895"><tspan
          id="tspan1893"
-         style="fill:#000000;stroke:none">traits</tspan></tspan></tspan></text>
+         style="fill:#000000;stroke:none">diseases</tspan></tspan></tspan></text>
 
        </g>
       </g>
