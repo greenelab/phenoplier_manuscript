@@ -9,9 +9,9 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    class="svglite"
-   width="1401.2839pt"
-   height="1159.8pt"
-   viewBox="0 0 1401.284 1159.8001"
+   width="1404.637pt"
+   height="1166.9495pt"
+   viewBox="0 0 1404.637 1166.9495"
    version="1.1"
    id="svg2520"
    sodipodi:docname="clustering_tree.svg"
@@ -37,7 +37,7 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1652"
+     inkscape:window-width="1764"
      inkscape:window-height="1363"
      id="namedview2522"
      showgrid="false"
@@ -45,10 +45,10 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="0.315625"
-     inkscape:cx="440.16904"
-     inkscape:cy="324.52039"
-     inkscape:window-x="8"
+     inkscape:zoom="1.2625"
+     inkscape:cx="340.09328"
+     inkscape:cy="334.053"
+     inkscape:window-x="1668"
      inkscape:window-y="32"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg2520"
@@ -6906,20 +6906,20 @@
        id="tspan3546-2">KM</tspan></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-     x="-1061.8751"
+     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+     x="-1021.5808"
      y="649.13519"
      id="text3042-3-35-0-0-2-8"
      transform="rotate(-90)"><tspan
        sodipodi:role="line"
-       x="-1061.8751"
+       x="-1021.5808"
        y="649.13519"
-       style="font-size:9px;text-align:center;text-anchor:middle;stroke-width:0.75"
+       style="font-size:9px;text-align:end;text-anchor:end;stroke-width:0.75"
        id="tspan3546-3">Blood pressure</tspan><tspan
        sodipodi:role="line"
-       x="-1061.8751"
+       x="-1021.5808"
        y="660.38519"
-       style="font-size:9px;text-align:center;text-anchor:middle;stroke-width:0.75"
+       style="font-size:9px;text-align:end;text-anchor:end;stroke-width:0.75"
        id="tspan3621">and hypertension</tspan></text>
   <rect
      style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.04501377;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -6930,15 +6930,15 @@
      y="1016.317" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-     x="-1065.2809"
+     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+     x="-1022.0598"
      y="681.177"
      id="text3042-3-35-0-0-2-8-2"
      transform="rotate(-90)"><tspan
        sodipodi:role="line"
-       x="-1065.2809"
+       x="-1022.0598"
        y="681.177"
-       style="font-size:9px;text-align:center;text-anchor:middle;stroke-width:0.75"
+       style="font-size:9px;text-align:end;text-anchor:end;stroke-width:0.75"
        id="tspan3621-3">Skin and hair color</tspan></text>
   <rect
      style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.04501377;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -6949,15 +6949,15 @@
      y="1016.317" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-     x="-1062.3783"
+     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+     x="-1021.8445"
      y="628.91858"
      id="text3042-3-35-0-0-2-8-9"
      transform="rotate(-90)"><tspan
        sodipodi:role="line"
-       x="-1062.3783"
+       x="-1021.8445"
        y="628.91858"
-       style="font-size:9px;text-align:center;text-anchor:middle;stroke-width:0.75"
+       style="font-size:9px;text-align:end;text-anchor:end;stroke-width:0.75"
        id="tspan3705">Sleeping and diet</tspan></text>
   <rect
      style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.04501377;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -6968,15 +6968,15 @@
      y="1016.317" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-     x="-1086.2758"
+     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+     x="-1021.5808"
      y="604.20258"
      id="text3042-3-35-0-0-2-8-9-4"
      transform="rotate(-90)"><tspan
        sodipodi:role="line"
-       x="-1086.2758"
+       x="-1021.5808"
        y="604.20258"
-       style="font-size:9px;text-align:center;text-anchor:middle;stroke-width:0.75"
+       style="font-size:9px;text-align:end;text-anchor:end;stroke-width:0.75"
        id="tspan3733">Inflammatory bowel disease</tspan></text>
   <rect
      style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.04501377;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -6987,15 +6987,15 @@
      y="1016.317" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-     x="-1064.881"
+     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+     x="-1021.2952"
      y="579.93835"
      id="text3042-3-35-0-0-2-8-9-4-6"
      transform="rotate(-90)"><tspan
        sodipodi:role="line"
-       x="-1064.881"
+       x="-1021.2952"
        y="579.93835"
-       style="font-size:9px;text-align:center;text-anchor:middle;stroke-width:0.75"
+       style="font-size:9px;text-align:end;text-anchor:end;stroke-width:0.75"
        id="tspan3733-1">Hand grip strength</tspan></text>
   <rect
      style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.04501377;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -7006,15 +7006,15 @@
      y="1016.317" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-     x="-1070.2533"
+     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+     x="-1021.6204"
      y="551.98792"
      id="text3042-3-35-0-0-2-8-9-4-6-6"
      transform="rotate(-90)"><tspan
        sodipodi:role="line"
-       x="-1070.2533"
+       x="-1021.6204"
        y="551.98792"
-       style="font-size:9px;text-align:center;text-anchor:middle;stroke-width:0.75"
+       style="font-size:9px;text-align:end;text-anchor:end;stroke-width:0.75"
        id="tspan3733-1-3">Asthma and allergies</tspan></text>
   <rect
      style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.04501377;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -7025,15 +7025,15 @@
      y="1016.317" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-     x="-1077.0736"
+     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+     x="-1021.6204"
      y="527.90967"
      id="text3042-3-35-0-0-2-8-9-4-6-6-0"
      transform="rotate(-90)"><tspan
        sodipodi:role="line"
-       x="-1077.0736"
+       x="-1021.6204"
        y="527.90967"
-       style="font-size:9px;text-align:center;text-anchor:middle;stroke-width:0.75"
+       style="font-size:9px;text-align:end;text-anchor:end;stroke-width:0.75"
        id="tspan3733-1-3-6">Cardiovascular diseases</tspan></text>
   <rect
      style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.04501377;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -7044,20 +7044,20 @@
      y="1016.317" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-     x="-1075.0895"
+     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+     x="-1021.2424"
      y="446.3678"
      id="text3042-3-35-0-0-2-8-9-4-6-6-0-5"
      transform="rotate(-90)"><tspan
        sodipodi:role="line"
-       x="-1075.0895"
+       x="-1021.2424"
        y="446.3678"
-       style="font-size:9px;text-align:center;text-anchor:middle;stroke-width:0.75"
+       style="font-size:9px;text-align:end;text-anchor:end;stroke-width:0.75"
        id="tspan3733-1-3-6-5">Education, intelligence,</tspan><tspan
        sodipodi:role="line"
-       x="-1075.0895"
+       x="-1021.2424"
        y="457.6178"
-       style="font-size:9px;text-align:center;text-anchor:middle;stroke-width:0.75"
+       style="font-size:9px;text-align:end;text-anchor:end;stroke-width:0.75"
        id="tspan3823">schizophrenia</tspan></text>
   <rect
      style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.04501377;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -7068,15 +7068,15 @@
      y="1016.317" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-     x="-1080.2047"
+     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+     x="-1021.2292"
      y="426.073"
      id="text3042-3-35-0-0-2-8-9-4-6-6-0-5-7"
      transform="rotate(-90)"><tspan
        sodipodi:role="line"
-       x="-1080.2047"
+       x="-1021.2292"
        y="426.073"
-       style="font-size:9px;text-align:center;text-anchor:middle;stroke-width:0.75"
+       style="font-size:9px;text-align:end;text-anchor:end;stroke-width:0.75"
        id="tspan3823-5">Autoimmune diseases #1</tspan></text>
   <rect
      style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.04501377;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -7087,15 +7087,15 @@
      y="1016.317" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-     x="-1047.7972"
+     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+     x="-1021.7917"
      y="401.05225"
      id="text3042-3-35-0-0-2-8-9-4-6-6-0-5-7-9"
      transform="rotate(-90)"><tspan
        sodipodi:role="line"
-       x="-1047.7972"
+       x="-1021.7917"
        y="401.05225"
-       style="font-size:9px;text-align:center;text-anchor:middle;stroke-width:0.75"
+       style="font-size:9px;text-align:end;text-anchor:end;stroke-width:0.75"
        id="tspan3823-5-3">Spirometry</tspan></text>
   <rect
      style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.04501377;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -7106,15 +7106,15 @@
      y="1016.317" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-     x="-1058.7704"
+     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+     x="-1021.5808"
      y="375.83047"
      id="text3042-3-35-0-0-2-8-9-4-6-6-0-5-7-9-4"
      transform="rotate(-90)"><tspan
        sodipodi:role="line"
-       x="-1058.7704"
+       x="-1021.5808"
        y="375.83047"
-       style="font-size:9px;text-align:center;text-anchor:middle;stroke-width:0.75"
+       style="font-size:9px;text-align:end;text-anchor:end;stroke-width:0.75"
        id="tspan3823-5-3-5">Nutrients intake</tspan></text>
   <rect
      style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.04501377;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -7125,15 +7125,15 @@
      y="1016.317" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-     x="-1064.3514"
+     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+     x="-1021.8445"
      y="349.4136"
      id="text3042-3-35-0-0-2-8-9-4-6-6-0-5-7-9-4-5"
      transform="rotate(-90)"><tspan
        sodipodi:role="line"
-       x="-1064.3514"
+       x="-1021.8445"
        y="349.4136"
-       style="font-size:9px;text-align:center;text-anchor:middle;stroke-width:0.75"
+       style="font-size:9px;text-align:end;text-anchor:end;stroke-width:0.75"
        id="tspan3823-5-3-5-4">Lymphocyte count</tspan></text>
   <rect
      style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.04501377;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -7144,20 +7144,20 @@
      y="1016.317" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-     x="-1085.7594"
+     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+     x="-1021.7654"
      y="318.54111"
      id="text3042-3-35-0-0-2-8-9-4-6-6-0-5-7-9-4-5-4"
      transform="rotate(-90)"><tspan
        sodipodi:role="line"
-       x="-1085.7594"
+       x="-1021.7654"
        y="318.54111"
-       style="font-size:9px;text-align:center;text-anchor:middle;stroke-width:0.75"
+       style="font-size:9px;text-align:end;text-anchor:end;stroke-width:0.75"
        id="tspan3823-5-3-5-4-4">Townsend deprivation index</tspan><tspan
        sodipodi:role="line"
-       x="-1085.7594"
+       x="-1021.7654"
        y="329.79111"
-       style="font-size:9px;text-align:center;text-anchor:middle;stroke-width:0.75"
+       style="font-size:9px;text-align:end;text-anchor:end;stroke-width:0.75"
        id="tspan3935">and pollution</tspan></text>
   <rect
      style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.04501377;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -7168,15 +7168,15 @@
      y="1016.317" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-     x="-1080.1344"
+     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+     x="-1021.1589"
      y="198.20674"
      id="text3042-3-35-0-0-2-8-9-4-6-6-0-5-7-0"
      transform="rotate(-90)"><tspan
        sodipodi:role="line"
-       x="-1080.1344"
+       x="-1021.1589"
        y="198.20674"
-       style="font-size:9px;text-align:center;text-anchor:middle;stroke-width:0.75"
+       style="font-size:9px;text-align:end;text-anchor:end;stroke-width:0.75"
        id="tspan3823-5-7">Autoimmune diseases #2</tspan></text>
   <rect
      style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.04501377;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -7187,15 +7187,15 @@
      y="1016.317" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-     x="-1035.7936"
+     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+     x="-1021.6204"
      y="170.60173"
      id="text3042-3-35-0-0-2-8-9-4-6-6-0-5-7-0-6"
      transform="rotate(-90)"><tspan
        sodipodi:role="line"
-       x="-1035.7936"
+       x="-1021.6204"
        y="170.60173"
-       style="font-size:9px;text-align:center;text-anchor:middle;stroke-width:0.75"
+       style="font-size:9px;text-align:end;text-anchor:end;stroke-width:0.75"
        id="tspan3823-5-7-8">Lipids</tspan></text>
   <rect
      style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.04501377;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -7206,20 +7206,20 @@
      y="1016.317" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-     x="-1069.9303"
+     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+     x="-1021.2424"
      y="13.491574"
      id="text3042-3-35-0-0-2-8-9-4-6-6-0-5-7-0-6-4"
      transform="rotate(-90)"><tspan
        sodipodi:role="line"
-       x="-1069.9303"
+       x="-1021.2424"
        y="13.491574"
-       style="font-size:9px;text-align:center;text-anchor:middle;stroke-width:0.75"
+       style="font-size:9px;text-align:end;text-anchor:end;stroke-width:0.75"
        id="tspan4004">Happiness and</tspan><tspan
        sodipodi:role="line"
-       x="-1069.9303"
+       x="-1021.2424"
        y="24.741573"
-       style="font-size:9px;text-align:center;text-anchor:middle;stroke-width:0.75"
+       style="font-size:9px;text-align:end;text-anchor:end;stroke-width:0.75"
        id="tspan4008">subjective well-being</tspan></text>
   <rect
      style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.04501377;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -7230,20 +7230,20 @@
      y="1016.317" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-     x="-1068.045"
+     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+     x="-1021.5808"
      y="64.388718"
      id="text3042-3-35-0-0-2-8-9-4-6-6-0-5-7-0-6-4-4"
      transform="rotate(-90)"><tspan
        sodipodi:role="line"
-       x="-1068.045"
+       x="-1021.5808"
        y="64.388718"
-       style="font-size:9px;text-align:center;text-anchor:middle;stroke-width:0.75"
+       style="font-size:9px;text-align:end;text-anchor:end;stroke-width:0.75"
        id="tspan4008-2">Intraocular pressure</tspan><tspan
        sodipodi:role="line"
-       x="-1068.045"
+       x="-1021.5808"
        y="75.638718"
-       style="font-size:9px;text-align:center;text-anchor:middle;stroke-width:0.75"
+       style="font-size:9px;text-align:end;text-anchor:end;stroke-width:0.75"
        id="tspan4036">(cornea)</tspan></text>
   <rect
      style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.04501377;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -7254,15 +7254,15 @@
      y="1016.317" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-     x="-1057.5421"
+     style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+     x="-1021.6204"
      y="96.403702"
      id="text3042-3-35-0-0-2-8-9-4-6-6-0-5-7-0-6-6"
      transform="rotate(-90)"><tspan
        sodipodi:role="line"
-       x="-1057.5421"
+       x="-1021.6204"
        y="96.403702"
-       style="font-size:9px;text-align:center;text-anchor:middle;stroke-width:0.75"
+       style="font-size:9px;text-align:end;text-anchor:end;stroke-width:0.75"
        id="tspan3823-5-7-8-8">Smoking habits</tspan></text>
   <rect
      style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.04501377;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
