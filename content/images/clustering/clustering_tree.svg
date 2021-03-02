@@ -24,7 +24,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -46,7 +46,7 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:zoom="1.2625"
-     inkscape:cx="340.09328"
+     inkscape:cx="421.96692"
      inkscape:cy="334.053"
      inkscape:window-x="1668"
      inkscape:window-y="32"
@@ -7189,14 +7189,19 @@
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
      x="-1021.6204"
-     y="170.60173"
+     y="165.84904"
      id="text3042-3-35-0-0-2-8-9-4-6-6-0-5-7-0-6"
      transform="rotate(-90)"><tspan
        sodipodi:role="line"
        x="-1021.6204"
-       y="170.60173"
+       y="165.84904"
        style="font-size:9px;text-align:end;text-anchor:end;stroke-width:0.75"
-       id="tspan3823-5-7-8">Lipids</tspan></text>
+       id="tspan3823-5-7-8">Lipids and</tspan><tspan
+       sodipodi:role="line"
+       x="-1021.6204"
+       y="177.09904"
+       style="font-size:9px;text-align:end;text-anchor:end;stroke-width:0.75"
+       id="tspan2161">Alzheimer's disease</tspan></text>
   <rect
      style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.04501377;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
      id="rect3465-9-6-6-3-7-1-8-3-0-2-1-4-6-8-8"
