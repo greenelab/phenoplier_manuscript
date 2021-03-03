@@ -2,7 +2,7 @@ anthropometric
 atopic
 AUC
 Binglan’s
-BioBank
+Biobank
 celiac
 cgreene
 clusering
@@ -11,7 +11,7 @@ concurringly
 datasets
 deconvolutes
 densitometry
-Dimensionality
+dimensionality
 DrubBank
 dysregulated
 erythematosus
@@ -25,14 +25,13 @@ interpretable
 keratometry
 lincs
 loadings
-LV
+lv
 LVs
 Marylyn
 MarylynRitchie
 miltondp
 MultiXcan
 myeloid
-neuotrophil
 neutrophil
 neutrophils
 PCA
