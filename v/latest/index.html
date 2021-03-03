@@ -7,7 +7,7 @@
   <meta name="author" content="Milton Pividori" />
   <meta name="author" content="Marylyn D. Ritchie" />
   <meta name="author" content="Casey S. Greene" />
-  <meta name="dcterms.date" content="2021-02-09" />
+  <meta name="dcterms.date" content="2021-03-03" />
   <meta name="keywords" content="gene co-expression, transfer learning, MultiPLIER, PhenomeXcan, TWAS" />
   <title>Integrating transcriptome-wide association studies with gene co-expression patterns</title>
   <style>
@@ -30,8 +30,8 @@
   <meta name="citation_title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
   <meta property="og:title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
   <meta property="twitter:title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
-  <meta name="dc.date" content="2021-02-09" />
-  <meta name="citation_publication_date" content="2021-02-09" />
+  <meta name="dc.date" content="2021-03-03" />
+  <meta name="citation_publication_date" content="2021-03-03" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -57,9 +57,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/8520e8669798beffeffa36a22c5874a5cda29fed/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/8520e8669798beffeffa36a22c5874a5cda29fed/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/8520e8669798beffeffa36a22c5874a5cda29fed/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/1ce77dc67d24708578c2bf355f7df42499c66702/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/1ce77dc67d24708578c2bf355f7df42499c66702/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/1ce77dc67d24708578c2bf355f7df42499c66702/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -82,10 +82,10 @@
 Text in <span style="color: red">red</span>/<span class="red">red</span> are internal comments</span></p>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/phenoplier_manuscript/v/8520e8669798beffeffa36a22c5874a5cda29fed/">permalink</a>)
+(<a href="https://greenelab.github.io/phenoplier_manuscript/v/1ce77dc67d24708578c2bf355f7df42499c66702/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/8520e8669798beffeffa36a22c5874a5cda29fed">greenelab/phenoplier_manuscript@8520e86</a>
-on February 9, 2021.
+from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/1ce77dc67d24708578c2bf355f7df42499c66702">greenelab/phenoplier_manuscript@1ce77dc</a>
+on March 3, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -143,15 +143,14 @@ large gene expression compendium (recount2 <span class="citation" data-cites="6S
 generates matrix <span class="math inline">\(\mathbf{\hat{M}}\)</span>, where each trait is now described by
 latent variables/gene modules.
 <!--  -->
-<strong>b)</strong> After the integration process, we found that neutrophil counts and other
-white blood cells (bottom) were ranked among the top 10 traits for an LV that
-was termed a neutrophil signature in the original MultiPLIER study. Genes in
-this LV were found to be expressed in related cell types (top).
-<code class="red">Improve cell types/tissues figure</code>
+<strong>b)</strong> After the integration process, we found that neutrophil counts and other white blood cells (bottom) were ranked among the top 10 traits for an LV that was termed a neutrophil signature in the original MultiPLIER study.
+Genes in this LV were found to be expressed in relevant cell types (top).
 <!--  --></figcaption>
 </figure>
 </div>
-<p>MultiPLIER <span class="citation" data-cites="14rnBunuZ">[<a href="#ref-14rnBunuZ" role="doc-biblioref">1</a>]</span> is a recent computational strategy
+<p>(<code class="red">This paragraph has probably too much detail about MultiPLIER</code>)
+<!--  -->
+MultiPLIER <span class="citation" data-cites="14rnBunuZ">[<a href="#ref-14rnBunuZ" role="doc-biblioref">1</a>]</span> is a recent computational strategy
 that extracts patterns of co-expressed genes from large gene expression
 datasets. The approach uses an unsupervised matrix factorization method that was
 employed to extract latent variables from recount2 <span class="citation" data-cites="6SPTvFXq">[<a href="#ref-6SPTvFXq" role="doc-biblioref">3</a>]</span>.
@@ -180,19 +179,15 @@ variables, <span class="math inline">\(\lambda_2\)</span> is the regularization 
 step, and <span class="math inline">\(\hat{\mathbf{M}}^{l \times t}\)</span> is finally the projection of
 <span class="math inline">\(\mathbf{M}\)</span> into the latent space: all traits in PhenomeXcan are now described
 by LVs, thus we can potentially infer the effects of gene modules on different
-human traits. Since the MultiPLIER models also provide the conditions (such as
-cell types and tissues) in which genes in a module are concurringly expressed,
-our approach would also allow to infer the context in which the gene module
-affects a trait or disease.</p>
+human traits.
+Since the MultiPLIER models also provide the experimental conditions (such as cell types and tissues) in which genes in a module are concurringly expressed, our approach would also allow inferring the context in which the gene module affects a trait or disease.</p>
 <p>In the original MultiPLIER study <span class="citation" data-cites="14rnBunuZ">[<a href="#ref-14rnBunuZ" role="doc-biblioref">1</a>]</span>, the authors
 found an LV significantly associated with previously known neutrophil gene-sets
 and highly correlated with neutrophil estimates from gene expression.
 <!--  -->
-We analyzed this LV using our approach (Figure <a href="#fig:entire_process">1</a> b), and found
-that 1) neutrophil counts and other white blood cell traits from PhenomeXcan
-<span class="citation" data-cites="lY5ln3dB">[<a href="#ref-lY5ln3dB" role="doc-biblioref">2</a>]</span> were ranked among the top 10 traits for this LV,
-and 2) that the genes in this LV are expressed in neuotrophil cells (see more
-details in the supplementary material).
+We analyzed this LV using our approach (Figure <a href="#fig:entire_process">1</a> b), and found that
+1) neutrophil counts and other white blood cell traits from PhenomeXcan <span class="citation" data-cites="lY5ln3dB">[<a href="#ref-lY5ln3dB" role="doc-biblioref">2</a>]</span> were ranked among the top 10 traits for this LV,
+and 2) that the genes in this LV are expressed in neutrophil cells (see more details in the supplementary material).
 <!--  -->
 These initial results strongly suggest that shared patterns exist in the gene
 expression space (which has no GTEx samples) and the TWAS space (with gene
