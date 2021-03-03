@@ -11,7 +11,7 @@ concurringly
 datasets
 deconvolutes
 densitometry
-dimensionality
+Dimensionality
 DrubBank
 dysregulated
 erythematosus
@@ -19,13 +19,13 @@ fastENLOC
 GBMF
 GreeneScientist
 GTEx
-haematological
 hyperspherical
 interpretable
+intraocular
 keratometry
 lincs
 loadings
-lv
+LV
 LVs
 Marylyn
 MarylynRitchie
@@ -52,5 +52,5 @@ Strehl
 therapeutical
 transcriptional
 transcriptome
-translational
+Translational
 UMAP
