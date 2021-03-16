@@ -78,11 +78,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/fb48200a544715796a3a5f4ca9125caf50ce58ff/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/1cfa19a071ada67a5bbda2344c81cb37b362558d/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/fb48200a544715796a3a5f4ca9125caf50ce58ff/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/1cfa19a071ada67a5bbda2344c81cb37b362558d/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/fb48200a544715796a3a5f4ca9125caf50ce58ff/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/1cfa19a071ada67a5bbda2344c81cb37b362558d/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -121,9 +121,9 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/fb48200a544715796a3a5f4ca9125caf50ce58ff/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/1cfa19a071ada67a5bbda2344c81cb37b362558d/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@fb48200](https://github.com/greenelab/phenoplier_manuscript/tree/fb48200a544715796a3a5f4ca9125caf50ce58ff)
+from [greenelab/phenoplier_manuscript@1cfa19a](https://github.com/greenelab/phenoplier_manuscript/tree/1cfa19a071ada67a5bbda2344c81cb37b362558d)
 on March 16, 2021.
 </em></small>
 
@@ -342,10 +342,31 @@ material.
 ![
 **Clustering tree using multiple resolutions.**
 <!--  -->
-Clustering tree of the consensus partitions at different resolutions (from 4 to 45 clusters).
+Clustering tree of the consensus partitions at different resolutions (from 5 to 26 clusters).
 Each row represents a partition of the traits, and each circle is a cluster from that partition.
 Arrows indicate how traits in one cluster move across clusters from different partitions.
 Some clusters, such as anthropometric traits, blood cell counts, and some complex diseases are highly stable across different resolutions.
+<!--  -->
+BMR: basal metabolic rate;
+WC: waist/hip circumference;
+MCV: mean corpuscular volume;
+MCH: mean corpuscular hemoglobin;
+MRV: mean reticulocyte volume;
+MRV: mean reticulocyte volume;
+MSCV: mean sphered cell volume;
+RDW: red cell (erythrocyte) distribution width;
+RA: rheumatoid arthritis;
+SLE: systemic lupus erythematosus;
+<sup>a</sup> includes whole-body, arms and legs impedances;
+<sup>b</sup> allergies refer to allergic rhinitis or atopic dermatitis;
+<sup>c</sup> includes Alzheimer's disease, coronary artery disease, breast cancer, fasting blood glucose and insulin measurements, inflammatory bowel disease, and atopic dermatitis;
+<sup>d</sup> includes erythrocyte count, hemoglobin concentration, and hematocrit percentage;
+<sup>e</sup> includes reticulocyte count and percentage, immature reticulocyte fraction, and high light scatter reticulocytes count and percentage;
+<sup>f</sup> includes platelet count, platelet crit, mean platelet volume, and platelet distribution width.
+<sup>g</sup> includes diabetes, gout, arthrosis, and respiratory diseases (and related medications such as ramipril, allopurinol, lisinopril, and albuterol), and several environmental/behavioral factors such as: intake of a range of common food/drink items including alcohol, time spent outdoors and watching TV, smoking and sleeping habits, early-life factors, education attainment, psycological and mental health, and health satisfaction.
+<sup>h</sup> includes vascular problems such as angina, deep vein thrombosis (DVT), intraocular pressure, eye and mouth problems, hand grip strength, several measurements of physical activity, jobs involving heavy physical work, transport type for commuting, intake of common vitamin/mineral supplements, and various types of body pain and medications for pain relief.
+<sup>i</sup> age when diabetes was first diagnosed;
+<sup>j</sup> includes neutrophil count, neutrophil+basophil count, neutrophil+eosinophil count, granulocyte count, leukocyte count, and myeloid cell count.
 <!--  -->
 ](images/clustering/clustering_tree.svg "Clustering tree using the consensus solutions for traits"){#fig:clustering:tree width="100%"}
 
@@ -356,6 +377,9 @@ clusters), the consensus partition that maximized the agreement with the
 ensemble was selected (see supplementary material).
 Since it is expected that a subset of resolutions better represents the patterns among traits, we further filtered the consensus partitions by taking those with an agreement value higher than the 75th percentile, which included partitions from 4 to 45 clusters.
 
+- mention that some clusters, like 25, 16, and 21 (diabetes and autoimmunity) are "unstable".
+- this shows the complexity of autoimmune diseases in this data representation
+- the arrows that go out and in in the "complex" branch to the other branches show the complexity of connection for some traits; MAYBE I CAN MENTION SOME HERE.
 
 The clustering tree shows four clear branches (from right to left):
 results from hematological assays (blood cell count), anthropometric traits, bone-densitometry of heel and keratometry measurements, and the "complex" branch.
