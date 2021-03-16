@@ -5,7 +5,7 @@ author-meta:
 - Casey S. Greene
 bibliography:
 - content/manual-references.json
-date-meta: '2021-03-03'
+date-meta: '2021-03-16'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -24,9 +24,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
 
-  <meta name="dc.date" content="2021-03-03" />
+  <meta name="dc.date" content="2021-03-16" />
 
-  <meta name="citation_publication_date" content="2021-03-03" />
+  <meta name="citation_publication_date" content="2021-03-16" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -78,11 +78,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/fdc0d91e53fb546a618eb3b5ffa0fa284988c913/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/fb48200a544715796a3a5f4ca9125caf50ce58ff/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/fdc0d91e53fb546a618eb3b5ffa0fa284988c913/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/fb48200a544715796a3a5f4ca9125caf50ce58ff/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/fdc0d91e53fb546a618eb3b5ffa0fa284988c913/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/fb48200a544715796a3a5f4ca9125caf50ce58ff/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -121,10 +121,10 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/fdc0d91e53fb546a618eb3b5ffa0fa284988c913/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/fb48200a544715796a3a5f4ca9125caf50ce58ff/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@fdc0d91](https://github.com/greenelab/phenoplier_manuscript/tree/fdc0d91e53fb546a618eb3b5ffa0fa284988c913)
-on March 3, 2021.
+from [greenelab/phenoplier_manuscript@fb48200](https://github.com/greenelab/phenoplier_manuscript/tree/fb48200a544715796a3a5f4ca9125caf50ce58ff)
+on March 16, 2021.
 </em></small>
 
 ## Authors
@@ -198,6 +198,8 @@ latent variables/gene modules.
 <!--  -->
 **b)** After the integration process, we found that neutrophil counts and other white blood cells (bottom) were ranked among the top 10 traits for an LV that was termed a neutrophil signature in the original MultiPLIER study.
 Genes in this LV were found to be expressed in relevant cell types (top).
+<!--  -->
+PMBC: `Explain`{.red}; mDCs: `Explain`{.red}.
 <!--  -->
 ](images/entire_process/entire_process.svg "PhenoPLIER
 framework"){#fig:entire_process width="100%"}

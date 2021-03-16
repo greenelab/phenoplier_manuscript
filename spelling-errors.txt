@@ -1,8 +1,8 @@
 anthropometric
 atopic
-AUC
+auc
 Binglan’s
-Biobank
+BioBank
 celiac
 cgreene
 clusering
@@ -11,7 +11,7 @@ concurringly
 datasets
 deconvolutes
 densitometry
-Dimensionality
+dimensionality
 DrubBank
 dysregulated
 erythematosus
@@ -29,6 +29,7 @@ LV
 LVs
 Marylyn
 MarylynRitchie
+mDCs
 miltondp
 MultiXcan
 myeloid
@@ -41,6 +42,7 @@ PhenoPLIER
 Pividori
 PLIER
 PMBB
+PMBC
 possibily
 predixcan
 proj
