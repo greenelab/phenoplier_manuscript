@@ -12,8 +12,8 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    height="1054.0775pt"
    version="1.1"
-   viewBox="0 0 1979.939 1054.0775"
-   width="1979.939pt"
+   viewBox="0 0 1903.8074 1054.0775"
+   width="1903.8074pt"
    id="svg4033"
    sodipodi:docname="lv246.svg"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
@@ -35,8 +35,8 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:zoom="0.20687834"
-     inkscape:cx="1144.7991"
-     inkscape:cy="-16.85214"
+     inkscape:cx="250.55372"
+     inkscape:cy="-16.852185"
      inkscape:window-x="8"
      inkscape:window-y="32"
      inkscape:window-maximized="0"
@@ -302,7 +302,7 @@
   <g
      style="stroke-linecap:butt;stroke-linejoin:round"
      id="patch_1"
-     transform="scale(2.3938686,0.87116275)">
+     transform="scale(2.3018207,0.87116275)">
     <path
        inkscape:connector-curvature="0"
        id="path8"
@@ -320,7 +320,7 @@
   <g
      style="stroke-linecap:butt;stroke-linejoin:round"
      id="axes_3"
-     transform="translate(1161.2621,-156.35253)">
+     transform="translate(1078.7621,-156.35253)">
     <g
        style="stroke-linecap:butt;stroke-linejoin:round"
        id="patch_2">
@@ -12773,7 +12773,7 @@
   <g
      style="stroke-linecap:butt;stroke-linejoin:round"
      id="axes_4"
-     transform="translate(1161.2621,-149.81758)">
+     transform="translate(1078.7621,-149.81758)">
     <g
        style="stroke-linecap:butt;stroke-linejoin:round"
        id="patch_3">
@@ -17624,18 +17624,18 @@
      id="text9938"><tspan
        sodipodi:role="line"
        id="tspan9936"
-       style="font-size:48px;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
        x="30.751915"
-       y="75.367935">a)</tspan></text>
+       y="75.367935">a</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:9px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
-     x="1205.5339"
+     x="1123.0339"
      y="75.367935"
      id="text9938-8"><tspan
        sodipodi:role="line"
        id="tspan9936-1"
-       style="font-size:48px;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
-       x="1205.5339"
-       y="75.367935">b)</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
+       x="1123.0339"
+       y="75.367935">b</tspan></text>
 </svg>
