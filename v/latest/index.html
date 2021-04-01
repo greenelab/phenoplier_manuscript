@@ -7,7 +7,7 @@
   <meta name="author" content="Milton Pividori" />
   <meta name="author" content="Marylyn D. Ritchie" />
   <meta name="author" content="Casey S. Greene" />
-  <meta name="dcterms.date" content="2021-03-23" />
+  <meta name="dcterms.date" content="2021-04-01" />
   <meta name="keywords" content="gene co-expression, transfer learning, MultiPLIER, PhenomeXcan, TWAS" />
   <title>Integrating transcriptome-wide association studies with gene co-expression patterns</title>
   <style>
@@ -30,8 +30,8 @@
   <meta name="citation_title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
   <meta property="og:title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
   <meta property="twitter:title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
-  <meta name="dc.date" content="2021-03-23" />
-  <meta name="citation_publication_date" content="2021-03-23" />
+  <meta name="dc.date" content="2021-04-01" />
+  <meta name="citation_publication_date" content="2021-04-01" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -57,9 +57,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/d35e8398766ee718ab017bd8f4d5ad29c1f926a7/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/d35e8398766ee718ab017bd8f4d5ad29c1f926a7/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/d35e8398766ee718ab017bd8f4d5ad29c1f926a7/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/a3d6b3d0c267fcd8d3fd57696979b1e7b6b2e3da/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/a3d6b3d0c267fcd8d3fd57696979b1e7b6b2e3da/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/a3d6b3d0c267fcd8d3fd57696979b1e7b6b2e3da/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -82,10 +82,10 @@
 Text in <span style="color: red">red</span>/<span class="red">red</span> are internal comments</span></p>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/phenoplier_manuscript/v/d35e8398766ee718ab017bd8f4d5ad29c1f926a7/">permalink</a>)
+(<a href="https://greenelab.github.io/phenoplier_manuscript/v/a3d6b3d0c267fcd8d3fd57696979b1e7b6b2e3da/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/d35e8398766ee718ab017bd8f4d5ad29c1f926a7">greenelab/phenoplier_manuscript@d35e839</a>
-on March 23, 2021.
+from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/a3d6b3d0c267fcd8d3fd57696979b1e7b6b2e3da">greenelab/phenoplier_manuscript@a3d6b3d</a>
+on April 1, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -121,6 +121,35 @@ Center for Health AI, University of Colorado School of Medicine, Aurora, CO, 800
 </small></p></li>
 </ul>
 <h2 class="page_break_before" id="abstract">Abstract</h2>
+<!-- 
+
+ -->
+<h2 id="introduction">Introduction</h2>
+<!--
+# Things to remember:
+
+1. There is some introduction in the BDS conference abstract, and also in the one for the CSHL that we didn't submit.
+
+# Important papers
+
+- Predicting genotype-specific gene regulatory networks
+https://www.biorxiv.org/content/10.1101/2021.01.18.427134v1?rss=1
+I like the ideas mentioned in the abstract and introduction of this paper.
+
+- Identification of therapeutic targets from genetic association studies using hierarchical component analysis
+Highly related paper.
+See notes here https://drive.google.com/file/d/1C-6OGDxo3lG4_1b33prplsZ22r5hwjkq/view
+Cite this paper about GWAS component, gene modules, and S-PrediXcan.
+Some limitations of this method:
+1. They find co-expression modules in GTEx only, we do it across recount2.
+1. They use weighted correlation network analysis (WGCNA) to find modules,
+   which seems simple.  We use PLIER with prior knowledge.
+1. This is how they find a module: ``The eigen-gene component was then computed
+   as the first principal component of the expression matrix of co-expressed
+   genes''
+1. ``Among 44 tissues analyzed, we generally detected 213±89 co-expression
+   modules in one tissue.''
+-->
 <h2 id="results">Results</h2>
 <!--
 
@@ -509,6 +538,16 @@ Papers to read:
   they say "evaluation of drug-disease reverse association"
 ::: -->
 <h2 id="discussion">Discussion</h2>
+<!-- 
+- the importance to invest more resources in finding gene co-expression patterns to increase the number of potential gene modules
+- one disadvantage is that we have a limited amount of genes, only 6.000 out of 22k in phenomexcan;
+more sophisticated methods for gene co-expression pattern discovery are needed to expand the implications of these analyses and cover more contexts.
+- this limited amount of genes makes our approach biased to already known pathways and mechanisms
+-->
+<h2 id="conclusions">Conclusions</h2>
+<!--
+- these results suggest that more research is necessary to continue finding new gene modules/latent variables that capture relevant transcriptional processes that allows us to reprioritize genetic studies.
+-->
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" class="references hanging-indent" role="doc-bibliography">
