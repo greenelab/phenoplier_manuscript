@@ -5,7 +5,7 @@ author-meta:
 - Casey S. Greene
 bibliography:
 - content/manual-references.json
-date-meta: '2021-03-23'
+date-meta: '2021-04-01'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -24,9 +24,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
 
-  <meta name="dc.date" content="2021-03-23" />
+  <meta name="dc.date" content="2021-04-01" />
 
-  <meta name="citation_publication_date" content="2021-03-23" />
+  <meta name="citation_publication_date" content="2021-04-01" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -78,11 +78,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/d35e8398766ee718ab017bd8f4d5ad29c1f926a7/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/a3d6b3d0c267fcd8d3fd57696979b1e7b6b2e3da/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/d35e8398766ee718ab017bd8f4d5ad29c1f926a7/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/a3d6b3d0c267fcd8d3fd57696979b1e7b6b2e3da/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/d35e8398766ee718ab017bd8f4d5ad29c1f926a7/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/a3d6b3d0c267fcd8d3fd57696979b1e7b6b2e3da/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -121,10 +121,10 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/d35e8398766ee718ab017bd8f4d5ad29c1f926a7/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/a3d6b3d0c267fcd8d3fd57696979b1e7b6b2e3da/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@d35e839](https://github.com/greenelab/phenoplier_manuscript/tree/d35e8398766ee718ab017bd8f4d5ad29c1f926a7)
-on March 23, 2021.
+from [greenelab/phenoplier_manuscript@a3d6b3d](https://github.com/greenelab/phenoplier_manuscript/tree/a3d6b3d0c267fcd8d3fd57696979b1e7b6b2e3da)
+on April 1, 2021.
 </em></small>
 
 ## Authors
@@ -168,7 +168,38 @@ on March 23, 2021.
 
 ## Abstract {.page_break_before}
 
+<!-- 
 
+ -->
+ 
+
+## Introduction
+
+<!--
+# Things to remember:
+
+1. There is some introduction in the BDS conference abstract, and also in the one for the CSHL that we didn't submit.
+
+# Important papers
+
+- Predicting genotype-specific gene regulatory networks
+https://www.biorxiv.org/content/10.1101/2021.01.18.427134v1?rss=1
+I like the ideas mentioned in the abstract and introduction of this paper.
+
+- Identification of therapeutic targets from genetic association studies using hierarchical component analysis
+Highly related paper.
+See notes here https://drive.google.com/file/d/1C-6OGDxo3lG4_1b33prplsZ22r5hwjkq/view
+Cite this paper about GWAS component, gene modules, and S-PrediXcan.
+Some limitations of this method:
+1. They find co-expression modules in GTEx only, we do it across recount2.
+1. They use weighted correlation network analysis (WGCNA) to find modules,
+   which seems simple.  We use PLIER with prior knowledge.
+1. This is how they find a module: ``The eigen-gene component was then computed
+   as the first principal component of the expression matrix of co-expressed
+   genes''
+1. ``Among 44 tissues analyzed, we generally detected 213±89 co-expression
+   modules in one tissue.''
+-->
 
 
 ## Results
@@ -617,6 +648,20 @@ Papers to read:
 
 
 ## Discussion
+
+<!-- 
+- the importance to invest more resources in finding gene co-expression patterns to increase the number of potential gene modules
+- one disadvantage is that we have a limited amount of genes, only 6.000 out of 22k in phenomexcan;
+more sophisticated methods for gene co-expression pattern discovery are needed to expand the implications of these analyses and cover more contexts.
+- this limited amount of genes makes our approach biased to already known pathways and mechanisms
+-->
+
+
+## Conclusions
+
+<!--
+- these results suggest that more research is necessary to continue finding new gene modules/latent variables that capture relevant transcriptional processes that allows us to reprioritize genetic studies.
+-->
 
 
 ## References {.page_break_before}

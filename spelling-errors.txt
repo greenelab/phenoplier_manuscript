@@ -3,10 +3,10 @@ allopurinol
 anthropometric
 arthrosis
 atopic
-AUC
+auc
 basophil
 Binglan’s
-Biobank
+BioBank
 BMR
 cgreene
 coassociation
@@ -15,7 +15,7 @@ crit
 datasets
 deconvolutes
 densitometry
-dimensionality
+Dimensionality
 DrubBank
 DVT
 dysregulated
@@ -34,7 +34,7 @@ impedances
 interpretable
 intraocular
 keratometry
-lincs
+LINCS
 lisinopril
 loadings
 LV

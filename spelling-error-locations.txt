@@ -1,3 +1,6 @@
+content/02.introduction.md:17:PrediXcan
+content/02.introduction.md:19:GTEx
+content/02.introduction.md:21:PLIER
 content/04.05.results_framework.md:1:PhenoPLIER
 content/04.05.results_framework.md:4:PhenoPLIER
 content/04.05.results_framework.md:8:PhenomeXcan
@@ -131,6 +134,8 @@ content/04.15.drug_disease_prediction.md:75:ROC
 content/04.15.drug_disease_prediction.md:78:AUC
 content/04.15.drug_disease_prediction.md:83:repurposing
 content/04.15.drug_disease_prediction.md:90:LVs
+content/05.discussion.md:5:phenomexcan
+content/06.conclusions.md:4:transcriptional
 content/50.00.supplementary_material.md:3:PLIER
 content/50.00.supplementary_material.md:7:datasets
 content/50.00.supplementary_material.md:8:PLIER
