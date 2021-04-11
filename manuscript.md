@@ -5,7 +5,7 @@ author-meta:
 - Casey S. Greene
 bibliography:
 - content/manual-references.json
-date-meta: '2021-04-01'
+date-meta: '2021-04-11'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -24,9 +24,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
 
-  <meta name="dc.date" content="2021-04-01" />
+  <meta name="dc.date" content="2021-04-11" />
 
-  <meta name="citation_publication_date" content="2021-04-01" />
+  <meta name="citation_publication_date" content="2021-04-11" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -78,11 +78,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/a3d6b3d0c267fcd8d3fd57696979b1e7b6b2e3da/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/c62c48b60dcf10cc250c95f4d99722dd3f4c7c85/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/a3d6b3d0c267fcd8d3fd57696979b1e7b6b2e3da/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/c62c48b60dcf10cc250c95f4d99722dd3f4c7c85/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/a3d6b3d0c267fcd8d3fd57696979b1e7b6b2e3da/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/c62c48b60dcf10cc250c95f4d99722dd3f4c7c85/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -121,10 +121,10 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/a3d6b3d0c267fcd8d3fd57696979b1e7b6b2e3da/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/c62c48b60dcf10cc250c95f4d99722dd3f4c7c85/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@a3d6b3d](https://github.com/greenelab/phenoplier_manuscript/tree/a3d6b3d0c267fcd8d3fd57696979b1e7b6b2e3da)
-on April 1, 2021.
+from [greenelab/phenoplier_manuscript@c62c48b](https://github.com/greenelab/phenoplier_manuscript/tree/c62c48b60dcf10cc250c95f4d99722dd3f4c7c85)
+on April 11, 2021.
 </em></small>
 
 ## Authors
@@ -299,6 +299,74 @@ compounds affect the transcriptional activity of gene modules.
   with other myeloid lineage cell types (see Figure S2A in MultiPLIER study).
   Maybe we can add a genes-traits figure of MultiXcan and fastENLOC results to
   see this better.
+:::
+
+
+### Genes causally involved in lipids accumulation are associated with relevant traits and tissues
+
+We found 492 genes associated with lipids accumulation by using a genome-wide lentiviral pooled CRISPR-Cas9 library targeting 19,114 genes in the human genome (see Methods).
+From these, we identified two high-confidence gene-sets that either caused a decrease (96 genes) or an increase (175 genes) of lipids.
+Next, we used these two gene-sets to assess whether singe gene-trait associations in PhenomeXcan recapitulated lipids-related traits.
+We show that our gene module-based approach is more robust to identify genetic associations with lipids-relevant traits, and that it can be used to contextualize these results by identifing tissue and cell type-specific gene-trait associations.
+
+
+First, using these two gene-sets, we assessed the genes' effects on all 3,752 phenotypes in PhenomeXcan by adding their standardized effect sizes and obtaining a ranked list of traits.
+The top associated traits for genes in the decreasing-lipids gene-set were highly relevant to lipid levels, such as hypertension, diastolic and systolic blood pressure, and vascular diseases.
+Other associated traits included asthma and lung function.
+We also performed the same operation for our gene module-based approach by considering 24 modules significantly enriched with the decreasing-lipids gene-set (Gene-set enrichment analysis, FDR < 0.05).
+In this case, we also found highly lipids-relevant traits among the top 25, including hypertension, blood pressure, specific cardiometabolic diseases like atherosclerosis, and celiac disease.
+This is particularly relevant because each of the 24 modules aggregated a specific weighted combination of almost 3,000 genes' effect sizes across all 3,752 traits.
+Thus, aggregating the effects of this number of genes and obtaining top-ranked lipids-relevant traits is highly unlikely to happen by chance ($P < 0.001$, see Methods), suggesting that gene modules (discovered with an unsupervised method) represent functionally meaningful units.
+
+
+![
+**Tissues and traits associated with a gene module related to lipids metabolism (LV246).**
+<!--  -->
+**a)** Top cell types/tissues where genes in LV246 are expressed on.
+Values in the $y$-axis come from matrix $\mathbf{B}$ in the MultiPLIER models (Figure @fig:entire_process a).
+In the $x$-axis, cell types/tissues are sorted by the median value.
+<!--  -->
+**b)** Gene-trait associations (S-MultiXcan) and colocalization (fastENLOC) for the top traits in LV246.
+The top 40 genes in LV246 are shown, sorted by their module weigth, from largest (top gene *SCD*) to smallest (gene *FAR2*).
+<!--  -->
+SGBS: Simpson Golabi Behmel Syndrome;
+CH2DB: CH<sub>2</sub> groups to double bonds ratio;
+NMR: nuclear magnetic resonance;
+HDL: high-density lipoprotein.
+<!--  -->
+](images/lvs_analysis/lv246/lv246.svg "LV246 TWAS plot"){#fig:lv246 width="100%"}
+
+
+When we considered the increasing-lipids set, genes and modules were associated with a more diverse set of traits, such as blood count tests, whole-body bioelectrical impedance measures, severe asthma, lung function, and rheumatoid arthritis.
+Additionally, gene modules were also associated with blood lipids, arterial stiffness, intraocular pressure, handgrip strength, and celiac disease.
+One gene module (LV246), significantly enriched with the increasing-lipids gene-set, was also associated with lipids metabolism and triglyceride biosynthesis pathways.
+In Figure @fig:lv246 a, we used our module-based approach to show that LV246 genes are mainly co-expressed in adipose tissue, and to a less extent, liver cells (hepatocytes), which play key roles in coordinating and regulating lipids metabolism.
+This LV was associated with blood lipids, hypercholesterolemia, cholesterol lowering medication, and family history of heart disease, among others (Figure @fig:lv246 b).
+Two high-confidence genes from our CRISPR screening, *DGAT2* and *ACACA* (responsible for encoding important enzymes for triglycerides and fatty acid synthesis), accounted for most of the gene-set enrichment signal for LV246.
+However, as it can be seen in Figure @fig:lv246 b, these two genes are not strongly associated with any of the top traits for this LV;
+other members of this module, such as *SCD*, *LPL*, *FADS2*, *HMGCR* and *LDLR*, were instead significantly associated and colocalized with lipid-relevant traits.
+This suggests that a module-based perspective can contextualize and reprioritize TWAS hits using modules of functionally related genes.
+
+
+`Notes:`{.red}
+
+::: {style="color: red"}
+- Improve description of CRISPR analysis.
+- Genes *DGAT2* and *ACACA* are part of the high-confidence set, not the merged one (combining high and medium confidence). We might want to distinguish between them in Methods.
+- It would be good at some point to have an LV that does not match a pathway.
+Otherwise, a reviewer could say "but this is similar to a method computing an association between pathways and traits, where is the novelty here?".
+A potential candidate could be LV504, significantly enriched with the increasing-lipids gene-set, associated with medication for blood pressure, asthma, celiac disease, and rheumatoid arthritis.
+Genes in this LV are expressed in skeletal muscle cells, intestinal subepithelial myofibroblasts, embryonic kidney cells, lung fibroblast cells, etc.
+- We need to standardize the way we refer to our method (gene module-based approach, PhenoPLIER, etc).
+
+Minor:
+
+- Add -log10(p-value) in the legend of figure.
+- Maybe make *DGAT2* and *ACACA* gene names bold in figure.
+- It would be great to be able to say "this LV is _significantly associated_ with this trait". Some reviewers might want that.
+Maybe we could use the Summary-MultiXcan approach to estimate the multivariate regression coefficients from individual genes associations, and get a p-value for the module-trait association.
+This could be a future small project, maybe an application note.
+One way to quickly compute a p-value is to use MAGMA gene-set analysis.
 :::
 
 
@@ -670,7 +738,7 @@ more sophisticated methods for gene co-expression pattern discovery are needed t
 <div id="refs"></div>
 
 
-## Supplementary material
+## Methods
 
 ### Pathway-level information extractor (PLIER)
 
@@ -700,6 +768,11 @@ patterns).
 <!-- Description -->
 ](images/supplementary_material/lv603_neutrophils/significance_neutrophil.png "Significance of neutrophil counts
 correlation"){#fig:supp:signif_neutrophils_counts height=3in}
+
+
+### CRISPR-Cas9 screening
+
+`Add details`{.red}
 
 
 ### Consensus clustering of traits in PhenomeXcan
@@ -739,3 +812,6 @@ This figure is equivalent to Figure @fig:clustering:heatmap but, instead of cell
 ::: {style="color: red"}
 - anti-correlation using dot product of s-predixcan on all tissues and lincs
 :::
+
+
+## Supplementary material

@@ -7,7 +7,7 @@
   <meta name="author" content="Milton Pividori" />
   <meta name="author" content="Marylyn D. Ritchie" />
   <meta name="author" content="Casey S. Greene" />
-  <meta name="dcterms.date" content="2021-04-01" />
+  <meta name="dcterms.date" content="2021-04-11" />
   <meta name="keywords" content="gene co-expression, transfer learning, MultiPLIER, PhenomeXcan, TWAS" />
   <title>Integrating transcriptome-wide association studies with gene co-expression patterns</title>
   <style>
@@ -30,8 +30,8 @@
   <meta name="citation_title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
   <meta property="og:title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
   <meta property="twitter:title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
-  <meta name="dc.date" content="2021-04-01" />
-  <meta name="citation_publication_date" content="2021-04-01" />
+  <meta name="dc.date" content="2021-04-11" />
+  <meta name="citation_publication_date" content="2021-04-11" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -57,9 +57,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/a3d6b3d0c267fcd8d3fd57696979b1e7b6b2e3da/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/a3d6b3d0c267fcd8d3fd57696979b1e7b6b2e3da/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/a3d6b3d0c267fcd8d3fd57696979b1e7b6b2e3da/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/c62c48b60dcf10cc250c95f4d99722dd3f4c7c85/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/c62c48b60dcf10cc250c95f4d99722dd3f4c7c85/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/c62c48b60dcf10cc250c95f4d99722dd3f4c7c85/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -82,10 +82,10 @@
 Text in <span style="color: red">red</span>/<span class="red">red</span> are internal comments</span></p>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/phenoplier_manuscript/v/a3d6b3d0c267fcd8d3fd57696979b1e7b6b2e3da/">permalink</a>)
+(<a href="https://greenelab.github.io/phenoplier_manuscript/v/c62c48b60dcf10cc250c95f4d99722dd3f4c7c85/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/a3d6b3d0c267fcd8d3fd57696979b1e7b6b2e3da">greenelab/phenoplier_manuscript@a3d6b3d</a>
-on April 1, 2021.
+from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/c62c48b60dcf10cc250c95f4d99722dd3f4c7c85">greenelab/phenoplier_manuscript@c62c48b</a>
+on April 11, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -236,10 +236,70 @@ Maybe we can add a genes-traits figure of MultiXcan and fastENLOC results to
 see this better.</li>
 </ul>
 </div>
+<h3 id="genes-causally-involved-in-lipids-accumulation-are-associated-with-relevant-traits-and-tissues">Genes causally involved in lipids accumulation are associated with relevant traits and tissues</h3>
+<p>We found 492 genes associated with lipids accumulation by using a genome-wide lentiviral pooled CRISPR-Cas9 library targeting 19,114 genes in the human genome (see Methods).
+From these, we identified two high-confidence gene-sets that either caused a decrease (96 genes) or an increase (175 genes) of lipids.
+Next, we used these two gene-sets to assess whether singe gene-trait associations in PhenomeXcan recapitulated lipids-related traits.
+We show that our gene module-based approach is more robust to identify genetic associations with lipids-relevant traits, and that it can be used to contextualize these results by identifing tissue and cell type-specific gene-trait associations.</p>
+<p>First, using these two gene-sets, we assessed the genes’ effects on all 3,752 phenotypes in PhenomeXcan by adding their standardized effect sizes and obtaining a ranked list of traits.
+The top associated traits for genes in the decreasing-lipids gene-set were highly relevant to lipid levels, such as hypertension, diastolic and systolic blood pressure, and vascular diseases.
+Other associated traits included asthma and lung function.
+We also performed the same operation for our gene module-based approach by considering 24 modules significantly enriched with the decreasing-lipids gene-set (Gene-set enrichment analysis, FDR &lt; 0.05).
+In this case, we also found highly lipids-relevant traits among the top 25, including hypertension, blood pressure, specific cardiometabolic diseases like atherosclerosis, and celiac disease.
+This is particularly relevant because each of the 24 modules aggregated a specific weighted combination of almost 3,000 genes’ effect sizes across all 3,752 traits.
+Thus, aggregating the effects of this number of genes and obtaining top-ranked lipids-relevant traits is highly unlikely to happen by chance (<span class="math inline">\(P &lt; 0.001\)</span>, see Methods), suggesting that gene modules (discovered with an unsupervised method) represent functionally meaningful units.</p>
+<div id="fig:lv246" class="fignos">
+<figure>
+<img src="images/lvs_analysis/lv246/lv246.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 2:</span> <strong>Tissues and traits associated with a gene module related to lipids metabolism (LV246).</strong>
+<!--  -->
+<strong>a)</strong> Top cell types/tissues where genes in LV246 are expressed on.
+Values in the <span class="math inline">\(y\)</span>-axis come from matrix <span class="math inline">\(\mathbf{B}\)</span> in the MultiPLIER models (Figure <a href="#fig:entire_process">1</a> a).
+In the <span class="math inline">\(x\)</span>-axis, cell types/tissues are sorted by the median value.
+<!--  -->
+<strong>b)</strong> Gene-trait associations (S-MultiXcan) and colocalization (fastENLOC) for the top traits in LV246.
+The top 40 genes in LV246 are shown, sorted by their module weigth, from largest (top gene <em>SCD</em>) to smallest (gene <em>FAR2</em>).
+<!--  -->
+SGBS: Simpson Golabi Behmel Syndrome;
+CH2DB: CH<sub>2</sub> groups to double bonds ratio;
+NMR: nuclear magnetic resonance;
+HDL: high-density lipoprotein.
+<!--  --></figcaption>
+</figure>
+</div>
+<p>When we considered the increasing-lipids set, genes and modules were associated with a more diverse set of traits, such as blood count tests, whole-body bioelectrical impedance measures, severe asthma, lung function, and rheumatoid arthritis.
+Additionally, gene modules were also associated with blood lipids, arterial stiffness, intraocular pressure, handgrip strength, and celiac disease.
+One gene module (LV246), significantly enriched with the increasing-lipids gene-set, was also associated with lipids metabolism and triglyceride biosynthesis pathways.
+In Figure <a href="#fig:lv246">2</a> a, we used our module-based approach to show that LV246 genes are mainly co-expressed in adipose tissue, and to a less extent, liver cells (hepatocytes), which play key roles in coordinating and regulating lipids metabolism.
+This LV was associated with blood lipids, hypercholesterolemia, cholesterol lowering medication, and family history of heart disease, among others (Figure <a href="#fig:lv246">2</a> b).
+Two high-confidence genes from our CRISPR screening, <em>DGAT2</em> and <em>ACACA</em> (responsible for encoding important enzymes for triglycerides and fatty acid synthesis), accounted for most of the gene-set enrichment signal for LV246.
+However, as it can be seen in Figure <a href="#fig:lv246">2</a> b, these two genes are not strongly associated with any of the top traits for this LV;
+other members of this module, such as <em>SCD</em>, <em>LPL</em>, <em>FADS2</em>, <em>HMGCR</em> and <em>LDLR</em>, were instead significantly associated and colocalized with lipid-relevant traits.
+This suggests that a module-based perspective can contextualize and reprioritize TWAS hits using modules of functionally related genes.</p>
+<p><code class="red">Notes:</code></p>
+<div style="color: red">
+<ul>
+<li>Improve description of CRISPR analysis.</li>
+<li>Genes <em>DGAT2</em> and <em>ACACA</em> are part of the high-confidence set, not the merged one (combining high and medium confidence). We might want to distinguish between them in Methods.</li>
+<li>It would be good at some point to have an LV that does not match a pathway.
+Otherwise, a reviewer could say “but this is similar to a method computing an association between pathways and traits, where is the novelty here?”.
+A potential candidate could be LV504, significantly enriched with the increasing-lipids gene-set, associated with medication for blood pressure, asthma, celiac disease, and rheumatoid arthritis.
+Genes in this LV are expressed in skeletal muscle cells, intestinal subepithelial myofibroblasts, embryonic kidney cells, lung fibroblast cells, etc.</li>
+<li>We need to standardize the way we refer to our method (gene module-based approach, PhenoPLIER, etc).</li>
+</ul>
+<p>Minor:</p>
+<ul>
+<li>Add -log10(p-value) in the legend of figure.</li>
+<li>Maybe make <em>DGAT2</em> and <em>ACACA</em> gene names bold in figure.</li>
+<li>It would be great to be able to say “this LV is <em>significantly associated</em> with this trait”. Some reviewers might want that.
+Maybe we could use the Summary-MultiXcan approach to estimate the multivariate regression coefficients from individual genes associations, and get a p-value for the module-trait association.
+This could be a future small project, maybe an application note.
+One way to quickly compute a p-value is to use MAGMA gene-set analysis.</li>
+</ul>
+</div>
 <h3 id="clusters-of-traits-in-the-gene-module-space-are-associated-with-relevant-transcriptional-processes">Clusters of traits in the gene module space are associated with relevant transcriptional processes</h3>
 <div id="fig:clustering:design" class="fignos">
 <figure>
-<img src="images/clustering/clustering_design.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 2:</span> <strong>Cluster analysis on traits from PhenomeXcan.</strong>
+<img src="images/clustering/clustering_design.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 3:</span> <strong>Cluster analysis on traits from PhenomeXcan.</strong>
 <!--  -->
 <strong>a)</strong> The projection of TWAS results for 3,752 traits to the latent
 representation learned from recount2 are the input data to the clustering
@@ -252,7 +312,7 @@ is derived by counting how many times a pair of traits were grouped together in
 the ensemble. Finally, a consensus function is applied to the coassociation
 matrix to generate consolidated partitions with different number of clusters.
 These final solutions are represented in the clustering tree (Figure
-<a href="#fig:clustering:tree">3</a>).
+<a href="#fig:clustering:tree">4</a>).
 <!--  -->
 <strong>b)</strong> The clusters found by the consensus function are used as labels to train a decision tree classifier on the original input data, which detects the most important LVs that differentiate groups of traits.
 <!--  --></figcaption>
@@ -268,7 +328,7 @@ assumption about the structure of the data), we employed a consensus clustering
 approach where different methods with varying sets parameters are applied on the
 same data, and later combined into a consolidated solution
 <span class="citation" data-cites="8js8Q3pF 17CbjLzCP uw3AnEgA">[<a href="#ref-8js8Q3pF" role="doc-biblioref">8</a>,<a href="#ref-17CbjLzCP" role="doc-biblioref">9</a>,<a href="#ref-uw3AnEgA" role="doc-biblioref">10</a>]</span>
-(Figure <a href="#fig:clustering:design">2</a>).
+(Figure <a href="#fig:clustering:design">3</a>).
 <!--  -->
 An important property for a successful application of a consensus clustering
 approach is the diversity of the ensemble, understood as the level of
@@ -280,7 +340,7 @@ In our approach, we performed cluster analysis using five different clustering
 algorithms on three representations of the input data (the original data with
 987 latent variables, its projection into the top 50 principal components, and
 the embedding learned by UMAP <span class="citation" data-cites="157h5hA34">[<a href="#ref-157h5hA34" role="doc-biblioref">13</a>]</span> using 50 components) (see
-Figure <a href="#fig:clustering:design">2</a> a). The clustering methods used cover a wide range
+Figure <a href="#fig:clustering:design">3</a> a). The clustering methods used cover a wide range
 of different assumptions on cluster shapes and a varying set of parameters such
 as the number of clusters (from 2 to 60), the width of the Gaussian kernel in
 spectral clustering, and other method-specific parameters (see the supplementary
@@ -290,7 +350,7 @@ The process generated an ensemble with 4,428 clustering solutions for all
 traits. This ensemble was used to derive a coassociation matrix between traits
 by counting the number of times a pair of traits was clustered together.
 A consensus function was applied on the coassociation matrix to derive a consolidated solution using the information in the ensemble.
-For these final partitions, we did not select a specific number of clusters, but instead used a clustering tree <span class="citation" data-cites="xhtEAzx6">[<a href="#ref-xhtEAzx6" role="doc-biblioref">14</a>]</span> (Figure <a href="#fig:clustering:tree">3</a>) to examine stable groups of traits at multiple resolutions.
+For these final partitions, we did not select a specific number of clusters, but instead used a clustering tree <span class="citation" data-cites="xhtEAzx6">[<a href="#ref-xhtEAzx6" role="doc-biblioref">14</a>]</span> (Figure <a href="#fig:clustering:tree">4</a>) to examine stable groups of traits at multiple resolutions.
 <!--  -->
 Finally, for the interpretation of the clusters, we trained a decision tree
 classifier (a highly interpretable machine learning model) on the original
@@ -301,7 +361,7 @@ More details of the clustering process are available in the supplementary
 material.</p>
 <div id="fig:clustering:tree" class="fignos">
 <figure>
-<img src="images/clustering/clustering_tree.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 3:</span> <strong>Clustering tree using multiple resolutions for clusters of traits.</strong>
+<img src="images/clustering/clustering_tree.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 4:</span> <strong>Clustering tree using multiple resolutions for clusters of traits.</strong>
 <!--  -->
 Clustering tree of traits partitions at different resolutions (from 5 to 26 clusters).
 Each row represents a partition of the traits, and each circle is a cluster from that partition.
@@ -331,7 +391,7 @@ SLE: systemic lupus erythematosus;
 <!--  --></figcaption>
 </figure>
 </div>
-<p>A clustering tree of the consensus solutions at different resolutions is shown in Figure <a href="#fig:clustering:tree">3</a>.
+<p>A clustering tree of the consensus solutions at different resolutions is shown in Figure <a href="#fig:clustering:tree">4</a>.
 For each <span class="math inline">\(k\)</span> (the number of clusters), the consensus partition that maximized the agreement with the ensemble was selected (see supplementary material).
 Since it is expected that a subset of resolutions better represents the patterns among traits, we further filtered the consensus partitions by taking those with an agreement value higher than the 75th percentile, which included partitions from 5 to 26 clusters.</p>
 <p>The clustering tree shows five clear branches that start at the top with different numerical labels (from left to right):
@@ -355,21 +415,21 @@ Another example is age when diabetes was first diagnosed that is moved from clus
 This movement of traits across highly-related clusters indicates the complexity of the relationships, where in these cases the algorithm finds meaningful but changing traits at different resolutions.</p>
 <div id="fig:clustering:heatmap" class="fignos">
 <figure>
-<img src="images/clustering/global_clustermap-cell_types.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 4:</span> <strong>Gene modules show specific and general transcriptional processes associated with different clusters of traits.</strong>
+<img src="images/clustering/global_clustermap-cell_types.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 5:</span> <strong>Gene modules show specific and general transcriptional processes associated with different clusters of traits.</strong>
 <!--  -->
 <code class="red">(Early draft version; we need to improve the y-axis labels on the right)</code>
 <!--  -->
-The plot shows a submatrix of <span class="math inline">\(\hat{\mathbf{M}}\)</span> for the main trait clusters (from the bottom of the clustering tree in Figure <a href="#fig:clustering:tree">3</a>), considering only gene modules (rows) that align well with at least one known pathway.
+The plot shows a submatrix of <span class="math inline">\(\hat{\mathbf{M}}\)</span> for the main trait clusters (from the bottom of the clustering tree in Figure <a href="#fig:clustering:tree">4</a>), considering only gene modules (rows) that align well with at least one known pathway.
 Labels on the right show the top two cell types and top two tissues where gene modules are expressed in.
 Values range from -5 (lighter color) to 16 (darker color).
 <!--  --></figcaption>
 </figure>
 </div>
 <p>Next, we analyzed which gene modules are driving these trait clusters.
-For that, we trained decision tree classifiers on the input data (Figure <a href="#fig:clustering:design">2</a>) using each cluster at <span class="math inline">\(k=26\)</span> (bottom of Figure <a href="#fig:clustering:tree">3</a>) as labels.
+For that, we trained decision tree classifiers on the input data (Figure <a href="#fig:clustering:design">3</a>) using each cluster at <span class="math inline">\(k=26\)</span> (bottom of Figure <a href="#fig:clustering:tree">4</a>) as labels.
 This yielded for each cluster the top associated gene modules, where several of them were well-aligned to existing pathways, and other modules were “novel” and expressed in relevant tissues (<code class="red">REVISE</code>).
-Results are shown in Figure <a href="#fig:clustering:heatmap">4</a>, where it can be seen that some modules are highly specific to certain types of traits, and others seem to be associated with a wide range of different traits and diseases, thus potentially involved in more general biological functions.
-For example, modules such as LV928 and LV30, that are known to be related to early progenitors of the erythrocytes lineage <span class="citation" data-cites="Zk82GvJV">[<a href="#ref-Zk82GvJV" role="doc-biblioref">16</a>]</span> (<code>DMAP_ERY</code> pathways in Supplementary Figure <a href="#fig:clustering:heatmap_pathways">10</a>), are predominantly expressed in early differentiation stages of erythropoiesis, and strongly associated with different assays on red blood cells (erythrocytes and reticulocytes, including cell counts, mean volumes and distribution width).
+Results are shown in Figure <a href="#fig:clustering:heatmap">5</a>, where it can be seen that some modules are highly specific to certain types of traits, and others seem to be associated with a wide range of different traits and diseases, thus potentially involved in more general biological functions.
+For example, modules such as LV928 and LV30, that are known to be related to early progenitors of the erythrocytes lineage <span class="citation" data-cites="Zk82GvJV">[<a href="#ref-Zk82GvJV" role="doc-biblioref">16</a>]</span> (<code>DMAP_ERY</code> pathways in Supplementary Figure <a href="#fig:clustering:heatmap_pathways">11</a>), are predominantly expressed in early differentiation stages of erythropoiesis, and strongly associated with different assays on red blood cells (erythrocytes and reticulocytes, including cell counts, mean volumes and distribution width).
 On the other side, others are highly specific, such as LV730, expressed in thrombocytes, and exclusively associated with hemathological assays on platelets;
 or LV598, whose genes are expressed in corneal endothelial cells, and are almost only related to keratometry measurements.
 <!-- 
@@ -391,19 +451,19 @@ Autoimmune diseases are very similar, as it can be seen, but some modules show h
 <li>Show the LVs that are distinct for this cluster (maybe a small decision tree
 for some of the clusters).</li>
 <li>For those LV, show which cell types/tissues are important (such as Figure
-<a href="#fig:lv136_conditions">5</a> below).</li>
+<a href="#fig:lv136_conditions">6</a> below).</li>
 <li>For some of these LVs, we can include the list of other traits also related
-and gene association results (such as Figure <a href="#fig:lv136_traits">6</a>).</li>
+and gene association results (such as Figure <a href="#fig:lv136_traits">7</a>).</li>
 </ul>
 </div>
 <div id="fig:lv136_conditions" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv136/lv136_cell_types.svg" style="width:50.0%" alt="" /><figcaption><span>Figure 5:</span> <strong>Cell types/tissues associated with genes in LV136.</strong></figcaption>
+<img src="images/lvs_analysis/lv136/lv136_cell_types.svg" style="width:50.0%" alt="" /><figcaption><span>Figure 6:</span> <strong>Cell types/tissues associated with genes in LV136.</strong></figcaption>
 </figure>
 </div>
 <div id="fig:lv136_traits" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv136/lv136_traits_multixcan_fastenloc.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 6:</span> <strong>Traits associated with genes in LV136.</strong></figcaption>
+<img src="images/lvs_analysis/lv136/lv136_traits_multixcan_fastenloc.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 7:</span> <strong>Traits associated with genes in LV136.</strong></figcaption>
 </figure>
 </div>
 <h4 id="schizophrenia-educational-attainment-and-intelligence">Schizophrenia, educational attainment and intelligence</h4>
@@ -451,7 +511,7 @@ traits-clusters are correctly predicted.</p>
 <h3 id="phenoplier-improves-drug-disease-prediction">PhenoPLIER improves drug-disease prediction</h3>
 <div id="fig:drug_disease:auc_pr" class="fignos">
 <figure>
-<img src="images/drug_disease_prediction/auc_pr.png" style="width:100.0%" alt="" /><figcaption><span>Figure 7:</span> <strong>Drug-disease prediction.</strong>
+<img src="images/drug_disease_prediction/auc_pr.png" style="width:100.0%" alt="" /><figcaption><span>Figure 8:</span> <strong>Drug-disease prediction.</strong>
 <!--  -->
 Explain.
 <!--  -->
@@ -515,7 +575,7 @@ projected (gene module-based) associations: $\matr{D}=\matr{L}^{\top}\matr{M}$ a
 $\hat{\matr{D}}=\hat{\matr{L}}^{\top}\hat{\matr{M}}$, respectively. -->
 <!--  -->
 <p>The ROC and Precision-Recall (PR) curves comparing both approaches are shown in
-Figure <a href="#fig:drug_disease:auc_pr">7</a>. Notably, the gene module-based approach
+Figure <a href="#fig:drug_disease:auc_pr">8</a>. Notably, the gene module-based approach
 proposed here clearly outperformed the gene-based one, with an area under the
 curve (AUC) of 0.615 vs 0.573, and an average precision (AP) of 0.851 vs 0.841.
 <!--  -->
@@ -688,7 +748,7 @@ Weiguang Mao, Elena Zaslavsky, Boris M. Hartmann, Stuart C. Sealfon, Maria Chiki
 DOI: <a href="https://doi.org/10.1038/s41592-019-0456-1">10.1038/s41592-019-0456-1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31249421">31249421</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7262669">PMC7262669</a></p>
 </div>
 </div>
-<h2 id="supplementary-material">Supplementary material</h2>
+<h2 id="methods">Methods</h2>
 <h3 id="pathway-level-information-extractor-plier">Pathway-level information extractor (PLIER)</h3>
 <p>MultiPLIER <span class="citation" data-cites="14rnBunuZ">[<a href="#ref-14rnBunuZ" role="doc-biblioref">1</a>]</span>, the computational strategy used in
 this work, extracts patterns of co-expressed genes on large gene expression
@@ -703,16 +763,18 @@ patterns).</p>
 <h3 id="top-latent-variables-associated-with-neutrophils">Top latent variables associated with neutrophils</h3>
 <div id="fig:supp:neutrophils_top20lvs" class="fignos">
 <figure>
-<img src="images/supplementary_material/lv603_neutrophils/neutrophils_top20_lvs.png" alt="" /><figcaption><span>Figure 8:</span> <strong>Correlation of neutrophil counts with top LVs associated with neutrophils traits.</strong>
+<img src="images/supplementary_material/lv603_neutrophils/neutrophils_top20_lvs.png" alt="" /><figcaption><span>Figure 9:</span> <strong>Correlation of neutrophil counts with top LVs associated with neutrophils traits.</strong>
 <!-- Description --></figcaption>
 </figure>
 </div>
 <div id="fig:supp:signif_neutrophils_counts" class="fignos">
 <figure>
-<img src="images/supplementary_material/lv603_neutrophils/significance_neutrophil.png" style="height:3in" alt="" /><figcaption><span>Figure 9:</span> <strong>Significance of neutrophil counts correlation.</strong>
+<img src="images/supplementary_material/lv603_neutrophils/significance_neutrophil.png" style="height:3in" alt="" /><figcaption><span>Figure 10:</span> <strong>Significance of neutrophil counts correlation.</strong>
 <!-- Description --></figcaption>
 </figure>
 </div>
+<h3 id="crispr-cas9-screening">CRISPR-Cas9 screening</h3>
+<p><code class="red">Add details</code></p>
 <h3 id="consensus-clustering-of-traits-in-phenomexcan">Consensus clustering of traits in PhenomeXcan</h3>
 <h4 id="dimensionality-reduction">Dimensionality reduction</h4>
 <h4 id="ensemble-creation-clustering-algorithms-and-parameters">Ensemble creation: clustering algorithms and parameters</h4>
@@ -733,11 +795,11 @@ patterns).</p>
 <h4 id="clusters-interpretation">Clusters interpretation</h4>
 <div id="fig:clustering:heatmap_pathways" class="fignos">
 <figure>
-<img src="images/clustering/global_clustermap-pathways.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 10:</span> <strong>Pathways associated with gene modules in Figure <a href="#fig:clustering:heatmap">4</a>.</strong>
+<img src="images/clustering/global_clustermap-pathways.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 11:</span> <strong>Pathways associated with gene modules in Figure <a href="#fig:clustering:heatmap">5</a>.</strong>
 <!--  -->
 <code class="red">(Early draft version; instead of this figure, we might want to just add a table with information about LVs)</code>
 <!--  -->
-This figure is equivalent to Figure <a href="#fig:clustering:heatmap">4</a> but, instead of cell types, labels on the right show all the associated pathways for each latent variable.
+This figure is equivalent to Figure <a href="#fig:clustering:heatmap">5</a> but, instead of cell types, labels on the right show all the associated pathways for each latent variable.
 <!--  --></figcaption>
 </figure>
 </div>
@@ -747,6 +809,7 @@ This figure is equivalent to Figure <a href="#fig:clustering:heatmap">4</a> but,
 <li>anti-correlation using dot product of s-predixcan on all tissues and lincs</li>
 </ul>
 </div>
+<h2 id="supplementary-material">Supplementary material</h2>
 <!-- default theme -->
 
 <style>
