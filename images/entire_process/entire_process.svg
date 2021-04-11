@@ -15,11 +15,11 @@
    viewBox="0 0 37720.001 33660.999"
    preserveAspectRatio="xMidYMid"
    xml:space="preserve"
-   id="svg2800"
+   id="svg2813"
    sodipodi:docname="entire_process.svg"
    style="fill-rule:evenodd;stroke-width:28.22200012;stroke-linejoin:round"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"><metadata
-   id="metadata2804"><rdf:RDF><cc:Work
+   id="metadata2817"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
          rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><sodipodi:namedview
    pagecolor="#ffffff"
@@ -32,19 +32,19 @@
    inkscape:pageshadow="2"
    inkscape:window-width="1708"
    inkscape:window-height="1363"
-   id="namedview2802"
+   id="namedview2815"
    showgrid="false"
    fit-margin-top="0"
    fit-margin-left="0"
    fit-margin-right="0"
    fit-margin-bottom="0"
-   inkscape:zoom="0.12291667"
-   inkscape:cx="-575.76426"
-   inkscape:cy="412.38425"
+   inkscape:zoom="0.34766083"
+   inkscape:cx="211.9807"
+   inkscape:cy="957.62089"
    inkscape:window-x="8"
    inkscape:window-y="32"
    inkscape:window-maximized="0"
-   inkscape:current-layer="svg2800" />
+   inkscape:current-layer="svg2813" />
  <defs
    class="ClipPathGroup"
    id="defs8">
@@ -579,7 +579,7 @@
    id="defs207">
   <g
    ooo:slide="id1"
-   ooo:id-list="id3 id4 id5 id6 id7 id8 id9 id10 id11 id12 id13 id14 id15 id16 id17 id18 id19 id20 id21 id22 id23 id24 id25 id26 id27 id28 id29 id30 id31 id32 id33 id34 id35 id36 id37 id38 id39 id40 id41 id42 id43 id44 id45 id46 id47 id48 id49 id50 id51 id52 id53 id54 id55 id56 id57 id58 id59 id60 id61 id62 id63 id64 id65 id66 id67 id68 id69 id70 id71 id72"
+   ooo:id-list="id3 id4 id5 id6 id7 id8 id9 id10 id11 id12 id13 id14 id15 id16 id17 id18 id19 id20 id21 id22 id23 id24 id25 id26 id27 id28 id29 id30 id31 id32 id33 id34 id35 id36 id37 id38 id39 id40 id41 id42 id43 id44 id45 id46 id47 id48 id49 id50 id51 id52 id53 id54 id55 id56 id57 id58 id59 id60 id61 id62 id63 id64 id65 id66 id67 id68 id69 id70 id71 id72 id73"
    id="g205" />
  </defs>
  <defs
@@ -682,10 +682,10 @@
  </g>
  <g
    class="SlideGroup"
-   id="g2798"
+   id="g2811"
    transform="translate(-1888,-2650)">
   <g
-   id="g2796">
+   id="g2809">
    <g
    id="container-id1">
     <g
@@ -694,7 +694,7 @@
    clip-path="url(#presentation_clip_path)">
      <g
    class="Page"
-   id="g2792">
+   id="g2805">
       <g
    class="com.sun.star.drawing.CustomShape"
    id="g251">
@@ -6983,6 +6983,36 @@
    id="path2787"
    inkscape:connector-curvature="0"
    style="fill:#000000;stroke:none" />
+       </g>
+      </g>
+      <g
+   class="com.sun.star.drawing.TextShape"
+   id="g2803">
+       <g
+   id="id73">
+        <rect
+   class="BoundingBox"
+   x="25001"
+   y="3292"
+   width="1652"
+   height="1779"
+   id="rect2792"
+   style="fill:none;stroke:none" />
+        <text
+   class="TextShape"
+   id="text2800"><tspan
+     class="TextParagraph"
+     font-size="847px"
+     font-weight="700"
+     id="tspan2798"
+     style="font-weight:700;font-size:847px;font-family:'Liberation Sans', sans-serif"><tspan
+       class="TextPosition"
+       x="25251"
+       y="4183"
+       id="tspan2796"><tspan
+         id="tspan2794"
+         style="fill:#000000;stroke:none">b</tspan></tspan></tspan></text>
+
        </g>
       </g>
      </g>
