@@ -2,7 +2,6 @@
 title: "Integrating transcriptome-wide association studies with gene co-expression patterns"
 keywords:
   - gene co-expression
-  - transfer learning
   - MultiPLIER
   - PhenomeXcan
   - TWAS
