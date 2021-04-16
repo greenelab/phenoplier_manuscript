@@ -5,7 +5,7 @@ author-meta:
 - Casey S. Greene
 bibliography:
 - content/manual-references.json
-date-meta: '2021-04-11'
+date-meta: '2021-04-16'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -24,9 +24,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
 
-  <meta name="dc.date" content="2021-04-11" />
+  <meta name="dc.date" content="2021-04-16" />
 
-  <meta name="citation_publication_date" content="2021-04-11" />
+  <meta name="citation_publication_date" content="2021-04-16" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -42,7 +42,7 @@ header-includes: '<!--
 
   <meta name="citation_author" content="Milton Pividori" />
 
-  <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
+  <meta name="citation_author_institution" content="Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
 
   <meta name="citation_author_orcid" content="0000-0002-3035-4403" />
 
@@ -50,7 +50,7 @@ header-includes: '<!--
 
   <meta name="citation_author" content="Marylyn D. Ritchie" />
 
-  <meta name="citation_author_institution" content="Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA" />
+  <meta name="citation_author_institution" content="Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
 
   <meta name="citation_author_orcid" content="0000-0002-1208-1720" />
 
@@ -78,11 +78,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/c62c48b60dcf10cc250c95f4d99722dd3f4c7c85/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/9ead9d59873a02a818fbb2ab4df0db28893208d8/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/c62c48b60dcf10cc250c95f4d99722dd3f4c7c85/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/9ead9d59873a02a818fbb2ab4df0db28893208d8/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/c62c48b60dcf10cc250c95f4d99722dd3f4c7c85/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/9ead9d59873a02a818fbb2ab4df0db28893208d8/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -97,7 +97,6 @@ header-includes: '<!--
   <!-- end Manubot generated metadata -->'
 keywords:
 - gene co-expression
-- transfer learning
 - MultiPLIER
 - PhenomeXcan
 - TWAS
@@ -121,10 +120,10 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/c62c48b60dcf10cc250c95f4d99722dd3f4c7c85/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/9ead9d59873a02a818fbb2ab4df0db28893208d8/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@c62c48b](https://github.com/greenelab/phenoplier_manuscript/tree/c62c48b60dcf10cc250c95f4d99722dd3f4c7c85)
-on April 11, 2021.
+from [greenelab/phenoplier_manuscript@9ead9d5](https://github.com/greenelab/phenoplier_manuscript/tree/9ead9d59873a02a818fbb2ab4df0db28893208d8)
+on April 16, 2021.
 </em></small>
 
 ## Authors
@@ -139,7 +138,7 @@ on April 11, 2021.
     · ![Twitter icon](images/twitter.svg){.inline_icon}
     [miltondp](https://twitter.com/miltondp)<br>
   <small>
-     Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
+     Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
      · Funded by The Gordon and Betty Moore Foundation GBMF 4552; The National Human Genome Research Institute (R01 HG010067)
   </small>
 
@@ -149,7 +148,7 @@ on April 11, 2021.
     · ![Twitter icon](images/twitter.svg){.inline_icon}
     [MarylynRitchie](https://twitter.com/MarylynRitchie)<br>
   <small>
-     Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA
+     Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
   </small>
 
 + **Casey S. Greene**<br>

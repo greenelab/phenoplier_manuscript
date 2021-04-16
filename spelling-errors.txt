@@ -4,11 +4,11 @@ allopurinol
 anthropometric
 arthrosis
 atopic
-AUC
+auc
 basophil
 Behmel
 Binglan’s
-BioBank
+Biobank
 bioelectrical
 BMR
 cardiometabolic
@@ -58,7 +58,7 @@ lipoprotein
 lisinopril
 loadings
 LPL
-lv
+LV
 LVs
 Marylyn
 MarylynRitchie
