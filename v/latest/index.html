@@ -57,9 +57,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/4eaf0086a89a1f25910a5ef98dcf1a10d5edc683/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/4eaf0086a89a1f25910a5ef98dcf1a10d5edc683/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/4eaf0086a89a1f25910a5ef98dcf1a10d5edc683/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/87aa25eba3f7a4da26e882372b1cab4ba290d2fc/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/87aa25eba3f7a4da26e882372b1cab4ba290d2fc/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/87aa25eba3f7a4da26e882372b1cab4ba290d2fc/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -82,9 +82,9 @@
 Text in <span style="color: red">red</span>/<span class="red">red</span> are internal comments</span></p>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/phenoplier_manuscript/v/4eaf0086a89a1f25910a5ef98dcf1a10d5edc683/">permalink</a>)
+(<a href="https://greenelab.github.io/phenoplier_manuscript/v/87aa25eba3f7a4da26e882372b1cab4ba290d2fc/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/4eaf0086a89a1f25910a5ef98dcf1a10d5edc683">greenelab/phenoplier_manuscript@4eaf008</a>
+from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/87aa25eba3f7a4da26e882372b1cab4ba290d2fc">greenelab/phenoplier_manuscript@87aa25e</a>
 on April 20, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -207,81 +207,52 @@ https://www.nature.com/articles/s41591-020-01221-5
 Air pollution linked to neurodegeneration markers
 
 -->
-<h3 id="phenoplier-integrates-twas-with-gene-co-expression-patterns">PhenoPLIER integrates TWAS with gene co-expression patterns</h3>
+<h3 id="framework-for-the-integration-of-twas-with-gene-co-expression-patterns">Framework for the integration of TWAS with gene co-expression patterns</h3>
 <div id="fig:entire_process" class="fignos">
 <figure>
 <img src="images/entire_process/entire_process.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 1:</span> <strong>Schematic of the PhenoPLIER framework.</strong>
 <!--  -->
-<strong>a)</strong> The integration process between gene co-expression patterns from
-MultiPLIER <span class="citation" data-cites="14rnBunuZ">[<a href="#ref-14rnBunuZ" role="doc-biblioref">24</a>]</span> (top) and TWAS results from
-PhenomeXcan <span class="citation" data-cites="lY5ln3dB">[<a href="#ref-lY5ln3dB" role="doc-biblioref">23</a>]</span>. PhenoPLIER projects gene-based
-association results on ~4,000 traits to a latent space learned from a
-large gene expression compendium (recount2 <span class="citation" data-cites="6SPTvFXq">[<a href="#ref-6SPTvFXq" role="doc-biblioref">8</a>]</span>). This
-generates matrix <span class="math inline">\(\mathbf{\hat{M}}\)</span>, where each trait is now described by
-latent variables/gene modules.
+<strong>a)</strong> The integration process between gene co-expression patterns from MultiPLIER (top) and TWAS results from PhenomeXcan.
+PhenoPLIER projects gene-based association results on more than 4,000 traits to a latent space learned from a recount2, a large gene expression compendium.
+This generates matrix <span class="math inline">\(\mathbf{\hat{M}}\)</span>, where each trait is now described by latent variables (LV) or gene modules.
 <!--  -->
 <strong>b)</strong> After the integration process, we found that neutrophil counts and other white blood cells (bottom) were ranked among the top 10 traits for an LV that was termed a neutrophil signature in the original MultiPLIER study.
 Genes in this LV were found to be expressed in relevant cell types (top).
 <!--  -->
-PMBC: <code class="red">Explain</code>; mDCs: <code class="red">Explain</code>.
+PBMC: peripheral blood mononuclear cells;
+mDCs: myeloid dendritic cells.
 <!--  --></figcaption>
 </figure>
 </div>
-<p>(<code class="red">This paragraph has probably too much detail about MultiPLIER</code>)
-<!--  -->
-MultiPLIER <span class="citation" data-cites="14rnBunuZ">[<a href="#ref-14rnBunuZ" role="doc-biblioref">24</a>]</span> is a recent computational strategy
-that extracts patterns of co-expressed genes from large gene expression
-datasets. The approach uses an unsupervised matrix factorization method that was
-employed to extract latent variables from recount2 <span class="citation" data-cites="6SPTvFXq">[<a href="#ref-6SPTvFXq" role="doc-biblioref">8</a>]</span>.
-<!--  -->
-The latent variables (LVs), essentially gene modules, then revealed biological
-processes associated with disease severity in rare disease datasets that were
-too small for effective model training. These gene sets aligned well with known
-biological pathways and predicted cell type composition, even though the
-approach was not explicitly designed for this goal.</p>
-<p>Although the authors showed that certain patterns learned by MultiPLIER resemble
-known biology, most of the LVs identified are completely unknown. Since genes in
-these modules vary together in certain cell types and tissues, it’s expected
-that they may also function together <span class="citation" data-cites="1FVd2WW6G DN7TyZzb">[<a href="#ref-1FVd2WW6G" role="doc-biblioref">25</a>,<a href="#ref-DN7TyZzb" role="doc-biblioref">26</a>]</span>.
-<!--  -->
-To test whether patterns in the expression space match those in the TWAS space,
-we used PhenomeXcan <span class="citation" data-cites="lY5ln3dB">[<a href="#ref-lY5ln3dB" role="doc-biblioref">23</a>]</span>, a massive transcriptome-wide
-association studies (TWAS) resource obtained from the UK Biobank
-<span class="citation" data-cites="nmJxPpE5">[<a href="#ref-nmJxPpE5" role="doc-biblioref">27</a>]</span> and other cohorts (Figure <a href="#fig:entire_process">1</a>
-a). These results were projected to the low-dimensional gene representation
-learned by MultiPLIER using:</p>
-<p><span id="eq:proj" class="eqnos"><span class="math display">\[\hat{\mathbf{M}} = (\mathbf{Z}^{\top} \mathbf{Z} + \lambda_{2} \mathbf{I})^{-1} \mathbf{Z}^{\top} \mathbf{M},\]</span><span class="eqnos-number">(1)</span></span> </p>
-<p>where <span class="math inline">\(\mathbf{M}^{n \times t}\)</span> has gene-trait associations from MultiXcan
-<span class="citation" data-cites="1FFzCXo1s">[<a href="#ref-1FFzCXo1s" role="doc-biblioref">13</a>]</span> (standardized effect sizes) for <span class="math inline">\(n\)</span> genes
-and <span class="math inline">\(t\)</span> traits, <span class="math inline">\(\mathbf{Z}^{n \times l}\)</span> are the gene loadings with <span class="math inline">\(l\)</span> latent
-variables, <span class="math inline">\(\lambda_2\)</span> is the regularization parameter used in the training
-step, and <span class="math inline">\(\hat{\mathbf{M}}^{l \times t}\)</span> is finally the projection of
-<span class="math inline">\(\mathbf{M}\)</span> into the latent space: all traits in PhenomeXcan are now described
-by LVs, thus we can potentially infer the effects of gene modules on different
-human traits.
-Since the MultiPLIER models also provide the experimental conditions (such as cell types and tissues) in which genes in a module are concurringly expressed, our approach would also allow inferring the context in which the gene module affects a trait or disease.</p>
-<p>In the original MultiPLIER study <span class="citation" data-cites="14rnBunuZ">[<a href="#ref-14rnBunuZ" role="doc-biblioref">24</a>]</span>, the authors
-found an LV significantly associated with previously known neutrophil gene-sets
-and highly correlated with neutrophil estimates from gene expression.
+<p>In Figure <a href="#fig:entire_process">1</a> we show the main components of PhenoPLIER, our framework to integrate TWAS and gene co-expression patterns (see Methods for more details).
+The framework combines TWAS results on thousands of phenotypes with gene co-expression patterns by projecting gene-trait associations on a latent gene expression representation.
+Each of these latent variables (LVs), obtained with an unsupervised learning method, represents a gene-set or gene module, essentially a group of genes with coordinated expression patterns (i.e. they are expressed together in the same tissues and cell types).
+Since genes in these modules vary together, we expect that they may also function together <span class="citation" data-cites="1FVd2WW6G DN7TyZzb">[<a href="#ref-1FVd2WW6G" role="doc-biblioref">25</a>,<a href="#ref-DN7TyZzb" role="doc-biblioref">26</a>]</span>.
+Thus, the projection of TWAS results into this latent space might provide context for their interpretation.</p>
+<p>For the gene-trait associations we used PhenomeXcan <span class="citation" data-cites="lY5ln3dB">[<a href="#ref-lY5ln3dB" role="doc-biblioref">23</a>]</span>, a massive TWAS resource on the UK Biobank <span class="citation" data-cites="nmJxPpE5">[<a href="#ref-nmJxPpE5" role="doc-biblioref">27</a>]</span> and other cohorts that provides results for 4,091 phenotypes, including different diseases and traits.
+These results were projected to the low-dimensional gene expression representation learned by MultiPLIER using:</p>
+<p><span id="eq:proj" class="eqnos"><span class="math display">\[
+\hat{\mathbf{M}} = (\mathbf{Z}^{\top} \mathbf{Z} + \lambda_{2} \mathbf{I})^{-1} \mathbf{Z}^{\top} \mathbf{M},
+\]</span><span class="eqnos-number">(1)</span></span> </p>
+<p>where <span class="math inline">\(\mathbf{M}^{n \times t}\)</span> is the gene-trait associations matrix from MultiXcan <span class="citation" data-cites="1FFzCXo1s">[<a href="#ref-1FFzCXo1s" role="doc-biblioref">13</a>]</span> (standardized effect sizes) for <span class="math inline">\(n\)</span> genes and <span class="math inline">\(t\)</span> traits,
+<span class="math inline">\(\mathbf{Z}^{n \times l}\)</span> are the gene loadings with <span class="math inline">\(l\)</span> latent variables,
+<span class="math inline">\(\lambda_2\)</span> is the regularization parameter used in the training step,
+and <span class="math inline">\(\hat{\mathbf{M}}^{l \times t}\)</span> is finally the projection of <span class="math inline">\(\mathbf{M}\)</span> into the latent space: all traits in PhenomeXcan are now described by gene modules.
+Since the MultiPLIER models also provide the experimental conditions (such as cell types and tissues, represented by matrix <span class="math inline">\(\mathbf{B}\)</span> in Figure <a href="#fig:entire_process">1</a> a) in which genes in a module are concurringly expressed, our approach also allows inferring the context in which the gene module affects a trait or disease.</p>
+<p>In the original MultiPLIER study, the authors found an LV significantly associated with previously known neutrophil gene-sets and highly correlated with neutrophil estimates from gene expression.
 <!--  -->
 We analyzed this LV using our approach (Figure <a href="#fig:entire_process">1</a> b), and found that
-1) neutrophil counts and other white blood cell traits from PhenomeXcan <span class="citation" data-cites="lY5ln3dB">[<a href="#ref-lY5ln3dB" role="doc-biblioref">23</a>]</span> were ranked among the top 10 traits for this LV,
-and 2) that the genes in this LV are expressed in neutrophil cells (see more details in the supplementary material).
+1) neutrophil counts and other white blood cell traits from PhenomeXcan were ranked among the top 10 traits for this LV,
+and 2) that the genes in this LV are expressed in neutrophil cells.
 <!--  -->
-These initial results strongly suggest that shared patterns exist in the gene
-expression space (which has no GTEx samples) and the TWAS space (with gene
-models trained using GTEx v8), and that the approach also allows to infer the
-context-specific effects of gene modules on complex traits.
+These initial results strongly suggested that shared patterns exist in the gene expression space (which has no GTEx samples) and the TWAS space (with gene models trained using GTEx v8), and that the approach also allows inferring the context-specific effects of gene modules on complex traits.
 <!--  -->
-We will also show how the approach can aid translational efforts by mapping
-pharmacological perturbations to this latent space, enabling to observe which
-compounds affect the transcriptional activity of gene modules.</p>
+We will also show how the approach can aid translational efforts by mapping pharmacological perturbations to this latent space, enabling to observe which compounds affect the transcriptional activity of gene modules.</p>
+<p><code class="red">Notes/questions:</code></p>
 <div style="color: red">
+<p>Ideas/minor:</p>
 <ul>
-<li>Minor: LV603 is neutrophil-associated, but it is not significantly associated
-with other myeloid lineage cell types (see Figure S2A in MultiPLIER study).
-Maybe we can add a genes-traits figure of MultiXcan and fastENLOC results to
-see this better.</li>
+<li>In the figure, add a reference to the TWAS plot (genes x traits) for LV603.</li>
 </ul>
 </div>
 <h3 id="genes-causally-involved-in-lipids-accumulation-are-associated-with-relevant-traits-and-tissues">Genes causally involved in lipids accumulation are associated with relevant traits and tissues</h3>
@@ -477,7 +448,7 @@ Values range from -5 (lighter color) to 16 (darker color).
 For that, we trained decision tree classifiers on the input data (Figure <a href="#fig:clustering:design">3</a>) using each cluster at <span class="math inline">\(k=26\)</span> (bottom of Figure <a href="#fig:clustering:tree">4</a>) as labels.
 This yielded for each cluster the top associated gene modules, where several of them were well-aligned to existing pathways, and other modules were “novel” and expressed in relevant tissues (<code class="red">REVISE</code>).
 Results are shown in Figure <a href="#fig:clustering:heatmap">5</a>, where it can be seen that some modules are highly specific to certain types of traits, and others seem to be associated with a wide range of different traits and diseases, thus potentially involved in more general biological functions.
-For example, modules such as LV928 and LV30, that are known to be related to early progenitors of the erythrocytes lineage <span class="citation" data-cites="Zk82GvJV">[<a href="#ref-Zk82GvJV" role="doc-biblioref">36</a>]</span> (<code>DMAP_ERY</code> pathways in Supplementary Figure <a href="#fig:clustering:heatmap_pathways">11</a>), are predominantly expressed in early differentiation stages of erythropoiesis, and strongly associated with different assays on red blood cells (erythrocytes and reticulocytes, including cell counts, mean volumes and distribution width).
+For example, modules such as LV928 and LV30, that are known to be related to early progenitors of the erythrocytes lineage <span class="citation" data-cites="Zk82GvJV">[<a href="#ref-Zk82GvJV" role="doc-biblioref">36</a>]</span> (<code>DMAP_ERY</code> pathways in Supplementary Figure <a href="#fig:clustering:heatmap_pathways">9</a>), are predominantly expressed in early differentiation stages of erythropoiesis, and strongly associated with different assays on red blood cells (erythrocytes and reticulocytes, including cell counts, mean volumes and distribution width).
 On the other side, others are highly specific, such as LV730, expressed in thrombocytes, and exclusively associated with hemathological assays on platelets;
 or LV598, whose genes are expressed in corneal endothelial cells, and are almost only related to keratometry measurements.
 <!-- 
@@ -909,32 +880,30 @@ Hon-Cheong So, Carlos Kwan-Long Chau, Wan-To Chiu, Kin-Sang Ho, Cho-Pong Lo, Ste
 <em>Nature Neuroscience</em> (2017-08-14) <a href="https://doi.org/gbrssh">https://doi.org/gbrssh</a> <br />
 DOI: <a href="https://doi.org/10.1038/nn.4618">10.1038/nn.4618</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28805813">28805813</a></p>
 </div>
+<div id="ref-1CbVoEpNJ">
+<p>43. <strong>The Molecular Signatures Database Hallmark Gene Set Collection</strong> <br />
+Arthur Liberzon, Chet Birger, Helga Thorvaldsdóttir, Mahmoud Ghandi, Jill P. Mesirov, Pablo Tamayo<br />
+<em>Cell Systems</em> (2015-12) <a href="https://doi.org/gf78hq">https://doi.org/gf78hq</a> <br />
+DOI: <a href="https://doi.org/10.1016/j.cels.2015.12.004">10.1016/j.cels.2015.12.004</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26771021">26771021</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4707969">PMC4707969</a></p>
+</div>
 </div>
 <h2 id="methods">Methods</h2>
-<h3 id="pathway-level-information-extractor-plier">Pathway-level information extractor (PLIER)</h3>
-<p>MultiPLIER <span class="citation" data-cites="14rnBunuZ">[<a href="#ref-14rnBunuZ" role="doc-biblioref">24</a>]</span>, the computational strategy used in
-this work, extracts patterns of co-expressed genes on large gene expression
-datasets. MultiPLIER applies the pathway-level information extractor method
-(PLIER) <span class="citation" data-cites="Ki2ij7zE">[<a href="#ref-Ki2ij7zE" role="doc-biblioref">22</a>]</span> to the recount2 data
-<span class="citation" data-cites="6SPTvFXq">[<a href="#ref-6SPTvFXq" role="doc-biblioref">8</a>]</span>, which performs unsupervised learning using prior
-knowledge to reduce technical noise. Via a matrix factorization approach, PLIER
-deconvolutes the gene expression data into a set of latent variables (LV) that
-each represent a gene module (i.e. a set of genes with coordinated expression
-patterns).</p>
-<p><code class="red">COMPLETE</code></p>
-<h3 id="top-latent-variables-associated-with-neutrophils">Top latent variables associated with neutrophils</h3>
-<div id="fig:supp:neutrophils_top20lvs" class="fignos">
-<figure>
-<img src="images/supplementary_material/lv603_neutrophils/neutrophils_top20_lvs.png" alt="" /><figcaption><span>Figure 9:</span> <strong>Correlation of neutrophil counts with top LVs associated with neutrophils traits.</strong>
-<!-- Description --></figcaption>
-</figure>
-</div>
-<div id="fig:supp:signif_neutrophils_counts" class="fignos">
-<figure>
-<img src="images/supplementary_material/lv603_neutrophils/significance_neutrophil.png" style="height:3in" alt="" /><figcaption><span>Figure 10:</span> <strong>Significance of neutrophil counts correlation.</strong>
-<!-- Description --></figcaption>
-</figure>
-</div>
+<h3 id="multiplier-and-pathway-level-information-extractor-plier">MultiPLIER and Pathway-level information extractor (PLIER)</h3>
+<p>MultiPLIER <span class="citation" data-cites="14rnBunuZ">[<a href="#ref-14rnBunuZ" role="doc-biblioref">24</a>]</span> extracts patterns of co-expressed genes from recount2 <span class="citation" data-cites="6SPTvFXq">[<a href="#ref-6SPTvFXq" role="doc-biblioref">8</a>]</span>, a large gene expression dataset.
+The approach applies the pathway-level information extractor method (PLIER) <span class="citation" data-cites="Ki2ij7zE">[<a href="#ref-Ki2ij7zE" role="doc-biblioref">22</a>]</span>, which performs unsupervised learning using prior knowledge (cannonical pathways) to reduce technical noise.
+Via a matrix factorization approach, PLIER deconvolutes the gene expression data into a set of latent variables (LV), where each represents a gene module (i.e. a set of genes with coordinated expression patterns).
+This reduced the data dimensionality into 987 latent variables.</p>
+<p>Given a gene expression dataset <span class="math inline">\(\mathbf{Y}^{n \times p}\)</span> with <span class="math inline">\(n\)</span> genes and <span class="math inline">\(p\)</span> conditions and a prior knowledge matrix <span class="math inline">\(\mathbf{C} \in \{0,1\}^{n \times m}\)</span> for <span class="math inline">\(m\)</span> gene sets (so that <span class="math inline">\(\mathbf{C}_{ij} = 1\)</span> if gene <span class="math inline">\(i\)</span> belongs to gene set <span class="math inline">\(j\)</span>), (e.g., gene sets from MSigDB <span class="citation" data-cites="1CbVoEpNJ">[<a href="#ref-1CbVoEpNJ" role="doc-biblioref">43</a>]</span>), PLIER finds <span class="math inline">\(\mathbf{U}\)</span>, <span class="math inline">\(\mathbf{Z}\)</span>, and <span class="math inline">\(\mathbf{B}\)</span> minimizing</p>
+<p><span id="eq:met:plier_func" class="eqnos"><span class="math display">\[
+||\mathbf{Y} - \mathbf{Z}\mathbf{B}||^{2}_{F} + \lambda_1 ||\mathbf{Z} - \mathbf{C}\mathbf{U}||^{2}_{F} + \lambda_2 ||\mathbf{B}||^{2}_{F} + \lambda_3 ||\mathbf{U}||_{L^1}
+\]</span><span class="eqnos-number">(2)</span></span> </p>
+<p>subject to <span class="math inline">\(\mathbf{U}&gt;0, \mathbf{Z}&gt;0\)</span>;
+<span class="math inline">\(\mathbf{Z}^{n \times l}\)</span> are the gene loadings with <span class="math inline">\(l\)</span> latent variables,
+<span class="math inline">\(\mathbf{B}^{l \times p}\)</span> is the latent space for <span class="math inline">\(p\)</span> conditions,
+<span class="math inline">\(\mathbf{U}^{m \times l}\)</span> specifies which of the <span class="math inline">\(m\)</span> prior-information gene sets in <span class="math inline">\(\mathbf{C}\)</span> are represented for each LV,
+and <span class="math inline">\(\lambda_i\)</span> are different regularization parameters used in the training step.
+<!--  -->
+<span class="math inline">\(\mathbf{Z}\)</span> is a low-dimensional representation of the gene space where each LV aligns as much as possible to prior knowledge and it might represent a known or novel gene module (i.e., a meaningful biological pattern) or noise.</p>
 <h3 id="crispr-cas9-screening">CRISPR-Cas9 screening</h3>
 <p><code class="red">Add details</code></p>
 <h3 id="consensus-clustering-of-traits-in-phenomexcan">Consensus clustering of traits in PhenomeXcan</h3>
@@ -957,7 +926,7 @@ patterns).</p>
 <h4 id="clusters-interpretation">Clusters interpretation</h4>
 <div id="fig:clustering:heatmap_pathways" class="fignos">
 <figure>
-<img src="images/clustering/global_clustermap-pathways.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 11:</span> <strong>Pathways associated with gene modules in Figure <a href="#fig:clustering:heatmap">5</a>.</strong>
+<img src="images/clustering/global_clustermap-pathways.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 9:</span> <strong>Pathways associated with gene modules in Figure <a href="#fig:clustering:heatmap">5</a>.</strong>
 <!--  -->
 <code class="red">(Early draft version; instead of this figure, we might want to just add a table with information about LVs)</code>
 <!--  -->
@@ -972,6 +941,24 @@ This figure is equivalent to Figure <a href="#fig:clustering:heatmap">5</a> but,
 </ul>
 </div>
 <h2 id="supplementary-material">Supplementary material</h2>
+<h3 id="top-latent-variables-associated-with-neutrophils">Top latent variables associated with neutrophils</h3>
+<div style="color: red">
+<p><strong>NOT FINISHED</strong></p>
+<p>This section aims to show that the top LVs related to neutrophil counts are more correlated to neutrophil counts or esimates than expected by chance.
+Probably I just need to add a proper caption for each figure, and reference them from the main text.</p>
+</div>
+<div id="fig:supp:neutrophils_top20lvs" class="fignos">
+<figure>
+<img src="images/supplementary_material/lv603_neutrophils/neutrophils_top20_lvs.png" alt="" /><figcaption><span>Figure 10:</span> <strong>Correlation of neutrophil counts with top LVs associated with neutrophils traits.</strong>
+<!-- Description --></figcaption>
+</figure>
+</div>
+<div id="fig:supp:signif_neutrophils_counts" class="fignos">
+<figure>
+<img src="images/supplementary_material/lv603_neutrophils/significance_neutrophil.png" style="height:3in" alt="" /><figcaption><span>Figure 11:</span> <strong>Significance of neutrophil counts correlation.</strong>
+<!-- Description --></figcaption>
+</figure>
+</div>
 <!-- default theme -->
 
 <style>
