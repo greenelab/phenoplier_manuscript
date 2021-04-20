@@ -7,7 +7,7 @@
   <meta name="author" content="Milton Pividori" />
   <meta name="author" content="Marylyn D. Ritchie" />
   <meta name="author" content="Casey S. Greene" />
-  <meta name="dcterms.date" content="2021-04-16" />
+  <meta name="dcterms.date" content="2021-04-20" />
   <meta name="keywords" content="gene co-expression, MultiPLIER, PhenomeXcan, TWAS" />
   <title>Integrating transcriptome-wide association studies with gene co-expression patterns</title>
   <style>
@@ -30,8 +30,8 @@
   <meta name="citation_title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
   <meta property="og:title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
   <meta property="twitter:title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
-  <meta name="dc.date" content="2021-04-16" />
-  <meta name="citation_publication_date" content="2021-04-16" />
+  <meta name="dc.date" content="2021-04-20" />
+  <meta name="citation_publication_date" content="2021-04-20" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -57,9 +57,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/9ead9d59873a02a818fbb2ab4df0db28893208d8/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/9ead9d59873a02a818fbb2ab4df0db28893208d8/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/9ead9d59873a02a818fbb2ab4df0db28893208d8/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/4eaf0086a89a1f25910a5ef98dcf1a10d5edc683/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/4eaf0086a89a1f25910a5ef98dcf1a10d5edc683/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/4eaf0086a89a1f25910a5ef98dcf1a10d5edc683/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -82,10 +82,10 @@
 Text in <span style="color: red">red</span>/<span class="red">red</span> are internal comments</span></p>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/phenoplier_manuscript/v/9ead9d59873a02a818fbb2ab4df0db28893208d8/">permalink</a>)
+(<a href="https://greenelab.github.io/phenoplier_manuscript/v/4eaf0086a89a1f25910a5ef98dcf1a10d5edc683/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/9ead9d59873a02a818fbb2ab4df0db28893208d8">greenelab/phenoplier_manuscript@9ead9d5</a>
-on April 16, 2021.
+from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/4eaf0086a89a1f25910a5ef98dcf1a10d5edc683">greenelab/phenoplier_manuscript@4eaf008</a>
+on April 20, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -125,31 +125,79 @@ Center for Health AI, University of Colorado School of Medicine, Aurora, CO, 800
 
  -->
 <h2 id="introduction">Introduction</h2>
+<p>Tissue specificity is a key feature of human disease and genes with tissue-specific expression are enriched for disease associations <span class="citation" data-cites="O0e3EhY6 18jYvPauB wNE0EQlN">[<a href="#ref-O0e3EhY6" role="doc-biblioref">1</a>,<a href="#ref-18jYvPauB" role="doc-biblioref">2</a>,<a href="#ref-wNE0EQlN" role="doc-biblioref">3</a>]</span>.
+<!--  -->
+Identifying the function of genes involves understanding the regulatory mechanisms that affect their expression across different tissues and cell types <span class="citation" data-cites="9Pr9idng 1DoyZS7y0 nhaocxmR">[<a href="#ref-9Pr9idng" role="doc-biblioref">4</a>,<a href="#ref-1DoyZS7y0" role="doc-biblioref">5</a>,<a href="#ref-nhaocxmR" role="doc-biblioref">6</a>]</span>.
+<!--  -->
+Large compendia describing key elements of regulatory DNA have been recently released or updated, which comprise chromatin-state annotations, high-resolution enhancers <span class="citation" data-cites="xRGqPsT2">[<a href="#ref-xRGqPsT2" role="doc-biblioref">7</a>]</span>, DNase I hypersensitive sites maps <span class="citation" data-cites="1DoyZS7y0">[<a href="#ref-1DoyZS7y0" role="doc-biblioref">5</a>]</span>, and the characterization of genetic effects on gene expression across different tissues <span class="citation" data-cites="9Pr9idng">[<a href="#ref-9Pr9idng" role="doc-biblioref">4</a>]</span>.
+<!--  -->
+The integration with genome-wide association studies (GWAS) on thousands of common diseases could dramatically improve the identification of these transcriptional mechanisms that, when dysregulated, often result in tissue- and cell lineage-specific pathology.</p>
+<p>Owing to the readily available gene expression data across several tissues <span class="citation" data-cites="6SPTvFXq Nz3IMEzd 9Pr9idng 57TjOMEA">[<a href="#ref-9Pr9idng" role="doc-biblioref">4</a>,<a href="#ref-6SPTvFXq" role="doc-biblioref">8</a>,<a href="#ref-Nz3IMEzd" role="doc-biblioref">9</a>,<a href="#ref-57TjOMEA" role="doc-biblioref">10</a>]</span>, a popular approach to identify these biological processes is transcription-wide association studies (TWAS), which integrates expression quantitative trait loci (eQTL) data to provide a mechanistic interpretation for genome-wide association studies (GWAS).
+<!--  -->
+This is done by testing whether perturbations in gene regulatory mechanisms mediate the association between genetic variants and human diseases <span class="citation" data-cites="yEdRP9Xx 1D63fEEPb 1FFzCXo1s Z8bvDdVq">[<a href="#ref-yEdRP9Xx" role="doc-biblioref">11</a>,<a href="#ref-1D63fEEPb" role="doc-biblioref">12</a>,<a href="#ref-1FFzCXo1s" role="doc-biblioref">13</a>,<a href="#ref-Z8bvDdVq" role="doc-biblioref">14</a>]</span>.
+<!--  -->
+However, TWAS has not been useful to detect tissue-specific effects <span class="citation" data-cites="4iMVo07x WFslDIWl">[<a href="#ref-4iMVo07x" role="doc-biblioref">15</a>,<a href="#ref-WFslDIWl" role="doc-biblioref">16</a>]</span>, since eQTLs are generally shared across tissues.
+<!--  -->
+Alternative statistical approaches that connect GWAS with gene expression data can infer disease-relevant tissues and cell types <span class="citation" data-cites="WFslDIWl nga58tSh kXUuzq6I kUDav9OX z8MQTAnJ">[<a href="#ref-WFslDIWl" role="doc-biblioref">16</a>,<a href="#ref-nga58tSh" role="doc-biblioref">17</a>,<a href="#ref-kXUuzq6I" role="doc-biblioref">18</a>,<a href="#ref-kUDav9OX" role="doc-biblioref">19</a>,<a href="#ref-z8MQTAnJ" role="doc-biblioref">20</a>]</span>, but they generally apply enrichment analysis techniques that do not account for widespread gene correlations due to technical noise (i.e. “batch effects”) <span class="citation" data-cites="mPnIAH38 Ki2ij7zE">[<a href="#ref-mPnIAH38" role="doc-biblioref">21</a>,<a href="#ref-Ki2ij7zE" role="doc-biblioref">22</a>]</span>.
+<!--  -->
+In addition, they generally rely on small sets of expression data compared with the total RNA-seq samples available today <span class="citation" data-cites="Nz3IMEzd 6SPTvFXq">[<a href="#ref-6SPTvFXq" role="doc-biblioref">8</a>,<a href="#ref-Nz3IMEzd" role="doc-biblioref">9</a>]</span>.</p>
+<p>Here we propose a polygenic method that maps gene associations from TWAS on &gt;4,000 traits <span class="citation" data-cites="lY5ln3dB">[<a href="#ref-lY5ln3dB" role="doc-biblioref">23</a>]</span> into a latent representation learned from public gene expression repositories on tens of thousands of RNA-seq human samples <span class="citation" data-cites="14rnBunuZ 6SPTvFXq">[<a href="#ref-6SPTvFXq" role="doc-biblioref">8</a>,<a href="#ref-14rnBunuZ" role="doc-biblioref">24</a>]</span>.
+<!--  -->
+This low-dimensional space comprises latent variables representing gene modules with coordinated expression across different tissues and cell types.
+We used a computational approach that can reduce technical noise by learning patterns that align to prior knowledge.
+<!--  -->
+When mapping gene-trait associations to this reduced expression space, we found that traits and diseases are associated with gene modules expressed in relevant cell types.
+<!--  -->
+Our approach is also more robust in finding meaningful module-trait associations even when individual genes involved in lipids metabolism do not reach genome-wide significance in lipids-related traits.
+<!--  -->
+We also show that our module-based approach is more accurate in predicting known drug-disease association than using single gene-traits associations, and that our approach could be also useful to study mechanisms of action of drugs.
+<!--  -->
+Finally, we performed cluster analysis on traits mapped to this latent representation, with clusters highly stable across different resolutions.
+<!--  -->
+We found common and specific transcriptional processes associated with autoimmune and cardiovascular diseases.</p>
 <!--
-# Things to remember:
+Some ideas I still have to think about/read more:
 
-1. There is some introduction in the BDS conference abstract, and also in the one for the CSHL that we didn't submit.
+- From the tissue specificity review, I liked the idea that "disease-associated genes are typically expressed widely across tissues".
+Maybe I can something like: "One approach to disentangle this complex transcriptional mechinery is to consider genes that are co-expressed across different cell types".
 
+- Take a look at the Biology of Genomes abstract; there are some ideas there that I might consider to mention here. I left a paragraph below, a first version of this introduction.
+ -->
+<!--
+Text changed from from the Biology of Genomes abstract that might be helpful:
+
+Transcription-wide association studies (TWAS) provide a mechanistic interpretation of genome-wide association studies (GWAS) by testing whether perturbations in gene regulatory mechanisms mediate the association between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367].
+TWAS methods integrate expression quantitative trait loci (eQTL) with GWAS to compute gene-level associations and prioritize potential therapeutic targets [@doi:10.1038/s41588-019-0385-z; @doi:10.1038/nn.4618].
+Yet the typical TWAS approach looks at one gene at a time, missing the fact that genes act in concert to carry out different functions.
+Methods that consider gene-sets of functionally related genes can have more power to detect associations even when individual genes are not genome-wide significant [@doi:10.1073/pnas.0506580102; @doi:10.1371/journal.pcbi.1004219; @doi:10.1158/0008-5472.CAN-09-4502; @doi:10.1038/nrg2884; @doi:10.1038/s41467-018-06022-6], however, they are typically confined to already known pathways and do not incorporate the effects of eQTLs in the transcriptome.
+
+Another part:
+
+Pathway analysis considers groups of functionally related genes when studying a phenotype of interest, and it has been shown that this gene-set-based approach can have more power to detect associations even when individual genes are not gnenome-wide significant [@doi:10.1158/0008-5472.CAN-09-4502; @doi:10.1038/nrg2884; @doi:].
+
+-->
+<!--
 # Important papers
 
 - Predicting genotype-specific gene regulatory networks
 https://www.biorxiv.org/content/10.1101/2021.01.18.427134v1?rss=1
 I like the ideas mentioned in the abstract and introduction of this paper.
-
-- Identification of therapeutic targets from genetic association studies using hierarchical component analysis
-Highly related paper.
-See notes here https://drive.google.com/file/d/1C-6OGDxo3lG4_1b33prplsZ22r5hwjkq/view
-Cite this paper about GWAS component, gene modules, and S-PrediXcan.
-Some limitations of this method:
-1. They find co-expression modules in GTEx only, we do it across recount2.
-1. They use weighted correlation network analysis (WGCNA) to find modules,
-   which seems simple.  We use PLIER with prior knowledge.
-1. This is how they find a module: ``The eigen-gene component was then computed
-   as the first principal component of the expression matrix of co-expressed
-   genes''
-1. ``Among 44 tissues analyzed, we generally detected 213±89 co-expression
-   modules in one tissue.''
 -->
+<p><code class="red">Notes:</code></p>
+<div style="color: red">
+<ul>
+<li>We need to say more about the clustering of traits, and select a good example to summarize our results.</li>
+<li>I’m not including eMERGE replication here because I still have to work on that part.</li>
+</ul>
+<p>Minor:</p>
+<ul>
+<li>I don’t like much the idea of mentioning “module-trait associations”, since that conveys the idea of a p-value, which we are not giving.</li>
+<li>Reviewers might ask for the sample sizes of GWAS.
+Some of them, in PhenoPLIER, are really underpowered, with very few cases;
+others are from large studies.
+We should be careful when picking our examples in the Results section.</li>
+</ul>
+</div>
 <h2 id="results">Results</h2>
 <!--
 
@@ -165,10 +213,10 @@ Air pollution linked to neurodegeneration markers
 <img src="images/entire_process/entire_process.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 1:</span> <strong>Schematic of the PhenoPLIER framework.</strong>
 <!--  -->
 <strong>a)</strong> The integration process between gene co-expression patterns from
-MultiPLIER <span class="citation" data-cites="14rnBunuZ">[<a href="#ref-14rnBunuZ" role="doc-biblioref">1</a>]</span> (top) and TWAS results from
-PhenomeXcan <span class="citation" data-cites="lY5ln3dB">[<a href="#ref-lY5ln3dB" role="doc-biblioref">2</a>]</span>. PhenoPLIER projects gene-based
+MultiPLIER <span class="citation" data-cites="14rnBunuZ">[<a href="#ref-14rnBunuZ" role="doc-biblioref">24</a>]</span> (top) and TWAS results from
+PhenomeXcan <span class="citation" data-cites="lY5ln3dB">[<a href="#ref-lY5ln3dB" role="doc-biblioref">23</a>]</span>. PhenoPLIER projects gene-based
 association results on ~4,000 traits to a latent space learned from a
-large gene expression compendium (recount2 <span class="citation" data-cites="6SPTvFXq">[<a href="#ref-6SPTvFXq" role="doc-biblioref">3</a>]</span>). This
+large gene expression compendium (recount2 <span class="citation" data-cites="6SPTvFXq">[<a href="#ref-6SPTvFXq" role="doc-biblioref">8</a>]</span>). This
 generates matrix <span class="math inline">\(\mathbf{\hat{M}}\)</span>, where each trait is now described by
 latent variables/gene modules.
 <!--  -->
@@ -181,10 +229,10 @@ PMBC: <code class="red">Explain</code>; mDCs: <code class="red">Explain</code>.
 </div>
 <p>(<code class="red">This paragraph has probably too much detail about MultiPLIER</code>)
 <!--  -->
-MultiPLIER <span class="citation" data-cites="14rnBunuZ">[<a href="#ref-14rnBunuZ" role="doc-biblioref">1</a>]</span> is a recent computational strategy
+MultiPLIER <span class="citation" data-cites="14rnBunuZ">[<a href="#ref-14rnBunuZ" role="doc-biblioref">24</a>]</span> is a recent computational strategy
 that extracts patterns of co-expressed genes from large gene expression
 datasets. The approach uses an unsupervised matrix factorization method that was
-employed to extract latent variables from recount2 <span class="citation" data-cites="6SPTvFXq">[<a href="#ref-6SPTvFXq" role="doc-biblioref">3</a>]</span>.
+employed to extract latent variables from recount2 <span class="citation" data-cites="6SPTvFXq">[<a href="#ref-6SPTvFXq" role="doc-biblioref">8</a>]</span>.
 <!--  -->
 The latent variables (LVs), essentially gene modules, then revealed biological
 processes associated with disease severity in rare disease datasets that were
@@ -194,17 +242,17 @@ approach was not explicitly designed for this goal.</p>
 <p>Although the authors showed that certain patterns learned by MultiPLIER resemble
 known biology, most of the LVs identified are completely unknown. Since genes in
 these modules vary together in certain cell types and tissues, it’s expected
-that they may also function together <span class="citation" data-cites="1FVd2WW6G DN7TyZzb">[<a href="#ref-1FVd2WW6G" role="doc-biblioref">4</a>,<a href="#ref-DN7TyZzb" role="doc-biblioref">5</a>]</span>.
+that they may also function together <span class="citation" data-cites="1FVd2WW6G DN7TyZzb">[<a href="#ref-1FVd2WW6G" role="doc-biblioref">25</a>,<a href="#ref-DN7TyZzb" role="doc-biblioref">26</a>]</span>.
 <!--  -->
 To test whether patterns in the expression space match those in the TWAS space,
-we used PhenomeXcan <span class="citation" data-cites="lY5ln3dB">[<a href="#ref-lY5ln3dB" role="doc-biblioref">2</a>]</span>, a massive transcriptome-wide
+we used PhenomeXcan <span class="citation" data-cites="lY5ln3dB">[<a href="#ref-lY5ln3dB" role="doc-biblioref">23</a>]</span>, a massive transcriptome-wide
 association studies (TWAS) resource obtained from the UK Biobank
-<span class="citation" data-cites="nmJxPpE5">[<a href="#ref-nmJxPpE5" role="doc-biblioref">6</a>]</span> and other cohorts (Figure <a href="#fig:entire_process">1</a>
+<span class="citation" data-cites="nmJxPpE5">[<a href="#ref-nmJxPpE5" role="doc-biblioref">27</a>]</span> and other cohorts (Figure <a href="#fig:entire_process">1</a>
 a). These results were projected to the low-dimensional gene representation
 learned by MultiPLIER using:</p>
 <p><span id="eq:proj" class="eqnos"><span class="math display">\[\hat{\mathbf{M}} = (\mathbf{Z}^{\top} \mathbf{Z} + \lambda_{2} \mathbf{I})^{-1} \mathbf{Z}^{\top} \mathbf{M},\]</span><span class="eqnos-number">(1)</span></span> </p>
 <p>where <span class="math inline">\(\mathbf{M}^{n \times t}\)</span> has gene-trait associations from MultiXcan
-<span class="citation" data-cites="1FFzCXo1s">[<a href="#ref-1FFzCXo1s" role="doc-biblioref">7</a>]</span> (standardized effect sizes) for <span class="math inline">\(n\)</span> genes
+<span class="citation" data-cites="1FFzCXo1s">[<a href="#ref-1FFzCXo1s" role="doc-biblioref">13</a>]</span> (standardized effect sizes) for <span class="math inline">\(n\)</span> genes
 and <span class="math inline">\(t\)</span> traits, <span class="math inline">\(\mathbf{Z}^{n \times l}\)</span> are the gene loadings with <span class="math inline">\(l\)</span> latent
 variables, <span class="math inline">\(\lambda_2\)</span> is the regularization parameter used in the training
 step, and <span class="math inline">\(\hat{\mathbf{M}}^{l \times t}\)</span> is finally the projection of
@@ -212,12 +260,12 @@ step, and <span class="math inline">\(\hat{\mathbf{M}}^{l \times t}\)</span> is 
 by LVs, thus we can potentially infer the effects of gene modules on different
 human traits.
 Since the MultiPLIER models also provide the experimental conditions (such as cell types and tissues) in which genes in a module are concurringly expressed, our approach would also allow inferring the context in which the gene module affects a trait or disease.</p>
-<p>In the original MultiPLIER study <span class="citation" data-cites="14rnBunuZ">[<a href="#ref-14rnBunuZ" role="doc-biblioref">1</a>]</span>, the authors
+<p>In the original MultiPLIER study <span class="citation" data-cites="14rnBunuZ">[<a href="#ref-14rnBunuZ" role="doc-biblioref">24</a>]</span>, the authors
 found an LV significantly associated with previously known neutrophil gene-sets
 and highly correlated with neutrophil estimates from gene expression.
 <!--  -->
 We analyzed this LV using our approach (Figure <a href="#fig:entire_process">1</a> b), and found that
-1) neutrophil counts and other white blood cell traits from PhenomeXcan <span class="citation" data-cites="lY5ln3dB">[<a href="#ref-lY5ln3dB" role="doc-biblioref">2</a>]</span> were ranked among the top 10 traits for this LV,
+1) neutrophil counts and other white blood cell traits from PhenomeXcan <span class="citation" data-cites="lY5ln3dB">[<a href="#ref-lY5ln3dB" role="doc-biblioref">23</a>]</span> were ranked among the top 10 traits for this LV,
 and 2) that the genes in this LV are expressed in neutrophil cells (see more details in the supplementary material).
 <!--  -->
 These initial results strongly suggest that shared patterns exist in the gene
@@ -327,19 +375,19 @@ To avoid using a single clustering algorithm (which implies using a single
 assumption about the structure of the data), we employed a consensus clustering
 approach where different methods with varying sets parameters are applied on the
 same data, and later combined into a consolidated solution
-<span class="citation" data-cites="8js8Q3pF 17CbjLzCP uw3AnEgA">[<a href="#ref-8js8Q3pF" role="doc-biblioref">8</a>,<a href="#ref-17CbjLzCP" role="doc-biblioref">9</a>,<a href="#ref-uw3AnEgA" role="doc-biblioref">10</a>]</span>
+<span class="citation" data-cites="8js8Q3pF 17CbjLzCP uw3AnEgA">[<a href="#ref-8js8Q3pF" role="doc-biblioref">28</a>,<a href="#ref-17CbjLzCP" role="doc-biblioref">29</a>,<a href="#ref-uw3AnEgA" role="doc-biblioref">30</a>]</span>
 (Figure <a href="#fig:clustering:design">3</a>).
 <!--  -->
 An important property for a successful application of a consensus clustering
 approach is the diversity of the ensemble, understood as the level of
 disagreement between the base clustering solutions
-<span class="citation" data-cites="8js8Q3pF rcTMvL18 t5p3UpxZ">[<a href="#ref-8js8Q3pF" role="doc-biblioref">8</a>,<a href="#ref-rcTMvL18" role="doc-biblioref">11</a>,<a href="#ref-t5p3UpxZ" role="doc-biblioref">12</a>]</span>.
+<span class="citation" data-cites="8js8Q3pF rcTMvL18 t5p3UpxZ">[<a href="#ref-8js8Q3pF" role="doc-biblioref">28</a>,<a href="#ref-rcTMvL18" role="doc-biblioref">31</a>,<a href="#ref-t5p3UpxZ" role="doc-biblioref">32</a>]</span>.
 A diverse set of solutions can be generated by using different data representations (such as dimensionality reduction methods or subsets of features), clustering algorithms with distinct assumptions (<span class="math inline">\(k\)</span>-means, for instance, assumes hyperspherical clusters), and a varying set of algorithm’s parameters (such as the number of clusters or the initial random seeds).
 <!--  -->
 In our approach, we performed cluster analysis using five different clustering
 algorithms on three representations of the input data (the original data with
 987 latent variables, its projection into the top 50 principal components, and
-the embedding learned by UMAP <span class="citation" data-cites="157h5hA34">[<a href="#ref-157h5hA34" role="doc-biblioref">13</a>]</span> using 50 components) (see
+the embedding learned by UMAP <span class="citation" data-cites="157h5hA34">[<a href="#ref-157h5hA34" role="doc-biblioref">33</a>]</span> using 50 components) (see
 Figure <a href="#fig:clustering:design">3</a> a). The clustering methods used cover a wide range
 of different assumptions on cluster shapes and a varying set of parameters such
 as the number of clusters (from 2 to 60), the width of the Gaussian kernel in
@@ -350,7 +398,7 @@ The process generated an ensemble with 4,428 clustering solutions for all
 traits. This ensemble was used to derive a coassociation matrix between traits
 by counting the number of times a pair of traits was clustered together.
 A consensus function was applied on the coassociation matrix to derive a consolidated solution using the information in the ensemble.
-For these final partitions, we did not select a specific number of clusters, but instead used a clustering tree <span class="citation" data-cites="xhtEAzx6">[<a href="#ref-xhtEAzx6" role="doc-biblioref">14</a>]</span> (Figure <a href="#fig:clustering:tree">4</a>) to examine stable groups of traits at multiple resolutions.
+For these final partitions, we did not select a specific number of clusters, but instead used a clustering tree <span class="citation" data-cites="xhtEAzx6">[<a href="#ref-xhtEAzx6" role="doc-biblioref">34</a>]</span> (Figure <a href="#fig:clustering:tree">4</a>) to examine stable groups of traits at multiple resolutions.
 <!--  -->
 Finally, for the interpretation of the clusters, we trained a decision tree
 classifier (a highly interpretable machine learning model) on the original
@@ -399,7 +447,7 @@ Since it is expected that a subset of resolutions better represents the patterns
 1) a “large” branch that includes most of the traits that start to be subdivided only at <span class="math inline">\(k=16\)</span> (with asthma, lipids, and nutrient intake clusters),
 2) bone-densitometry measurements,
 3) hematological assays on red blood cells and platelets, and
-4) a “complex” branch including assays on white blood cells, skin and hair color, autoimmune disorders, and cardiovascular diseases (hypertension, heart problems, and other cardiovascular-related traits such hand-grip strength <span class="citation" data-cites="aBVh8zt1">[<a href="#ref-aBVh8zt1" role="doc-biblioref">15</a>]</span>, and environmental/behavioral factors such as physical activity and diet).
+4) a “complex” branch including assays on white blood cells, skin and hair color, autoimmune disorders, and cardiovascular diseases (hypertension, heart problems, and other cardiovascular-related traits such hand-grip strength <span class="citation" data-cites="aBVh8zt1">[<a href="#ref-aBVh8zt1" role="doc-biblioref">35</a>]</span>, and environmental/behavioral factors such as physical activity and diet).
 <!--  -->
 All branches show relatively highly stable clusters, where the same traits are clustered together across different resolutions even with the consensus algorithm using random seeds at each level.
 <!--  -->
@@ -429,7 +477,7 @@ Values range from -5 (lighter color) to 16 (darker color).
 For that, we trained decision tree classifiers on the input data (Figure <a href="#fig:clustering:design">3</a>) using each cluster at <span class="math inline">\(k=26\)</span> (bottom of Figure <a href="#fig:clustering:tree">4</a>) as labels.
 This yielded for each cluster the top associated gene modules, where several of them were well-aligned to existing pathways, and other modules were “novel” and expressed in relevant tissues (<code class="red">REVISE</code>).
 Results are shown in Figure <a href="#fig:clustering:heatmap">5</a>, where it can be seen that some modules are highly specific to certain types of traits, and others seem to be associated with a wide range of different traits and diseases, thus potentially involved in more general biological functions.
-For example, modules such as LV928 and LV30, that are known to be related to early progenitors of the erythrocytes lineage <span class="citation" data-cites="Zk82GvJV">[<a href="#ref-Zk82GvJV" role="doc-biblioref">16</a>]</span> (<code>DMAP_ERY</code> pathways in Supplementary Figure <a href="#fig:clustering:heatmap_pathways">11</a>), are predominantly expressed in early differentiation stages of erythropoiesis, and strongly associated with different assays on red blood cells (erythrocytes and reticulocytes, including cell counts, mean volumes and distribution width).
+For example, modules such as LV928 and LV30, that are known to be related to early progenitors of the erythrocytes lineage <span class="citation" data-cites="Zk82GvJV">[<a href="#ref-Zk82GvJV" role="doc-biblioref">36</a>]</span> (<code>DMAP_ERY</code> pathways in Supplementary Figure <a href="#fig:clustering:heatmap_pathways">11</a>), are predominantly expressed in early differentiation stages of erythropoiesis, and strongly associated with different assays on red blood cells (erythrocytes and reticulocytes, including cell counts, mean volumes and distribution width).
 On the other side, others are highly specific, such as LV730, expressed in thrombocytes, and exclusively associated with hemathological assays on platelets;
 or LV598, whose genes are expressed in corneal endothelial cells, and are almost only related to keratometry measurements.
 <!-- 
@@ -534,18 +582,18 @@ This would, in addition to connecting gene modules with their context-specific
 effects on complex traits, identify which compounds might provide an avenue to
 alter a dysregulated process activity for therapeutical utility.</p>
 <p>To test this hypothesis, we used a gold standard of drug-disease medical
-indications <span class="citation" data-cites="O21tn8vf 10KA5jTBQ">[<a href="#ref-O21tn8vf" role="doc-biblioref">17</a>,<a href="#ref-10KA5jTBQ" role="doc-biblioref">18</a>]</span> to evaluate
+indications <span class="citation" data-cites="O21tn8vf 10KA5jTBQ">[<a href="#ref-O21tn8vf" role="doc-biblioref">37</a>,<a href="#ref-10KA5jTBQ" role="doc-biblioref">38</a>]</span> to evaluate
 and compare the prediction performance of both the original gene-disease
 associations from PhenomeXcan, and its projection representing gene
 module-disease associations.
 <!--  -->
 To test this, we used the transcriptional responses to small molecule
-perturbations profiled in LINCS L1000 <span class="citation" data-cites="F7lIlh2N">[<a href="#ref-F7lIlh2N" role="doc-biblioref">19</a>]</span>, which
+perturbations profiled in LINCS L1000 <span class="citation" data-cites="F7lIlh2N">[<a href="#ref-F7lIlh2N" role="doc-biblioref">39</a>]</span>, which
 were further processed to obtain consensus signatures and map to DrubBank IDs
-<span class="citation" data-cites="6PR8LEXK O21tn8vf 1DJZvtwP1">[<a href="#ref-O21tn8vf" role="doc-biblioref">17</a>,<a href="#ref-6PR8LEXK" role="doc-biblioref">20</a>,<a href="#ref-1DJZvtwP1" role="doc-biblioref">21</a>]</span>.
+<span class="citation" data-cites="6PR8LEXK O21tn8vf 1DJZvtwP1">[<a href="#ref-O21tn8vf" role="doc-biblioref">37</a>,<a href="#ref-6PR8LEXK" role="doc-biblioref">40</a>,<a href="#ref-1DJZvtwP1" role="doc-biblioref">41</a>]</span>.
 <!--  -->
 To compute a drug-disease score, we followed a similar procedure used previously
-<span class="citation" data-cites="17oeJ0CXy">[<a href="#ref-17oeJ0CXy" role="doc-biblioref">22</a>]</span> to anti-correlates gene-traits associations from TWAS and
+<span class="citation" data-cites="17oeJ0CXy">[<a href="#ref-17oeJ0CXy" role="doc-biblioref">42</a>]</span> to anti-correlates gene-traits associations from TWAS and
 expression profiles of drugs using their signed <span class="math inline">\(z\)</span>-scores (see the
 supplementary material). Here we used the dot product between gene-traits
 <span class="math inline">\(z\)</span>-scores and the consensus <span class="math inline">\(z\)</span>-scores in LINCS L1000, which led to a score for
@@ -611,150 +659,264 @@ more sophisticated methods for gene co-expression pattern discovery are needed t
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" class="references hanging-indent" role="doc-bibliography">
-<div id="ref-14rnBunuZ">
-<p>1. <strong>MultiPLIER: A Transfer Learning Framework for Transcriptomics Reveals Systemic Features of Rare Disease</strong> <br />
-Jaclyn N. Taroni, Peter C. Grayson, Qiwen Hu, Sean Eddy, Matthias Kretzler, Peter A. Merkel, Casey S. Greene<br />
-<em>Cell Systems</em> (2019-05) <a href="https://doi.org/gf75g5">https://doi.org/gf75g5</a> <br />
-DOI: <a href="https://doi.org/10.1016/j.cels.2019.04.003">10.1016/j.cels.2019.04.003</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31121115">31121115</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6538307">PMC6538307</a></p>
+<div id="ref-O0e3EhY6">
+<p>1. <strong>Relaxed purifying selection and possibly high rate of adaptation in primate lineage-specific genes.</strong> <br />
+James J Cai, Dmitri A Petrov<br />
+<em>Genome biology and evolution</em> (2010-07-12) <a href="https://www.ncbi.nlm.nih.gov/pubmed/20624743">https://www.ncbi.nlm.nih.gov/pubmed/20624743</a> <br />
+DOI: <a href="https://doi.org/10.1093/gbe/evq019">10.1093/gbe/evq019</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/20624743">20624743</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2997544">PMC2997544</a></p>
 </div>
-<div id="ref-lY5ln3dB">
-<p>2. <strong>PhenomeXcan: Mapping the genome to the phenome through the transcriptome</strong> <br />
-Milton Pividori, Padma S. Rajagopal, Alvaro Barbeira, Yanyu Liang, Owen Melia, Lisa Bastarache, YoSon Park, GTEx Consortium, Xiaoquan Wen, Hae K. Im<br />
-<em>Science Advances</em> (2020-09) <a href="https://doi.org/ghbvbf">https://doi.org/ghbvbf</a> <br />
-DOI: <a href="https://doi.org/10.1126/sciadv.aba2083">10.1126/sciadv.aba2083</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32917697">32917697</a></p>
+<div id="ref-18jYvPauB">
+<p>2. <strong>Elevated rates of protein secretion, evolution, and disease among tissue-specific genes.</strong> <br />
+Eitan E Winter, Leo Goodstadt, Chris P Ponting<br />
+<em>Genome research</em> (2004-01) <a href="https://www.ncbi.nlm.nih.gov/pubmed/14707169">https://www.ncbi.nlm.nih.gov/pubmed/14707169</a> <br />
+DOI: <a href="https://doi.org/10.1101/gr.1924004">10.1101/gr.1924004</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/14707169">14707169</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC314278">PMC314278</a></p>
+</div>
+<div id="ref-wNE0EQlN">
+<p>3. <strong>A large-scale analysis of tissue-specific pathology and gene expression of human disease genes and complexes</strong> <br />
+K. Lage, N. T. Hansen, E. O. Karlberg, A. C. Eklund, F. S. Roque, P. K. Donahoe, Z. Szallasi, T. S. Jensen, S. Brunak<br />
+<em>Proceedings of the National Academy of Sciences</em> (2008-12-22) <a href="https://doi.org/d5qcv9">https://doi.org/d5qcv9</a> <br />
+DOI: <a href="https://doi.org/10.1073/pnas.0810772105">10.1073/pnas.0810772105</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/19104045">19104045</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2606902">PMC2606902</a></p>
+</div>
+<div id="ref-9Pr9idng">
+<p>4. <strong>The GTEx Consortium atlas of genetic regulatory effects across human tissues</strong> <br />
+The GTEx Consortium<br />
+<em>Science</em> (2020-09-11) <a href="https://doi.org/ghbnhr">https://doi.org/ghbnhr</a> <br />
+DOI: <a href="https://doi.org/10.1126/science.aaz1776">10.1126/science.aaz1776</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32913098">32913098</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7737656">PMC7737656</a></p>
+</div>
+<div id="ref-1DoyZS7y0">
+<p>5. <strong>Index and biological spectrum of human DNase I hypersensitive sites</strong> <br />
+Wouter Meuleman, Alexander Muratov, Eric Rynes, Jessica Halow, Kristen Lee, Daniel Bates, Morgan Diegel, Douglas Dunn, Fidencio Neri, Athanasios Teodosiadis, … John Stamatoyannopoulos<br />
+<em>Nature</em> (2020-07-29) <a href="https://doi.org/gg6dhp">https://doi.org/gg6dhp</a> <br />
+DOI: <a href="https://doi.org/10.1038/s41586-020-2559-3">10.1038/s41586-020-2559-3</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32728217">32728217</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7422677">PMC7422677</a></p>
+</div>
+<div id="ref-nhaocxmR">
+<p>6. <strong>Mechanisms of tissue and cell-type specificity in heritable traits and diseases</strong> <br />
+Idan Hekselman, Esti Yeger-Lotem<br />
+<em>Nature Reviews Genetics</em> (2020-01-08) <a href="https://doi.org/ggkx9v">https://doi.org/ggkx9v</a> <br />
+DOI: <a href="https://doi.org/10.1038/s41576-019-0200-9">10.1038/s41576-019-0200-9</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31913361">31913361</a></p>
+</div>
+<div id="ref-xRGqPsT2">
+<p>7. <strong>Regulatory genomic circuitry of human disease loci by integrative epigenomics</strong> <br />
+Carles A. Boix, Benjamin T. James, Yongjin P. Park, Wouter Meuleman, Manolis Kellis<br />
+<em>Nature</em> (2021-02-03) <a href="https://doi.org/ghzkhr">https://doi.org/ghzkhr</a> <br />
+DOI: <a href="https://doi.org/10.1038/s41586-020-03145-z">10.1038/s41586-020-03145-z</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/33536621">33536621</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7875769">PMC7875769</a></p>
 </div>
 <div id="ref-6SPTvFXq">
-<p>3. <strong>Reproducible RNA-seq analysis using recount2</strong> <br />
+<p>8. <strong>Reproducible RNA-seq analysis using recount2</strong> <br />
 Leonardo Collado-Torres, Abhinav Nellore, Kai Kammers, Shannon E Ellis, Margaret A Taub, Kasper D Hansen, Andrew E Jaffe, Ben Langmead, Jeffrey T Leek<br />
 <em>Nature Biotechnology</em> (2017-04-11) <a href="https://doi.org/gf75hp">https://doi.org/gf75hp</a> <br />
 DOI: <a href="https://doi.org/10.1038/nbt.3838">10.1038/nbt.3838</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28398307">28398307</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6742427">PMC6742427</a></p>
 </div>
+<div id="ref-Nz3IMEzd">
+<p>9. <strong>Massive mining of publicly available RNA-seq data from human and mouse</strong> <br />
+Alexander Lachmann, Denis Torre, Alexandra B. Keenan, Kathleen M. Jagodnik, Hoyjin J. Lee, Lily Wang, Moshe C. Silverstein, Avi Ma’ayan<br />
+<em>Nature Communications</em> (2018-04-10) <a href="https://doi.org/gc92dr">https://doi.org/gc92dr</a> <br />
+DOI: <a href="https://doi.org/10.1038/s41467-018-03751-6">10.1038/s41467-018-03751-6</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29636450">29636450</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5893633">PMC5893633</a></p>
+</div>
+<div id="ref-57TjOMEA">
+<p>10. <strong>Identification of therapeutic targets from genetic association studies using hierarchical component analysis</strong> <br />
+Hao-Chih Lee, Osamu Ichikawa, Benjamin S. Glicksberg, Aparna A. Divaraniya, Christine E. Becker, Pankaj Agarwal, Joel T. Dudley<br />
+<em>BioData Mining</em> (2020-06-17) <a href="https://doi.org/gjp5pf">https://doi.org/gjp5pf</a> <br />
+DOI: <a href="https://doi.org/10.1186/s13040-020-00216-9">10.1186/s13040-020-00216-9</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32565911">32565911</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7301559">PMC7301559</a></p>
+</div>
+<div id="ref-yEdRP9Xx">
+<p>11. <strong>Novel Variance-Component TWAS method for studying complex human diseases with applications to Alzheimer’s dementia</strong> <br />
+Shizhen Tang, Aron S. Buchman, Philip L. De Jager, David A. Bennett, Michael P. Epstein, Jingjing Yang<br />
+<em>PLOS Genetics</em> (2021-04-02) <a href="https://doi.org/gjpr3j">https://doi.org/gjpr3j</a> <br />
+DOI: <a href="https://doi.org/10.1371/journal.pgen.1009482">10.1371/journal.pgen.1009482</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/33798195">33798195</a></p>
+</div>
+<div id="ref-1D63fEEPb">
+<p>12. <strong>Integrative approaches for large-scale transcriptome-wide association studies</strong> <br />
+Alexander Gusev, Arthur Ko, Huwenbo Shi, Gaurav Bhatia, Wonil Chung, Brenda WJH Penninx, Rick Jansen, Eco JC de Geus, Dorret I Boomsma, Fred A Wright, … Bogdan Pasaniuc<br />
+<em>Nature Genetics</em> (2016-02-08) <a href="https://doi.org/f3vf4p">https://doi.org/f3vf4p</a> <br />
+DOI: <a href="https://doi.org/10.1038/ng.3506">10.1038/ng.3506</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26854917">26854917</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4767558">PMC4767558</a></p>
+</div>
+<div id="ref-1FFzCXo1s">
+<p>13. <strong>Integrating predicted transcriptome from multiple tissues improves association detection</strong> <br />
+Alvaro N. Barbeira, Milton Pividori, Jiamao Zheng, Heather E. Wheeler, Dan L. Nicolae, Hae Kyung Im<br />
+<em>PLOS Genetics</em> (2019-01-22) <a href="https://doi.org/ghs8vx">https://doi.org/ghs8vx</a> <br />
+DOI: <a href="https://doi.org/10.1371/journal.pgen.1007889">10.1371/journal.pgen.1007889</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30668570">30668570</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6358100">PMC6358100</a></p>
+</div>
+<div id="ref-Z8bvDdVq">
+<p>14. <strong>A gene-based association method for mapping traits using reference transcriptome data</strong> <br />
+Eric R Gamazon, Heather E Wheeler, Kaanan P Shah, Sahar V Mozaffari, Keston Aquino-Michaels, Robert J Carroll, Anne E Eyler, Joshua C Denny, Dan L Nicolae, Nancy J Cox, … GTEx Consortium<br />
+<em>Nature Genetics</em> (2015-08-10) <a href="https://doi.org/f7p9zv">https://doi.org/f7p9zv</a> <br />
+DOI: <a href="https://doi.org/10.1038/ng.3367">10.1038/ng.3367</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26258848">26258848</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4552594">PMC4552594</a></p>
+</div>
+<div id="ref-4iMVo07x">
+<p>15. <strong>Integrating Gene Expression with Summary Association Statistics to Identify Genes Associated with 30 Complex Traits</strong> <br />
+Nicholas Mancuso, Huwenbo Shi, Pagé Goddard, Gleb Kichaev, Alexander Gusev, Bogdan Pasaniuc<br />
+<em>The American Journal of Human Genetics</em> (2017-03) <a href="https://doi.org/f9wvsg">https://doi.org/f9wvsg</a> <br />
+DOI: <a href="https://doi.org/10.1016/j.ajhg.2017.01.031">10.1016/j.ajhg.2017.01.031</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28238358">28238358</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5339290">PMC5339290</a></p>
+</div>
+<div id="ref-WFslDIWl">
+<p>16. <strong>Heritability enrichment of specifically expressed genes identifies disease-relevant tissues and cell types</strong> <br />
+Hilary K. Finucane, Yakir A. Reshef, Verneri Anttila, Kamil Slowikowski, Alexander Gusev, Andrea Byrnes, Steven Gazal, Po-Ru Loh, Caleb Lareau, Noam Shoresh, … The Brainstorm Consortium<br />
+<em>Nature Genetics</em> (2018-04-09) <a href="https://doi.org/gdfjqt">https://doi.org/gdfjqt</a> <br />
+DOI: <a href="https://doi.org/10.1038/s41588-018-0081-4">10.1038/s41588-018-0081-4</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29632380">29632380</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5896795">PMC5896795</a></p>
+</div>
+<div id="ref-nga58tSh">
+<p>17. <strong>Integrating Autoimmune Risk Loci with Gene-Expression Data Identifies Specific Pathogenic Immune Cell Subsets</strong> <br />
+Xinli Hu, Hyun Kim, Eli Stahl, Robert Plenge, Mark Daly, Soumya Raychaudhuri<br />
+<em>The American Journal of Human Genetics</em> (2011-10) <a href="https://doi.org/fpghp4">https://doi.org/fpghp4</a> <br />
+DOI: <a href="https://doi.org/10.1016/j.ajhg.2011.09.002">10.1016/j.ajhg.2011.09.002</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/21963258">21963258</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3188838">PMC3188838</a></p>
+</div>
+<div id="ref-kXUuzq6I">
+<p>18. <strong>SNPsea: an algorithm to identify cell types, tissues and pathways affected by risk loci</strong> <br />
+Kamil Slowikowski, Xinli Hu, Soumya Raychaudhuri<br />
+<em>Bioinformatics</em> (2014-09-01) <a href="https://doi.org/f6j6v3">https://doi.org/f6j6v3</a> <br />
+DOI: <a href="https://doi.org/10.1093/bioinformatics/btu326">10.1093/bioinformatics/btu326</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24813542">24813542</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4147889">PMC4147889</a></p>
+</div>
+<div id="ref-kUDav9OX">
+<p>19. <strong>Meta-analysis of 375,000 individuals identifies 38 susceptibility loci for migraine</strong> <br />
+Padhraig Gormley, Verneri Anttila, Bendik S Winsvold, Priit Palta, Tonu Esko, Tune H Pers, Kai-How Farh, Ester Cuenca-Leon, Mikko Muona, Nicholas A Furlotte, … International Headache Genetics Consortium<br />
+<em>Nature Genetics</em> (2016-06-20) <a href="https://doi.org/bmzx">https://doi.org/bmzx</a> <br />
+DOI: <a href="https://doi.org/10.1038/ng.3598">10.1038/ng.3598</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27322543">27322543</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5331903">PMC5331903</a></p>
+</div>
+<div id="ref-z8MQTAnJ">
+<p>20. <strong>Biological interpretation of genome-wide association studies using predicted gene functions</strong> <br />
+Tune H. Pers, Juha M. Karjalainen, Yingleong Chan, Harm-Jan Westra, Andrew R. Wood, Jian Yang, Julian C. Lui, Sailaja Vedantam, Stefan Gustafsson, Tonu Esko, … Genetic Investigation of ANthropometric Traits (GIANT) Consortium<br />
+<em>Nature Communications</em> (2015-01-19) <a href="https://doi.org/f3mwhd">https://doi.org/f3mwhd</a> <br />
+DOI: <a href="https://doi.org/10.1038/ncomms6890">10.1038/ncomms6890</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25597830">25597830</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4420238">PMC4420238</a></p>
+</div>
+<div id="ref-mPnIAH38">
+<p>21. <strong>Tackling the widespread and critical impact of batch effects in high-throughput data</strong> <br />
+Jeffrey T. Leek, Robert B. Scharpf, Héctor Corrada Bravo, David Simcha, Benjamin Langmead, W. Evan Johnson, Donald Geman, Keith Baggerly, Rafael A. Irizarry<br />
+<em>Nature Reviews Genetics</em> (2010-09-14) <a href="https://doi.org/cfr324">https://doi.org/cfr324</a> <br />
+DOI: <a href="https://doi.org/10.1038/nrg2825">10.1038/nrg2825</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/20838408">20838408</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3880143">PMC3880143</a></p>
+</div>
+<div id="ref-Ki2ij7zE">
+<p>22. <strong>Pathway-level information extractor (PLIER) for gene expression data</strong> <br />
+Weiguang Mao, Elena Zaslavsky, Boris M. Hartmann, Stuart C. Sealfon, Maria Chikina<br />
+<em>Nature Methods</em> (2019-06-27) <a href="https://doi.org/gf75g6">https://doi.org/gf75g6</a> <br />
+DOI: <a href="https://doi.org/10.1038/s41592-019-0456-1">10.1038/s41592-019-0456-1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31249421">31249421</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7262669">PMC7262669</a></p>
+</div>
+<div id="ref-lY5ln3dB">
+<p>23. <strong>PhenomeXcan: Mapping the genome to the phenome through the transcriptome</strong> <br />
+Milton Pividori, Padma S. Rajagopal, Alvaro Barbeira, Yanyu Liang, Owen Melia, Lisa Bastarache, YoSon Park, GTEx Consortium, Xiaoquan Wen, Hae K. Im<br />
+<em>Science Advances</em> (2020-09) <a href="https://doi.org/ghbvbf">https://doi.org/ghbvbf</a> <br />
+DOI: <a href="https://doi.org/10.1126/sciadv.aba2083">10.1126/sciadv.aba2083</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32917697">32917697</a></p>
+</div>
+<div id="ref-14rnBunuZ">
+<p>24. <strong>MultiPLIER: A Transfer Learning Framework for Transcriptomics Reveals Systemic Features of Rare Disease</strong> <br />
+Jaclyn N. Taroni, Peter C. Grayson, Qiwen Hu, Sean Eddy, Matthias Kretzler, Peter A. Merkel, Casey S. Greene<br />
+<em>Cell Systems</em> (2019-05) <a href="https://doi.org/gf75g5">https://doi.org/gf75g5</a> <br />
+DOI: <a href="https://doi.org/10.1016/j.cels.2019.04.003">10.1016/j.cels.2019.04.003</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31121115">31121115</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6538307">PMC6538307</a></p>
+</div>
 <div id="ref-1FVd2WW6G">
-<p>4. <strong>Finding function: evaluation methods for functional genomic data</strong> <br />
+<p>25. <strong>Finding function: evaluation methods for functional genomic data</strong> <br />
 Chad L Myers, Daniel R Barrett, Matthew A Hibbs, Curtis Huttenhower, Olga G Troyanskaya<br />
 <em>BMC Genomics</em> (2006-07-25) <a href="https://doi.org/fg6wnk">https://doi.org/fg6wnk</a> <br />
 DOI: <a href="https://doi.org/10.1186/1471-2164-7-187">10.1186/1471-2164-7-187</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/16869964">16869964</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1560386">PMC1560386</a></p>
 </div>
 <div id="ref-DN7TyZzb">
-<p>5. <strong>The CAFA challenge reports improved protein function prediction and new functional annotations for hundreds of genes through experimental screens</strong> <br />
+<p>26. <strong>The CAFA challenge reports improved protein function prediction and new functional annotations for hundreds of genes through experimental screens</strong> <br />
 Naihui Zhou, Yuxiang Jiang, Timothy R. Bergquist, Alexandra J. Lee, Balint Z. Kacsoh, Alex W. Crocker, Kimberley A. Lewis, George Georghiou, Huy N. Nguyen, Md Nafiz Hamid, … Iddo Friedberg<br />
 <em>Genome Biology</em> (2019-11-19) <a href="https://doi.org/ggnxpz">https://doi.org/ggnxpz</a> <br />
 DOI: <a href="https://doi.org/10.1186/s13059-019-1835-8">10.1186/s13059-019-1835-8</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31744546">31744546</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6864930">PMC6864930</a></p>
 </div>
 <div id="ref-nmJxPpE5">
-<p>6. <strong>The UK Biobank resource with deep phenotyping and genomic data</strong> <br />
+<p>27. <strong>The UK Biobank resource with deep phenotyping and genomic data</strong> <br />
 Clare Bycroft, Colin Freeman, Desislava Petkova, Gavin Band, Lloyd T. Elliott, Kevin Sharp, Allan Motyer, Damjan Vukcevic, Olivier Delaneau, Jared O’Connell, … Jonathan Marchini<br />
 <em>Nature</em> (2018-10-10) <a href="https://doi.org/gfb7h2">https://doi.org/gfb7h2</a> <br />
 DOI: <a href="https://doi.org/10.1038/s41586-018-0579-z">10.1038/s41586-018-0579-z</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30305743">30305743</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6786975">PMC6786975</a></p>
 </div>
-<div id="ref-1FFzCXo1s">
-<p>7. <strong>Integrating predicted transcriptome from multiple tissues improves association detection</strong> <br />
-Alvaro N. Barbeira, Milton Pividori, Jiamao Zheng, Heather E. Wheeler, Dan L. Nicolae, Hae Kyung Im<br />
-<em>PLOS Genetics</em> (2019-01-22) <a href="https://doi.org/ghs8vx">https://doi.org/ghs8vx</a> <br />
-DOI: <a href="https://doi.org/10.1371/journal.pgen.1007889">10.1371/journal.pgen.1007889</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30668570">30668570</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6358100">PMC6358100</a></p>
-</div>
 <div id="ref-8js8Q3pF">
-<p>8. <strong>Diversity control for improving the analysis of consensus clustering</strong> <br />
+<p>28. <strong>Diversity control for improving the analysis of consensus clustering</strong> <br />
 Milton Pividori, Georgina Stegmayer, Diego H. Milone<br />
 <em>Information Sciences</em> (2016-09) <a href="https://doi.org/ghtqbk">https://doi.org/ghtqbk</a> <br />
 DOI: <a href="https://doi.org/10.1016/j.ins.2016.04.027">10.1016/j.ins.2016.04.027</a></p>
 </div>
 <div id="ref-17CbjLzCP">
-<p>9. <strong>Clustering ensembles: models of consensus and weak partitions</strong> <br />
+<p>29. <strong>Clustering ensembles: models of consensus and weak partitions</strong> <br />
 A. Topchy, A. K. Jain, W. Punch<br />
 <em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em> (2005-12) <a href="https://doi.org/c8z32x">https://doi.org/c8z32x</a> <br />
 DOI: <a href="https://doi.org/10.1109/tpami.2005.237">10.1109/tpami.2005.237</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/16355656">16355656</a></p>
 </div>
 <div id="ref-uw3AnEgA">
-<p>10. <strong>Cluster Ensembles – A Knowledge Reuse Framework for Combining Multiple Partitions</strong> <br />
+<p>30. <strong>Cluster Ensembles – A Knowledge Reuse Framework for Combining Multiple Partitions</strong> <br />
 Alexander Strehl, Ghosh Joydeep<br />
 <em>Journal of Machine Learning Research</em> <a href="https://www.jmlr.org/papers/v3/strehl02a.html">https://www.jmlr.org/papers/v3/strehl02a.html</a></p>
 </div>
 <div id="ref-rcTMvL18">
-<p>11. <strong>A Link-Based Approach to the Cluster Ensemble Problem</strong> <br />
+<p>31. <strong>A Link-Based Approach to the Cluster Ensemble Problem</strong> <br />
 Natthakan Iam-On, Tossapon Boongoen, Simon Garrett, Chris Price<br />
 <em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em> (2011-12) <a href="https://doi.org/cqgkh3">https://doi.org/cqgkh3</a> <br />
 DOI: <a href="https://doi.org/10.1109/tpami.2011.84">10.1109/tpami.2011.84</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/21576752">21576752</a></p>
 </div>
 <div id="ref-t5p3UpxZ">
-<p>12. <strong>Hybrid clustering solution selection strategy</strong> <br />
+<p>32. <strong>Hybrid clustering solution selection strategy</strong> <br />
 Zhiwen Yu, Le Li, Yunjun Gao, Jane You, Jiming Liu, Hau-San Wong, Guoqiang Han<br />
 <em>Pattern Recognition</em> (2014-10) <a href="https://doi.org/ghtzwt">https://doi.org/ghtzwt</a> <br />
 DOI: <a href="https://doi.org/10.1016/j.patcog.2014.04.005">10.1016/j.patcog.2014.04.005</a></p>
 </div>
 <div id="ref-157h5hA34">
-<p>13. <strong>UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction</strong> <br />
+<p>33. <strong>UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction</strong> <br />
 Leland McInnes, John Healy, James Melville<br />
 <em>arXiv</em> (2020-09-21) <a href="https://arxiv.org/abs/1802.03426">https://arxiv.org/abs/1802.03426</a></p>
 </div>
 <div id="ref-xhtEAzx6">
-<p>14. <strong>Clustering trees: a visualization for evaluating clusterings at multiple resolutions</strong> <br />
+<p>34. <strong>Clustering trees: a visualization for evaluating clusterings at multiple resolutions</strong> <br />
 Luke Zappia, Alicia Oshlack<br />
 <em>GigaScience</em> (2018-07) <a href="https://doi.org/gfzqf5">https://doi.org/gfzqf5</a> <br />
 DOI: <a href="https://doi.org/10.1093/gigascience/giy083">10.1093/gigascience/giy083</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30010766">30010766</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6057528">PMC6057528</a></p>
 </div>
 <div id="ref-aBVh8zt1">
-<p>15. <strong>Prognostic value of grip strength: findings from the Prospective Urban Rural Epidemiology (PURE) study.</strong> <br />
+<p>35. <strong>Prognostic value of grip strength: findings from the Prospective Urban Rural Epidemiology (PURE) study.</strong> <br />
 Darryl P Leong, Koon K Teo, Sumathy Rangarajan, Patricio Lopez-Jaramillo, Alvaro Avezum, Andres Orlandini, Pamela Seron, Suad H Ahmed, Annika Rosengren, Roya Kelishadi, … <br />
 <em>Lancet (London, England)</em> (2015-05-13) <a href="https://www.ncbi.nlm.nih.gov/pubmed/25982160">https://www.ncbi.nlm.nih.gov/pubmed/25982160</a> <br />
 DOI: <a href="https://doi.org/10.1016/s0140-6736(14)62000-6">10.1016/s0140-6736(14)62000-6</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25982160">25982160</a></p>
 </div>
 <div id="ref-Zk82GvJV">
-<p>16. <strong>Densely Interconnected Transcriptional Circuits Control Cell States in Human Hematopoiesis</strong> <br />
+<p>36. <strong>Densely Interconnected Transcriptional Circuits Control Cell States in Human Hematopoiesis</strong> <br />
 Noa Novershtern, Aravind Subramanian, Lee N. Lawton, Raymond H. Mak, W. Nicholas Haining, Marie E. McConkey, Naomi Habib, Nir Yosef, Cindy Y. Chang, Tal Shay, … Benjamin L. Ebert<br />
 <em>Cell</em> (2011-01) <a href="https://doi.org/cf5k92">https://doi.org/cf5k92</a> <br />
 DOI: <a href="https://doi.org/10.1016/j.cell.2011.01.004">10.1016/j.cell.2011.01.004</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/21241896">21241896</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3049864">PMC3049864</a></p>
 </div>
 <div id="ref-O21tn8vf">
-<p>17. <strong>Systematic integration of biomedical knowledge prioritizes drugs for repurposing</strong> <br />
+<p>37. <strong>Systematic integration of biomedical knowledge prioritizes drugs for repurposing</strong> <br />
 Daniel Scott Himmelstein, Antoine Lizee, Christine Hessler, Leo Brueggeman, Sabrina L Chen, Dexter Hadley, Ari Green, Pouya Khankhanian, Sergio E Baranzini<br />
 <em>eLife</em> (2017-09-22) <a href="https://doi.org/cdfk">https://doi.org/cdfk</a> <br />
 DOI: <a href="https://doi.org/10.7554/elife.26726">10.7554/elife.26726</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28936969">28936969</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5640425">PMC5640425</a></p>
 </div>
 <div id="ref-10KA5jTBQ">
-<p>18. <strong>Dhimmel/Indications V1.0. Pharmacotherapydb: The Open Catalog Of Drug Therapies For Disease</strong> <br />
+<p>38. <strong>Dhimmel/Indications V1.0. Pharmacotherapydb: The Open Catalog Of Drug Therapies For Disease</strong> <br />
 Daniel S. Himmelstein, Pouya Khankhanian, Christine S. Hessler, Ari J. Green, Sergio E. Baranzini<br />
 <em>Zenodo</em> (2016-03-15) <a href="https://doi.org/f3mqwb">https://doi.org/f3mqwb</a> <br />
 DOI: <a href="https://doi.org/10.5281/zenodo.47664">10.5281/zenodo.47664</a></p>
 </div>
 <div id="ref-F7lIlh2N">
-<p>19. <strong>A Next Generation Connectivity Map: L1000 Platform and the First 1,000,000 Profiles</strong> <br />
+<p>39. <strong>A Next Generation Connectivity Map: L1000 Platform and the First 1,000,000 Profiles</strong> <br />
 Aravind Subramanian, Rajiv Narayan, Steven M. Corsello, David D. Peck, Ted E. Natoli, Xiaodong Lu, Joshua Gould, John F. Davis, Andrew A. Tubelli, Jacob K. Asiedu, … Todd R. Golub<br />
 <em>Cell</em> (2017-11) <a href="https://doi.org/cgwt">https://doi.org/cgwt</a> <br />
 DOI: <a href="https://doi.org/10.1016/j.cell.2017.10.049">10.1016/j.cell.2017.10.049</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29195078">29195078</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5990023">PMC5990023</a></p>
 </div>
 <div id="ref-6PR8LEXK">
-<p>20. <strong>DrugBank 4.0: shedding new light on drug metabolism</strong> <br />
+<p>40. <strong>DrugBank 4.0: shedding new light on drug metabolism</strong> <br />
 Vivian Law, Craig Knox, Yannick Djoumbou, Tim Jewison, An Chi Guo, Yifeng Liu, Adam Maciejewski, David Arndt, Michael Wilson, Vanessa Neveu, … David S. Wishart<br />
 <em>Nucleic Acids Research</em> (2014-01) <a href="https://doi.org/f3mn6d">https://doi.org/f3mn6d</a> <br />
 DOI: <a href="https://doi.org/10.1093/nar/gkt1068">10.1093/nar/gkt1068</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24203711">24203711</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3965102">PMC3965102</a></p>
 </div>
 <div id="ref-1DJZvtwP1">
-<p>21. <strong>Dhimmel/Lincs V2.0: Refined Consensus Signatures From Lincs L1000</strong> <br />
+<p>41. <strong>Dhimmel/Lincs V2.0: Refined Consensus Signatures From Lincs L1000</strong> <br />
 Daniel Himmelstein, Leo Brueggeman, Sergio Baranzini<br />
 <em>Zenodo</em> (2016-03-08) <a href="https://doi.org/f3mqvr">https://doi.org/f3mqvr</a> <br />
 DOI: <a href="https://doi.org/10.5281/zenodo.47223">10.5281/zenodo.47223</a></p>
 </div>
 <div id="ref-17oeJ0CXy">
-<p>22. <strong>Analysis of genome-wide association data highlights candidates for drug repositioning in psychiatry</strong> <br />
+<p>42. <strong>Analysis of genome-wide association data highlights candidates for drug repositioning in psychiatry</strong> <br />
 Hon-Cheong So, Carlos Kwan-Long Chau, Wan-To Chiu, Kin-Sang Ho, Cho-Pong Lo, Stephanie Ho-Yue Yim, Pak-Chung Sham<br />
 <em>Nature Neuroscience</em> (2017-08-14) <a href="https://doi.org/gbrssh">https://doi.org/gbrssh</a> <br />
 DOI: <a href="https://doi.org/10.1038/nn.4618">10.1038/nn.4618</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28805813">28805813</a></p>
 </div>
-<div id="ref-Ki2ij7zE">
-<p>23. <strong>Pathway-level information extractor (PLIER) for gene expression data</strong> <br />
-Weiguang Mao, Elena Zaslavsky, Boris M. Hartmann, Stuart C. Sealfon, Maria Chikina<br />
-<em>Nature Methods</em> (2019-06-27) <a href="https://doi.org/gf75g6">https://doi.org/gf75g6</a> <br />
-DOI: <a href="https://doi.org/10.1038/s41592-019-0456-1">10.1038/s41592-019-0456-1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31249421">31249421</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7262669">PMC7262669</a></p>
-</div>
 </div>
 <h2 id="methods">Methods</h2>
 <h3 id="pathway-level-information-extractor-plier">Pathway-level information extractor (PLIER)</h3>
-<p>MultiPLIER <span class="citation" data-cites="14rnBunuZ">[<a href="#ref-14rnBunuZ" role="doc-biblioref">1</a>]</span>, the computational strategy used in
+<p>MultiPLIER <span class="citation" data-cites="14rnBunuZ">[<a href="#ref-14rnBunuZ" role="doc-biblioref">24</a>]</span>, the computational strategy used in
 this work, extracts patterns of co-expressed genes on large gene expression
 datasets. MultiPLIER applies the pathway-level information extractor method
-(PLIER) <span class="citation" data-cites="Ki2ij7zE">[<a href="#ref-Ki2ij7zE" role="doc-biblioref">23</a>]</span> to the recount2 data
-<span class="citation" data-cites="6SPTvFXq">[<a href="#ref-6SPTvFXq" role="doc-biblioref">3</a>]</span>, which performs unsupervised learning using prior
+(PLIER) <span class="citation" data-cites="Ki2ij7zE">[<a href="#ref-Ki2ij7zE" role="doc-biblioref">22</a>]</span> to the recount2 data
+<span class="citation" data-cites="6SPTvFXq">[<a href="#ref-6SPTvFXq" role="doc-biblioref">8</a>]</span>, which performs unsupervised learning using prior
 knowledge to reduce technical noise. Via a matrix factorization approach, PLIER
 deconvolutes the gene expression data into a set of latent variables (LV) that
 each represent a gene module (i.e. a set of genes with coordinated expression
