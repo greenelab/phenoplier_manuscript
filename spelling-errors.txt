@@ -11,6 +11,7 @@ Binglan’s
 BioBank
 bioelectrical
 BMR
+cannonical
 cardiometabolic
 Cas
 celiac
@@ -22,8 +23,9 @@ compendia
 concurringly
 CRISPR
 crit
-datasets
+dataset
 deconvolutes
+dendritic
 densitometry
 DGAT
 dimensionality
@@ -35,8 +37,10 @@ eQTL
 eQTLs
 erythematosus
 erythropoiesis
+esimates
 fastENLOC
 fibroblast
+func
 GBMF
 Golabi
 granulocyte
@@ -71,14 +75,17 @@ MCH
 MCV
 mDCs
 miltondp
+mononuclear
 MRV
 MSCV
+MSigDB
 MultiXcan
 myeloid
 myofibroblasts
 neutrophil
 neutrophils
 NMR
+PBMC
 PCA
 PhenomeXcan
 PhenoPLIER
@@ -86,7 +93,6 @@ phenotypes
 Pividori
 PLIER
 PMBB
-PMBC
 polygenic
 possibily
 predixcan
@@ -109,7 +115,6 @@ submatrix
 therapeutical
 thrombocytes
 transcriptional
-transcriptome
 translational
 UMAP
 underpowered
