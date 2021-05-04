@@ -5,7 +5,7 @@ author-meta:
 - Casey S. Greene
 bibliography:
 - content/manual-references.json
-date-meta: '2021-04-20'
+date-meta: '2021-05-04'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -24,9 +24,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
 
-  <meta name="dc.date" content="2021-04-20" />
+  <meta name="dc.date" content="2021-05-04" />
 
-  <meta name="citation_publication_date" content="2021-04-20" />
+  <meta name="citation_publication_date" content="2021-05-04" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -78,11 +78,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/87aa25eba3f7a4da26e882372b1cab4ba290d2fc/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/b3f1c1635af6db48a15ae3da9d196617778d8168/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/87aa25eba3f7a4da26e882372b1cab4ba290d2fc/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/b3f1c1635af6db48a15ae3da9d196617778d8168/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/87aa25eba3f7a4da26e882372b1cab4ba290d2fc/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/b3f1c1635af6db48a15ae3da9d196617778d8168/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -120,10 +120,10 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/87aa25eba3f7a4da26e882372b1cab4ba290d2fc/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/b3f1c1635af6db48a15ae3da9d196617778d8168/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@87aa25e](https://github.com/greenelab/phenoplier_manuscript/tree/87aa25eba3f7a4da26e882372b1cab4ba290d2fc)
-on April 20, 2021.
+from [greenelab/phenoplier_manuscript@b3f1c16](https://github.com/greenelab/phenoplier_manuscript/tree/b3f1c1635af6db48a15ae3da9d196617778d8168)
+on May 4, 2021.
 </em></small>
 
 ## Authors
@@ -639,106 +639,103 @@ traits-clusters are correctly predicted.
        negative for FEV1. -->
 
 
-### PhenoPLIER improves drug-disease prediction
+### Our gene module-based approach more accurately predicts known disease therapeutics
+
+We systematically evaluated our gene module-based approach from a translational perspective by assessing whether it could more accurately predict known treatments for disease.
+For this, we used the transcriptional responses to small molecule perturbations profiled in LINCS L1000 [@doi:10.1016/j.cell.2017.10.049], which were further processed and mapped to DrubBank IDs [@doi:10.1093/nar/gkt1068; @doi:10.7554/eLife.26726; @doi:10.5281/zenodo.47223].
+Based on the established drug repurposing strategy that looks for reversed transcriptome patterns between genes and drug-induced perturbations [@doi:10.1126/scitranslmed.3002648; @doi:10.1126/scitranslmed.3001318], we used a framework for prioritizing drug candidates that uses imputed transcriptomes from GWAS [@doi:10.1038/nn.4618].
+For this, we computed a drug-disease score by anti-correlating the $z$-scores for a disease (from TWAS) and the $z$-scores for a drug (from LINCS) across sets of genes of different size (see Methods).
+Therefore, a large score for a drug-disease pair indicates that a higher (lower) predicted expression of disease-associated genes are down (up)-regulated by the drug, thus predicting a potential treatment.
+Similarly for the gene module approach, we estimated how pharmacological perturbations affected the gene module activity by projecting expression profiles of drugs into our latent representation (Equation @eq:proj).
+We used a manually-curated gold standard of drug-disease medical indications [@doi:10.7554/eLife.26726; @doi:10.5281/zenodo.47664] across 53 diseases and 322 compounds to evaluate and compare the prediction performance.
+
 
 ![
-**Drug-disease prediction.**
+**Drug-disease prediction performance for gene-based and module-based approaches.**
 <!--  -->
-Explain.
+The receiver operating characteristic (ROC) (left) and the precision-recall curves (right) for a gene-based and our module-based approach.
 <!--  -->
 AUC: area under the curve; AP: average precision.
 <!--  -->
-](images/drug_disease_prediction/auc_pr.png "AUC-PR of drug-disease
-associations"){#fig:drug_disease:auc_pr width="100%"}
+](images/drug_disease_prediction/roc_pr_curves.svg "ROC-PR curves for drug-disease prediction"){#fig:drug_disease:roc_pr width="100%"}
 
 
-We showed that the latent representation learned in a large gene expression data
-set is helpful to link novel gene sets to complex diseases and the cell types
-where they are expressed.
+The ROC and precision-recall (PR) curves comparing both approaches are shown in Figure @fig:drug_disease:roc_pr.
+Our proposed gene module-based method outperformed the gene-based one with an area under the curve of 0.632 and an average precision of 0.858.
 <!--  -->
-We reasoned that this representation might be also useful to more
-accurately predict the potential therapeutic effects of drugs. If the gene
-patterns captured by MultiPLIER represent real and possibily unknown biological
-pathways, then our approach might actually produce a more accurate estimation of
-the effects of a perturbed molecular mechanisms on disease, and also how
-pharmacological perturbations affect the process activity.
-<!--  -->
-This would, in addition to connecting gene modules with their context-specific
-effects on complex traits, identify which compounds might provide an avenue to
-alter a dysregulated process activity for therapeutical utility.
+It is important to note that the gene-trait associations and drug-induced expression profiles projected into the latent space represent a compressed version of the entire set of results.
+The prediction results show that this low-dimensional space captures biologically meaningful patterns that can better represent and link pathophysiological processes with the mechanisms of action of drugs.
+In the following, with the aim to understand these results, we examined specific drug-disease pairs where both methods disagreed.
 
 
-To test this hypothesis, we used a gold standard of drug-disease medical
-indications [@doi:10.7554/eLife.26726; @doi:10.5281/zenodo.47664] to evaluate
-and compare the prediction performance of both the original gene-disease
-associations from PhenomeXcan, and its projection representing gene
-module-disease associations.
-<!--  -->
-To test this, we used the transcriptional responses to small molecule
-perturbations profiled in LINCS L1000 [@doi:10.1016/j.cell.2017.10.049], which
-were further processed to obtain consensus signatures and map to DrubBank IDs
-[@doi:10.1093/nar/gkt1068; @doi:10.7554/eLife.26726; @doi:10.5281/zenodo.47223].
-<!--  -->
-To compute a drug-disease score, we followed a similar procedure used previously
-[@doi:10.1038/nn.4618] to anti-correlates gene-traits associations from TWAS and
-expression profiles of drugs using their signed $z$-scores (see the
-supplementary material). Here we used the dot product between gene-traits
-$z$-scores and the consensus $z$-scores in LINCS L1000, which led to a score for
-each drug-disease pair. (`Add more details?`{.red}).
-<!--  -->
-To obtain a drug-disease association for the gene module-mapped TWAS results, we
-first projected LINCS L1000 data into this latent representation using Equation
-(@eq:proj), thus leading to a matrix with the expression profiles of drugs
-mapped to latent variables. This can be interpreted as the effects of compounds
-on gene modules activity. Then, similarly as before, we anti-correlated gene
-module-traits scores and module expression profiles of drugs.
-
-`(Add number of drugs, diseases, and final number of mappings)`{.red}
-<!--  -->
-<!-- Both $\matr{D}$ and $\hat{\matr{D}}$ contain scores for 1170 drugs and 4091 traits,
-which were further mapped to 56 unique Disease Ontology IDs. -->
-<!--  -->
-<!-- Then I assessed the performance of these two approaches using a manually curated list of
-drug-disease associations~\autocite{Himmelstein2017, HimmelsteinPharmaDB2016}.
-97 diseases and 601 compounds in PharmarcotherapyDB~\autocite{Himmelstein2017,
-HimmelsteinPharmaDB2016},
-which contains 755 disease-modifying therapies and 243
-non-indications. After integrating this gold-standard list with the predictions, I
-obtained 458 positive and 136 negative cases for evaluation.
--->
+Nicotinic acid (niacin), a B vitamin widely used clinically to treat lipid disorders by exerting its effects on a number tissues, although not all its mechanisms have been documented [@doi:10.1016/j.amjcard.2008.02.029; @doi:10.1194/jlr.S092007].
+This compound can increase high-density lipoprotein (HDL) by inhibiting an HDL catabolism receptor in liver.
+Niacin also inhibits diacylglycerol acyltransferase–2 (DGAT2), which decrease production of low-density lipoproteins (LDL) by modulating triglyceride synthesis in hepatocytes, or by inhibiting adipocyte triglyceride lipolysis [@doi:10.1016/j.amjcard.2008.02.029].
+Niacin was categorized in our gold standard as a disease-modifying indication for atherosclerosis (AT) and coronary artery disease (CAD), and not for pancreatitis.
+For pancreatitis, both the gene-based and module-based methods assigned a negative score (below their averages), which agrees with the gold standard in that niacin does not therapeutically change the biology of this disease.
+For AT and CAD, the module-based approach predicted niacin as a therapeutic drug by scoring them with 0.52 and 0.96 (above the mean), whereas the gene-based method assigned negative scores of -0.09 and -0.16 (below the mean), respectively.
+To understand why the predictions by the module-based method were different, we obtained the LVs that positively contributed to the score by looking at large positive (negative) LV values for the disease and large negative (positive) LV values for the drug of interest.
+Notably, LV246 (analyzed previously) was among the top 20 modules contributing to the prediction of niacin as a therapeutic drug for AT.
+As shown in Figure @fig:lv246, this module is mainly expressed in adipose cells and hepatocytes, its top genes encode important enzymes involved in lipid biosynthesis, and several of them are significantly associated and colocalized with cardiovascular-related traits:
+*SCD* (10q24.31) is associated with hypercholesterolemia (P=1.9e-5) and its GWAS and eQTL signals are fully colocalized (RCP=1.0);
+*LPL* (8p21.3), which is known to be linked to different disorders of lipoprotein metabolism, is strongly associated with hypercholesterolemia (P=7.5e-17, RCP=0.26), and family history of heart disease (P=1.7e-5, RCP=0.22);
+other genes associated with hypercholesterolemia in this module are
+*FADS2* (11q12.2) (P=9.42e-5, RCP=0.623),
+*HMGCR* (5q13.3) (P=1.3e-42, RCP=0.23),
+and *LDLR* (19p13.2) (P=9.9e-136, RCP=0.41).
 
 
-<!-- Finally, I obtained drug-disease predictions using both the original (gene-based) and
-projected (gene module-based) associations: $\matr{D}=\matr{L}^{\top}\matr{M}$ and
-$\hat{\matr{D}}=\hat{\matr{L}}^{\top}\hat{\matr{M}}$, respectively. -->
+![
+**Cell types where the top 10 modules contributing for niacin-atherosclerosis prediction are expressed.**
 <!--  -->
+Average module expression ($y$-axis) of different cell types ($x$-axis) across the top 10 latent variables/modules with a positive contribution for the niacin-AT prediction.
+The figure shows a clear immune cells signature, driven mainly by the top 2 modules: LV116 and LV931 (see Supplementary Figures @fig:sup:lv116 and @fig:sup:lv931).
+<!-- https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP045569 -->
+PBMCs: peripheral blood mononuclear cells;
+HSV: treated with herpes simplex virus;
+<!-- https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP015670 -->
+WNV: Infected with West Nile virus;
+<!-- https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP062958 -->
+IFNa: interferon-alpha treatment;
+<!-- https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP039361 -->
+HMDM: human peripheral blood mononuclear cell-derived macrophages;
+IPSDM: human induced pluripotent stem cell-derived macrophages;
+<!-- https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP015670 -->
+](images/drug_disease_prediction/niacin-at-modules_cell_types.svg "Cell types of top modules for niacin-AT prediction"){#fig:drug_disease:niacin width="80%"}
 
-The ROC and Precision-Recall (PR) curves comparing both approaches are shown in
-Figure @fig:drug_disease:auc_pr. Notably, the gene module-based approach
-proposed here clearly outperformed the gene-based one, with an area under the
-curve (AUC) of 0.615 vs 0.573, and an average precision (AP) of 0.851 vs 0.841.
-<!--  -->
-This is particularly striking given that the projected TWAS results represent a
-reduced or compressed version of the complete gene-based associations,
-suggesting that a gene module perspective can be more informative, for instance,
-for drug-repurposing scenarios using genetic studies.
+
+The analysis of other niacin-AT-contributing modules revealed additional known mechanisms of action of niacin.
+For example, GPR109A/HCAR2 is a G protein-coupled high-affinity niacin receptor in adipocytes and immune cells, including monocytes, macrophages, neutrophils and dendritic cells [@doi:10.1016/j.tips.2006.05.008; @doi:10.1038/sj.jid.5700586].
+It was initially thought that the antiatherogenic effects of niacin were solely due to inhibition of lipolysis in adipose tissue.
+However, it has been shown that nicotinic acid can reduce atherosclerosis progression independently of its antidyslipidemic activity through the activation of GPR109A in immune cells [@doi:10.1172/JCI41651], thus boosting anti-inflammatory processes and reversing cholesterol transport [@doi:10.1161/ATVBAHA.108.179283].
+As shown in Figure @fig:drug_disease:niacin, this alternative mechanism for niacin could have been hypothesized by examining the cell types where modules positively contributing to the niacin-AT prediction are expressed.
+Among these, we also found other potentially interesting modules that could represent mechanisms to explore, such as LV536 expressed in the bladder (Supplementary Figure @fig:sup:lv536) and LV885/LV840 expressed in kidneys (Supplementary Figures @fig:sup:lv885 and @fig:sup:lv840)
 
 
+The projection of these two types of data into a common latent gene module-based representation could provide a more powerful framework for drug repositioning using data from genetic studies.
+Additionally, our approach could be also helpful to better understand the mechanism of pharmacological effect of known or experimental drugs.
+For example, one of the top modules affected by niacin (LV66, Supplementary Figure @fig:sup:lv66) is mainly expressed in ovarian granulosa cells.
+This compound has been very recently considered as a potential therapeutic for ovarian diseases [@doi:10.1159/000495051; @doi:10.1071/RD20306], as it was found to promote follicle growth and inhibit granulosa cell apoptosis in animal models.
+Our proposed approach could be helpful to generate novel hypothesis to evaluate potential mechanisms of action of different drugs.
+
+
+`Notes/questions:`{.red}
 
 ::: {style="color: red"}
-Another analysis here could be:
+- The main problem with this current section is the quality of LINCS L1000 data.
+It might be necessary to use Cmap build 02 also here, since there are some concerns about the LINCS imputation pipeline (https://think-lab.github.io/d/185/).
+- It could be good to discuss cases where the gene-based approach performed better (there are several ones, even with cardiovascular diseases).
+This could potentially show that for some drug-disease pairs, maybe the compound targets a few genes instead of being a broad-spectrum/multi-tissue/multi-cell-type one like niacin.
+- It would be great to have an expert in cardiovascular diseases and lipid disorder to review this part.
+- Is it clear the message in Figure @fig:drug_disease:niacin ?
+An alternative is to just show the most interesting LVs instead of averaging all and showing the top cell types as it is now.
 
-- Try the prediction again by keeping well-aligned LVs only. Do we get the same
-  prediction performance?
+Ideas/minor:
+
+- Maybe as part of the manuscript, we can provide the drug-predictions for all traits in PhenomeXcan for download.
+- An interesting analysis could consist in keeping LVs aligned with pathways only; what happens with prediction performance? If it goes down, it means that among not-aligned LVs we have useful information to link diseases and drugs.
+  It would be nice to be able to claim that.
 :::
-
-<!-- ::: {style="color: red"}
-Papers to read:
-- "SubtypeDrug: a software package for prioritization of candidate cancer
-  subtype-specific drugs" https://doi.org/10.1093/bioinformatics/btab011 It
-  might be interesting to see how the predict drug-disease associations when
-  they say "evaluation of drug-disease reverse association"
-::: -->
 
 
 ## Discussion
@@ -827,9 +824,13 @@ This figure is equivalent to Figure @fig:clustering:heatmap but, instead of cell
 
 ### Drug-disease predictions
 
-::: {style="color: red"}
-- anti-correlation using dot product of s-predixcan on all tissues and lincs
-:::
+**NOT FINISHED**
+
+We used the dot product of the S-PrediXcan $z$-score for each gene-disease pair, and the $z$-score for each gene-drug pair in LINCS L1000, multiplied by -1.
+
+To obtain a drug-disease association for the gene module-mapped TWAS results, we first projected LINCS L1000 data into this latent representation using Equation (@eq:proj), thus leading to a matrix with the expression profiles of drugs mapped to latent variables.
+This can be interpreted as the effects of compounds on gene modules activity.
+Then, similarly as before, we anti-correlated gene module-traits scores and module expression profiles of drugs.
 
 
 ## Supplementary material
@@ -855,3 +856,54 @@ Probably I just need to add a proper caption for each figure, and reference them
 <!-- Description -->
 ](images/supplementary_material/lv603_neutrophils/significance_neutrophil.png "Significance of neutrophil counts
 correlation"){#fig:supp:signif_neutrophils_counts height=3in}
+
+
+### LV116 cell types
+
+![
+**Cell types for LV116.**
+<!--  -->
+](images/lvs_analysis/lv116/lv116-cell_types.png "Cell types for LV116"){#fig:sup:lv116 width="80%"}
+
+
+### LV931 cell types
+
+![
+**Cell types for LV931.**
+<!--  -->
+](images/lvs_analysis/lv931/lv931-cell_types.png "Cell types for LV931"){#fig:sup:lv931 width="80%"}
+
+
+### LV536 cell types
+
+![
+**Cell types for LV536.**
+<!--  -->
+FIXME: *transitional* here refers to bladder: https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP007947
+<!--  -->
+](images/lvs_analysis/lv536/lv536-cell_types.png "Cell types for LV536"){#fig:sup:lv536 width="80%"}
+
+
+### LV885 cell types
+
+![
+**Cell types for LV885.**
+<!--  -->
+](images/lvs_analysis/lv885/lv885-tissues.png "Cell types for LV885"){#fig:sup:lv885 width="80%"}
+
+
+### LV840 cell types
+
+![
+**Cell types for LV840.**
+<!--  -->
+](images/lvs_analysis/lv840/lv840-cell_types.png "Cell types for LV840"){#fig:sup:lv840 width="80%"}
+
+
+### LV66 cell types
+
+![
+**Cell types for LV66.**
+<!--  -->
+](images/lvs_analysis/lv66/lv66-cell_types.png "Cell types for LV66"){#fig:sup:lv66 width="80%"}
+
