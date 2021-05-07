@@ -17,6 +17,13 @@
         "given": "James"
       }
     ],
+    "issued": {
+      "date-parts": [
+        [
+          2010
+        ]
+      ]
+    },
     "volume": "95",
     "issue": "11",
     "page": "2837-2854",
@@ -37,9 +44,103 @@
         "given": "Ghosh"
       }
     ],
+    "issued": {
+      "date-parts": [
+        [
+          2002
+        ]
+      ]
+    },
     "volume": "3",
     "page": "583-617",
     "title": "Cluster Ensembles – A Knowledge Reuse Framework for Combining Multiple Partitions",
     "URL": "https://www.jmlr.org/papers/v3/strehl02a.html"
+  },
+  {
+    "type": "article-journal",
+    "id": "Arthur2007",
+    "container-title": "Proceedings of the Eighteenth Annual ACM-SIAM Symposium on Discrete Algorithms",
+    "author": [
+      {
+        "family": "Arthur",
+        "given": "David"
+      },
+      {
+        "family": "Vassilvitskii",
+        "given": "Sergei"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2007
+        ]
+      ]
+    },
+    "page": "1027-1035",
+    "title": "k-means++: the advantages of careful seeding",
+    "URL": "http://ilpubs.stanford.edu:8090/778/1/2006-13.pdf"
+  },
+  {
+    "type": "article-journal",
+    "id": "Ng2001",
+    "container-title": "Advances in Neural Information Processing Systems",
+    "author": [
+      {
+        "family": "Ng",
+        "given": "Andrew"
+      },
+      {
+        "family": "Jordan",
+        "given": "Michael"
+      },
+      {
+        "family": "Weiss",
+        "given": "Yair"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2001
+        ]
+      ]
+    },
+    "page": "849-856",
+    "title": "On Spectral Clustering: Analysis and an algorithm",
+    "URL": "https://ai.stanford.edu/~ang/papers/nips01-spectral.pdf"
+  },
+  {
+    "type": "article-journal",
+    "id": "Ester1996",
+    "container-title": "Proceedings of the Second International Conference on Knowledge Discovery and Data Mining",
+    "author": [
+      {
+        "family": "Ester",
+        "given": "Martin"
+      },
+      {
+        "family": "Kriegel",
+        "given": "Hans-Peter"
+      },
+      {
+        "family": "Sander",
+        "given": "Jörg"
+      },
+      {
+        "family": "Xu",
+        "given": "Xiaowei"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          1996
+        ]
+      ]
+    },
+    "page": "226-231",
+    "title": "A Density-Based Algorithm for Discovering Clusters in Large Spatial Databases with Noise",
+    "URL": "https://www.aaai.org/Papers/KDD/1996/KDD96-037.pdf"
   }
 ]
