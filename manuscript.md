@@ -78,11 +78,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/908e6da275aa6396b6812e2a5b5fb06335dac67d/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/60b94a088b8df7584b928e7b193f03181ab69b7d/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/908e6da275aa6396b6812e2a5b5fb06335dac67d/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/60b94a088b8df7584b928e7b193f03181ab69b7d/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/908e6da275aa6396b6812e2a5b5fb06335dac67d/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/60b94a088b8df7584b928e7b193f03181ab69b7d/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -120,9 +120,9 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/908e6da275aa6396b6812e2a5b5fb06335dac67d/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/60b94a088b8df7584b928e7b193f03181ab69b7d/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@908e6da](https://github.com/greenelab/phenoplier_manuscript/tree/908e6da275aa6396b6812e2a5b5fb06335dac67d)
+from [greenelab/phenoplier_manuscript@60b94a0](https://github.com/greenelab/phenoplier_manuscript/tree/60b94a088b8df7584b928e7b193f03181ab69b7d)
 on May 20, 2021.
 </em></small>
 
@@ -274,11 +274,11 @@ Air pollution linked to neurodegeneration markers
 **Schematic of the PhenoPLIER framework.**
 <!--  -->
 **a)** The integration process between gene co-expression patterns from MultiPLIER (top) and TWAS results from PhenomeXcan.
-PhenoPLIER projects gene-based association results on more than 4,000 traits to a latent space learned from a recount2, a large gene expression compendium.
-This generates matrix $\mathbf{\hat{M}}$, where each trait is now described by latent variables (LV) or gene modules.
+PhenoPLIER projects gene-based association results on thousands of traits to a latent space learned from large gene expression datasets.
+The process generates matrix $\mathbf{\hat{M}}$, where each trait is now described by latent variables (LV) or gene modules.
 <!--  -->
 **b)** After the integration process, we found that neutrophil counts and other white blood cells (bottom) were ranked among the top 10 traits for an LV that was termed a neutrophil signature in the original MultiPLIER study.
-Genes in this LV were found to be expressed in relevant cell types (top).
+Genes in this LV are expressed in relevant cell types (top).
 <!--  -->
 PBMC: peripheral blood mononuclear cells;
 mDCs: myeloid dendritic cells.
@@ -286,46 +286,30 @@ mDCs: myeloid dendritic cells.
 ](images/entire_process/entire_process.svg "PhenoPLIER framework"){#fig:entire_process width="100%"}
 
 
-In Figure @fig:entire_process we show the main components of PhenoPLIER, our framework to integrate TWAS and gene co-expression patterns (see Methods for more details).
-The framework combines TWAS results on thousands of phenotypes with gene co-expression patterns by projecting gene-trait associations on a latent gene expression representation.
-Each of these latent variables (LVs), obtained with an unsupervised learning method, represents a gene-set or gene module, essentially a group of genes with coordinated expression patterns (i.e. they are expressed together in the same tissues and cell types).
-Since genes in these modules vary together, we expect that they may also function together [@doi:10.1186/1471-2164-7-187; @doi:10.1186/s13059-019-1835-8].
-Thus, the projection of TWAS results into this latent space might provide context for their interpretation.
+In Figure @fig:entire_process, we show the main components of PhenoPLIER, our framework to integrate TWAS and gene co-expression patterns.
+The framework combines TWAS results with gene co-expression patterns by projecting gene-trait associations on a latent gene expression representation.
+We used PhenomeXcan [@doi:10.1126/sciadv.aba2083], a massive TWAS resource on the UK Biobank [@doi:10.1038/s41586-018-0579-z] and other cohorts that provides results for 4,091 different diseases and traits.
+The latent gene expression representation was obtained by applying MultiPLIER [@doi:10.1016/j.cels.2019.04.003], an unsupervised learning approach, on recount2 [@doi:10.1038/nbt.3838].
+Each of the 987 latent variables (LV) represents a gene module, essentially a group of genes with coordinated expression patterns (i.e., expressed together in the same tissues and cell types).
+Since modules might represent a functional set of genes regulated by the same transcriptional program [@doi:10.1186/1471-2164-7-187; @doi:10.1186/s13059-019-1835-8], the projection of TWAS results into this latent space might provide context for their interpretation (see Methods).
+<!--  -->
+Our approach translates gene-trait associations to a gene module-trait score, allowing us to explore how different traits and diseases related to modules expressed in specific cell types and tissues, even under different developmental stages or stimuli.
+<!--  -->
+This is possible because the MultiPLIER models also provide the experimental conditions (represented by matrix $\mathbf{B}$ in Figure @fig:entire_process a) in which genes in a module are concurringly expressed.
 
 
-For the gene-trait associations we used PhenomeXcan [@doi:10.1126/sciadv.aba2083], a massive TWAS resource on the UK Biobank [@doi:10.1038/s41586-018-0579-z] and other cohorts that provides results for 4,091 phenotypes, including different diseases and traits.
-These results were projected to the low-dimensional gene expression representation learned by MultiPLIER using:
-
-$$
-\hat{\mathbf{M}} = (\mathbf{Z}^{\top} \mathbf{Z} + \lambda_{2} \mathbf{I})^{-1} \mathbf{Z}^{\top} \mathbf{M},
-$$ {#eq:proj}
-
-where $\mathbf{M}^{n \times t}$ is the gene-trait associations matrix from MultiXcan [@doi:10.1371/journal.pgen.1007889] (standardized effect sizes) for $n$ genes and $t$ traits,
-$\mathbf{Z}^{n \times l}$ are the gene loadings with $l$ latent variables,
-$\lambda_2$ is the regularization parameter used in the training step,
-and $\hat{\mathbf{M}}^{l \times t}$ is finally the projection of $\mathbf{M}$ into the latent space: all traits in PhenomeXcan are now described by gene modules.
-Since the MultiPLIER models also provide the experimental conditions (such as cell types and tissues, represented by matrix $\mathbf{B}$ in Figure @fig:entire_process a) in which genes in a module are concurringly expressed, our approach also allows inferring the context in which the gene module affects a trait or disease.
-
-
-In the original MultiPLIER study, the authors found an LV significantly associated with previously known neutrophil gene-sets and highly correlated with neutrophil estimates from gene expression.
+In the original MultiPLIER study, the authors found an LV significantly associated with a known neutrophil pathway and highly correlated with neutrophil estimates from gene expression.
 <!--  -->
 We analyzed this LV using our approach (Figure @fig:entire_process b), and found that
 1) neutrophil counts and other white blood cell traits from PhenomeXcan were ranked among the top 10 traits for this LV,
-and 2) that the genes in this LV are expressed in neutrophil cells.
+and 2) that the genes in this LV were expressed in neutrophil and other relevant cells.
 <!--  -->
-These initial results strongly suggested that shared patterns exist in the gene expression space (which has no GTEx samples) and the TWAS space (with gene models trained using GTEx v8), and that the approach also allows inferring the context-specific effects of gene modules on complex traits.
+Moreover, using a generalized least squares approach similar to the gene-property analysis in MAGMA [@doi:10.1371/journal.pcbi.1004219], we found that gene weights in this LV were predictive of gene associations for neutrophil count and percentage (FDR < 0.01) (see Methods).
 <!--  -->
-We will also show how the approach can aid translational efforts by mapping pharmacological perturbations to this latent space, enabling to observe which compounds affect the transcriptional activity of gene modules.
-
-
-`Notes/questions:`{.red}
-
-::: {style="color: red"}
-
-Ideas/minor:
-
-- In the figure, add a reference to the TWAS plot (genes x traits) for LV603.
-:::
+These initial results strongly suggested that shared patterns exist in the gene expression space (which has no GTEx samples) and the TWAS space (with gene models trained using GTEx v8);
+the approach also allows inferring the context-specific effects of gene modules on complex traits.
+<!--  -->
+We also show how the approach can aid translational efforts by mapping pharmacological perturbations to this latent space, enabling us to observe which compounds affect the transcriptional activity of gene modules.
 
 
 ### Genes causally involved in lipids accumulation are associated with relevant traits and tissues
