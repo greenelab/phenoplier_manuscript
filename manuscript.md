@@ -5,7 +5,7 @@ author-meta:
 - Casey S. Greene
 bibliography:
 - content/manual-references.json
-date-meta: '2021-05-20'
+date-meta: '2021-05-22'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -24,9 +24,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
 
-  <meta name="dc.date" content="2021-05-20" />
+  <meta name="dc.date" content="2021-05-22" />
 
-  <meta name="citation_publication_date" content="2021-05-20" />
+  <meta name="citation_publication_date" content="2021-05-22" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -78,11 +78,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/60b94a088b8df7584b928e7b193f03181ab69b7d/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/911e2ad75910c69cdf40e4ec5ba6963b640cb3b6/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/60b94a088b8df7584b928e7b193f03181ab69b7d/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/911e2ad75910c69cdf40e4ec5ba6963b640cb3b6/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/60b94a088b8df7584b928e7b193f03181ab69b7d/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/911e2ad75910c69cdf40e4ec5ba6963b640cb3b6/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -120,10 +120,10 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/60b94a088b8df7584b928e7b193f03181ab69b7d/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/911e2ad75910c69cdf40e4ec5ba6963b640cb3b6/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@60b94a0](https://github.com/greenelab/phenoplier_manuscript/tree/60b94a088b8df7584b928e7b193f03181ab69b7d)
-on May 20, 2021.
+from [greenelab/phenoplier_manuscript@911e2ad](https://github.com/greenelab/phenoplier_manuscript/tree/911e2ad75910c69cdf40e4ec5ba6963b640cb3b6)
+on May 22, 2021.
 </em></small>
 
 ## Authors
@@ -314,19 +314,20 @@ We also show how the approach can aid translational efforts by mapping pharmacol
 
 ### Genes causally involved in lipids accumulation are associated with relevant traits and tissues
 
-We found 492 genes associated with lipids accumulation by using a genome-wide lentiviral pooled CRISPR-Cas9 library targeting 19,114 genes in the human genome (see Methods).
-From these, we identified two high-confidence gene-sets that either caused a decrease (96 genes) or an increase (175 genes) of lipids.
-Next, we used these two gene-sets to assess whether singe gene-trait associations in PhenomeXcan recapitulated lipids-related traits.
-We show that our gene module-based approach is more robust to identify genetic associations with lipids-relevant traits, and that it can be used to contextualize these results by identifing tissue and cell type-specific gene-trait associations.
+We found 271 genes associated with lipids accumulation by using a genome-wide lentiviral pooled CRISPR-Cas9 library targeting 19,114 genes in the human genome (see Methods).
+From these, we identified two gene-sets that either caused a decrease (96 genes in total, with eight high-confidence genes: *BLCAP*, *FBXW7*, *INSIG2*, *PCYT2*, *PTEN*, *SOX9*, *TCF7L2*, *UBE2J2*) or an increase of lipids (175 genes in total, with six high-confidence genes: *ACACA*, *DGAT2*, *HILPDA*, *MBTPS1*, *SCAP*, *SRPR*) (Supplementary File 1).
+Four gene modules were significantly enriched for these two gene-sets (FDR<0.05) (Supplementary Table @tbl:sup:lipids_crispr:modules_enriched).
+<!--  -->
+Next, we used these two lipids gene-sets to assess whether single gene-trait associations in PhenomeXcan recapitulated lipids-related traits.
+We show that our gene module-based approach can 1) robustly identify genetic associations even when known single-gene associations are not significant and 2) contextualize these results by identifying tissue and cell type-specific associations.
 
 
-First, using these two gene-sets, we assessed the genes' effects on all 3,752 phenotypes in PhenomeXcan by adding their standardized effect sizes and obtaining a ranked list of traits.
-The top associated traits for genes in the decreasing-lipids gene-set were highly relevant to lipid levels, such as hypertension, diastolic and systolic blood pressure, and vascular diseases.
-Other associated traits included asthma and lung function.
-We also performed the same operation for our gene module-based approach by considering 24 modules significantly enriched with the decreasing-lipids gene-set (Gene-set enrichment analysis, FDR < 0.05).
-In this case, we also found highly lipids-relevant traits among the top 25, including hypertension, blood pressure, specific cardiometabolic diseases like atherosclerosis, and celiac disease.
-This is particularly relevant because each of the 24 modules aggregated a specific weighted combination of almost 3,000 genes' effect sizes across all 3,752 traits.
-Thus, aggregating the effects of this number of genes and obtaining top-ranked lipids-relevant traits is highly unlikely to happen by chance ($P < 0.001$, see Methods), suggesting that gene modules (discovered with an unsupervised method) represent functionally meaningful units.
+First, we assessed the genes' effects on all phenotypes by adding their $p$-values (as $z$-scores) and obtaining a ranked list of traits.
+The top associated traits for genes in the decreasing-lipids gene-set were highly relevant to lipid levels, such as hypertension, diastolic and systolic blood pressure, and vascular diseases, including also asthma and lung function (Supplementary Table @tbl:sup:single_genes:lipids_decreasing:top_traits).
+We performed the same operation for our gene module-based approach by considering 24 modules nominally enriched (unadjusted $p$-value < 0.05) with the decreasing-lipids gene-set (Gene-set enrichment analysis).
+In this case, we also found highly lipids-relevant traits among the top 25, including hypertension, blood pressure, cardiometabolic diseases like atherosclerosis, and celiac disease (Supplementary Table @tbl:sup:modules:lipids_decreasing:top_traits).
+This is particularly relevant because each of the 24 modules aggregated a specific weighted combination of almost 3,000 genes' $z$-scores across all traits.
+Thus, aggregating the effects of this number of genes and obtaining top-ranked lipids-relevant traits is unlikely to happen by chance ($p$-value < 0.01), suggesting that gene co-expression patterns are concordant with gene-trait associations.
 
 
 ![
@@ -334,50 +335,31 @@ Thus, aggregating the effects of this number of genes and obtaining top-ranked l
 <!--  -->
 **a)** Top cell types/tissues where genes in LV246 are expressed on.
 Values in the $y$-axis come from matrix $\mathbf{B}$ in the MultiPLIER models (Figure @fig:entire_process a).
-In the $x$-axis, cell types/tissues are sorted by the median value.
+In the $x$-axis, cell types/tissues are sorted by the maximum value.
 <!--  -->
-**b)** Gene-trait associations (S-MultiXcan) and colocalization (fastENLOC) for the top traits in LV246.
-The top 40 genes in LV246 are shown, sorted by their module weigth, from largest (top gene *SCD*) to smallest (gene *FAR2*).
+**b)** Gene-trait associations (S-MultiXcan; thresholded at -log($p$)=10) and colocalization probability (fastENLOC) for the top traits in LV246.
+The top 40 genes in LV246 are shown, sorted by their module weight, from largest (top gene *SCD*) to smallest (gene *FAR2*);
+*DGAT2* and *ACACA*, in bold, are two of the six high-confidence genes in the increasing-lipids gene set from our CRISPR analyses.
 <!--  -->
 SGBS: Simpson Golabi Behmel Syndrome;
 CH2DB: CH<sub>2</sub> groups to double bonds ratio;
 NMR: nuclear magnetic resonance;
-HDL: high-density lipoprotein.
+HDL: high-density lipoprotein;
+RCP: locus regional colocalization probability.
 <!--  -->
 ](images/lvs_analysis/lv246/lv246.svg "LV246 TWAS plot"){#fig:lv246 width="100%"}
 
 
-When we considered the increasing-lipids set, genes and modules were associated with a more diverse set of traits, such as blood count tests, whole-body bioelectrical impedance measures, severe asthma, lung function, and rheumatoid arthritis.
-Additionally, gene modules were also associated with blood lipids, arterial stiffness, intraocular pressure, handgrip strength, and celiac disease.
-One gene module (LV246), significantly enriched with the increasing-lipids gene-set, was also associated with lipids metabolism and triglyceride biosynthesis pathways.
-In Figure @fig:lv246 a, we used our module-based approach to show that LV246 genes are mainly co-expressed in adipose tissue, and to a less extent, liver cells (hepatocytes), which play key roles in coordinating and regulating lipids metabolism.
-This LV was associated with blood lipids, hypercholesterolemia, cholesterol lowering medication, and family history of heart disease, among others (Figure @fig:lv246 b).
-Two high-confidence genes from our CRISPR screening, *DGAT2* and *ACACA* (responsible for encoding important enzymes for triglycerides and fatty acid synthesis), accounted for most of the gene-set enrichment signal for LV246.
+When we considered the increasing-lipids set, genes and modules were associated with a more diverse set of traits, such as blood count tests, impedance measures, and bone-densitometry (Supplementary Tables @tbl:sup:single_genes:lipids_increasing:top_traits and @tbl:sup:modules:lipids_increasing:top_traits).
+Additionally, gene modules were also associated with lung function, arterial stiffness, intraocular pressure, handgrip strength, rheumatoid arthritis, and celiac disease.
+One gene module (LV246) was also associated with lipids metabolism and triglyceride biosynthesis pathways in MultiPLIER (Supplementary Table @tbl:sup:multiplier_pathways:lv246).
+Using our approach, we found that its genes were mainly co-expressed in adipose tissue (Figure @fig:lv246 a), which plays a key role in coordinating and regulating lipids metabolism.
+Gene-trait associations and colocalization for the top genes in this LV are shown in Figure @fig:lv246 b).
+Additionally, gene weights for this LV significantly predicted gene associations for blood lipids and hypercholesterolemia (Supplementary Table @tbl:sup:phenomexcan_assocs:lv246).
+Two high-confidence genes from our CRISPR screening, *DGAT2* and *ACACA*, are responsible for encoding enzymes for triglycerides and fatty acid synthesis, and were among the top genes of LV246.
 However, as it can be seen in Figure @fig:lv246 b, these two genes are not strongly associated with any of the top traits for this LV;
-other members of this module, such as *SCD*, *LPL*, *FADS2*, *HMGCR* and *LDLR*, were instead significantly associated and colocalized with lipid-relevant traits.
+other members of this module, such as *SCD*, *LPL*, *FADS2*, *HMGCR*, and *LDLR* were instead significantly associated and colocalized with lipid-relevant traits.
 This suggests that a module-based perspective can contextualize and reprioritize TWAS hits using modules of functionally related genes.
-
-
-`Notes:`{.red}
-
-::: {style="color: red"}
-- Improve description of CRISPR analysis.
-- Genes *DGAT2* and *ACACA* are part of the high-confidence set, not the merged one (combining high and medium confidence). We might want to distinguish between them in Methods.
-- It would be good at some point to have an LV that does not match a pathway.
-Otherwise, a reviewer could say "but this is similar to a method computing an association between pathways and traits, where is the novelty here?".
-A potential candidate could be LV504, significantly enriched with the increasing-lipids gene-set, associated with medication for blood pressure, asthma, celiac disease, and rheumatoid arthritis.
-Genes in this LV are expressed in skeletal muscle cells, intestinal subepithelial myofibroblasts, embryonic kidney cells, lung fibroblast cells, etc.
-- We need to standardize the way we refer to our method (gene module-based approach, PhenoPLIER, etc).
-
-Minor:
-
-- Add -log10(p-value) in the legend of figure.
-- Maybe make *DGAT2* and *ACACA* gene names bold in figure.
-- It would be great to be able to say "this LV is _significantly associated_ with this trait". Some reviewers might want that.
-Maybe we could use the Summary-MultiXcan approach to estimate the multivariate regression coefficients from individual genes associations, and get a p-value for the module-trait association.
-This could be a future small project, maybe an application note.
-One way to quickly compute a p-value is to use MAGMA gene-set analysis.
-:::
 
 
 ### Our gene module-based approach more accurately predicts known disease therapeutics
@@ -739,6 +721,190 @@ Probably I just need to add a proper caption for each figure, and reference them
 <!-- Description -->
 ](images/supplementary_material/lv603_neutrophils/significance_neutrophil.png "Significance of neutrophil counts
 correlation"){#fig:supp:signif_neutrophils_counts height=3in}
+
+
+### Gene modules enriched for lipids gene-sets
+
+<!-- lipids_gene_sets:modules_enriched:start -->
+| Gene module   | Lipids gene-set   | p-value   | FDR      |
+|:--------------|:------------------|:----------|:---------|
+| LV678         | decrease          | 2.61e-07  | 2.57e-04 |
+| LV707         | increase          | 1.74e-07  | 2.57e-04 |
+| LV905         | increase          | 4.29e-05  | 2.82e-02 |
+| LV915         | increase          | 6.37e-05  | 3.14e-02 |
+
+Table: Gene modules (LVs) enriched for lipids gene-sets found with CRISPR screening. {#tbl:sup:lipids_crispr:modules_enriched}
+<!-- lipids_gene_sets:modules_enriched:end -->
+
+
+### Top traits across lipids-associated genes and modules
+
+<!-- single_genes:lipids_decreasing:start -->
+| Order   | Trait                                                                                                       | Category                  |
+|:--------|:------------------------------------------------------------------------------------------------------------|:--------------------------|
+| 1       | Vascular/heart problems diagnosed by doctor: High blood pressure                                            | Diseases (cardiovascular) |
+| 2       | Diastolic blood pressure, automated reading                                                                 | Blood pressure            |
+| 3       | Non-cancer illness code, self-reported: hypertension                                                        | Diseases (cardiovascular) |
+| 4       | Suggestive for eosinophilic asthma                                                                          | Diseases (FinnGen)        |
+| 5       | Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones: Blood pressure medication | Medication                |
+| 6       | Forced expiratory volume in 1-second (FEV1), predicted                                                      | Spirometry                |
+| 7       | Vascular/heart problems diagnosed by doctor: None of the above                                              | Diseases (cardiovascular) |
+| 8       | Treatment/medication code: levothyroxine sodium                                                             | Medications               |
+| 9       | Haematocrit percentage                                                                                      | Blood count               |
+| 10      | Treatment/medication code: lisinopril                                                                       | Medications               |
+| 11      | Haemoglobin concentration                                                                                   | Blood count               |
+| 12      | Job coding: counter clerk, bank clerk, cashier, post office clerk                                           | Employment history        |
+| 13      | Acute alcohol intoxication                                                                                  | Diseases (FinnGen)        |
+| 14      | Systolic blood pressure, automated reading                                                                  | Blood pressure            |
+| 15      | Platelet count                                                                                              | Blood count               |
+| 16      | Red Blood Cell Count                                                                                        | Blood                     |
+| 17      | Peak expiratory flow (PEF)                                                                                  | Spirometry                |
+| 18      | Sitting height                                                                                              | Body size measures        |
+| 19      | Treatment/medication code: bendroflumethiazide                                                              | Medications               |
+| 20      | Age started wearing glasses or contact lenses                                                               | Eyesight                  |
+| 21      | Comparative height size at age 10                                                                           | Early life factors        |
+| 22      | Workplace very cold: Often                                                                                  | Employment history        |
+| 23      | Salt added to food                                                                                          | Diet                      |
+| 24      | Difficulty concentrating during worst period of anxiety                                                     | Anxiety                   |
+| 25      | Treatment/medication code: metformin                                                                        | Medications               |
+
+Table: Top 25 traits associated with genes from the lipids-decreasing gene-set found with CRISPR screening. {#tbl:sup:single_genes:lipids_decreasing:top_traits}
+<!-- single_genes:lipids_decreasing:end -->
+
+<!-- modules:lipids_decreasing:start -->
+| Order   | Trait                                                                 | Category                              |
+|:--------|:----------------------------------------------------------------------|:--------------------------------------|
+| 1       | Non-cancer illness code, self-reported: malabsorption/coeliac disease | Diseases (gastrointestinal/abdominal) |
+| 2       | Diastolic blood pressure, automated reading                           | Blood pressure                        |
+| 3       | Immature reticulocyte fraction                                        | Blood count                           |
+| 4       | Treatment/medication code: ferrous salt product                       | Medications                           |
+| 5       | Vascular/heart problems diagnosed by doctor: None of the above        | Diseases (cardiovascular)             |
+| 6       | Platelet distribution width                                           | Blood count                           |
+| 7       | Unstable angina pectoris                                              | Diseases (FinnGen)                    |
+| 8       | Vascular/heart problems diagnosed by doctor: High blood pressure      | Diseases (cardiovascular)             |
+| 9       | Nucleated red blood cell count                                        | Blood count                           |
+| 10      | Diagnoses - main ICD10: K90 Intestinal malabsorption                  | Diseases (ICD10 main)                 |
+| 11      | Coeliac disease                                                       | Diseases (FinnGen)                    |
+| 12      | Non-cancer illness code, self-reported: hypertension                  | Diseases (cardiovascular)             |
+| 13      | Nucleated red blood cell percentage                                   | Blood count                           |
+| 14      | Relative age of first facial hair                                     | Male-specific factors                 |
+| 15      | Treatment/medication code: thiamine preparation                       | Medications                           |
+| 16      | Diagnoses - main ICD10: I70 Atherosclerosis                           | Diseases (ICD10 main)                 |
+| 17      | White Blood Cell Count                                                | Blood                                 |
+| 18      | Treatment/medication code: gtn 400micrograms spray                    | Medications                           |
+| 19      | Treatment/medication code: singulair 10mg tablet                      | Medications                           |
+| 20      | Difficulty not smoking for 1 day                                      | Smoking                               |
+| 21      | Mean reticulocyte volume                                              | Blood count                           |
+| 22      | Other malignant neoplasms of skin                                     | Diseases (FinnGen)                    |
+| 23      | Length of working week for main job                                   | Employment                            |
+| 24      | Pulse rate, automated reading                                         | Blood pressure                        |
+| 25      | Milk type used: Skimmed                                               | Diet                                  |
+
+Table: Top 25 traits associated with gene modules (LVs) enriched for the lipids-decreasing gene-set found with CRISPR screening. {#tbl:sup:modules:lipids_decreasing:top_traits}
+<!-- modules:lipids_decreasing:end -->
+
+<!-- single_genes:lipids_increasing:start -->
+| Order   | Trait                                      | Category           |
+|:--------|:-------------------------------------------|:-------------------|
+| 1       | Lymphocyte percentage                      | Blood count        |
+| 2       | Neutrophill percentage                     | Blood count        |
+| 3       | Neutrophill count                          | Blood count        |
+| 4       | Red blood cell (erythrocyte) count         | Blood count        |
+| 5       | Lymphocyte Count                           | Blood              |
+| 6       | Trunk predicted mass                       | Impedance measures |
+| 7       | Trunk fat-free mass                        | Impedance measures |
+| 8       | Mean corpuscular volume                    | Blood count        |
+| 9       | Mean sphered cell volume                   | Blood count        |
+| 10      | White blood cell (leukocyte) count         | Blood count        |
+| 11      | Skin colour                                | Sun exposure       |
+| 12      | Arm fat-free mass (left)                   | Impedance measures |
+| 13      | Impedance of arm (left)                    | Impedance measures |
+| 14      | Mean reticulocyte volume                   | Blood count        |
+| 15      | Whole body water mass                      | Impedance measures |
+| 16      | Impedance of arm (right)                   | Impedance measures |
+| 17      | Mean corpuscular haemoglobin               | Blood count        |
+| 18      | Whole body fat-free mass                   | Impedance measures |
+| 19      | Arm predicted mass (left)                  | Impedance measures |
+| 20      | Arm predicted mass (right)                 | Impedance measures |
+| 21      | Arm fat-free mass (right)                  | Impedance measures |
+| 22      | Hair colour (natural, before greying): Red | Sun exposure       |
+| 23      | Ease of skin tanning                       | Sun exposure       |
+| 24      | High light scatter reticulocyte count      | Blood count        |
+| 25      | White Blood Cell Count                     | Blood              |
+
+Table: Top 25 traits associated with genes from the lipids-increasing gene-set found with CRISPR screening. {#tbl:sup:single_genes:lipids_increasing:top_traits}
+<!-- single_genes:lipids_increasing:end -->
+
+<!-- modules:lipids_increasing:start -->
+| Order   | Trait                                                                                                        | Category                              |
+|:--------|:-------------------------------------------------------------------------------------------------------------|:--------------------------------------|
+| 1       | Ankle spacing width                                                                                          | Bone-densitometry of heel             |
+| 2       | Ankle spacing width (left)                                                                                   | Bone-densitometry of heel             |
+| 3       | Ankle spacing width (right)                                                                                  | Bone-densitometry of heel             |
+| 4       | Job SOC coding: Advertising and public relations managers                                                    | Employment history                    |
+| 5       | Hair colour (natural, before greying): Red                                                                   | Sun exposure                          |
+| 6       | Sitting height                                                                                               | Body size measures                    |
+| 7       | Platelet distribution width                                                                                  | Blood count                           |
+| 8       | Non-cancer illness code, self-reported: malabsorption/coeliac disease                                        | Diseases (gastrointestinal/abdominal) |
+| 9       | Job coding: advertising or public relations manager, media/publicity manager, campaign/fundraising manager   | Employment history                    |
+| 10      | Forced expiratory volume in 1-second (FEV1), predicted                                                       | Spirometry                            |
+| 11      | Heel Broadband ultrasound attenuation, direct entry                                                          | Bone-densitometry of heel             |
+| 12      | Intra-ocular pressure, Goldmann-correlated (right)                                                           | Intraocular pressure                  |
+| 13      | Hearing test done: No, I am unable to do this                                                                | Hearing test                          |
+| 14      | Rheumatoid Arthritis                                                                                         | Diseases (ICD10 main)                 |
+| 15      | Red blood cell (erythrocyte) distribution width                                                              | Blood count                           |
+| 16      | Job coding: childminder, au pair, children's nanny                                                           | Employment history                    |
+| 17      | Heel bone mineral density (BMD)                                                                              | Bone-densitometry of heel             |
+| 18      | Heel quantitative ultrasound index (QUI), direct entry                                                       | Bone-densitometry of heel             |
+| 19      | Heel bone mineral density (BMD) T-score, automated                                                           | Bone-densitometry of heel             |
+| 20      | Job SOC coding: Hand craft occupations n.e.c.                                                                | Employment history                    |
+| 21      | Reason for glasses/contact lenses: For just reading/near work as you are getting older (called 'presbyopia') | Eyesight                              |
+| 22      | Intra-ocular pressure, Goldmann-correlated (left)                                                            | Intraocular pressure                  |
+| 23      | Pulse wave peak to peak time                                                                                 | Arterial stiffness                    |
+| 24      | Hand grip strength (left)                                                                                    | Hand grip strength                    |
+| 25      | Treatment/medication code: luteine                                                                           | Medications                           |
+
+Table: Top 25 traits associated with gene modules (LVs) enriched for the lipids-increasing gene-set found with CRISPR screening. {#tbl:sup:modules:lipids_increasing:top_traits}
+<!-- modules:lipids_increasing:end -->
+
+
+### LV246
+
+![
+**Cell types for LV246.**
+<!--  -->
+](images/lvs_analysis/lv246/lv246-cell_types.svg "Cell types for LV246"){#fig:sup:lv246 width="80%"}
+
+<!-- LV246:multiplier_pathways:start -->
+| Pathway                                                        | AUC   | p-value (adjusted)   |
+|:---------------------------------------------------------------|:------|:---------------------|
+| REACTOME_FATTY_ACID_TRIACYLGLYCEROL_AND_KETONE_BODY_METABOLISM | 0.89  | 3.97e-16             |
+| REACTOME_METABOLISM_OF_LIPIDS_AND_LIPOPROTEINS                 | 0.67  | 1.14e-08             |
+| REACTOME_TRIGLYCERIDE_BIOSYNTHESIS                             | 0.86  | 6.52e-04             |
+| KEGG_PYRUVATE_METABOLISM                                       | 0.82  | 2.66e-03             |
+| KEGG_PROPANOATE_METABOLISM                                     | 0.83  | 4.27e-03             |
+
+Table: Pathways aligned to LV246. {#tbl:sup:multiplier_pathways:lv246}
+<!-- LV246:multiplier_pathways:end -->
+
+<!-- LV246:phenomexcan_traits_assocs:start -->
+| Trait description                                                                                                 | Sample size   | Cases   | Partition/cluster number   | p-value (adjusted)   |
+|:------------------------------------------------------------------------------------------------------------------|:--------------|:--------|:---------------------------|:---------------------|
+| CH2DB NMR                                                                                                         | 24,154        |         | 29 / 16                    | 9.36e-11             |
+| Non-cancer illness code, self-reported: high cholesterol                                                          | 361,141       | 43,957  | 29 / 17                    | 5.24e-05             |
+| Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones: Cholesterol lowering medication | 193,148       | 24,247  | 29 / 17                    | 9.34e-03             |
+| HDL Cholesterol NMR                                                                                               | 19,270        |         | 29 / 16                    | 9.34e-03             |
+| Fasting Glucose                                                                                                   | 46,186        |         | 29 / 11                    | 4.13e-02             |
+
+Table: Significant trait associations of LV246 in PhenomeXcan. {#tbl:sup:phenomexcan_assocs:lv246}
+<!-- LV246:phenomexcan_traits_assocs:end -->
+
+<!-- LV246:emerge_traits_assocs:start -->
+| Phecode   | Trait description   | Sample size   | Cases   | p-value (adjusted)   |
+|-----------|---------------------|---------------|---------|----------------------|
+
+Table: Significant trait associations of LV246 in eMERGE. {#tbl:sup:emerge_assocs:lv246}
+<!-- LV246:emerge_traits_assocs:end -->
 
 
 ### LV116 cell types
