@@ -7,7 +7,7 @@
   <meta name="author" content="Milton Pividori" />
   <meta name="author" content="Marylyn D. Ritchie" />
   <meta name="author" content="Casey S. Greene" />
-  <meta name="dcterms.date" content="2021-05-22" />
+  <meta name="dcterms.date" content="2021-05-23" />
   <meta name="keywords" content="gene co-expression, MultiPLIER, PhenomeXcan, TWAS" />
   <title>Integrating transcriptome-wide association studies with gene co-expression patterns</title>
   <style>
@@ -30,8 +30,8 @@
   <meta name="citation_title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
   <meta property="og:title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
   <meta property="twitter:title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
-  <meta name="dc.date" content="2021-05-22" />
-  <meta name="citation_publication_date" content="2021-05-22" />
+  <meta name="dc.date" content="2021-05-23" />
+  <meta name="citation_publication_date" content="2021-05-23" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -57,9 +57,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/911e2ad75910c69cdf40e4ec5ba6963b640cb3b6/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/911e2ad75910c69cdf40e4ec5ba6963b640cb3b6/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/911e2ad75910c69cdf40e4ec5ba6963b640cb3b6/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/d85bc4dc1753feec533d3b024bc590553146e9c1/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/d85bc4dc1753feec533d3b024bc590553146e9c1/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/d85bc4dc1753feec533d3b024bc590553146e9c1/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -82,10 +82,10 @@
 Text in <span style="color: red">red</span>/<span class="red">red</span> are internal comments</span></p>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/phenoplier_manuscript/v/911e2ad75910c69cdf40e4ec5ba6963b640cb3b6/">permalink</a>)
+(<a href="https://greenelab.github.io/phenoplier_manuscript/v/d85bc4dc1753feec533d3b024bc590553146e9c1/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/911e2ad75910c69cdf40e4ec5ba6963b640cb3b6">greenelab/phenoplier_manuscript@911e2ad</a>
-on May 22, 2021.
+from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/d85bc4dc1753feec533d3b024bc590553146e9c1">greenelab/phenoplier_manuscript@d85bc4d</a>
+on May 23, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -295,7 +295,7 @@ For this, we used the transcriptional responses to small molecule perturbations 
 Based on the established drug repurposing strategy that looks for reversed transcriptome patterns between genes and drug-induced perturbations <span class="citation" data-cites="1ClBKizD7 mZjkE1xU">[<a href="#ref-1ClBKizD7" role="doc-biblioref">33</a>,<a href="#ref-mZjkE1xU" role="doc-biblioref">34</a>]</span>, we used a framework for prioritizing drug candidates that uses imputed transcriptomes from GWAS <span class="citation" data-cites="17oeJ0CXy">[<a href="#ref-17oeJ0CXy" role="doc-biblioref">35</a>]</span>.
 For this, we computed a drug-disease score by anti-correlating the <span class="math inline">\(z\)</span>-scores for a disease (from TWAS) and the <span class="math inline">\(z\)</span>-scores for a drug (from LINCS) across sets of genes of different size (see Methods).
 Therefore, a large score for a drug-disease pair indicates that a higher (lower) predicted expression of disease-associated genes are down (up)-regulated by the drug, thus predicting a potential treatment.
-Similarly for the gene module approach, we estimated how pharmacological perturbations affected the gene module activity by projecting expression profiles of drugs into our latent representation (Equation ??).
+Similarly for the gene module approach, we estimated how pharmacological perturbations affected the gene module activity by projecting expression profiles of drugs into our latent representation (Methods).
 We used a manually-curated gold standard of drug-disease medical indications <span class="citation" data-cites="O21tn8vf 10KA5jTBQ">[<a href="#ref-O21tn8vf" role="doc-biblioref">31</a>,<a href="#ref-10KA5jTBQ" role="doc-biblioref">36</a>]</span> across 53 diseases and 322 compounds to evaluate and compare the prediction performance.</p>
 <div id="fig:drug_disease:roc_pr" class="fignos">
 <figure>
@@ -312,81 +312,49 @@ Our proposed gene module-based method outperformed the gene-based one with an ar
 <!--  -->
 It is important to note that the gene-trait associations and drug-induced expression profiles projected into the latent space represent a compressed version of the entire set of results.
 The prediction results show that this low-dimensional space captures biologically meaningful patterns that can better represent and link pathophysiological processes with the mechanisms of action of drugs.
-In the following, with the aim to understand these results, we examined specific drug-disease pairs where both methods disagreed.</p>
-<p>Nicotinic acid (niacin), a B vitamin widely used clinically to treat lipid disorders by exerting its effects on a number tissues, although not all its mechanisms have been documented <span class="citation" data-cites="LVihFr3g 7OgaYjeL">[<a href="#ref-LVihFr3g" role="doc-biblioref">37</a>,<a href="#ref-7OgaYjeL" role="doc-biblioref">38</a>]</span>.
+In the following, with the aim to understand these results, we examined specific a drug-disease pair where both methods disagreed.</p>
+<p>Nicotinic acid (niacin) is a B vitamin widely used clinically to treat lipid disorders.
+Niacin exerts its effects on a number tissues, although not all its mechanisms have been documented <span class="citation" data-cites="LVihFr3g 7OgaYjeL">[<a href="#ref-LVihFr3g" role="doc-biblioref">37</a>,<a href="#ref-7OgaYjeL" role="doc-biblioref">38</a>]</span>.
 This compound can increase high-density lipoprotein (HDL) by inhibiting an HDL catabolism receptor in liver.
 Niacin also inhibits diacylglycerol acyltransferase–2 (DGAT2), which decrease production of low-density lipoproteins (LDL) by modulating triglyceride synthesis in hepatocytes, or by inhibiting adipocyte triglyceride lipolysis <span class="citation" data-cites="LVihFr3g">[<a href="#ref-LVihFr3g" role="doc-biblioref">37</a>]</span>.
 Niacin was categorized in our gold standard as a disease-modifying indication for atherosclerosis (AT) and coronary artery disease (CAD), and not for pancreatitis.
 For pancreatitis, both the gene-based and module-based methods assigned a negative score (below their averages), which agrees with the gold standard in that niacin does not therapeutically change the biology of this disease.
-For AT and CAD, the module-based approach predicted niacin as a therapeutic drug by scoring them with 0.52 and 0.96 (above the mean), whereas the gene-based method assigned negative scores of -0.09 and -0.16 (below the mean), respectively.
-To understand why the predictions by the module-based method were different, we obtained the LVs that positively contributed to the score by looking at large positive (negative) LV values for the disease and large negative (positive) LV values for the drug of interest.
+For AT, the module-based approach predicted niacin as a therapeutic drug by scoring them with 0.52 (above the mean), whereas the gene-based method assigned negative scores of -0.01 (below the mean), respectively.
+To understand why the predictions by the module-based method were different, we obtained the LVs that positively contributed to the score by looking at large positive (negative) LV values for the disease and large negative (positive) LV values for the drug of interest (Supplementary Table ).
 Notably, LV246 (analyzed previously) was among the top 20 modules contributing to the prediction of niacin as a therapeutic drug for AT.
-As shown in Figure <a href="#fig:lv246">2</a>, this module is mainly expressed in adipose cells and hepatocytes, its top genes encode important enzymes involved in lipid biosynthesis, and several of them are significantly associated and colocalized with cardiovascular-related traits:
+As shown in Figure <a href="#fig:lv246">2</a>, this module is mainly expressed in adipose cells and liver cells, and its top genes encode important enzymes involved in lipid biosynthesis.
+The module as a whole (considering the gene weights) is significantly associated with cardiovascular traits (Supplementary Table <a href="#tbl:sup:phenomexcan_assocs:lv246">7</a>), and several of its top genes are significantly associated and colocalized with cardiovascular-related traits:
 <em>SCD</em> (10q24.31) is associated with hypercholesterolemia (P=1.9e-5) and its GWAS and eQTL signals are fully colocalized (RCP=1.0);
 <em>LPL</em> (8p21.3), which is known to be linked to different disorders of lipoprotein metabolism, is strongly associated with hypercholesterolemia (P=7.5e-17, RCP=0.26), and family history of heart disease (P=1.7e-5, RCP=0.22);
 other genes associated with hypercholesterolemia in this module are
 <em>FADS2</em> (11q12.2) (P=9.42e-5, RCP=0.623),
 <em>HMGCR</em> (5q13.3) (P=1.3e-42, RCP=0.23),
 and <em>LDLR</em> (19p13.2) (P=9.9e-136, RCP=0.41).</p>
-<div id="fig:drug_disease:niacin" class="fignos">
-<figure>
-<img src="images/drug_disease_prediction/niacin-at-modules_cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 4:</span> <strong>Cell types where the top 10 modules contributing for niacin-atherosclerosis prediction are expressed.</strong>
-<!--  -->
-Average module expression (<span class="math inline">\(y\)</span>-axis) of different cell types (<span class="math inline">\(x\)</span>-axis) across the top 10 latent variables/modules with a positive contribution for the niacin-AT prediction.
-The figure shows a clear immune cells signature, driven mainly by the top 2 modules: LV116 and LV931 (see Supplementary Figures <a href="#fig:sup:lv116">12</a> and <a href="#fig:sup:lv931">13</a>).
-<!-- https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP045569 -->
-PBMCs: peripheral blood mononuclear cells;
-HSV: treated with herpes simplex virus;
-<!-- https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP015670 -->
-WNV: Infected with West Nile virus;
-<!-- https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP062958 -->
-IFNa: interferon-alpha treatment;
-<!-- https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP039361 -->
-HMDM: human peripheral blood mononuclear cell-derived macrophages;
-IPSDM: human induced pluripotent stem cell-derived macrophages;
-<!-- https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP015670 --></figcaption>
-</figure>
-</div>
 <p>The analysis of other niacin-AT-contributing modules revealed additional known mechanisms of action of niacin.
+<!--  -->
 For example, GPR109A/HCAR2 is a G protein-coupled high-affinity niacin receptor in adipocytes and immune cells, including monocytes, macrophages, neutrophils and dendritic cells <span class="citation" data-cites="izbPw2kc wI0IjT3i">[<a href="#ref-izbPw2kc" role="doc-biblioref">39</a>,<a href="#ref-wI0IjT3i" role="doc-biblioref">40</a>]</span>.
 It was initially thought that the antiatherogenic effects of niacin were solely due to inhibition of lipolysis in adipose tissue.
 However, it has been shown that nicotinic acid can reduce atherosclerosis progression independently of its antidyslipidemic activity through the activation of GPR109A in immune cells <span class="citation" data-cites="1Bz0jRHYo">[<a href="#ref-1Bz0jRHYo" role="doc-biblioref">41</a>]</span>, thus boosting anti-inflammatory processes and reversing cholesterol transport <span class="citation" data-cites="1DblG8swn">[<a href="#ref-1DblG8swn" role="doc-biblioref">42</a>]</span>.
-As shown in Figure <a href="#fig:drug_disease:niacin">4</a>, this alternative mechanism for niacin could have been hypothesized by examining the cell types where modules positively contributing to the niacin-AT prediction are expressed.
-Among these, we also found other potentially interesting modules that could represent mechanisms to explore, such as LV536 expressed in the bladder (Supplementary Figure <a href="#fig:sup:lv536">14</a>) and LV885/LV840 expressed in kidneys (Supplementary Figures <a href="#fig:sup:lv885">15</a> and <a href="#fig:sup:lv840">16</a>)</p>
+This alternative mechanism for niacin could have been hypothesized by examining the cell types where top modules positively contributing to the niacin-AT prediction are expressed: LV116 and LV931 (Supplementary Figures <a href="#fig:sup:lv116">12</a> and <a href="#fig:sup:lv931">13</a>).
+Among these, we also found LV678 positively contributing to this prediction, which was significantly enriched with the lipids-decreasing genes from our CRISPR screening (Supplementary Table <a href="#tbl:sup:lipids_crispr:modules_enriched">1</a>).
+This module was expressed in the heart and muscle cells (Supplementary Figure <a href="#fig:sup:lv678">11</a>).
+<!-- Among these, we also found other potentially interesting modules that could represent mechanisms to explore, such as LV536 expressed in the bladder (Supplementary Figure @fig:sup:lv536) and LV885/LV840 expressed in kidneys (Supplementary Figures @fig:sup:lv885 and @fig:sup:lv840). --></p>
 <p>The projection of these two types of data into a common latent gene module-based representation could provide a more powerful framework for drug repositioning using data from genetic studies.
-Additionally, our approach could be also helpful to better understand the mechanism of pharmacological effect of known or experimental drugs.
-For example, one of the top modules affected by niacin (LV66, Supplementary Figure <a href="#fig:sup:lv66">17</a>) is mainly expressed in ovarian granulosa cells.
+Additionally, our approach could also be helpful to understand better the mechanism of pharmacological effect of known or experimental drugs.
+For example, one of the top modules affected by niacin (LV66, Supplementary Figure <a href="#fig:sup:lv66">14</a>) is mainly expressed in ovarian granulosa cells.
 This compound has been very recently considered as a potential therapeutic for ovarian diseases <span class="citation" data-cites="kLRErKXz TovvsrDr">[<a href="#ref-kLRErKXz" role="doc-biblioref">43</a>,<a href="#ref-TovvsrDr" role="doc-biblioref">44</a>]</span>, as it was found to promote follicle growth and inhibit granulosa cell apoptosis in animal models.
-Our proposed approach could be helpful to generate novel hypothesis to evaluate potential mechanisms of action of different drugs.</p>
-<p><code class="red">Notes/questions:</code></p>
-<div style="color: red">
-<ul>
-<li>The main problem with this current section is the quality of LINCS L1000 data.
-It might be necessary to use Cmap build 02 also here, since there are some concerns about the LINCS imputation pipeline (https://think-lab.github.io/d/185/).</li>
-<li>It could be good to discuss cases where the gene-based approach performed better (there are several ones, even with cardiovascular diseases).
-This could potentially show that for some drug-disease pairs, maybe the compound targets a few genes instead of being a broad-spectrum/multi-tissue/multi-cell-type one like niacin.</li>
-<li>It would be great to have an expert in cardiovascular diseases and lipid disorder to review this part.</li>
-<li>Is it clear the message in Figure <a href="#fig:drug_disease:niacin">4</a> ?
-An alternative is to just show the most interesting LVs instead of averaging all and showing the top cell types as it is now.</li>
-</ul>
-<p>Ideas/minor:</p>
-<ul>
-<li>Maybe as part of the manuscript, we can provide the drug-predictions for all traits in PhenomeXcan for download.</li>
-<li>An interesting analysis could consist in keeping LVs aligned with pathways only; what happens with prediction performance? If it goes down, it means that among not-aligned LVs we have useful information to link diseases and drugs.
-It would be nice to be able to claim that.</li>
-</ul>
-</div>
+Our proposed approach could be helpful to generate novel hypotheses to evaluate potential mechanisms of action of different drugs.</p>
 <h3 id="clusters-of-traits-in-the-gene-module-space-are-associated-with-relevant-transcriptional-processes">Clusters of traits in the gene module space are associated with relevant transcriptional processes</h3>
 <div id="fig:clustering:design" class="fignos">
 <figure>
-<img src="images/clustering/clustering_design.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 5:</span> <strong>Cluster analysis on traits using the latent gene expression representation.</strong>
+<img src="images/clustering/clustering_design.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 4:</span> <strong>Cluster analysis on traits using the latent gene expression representation.</strong>
 <!--  -->
 <strong>a)</strong> The projection of TWAS results on <span class="math inline">\(n\)</span>=3,752 traits into the latent gene expression representation is the input data to the clustering process.
 A linear (PCA) and non-linear (UMAP) dimensionality reduction techniques are applied to the input data, and the three data versions are processed by five different clustering algorithms.
 These algorithms derive partitions from the data using different sets of parameters (such as the number of clusters), leading to an ensemble of 4,428 partitions.
 Then, a distance matrix is derived by counting how many times a pair of traits were grouped in different clusters across the ensemble.
 Finally, a consensus function is applied to the distance matrix to generate consolidated partitions with different number of clusters (from 2 to <span class="math inline">\(\sqrt{n}\approx\)</span> 60).
-These final solutions are represented in the clustering tree (Figure <a href="#fig:clustering:tree">6</a>).
+These final solutions are represented in the clustering tree (Figure <a href="#fig:clustering:tree">5</a>).
 <!--  -->
 <strong>b)</strong> The clusters found by the consensus function are used as labels to train a decision tree classifier on the original input data, which detects the LVs that better differentiate groups of traits.
 <!--  --></figcaption>
@@ -394,15 +362,15 @@ These final solutions are represented in the clustering tree (Figure <a href="#f
 </div>
 <p>The previous results suggest that <span class="math inline">\(\hat{\mathbf{M}}\)</span> represents a less noisy low-dimentional version of the data.
 Thus, we conducted cluster analysis on <span class="math inline">\(\hat{\mathbf{M}}\)</span> to find groups of traits that are similarly affected by the same transcriptional processes.
-To avoid using a single clustering algorithm (which implies using a single assumption about the structure of the data), we employed a consensus clustering approach where different methods with varying sets parameters were applied on the data, and later combined into a consolidated solution <span class="citation" data-cites="17CbjLzCP uw3AnEgA 8js8Q3pF">[<a href="#ref-17CbjLzCP" role="doc-biblioref">45</a>,<a href="#ref-uw3AnEgA" role="doc-biblioref">46</a>,<a href="#ref-8js8Q3pF" role="doc-biblioref">47</a>]</span> (Figure <a href="#fig:clustering:design">5</a>).
-Our clustering pipeline generated 15 final consensus clustering solutions with 5 to 29 clusters (Supplementary Figure <a href="#fig:sup:consensus_agreement">34</a>).
-Instead of selecting a specific number of clusters, we used a clustering tree <span class="citation" data-cites="xhtEAzx6">[<a href="#ref-xhtEAzx6" role="doc-biblioref">48</a>]</span> (Figure <a href="#fig:clustering:tree">6</a>) to examine stable groups of traits across multiple resolutions.
+To avoid using a single clustering algorithm (which implies using a single assumption about the structure of the data), we employed a consensus clustering approach where different methods with varying sets parameters were applied on the data, and later combined into a consolidated solution <span class="citation" data-cites="17CbjLzCP uw3AnEgA 8js8Q3pF">[<a href="#ref-17CbjLzCP" role="doc-biblioref">45</a>,<a href="#ref-uw3AnEgA" role="doc-biblioref">46</a>,<a href="#ref-8js8Q3pF" role="doc-biblioref">47</a>]</span> (Figure <a href="#fig:clustering:design">4</a>).
+Our clustering pipeline generated 15 final consensus clustering solutions with 5 to 29 clusters (Supplementary Figure <a href="#fig:sup:consensus_agreement">31</a>).
+Instead of selecting a specific number of clusters, we used a clustering tree <span class="citation" data-cites="xhtEAzx6">[<a href="#ref-xhtEAzx6" role="doc-biblioref">48</a>]</span> (Figure <a href="#fig:clustering:tree">5</a>) to examine stable groups of traits across multiple resolutions.
 <!--  -->
 Finally, for the interpretation of the clusters, we trained a decision tree classifier (a highly interpretable machine learning model) on the input data <span class="math inline">\(\hat{\mathbf{M}}\)</span> using the clusters found as labels.
 This allowed us to quickly identify the latent variables/gene modules that better differentiated the groups of traits found (see Methods).</p>
 <div id="fig:clustering:tree" class="fignos">
 <figure>
-<img src="images/clustering/clustering_tree.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 6:</span> <strong>Clustering tree using multiple resolutions for clusters of traits.</strong>
+<img src="images/clustering/clustering_tree.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 5:</span> <strong>Clustering tree using multiple resolutions for clusters of traits.</strong>
 <!--  -->
 Each row represents a partition/grouping of the traits, and each circle is a cluster from that partition, and the number of clusters go from 5 to 29.
 Arrows indicate how traits in one cluster move across clusters from different partitions.
@@ -438,7 +406,7 @@ IBD: inflammatory bowel disease;
 <!--  --></figcaption>
 </figure>
 </div>
-<p>The clustering tree in Figure <a href="#fig:clustering:tree">6</a> shows five clear branches that are shown at the top with different numerical labels (from left to right):
+<p>The clustering tree in Figure <a href="#fig:clustering:tree">5</a> shows five clear branches that are shown at the top with different numerical labels (from left to right):
 0) a “large” branch that includes most of the traits that start to be subdivided only at <span class="math inline">\(k\)</span>=16 (with asthma, subjective well-being traits, and nutrient intake clusters),
 1) heel bone-densitometry measurements,
 2) hematological assays on red blood cells,
@@ -452,7 +420,7 @@ This mainly happens between clusters within the “complex” branch, and betwee
 This is expected, since the “complex” branch contains traits related to a wide range of different factors and thus are hard to categorize into a single cluster.</p>
 <div id="fig:clustering:heatmap" class="fignos">
 <figure>
-<img src="images/clustering/global_clustermap-plain.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 7:</span> <strong>Cluster-specific and general transcriptional processes.</strong>
+<img src="images/clustering/global_clustermap-plain.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 6:</span> <strong>Cluster-specific and general transcriptional processes.</strong>
 <!--  -->
 The plot shows a submatrix of <span class="math inline">\(\hat{\mathbf{M}}\)</span> for the main trait clusters at <span class="math inline">\(k\)</span>=29, considering only gene modules (rows) that align well with at least one known pathway.
 <!-- Labels on the right show LV names and their main tissues/cell types where gene modules are expressed in. -->
@@ -461,41 +429,41 @@ Values are standardized from -5 (lighter color) to 16 (darker color).
 </figure>
 </div>
 <p>Next, we analyzed which gene modules are driving these clusters of traits.
-For that, we trained decision tree classifiers on the input data (Figure <a href="#fig:clustering:design">5</a>) using each cluster at <span class="math inline">\(k\)</span>=29 (bottom of Figure <a href="#fig:clustering:tree">6</a>) as labels (see Methods).
+For that, we trained decision tree classifiers on the input data (Figure <a href="#fig:clustering:design">4</a>) using each cluster at <span class="math inline">\(k\)</span>=29 (bottom of Figure <a href="#fig:clustering:tree">5</a>) as labels (see Methods).
 This yielded for each cluster the top gene modules, where several of them were well-aligned to existing pathways, and others were “novel” and expressed in relevant tissues.
-We summarized this in Figure <a href="#fig:clustering:heatmap">7</a>, where it can be seen that some modules are highly specific to certain types of traits, and others seem to be associated with a wide range of different traits and diseases, thus potentially involved in more general biological functions.
-For example, modules such as LV928 and LV30 (Supplementary Figures <a href="#fig:sup:lv928">18</a> and <a href="#fig:sup:lv30">19</a>), which are known to be related to early progenitors of the erythrocytes lineage <span class="citation" data-cites="Zk82GvJV">[<a href="#ref-Zk82GvJV" role="doc-biblioref">50</a>]</span>, are predominantly expressed in early differentiation stages of erythropoiesis, and strongly associated with different assays on red blood cells (erythrocytes and reticulocytes).
-On the other side, others are highly specific, such as LV730, expressed in thrombocytes from different cancer samples (Supplementary Figures <a href="#fig:sup:lv730">20</a>), and strongly associated with hemathological assays on platelets;
-or LV598, whose genes are expressed in corneal endothelial cells (Supplementary Figures <a href="#fig:sup:lv598">21</a>) and associated to keratometry measurements (FDR &lt; 0.05; Supplementary Table <a href="#tbl:sup:phenomexcan_assocs:lv598">9</a>).
+We summarized this in Figure <a href="#fig:clustering:heatmap">6</a>, where it can be seen that some modules are highly specific to certain types of traits, and others seem to be associated with a wide range of different traits and diseases, thus potentially involved in more general biological functions.
+For example, modules such as LV928 and LV30 (Supplementary Figures <a href="#fig:sup:lv928">15</a> and <a href="#fig:sup:lv30">16</a>), which are known to be related to early progenitors of the erythrocytes lineage <span class="citation" data-cites="Zk82GvJV">[<a href="#ref-Zk82GvJV" role="doc-biblioref">50</a>]</span>, are predominantly expressed in early differentiation stages of erythropoiesis, and strongly associated with different assays on red blood cells (erythrocytes and reticulocytes).
+On the other side, others are highly specific, such as LV730, expressed in thrombocytes from different cancer samples (Supplementary Figures <a href="#fig:sup:lv730">17</a>), and strongly associated with hemathological assays on platelets;
+or LV598, whose genes are expressed in corneal endothelial cells (Supplementary Figures <a href="#fig:sup:lv598">18</a>) and associated to keratometry measurements (FDR &lt; 0.05; Supplementary Table <a href="#tbl:sup:phenomexcan_assocs:lv598">12</a>).
 <!-- 
 LV154 is also expressed in corneal endothelial cells and associated with keratometry, but not exclusively.
  --></p>
 <p>The autoimmune diseases sub-branch also has significant gene modules associations expressed in relevant cell types.
 <!--  -->
-LV155 was strongly expressed in thyroid (Supplementary Figures <a href="#fig:sup:lv155">22</a>), and significantly associated with hypothyroidism both in PhenomeXcan and eMERGE (FDR &lt; 0.05; Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv155">10</a> and <a href="#tbl:sup:emerge_assocs:lv155">11</a>).
+LV155 was strongly expressed in thyroid (Supplementary Figures <a href="#fig:sup:lv155">19</a>), and significantly associated with hypothyroidism both in PhenomeXcan and eMERGE (FDR &lt; 0.05; Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv155">13</a> and <a href="#tbl:sup:emerge_assocs:lv155">14</a>).
 <!--  -->
-LV844 was the most strongly associated gene module with autoimmune disorders (FDR &lt; 1e-15; Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv844">12</a> and <a href="#tbl:sup:emerge_assocs:lv844">13</a>), and was expressed in a wide range of cell types, including blood, breast organoids, myeloma cells, lung fibroblasts, and different cell types from the brain (Supplementary Figures <a href="#fig:sup:lv844">23</a>).
+LV844 was the most strongly associated gene module with autoimmune disorders (FDR &lt; 1e-15; Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv844">15</a> and <a href="#tbl:sup:emerge_assocs:lv844">16</a>), and was expressed in a wide range of cell types, including blood, breast organoids, myeloma cells, lung fibroblasts, and different cell types from the brain (Supplementary Figures <a href="#fig:sup:lv844">20</a>).
 <!--  -->
-Other important gene modules associated with autoimmunity in both PhenomeXcan and eMERGE are LV57 expressed in T cells (Supplementary Figure <a href="#fig:sup:lv57">24</a>, and Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv57">14</a> and <a href="#tbl:sup:emerge_assocs:lv57">15</a>), and LV54 expressed in different soft tissue tumors, breast, lung, pterygia and epithelial cells (Supplementary Figure <a href="#fig:sup:lv54">25</a>, and Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv54">16</a> and <a href="#tbl:sup:emerge_assocs:lv54">17</a>).</p>
-<p>The cardiovascular sub-branch also exhibited significant associations, such as LV847 (Supplementary Figure <a href="#fig:sup:lv847">26</a>) with blood pressure traits and hypertension (Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv847">18</a> and <a href="#tbl:sup:emerge_assocs:lv847">19</a>), which was expressed in CD19 (B cells) (which are related to preeclampsia <span class="citation" data-cites="YyXvsbU9">[<a href="#ref-YyXvsbU9" role="doc-biblioref">51</a>]</span>), Jurkcat cells (T lymphocyte cells), and cervical carcinoma cell lines (the uterus was previously reported to be linked to blood pressure through a potential hormonal pathway <span class="citation" data-cites="Om8ZhS06 meFYGVLK">[<a href="#ref-Om8ZhS06" role="doc-biblioref">52</a>,<a href="#ref-meFYGVLK" role="doc-biblioref">53</a>]</span>).
+Other important gene modules associated with autoimmunity in both PhenomeXcan and eMERGE are LV57 expressed in T cells (Supplementary Figure <a href="#fig:sup:lv57">21</a>, and Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv57">17</a> and <a href="#tbl:sup:emerge_assocs:lv57">18</a>), and LV54 expressed in different soft tissue tumors, breast, lung, pterygia and epithelial cells (Supplementary Figure <a href="#fig:sup:lv54">22</a>, and Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv54">19</a> and <a href="#tbl:sup:emerge_assocs:lv54">20</a>).</p>
+<p>The cardiovascular sub-branch also exhibited significant associations, such as LV847 (Supplementary Figure <a href="#fig:sup:lv847">23</a>) with blood pressure traits and hypertension (Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv847">21</a> and <a href="#tbl:sup:emerge_assocs:lv847">22</a>), which was expressed in CD19 (B cells) (which are related to preeclampsia <span class="citation" data-cites="YyXvsbU9">[<a href="#ref-YyXvsbU9" role="doc-biblioref">51</a>]</span>), Jurkcat cells (T lymphocyte cells), and cervical carcinoma cell lines (the uterus was previously reported to be linked to blood pressure through a potential hormonal pathway <span class="citation" data-cites="Om8ZhS06 meFYGVLK">[<a href="#ref-Om8ZhS06" role="doc-biblioref">52</a>,<a href="#ref-meFYGVLK" role="doc-biblioref">53</a>]</span>).
 <!--  -->
-LV136 was aligned with known collagen formation and muscle contraction pathways, and it was associated to coronary artery disease, myocardial infarction and keratometry measurements (Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv136">20</a> and <a href="#tbl:sup:emerge_assocs:lv136">21</a>), and expressed in a wide range of cell types, including fibroblasts, mesenchymal stem cells, osteoblasts, pancreatic stellate cells, cardiomyocytes, and adipocytes (Supplementary Figure <a href="#fig:sup:lv136">27</a>).
+LV136 was aligned with known collagen formation and muscle contraction pathways, and it was associated to coronary artery disease, myocardial infarction and keratometry measurements (Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv136">23</a> and <a href="#tbl:sup:emerge_assocs:lv136">24</a>), and expressed in a wide range of cell types, including fibroblasts, mesenchymal stem cells, osteoblasts, pancreatic stellate cells, cardiomyocytes, and adipocytes (Supplementary Figure <a href="#fig:sup:lv136">24</a>).
 <!--  -->
-Lipids were clustered with chronotype and Alzheimer’s disease, and were significantly associated with several modules expressed mainly in brain cell types, including LV93 (Supplementary Figure <a href="#fig:sup:lv93">28</a>, and Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv93">22</a> and <a href="#tbl:sup:emerge_assocs:lv93">23</a>), LV206 (Supplementary Figure <a href="#fig:sup:lv206">29</a>, and Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv206">24</a> and <a href="#tbl:sup:emerge_assocs:lv206">25</a>), and LV260 (Supplementary Figure <a href="#fig:sup:lv260">30</a>, and Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv260">26</a> and <a href="#tbl:sup:emerge_assocs:lv260">27</a>).
+Lipids were clustered with chronotype and Alzheimer’s disease, and were significantly associated with several modules expressed mainly in brain cell types, including LV93 (Supplementary Figure <a href="#fig:sup:lv93">25</a>, and Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv93">25</a> and <a href="#tbl:sup:emerge_assocs:lv93">26</a>), LV206 (Supplementary Figure <a href="#fig:sup:lv206">26</a>, and Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv206">27</a> and <a href="#tbl:sup:emerge_assocs:lv206">28</a>), and LV260 (Supplementary Figure <a href="#fig:sup:lv260">27</a>, and Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv260">29</a> and <a href="#tbl:sup:emerge_assocs:lv260">30</a>).
 These modules were associated mainly with cardiovascular traits in eMERGE.</p>
 <p>Within the cardiovascular sub-branch, we also found mental and neurodevelopmental disorders such as Alzheimer’s disease, schizophrenia, and attention deficit hyperactivity disorder (ADHD).
 These disorders were previously linked to the cardiovascular system <span class="citation" data-cites="10qjLoufR j2Sl4DAE 17LYMnG9n 13t4TuFeJ">[<a href="#ref-10qjLoufR" role="doc-biblioref">54</a>,<a href="#ref-j2Sl4DAE" role="doc-biblioref">55</a>,<a href="#ref-17LYMnG9n" role="doc-biblioref">56</a>,<a href="#ref-13t4TuFeJ" role="doc-biblioref">57</a>]</span>, and share several risk factors, including hypertension, high cholesterol, obesity, smoking, among others <span class="citation" data-cites="D83Aqhga 9BGyO071">[<a href="#ref-D83Aqhga" role="doc-biblioref">58</a>,<a href="#ref-9BGyO071" role="doc-biblioref">59</a>]</span>.
 <!--  -->
 In our results, however, these diseases were grouped by potentially shared transcriptional processes expressed in specific tissues/cell types.
 <!--  -->
-Alzheimer’s disease, for example, was significantly associated with LV21 (FDR &lt; 1e-18) and with LV5 (FDR &lt; 0.01) (Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv21">28</a> and <a href="#tbl:sup:phenomexcan_assocs:lv5">30</a>).
-LV21 was strongly expressed in a variety of soft tissue sarcomas, monocytes/macrophages (including microglia from cortex samples), and aortic valves (Supplementary Figure <a href="#fig:sup:lv21">31</a>);
+Alzheimer’s disease, for example, was significantly associated with LV21 (FDR &lt; 1e-18) and with LV5 (FDR &lt; 0.01) (Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv21">31</a> and <a href="#tbl:sup:phenomexcan_assocs:lv5">33</a>).
+LV21 was strongly expressed in a variety of soft tissue sarcomas, monocytes/macrophages (including microglia from cortex samples), and aortic valves (Supplementary Figure <a href="#fig:sup:lv21">28</a>);
 as discussed previously, macrophages play a key role in the reverse cholesterol transport and thus atherogenesis <span class="citation" data-cites="idlBgtFz">[<a href="#ref-idlBgtFz" role="doc-biblioref">60</a>]</span>.
-LV5 was expressed in breast cancer and brain glioma samples, microglia (cortex), liver, and kidney, among other cell types (Supplementary Figure <a href="#fig:sup:lv5">32</a>).
+LV5 was expressed in breast cancer and brain glioma samples, microglia (cortex), liver, and kidney, among other cell types (Supplementary Figure <a href="#fig:sup:lv5">29</a>).
 LV21 and LV5 were also strongly associated with lipids: LDL cholesterol (FDR &lt; 0.001) and triglycerides (FDR &lt; 0.05 and FDR &lt; 0.001, respectively).
 Additionally, LV5 was associated with depression traits from the UK Biobank.
 <!--  -->
-ADHD was the only significantly associated trait for LV434 (FDR &lt; 0.01) (Supplementary Table <a href="#tbl:sup:phenomexcan_assocs:lv434">32</a>), which was expressed in breast cancer and glioma cells, cerebral organoids, and several different cell populations from the brain: fetal neurons (replicating and quiescence), microglia, and astrocytes (Supplementary Figure <a href="#fig:sup:lv434">33</a>).
+ADHD was the only significantly associated trait for LV434 (FDR &lt; 0.01) (Supplementary Table <a href="#tbl:sup:phenomexcan_assocs:lv434">35</a>), which was expressed in breast cancer and glioma cells, cerebral organoids, and several different cell populations from the brain: fetal neurons (replicating and quiescence), microglia, and astrocytes (Supplementary Figure <a href="#fig:sup:lv434">30</a>).
 <!-- 
 https://link.springer.com/article/10.1007/s11060-019-03165-4
 Clinical diagnosis of attention-deficit/hyperactivity disorder in survivors of pediatric brain tumors
@@ -933,11 +901,11 @@ and <span class="math inline">\(\lambda_i\)</span> are different regularization 
 <h4 id="clusters-interpretation">Clusters interpretation</h4>
 <div id="fig:clustering:heatmap_pathways" class="fignos">
 <figure>
-<img src="images/clustering/global_clustermap-pathways.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 8:</span> <strong>Pathways associated with gene modules in Figure <a href="#fig:clustering:heatmap">7</a>.</strong>
+<img src="images/clustering/global_clustermap-pathways.svg" style="width:100.0%" alt="" /><figcaption><span>Figure 7:</span> <strong>Pathways associated with gene modules in Figure <a href="#fig:clustering:heatmap">6</a>.</strong>
 <!--  -->
 <code class="red">(Early draft version; instead of this figure, we might want to just add a table with information about LVs)</code>
 <!--  -->
-This figure is equivalent to Figure <a href="#fig:clustering:heatmap">7</a> but, instead of cell types, labels on the right show all the associated pathways for each latent variable.
+This figure is equivalent to Figure <a href="#fig:clustering:heatmap">6</a> but, instead of cell types, labels on the right show all the associated pathways for each latent variable.
 <!--  --></figcaption>
 </figure>
 </div>
@@ -956,13 +924,13 @@ Probably I just need to add a proper caption for each figure, and reference them
 </div>
 <div id="fig:supp:neutrophils_top20lvs" class="fignos">
 <figure>
-<img src="images/supplementary_material/lv603_neutrophils/neutrophils_top20_lvs.png" alt="" /><figcaption><span>Figure 9:</span> <strong>Correlation of neutrophil counts with top LVs associated with neutrophils traits.</strong>
+<img src="images/supplementary_material/lv603_neutrophils/neutrophils_top20_lvs.png" alt="" /><figcaption><span>Figure 8:</span> <strong>Correlation of neutrophil counts with top LVs associated with neutrophils traits.</strong>
 <!-- Description --></figcaption>
 </figure>
 </div>
 <div id="fig:supp:signif_neutrophils_counts" class="fignos">
 <figure>
-<img src="images/supplementary_material/lv603_neutrophils/significance_neutrophil.png" style="height:3in" alt="" /><figcaption><span>Figure 10:</span> <strong>Significance of neutrophil counts correlation.</strong>
+<img src="images/supplementary_material/lv603_neutrophils/significance_neutrophil.png" style="height:3in" alt="" /><figcaption><span>Figure 9:</span> <strong>Significance of neutrophil counts correlation.</strong>
 <!-- Description --></figcaption>
 </figure>
 </div>
@@ -1591,7 +1559,7 @@ Probably I just need to add a proper caption for each figure, and reference them
 <h3 id="lv246">LV246</h3>
 <div id="fig:sup:lv246" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv246/lv246-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 11:</span> <strong>Cell types for LV246.</strong>
+<img src="images/lvs_analysis/lv246/lv246-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 10:</span> <strong>Cell types for LV246.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
@@ -1719,82 +1687,186 @@ Probably I just need to add a proper caption for each figure, and reference them
 </tbody>
 </table>
 </div>
-<h3 id="lv116-cell-types">LV116 cell types</h3>
+<h3 id="lv678">LV678</h3>
+<div id="fig:sup:lv678" class="fignos">
+<figure>
+<img src="images/lvs_analysis/lv678/lv678-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 11:</span> <strong>Cell types for LV678.</strong>
+<!--  --></figcaption>
+</figure>
+</div>
+<!-- LV678:multiplier_pathways:start -->
+<div id="tbl:sup:multiplier_pathways:lv678" class="tablenos">
+<table>
+<caption><span>Table 9:</span> Pathways aligned to LV678. 
+<!-- LV678:multiplier_pathways:end --></caption>
+<colgroup>
+<col style="width: 81%" />
+<col style="width: 4%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Pathway</th>
+<th style="text-align: left;">AUC</th>
+<th style="text-align: left;">p-value (adjusted)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">KEGG_OXIDATIVE_PHOSPHORYLATION</td>
+<td style="text-align: left;">0.98</td>
+<td style="text-align: left;">5.75e-14</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">REACTOME_RESPIRATORY_ELECTRON_TRANSPORT_ATP_SYNTHESIS_BY_CHEMIOSMOTIC_COUPLING_AND_HEAT_PRODUCTION_BY_UNCOUPLING_PROTEINS_</td>
+<td style="text-align: left;">0.99</td>
+<td style="text-align: left;">5.94e-11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">REACTOME_RESPIRATORY_ELECTRON_TRANSPORT</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">3.10e-09</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">REACTOME_TCA_CYCLE_AND_RESPIRATORY_ELECTRON_TRANSPORT</td>
+<td style="text-align: left;">0.86</td>
+<td style="text-align: left;">9.66e-09</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MIPS_55S_RIBOSOME_MITOCHONDRIAL</td>
+<td style="text-align: left;">0.81</td>
+<td style="text-align: left;">8.20e-05</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">REACTOME_SRP_DEPENDENT_COTRANSLATIONAL_PROTEIN_TARGETING_TO_MEMBRANE</td>
+<td style="text-align: left;">0.69</td>
+<td style="text-align: left;">6.03e-03</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">REACTOME_MITOCHONDRIAL_PROTEIN_IMPORT</td>
+<td style="text-align: left;">0.74</td>
+<td style="text-align: left;">1.99e-02</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- LV678:phenomexcan_traits_assocs:start -->
+<div id="tbl:sup:phenomexcan_assocs:lv678" class="tablenos">
+<table>
+<caption><span>Table 10:</span> Significant trait associations of LV678 in PhenomeXcan. 
+<!-- LV678:phenomexcan_traits_assocs:end --></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 10%" />
+<col style="width: 6%" />
+<col style="width: 18%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Trait description</th>
+<th style="text-align: left;">Sample size</th>
+<th style="text-align: left;">Cases</th>
+<th style="text-align: left;">Partition/cluster number</th>
+<th style="text-align: left;">p-value (adjusted)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Vascular/heart problems diagnosed by doctor: Heart attack</td>
+<td style="text-align: left;">360,420</td>
+<td style="text-align: left;">8,288</td>
+<td style="text-align: left;">29 / 14</td>
+<td style="text-align: left;">1.08e-02</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Inflammatory Bowel Disease</td>
+<td style="text-align: left;">34,652</td>
+<td style="text-align: left;">12,882</td>
+<td style="text-align: left;">29 / 21</td>
+<td style="text-align: left;">2.35e-02</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Non-cancer illness code, self-reported: heart attack/myocardial infarction</td>
+<td style="text-align: left;">361,141</td>
+<td style="text-align: left;">8,239</td>
+<td style="text-align: left;">29 / 14</td>
+<td style="text-align: left;">2.35e-02</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- LV678:emerge_traits_assocs:start -->
+<div id="tbl:sup:emerge_assocs:lv678" class="tablenos">
+<table>
+<caption><span>Table 11:</span> Significant trait associations of LV678 in eMERGE. 
+<!-- LV678:emerge_traits_assocs:end --></caption>
+<thead>
+<tr class="header">
+<th>Phecode</th>
+<th>Trait description</th>
+<th>Sample size</th>
+<th>Cases</th>
+<th>p-value (adjusted)</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div>
+<h3 id="lv116">LV116</h3>
 <div id="fig:sup:lv116" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv116/lv116-cell_types.png" style="width:80.0%" alt="" /><figcaption><span>Figure 12:</span> <strong>Cell types for LV116.</strong>
+<img src="images/lvs_analysis/lv116/lv116-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 12:</span> <strong>Cell types for LV116.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
-<h3 id="lv931-cell-types">LV931 cell types</h3>
+<h3 id="lv931">LV931</h3>
 <div id="fig:sup:lv931" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv931/lv931-cell_types.png" style="width:80.0%" alt="" /><figcaption><span>Figure 13:</span> <strong>Cell types for LV931.</strong>
+<img src="images/lvs_analysis/lv931/lv931-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 13:</span> <strong>Cell types for LV931.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
-<h3 id="lv536-cell-types">LV536 cell types</h3>
-<div id="fig:sup:lv536" class="fignos">
-<figure>
-<img src="images/lvs_analysis/lv536/lv536-cell_types.png" style="width:80.0%" alt="" /><figcaption><span>Figure 14:</span> <strong>Cell types for LV536.</strong>
-<!--  -->
-FIXME: <em>transitional</em> here refers to bladder: https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP007947
-<!--  --></figcaption>
-</figure>
-</div>
-<h3 id="lv885-cell-types">LV885 cell types</h3>
-<div id="fig:sup:lv885" class="fignos">
-<figure>
-<img src="images/lvs_analysis/lv885/lv885-tissues.png" style="width:80.0%" alt="" /><figcaption><span>Figure 15:</span> <strong>Cell types for LV885.</strong>
-<!--  --></figcaption>
-</figure>
-</div>
-<h3 id="lv840-cell-types">LV840 cell types</h3>
-<div id="fig:sup:lv840" class="fignos">
-<figure>
-<img src="images/lvs_analysis/lv840/lv840-cell_types.png" style="width:80.0%" alt="" /><figcaption><span>Figure 16:</span> <strong>Cell types for LV840.</strong>
-<!--  --></figcaption>
-</figure>
-</div>
-<h3 id="lv66-cell-types">LV66 cell types</h3>
+<h3 id="lv66">LV66</h3>
 <div id="fig:sup:lv66" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv66/lv66-cell_types.png" style="width:80.0%" alt="" /><figcaption><span>Figure 17:</span> <strong>Cell types for LV66.</strong>
+<img src="images/lvs_analysis/lv66/lv66-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 14:</span> <strong>Cell types for LV66.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
 <h3 id="lv928">LV928</h3>
 <div id="fig:sup:lv928" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv928/lv928-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 18:</span> <strong>Cell types for LV928.</strong>
+<img src="images/lvs_analysis/lv928/lv928-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 15:</span> <strong>Cell types for LV928.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
 <h3 id="lv30">LV30</h3>
 <div id="fig:sup:lv30" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv30/lv30-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 19:</span> <strong>Cell types for LV30.</strong>
+<img src="images/lvs_analysis/lv30/lv30-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 16:</span> <strong>Cell types for LV30.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
 <h3 id="lv730">LV730</h3>
 <div id="fig:sup:lv730" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv730/lv730-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 20:</span> <strong>Cell types for LV730.</strong>
+<img src="images/lvs_analysis/lv730/lv730-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 17:</span> <strong>Cell types for LV730.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
 <h3 id="lv598">LV598</h3>
 <div id="fig:sup:lv598" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv598/lv598-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 21:</span> <strong>Cell types for LV598.</strong>
+<img src="images/lvs_analysis/lv598/lv598-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 18:</span> <strong>Cell types for LV598.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
 <!-- LV598:phenomexcan_traits_assocs:start -->
 <div id="tbl:sup:phenomexcan_assocs:lv598" class="tablenos">
 <table>
-<caption><span>Table 9:</span> Significant trait associations of LV598 in PhenomeXcan. 
+<caption><span>Table 12:</span> Significant trait associations of LV598 in PhenomeXcan. 
 <!-- LV598:phenomexcan_traits_assocs:end --></caption>
 <colgroup>
 <col style="width: 28%" />
@@ -1877,14 +1949,14 @@ FIXME: <em>transitional</em> here refers to bladder: https://trace.ncbi.nlm.nih.
 <h3 id="lv155">LV155</h3>
 <div id="fig:sup:lv155" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv155/lv155-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 22:</span> <strong>Cell types for LV155.</strong>
+<img src="images/lvs_analysis/lv155/lv155-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 19:</span> <strong>Cell types for LV155.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
 <!-- LV155:phenomexcan_traits_assocs:start -->
 <div id="tbl:sup:phenomexcan_assocs:lv155" class="tablenos">
 <table>
-<caption><span>Table 10:</span> Significant trait associations of LV155 in PhenomeXcan. 
+<caption><span>Table 13:</span> Significant trait associations of LV155 in PhenomeXcan. 
 <!-- LV155:phenomexcan_traits_assocs:end --></caption>
 <colgroup>
 <col style="width: 49%" />
@@ -1930,7 +2002,7 @@ FIXME: <em>transitional</em> here refers to bladder: https://trace.ncbi.nlm.nih.
 <!-- LV155:emerge_traits_assocs:start -->
 <div id="tbl:sup:emerge_assocs:lv155" class="tablenos">
 <table>
-<caption><span>Table 11:</span> Significant trait associations of LV155 in eMERGE. 
+<caption><span>Table 14:</span> Significant trait associations of LV155 in eMERGE. 
 <!-- LV155:emerge_traits_assocs:end --></caption>
 <thead>
 <tr class="header">
@@ -1962,7 +2034,7 @@ FIXME: <em>transitional</em> here refers to bladder: https://trace.ncbi.nlm.nih.
 <h3 id="lv844">LV844</h3>
 <div id="fig:sup:lv844" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv844/lv844-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 23:</span> <strong>Cell types for LV844.</strong>
+<img src="images/lvs_analysis/lv844/lv844-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 20:</span> <strong>Cell types for LV844.</strong>
 <!--  -->
 <code class="red">Note</code> “Cell types from brain” come from <span class="citation" data-cites="3oFmSTW2">[<a href="#ref-3oFmSTW2" role="doc-biblioref">62</a>]</span>, treated with different chemichals; I don’t have enough information to separate cell types.
 <!--  --></figcaption>
@@ -1971,7 +2043,7 @@ FIXME: <em>transitional</em> here refers to bladder: https://trace.ncbi.nlm.nih.
 <!-- LV844:phenomexcan_traits_assocs:start -->
 <div id="tbl:sup:phenomexcan_assocs:lv844" class="tablenos">
 <table>
-<caption><span>Table 12:</span> Significant trait associations of LV844 in PhenomeXcan. 
+<caption><span>Table 15:</span> Significant trait associations of LV844 in PhenomeXcan. 
 <!-- LV844:phenomexcan_traits_assocs:end --></caption>
 <colgroup>
 <col style="width: 55%" />
@@ -2101,7 +2173,7 @@ FIXME: <em>transitional</em> here refers to bladder: https://trace.ncbi.nlm.nih.
 <!-- LV844:emerge_traits_assocs:start -->
 <div id="tbl:sup:emerge_assocs:lv844" class="tablenos">
 <table>
-<caption><span>Table 13:</span> Significant trait associations of LV844 in eMERGE. 
+<caption><span>Table 16:</span> Significant trait associations of LV844 in eMERGE. 
 <!-- LV844:emerge_traits_assocs:end --></caption>
 <colgroup>
 <col style="width: 9%" />
@@ -2217,7 +2289,7 @@ FIXME: <em>transitional</em> here refers to bladder: https://trace.ncbi.nlm.nih.
 <h3 id="lv57">LV57</h3>
 <div id="fig:sup:lv57" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv57/lv57-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 24:</span> <strong>Cell types for LV57.</strong>
+<img src="images/lvs_analysis/lv57/lv57-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 21:</span> <strong>Cell types for LV57.</strong>
 <!--  -->
 <!--  --></figcaption>
 </figure>
@@ -2225,7 +2297,7 @@ FIXME: <em>transitional</em> here refers to bladder: https://trace.ncbi.nlm.nih.
 <!-- LV57:phenomexcan_traits_assocs:start -->
 <div id="tbl:sup:phenomexcan_assocs:lv57" class="tablenos">
 <table>
-<caption><span>Table 14:</span> Significant trait associations of LV57 in PhenomeXcan. 
+<caption><span>Table 17:</span> Significant trait associations of LV57 in PhenomeXcan. 
 <!-- LV57:phenomexcan_traits_assocs:end --></caption>
 <colgroup>
 <col style="width: 55%" />
@@ -2299,7 +2371,7 @@ FIXME: <em>transitional</em> here refers to bladder: https://trace.ncbi.nlm.nih.
 <!-- LV57:emerge_traits_assocs:start -->
 <div id="tbl:sup:emerge_assocs:lv57" class="tablenos">
 <table>
-<caption><span>Table 15:</span> Significant trait associations of LV57 in eMERGE. 
+<caption><span>Table 18:</span> Significant trait associations of LV57 in eMERGE. 
 <!-- LV57:emerge_traits_assocs:end --></caption>
 <colgroup>
 <col style="width: 9%" />
@@ -2366,7 +2438,7 @@ FIXME: <em>transitional</em> here refers to bladder: https://trace.ncbi.nlm.nih.
 <h3 id="lv54">LV54</h3>
 <div id="fig:sup:lv54" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv54/lv54-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 25:</span> <strong>Cell types for LV54.</strong>
+<img src="images/lvs_analysis/lv54/lv54-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 22:</span> <strong>Cell types for LV54.</strong>
 <!--  -->
 <!--  --></figcaption>
 </figure>
@@ -2374,7 +2446,7 @@ FIXME: <em>transitional</em> here refers to bladder: https://trace.ncbi.nlm.nih.
 <!-- LV54:phenomexcan_traits_assocs:start -->
 <div id="tbl:sup:phenomexcan_assocs:lv54" class="tablenos">
 <table>
-<caption><span>Table 16:</span> Significant trait associations of LV54 in PhenomeXcan. 
+<caption><span>Table 19:</span> Significant trait associations of LV54 in PhenomeXcan. 
 <!-- LV54:phenomexcan_traits_assocs:end --></caption>
 <colgroup>
 <col style="width: 55%" />
@@ -2504,7 +2576,7 @@ FIXME: <em>transitional</em> here refers to bladder: https://trace.ncbi.nlm.nih.
 <!-- LV54:emerge_traits_assocs:start -->
 <div id="tbl:sup:emerge_assocs:lv54" class="tablenos">
 <table>
-<caption><span>Table 17:</span> Significant trait associations of LV54 in eMERGE. 
+<caption><span>Table 20:</span> Significant trait associations of LV54 in eMERGE. 
 <!-- LV54:emerge_traits_assocs:end --></caption>
 <colgroup>
 <col style="width: 9%" />
@@ -2669,7 +2741,7 @@ FIXME: <em>transitional</em> here refers to bladder: https://trace.ncbi.nlm.nih.
 <h3 id="lv847">LV847</h3>
 <div id="fig:sup:lv847" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv847/lv847-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 26:</span> <strong>Cell types for LV847.</strong>
+<img src="images/lvs_analysis/lv847/lv847-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 23:</span> <strong>Cell types for LV847.</strong>
 <!--  -->
 <!--  --></figcaption>
 </figure>
@@ -2677,7 +2749,7 @@ FIXME: <em>transitional</em> here refers to bladder: https://trace.ncbi.nlm.nih.
 <!-- LV847:phenomexcan_traits_assocs:start -->
 <div id="tbl:sup:phenomexcan_assocs:lv847" class="tablenos">
 <table style="width:100%;">
-<caption><span>Table 18:</span> Significant trait associations of LV847 in PhenomeXcan. 
+<caption><span>Table 21:</span> Significant trait associations of LV847 in PhenomeXcan. 
 <!-- LV847:phenomexcan_traits_assocs:end --></caption>
 <colgroup>
 <col style="width: 59%" />
@@ -2765,7 +2837,7 @@ FIXME: <em>transitional</em> here refers to bladder: https://trace.ncbi.nlm.nih.
 <!-- LV847:emerge_traits_assocs:start -->
 <div id="tbl:sup:emerge_assocs:lv847" class="tablenos">
 <table>
-<caption><span>Table 19:</span> Significant trait associations of LV847 in eMERGE. 
+<caption><span>Table 22:</span> Significant trait associations of LV847 in eMERGE. 
 <!-- LV847:emerge_traits_assocs:end --></caption>
 <colgroup>
 <col style="width: 9%" />
@@ -2916,7 +2988,7 @@ FIXME: <em>transitional</em> here refers to bladder: https://trace.ncbi.nlm.nih.
 <h3 id="lv136">LV136</h3>
 <div id="fig:sup:lv136" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv136/lv136-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 27:</span> <strong>Cell types for LV136.</strong>
+<img src="images/lvs_analysis/lv136/lv136-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 24:</span> <strong>Cell types for LV136.</strong>
 <!--  -->
 Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours or more <span class="citation" data-cites="VKYS05n1">[<a href="#ref-VKYS05n1" role="doc-biblioref">63</a>]</span>;</figcaption>
 </figure>
@@ -2924,7 +2996,7 @@ Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours o
 <!-- LV136:phenomexcan_traits_assocs:start -->
 <div id="tbl:sup:phenomexcan_assocs:lv136" class="tablenos">
 <table>
-<caption><span>Table 20:</span> Significant trait associations of LV136 in PhenomeXcan. 
+<caption><span>Table 23:</span> Significant trait associations of LV136 in PhenomeXcan. 
 <!-- LV136:phenomexcan_traits_assocs:end --></caption>
 <colgroup>
 <col style="width: 50%" />
@@ -3082,7 +3154,7 @@ Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours o
 <!-- LV136:emerge_traits_assocs:start -->
 <div id="tbl:sup:emerge_assocs:lv136" class="tablenos">
 <table>
-<caption><span>Table 21:</span> Significant trait associations of LV136 in eMERGE. 
+<caption><span>Table 24:</span> Significant trait associations of LV136 in eMERGE. 
 <!-- LV136:emerge_traits_assocs:end --></caption>
 <thead>
 <tr class="header">
@@ -3114,14 +3186,14 @@ Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours o
 <h3 id="lv93">LV93</h3>
 <div id="fig:sup:lv93" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv93/lv93-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 28:</span> <strong>Cell types for LV93.</strong>
+<img src="images/lvs_analysis/lv93/lv93-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 25:</span> <strong>Cell types for LV93.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
 <!-- LV93:phenomexcan_traits_assocs:start -->
 <div id="tbl:sup:phenomexcan_assocs:lv93" class="tablenos">
 <table>
-<caption><span>Table 22:</span> Significant trait associations of LV93 in PhenomeXcan. 
+<caption><span>Table 25:</span> Significant trait associations of LV93 in PhenomeXcan. 
 <!-- LV93:phenomexcan_traits_assocs:end --></caption>
 <colgroup>
 <col style="width: 22%" />
@@ -3167,7 +3239,7 @@ Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours o
 <!-- LV93:emerge_traits_assocs:start -->
 <div id="tbl:sup:emerge_assocs:lv93" class="tablenos">
 <table>
-<caption><span>Table 23:</span> Significant trait associations of LV93 in eMERGE. 
+<caption><span>Table 26:</span> Significant trait associations of LV93 in eMERGE. 
 <!-- LV93:emerge_traits_assocs:end --></caption>
 <thead>
 <tr class="header">
@@ -3206,14 +3278,14 @@ Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours o
 <h3 id="lv206">LV206</h3>
 <div id="fig:sup:lv206" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv206/lv206-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 29:</span> <strong>Cell types for LV206.</strong>
+<img src="images/lvs_analysis/lv206/lv206-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 26:</span> <strong>Cell types for LV206.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
 <!-- LV206:phenomexcan_traits_assocs:start -->
 <div id="tbl:sup:phenomexcan_assocs:lv206" class="tablenos">
 <table>
-<caption><span>Table 24:</span> Significant trait associations of LV206 in PhenomeXcan. 
+<caption><span>Table 27:</span> Significant trait associations of LV206 in PhenomeXcan. 
 <!-- LV206:phenomexcan_traits_assocs:end --></caption>
 <colgroup>
 <col style="width: 22%" />
@@ -3252,7 +3324,7 @@ Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours o
 <!-- LV206:emerge_traits_assocs:start -->
 <div id="tbl:sup:emerge_assocs:lv206" class="tablenos">
 <table>
-<caption><span>Table 25:</span> Significant trait associations of LV206 in eMERGE. 
+<caption><span>Table 28:</span> Significant trait associations of LV206 in eMERGE. 
 <!-- LV206:emerge_traits_assocs:end --></caption>
 <thead>
 <tr class="header">
@@ -3298,14 +3370,14 @@ Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours o
 <h3 id="lv260">LV260</h3>
 <div id="fig:sup:lv260" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv260/lv260-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 30:</span> <strong>Cell types for LV260.</strong>
+<img src="images/lvs_analysis/lv260/lv260-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 27:</span> <strong>Cell types for LV260.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
 <!-- LV260:phenomexcan_traits_assocs:start -->
 <div id="tbl:sup:phenomexcan_assocs:lv260" class="tablenos">
 <table>
-<caption><span>Table 26:</span> Significant trait associations of LV260 in PhenomeXcan. 
+<caption><span>Table 29:</span> Significant trait associations of LV260 in PhenomeXcan. 
 <!-- LV260:phenomexcan_traits_assocs:end --></caption>
 <colgroup>
 <col style="width: 22%" />
@@ -3344,7 +3416,7 @@ Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours o
 <!-- LV260:emerge_traits_assocs:start -->
 <div id="tbl:sup:emerge_assocs:lv260" class="tablenos">
 <table>
-<caption><span>Table 27:</span> Significant trait associations of LV260 in eMERGE. 
+<caption><span>Table 30:</span> Significant trait associations of LV260 in eMERGE. 
 <!-- LV260:emerge_traits_assocs:end --></caption>
 <thead>
 <tr class="header">
@@ -3376,14 +3448,14 @@ Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours o
 <h3 id="lv21">LV21</h3>
 <div id="fig:sup:lv21" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv21/lv21-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 31:</span> <strong>Cell types for LV21.</strong>
+<img src="images/lvs_analysis/lv21/lv21-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 28:</span> <strong>Cell types for LV21.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
 <!-- LV21:phenomexcan_traits_assocs:start -->
 <div id="tbl:sup:phenomexcan_assocs:lv21" class="tablenos">
 <table>
-<caption><span>Table 28:</span> Significant trait associations of LV21 in PhenomeXcan. 
+<caption><span>Table 31:</span> Significant trait associations of LV21 in PhenomeXcan. 
 <!-- LV21:phenomexcan_traits_assocs:end --></caption>
 <colgroup>
 <col style="width: 22%" />
@@ -3429,7 +3501,7 @@ Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours o
 <!-- LV21:emerge_traits_assocs:start -->
 <div id="tbl:sup:emerge_assocs:lv21" class="tablenos">
 <table>
-<caption><span>Table 29:</span> Significant trait associations of LV21 in eMERGE. 
+<caption><span>Table 32:</span> Significant trait associations of LV21 in eMERGE. 
 <!-- LV21:emerge_traits_assocs:end --></caption>
 <thead>
 <tr class="header">
@@ -3461,14 +3533,14 @@ Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours o
 <h3 id="lv5">LV5</h3>
 <div id="fig:sup:lv5" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv5/lv5-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 32:</span> <strong>Cell types for LV5.</strong>
+<img src="images/lvs_analysis/lv5/lv5-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 29:</span> <strong>Cell types for LV5.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
 <!-- LV5:phenomexcan_traits_assocs:start -->
 <div id="tbl:sup:phenomexcan_assocs:lv5" class="tablenos">
 <table>
-<caption><span>Table 30:</span> Significant trait associations of LV5 in PhenomeXcan. 
+<caption><span>Table 33:</span> Significant trait associations of LV5 in PhenomeXcan. 
 <!-- LV5:phenomexcan_traits_assocs:end --></caption>
 <colgroup>
 <col style="width: 54%" />
@@ -3570,7 +3642,7 @@ Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours o
 <!-- LV5:emerge_traits_assocs:start -->
 <div id="tbl:sup:emerge_assocs:lv5" class="tablenos">
 <table>
-<caption><span>Table 31:</span> Significant trait associations of LV5 in eMERGE. 
+<caption><span>Table 34:</span> Significant trait associations of LV5 in eMERGE. 
 <!-- LV5:emerge_traits_assocs:end --></caption>
 <thead>
 <tr class="header">
@@ -3609,7 +3681,7 @@ Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours o
 <h3 id="lv434">LV434</h3>
 <div id="fig:sup:lv434" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv434/lv434-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 33:</span> <strong>Cell types for LV434.</strong>
+<img src="images/lvs_analysis/lv434/lv434-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 30:</span> <strong>Cell types for LV434.</strong>
 <!--  -->
 <code class="red">FIXME:</code> create a section for all LVs and clarify how figures were generated, like:
 The top samples in human breast cancer cells have larger LV values that were thresholded at 3.0 for visualization purposes.
@@ -3621,7 +3693,7 @@ HEK293 is a cell line derived from human embryonic kidney cells;
 <!-- LV434:phenomexcan_traits_assocs:start -->
 <div id="tbl:sup:phenomexcan_assocs:lv434" class="tablenos">
 <table>
-<caption><span>Table 32:</span> Significant trait associations of LV434 in PhenomeXcan. 
+<caption><span>Table 35:</span> Significant trait associations of LV434 in PhenomeXcan. 
 <!-- LV434:phenomexcan_traits_assocs:end --></caption>
 <colgroup>
 <col style="width: 36%" />
@@ -3653,7 +3725,7 @@ HEK293 is a cell line derived from human embryonic kidney cells;
 <!-- LV434:emerge_traits_assocs:start -->
 <div id="tbl:sup:emerge_assocs:lv434" class="tablenos">
 <table>
-<caption><span>Table 33:</span> Significant trait associations of LV434 in eMERGE. 
+<caption><span>Table 36:</span> Significant trait associations of LV434 in eMERGE. 
 <!-- LV434:emerge_traits_assocs:end --></caption>
 <thead>
 <tr class="header">
@@ -3731,10 +3803,26 @@ HEK293 is a cell line derived from human embryonic kidney cells;
 </tbody>
 </table>
 </div>
+<h3 id="top-gene-modules-in-the-prediction-of-niacin-as-a-therapeutic-drug">Top gene modules in the prediction of Niacin as a therapeutic drug</h3>
+<div id="tbl:sup:emerge_assocs:lv434" class="tablenos">
+<table>
+<caption><span>Table 37:</span> Top gene modules/LVs responsible for predicting Niacin as a therapeutic drug for atherosclerosis. </caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">LV</th>
+<th style="text-align: left;">Value for Niacin</th>
+<th style="text-align: left;">Value for atherosclerosis</th>
+<th style="text-align: left;">Difference</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div>
 <h3 id="agreement-of-consensus-clustering-partitions-with-the-ensemble-by-number-of-clusters">Agreement of consensus clustering partitions with the ensemble by number of clusters</h3>
 <div id="fig:sup:consensus_agreement" class="fignos">
 <figure>
-<img src="images/clustering/selected_best_partitions_by_k.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 34:</span> <strong>Final selected partitions for follow-up analysis.</strong>
+<img src="images/clustering/selected_best_partitions_by_k.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 31:</span> <strong>Final selected partitions for follow-up analysis.</strong>
 <!--  -->
 From all consensus clustering partitions generated with <span class="math inline">\(k\)</span> from 2 to 60, we selected those with a median adjusted Rand index (ARI) with the ensemble members greater the 75th percentile.</figcaption>
 </figure>
