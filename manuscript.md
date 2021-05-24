@@ -78,11 +78,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/0a6aac354cbbab3d3218e8300885c8c653520015/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/20805590179a5bfc230fef2cd506511700c33b8b/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/0a6aac354cbbab3d3218e8300885c8c653520015/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/20805590179a5bfc230fef2cd506511700c33b8b/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/0a6aac354cbbab3d3218e8300885c8c653520015/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/20805590179a5bfc230fef2cd506511700c33b8b/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -120,9 +120,9 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/0a6aac354cbbab3d3218e8300885c8c653520015/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/20805590179a5bfc230fef2cd506511700c33b8b/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@0a6aac3](https://github.com/greenelab/phenoplier_manuscript/tree/0a6aac354cbbab3d3218e8300885c8c653520015)
+from [greenelab/phenoplier_manuscript@2080559](https://github.com/greenelab/phenoplier_manuscript/tree/20805590179a5bfc230fef2cd506511700c33b8b)
 on May 24, 2021.
 </em></small>
 
@@ -630,41 +630,55 @@ This will enable the identification of more precise tissue- and cell lineage-spe
 -->
 
 
-## Conclusions
-
-<!--
-- these results suggest that more research is necessary to continue finding new gene modules/latent variables that capture relevant transcriptional processes that allows us to reprioritize genetic studies.
--->
-
-
-## References {.page_break_before}
-
-<!-- Explicitly insert bibliography here -->
-<div id="refs"></div>
-
-
 ## Methods
+
+### PhenomeXcan: gene-based associations on 4,091 traits
+
+We used TWAS results from PhenomeXcan [@doi:10.1126/sciadv.aba2083] on 4091 traits for 22515 genes.
+PhenomeXcan was built using publicly available GWAS summary statistics to compute
+1) gene-based associations with the PrediXcan family of methods [@doi:10.1038/ng.3367; @doi:10.1038/s41467-018-03621-1; @doi:10.1371/journal.pgen.1007889], and
+2) a posterior probability of colocalization between GWAS loci and *cis*-eQTL with fastENLOC [@doi:10.1126/sciadv.aba2083; @doi:10.1101/2020.07.01.182097].
+The PrediXcan family of methods first build prediction models using data from the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] for gene expression imputation and then correlate this predicted expression with the phenotype of interest.
+This family is comprised of
+S-PrediXcan [@doi:10.1038/s41467-018-03621-1] (which computes a gene-tissue-trait association using GWAS as input)
+and S-MultiXcan [@doi:10.1371/journal.pgen.1007889] (which computes a gene-trait association by aggregating evidence of associations across all tissues).
+
+
+We refer to the standardized effect sizes ($z$-scores) of S-PrediXcan across $n$ traits and $m$ genes in tissue $t$ as $\mathbf{M}^{t} \in \mathbb{R}^{n \times m}$.
+For S-MultiXcan we do not have the direction of effect, and we used the $p$-values converted to $z$-scores $\mathbf{M}=\Phi^{-1}(1 - p/2)$, where $\Phi^{-1}$ is the probit function.
+Higher $z$-scores correspond to stronger associations.
+
 
 ### MultiPLIER and Pathway-level information extractor (PLIER)
 
 MultiPLIER [@doi:10.1016/j.cels.2019.04.003] extracts patterns of co-expressed genes from recount2 [@doi:10.1038/nbt.3838], a large gene expression dataset.
-The approach applies the pathway-level information extractor method (PLIER) [@doi:10.1038/s41592-019-0456-1], which performs unsupervised learning using prior knowledge (cannonical pathways) to reduce technical noise.
-Via a matrix factorization approach, PLIER deconvolutes the gene expression data into a set of latent variables (LV), where each represents a gene module (i.e. a set of genes with coordinated expression patterns).
-This reduced the data dimensionality into 987 latent variables.
+The approach applies the pathway-level information extractor method (PLIER) [@doi:10.1038/s41592-019-0456-1], which performs unsupervised learning using prior knowledge (canonical pathways) to reduce technical noise.
+Via a matrix factorization approach, PLIER deconvolutes the gene expression data into a set of latent variables (LV), where each represents a gene module.
+This reduced the data dimensionality into 987 latent variables or gene modules.
 
-Given a gene expression dataset $\mathbf{Y}^{n \times p}$ with $n$ genes and $p$ conditions and a prior knowledge matrix $\mathbf{C} \in \{0,1\}^{n \times m}$ for $m$ gene sets (so that $\mathbf{C}_{ij} = 1$ if gene $i$ belongs to gene set $j$), (e.g., gene sets from MSigDB [@doi:10.1016/j.cels.2015.12.004]), PLIER finds $\mathbf{U}$, $\mathbf{Z}$, and $\mathbf{B}$ minimizing
+
+Given a gene expression dataset $\mathbf{Y}^{m \times c}$ with $m$ genes and $c$ experimental conditions and a prior knowledge matrix $\mathbf{C} \in \{0,1\}^{m \times p}$ for $p$ MSigDB pathways [@doi:10.1016/j.cels.2015.12.004] (so that $\mathbf{C}_{ij} = 1$ if gene $i$ belongs to pathway $j$), PLIER finds $\mathbf{U}$, $\mathbf{Z}$, and $\mathbf{B}$ minimizing
 
 $$
 ||\mathbf{Y} - \mathbf{Z}\mathbf{B}||^{2}_{F} + \lambda_1 ||\mathbf{Z} - \mathbf{C}\mathbf{U}||^{2}_{F} + \lambda_2 ||\mathbf{B}||^{2}_{F} + \lambda_3 ||\mathbf{U}||_{L^1}
 $$ {#eq:met:plier_func}
 
 subject to $\mathbf{U}>0, \mathbf{Z}>0$;
-$\mathbf{Z}^{n \times l}$ are the gene loadings with $l$ latent variables,
-$\mathbf{B}^{l \times p}$ is the latent space for $p$ conditions,
-$\mathbf{U}^{m \times l}$ specifies which of the $m$ prior-information gene sets in $\mathbf{C}$ are represented for each LV,
+$\mathbf{Z}^{m \times l}$ are the gene loadings with $l$ latent variables,
+$\mathbf{B}^{l \times c}$ is the latent space for $c$ conditions,
+$\mathbf{U}^{p \times l}$ specifies which of the $p$ prior-information pathways in $\mathbf{C}$ are represented for each LV,
 and $\lambda_i$ are different regularization parameters used in the training step.
 <!--  -->
-$\mathbf{Z}$ is a low-dimensional representation of the gene space where each LV aligns as much as possible to prior knowledge and it might represent a known or novel gene module (i.e., a meaningful biological pattern) or noise.
+$\mathbf{Z}$ is a low-dimensional representation of the gene space where each LV aligns as much as possible to prior knowledge, and it might represent either a known or novel gene module (i.e., a meaningful biological pattern) or noise.
+
+
+We projected $\mathbf{M}$ (either from S-PrediXcan across each tissue, or S-MultiXcan) into the low-dimensional gene module space learned by MultiPLIER using:
+
+$$
+\hat{\mathbf{M}} = (\mathbf{Z}^{\top} \mathbf{Z} + \lambda_{2} \mathbf{I})^{-1} \mathbf{Z}^{\top} \mathbf{M}.
+$$ {#eq:proj}
+
+where in $\hat{\mathbf{M}}^{l \times n}$ all traits in PhenomeXcan are now described by gene modules.
 
 
 ### CRISPR-Cas9 screening
@@ -672,47 +686,124 @@ $\mathbf{Z}$ is a low-dimensional representation of the gene space where each LV
 `Add details`{.red}
 
 
-### Consensus clustering of traits in PhenomeXcan
+### Gene module-trait associations
 
-#### Dimensionality reduction
+To compute an association between a gene module and a trait, we used an approach similar to the gene-property analysis in MAGMA [@doi:10.1371/journal.pcbi.1004219],
+which is essentially a competitive test using gene weights from $\mathbf{Z}$ to predict gene $z$-scores from $\mathbf{M}$.
+Thus, the regression model uses genes as data points by fitting $\mathbf{m}=\beta_0 + \mathbf{z} \beta_z + \epsilon$, where $\epsilon \sim \mathrm{MVN}(0, \hat{\Sigma})$, $\mathbf{m}$ are gene $p$-values (for a trait) from S-MultiXcan that we transformed to $z$-scores as mentioned before.
+Since we are only interested in whether genes with a stronger membership to a module (highest weights) are more associated with the phenotype, we performed a one-sided test on the coefficient $\beta_z$ with the null hypothesis of $\beta_z = 0$ against the alternative $\beta_z>0$.
+Since the error terms $\epsilon$ could be correlated due to correlation between predicted expression, we used a generalized least squares approach instead of standard linear regression.
+To calculate $\hat\Sigma$, we first estimated the correlation of predicted expression for each gene pair $(\mathbf{t}_i, \mathbf{t}_j)$ in tissue $t$ using equations from [@doi:10.1371/journal.pgen.1007889; @doi:10.1038/s41467-018-03621-1]:
 
-#### Ensemble creation: clustering algorithms and parameters
+$$
+\begin{split}
+\hat{\Sigma}_{ij}^{t} & = Cor(\mathbf{t}_i, \mathbf{t}_j) \\
+ & = \frac{ Cov(\mathbf{t}_i, \mathbf{t}_j) } { \sqrt{\widehat{\mathrm{var}}(\mathbf{t}_i) \widehat{\mathrm{var}}(\mathbf{t}_j)} } \\
+ & = \frac{ Cov(\sum_{a \in \mathrm{model}_i} w_a^i X_a, \sum_{b \in \mathrm{model}_j} w_b^j X_b) }  {\sqrt{\widehat{\mathrm{var}}(\mathbf{t}_i) \widehat{\mathrm{var}}(\mathbf{t}_j)} } \\
+ & = \frac{ \sum_{a \in \mathrm{model}_i \\ b \in \mathrm{model}_j} w_a^i w_b^j Cov(X_a, X_b)} {\sqrt{\widehat{\mathrm{var}}(\mathbf{t}_i) \widehat{\mathrm{var}}(\mathbf{t}_j)} } \\
+ & = \frac{ \sum_{a \in \mathrm{model}_i \\ b \in \mathrm{model}_j} w_a^i w_b^j \Gamma_{ab}} {\sqrt{\widehat{\mathrm{var}}(\mathbf{t}_i) \widehat{\mathrm{var}}(\mathbf{t}_j)} },
+\end{split}
+$$ {#eq:gene_corr}
 
-::: {style="color: red"}
-- list of methods and its parameters
-:::
+where $\Gamma = \widehat{\mathrm{var}}(\mathbf{X}) = (\mathbf{X} - \mathbf{\bar{X}})^{\top} (\mathbf{X} - \mathbf{\bar{X}}) / (m-1)$ is the genotype covariance matrix using 1000 Genomes Project data [@doi:10.1038/nature15393; @doi:10.5281/zenodo.3657902].
+The variances for predicted gene expression of gene $i$ is estimated as:
 
-#### Ensemble combination and consensus functions
+$$
+\begin{split}
+\widehat{\mathrm{var}}(\mathbf{t}_i) & = (\mathbf{W}^i)^\top \Gamma^i \mathbf{W}^i \\
+ & = \sum_{a \in \mathrm{model}_i \\ b \in \mathrm{model}_i} w_a^i w_b^i \Gamma_{ab}^i.
+\end{split}
+$$ {#eq:gene_var}
 
-::: {style="color: red"}
-- evidence accumulation approach
-- we also used a spectral clustering approach
-- for each k, we picked the partition that maximized the agreement with the ensemble
-- show figure where we select the ks that are greater than the median
-:::
+Finally, $\hat{\Sigma} = \sum_t \hat{\Sigma}^t / |t|$ where $|t|$=49 is the number of tissues.
 
 
-#### Clusters interpretation
+### Drug-disease prediction
 
-![
-**Pathways associated with gene modules in Figure @fig:clustering:heatmap.**
+For the drug-disease prediction, we used a method based on a drug repositioning framework previously used for psychiatry traits [@doi:10.1038/nn.4618] where gene-trait associations are anticorrelated with expression profiles for drugs.
+For the single-gene approach, we computed a drug-disease score by multiplying each S-PrediXcan set of results in tissue $t$, $\mathbf{M}^t$, with the transcriptional responses profiled in LINCS L1000 [@doi:10.1016/j.cell.2017.10.049], $\mathbf{L}^{c \times m}$ (for $c$ compounds): $\mathbf{D}^{t,k}=-1 \cdot \mathbf{M}^{t,k} \mathbf{L}^\top$, where $k$ refers to the number of most significant gene associations in $\mathbf{M}^t$ for each trait.
+As suggested in [@doi:10.1038/nn.4618], $k$ could be either all genes or the top 50, 100, 250, and 500; then we average score ranks across all $k$ and obtain $\mathbf{D}^t$.
+Finally, for each drug-disease pair, we took the maximum prediction score across all tissues: $\mathbf{D}_{ij} = \max \{ \mathbf{D}_{ij}^t \mid \forall t \}$.
+
+
+The same procedure was used for the gene module-based approach, where we projected S-PrediXcan results into our latent representation, leading to $\hat{\mathbf{M}}^t$;
+and also $\mathbf{L}$, leading to $\hat{\mathbf{L}}^{l \times c}$.
+Finally, $\mathbf{D}^{t,k}=-1 \cdot \hat{\mathbf{M}}^{t,k} \hat{\mathbf{L}}^\top$, where in this case $k$ could be all LVs or the top 5, 10, 25 and 50 (since have an order of magnitude less LVs than genes).
+
+
+Since the gold standard of drug-disease medical indications used contained Disease Ontology IDs (DOID) [@doi:10.1093/nar/gky1032], we mapped PhenomeXcan traits to the Experimental Factor Ontology [@doi:10.1093/bioinformatics/btq099] using [@url:https://github.com/EBISPOT/EFO-UKB-mappings], and then to DOID.
+
+
+### Consensus clustering of traits
+
+We performed two preprocessing steps on the S-MultiXcan results before the cluster analysis procedure.
+First, we combined results in $\mathbf{M}$ (S-MultiXcan) for traits that mapped to the same Experimental Factor Ontology (EFO) [@doi:10.1093/bioinformatics/btq099] term using the Stouffer's method: $\sum w_i M_{ij} / \sqrt{\sum w_i^2}$, where $w_i$ is a weight based on the GWAS sample size for trait $i$, and $M_{ij}$ is the $z$-score for gene $j$.
+Second, we standardized all $z$-scores for each trait $i$ by their sum to reduce the effect of highly polygenic traits: $M_{ij} / \sum M_{ij}$.
+Finally, we projected this data matrix using Equation @eq:proj, obtaining $\hat{\mathbf{M}}$ with $n$=3752 traits and $l$=987 LVs as the input of our clustering pipeline.
+
+
+A partitioning of $\hat{\mathbf{M}}$ with $n$ traits into $k$ clusters is represented as a label vector $\pi \in \mathbb{N}^n$.
 <!--  -->
-`(Early draft version; instead of this figure, we might want to just add a table with information about LVs)`{.red}
+Consensus clustering approaches consist of two steps:
+1) the generation of an ensemble $\Pi$ with $r$ partitions of the dataset: $\Pi=\{\pi_1, \pi_2, \ldots, \pi_r\}$,
+and 2) the combination of the ensemble into a consolidated solution defined as:
+
+$$
+\pi^* = \mathrm{arg}\,\underset{\hat{\pi}}{\max} Q(\{ \lvert \mathcal{L}^i \lvert \phi(\hat{\pi}_{\mathcal{L}^i}, \pi_{i \mathcal{L}^i}) \mid i \in \{1,\ldots,r\} \}),
+$$ {#eq:consensus:obj_func}
+
+where $\mathcal{L}^i$ is a set of data indices with known cluster labels for partition $i$,
+$\phi\colon \mathbb{N}^n \times \mathbb{N}^n \to \mathbb{R}$ is a function that measures the similarity between two partitions,
+and $Q$ is a measure of central tendency, such as the mean or median.
+We used the adjusted Rand index (ARI) [@doi:10.1007/BF01908075] for $\phi$, and the median for $Q$.
 <!--  -->
-This figure is equivalent to Figure @fig:clustering:heatmap but, instead of cell types, labels on the right show all the associated pathways for each latent variable.
+To obtain $\pi^*$, we define a consensus function $\Gamma\colon \mathbb{N}^{n \times r} \to \mathbb{N}^n$ with $\Pi$ as the input.
+We used consensus functions based on the evidence accumulation clustering (EAC) paradigm [@doi:10.1109/TPAMI.2005.113], where $\Pi$ is first transformed into a distance matrix
 <!--  -->
-](images/clustering/global_clustermap-pathways.svg "Heatmap with gene modules and traits"){#fig:clustering:heatmap_pathways width="100%"}
+<!-- $\mathbf{D}_{ij} = \frac{d_{ij}}{r}$, -->
+$\mathbf{D}_{ij} = d_{ij} / r$,
+<!--  -->
+where $d_{ij}$ is the number of times traits $i$ and $j$ were grouped in different clusters across all $r$ partitions in $\Pi$.
+Then, $\Gamma$ can be any similarity-based clustering algorithm, which is applied on $\mathbf{D}$ to derive the final partition $\pi^*$.
 
 
-### Drug-disease predictions
+For the ensemble generation step, we used different algorithms to create a highly diverse set of partitions (see Figure @fig:clustering:design), since diversity is an important property for ensembles [@doi:10.1016/j.ins.2016.04.027; @doi:10.1109/TPAMI.2011.84; @doi:10.1016/j.patcog.2014.04.005].
+We used three data representations: the raw dataset, its projection into the top 50 principal components, and the embedding learned by UMAP [@arxiv:1802.03426] using 50 components.
+<!--  -->
+For each of these, we applied five clustering algorithms, covering a wide range of different assumptions on the data structure: $k$-means [@Arthur2007], spectral clustering [@Ng2001], a Gaussian mixture model (GMM), hierarchical clustering, and DBSCAN [@Ester1996].
+<!--  -->
+For $k$-means, spectral clustering and GMM, we specified a range of $k$ between 2 and $\sqrt{n} \approx 60$, and for each $k$ we generated five partitions using random seeds.
+<!--  -->
+For hierarchical clustering, for each $k$ we generated four partitions using four common linkage criteria: ward, complete, average and single.
+<!--  -->
+For DBSCAN, we combined different ranges for parameters $\epsilon$ (the maximum distance between two data points to be considered part of the same neighborhood) and *minPts* (the minimum number of data points in a neighborhood for a data point to be considered a core point).
+Specifically, we used *minPts* values from 2 to 125, and for each data version, we determined a plausible range of $\epsilon$ values by observing the distribution of the mean distance of the *minPts*-nearest neighbors across all data points.
+Since some combinations of *minPts* and $\epsilon$ might not produce a meaningful partition (for instance, when all points are detected as noisy or only one cluster is found), we resampled partitions generated by DBSCAN to ensure an equal representation in the ensemble.
+<!--  -->
+This procedure generated a final ensemble of 4428 partitions.
 
-**NOT FINISHED**
 
-We used the dot product of the S-PrediXcan $z$-score for each gene-disease pair, and the $z$-score for each gene-drug pair in LINCS L1000, multiplied by -1.
+Finally, we used spectral clustering on $\mathbf{D}$ to derive the final consensus partitions.
+$\mathbf{D}$ was first transformed into a similarity matrix by applying an RBF kernel $\mathrm{exp}(-\gamma \mathbf{D}^2)$ using four different values for $\gamma$ that we empirically determined to work best.
+Thus for each $k$ between 2 and 60, we derived four consensus partitions and selected the one that maximized Equation @eq:consensus:obj_func.
+<!--  -->
+We further filtered this set of 59 solutions to keep only those with an ensemble agreement larger than the 75th percentile, leaving a total of 15 final consensus partitions shown in Figure @fig:clustering:tree.
 
-To obtain a drug-disease association for the gene module-mapped TWAS results, we first projected LINCS L1000 data into this latent representation using Equation (@eq:proj), thus leading to a matrix with the expression profiles of drugs mapped to latent variables.
-This can be interpreted as the effects of compounds on gene modules activity.
-Then, similarly as before, we anti-correlated gene module-traits scores and module expression profiles of drugs.
+
+### Clusters interpretation
+
+We used a supervised learning approach to interpret clustering results by detecting which gene modules are the most important for clusters of traits.
+For this, we used the highest resolution partition ($k$=29, although any could be used) to train a decision tree model using each of the clusters as labels and the projected data $\hat{\mathbf{M}}$ as the training samples.
+For each $k$, we built a set of binary labels with the current cluster's traits as the positive class and the rest of the traits as the negative class.
+Then, we selected the LV in the root node of the trained model only if its threshold was positive and larger than one standard deviation.
+Next, we removed this LV from $\hat{\mathbf{M}}$ (regardless of being previously selected or not) and trained the model again.
+We repeated this procedure 20 times to extract the top 20 LVs that better discriminate traits in a cluster from the rest.
+
+
+## References {.page_break_before}
+
+<!-- Explicitly insert bibliography here -->
+<div id="refs"></div>
 
 
 ## Supplementary material

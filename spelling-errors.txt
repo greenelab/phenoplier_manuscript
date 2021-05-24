@@ -7,6 +7,7 @@ allopurinol
 Alzheimers
 anthropometric
 antiatherogenic
+anticorrelated
 antidyslipidemic
 ARI
 arthrosis
@@ -22,7 +23,6 @@ BLCAP
 BMD
 BMI
 BMR
-cannonical
 Cardiomegaly
 cardiometabolic
 cardiomyocytes
@@ -33,6 +33,7 @@ cgreene
 chemichals
 CHEMIOSMOTIC
 chronotype
+cis
 coeliac
 colocalization
 colocalized
@@ -44,6 +45,7 @@ crispr
 crit
 dataset
 datasets
+DBSCAN
 deconvolutes
 deconvolution
 dendritic
@@ -53,9 +55,12 @@ diacylglycerol
 dimensionality
 dimentional
 DNase
+DOID
 DrubBank
 DVT
 dysregulated
+EAC
+EFO
 eQTL
 eQTLs
 erythematosus
@@ -70,7 +75,9 @@ fibroblasts
 FinnGen
 func
 GBMF
+genotype
 glioma
+GMM
 Golabi
 Goldmann
 GPR
@@ -82,7 +89,7 @@ GTEx
 gtn
 GWAS
 Haematocrit
-haemoglobin
+Haemoglobin
 handgrip
 HC
 HCAR
@@ -102,8 +109,8 @@ INSIG
 interpretable
 Intervertebral
 Intra
-Intraocular
-Ischaemic
+intraocular
+ischaemic
 Jurkcat
 KEGG
 keratometry
@@ -137,6 +144,7 @@ microglia
 micrograms
 microvascular
 miltondp
+minPts
 monocytes
 mononuclear
 MRV
@@ -152,7 +160,7 @@ neurodevelopmental
 neutrophil
 Neutrophill
 neutrophils
-nicotinic
+Nicotinic
 NMR
 organoids
 osteoblasts
@@ -173,6 +181,8 @@ polyarthropathies
 polygenic
 PrediXcan
 preeclampsia
+preprocessing
+probit
 proj
 PROPANOATE
 PSA
@@ -180,11 +190,13 @@ PTEN
 pterygia
 QUI
 ramipril
+RBF
 RCP
 RDW
 REACTOME
 reprioritize
 repurposing
+resampled
 reticulocyte
 reticulocytes
 revascularizations
@@ -205,6 +217,7 @@ Spondylosis
 SRP
 SRPR
 stellate
+Stouffer’s
 Strehl
 submatrix
 TCA
