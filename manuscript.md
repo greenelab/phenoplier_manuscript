@@ -78,11 +78,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/70d2b4826f7138ca78cb70d6f8f068dcaf331a3d/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/6303091e6a0413f61fdbc9ffeefaa042f52cd969/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/70d2b4826f7138ca78cb70d6f8f068dcaf331a3d/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/6303091e6a0413f61fdbc9ffeefaa042f52cd969/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/70d2b4826f7138ca78cb70d6f8f068dcaf331a3d/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/6303091e6a0413f61fdbc9ffeefaa042f52cd969/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -120,9 +120,9 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/70d2b4826f7138ca78cb70d6f8f068dcaf331a3d/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/6303091e6a0413f61fdbc9ffeefaa042f52cd969/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@70d2b48](https://github.com/greenelab/phenoplier_manuscript/tree/70d2b4826f7138ca78cb70d6f8f068dcaf331a3d)
+from [greenelab/phenoplier_manuscript@6303091](https://github.com/greenelab/phenoplier_manuscript/tree/6303091e6a0413f61fdbc9ffeefaa042f52cd969)
 on May 24, 2021.
 </em></small>
 
@@ -761,28 +761,6 @@ We repeated this procedure 20 times to extract the top 20 LVs that better discri
 
 
 ## Supplementary material
-
-
-### Top latent variables associated with neutrophils
-
-::: {style="color: red"}
-**NOT FINISHED**
-
-This section aims to show that the top LVs related to neutrophil counts are more correlated to neutrophil counts or esimates than expected by chance.
-Probably I just need to add a proper caption for each figure, and reference them from the main text.
-:::
-
-![
-**Correlation of neutrophil counts with top LVs associated with neutrophils traits.**
-<!-- Description -->
-](images/supplementary_material/lv603_neutrophils/neutrophils_top20_lvs.png "Top
-20 LVs associated with neutrophils"){#fig:supp:neutrophils_top20lvs}
-
-![
-**Significance of neutrophil counts correlation.**
-<!-- Description -->
-](images/supplementary_material/lv603_neutrophils/significance_neutrophil.png "Significance of neutrophil counts
-correlation"){#fig:supp:signif_neutrophils_counts height=3in}
 
 
 ### Gene modules enriched for lipids gene-sets
@@ -1531,12 +1509,12 @@ Table: Significant trait associations of LV434 in eMERGE. {#tbl:sup:emerge_assoc
 <!-- LV434:emerge_traits_assocs:end -->
 
 
-### Top gene modules in the prediction of Niacin as a therapeutic drug
+<!-- ### Top gene modules in the prediction of Niacin as a therapeutic drug
 
 | LV        | Value for Niacin      | Value for atherosclerosis   | Difference   |
 |:----------|:----------------------|:----------------------------|:-------------|
 
-Table: Top gene modules/LVs responsible for predicting Niacin as a therapeutic drug for atherosclerosis. {#tbl:sup:emerge_assocs:lv434}
+Table: Top gene modules/LVs responsible for predicting Niacin as a therapeutic drug for atherosclerosis. {#tbl:sup:emerge_assocs:lv434} -->
 
 
 ### Agreement of consensus clustering partitions with the ensemble by number of clusters

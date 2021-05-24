@@ -32,7 +32,7 @@ celiac
 cgreene
 chemichals
 CHEMIOSMOTIC
-Chronotype
+chronotype
 cis
 coeliac
 colocalization
@@ -41,7 +41,7 @@ colour
 compendia
 concurringly
 COTRANSLATIONAL
-CRISPR
+crispr
 crit
 dataset
 datasets
@@ -66,7 +66,6 @@ eQTLs
 erythematosus
 Erythematous
 erythropoiesis
-esimates
 expiratory
 fastENLOC
 FBXW
@@ -89,7 +88,7 @@ GTEx
 gtn
 GWAS
 Haematocrit
-haemoglobin
+Haemoglobin
 handgrip
 HC
 HCAR
@@ -110,7 +109,7 @@ interpretable
 Intervertebral
 Intra
 Intraocular
-ischaemic
+Ischaemic
 Jurkcat
 KEGG
 keratometry
@@ -122,12 +121,12 @@ levothyroxine
 LINCS
 lipolysis
 lipoprotein
-LIPOPROTEINS
+lipoproteins
 lisinopril
 loadings
 LPL
 luteine
-LV
+lv
 LVs
 malabsorption
 Marylyn
@@ -160,7 +159,7 @@ neurodevelopmental
 neutrophil
 Neutrophill
 neutrophils
-Nicotinic
+nicotinic
 NMR
 organoids
 osteoblasts
@@ -202,7 +201,7 @@ reticulocytes
 revascularizations
 RIBOSOME
 Ritchie
-ROC
+roc
 SCAP
 SCD
 Sensorineural
