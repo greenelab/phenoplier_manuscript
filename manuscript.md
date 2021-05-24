@@ -78,11 +78,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/6303091e6a0413f61fdbc9ffeefaa042f52cd969/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/ce74a8ca02f42e2f086f6e2885127d8b842be658/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/6303091e6a0413f61fdbc9ffeefaa042f52cd969/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/ce74a8ca02f42e2f086f6e2885127d8b842be658/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/6303091e6a0413f61fdbc9ffeefaa042f52cd969/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/ce74a8ca02f42e2f086f6e2885127d8b842be658/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -120,9 +120,9 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/6303091e6a0413f61fdbc9ffeefaa042f52cd969/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/ce74a8ca02f42e2f086f6e2885127d8b842be658/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@6303091](https://github.com/greenelab/phenoplier_manuscript/tree/6303091e6a0413f61fdbc9ffeefaa042f52cd969)
+from [greenelab/phenoplier_manuscript@ce74a8c](https://github.com/greenelab/phenoplier_manuscript/tree/ce74a8ca02f42e2f086f6e2885127d8b842be658)
 on May 24, 2021.
 </em></small>
 

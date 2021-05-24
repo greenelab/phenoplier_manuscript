@@ -41,7 +41,7 @@ colour
 compendia
 concurringly
 COTRANSLATIONAL
-crispr
+CRISPR
 crit
 dataset
 datasets
@@ -108,7 +108,7 @@ INSIG
 interpretable
 Intervertebral
 Intra
-Intraocular
+intraocular
 Ischaemic
 Jurkcat
 KEGG
@@ -121,12 +121,12 @@ levothyroxine
 LINCS
 lipolysis
 lipoprotein
-lipoproteins
+LIPOPROTEINS
 lisinopril
 loadings
 LPL
 luteine
-lv
+LV
 LVs
 malabsorption
 Marylyn
@@ -159,7 +159,7 @@ neurodevelopmental
 neutrophil
 Neutrophill
 neutrophils
-nicotinic
+Nicotinic
 NMR
 organoids
 osteoblasts
@@ -175,7 +175,7 @@ phenomexcan
 PhenoPLIER
 phenotypes
 Pividori
-plier
+PLIER
 polyarthropathies
 polygenic
 PrediXcan
