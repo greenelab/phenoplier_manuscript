@@ -7,7 +7,7 @@
   <meta name="author" content="Milton Pividori" />
   <meta name="author" content="Marylyn D. Ritchie" />
   <meta name="author" content="Casey S. Greene" />
-  <meta name="dcterms.date" content="2021-05-23" />
+  <meta name="dcterms.date" content="2021-05-24" />
   <meta name="keywords" content="gene co-expression, MultiPLIER, PhenomeXcan, TWAS" />
   <title>Integrating transcriptome-wide association studies with gene co-expression patterns</title>
   <style>
@@ -30,8 +30,8 @@
   <meta name="citation_title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
   <meta property="og:title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
   <meta property="twitter:title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
-  <meta name="dc.date" content="2021-05-23" />
-  <meta name="citation_publication_date" content="2021-05-23" />
+  <meta name="dc.date" content="2021-05-24" />
+  <meta name="citation_publication_date" content="2021-05-24" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -57,9 +57,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/d85bc4dc1753feec533d3b024bc590553146e9c1/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/d85bc4dc1753feec533d3b024bc590553146e9c1/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/d85bc4dc1753feec533d3b024bc590553146e9c1/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/0a6aac354cbbab3d3218e8300885c8c653520015/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/0a6aac354cbbab3d3218e8300885c8c653520015/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/0a6aac354cbbab3d3218e8300885c8c653520015/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -82,10 +82,10 @@
 Text in <span style="color: red">red</span>/<span class="red">red</span> are internal comments</span></p>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/phenoplier_manuscript/v/d85bc4dc1753feec533d3b024bc590553146e9c1/">permalink</a>)
+(<a href="https://greenelab.github.io/phenoplier_manuscript/v/0a6aac354cbbab3d3218e8300885c8c653520015/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/d85bc4dc1753feec533d3b024bc590553146e9c1">greenelab/phenoplier_manuscript@d85bc4d</a>
-on May 23, 2021.
+from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/0a6aac354cbbab3d3218e8300885c8c653520015">greenelab/phenoplier_manuscript@0a6aac3</a>
+on May 24, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -474,11 +474,50 @@ Schizophrenia was not significantly associated with any gene module tested in ou
 <!--  -->
 None of these LVs were aligned to prior pathways, which might represent potentially novel transcriptional processes affecting the cardiovascular and central nervous system.</p>
 <h2 id="discussion">Discussion</h2>
-<!-- 
-- the importance to invest more resources in finding gene co-expression patterns to increase the number of potential gene modules
-- one disadvantage is that we have a limited amount of genes, only 6.000 out of 22k in phenomexcan;
-more sophisticated methods for gene co-expression pattern discovery are needed to expand the implications of these analyses and cover more contexts.
-- this limited amount of genes makes our approach biased to already known pathways and mechanisms
+<p>We have introduced a novel computational approach that can map existing TWAS results into a latent gene expression representation to infer cell type-specific effects for complex diseases.
+Leveraging one of the largest gene expression compendia, we integrated gene co-expression patterns on tens of thousands of RNA-seq samples covering different tissues and cell types under a variety of stimuli and developmental stages.
+We showed that this latent representation is robust to capture relevant associations even when known single gene-trait effects are not detected.
+Moreover, projecting gene-trait and gene-drug associations into this common representation can better link pathophysiological processes with the mechanisms of action of drugs, which led to a more accurate prediction of known disease treatments.
+Finally, we showed how the approach could be used to group diseases and traits affected by the same transcriptional processes, which showed disease-specific modules expressed in highly relevant tissues.</p>
+<p>The key difference of our approach with other alternatives is that we can incorporate patterns learned in RNA-seq datasets with tissues and cell types measured in a large variety of conditions.
+<!--  -->
+As we showed, gene modules are expressed in very specific cell types, and this has the advantage of identifying potentially causal cell types with more precision.
+We provide examples of modules clearly expressed in one type of cell (such as adipose in LV246, thyroid in LV155, or ovary in LV66), whereas others seem to be activated across different contexts and thus capture a more realistic multi-tissue scenario for complex diseases (for example, LV136 is associated with coronary artery disease and expressed in fibroblasts, osteoblasts, pancreas, liver, and cardiomyocytes).
+To our knowledge, this is a novel approach for the identification of tissue and cell type-specific effects that is computationally simple to implement.</p>
+<p>Our approach assumes that gene modules with coordinated expression controlled by a perturbed transcriptional process will also manifest coordinated pathological effects on relevant diseases.
+This leads to several limitations related to
+1) the unsupervised learning process that detects modules of co-expressed genes (MultiPLIER),
+and 2) the statistical methods that link SNP-trait to gene-trait associations through eQTL (TWAS/PhenomeXcan).
+<!--  -->
+First, MultiPLIER applies a matrix factorization algorithm to extract latent variables/modules across a large expression dataset.
+These modules could represent real transcriptional processes or technical factors (“batch effects”).
+Although the deconvolution process successfully uses prior knowledge (pathways) to segregate noise from authentic biological patterns, several detected modules could be either novel, in the best scenario, or just noise.
+On the other hand, the underlying factorization method is restricted to linear combinations, which could miss important and more complex co-expression patterns.
+<!--  -->
+Second, TWAS approaches have several limitations that can lead to false positives <span class="citation" data-cites="l6ogswV3 ndd3tW4g">[<a href="#ref-l6ogswV3" role="doc-biblioref">61</a>,<a href="#ref-ndd3tW4g" role="doc-biblioref">62</a>]</span>.
+Like GWAS, which generally detects groups of associated variants in LD (linkage disequilibrium), TWAS usually identifies several genes within the same locus <span class="citation" data-cites="AxVJwanp Z8bvDdVq">[<a href="#ref-Z8bvDdVq" role="doc-biblioref">14</a>,<a href="#ref-AxVJwanp" role="doc-biblioref">63</a>]</span>.
+This is due to sharing of GWAS variants in gene expression models, to correlated expression of nearby genes, or even correlation of their predicted expression due to eQTLs in LD, among others <span class="citation" data-cites="l6ogswV3">[<a href="#ref-l6ogswV3" role="doc-biblioref">61</a>]</span>.
+<!--  -->
+These two factors can combine to produce spurious module-trait associations, but our results suggest that the first aspect (module detection) could be the most problematic and probably more challenging to address.</p>
+<p>Our approach is also in line with previous studies showing that drugs with genetic support are more likely to succeed through the drug development pipeline <span class="citation" data-cites="REXpV7nA 17oeJ0CXy">[<a href="#ref-17oeJ0CXy" role="doc-biblioref">35</a>,<a href="#ref-REXpV7nA" role="doc-biblioref">64</a>]</span>.
+We show that a gene module perspective can more accurately predict known therapeutics and potentially serve as a more effective drug repositioning framework than considering single-gene effects.
+This outcome is explained by the biologically meaningful patterns captured by the latent gene expression space.
+The projection of single gene-trait associations and gene-compound profiles into this common representation translated into a stronger link between pathophysiological processes with the mechanisms of action of drugs.</p>
+<p>Our consensus clustering pipeline combined different algorithms and assumptions on data structure to deliver highly stable groups of traits differentiated by relevant transcriptional processes.
+Considering groups of related diseases was previously shown to be more powerful to detect shared genetic etiology <span class="citation" data-cites="LyJmyoQr veADXImD">[<a href="#ref-LyJmyoQr" role="doc-biblioref">65</a>,<a href="#ref-veADXImD" role="doc-biblioref">66</a>]</span>;
+Our low-dimensional expression representation was used to detect groups of diseases previously suspected to share common pathophysiological mechanisms, such as cardiovascular, autoimmune, and mental diseases.
+The approach, however, also has several limitations related to 1) the data we used for grouping traits and 2) the fit of the clustering algorithms used for highly multi-factorial traits.
+First, we used the S-MultiXcan associations, which only provide the association strength between a gene and a trait, but with no direction of effect.
+This makes groups of traits harder to interpret since we can only infer that transcriptional processes are associated with traits in the same cluster, but they could actually have opposite effects for some traits than others.
+Second, we employed hard-partitioning algorithms (one trait belongs exclusively to one cluster) where the distance between two traits takes into account all gene modules.
+However, it is likely for two complex diseases to share just a few biological processes instead of being similar across all of them.
+These more complex scenarios cannot be captured by our clustering pipeline, as it can be seen for traits in the “complex” branch, which are hard to categorize into a single cluster or branch.
+This limitation was circumvented to some extent by using the hierarchical structure provided by clustering trees.</p>
+<p>The proposed approach will benefit from larger gene expression datasets on different tissues and cell types measured on highly heterogeneous conditions.
+High-quality attributes for RNA-seq samples are critical for a successful application of our method, and we welcome current efforts to improve this situation <span class="citation" data-cites="fnDaLjFy">[<a href="#ref-fnDaLjFy" role="doc-biblioref">67</a>]</span>.
+This will enable the identification of more precise tissue- and cell lineage-specific effects on complex diseases.</p>
+<!--
+- talk about the omnigenic model!
 -->
 <h2 id="conclusions">Conclusions</h2>
 <!--
@@ -846,20 +885,62 @@ R. Ohashi, H. Mu, X. Wang, Q. Yao, C. Chen<br />
 <em>QJM: An International Journal of Medicine</em> (2005-12) <a href="https://doi.org/dn2fgt">https://doi.org/dn2fgt</a> <br />
 DOI: <a href="https://doi.org/10.1093/qjmed/hci136">10.1093/qjmed/hci136</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/16258026">16258026</a></p>
 </div>
+<div id="ref-l6ogswV3">
+<p>61. <strong>Opportunities and challenges for transcriptome-wide association studies</strong> <br />
+Michael Wainberg, Nasa Sinnott-Armstrong, Nicholas Mancuso, Alvaro N. Barbeira, David A. Knowles, David Golan, Raili Ermel, Arno Ruusalepp, Thomas Quertermous, Ke Hao, … Anshul Kundaje<br />
+<em>Nature Genetics</em> (2019-03-29) <a href="https://doi.org/gf3hmr">https://doi.org/gf3hmr</a> <br />
+DOI: <a href="https://doi.org/10.1038/s41588-019-0385-z">10.1038/s41588-019-0385-z</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30926968">30926968</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6777347">PMC6777347</a></p>
+</div>
+<div id="ref-ndd3tW4g">
+<p>62. <strong>Probabilistic colocalization of genetic variants from complex and molecular traits: promise and limitations</strong> <br />
+Abhay Hukku, Milton Pividori, Francesca Luca, Roger Pique-Regi, Hae Kyung Im, Xiaoquan Wen<br />
+<em>The American Journal of Human Genetics</em> (2021-01) <a href="https://doi.org/gj58gg">https://doi.org/gj58gg</a> <br />
+DOI: <a href="https://doi.org/10.1016/j.ajhg.2020.11.012">10.1016/j.ajhg.2020.11.012</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/33308443">33308443</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7820626">PMC7820626</a></p>
+</div>
+<div id="ref-AxVJwanp">
+<p>63. <strong>Transcriptome-wide association study of schizophrenia and chromatin activity yields mechanistic disease insights</strong> <br />
+Alexander Gusev, Nicholas Mancuso, Hyejung Won, Maria Kousi, Hilary K. Finucane, Yakir Reshef, Lingyun Song, Alexias Safi, Steven McCarroll, Benjamin M. Neale, … Schizophrenia Working Group of the Psychiatric Genomics Consortium<br />
+<em>Nature Genetics</em> (2018-04-09) <a href="https://doi.org/gdfdf2">https://doi.org/gdfdf2</a> <br />
+DOI: <a href="https://doi.org/10.1038/s41588-018-0092-1">10.1038/s41588-018-0092-1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29632383">29632383</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5942893">PMC5942893</a></p>
+</div>
+<div id="ref-REXpV7nA">
+<p>64. <strong>The support of human genetic evidence for approved drug indications</strong> <br />
+Matthew R Nelson, Hannah Tipney, Jeffery L Painter, Judong Shen, Paola Nicoletti, Yufeng Shen, Aris Floratos, Pak Chung Sham, Mulin Jun Li, Junwen Wang, … Philippe Sanseau<br />
+<em>Nature Genetics</em> (2015-06-29) <a href="https://doi.org/f3mn52">https://doi.org/f3mn52</a> <br />
+DOI: <a href="https://doi.org/10.1038/ng.3314">10.1038/ng.3314</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26121088">26121088</a></p>
+</div>
+<div id="ref-LyJmyoQr">
+<p>65. <strong>Shared genetic origin of asthma, hay fever and eczema elucidates allergic disease biology</strong> <br />
+Manuel A Ferreira, Judith M Vonk, Hansjörg Baurecht, Ingo Marenholz, Chao Tian, Joshua D Hoffman, Quinta Helmer, Annika Tillander, Vilhelmina Ullemar, Jenny van Dongen, … LifeLines Cohort Study<br />
+<em>Nature Genetics</em> (2017-10-30) <a href="https://doi.org/gchg62">https://doi.org/gchg62</a> <br />
+DOI: <a href="https://doi.org/10.1038/ng.3985">10.1038/ng.3985</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29083406">29083406</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5989923">PMC5989923</a></p>
+</div>
+<div id="ref-veADXImD">
+<p>66. <strong>A genome-wide cross-trait analysis from UK Biobank highlights the shared genetic architecture of asthma and allergic diseases</strong> <br />
+Zhaozhong Zhu, Phil H. Lee, Mark D. Chaffin, Wonil Chung, Po-Ru Loh, Quan Lu, David C. Christiani, Liming Liang<br />
+<em>Nature Genetics</em> (2018-05-21) <a href="https://doi.org/gdpmtn">https://doi.org/gdpmtn</a> <br />
+DOI: <a href="https://doi.org/10.1038/s41588-018-0121-0">10.1038/s41588-018-0121-0</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29785011">29785011</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5980765">PMC5980765</a></p>
+</div>
+<div id="ref-fnDaLjFy">
+<p>67. <strong>Systematic tissue annotations of –omics samples by modeling unstructured metadata</strong> <br />
+Nathaniel T. Hawkins, Marc Maldaver, Anna Yannakopoulos, Lindsay A. Guare, Arjun Krishnan<br />
+<em>Cold Spring Harbor Laboratory</em> (2021-05-20) <a href="https://doi.org/gj2pkc">https://doi.org/gj2pkc</a> <br />
+DOI: <a href="https://doi.org/10.1101/2021.05.10.443525">10.1101/2021.05.10.443525</a></p>
+</div>
 <div id="ref-1CbVoEpNJ">
-<p>61. <strong>The Molecular Signatures Database Hallmark Gene Set Collection</strong> <br />
+<p>68. <strong>The Molecular Signatures Database Hallmark Gene Set Collection</strong> <br />
 Arthur Liberzon, Chet Birger, Helga Thorvaldsdóttir, Mahmoud Ghandi, Jill P. Mesirov, Pablo Tamayo<br />
 <em>Cell Systems</em> (2015-12) <a href="https://doi.org/gf78hq">https://doi.org/gf78hq</a> <br />
 DOI: <a href="https://doi.org/10.1016/j.cels.2015.12.004">10.1016/j.cels.2015.12.004</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26771021">26771021</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4707969">PMC4707969</a></p>
 </div>
 <div id="ref-3oFmSTW2">
-<p>62. <strong>Human pluripotent stem cell-derived neural constructs for predicting neural toxicity</strong> <br />
+<p>69. <strong>Human pluripotent stem cell-derived neural constructs for predicting neural toxicity</strong> <br />
 Michael P. Schwartz, Zhonggang Hou, Nicholas E. Propson, Jue Zhang, Collin J. Engstrom, Vitor Santos Costa, Peng Jiang, Bao Kim Nguyen, Jennifer M. Bolin, William Daly, … James A. Thomson<br />
 <em>Proceedings of the National Academy of Sciences</em> (2015-10-06) <a href="https://doi.org/f7vpzd">https://doi.org/f7vpzd</a> <br />
 DOI: <a href="https://doi.org/10.1073/pnas.1516645112">10.1073/pnas.1516645112</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26392547">26392547</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4603492">PMC4603492</a></p>
 </div>
 <div id="ref-VKYS05n1">
-<p>63. <strong>Homo sapiens (ID 232177) - BioProject - NCBI</strong> <a href="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA232177">https://www.ncbi.nlm.nih.gov/bioproject/PRJNA232177</a></p>
+<p>70. <strong>Homo sapiens (ID 232177) - BioProject - NCBI</strong> <a href="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA232177">https://www.ncbi.nlm.nih.gov/bioproject/PRJNA232177</a></p>
 </div>
 </div>
 <h2 id="methods">Methods</h2>
@@ -868,7 +949,7 @@ DOI: <a href="https://doi.org/10.1073/pnas.1516645112">10.1073/pnas.1516645112</
 The approach applies the pathway-level information extractor method (PLIER) <span class="citation" data-cites="Ki2ij7zE">[<a href="#ref-Ki2ij7zE" role="doc-biblioref">22</a>]</span>, which performs unsupervised learning using prior knowledge (cannonical pathways) to reduce technical noise.
 Via a matrix factorization approach, PLIER deconvolutes the gene expression data into a set of latent variables (LV), where each represents a gene module (i.e. a set of genes with coordinated expression patterns).
 This reduced the data dimensionality into 987 latent variables.</p>
-<p>Given a gene expression dataset <span class="math inline">\(\mathbf{Y}^{n \times p}\)</span> with <span class="math inline">\(n\)</span> genes and <span class="math inline">\(p\)</span> conditions and a prior knowledge matrix <span class="math inline">\(\mathbf{C} \in \{0,1\}^{n \times m}\)</span> for <span class="math inline">\(m\)</span> gene sets (so that <span class="math inline">\(\mathbf{C}_{ij} = 1\)</span> if gene <span class="math inline">\(i\)</span> belongs to gene set <span class="math inline">\(j\)</span>), (e.g., gene sets from MSigDB <span class="citation" data-cites="1CbVoEpNJ">[<a href="#ref-1CbVoEpNJ" role="doc-biblioref">61</a>]</span>), PLIER finds <span class="math inline">\(\mathbf{U}\)</span>, <span class="math inline">\(\mathbf{Z}\)</span>, and <span class="math inline">\(\mathbf{B}\)</span> minimizing</p>
+<p>Given a gene expression dataset <span class="math inline">\(\mathbf{Y}^{n \times p}\)</span> with <span class="math inline">\(n\)</span> genes and <span class="math inline">\(p\)</span> conditions and a prior knowledge matrix <span class="math inline">\(\mathbf{C} \in \{0,1\}^{n \times m}\)</span> for <span class="math inline">\(m\)</span> gene sets (so that <span class="math inline">\(\mathbf{C}_{ij} = 1\)</span> if gene <span class="math inline">\(i\)</span> belongs to gene set <span class="math inline">\(j\)</span>), (e.g., gene sets from MSigDB <span class="citation" data-cites="1CbVoEpNJ">[<a href="#ref-1CbVoEpNJ" role="doc-biblioref">68</a>]</span>), PLIER finds <span class="math inline">\(\mathbf{U}\)</span>, <span class="math inline">\(\mathbf{Z}\)</span>, and <span class="math inline">\(\mathbf{B}\)</span> minimizing</p>
 <p><span id="eq:met:plier_func" class="eqnos"><span class="math display">\[
 ||\mathbf{Y} - \mathbf{Z}\mathbf{B}||^{2}_{F} + \lambda_1 ||\mathbf{Z} - \mathbf{C}\mathbf{U}||^{2}_{F} + \lambda_2 ||\mathbf{B}||^{2}_{F} + \lambda_3 ||\mathbf{U}||_{L^1}
 \]</span><span class="eqnos-number">(1)</span></span> </p>
@@ -2036,7 +2117,7 @@ Probably I just need to add a proper caption for each figure, and reference them
 <figure>
 <img src="images/lvs_analysis/lv844/lv844-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 20:</span> <strong>Cell types for LV844.</strong>
 <!--  -->
-<code class="red">Note</code> “Cell types from brain” come from <span class="citation" data-cites="3oFmSTW2">[<a href="#ref-3oFmSTW2" role="doc-biblioref">62</a>]</span>, treated with different chemichals; I don’t have enough information to separate cell types.
+<code class="red">Note</code> “Cell types from brain” come from <span class="citation" data-cites="3oFmSTW2">[<a href="#ref-3oFmSTW2" role="doc-biblioref">69</a>]</span>, treated with different chemichals; I don’t have enough information to separate cell types.
 <!--  --></figcaption>
 </figure>
 </div>
@@ -2990,7 +3071,7 @@ Probably I just need to add a proper caption for each figure, and reference them
 <figure>
 <img src="images/lvs_analysis/lv136/lv136-cell_types.svg" style="width:80.0%" alt="" /><figcaption><span>Figure 24:</span> <strong>Cell types for LV136.</strong>
 <!--  -->
-Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours or more <span class="citation" data-cites="VKYS05n1">[<a href="#ref-VKYS05n1" role="doc-biblioref">63</a>]</span>;</figcaption>
+Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours or more <span class="citation" data-cites="VKYS05n1">[<a href="#ref-VKYS05n1" role="doc-biblioref">70</a>]</span>;</figcaption>
 </figure>
 </div>
 <!-- LV136:phenomexcan_traits_assocs:start -->

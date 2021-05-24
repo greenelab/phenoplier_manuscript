@@ -5,7 +5,7 @@ author-meta:
 - Casey S. Greene
 bibliography:
 - content/manual-references.json
-date-meta: '2021-05-23'
+date-meta: '2021-05-24'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -24,9 +24,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Integrating transcriptome-wide association studies with gene co-expression patterns" />
 
-  <meta name="dc.date" content="2021-05-23" />
+  <meta name="dc.date" content="2021-05-24" />
 
-  <meta name="citation_publication_date" content="2021-05-23" />
+  <meta name="citation_publication_date" content="2021-05-24" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -78,11 +78,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/d85bc4dc1753feec533d3b024bc590553146e9c1/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/0a6aac354cbbab3d3218e8300885c8c653520015/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/d85bc4dc1753feec533d3b024bc590553146e9c1/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/0a6aac354cbbab3d3218e8300885c8c653520015/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/d85bc4dc1753feec533d3b024bc590553146e9c1/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/0a6aac354cbbab3d3218e8300885c8c653520015/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -120,10 +120,10 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/d85bc4dc1753feec533d3b024bc590553146e9c1/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/0a6aac354cbbab3d3218e8300885c8c653520015/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@d85bc4d](https://github.com/greenelab/phenoplier_manuscript/tree/d85bc4dc1753feec533d3b024bc590553146e9c1)
-on May 23, 2021.
+from [greenelab/phenoplier_manuscript@0a6aac3](https://github.com/greenelab/phenoplier_manuscript/tree/0a6aac354cbbab3d3218e8300885c8c653520015)
+on May 24, 2021.
 </em></small>
 
 ## Authors
@@ -572,11 +572,61 @@ None of these LVs were aligned to prior pathways, which might represent potentia
 
 ## Discussion
 
-<!-- 
-- the importance to invest more resources in finding gene co-expression patterns to increase the number of potential gene modules
-- one disadvantage is that we have a limited amount of genes, only 6.000 out of 22k in phenomexcan;
-more sophisticated methods for gene co-expression pattern discovery are needed to expand the implications of these analyses and cover more contexts.
-- this limited amount of genes makes our approach biased to already known pathways and mechanisms
+We have introduced a novel computational approach that can map existing TWAS results into a latent gene expression representation to infer cell type-specific effects for complex diseases.
+Leveraging one of the largest gene expression compendia, we integrated gene co-expression patterns on tens of thousands of RNA-seq samples covering different tissues and cell types under a variety of stimuli and developmental stages.
+We showed that this latent representation is robust to capture relevant associations even when known single gene-trait effects are not detected.
+Moreover, projecting gene-trait and gene-drug associations into this common representation can better link pathophysiological processes with the mechanisms of action of drugs, which led to a more accurate prediction of known disease treatments.
+Finally, we showed how the approach could be used to group diseases and traits affected by the same transcriptional processes, which showed disease-specific modules expressed in highly relevant tissues.
+
+
+The key difference of our approach with other alternatives is that we can incorporate patterns learned in RNA-seq datasets with tissues and cell types measured in a large variety of conditions.
+<!--  -->
+As we showed, gene modules are expressed in very specific cell types, and this has the advantage of identifying potentially causal cell types with more precision.
+We provide examples of modules clearly expressed in one type of cell (such as adipose in LV246, thyroid in LV155, or ovary in LV66), whereas others seem to be activated across different contexts and thus capture a more realistic multi-tissue scenario for complex diseases (for example, LV136 is associated with coronary artery disease and expressed in fibroblasts, osteoblasts, pancreas, liver, and cardiomyocytes).
+To our knowledge, this is a novel approach for the identification of tissue and cell type-specific effects that is computationally simple to implement.
+
+
+Our approach assumes that gene modules with coordinated expression controlled by a perturbed transcriptional process will also manifest coordinated pathological effects on relevant diseases.
+This leads to several limitations related to
+1) the unsupervised learning process that detects modules of co-expressed genes (MultiPLIER),
+and 2) the statistical methods that link SNP-trait to gene-trait associations through eQTL (TWAS/PhenomeXcan).
+<!--  -->
+First, MultiPLIER applies a matrix factorization algorithm to extract latent variables/modules across a large expression dataset.
+These modules could represent real transcriptional processes or technical factors ("batch effects").
+Although the deconvolution process successfully uses prior knowledge (pathways) to segregate noise from authentic biological patterns, several detected modules could be either novel, in the best scenario, or just noise.
+On the other hand, the underlying factorization method is restricted to linear combinations, which could miss important and more complex co-expression patterns.
+<!--  -->
+Second, TWAS approaches have several limitations that can lead to false positives [@doi:10.1038/s41588-019-0385-z; @doi:10.1016/j.ajhg.2020.11.012].
+Like GWAS, which generally detects groups of associated variants in LD (linkage disequilibrium), TWAS usually identifies several genes within the same locus [@doi:10.1038/s41588-018-0092-1; @doi:10.1038/ng.3367].
+This is due to sharing of GWAS variants in gene expression models, to correlated expression of nearby genes, or even correlation of their predicted expression due to eQTLs in LD, among others [@doi:10.1038/s41588-019-0385-z].
+<!--  -->
+These two factors can combine to produce spurious module-trait associations, but our results suggest that the first aspect (module detection) could be the most problematic and probably more challenging to address.
+
+
+Our approach is also in line with previous studies showing that drugs with genetic support are more likely to succeed through the drug development pipeline [@doi:10.1038/ng.3314; @doi:10.1038/nn.4618].
+We show that a gene module perspective can more accurately predict known therapeutics and potentially serve as a more effective drug repositioning framework than considering single-gene effects.
+This outcome is explained by the biologically meaningful patterns captured by the latent gene expression space.
+The projection of single gene-trait associations and gene-compound profiles into this common representation translated into a stronger link between pathophysiological processes with the mechanisms of action of drugs.
+
+
+Our consensus clustering pipeline combined different algorithms and assumptions on data structure to deliver highly stable groups of traits differentiated by relevant transcriptional processes.
+Considering groups of related diseases was previously shown to be more powerful to detect shared genetic etiology [@doi:10.1038/ng.3985; @doi:10.1038/s41588-018-0121-0];
+Our low-dimensional expression representation was used to detect groups of diseases previously suspected to share common pathophysiological mechanisms, such as cardiovascular, autoimmune, and mental diseases.
+The approach, however, also has several limitations related to 1) the data we used for grouping traits and 2) the fit of the clustering algorithms used for highly multi-factorial traits.
+First, we used the S-MultiXcan associations, which only provide the association strength between a gene and a trait, but with no direction of effect.
+This makes groups of traits harder to interpret since we can only infer that transcriptional processes are associated with traits in the same cluster, but they could actually have opposite effects for some traits than others.
+Second, we employed hard-partitioning algorithms (one trait belongs exclusively to one cluster) where the distance between two traits takes into account all gene modules.
+However, it is likely for two complex diseases to share just a few biological processes instead of being similar across all of them.
+These more complex scenarios cannot be captured by our clustering pipeline, as it can be seen for traits in the "complex" branch, which are hard to categorize into a single cluster or branch.
+This limitation was circumvented to some extent by using the hierarchical structure provided by clustering trees.
+
+
+The proposed approach will benefit from larger gene expression datasets on different tissues and cell types measured on highly heterogeneous conditions.
+High-quality attributes for RNA-seq samples are critical for a successful application of our method, and we welcome current efforts to improve this situation [@doi:10.1101/2021.05.10.443525].
+This will enable the identification of more precise tissue- and cell lineage-specific effects on complex diseases.
+
+<!--
+- talk about the omnigenic model!
 -->
 
 
