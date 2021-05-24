@@ -32,7 +32,7 @@ celiac
 cgreene
 chemichals
 CHEMIOSMOTIC
-chronotype
+Chronotype
 cis
 coeliac
 colocalization
@@ -41,7 +41,7 @@ colour
 compendia
 concurringly
 COTRANSLATIONAL
-crispr
+CRISPR
 crit
 dataset
 datasets
@@ -75,7 +75,7 @@ fibroblasts
 FinnGen
 func
 GBMF
-genotype
+Genotype
 glioma
 GMM
 Golabi
@@ -89,7 +89,7 @@ GTEx
 gtn
 GWAS
 Haematocrit
-Haemoglobin
+haemoglobin
 handgrip
 HC
 HCAR
@@ -109,7 +109,7 @@ INSIG
 interpretable
 Intervertebral
 Intra
-intraocular
+Intraocular
 ischaemic
 Jurkcat
 KEGG
@@ -127,7 +127,7 @@ lisinopril
 loadings
 LPL
 luteine
-lv
+LV
 LVs
 malabsorption
 Marylyn
@@ -233,5 +233,4 @@ TRIACYLGLYCEROL
 UBE
 UMAP
 unadjusted
-underpowered
 uninodular
