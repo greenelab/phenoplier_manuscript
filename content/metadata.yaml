@@ -1,5 +1,5 @@
 ---
-title: "Integrating transcriptome-wide association studies with gene co-expression patterns"
+title: "Projecting genetic associations and drug transcriptional profiles through gene expression patterns reveal disease etiology and potential mechanisms for therapeutic strategies"
 keywords:
   - gene co-expression
   - MultiPLIER
@@ -7,8 +7,8 @@ keywords:
   - TWAS
 lang: en-US
 authors:
-  - github: miltondp
-    name: Milton Pividori
+  - name: Milton Pividori
+    github: miltondp
     initials: MP
     orcid: 0000-0002-3035-4403
     twitter: miltondp
@@ -18,6 +18,55 @@ authors:
     funders:
       - The Gordon and Betty Moore Foundation GBMF 4552
       - The National Human Genome Research Institute (R01 HG010067)
+  
+  - name: Sumei Lu
+    affiliations:
+      - Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
+
+  - name: Binglan Li
+    affiliations:
+      - Department of Biomedical Data Science, Stanford University, Stanford, CA, USA
+
+  - name: Chun Su
+    affiliations:
+      - Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
+
+  - name: Matthew E. Johnson
+    affiliations:
+      - Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
+
+  - name: Wei-Qi Wei
+    affiliations:
+      - Vanderbilt University Medical Center
+
+  - name: Qiping Feng
+    affiliations:
+      - Vanderbilt University Medical Center
+
+  - name: Bahram Namjou
+    affiliations:
+      - Cincinnati Children's Hospital Medical Center
+
+  - name: Krzysztof Kiryluk
+    affiliations:
+      - Columbia University
+
+  - name: Iftikhar Kullo
+    affiliations:
+      - Mayo Clinic
+
+  - name: Yuan Luo
+    affiliations:
+      - Northwestern University
+
+  - name: Blair D. Sullivan
+    affiliations:
+      - School of Computing, University of Utah, Salt Lake City, UT, USA
+
+  - name: Carsten Skarke
+    affiliations:
+      - Institute for Translational Medicine and Therapeutics, Department of Medicine, University of Pennsylvania, Philadelphia, PA, USA
+
   - name: Marylyn D. Ritchie
     initials: MDR
     orcid: 0000-0002-1208-1720
@@ -25,19 +74,25 @@ authors:
     email: marylyn@pennmedicine.upenn.edu
     affiliations:
       - Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
-    # funders:
-    #   - The Gordon and Betty Moore Foundation GBMF 4552
-    #   - The National Human Genome Research Institute (R01 HG010067)
-    #   - The National Cancer Institute (R01 CA237170)
-  - github: cgreene
-    name: Casey S. Greene
+
+  - name: Struan F.A. Grant
+    email: grants@chop.edu
+    orcid: 0000-0003-2025-5302
+    twitter: STRUANGRANT
+    affiliations:
+      - Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
+      - Department of Pediatrics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA
+      - Division of Human Genetics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
+
+  - name: Casey S. Greene
+    github: cgreene
     initials: CSG
     orcid: 0000-0001-8713-9213
     twitter: GreeneScientist
     email: casey.s.greene@cuanschutz.edu
     affiliations:
-      - Center for Health AI, University of Colorado School of Medicine, Aurora, CO, 80045, USA
-      - Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, CO, 80045, USA
+      - Center for Health AI, University of Colorado School of Medicine, Aurora, CO 80045, USA
+      - Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, CO 80045, USA
     funders:
       - The Gordon and Betty Moore Foundation (GBMF 4552)
       - The National Human Genome Research Institute (R01 HG010067)
