@@ -35,10 +35,10 @@ celiac
 cgreene
 chemichals
 CHEMIOSMOTIC
-chronotype
+Chronotype
 Chun
 cis
-Coeliac
+coeliac
 colocalization
 colocalized
 colour
@@ -79,7 +79,7 @@ fibroblasts
 FinnGen
 func
 GBMF
-genotype
+Genotype
 glioma
 GMM
 Golabi
@@ -92,8 +92,9 @@ greying
 GTEx
 gtn
 GWAS
+GWASs
 Haematocrit
-haemoglobin
+Haemoglobin
 handgrip
 HC
 HCAR
@@ -102,6 +103,7 @@ heatmap
 HEK
 hemathological
 hematocrit
+HepG
 HILPDA
 HMGCR
 hypercholesterolemia
@@ -114,7 +116,7 @@ INSIG
 interpretable
 Intervertebral
 Intra
-Intraocular
+intraocular
 ischaemic
 Jurkcat
 KEGG
@@ -136,7 +138,7 @@ loadings
 LPL
 Luo
 luteine
-LV
+lv
 LVs
 malabsorption
 Marylyn
@@ -167,10 +169,11 @@ myelopathy
 myxoedema
 Namjou
 neurodevelopmental
+neuropsychiatric
 neutrophil
 Neutrophill
 neutrophils
-Nicotinic
+nicotinic
 NMR
 organoids
 osteoblasts
@@ -186,7 +189,8 @@ phenomexcan
 PhenoPLIER
 phenotypes
 Pividori
-PLIER
+pleiotropy
+plier
 polyarthropathies
 polygenic
 PrediXcan
@@ -225,7 +229,7 @@ SLE
 SNP
 SOX
 sphered
-spirometry
+Spirometry
 Spondylosis
 SRP
 SRPR
@@ -247,6 +251,7 @@ transcriptome
 transcriptomes
 Translational
 TRIACYLGLYCEROL
+TWASs
 UBE
 UMAP
 unadjusted
