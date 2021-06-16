@@ -151,11 +151,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/e136dd1112a48c11164c08aec5d8b8e0a0ff4c1a/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/02309e9e488ccd5e9bc9585109b2b7e8d86e0ea4/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/e136dd1112a48c11164c08aec5d8b8e0a0ff4c1a/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/02309e9e488ccd5e9bc9585109b2b7e8d86e0ea4/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/e136dd1112a48c11164c08aec5d8b8e0a0ff4c1a/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/02309e9e488ccd5e9bc9585109b2b7e8d86e0ea4/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -193,9 +193,9 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/e136dd1112a48c11164c08aec5d8b8e0a0ff4c1a/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/02309e9e488ccd5e9bc9585109b2b7e8d86e0ea4/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@e136dd1](https://github.com/greenelab/phenoplier_manuscript/tree/e136dd1112a48c11164c08aec5d8b8e0a0ff4c1a)
+from [greenelab/phenoplier_manuscript@02309e9](https://github.com/greenelab/phenoplier_manuscript/tree/02309e9e488ccd5e9bc9585109b2b7e8d86e0ea4)
 on June 16, 2021.
 </em></small>
 
@@ -309,10 +309,10 @@ on June 16, 2021.
 
 ## Abstract {.page_break_before}
 
-<!-- 
+<!-- Tissue specificity is a key feature of human diseases. In this context, determining how genes influence these complex phenotypes requires mechanistically understanding expression regulation across different cell types, which in turn should lead to improved treatments. Integrating functional and GWAS data has improved the identification of these transcriptional mechanisms which, when dysregulated, commonly result in tissue- and cell lineage-specific pathology. However, widespread gene pleiotropy and polygenic traits reveal the highly interconnected nature of transcriptional networks, which complicates the interpretation of genetic effects and hampers translational efforts. We have developed a polygenic approach that maps both gene-trait associations and drug-transcriptional responses into a common representation based on tissue-specific gene co-expression patterns.
 
- -->
- 
+We integrated thousands of gene-trait associations (using TWAS from PhenomeXcan) and transcriptional profiles of drugs (LINCS L1000) into a low-dimensional representation learned from public gene expression data on tens of thousands of RNA-seq samples (recount2). This low-dimensional space comprised features representing groups of genes (gene modules) with coordinated expression across different tissues and cell types. When mapping gene-trait associations to this reduced expression space, we observed that diseases were significantly associated with gene modules expressed in relevant cell types, such as hypothyroidism with T cells and thyroid, coronary artery disease with cardiomyocytes, hypertension and lipids with adipose tissue, and heart problems with heart ventricle and muscle cells. We replicated gene module associations with cardiovascular and autoimmune diseases in the Electronic Medical Records and Genomics (eMERGE) network. We also performed a CRISPR-screen to analyze lipid regulation in HepG2 cells and observed more consistent trait associations with modules than we observe with individual genes. Compared to a single-gene approach, our module-based method also better predicted FDA-approved drug-disease links by capturing tissue-specific pathophysiological mechanisms linked with the mechanisms of action of drugs (e.g. niacin with cardiovascular traits via a known immune mechanism). Exploring the phenotype-module space also revealed stable trait clusters across different resolutions, including a complex branch involving lipids with cardiovascular, autoimmune, and neuropsychiatric disorders. We offer a novel gene module approach to enhance the understanding of complex diseases and their therapeutic modalities. -->
+
 
 ## Introduction
 
@@ -331,7 +331,7 @@ Moreover, widespread gene pleiotropy and polygenic traits reveals the highly int
 Consequently, this complicates the interpretation of genetic effects and hampers translational efforts.
 
 
-We propose a polygenic approach that maps both gene-trait associations and drug-transcriptional responses into a common representation for a joint analysis.
+We propose PhenoPLIER, a polygenic approach that maps both gene-trait associations and drug-transcriptional responses into a common representation for a joint analysis.
 For this, we integrated more than 4,000 gene-trait associations (using TWAS from PhenomeXcan [@doi:10.1126/sciadv.aba2083]) and transcriptional profiles of drugs (LINCS L1000 [@doi:10.1016/j.cell.2017.10.049]) into a low-dimensional space learned from public gene expression data on tens of thousands of RNA-seq samples (recount2 [@doi:10.1016/j.cels.2019.04.003; @doi:10.1038/nbt.3838]).
 We used a space defined by a computational approach [@doi:10.1038/s41592-019-0456-1] that learns recurrent gene co-expression patterns with certain sparsity constraints and preferences for those that align with prior knowledge (pathways).
 This low-dimensional space comprised features representing groups of genes (gene modules) with coordinated expression across different tissues and cell types.
@@ -355,66 +355,48 @@ Air pollution linked to neurodegeneration markers
 -->
 
 
-### Framework for the integration of TWAS with gene co-expression patterns
+### PhenoPLIER: an integration framework based on gene co-expression patterns
 
 ![
 **Schematic of the PhenoPLIER framework.**
-<!--  -->
-**a)** The integration process between gene co-expression patterns from MultiPLIER (top) and TWAS results from PhenomeXcan.
-PhenoPLIER projects gene-based association results on thousands of traits to a latent space learned from large gene expression datasets.
+**a)** The integration process between gene co-expression patterns from MultiPLIER (top) and TWAS results from PhenomeXcan (bottom).
+PhenoPLIER projects gene-trait associations to a latent space learned from large gene expression datasets.
 The process generates matrix $\mathbf{\hat{M}}$, where each trait is now described by latent variables (LV) or gene modules.
-<!--  -->
-**b)** After the integration process, we found that neutrophil counts and other white blood cells (bottom) were ranked among the top 10 traits for an LV that was termed a neutrophil signature in the original MultiPLIER study.
-Genes in this LV are expressed in relevant cell types (top).
-<!--  -->
+**b)** After the integration process, we found that neutrophil counts and other white blood cells (bottom) were ranked among the top 10 traits for LV603, which was termed a neutrophil signature in the original MultiPLIER study.
+Genes in LV603 were expressed in relevant cell types (top).
 PBMC: peripheral blood mononuclear cells;
 mDCs: myeloid dendritic cells.
-<!--  -->
 ](images/entire_process/entire_process.svg "PhenoPLIER framework"){#fig:entire_process width="100%"}
 
 
-In Figure @fig:entire_process, we show the main components of PhenoPLIER, our framework to integrate TWAS and gene co-expression patterns.
-The framework combines TWAS results with gene co-expression patterns by projecting gene-trait associations on a latent gene expression representation.
-We used PhenomeXcan [@doi:10.1126/sciadv.aba2083], a massive TWAS resource on the UK Biobank [@doi:10.1038/s41586-018-0579-z] and other cohorts that provides results for 4,091 different diseases and traits.
-The latent gene expression representation was obtained by applying MultiPLIER [@doi:10.1016/j.cels.2019.04.003], an unsupervised learning approach, on recount2 [@doi:10.1038/nbt.3838].
-Each of the 987 latent variables (LV) represents a gene module, essentially a group of genes with coordinated expression patterns (i.e., expressed together in the same tissues and cell types).
-Since modules might represent a functional set of genes regulated by the same transcriptional program [@doi:10.1186/1471-2164-7-187; @doi:10.1186/s13059-019-1835-8], the projection of TWAS results into this latent space might provide context for their interpretation (see Methods).
-<!--  -->
-Our approach translates gene-trait associations to a gene module-trait score, allowing us to explore how different traits and diseases related to modules expressed in specific cell types and tissues, even under different developmental stages or stimuli.
-<!--  -->
-This is possible because the MultiPLIER models also provide the experimental conditions (represented by matrix $\mathbf{B}$ in Figure @fig:entire_process a) in which genes in a module are concurringly expressed.
+PhenoPLIER combines TWAS results with gene co-expression patterns by projecting gene-trait associations on a latent gene expression representation (Figure @fig:entire_process).
+We used PhenomeXcan [@doi:10.1126/sciadv.aba2083], a TWAS resource for the UK Biobank [@doi:10.1038/s41586-018-0579-z] and other cohorts that provides results for 4,091 different diseases and traits.
+We obtained a latent gene expression representation from MultiPLIER [@doi:10.1016/j.cels.2019.04.003], an unsupervised learning approach applied to recount2 [@doi:10.1038/nbt.3838] (a gene expression dataset including RNA-seq data on a huge and heterogeneous number of samples, including rare diseases, cell types on specific differentiation stages, or under different stimuli, among others).
+Each of the 987 latent variables (LV) represents a gene module, essentially a group of genes with coordinated expression patterns (i.e., expressed together in the same tissues and cell types as a functional unit).
+Since LVs might represent a functional set of genes regulated by the same transcriptional program [@doi:10.1186/1471-2164-7-187; @doi:10.1186/s13059-019-1835-8], the projection of TWAS results into this latent space could provide context for their interpretation.
+PhenoPLIER translates gene-trait associations to an LV-trait score, linking different traits and diseases to LVs representing specific cell types and tissues, even at specific developmental stages or under distinct stimuli.
+Examining these LVs is possible because the MultiPLIER models link to samples, which may be annotated for experimental conditions (represented by matrix $\mathbf{B}$ in Figure @fig:entire_process a) in which genes in an LV are expressed.
 
 
-In the original MultiPLIER study, the authors found an LV significantly associated with a known neutrophil pathway and highly correlated with neutrophil estimates from gene expression.
-<!--  -->
-We analyzed this LV using our approach (Figure @fig:entire_process b), and found that
-1) neutrophil counts and other white blood cell traits from PhenomeXcan were ranked among the top 10 traits for this LV,
-and 2) that the genes in this LV were expressed in neutrophil and other relevant cells.
-<!--  -->
-Moreover, using a generalized least squares approach similar to the gene-property analysis in MAGMA [@doi:10.1371/journal.pcbi.1004219], we found that gene weights in this LV were predictive of gene associations for neutrophil count and percentage (FDR < 0.01) (see Methods).
-<!--  -->
+In the original MultiPLIER study, the authors found LV603 to be significantly associated with a known neutrophil pathway and highly correlated with neutrophil estimates from gene expression [@doi:10.1186/s13059-016-1070-5].
+We analyzed LV603 using PhenoPLIER (Figure @fig:entire_process b) and found that neutrophil counts and other white blood cell traits were ranked among the top 10 traits for this LV, suggesting a high degree of internal consistency.
+We adapted the gene-property approach from MAGMA [@doi:10.1371/journal.pcbi.1004219] for LVs and found that gene weights in this LV were predictive of gene associations for neutrophil abundance (FDR < 0.01).
 These initial results strongly suggested that shared patterns exist in the gene expression space (which has no GTEx samples) and the TWAS space (with gene models trained using GTEx v8);
-the approach also allows inferring the context-specific effects of gene modules on complex traits.
-<!--  -->
-We also show how the approach can aid translational efforts by mapping pharmacological perturbations to this latent space, enabling us to observe which compounds affect the transcriptional activity of gene modules.
+the approach linked transcriptional patterns from large and different collections of data, including tissue samples and perturbation experiments, to complex traits.
 
 
-### Genes causally involved in lipids accumulation are associated with relevant traits and tissues
+### LVs link genes that alter lipid accumulation with relevant traits and tissues
 
-We found 271 genes associated with lipids accumulation by using a genome-wide lentiviral pooled CRISPR-Cas9 library targeting 19,114 genes in the human genome (see Methods).
+We performed a fluorescence-based CRISPR-Cas9 screen for genes associated with lipid accumulation.
+We found 271 genes associated with lipids accumulation by using a genome-wide lentiviral pooled CRISPR-Cas9 library targeting 19,114 genes in the human genome in the HepG2 cell line.
 From these, we identified two gene-sets that either caused a decrease (96 genes in total, with eight high-confidence genes: *BLCAP*, *FBXW7*, *INSIG2*, *PCYT2*, *PTEN*, *SOX9*, *TCF7L2*, *UBE2J2*) or an increase of lipids (175 genes in total, with six high-confidence genes: *ACACA*, *DGAT2*, *HILPDA*, *MBTPS1*, *SCAP*, *SRPR*) (Supplementary File 1).
-Four gene modules were significantly enriched for these two gene-sets (FDR<0.05) (Supplementary Table @tbl:sup:lipids_crispr:modules_enriched).
-<!--  -->
-Next, we used these two lipids gene-sets to assess whether single gene-trait associations in PhenomeXcan recapitulated lipids-related traits.
-We show that our gene module-based approach can 1) robustly identify genetic associations even when known single-gene associations are not significant and 2) contextualize these results by identifying tissue and cell type-specific associations.
+Four LVs were significantly enriched for these lipid-altering gene-sets (FDR<0.05) (Supplementary Table @tbl:sup:lipids_crispr:modules_enriched).
 
 
-First, we assessed the genes' effects on all phenotypes by adding their $p$-values (as $z$-scores) and obtaining a ranked list of traits.
+First, for each lipid-altering gene-set, we assessed the genes' effects on all phenotypes by adding their $p$-values (transformed to $z$-scores) and obtaining a ranked list of traits.
 The top associated traits for genes in the decreasing-lipids gene-set were highly relevant to lipid levels, such as hypertension, diastolic and systolic blood pressure, and vascular diseases, including also asthma and lung function (Supplementary Table @tbl:sup:single_genes:lipids_decreasing:top_traits).
-We performed the same operation for our gene module-based approach by considering 24 modules nominally enriched (unadjusted $p$-value < 0.05) with the decreasing-lipids gene-set (Gene-set enrichment analysis).
-In this case, we also found highly lipids-relevant traits among the top 25, including hypertension, blood pressure, cardiometabolic diseases like atherosclerosis, and celiac disease (Supplementary Table @tbl:sup:modules:lipids_decreasing:top_traits).
-This is particularly relevant because each of the 24 modules aggregated a specific weighted combination of almost 3,000 genes' $z$-scores across all traits.
-Thus, aggregating the effects of this number of genes and obtaining top-ranked lipids-relevant traits is unlikely to happen by chance ($p$-value < 0.01), suggesting that gene co-expression patterns are concordant with gene-trait associations.
+We performed the same operation for our LV-based approach by considering 24 LVs nominally enriched (unadjusted $p$-value < 0.05) with the decreasing-lipids gene-set by using Fast Gene Set Enrichment Analysis (FGSEA) [@doi:10.1101/060012].
+In this case, we also found lipids-related traits among the top 25, including hypertension, blood pressure, cardiometabolic diseases like atherosclerosis, and celiac disease (Supplementary Table @tbl:sup:modules:lipids_decreasing:top_traits).
 
 
 ![
@@ -426,7 +408,7 @@ In the $x$-axis, cell types/tissues are sorted by the maximum value.
 <!--  -->
 **b)** Gene-trait associations (S-MultiXcan; thresholded at -log($p$)=10) and colocalization probability (fastENLOC) for the top traits in LV246.
 The top 40 genes in LV246 are shown, sorted by their module weight, from largest (top gene *SCD*) to smallest (gene *FAR2*);
-*DGAT2* and *ACACA*, in bold, are two of the six high-confidence genes in the increasing-lipids gene set from our CRISPR analyses.
+*DGAT2* and *ACACA*, in bold, are two of the six high-confidence genes in the increasing-lipids gene set from our HepG2 CRISPR analyses.
 <!--  -->
 SGBS: Simpson Golabi Behmel Syndrome;
 CH2DB: CH<sub>2</sub> groups to double bonds ratio;
@@ -437,27 +419,26 @@ RCP: locus regional colocalization probability.
 ](images/lvs_analysis/lv246/lv246.svg "LV246 TWAS plot"){#fig:lv246 width="100%"}
 
 
-When we considered the increasing-lipids set, genes and modules were associated with a more diverse set of traits, such as blood count tests, impedance measures, and bone-densitometry (Supplementary Tables @tbl:sup:single_genes:lipids_increasing:top_traits and @tbl:sup:modules:lipids_increasing:top_traits).
-Additionally, gene modules were also associated with lung function, arterial stiffness, intraocular pressure, handgrip strength, rheumatoid arthritis, and celiac disease.
-One gene module (LV246) was also associated with lipids metabolism and triglyceride biosynthesis pathways in MultiPLIER (Supplementary Table @tbl:sup:multiplier_pathways:lv246).
-Using our approach, we found that its genes were mainly co-expressed in adipose tissue (Figure @fig:lv246 a), which plays a key role in coordinating and regulating lipids metabolism.
-Gene-trait associations and colocalization for the top genes in this LV are shown in Figure @fig:lv246 b).
-Additionally, gene weights for this LV significantly predicted gene associations for blood lipids and hypercholesterolemia (Supplementary Table @tbl:sup:phenomexcan_assocs:lv246).
-Two high-confidence genes from our CRISPR screening, *DGAT2* and *ACACA*, are responsible for encoding enzymes for triglycerides and fatty acid synthesis, and were among the top genes of LV246.
-However, as it can be seen in Figure @fig:lv246 b, these two genes are not strongly associated with any of the top traits for this LV;
-other members of this module, such as *SCD*, *LPL*, *FADS2*, *HMGCR*, and *LDLR* were instead significantly associated and colocalized with lipid-relevant traits.
-This suggests that a module-based perspective can contextualize and reprioritize TWAS hits using modules of functionally related genes.
+When we considered the increasing-lipids gene-set, genes and LVs were associated with a more diverse set of traits, such as blood count tests, impedance measures, and bone-densitometry (Supplementary Tables @tbl:sup:single_genes:lipids_increasing:top_traits and @tbl:sup:modules:lipids_increasing:top_traits).
+FGSEA found 27 LVs nominally enriched for the increasing-lipids gene-set which were associated with the same traits, and additionally to lung function, arterial stiffness, intraocular pressure, handgrip strength, rheumatoid arthritis, and celiac disease.
+Among these, LV246 contained genes mainly co-expressed in adipose tissue (Figure @fig:lv246 a), which plays a key role in coordinating and regulating lipids metabolism.
+<!-- Gene-trait associations and colocalization for the top genes in this LV are shown in Figure @fig:lv246 b). -->
+Additionally, using the gene-property analysis, we found that gene weights for this LV were predictive of gene associations for blood lipids and hypercholesterolemia (Supplementary Table @tbl:sup:phenomexcan_assocs:lv246).
+Two high-confidence genes from our CRISPR screening, *DGAT2* and *ACACA*, are responsible for encoding enzymes for triglycerides and fatty acid synthesis and were among the highest-weighted genes of LV246.
+However, as it can be seen in Figure @fig:lv246 b, these two genes were not strongly associated with any of the top traits for this LV and thus would not be revealed by TWASs alone;
+other members of LV246, such as *SCD*, *LPL*, *FADS2*, *HMGCR*, and *LDLR*, were instead significantly associated and colocalized with lipid-related traits.
+This suggested that an LV-based perspective can integrate hits across modalities by leveraging information from functionally related genes.
 
 
-### Our gene module-based approach more accurately predicts known disease therapeutics
+### PhenoPLIER with LVs predicts drug-disease pairs better than single genes
 
-We systematically evaluated our gene module-based approach from a translational perspective by assessing whether it could more accurately predict known treatments for disease.
-For this, we used the transcriptional responses to small molecule perturbations profiled in LINCS L1000 [@doi:10.1016/j.cell.2017.10.049], which were further processed and mapped to DrubBank IDs [@doi:10.1093/nar/gkt1068; @doi:10.7554/eLife.26726; @doi:10.5281/zenodo.47223].
-Based on the established drug repurposing strategy that looks for reversed transcriptome patterns between genes and drug-induced perturbations [@doi:10.1126/scitranslmed.3002648; @doi:10.1126/scitranslmed.3001318], we used a framework for prioritizing drug candidates that uses imputed transcriptomes from GWAS [@doi:10.1038/nn.4618].
-For this, we computed a drug-disease score by anti-correlating the $z$-scores for a disease (from TWAS) and the $z$-scores for a drug (from LINCS) across sets of genes of different size (see Methods).
-Therefore, a large score for a drug-disease pair indicates that a higher (lower) predicted expression of disease-associated genes are down (up)-regulated by the drug, thus predicting a potential treatment.
-Similarly for the gene module approach, we estimated how pharmacological perturbations affected the gene module activity by projecting expression profiles of drugs into our latent representation (Methods).
-We used a manually-curated gold standard of drug-disease medical indications [@doi:10.7554/eLife.26726; @doi:10.5281/zenodo.47664] across 53 diseases and 322 compounds to evaluate and compare the prediction performance.
+We systematically evaluated whether substituting LVs in place of individual genes more accurately predicted known treatment-disease pairs.
+For this, we used the transcriptional responses to small molecule perturbations profiled in LINCS L1000 [@doi:10.1016/j.cell.2017.10.049], which were further processed and mapped to DrugBank IDs [@doi:10.1093/nar/gkt1068; @doi:10.7554/eLife.26726; @doi:10.5281/zenodo.47223].
+Based on an established drug repurposing strategy that matches reversed transcriptome patterns between genes and drug-induced perturbations [@doi:10.1126/scitranslmed.3002648; @doi:10.1126/scitranslmed.3001318], we adopted a previously described framework that uses imputed transcriptomes from TWAS to prioritize drug candidates [@doi:10.1038/nn.4618].
+For this, we computed a drug-disease score by anti-correlating the $z$-scores for a disease (from TWAS) and the $z$-scores for a drug (from LINCS) across sets of genes of different size.
+Therefore, a large score for a drug-disease pair indicated that a higher (lower) predicted expression of disease-associated genes are down (up)-regulated by the drug, thus predicting a potential treatment.
+Similarly, for the LV-based approach, we estimated how pharmacological perturbations affected the gene module activity by projecting expression profiles of drugs into our latent representation  (see Methods).
+We used a manually-curated gold standard of drug-disease medical indications [@doi:10.7554/eLife.26726; @doi:10.5281/zenodo.47664] for 322 drugs across 53 diseases to evaluate the prediction performance.
 
 
 ![
@@ -470,76 +451,73 @@ AUC: area under the curve; AP: average precision.
 ](images/drug_disease_prediction/roc_pr_curves.svg "ROC-PR curves for drug-disease prediction"){#fig:drug_disease:roc_pr width="100%"}
 
 
-The ROC and precision-recall (PR) curves comparing both approaches are shown in Figure @fig:drug_disease:roc_pr.
-Our proposed gene module-based method outperformed the gene-based one with an area under the curve of 0.632 and an average precision of 0.858.
-<!--  -->
-It is important to note that the gene-trait associations and drug-induced expression profiles projected into the latent space represent a compressed version of the entire set of results.
-The prediction results show that this low-dimensional space captures biologically meaningful patterns that can better represent and link pathophysiological processes with the mechanisms of action of drugs.
-In the following, with the aim to understand these results, we examined specific a drug-disease pair where both methods disagreed.
+The gene-trait associations and drug-induced expression profiles projected into the latent space represent a compressed version of the entire set of results.
+Despite this compression, the LV-based method outperformed the gene-based one with an area under the curve of 0.632 and an average precision of 0.858 (Figure @fig:drug_disease:roc_pr).
+The prediction results suggest that this low-dimensional space captures biologically meaningful patterns that can link pathophysiological processes with the mechanisms of action of drugs.
 
 
+We examined a specific drug-disease pair to determine whether the LVs driving the prediction were biologically plausible.
 Nicotinic acid (niacin) is a B vitamin widely used clinically to treat lipid disorders.
-Niacin exerts its effects on a number tissues, although not all its mechanisms have been documented [@doi:10.1016/j.amjcard.2008.02.029; @doi:10.1194/jlr.S092007].
-This compound can increase high-density lipoprotein (HDL) by inhibiting an HDL catabolism receptor in liver.
-Niacin also inhibits diacylglycerol acyltransferase–2 (DGAT2), which decrease production of low-density lipoproteins (LDL) by modulating triglyceride synthesis in hepatocytes, or by inhibiting adipocyte triglyceride lipolysis [@doi:10.1016/j.amjcard.2008.02.029].
-Niacin was categorized in our gold standard as a disease-modifying indication for atherosclerosis (AT) and coronary artery disease (CAD), and not for pancreatitis.
-For pancreatitis, both the gene-based and module-based methods assigned a negative score (below their averages), which agrees with the gold standard in that niacin does not therapeutically change the biology of this disease.
-For AT, the module-based approach predicted niacin as a therapeutic drug by scoring them with 0.52 (above the mean), whereas the gene-based method assigned negative scores of -0.01 (below the mean), respectively.
-To understand why the predictions by the module-based method were different, we obtained the LVs that positively contributed to the score by looking at large positive (negative) LV values for the disease and large negative (positive) LV values for the drug of interest (Supplementary Table ).
+Niacin exerts its effects on multiple tissues, although not all its mechanisms have been documented [@doi:10.1016/j.amjcard.2008.02.029; @doi:10.1194/jlr.S092007].
+This compound can increase high-density lipoprotein (HDL) by inhibiting an HDL catabolism receptor in the liver.
+Niacin also inhibits diacylglycerol acyltransferase–2 (DGAT2), which decreases the production of low-density lipoproteins (LDL) by modulating triglyceride synthesis in hepatocytes, or by inhibiting adipocyte triglyceride lipolysis [@doi:10.1016/j.amjcard.2008.02.029].
+Niacin was one of the drugs in the gold standard indicated for atherosclerosis (AT) and coronary artery disease (CAD).
+For AT, the LV-based approach predicted niacin as a therapeutic drug with a score of 0.52 (above the mean), whereas the gene-based method assigned a negative score of -0.01 (below the mean).
+To understand why the LV-based method gave an anticipated prediction different from the gene-based approach, we obtained the LVs that contributed substantially to the score, including those with top positive/negative LV values for the disease and top negative/positive LV values for the drug of interest.
 Notably, LV246 (analyzed previously) was among the top 20 modules contributing to the prediction of niacin as a therapeutic drug for AT.
-As shown in Figure @fig:lv246, this module is mainly expressed in adipose cells and liver cells, and its top genes encode important enzymes involved in lipid biosynthesis.
-The module as a whole (considering the gene weights) is significantly associated with cardiovascular traits (Supplementary Table @tbl:sup:phenomexcan_assocs:lv246), and several of its top genes are significantly associated and colocalized with cardiovascular-related traits:
-*SCD* (10q24.31) is associated with hypercholesterolemia (P=1.9e-5) and its GWAS and eQTL signals are fully colocalized (RCP=1.0);
-*LPL* (8p21.3), which is known to be linked to different disorders of lipoprotein metabolism, is strongly associated with hypercholesterolemia (P=7.5e-17, RCP=0.26), and family history of heart disease (P=1.7e-5, RCP=0.22);
-other genes associated with hypercholesterolemia in this module are
-*FADS2* (11q12.2) (P=9.42e-5, RCP=0.623),
-*HMGCR* (5q13.3) (P=1.3e-42, RCP=0.23),
-and *LDLR* (19p13.2) (P=9.9e-136, RCP=0.41).
+Gene weights of LV246 were predictive of cardiovascular traits (Supplementary Table @tbl:sup:phenomexcan_assocs:lv246), and several of its top genes were significantly associated and colocalized with cardiovascular-related traits:
+*SCD* (10q24.31) was associated with hypercholesterolemia (*P*=1.9e-5) and its GWAS and eQTL signals were fully colocalized (RCP=1.0);
+*LPL* (8p21.3), which was previously linked to different disorders of lipoprotein metabolism, was significantly associated with hypercholesterolemia (*P*=7.5e-17, RCP=0.26), and family history of heart disease (*P*=1.7e-5, RCP=0.22);
+other genes associated with hypercholesterolemia in this LV were
+*FADS2* (11q12.2) (*P*=9.42e-5, RCP=0.623),
+*HMGCR* (5q13.3) (*P*=1.3e-42, RCP=0.23),
+and *LDLR* (19p13.2) (*P*=9.9e-136, RCP=0.41).
 
 
-The analysis of other niacin-AT-contributing modules revealed additional known mechanisms of action of niacin.
+The analysis of other niacin-AT-contributing LVs revealed additional known mechanisms of action of niacin.
 <!--  -->
-For example, GPR109A/HCAR2 is a G protein-coupled high-affinity niacin receptor in adipocytes and immune cells, including monocytes, macrophages, neutrophils and dendritic cells [@doi:10.1016/j.tips.2006.05.008; @doi:10.1038/sj.jid.5700586].
+For example, *GPR109A/HCAR2* encodes a G protein-coupled high-affinity niacin receptor in adipocytes and immune cells, including monocytes, macrophages, neutrophils and dendritic cells [@doi:10.1016/j.tips.2006.05.008; @doi:10.1038/sj.jid.5700586].
 It was initially thought that the antiatherogenic effects of niacin were solely due to inhibition of lipolysis in adipose tissue.
-However, it has been shown that nicotinic acid can reduce atherosclerosis progression independently of its antidyslipidemic activity through the activation of GPR109A in immune cells [@doi:10.1172/JCI41651], thus boosting anti-inflammatory processes and reversing cholesterol transport [@doi:10.1161/ATVBAHA.108.179283].
-This alternative mechanism for niacin could have been hypothesized by examining the cell types where top modules positively contributing to the niacin-AT prediction are expressed: LV116 and LV931 (Supplementary Figures @fig:sup:lv116 and @fig:sup:lv931).
+However, it has been shown that nicotinic acid can reduce atherosclerosis progression independently of its antidyslipidemic activity through the activation of *GPR109A* in immune cells [@doi:10.1172/JCI41651], thus boosting anti-inflammatory processes and reversing cholesterol transport [@doi:10.1161/ATVBAHA.108.179283].
+In addition, flushing, a common adverse effect of niacin, is also produced by the activation of GPR109A in Langerhans cells (macrophages of the skin).
+This alternative mechanism for niacin could have been hypothesized by examining the cell types where the top two modules positively contributing to the niacin-AT prediction are expressed: LV116 and LV931 (Supplementary Figures @fig:sup:lv116 and @fig:sup:lv931).
 Among these, we also found LV678 positively contributing to this prediction, which was significantly enriched with the lipids-decreasing genes from our CRISPR screening (Supplementary Table @tbl:sup:lipids_crispr:modules_enriched).
 This module was expressed in the heart and muscle cells (Supplementary Figure @fig:sup:lv678).
 <!-- Among these, we also found other potentially interesting modules that could represent mechanisms to explore, such as LV536 expressed in the bladder (Supplementary Figure @fig:sup:lv536) and LV885/LV840 expressed in kidneys (Supplementary Figures @fig:sup:lv885 and @fig:sup:lv840). -->
 
 
-The projection of these two types of data into a common latent gene module-based representation could provide a more powerful framework for drug repositioning using data from genetic studies.
+The LV-based method was able to integrate different data types to provide an interpretable approach for drug repositioning research based on genetic studies.
 Additionally, our approach could also be helpful to understand better the mechanism of pharmacological effect of known or experimental drugs.
-For example, one of the top modules affected by niacin (LV66, Supplementary Figure @fig:sup:lv66) is mainly expressed in ovarian granulosa cells.
+For example, LV66, one of the top LVs affected by niacin (Supplementary Figure @fig:sup:lv66) was mainly expressed in ovarian granulosa cells.
 This compound has been very recently considered as a potential therapeutic for ovarian diseases [@doi:10.1159/000495051; @doi:10.1071/RD20306], as it was found to promote follicle growth and inhibit granulosa cell apoptosis in animal models.
-Our proposed approach could be helpful to generate novel hypotheses to evaluate potential mechanisms of action of different drugs.
+Our LV-based approach could be helpful to generate novel hypotheses to evaluate potential mechanisms of action, or even adverse effects, of different drugs.
 
 
-### Clusters of traits in the gene module space are associated with relevant transcriptional processes
+### LV projections reveal trait clusters with shared transcriptomic properties
 
 ![
 **Cluster analysis on traits using the latent gene expression representation.**
 <!--  -->
 **a)** The projection of TWAS results on $n$=3,752 traits into the latent gene expression representation is the input data to the clustering process.
-A linear (PCA) and non-linear (UMAP) dimensionality reduction techniques are applied to the input data, and the three data versions are processed by five different clustering algorithms.
+A linear (PCA) and non-linear (UMAP) dimensionality reduction techniques were applied to the input data, and the three data versions were processed by five different clustering algorithms.
 These algorithms derive partitions from the data using different sets of parameters (such as the number of clusters), leading to an ensemble of 4,428 partitions.
 Then, a distance matrix is derived by counting how many times a pair of traits were grouped in different clusters across the ensemble.
 Finally, a consensus function is applied to the distance matrix to generate consolidated partitions with different number of clusters (from 2 to $\sqrt{n}\approx$ 60).
-These final solutions are represented in the clustering tree (Figure @fig:clustering:tree).
+These final solutions were represented in the clustering tree (Figure @fig:clustering:tree).
 <!--  -->
-**b)** The clusters found by the consensus function are used as labels to train a decision tree classifier on the original input data, which detects the LVs that better differentiate groups of traits.
+**b)** The clusters found by the consensus function were used as labels to train a decision tree classifier on the original input data, which detects the LVs that better differentiate groups of traits.
 <!--  -->
 ](images/clustering/clustering_design.svg "Cluster analysis on traits"){#fig:clustering:design width="100%"}
 
 
-The previous results suggest that $\hat{\mathbf{M}}$ represents a less noisy low-dimentional version of the data.
-Thus, we conducted cluster analysis on $\hat{\mathbf{M}}$ to find groups of traits that are similarly affected by the same transcriptional processes.
-To avoid using a single clustering algorithm (which implies using a single assumption about the structure of the data), we employed a consensus clustering approach where different methods with varying sets parameters were applied on the data, and later combined into a consolidated solution [@doi:10.1109/TPAMI.2005.237; @Strehl2002; @doi:10.1016/j.ins.2016.04.027] (Figure @fig:clustering:design).
+The previous results suggested that the compression into $\hat{\mathbf{M}}$ increases the signal-to-noise ratio.
+Thus, we analyzed $\hat{\mathbf{M}}$ to find groups of traits that were affected by the same transcriptional processes.
+Selecting a clustering algorithm implies that a particular assumption about the structure of the data is most appropriate.
+Instead, we employed a consensus clustering approach where we applied different methods with varying sets of parameters and later combined these into a consolidated solution.
 Our clustering pipeline generated 15 final consensus clustering solutions with 5 to 29 clusters (Supplementary Figure @fig:sup:consensus_agreement).
 Instead of selecting a specific number of clusters, we used a clustering tree [@doi:10.1093/gigascience/giy083] (Figure @fig:clustering:tree) to examine stable groups of traits across multiple resolutions.
-<!--  -->
-Finally, for the interpretation of the clusters, we trained a decision tree classifier (a highly interpretable machine learning model) on the input data $\hat{\mathbf{M}}$ using the clusters found as labels.
-This allowed us to quickly identify the latent variables/gene modules that better differentiated the groups of traits found (see Methods).
+To interpret the clusters, we trained a decision tree classifier (a highly interpretable machine learning model) on the input data $\hat{\mathbf{M}}$ using the clusters found as labels.
+This quickly revealed the latent variables/gene modules that differentiated the groups of traits.
 
 
 ![
@@ -580,52 +558,54 @@ IBD: inflammatory bowel disease;
 ](images/clustering/clustering_tree.svg "Clustering tree on groups of traits"){#fig:clustering:tree width="100%"}
 
 
-The clustering tree in Figure @fig:clustering:tree shows five clear branches that are shown at the top with different numerical labels (from left to right):
-0) a "large" branch that includes most of the traits that start to be subdivided only at $k$=16 (with asthma, subjective well-being traits, and nutrient intake clusters),
+We found that phenotypes grouped into five clear branches (Figure @fig:clustering:tree).
+There were
+0) a "large" branch that includes most of the traits subdivided only starting at $k$=16 (with asthma, subjective well-being traits, and nutrient intake clusters),
 1) heel bone-densitometry measurements,
 2) hematological assays on red blood cells,
 3) physical measures, including spirometry and body impedance, and anthropometric traits with fat-free and fat mass measures in separate sub-branches, and
 4) a "complex" branch including keratometry measurements, assays on white blood cells and platelets, skin and hair color traits, autoimmune disorders (type 1 diabetes, psoriasis, hyper/hypothyroidism, rheumatoid arthritis, systemic lupus erythematosus, celiac disease), and cardiovascular diseases (hypertension, coronary artery disease, myocardial infraction, hypercholesterolemia, and other cardiovascular-related traits such hand-grip strength [@pmid:25982160], and environmental/behavioral factors such as physical activity and diet) (See Supplementary Files 1-5 for clustering results).
-<!--  -->
-All branches show relatively highly stable clusters, where the same traits are clustered together across different resolutions even with the consensus algorithm using random seeds at each level.
-<!--  -->
-The arrows between different clusters show how traits move from one group to another across different resolutions.
+Within these branches, results were relatively stable.
+The same traits were often clustered together across different resolutions, even with the consensus algorithm using random initializations at each level.
+Arrows between different clusters show traits moving from one group to another across different resolutions.
 This mainly happens between clusters within the "complex" branch, and between clusters from the "large" branch to the "complex" branch.
-This is expected, since the "complex" branch contains traits related to a wide range of different factors and thus are hard to categorize into a single cluster.
+We would expect that continuing to explore higher dimensionalities would result in further subdivisions of these large groupings.
+This behavior was expected since complex diseases are usually associated with shared genetic and environmental factors and are thus hard to categorize into a single cluster.
+We would also expect that exploring solutions with a larger number of clusters would result in further subdivisions of these large groupings.
 
 
 ![
 **Cluster-specific and general transcriptional processes.**
 <!--  -->
-The plot shows a submatrix of $\hat{\mathbf{M}}$ for the main trait clusters at $k$=29, considering only gene modules (rows) that align well with at least one known pathway.
+The plot shows a submatrix of $\hat{\mathbf{M}}$ for the main trait clusters at $k$=29, considering only LVs (rows) that align well with at least one known pathway.
 <!-- Labels on the right show LV names and their main tissues/cell types where gene modules are expressed in. -->
 Values are standardized from -5 (lighter color) to 16 (darker color).
 <!--  -->
 ](images/clustering/global_clustermap-plain.svg "Heatmap with gene modules and traits"){#fig:clustering:heatmap width="100%"}
 
 
-Next, we analyzed which gene modules are driving these clusters of traits.
-For that, we trained decision tree classifiers on the input data (Figure @fig:clustering:design) using each cluster at $k$=29 (bottom of Figure @fig:clustering:tree) as labels (see Methods).
-This yielded for each cluster the top gene modules, where several of them were well-aligned to existing pathways, and others were "novel" and expressed in relevant tissues.
-We summarized this in Figure @fig:clustering:heatmap, where it can be seen that some modules are highly specific to certain types of traits, and others seem to be associated with a wide range of different traits and diseases, thus potentially involved in more general biological functions.
-For example, modules such as LV928 and LV30 (Supplementary Figures @fig:sup:lv928 and @fig:sup:lv30), which are known to be related to early progenitors of the erythrocytes lineage [@doi:10.1016/j.cell.2011.01.004], are predominantly expressed in early differentiation stages of erythropoiesis, and strongly associated with different assays on red blood cells (erythrocytes and reticulocytes).
-On the other side, others are highly specific, such as LV730, expressed in thrombocytes from different cancer samples (Supplementary Figures @fig:sup:lv730), and strongly associated with hemathological assays on platelets;
-or LV598, whose genes are expressed in corneal endothelial cells (Supplementary Figures @fig:sup:lv598) and associated to keratometry measurements (FDR < 0.05; Supplementary Table @tbl:sup:phenomexcan_assocs:lv598).
+Next, we analyzed which LVs were driving these clusters of traits.
+We trained decision tree classifiers on the input data (Figure @fig:clustering:design) using each cluster at $k$=29 (bottom of Figure @fig:clustering:tree) as labels (see Methods).
+This yielded for each cluster the top LVs, where several of them were well-aligned to existing pathways, and others were "novel" and expressed in relevant tissues.
+We summarized this in Figure @fig:clustering:heatmap, where it can be seen that some LVs were highly specific to certain types of traits, while some were associated with a wide range of different traits and diseases, thus potentially involved in more general biological functions.
+For example, LVs such as LV928 and LV30 (Supplementary Figures @fig:sup:lv928 and @fig:sup:lv30), which were well-aligned to early progenitors of the erythrocytes lineage [@doi:10.1016/j.cell.2011.01.004], were predominantly expressed in early differentiation stages of erythropoiesis, and strongly associated with different assays on red blood cells (erythrocytes and reticulocytes).
+On the other side, others, such as LV730, were highly specific and expressed in thrombocytes from different cancer samples (Supplementary Figures @fig:sup:lv730), and strongly associated with hematological assays on platelets;
+or LV598, whose genes were expressed in corneal endothelial cells (Supplementary Figures @fig:sup:lv598) and associated with keratometry measurements (FDR < 0.05; Supplementary Table @tbl:sup:phenomexcan_assocs:lv598).
 <!-- 
 LV154 is also expressed in corneal endothelial cells and associated with keratometry, but not exclusively.
  -->
 
 
-The autoimmune diseases sub-branch also has significant gene modules associations expressed in relevant cell types.
+The autoimmune diseases sub-branch also had significant LVs associations expressed in relevant cell types.
 <!--  -->
 LV155 was strongly expressed in thyroid (Supplementary Figures @fig:sup:lv155), and significantly associated with hypothyroidism both in PhenomeXcan and eMERGE (FDR < 0.05; Supplementary Tables @tbl:sup:phenomexcan_assocs:lv155 and @tbl:sup:emerge_assocs:lv155).
 <!--  -->
 LV844 was the most strongly associated gene module with autoimmune disorders (FDR < 1e-15; Supplementary Tables @tbl:sup:phenomexcan_assocs:lv844 and @tbl:sup:emerge_assocs:lv844), and was expressed in a wide range of cell types, including blood, breast organoids, myeloma cells, lung fibroblasts, and different cell types from the brain (Supplementary Figures @fig:sup:lv844).
 <!--  -->
-Other important gene modules associated with autoimmunity in both PhenomeXcan and eMERGE are LV57 expressed in T cells (Supplementary Figure @fig:sup:lv57, and Supplementary Tables @tbl:sup:phenomexcan_assocs:lv57 and @tbl:sup:emerge_assocs:lv57), and LV54 expressed in different soft tissue tumors, breast, lung, pterygia and epithelial cells (Supplementary Figure @fig:sup:lv54, and Supplementary Tables @tbl:sup:phenomexcan_assocs:lv54 and @tbl:sup:emerge_assocs:lv54).
+Other important LVs associated with autoimmunity in both PhenomeXcan and eMERGE were LV57 expressed in T cells (Supplementary Figure @fig:sup:lv57, and Supplementary Tables @tbl:sup:phenomexcan_assocs:lv57 and @tbl:sup:emerge_assocs:lv57), and LV54 expressed in different soft tissue tumors, breast, lung, pterygia and epithelial cells (Supplementary Figure @fig:sup:lv54, and Supplementary Tables @tbl:sup:phenomexcan_assocs:lv54 and @tbl:sup:emerge_assocs:lv54).
 
 
-The cardiovascular sub-branch also exhibited significant associations, such as LV847 (Supplementary Figure @fig:sup:lv847) with blood pressure traits and hypertension (Supplementary Tables @tbl:sup:phenomexcan_assocs:lv847 and @tbl:sup:emerge_assocs:lv847), which was expressed in CD19 (B cells) (which are related to preeclampsia [@doi:10.1161/HYPERTENSIONAHA.111.188276]), Jurkcat cells (T lymphocyte cells), and cervical carcinoma cell lines (the uterus was previously reported to be linked to blood pressure through a potential hormonal pathway [@doi:10.1038/s41467-018-06022-6; @doi:10.1007/s11906-006-0080-1]).
+The cardiovascular sub-branch also exhibited significant associations, such as LV847 (Supplementary Figure @fig:sup:lv847) with blood pressure traits and hypertension (Supplementary Tables @tbl:sup:phenomexcan_assocs:lv847 and @tbl:sup:emerge_assocs:lv847), which was expressed in CD19 (B cells) (which are related to preeclampsia [@doi:10.1161/HYPERTENSIONAHA.111.188276]), Jurkat cells (T lymphocyte cells), and cervical carcinoma cell lines (the uterus was previously reported to be linked to blood pressure through a potential hormonal pathway [@doi:10.1038/s41467-018-06022-6; @doi:10.1007/s11906-006-0080-1]).
 <!--  -->
 LV136 was aligned with known collagen formation and muscle contraction pathways, and it was associated to coronary artery disease, myocardial infarction and keratometry measurements (Supplementary Tables @tbl:sup:phenomexcan_assocs:lv136 and @tbl:sup:emerge_assocs:lv136), and expressed in a wide range of cell types, including fibroblasts, mesenchymal stem cells, osteoblasts, pancreatic stellate cells, cardiomyocytes, and adipocytes (Supplementary Figure @fig:sup:lv136).
 <!--  -->
@@ -633,7 +613,7 @@ Lipids were clustered with chronotype and Alzheimer's disease, and were signific
 These modules were associated mainly with cardiovascular traits in eMERGE.
 
 
-Within the cardiovascular sub-branch, we also found mental and neurodevelopmental disorders such as Alzheimer's disease, schizophrenia, and attention deficit hyperactivity disorder (ADHD).
+Within the cardiovascular sub-branch, we found neuropsychiatric and neurodevelopmental disorders such as Alzheimer's disease, schizophrenia, and attention deficit hyperactivity disorder (ADHD).
 These disorders were previously linked to the cardiovascular system [@pmid:12093424; @doi:10.1161/CIRCULATIONAHA.113.002065; @doi:10.1192/bjp.bp.117.202606; @doi:10.1161/CIRCRESAHA.118.313563], and share several risk factors, including hypertension, high cholesterol, obesity, smoking, among others [@doi:10.1186/s12916-014-0206-2; @doi:10.1111/j.1076-7460.2007.06696.x].
 <!--  -->
 In our results, however, these diseases were grouped by potentially shared transcriptional processes expressed in specific tissues/cell types.
@@ -654,63 +634,54 @@ Clinical diagnosis of attention-deficit/hyperactivity disorder in survivors of p
 <!--  -->
 Schizophrenia was not significantly associated with any gene module tested in our analysis.
 <!--  -->
-None of these LVs were aligned to prior pathways, which might represent potentially novel transcriptional processes affecting the cardiovascular and central nervous system.
+None of these LVs were aligned to prior pathways, which might represent potentially novel transcriptional processes affecting the cardiovascular and central nervous systems.
 
 
 ## Discussion
 
-We have introduced a novel computational approach that can map existing TWAS results into a latent gene expression representation to infer cell type-specific effects for complex diseases.
-Leveraging one of the largest gene expression compendia, we integrated gene co-expression patterns on tens of thousands of RNA-seq samples covering different tissues and cell types under a variety of stimuli and developmental stages.
-We showed that this latent representation is robust to capture relevant associations even when known single gene-trait effects are not detected.
-Moreover, projecting gene-trait and gene-drug associations into this common representation can better link pathophysiological processes with the mechanisms of action of drugs, which led to a more accurate prediction of known disease treatments.
-Finally, we showed how the approach could be used to group diseases and traits affected by the same transcriptional processes, which showed disease-specific modules expressed in highly relevant tissues.
+We have introduced a novel computational approach that can map TWASs into a representation learned from gene expression to infer cell type-specific features of complex phenotypes.
+Our key innovation is that we project association statistics through a representation and that representation is derived not strictly from measures of normal tissue but also cell types under a variety of stimuli and at various developmental stages.
+We found that this analysis using latent representations prioritized relevant associations, even when single gene-trait effects are not detected with standard methods.
+Projecting gene-trait and gene-drug associations into this common representation linked drug-disease treatment pairs more accurately than the single-gene method we derived this strategy from, and the findings were more interpretable for potential mechanisms of action.
+Finally, we found that the analysis of associations through latent representations provided reasonable groupings of diseases and traits affected by the same transcriptional processes and highlighted disease-specific modules expressed in highly relevant tissues.
 
 
-The key difference of our approach with other alternatives is that we can incorporate patterns learned in RNA-seq datasets with tissues and cell types measured in a large variety of conditions.
-<!--  -->
-As we showed, gene modules are expressed in very specific cell types, and this has the advantage of identifying potentially causal cell types with more precision.
-We provide examples of modules clearly expressed in one type of cell (such as adipose in LV246, thyroid in LV155, or ovary in LV66), whereas others seem to be activated across different contexts and thus capture a more realistic multi-tissue scenario for complex diseases (for example, LV136 is associated with coronary artery disease and expressed in fibroblasts, osteoblasts, pancreas, liver, and cardiomyocytes).
-To our knowledge, this is a novel approach for the identification of tissue and cell type-specific effects that is computationally simple to implement.
+In some cases, the features linked to phenotypes appear to be associated with specific cell types.
+Associations with such cell type marker genes may reveal cell types that are potentially causal for a phenotype with more precision.
+We observed modules expressed primarily in one tissue (such as adipose in LV246, thyroid in LV155, or ovary in LV66).
+Others appeared to be expressed in many contexts.
+These may capture pathways associated with a set of related complex diseases (for example, LV136 is associated with coronary artery disease and keratometry measurements, and expressed in fibroblasts, osteoblasts, pancreas, liver, and cardiomyocytes).
+To our knowledge, projection through a representation learned on complementary but distinct datasets is a novel approach to identify cell type and pathway effects on complex phenotypes that is computationally simple to implement.
 
 
-Our approach assumes that gene modules with coordinated expression controlled by a perturbed transcriptional process will also manifest coordinated pathological effects on relevant diseases.
-This leads to several limitations related to
-1) the unsupervised learning process that detects modules of co-expressed genes (MultiPLIER),
-and 2) the statistical methods that link SNP-trait to gene-trait associations through eQTL (TWAS/PhenomeXcan).
-<!--  -->
-First, MultiPLIER applies a matrix factorization algorithm to extract latent variables/modules across a large expression dataset.
-These modules could represent real transcriptional processes or technical factors ("batch effects").
-Although the deconvolution process successfully uses prior knowledge (pathways) to segregate noise from authentic biological patterns, several detected modules could be either novel, in the best scenario, or just noise.
-On the other hand, the underlying factorization method is restricted to linear combinations, which could miss important and more complex co-expression patterns.
-<!--  -->
-Second, TWAS approaches have several limitations that can lead to false positives [@doi:10.1038/s41588-019-0385-z; @doi:10.1016/j.ajhg.2020.11.012].
+Our approach rests on the assumption that gene modules with coordinated expression will also manifest coordinated pathological effects.
+Our implementation in this work integrates two complementary approaches.
+One, MultiPLIER, extracts latent variables from large expression datasets.
+In this case, we use a previously a published model derived from the analysis of recount2, which was designed for interpretability.
+The MultiPLIER LVs could represent real transcriptional processes or technical factors ("batch effects").
+Also, the underlying factorization method rests on linear combinations of variables, which could miss important and more complex co-expression patterns, and the training dataset of recount2 has since been surpassed in size and scale by other resources [@doi:10.1038/s41467-018-03751-6; @doi:10.1101/2021.05.21.445138].
+Second, TWASs have several limitations that can lead to false positives [@doi:10.1038/s41588-019-0385-z; @doi:10.1016/j.ajhg.2020.11.012].
 Like GWAS, which generally detects groups of associated variants in LD (linkage disequilibrium), TWAS usually identifies several genes within the same locus [@doi:10.1038/s41588-018-0092-1; @doi:10.1038/ng.3367].
 This is due to sharing of GWAS variants in gene expression models, to correlated expression of nearby genes, or even correlation of their predicted expression due to eQTLs in LD, among others [@doi:10.1038/s41588-019-0385-z].
-<!--  -->
-These two factors can combine to produce spurious module-trait associations, but our results suggest that the first aspect (module detection) could be the most problematic and probably more challenging to address.
+Larger datasets and methods designed to learn representations with this application in mind could further refine the approach and are a promising avenue for future research.
 
 
-Our approach is also in line with previous studies showing that drugs with genetic support are more likely to succeed through the drug development pipeline [@doi:10.1038/ng.3314; @doi:10.1038/nn.4618].
-We show that a gene module perspective can more accurately predict known therapeutics and potentially serve as a more effective drug repositioning framework than considering single-gene effects.
-This outcome is explained by the biologically meaningful patterns captured by the latent gene expression space.
-The projection of single gene-trait associations and gene-compound profiles into this common representation translated into a stronger link between pathophysiological processes with the mechanisms of action of drugs.
-
-
-Our consensus clustering pipeline combined different algorithms and assumptions on data structure to deliver highly stable groups of traits differentiated by relevant transcriptional processes.
-Considering groups of related diseases was previously shown to be more powerful to detect shared genetic etiology [@doi:10.1038/ng.3985; @doi:10.1038/s41588-018-0121-0];
-Our low-dimensional expression representation was used to detect groups of diseases previously suspected to share common pathophysiological mechanisms, such as cardiovascular, autoimmune, and mental diseases.
-The approach, however, also has several limitations related to 1) the data we used for grouping traits and 2) the fit of the clustering algorithms used for highly multi-factorial traits.
-First, we used the S-MultiXcan associations, which only provide the association strength between a gene and a trait, but with no direction of effect.
-This makes groups of traits harder to interpret since we can only infer that transcriptional processes are associated with traits in the same cluster, but they could actually have opposite effects for some traits than others.
+Our findings are concordant with previous studies showing that drugs with genetic support are more likely to succeed through the drug development pipeline [@doi:10.1038/ng.3314; @doi:10.1038/nn.4618].
+In this case, projecting association results through latent variables better prioritizes disease-treatment pairs than considering single-gene effects alone. 
+An additional benefit is that the latent variables driving predictions can be examined.
+We also demonstrate that clustering trees, introduced as a means to examine developmental processes in single-cell data, provide multi-resolution grouping of phenotypes based on latent variable associations.
+In this portion, we used S-MultiXcan associations, which only provide the association strength between a gene and a trait, but with no direction of effect.
+This does mean that traits are grouped based on associated genes, but genes could have opposite effects on traits within the same cluster.
 Second, we employed hard-partitioning algorithms (one trait belongs exclusively to one cluster) where the distance between two traits takes into account all gene modules.
-However, it is likely for two complex diseases to share just a few biological processes instead of being similar across all of them.
-These more complex scenarios cannot be captured by our clustering pipeline, as it can be seen for traits in the "complex" branch, which are hard to categorize into a single cluster or branch.
-This limitation was circumvented to some extent by using the hierarchical structure provided by clustering trees.
+Considering groups of related diseases was previously shown to be more powerful to detect shared genetic etiology [@doi:10.1038/ng.3985; @doi:10.1038/s41588-018-0121-0], and clustering trees provide a way to explore such relationships in the context of latent variables.
 
 
-The proposed approach will benefit from larger gene expression datasets on different tissues and cell types measured on highly heterogeneous conditions.
-High-quality attributes for RNA-seq samples are critical for a successful application of our method, and we welcome current efforts to improve this situation [@doi:10.1101/2021.05.10.443525].
-This will enable the identification of more precise tissue- and cell lineage-specific effects on complex diseases.
+Ultimately, the key to performance is the quality of the representations.
+Here we use a representation derived from a factorization of bulk RNA-seq data.
+Detailed perturbation datasets and single-cell profiling of tissues, with and without perturbagens, and at various stages of development provide an avenue to generate higher quality and more interpretable representations.
+The key to interpretability is driven by the annotation of sample metadata.
+New approaches to infer and annotate with structured metadata are promising and can be directly applied to existing data [@doi:10.1101/2021.05.10.443525].
+Rapid improvements in both areas set the stage for latent variable projections to be widely applied to disentangle the genetic basis of complex human phenotypes.
 
 <!--
 - talk about the omnigenic model!
