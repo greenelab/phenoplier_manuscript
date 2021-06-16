@@ -151,11 +151,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/02309e9e488ccd5e9bc9585109b2b7e8d86e0ea4/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/68abdc61bbf49774b7f46b40ef43d7e6fb5b2422/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/02309e9e488ccd5e9bc9585109b2b7e8d86e0ea4/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/68abdc61bbf49774b7f46b40ef43d7e6fb5b2422/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/02309e9e488ccd5e9bc9585109b2b7e8d86e0ea4/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/68abdc61bbf49774b7f46b40ef43d7e6fb5b2422/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -193,9 +193,9 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/02309e9e488ccd5e9bc9585109b2b7e8d86e0ea4/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/68abdc61bbf49774b7f46b40ef43d7e6fb5b2422/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@02309e9](https://github.com/greenelab/phenoplier_manuscript/tree/02309e9e488ccd5e9bc9585109b2b7e8d86e0ea4)
+from [greenelab/phenoplier_manuscript@68abdc6](https://github.com/greenelab/phenoplier_manuscript/tree/68abdc61bbf49774b7f46b40ef43d7e6fb5b2422)
 on June 16, 2021.
 </em></small>
 

@@ -77,7 +77,7 @@ fibroblasts
 FinnGen
 func
 GBMF
-genotype
+Genotype
 glioma
 GMM
 Golabi
@@ -115,7 +115,7 @@ interpretability
 interpretable
 Intervertebral
 Intra
-Intraocular
+intraocular
 Ischaemic
 Jurkat
 KEGG
@@ -131,13 +131,13 @@ levothyroxine
 LINCS
 lipolysis
 lipoprotein
-LIPOPROTEINS
+lipoproteins
 lisinopril
 loadings
 LPL
 Luo
 luteine
-lv
+LV
 LVs
 malabsorption
 Marylyn
@@ -217,7 +217,7 @@ reticulocytes
 revascularizations
 RIBOSOME
 Ritchie
-roc
+ROC
 SCAP
 SCD
 Sensorineural
@@ -227,7 +227,7 @@ Skarke
 SLE
 SOX
 sphered
-Spirometry
+spirometry
 Spondylosis
 SRP
 SRPR
