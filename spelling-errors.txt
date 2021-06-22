@@ -38,7 +38,7 @@ CHEMIOSMOTIC
 Chronotype
 Chun
 cis
-Coeliac
+coeliac
 colocalization
 colocalized
 colour
@@ -90,7 +90,6 @@ greying
 GTEx
 gtn
 GWAS
-GWASs
 Haematocrit
 Haemoglobin
 handgrip
@@ -115,7 +114,7 @@ interpretability
 interpretable
 Intervertebral
 Intra
-intraocular
+Intraocular
 Ischaemic
 Jurkat
 KEGG
@@ -131,13 +130,13 @@ levothyroxine
 LINCS
 lipolysis
 lipoprotein
-lipoproteins
+LIPOPROTEINS
 lisinopril
 loadings
 LPL
 Luo
 luteine
-LV
+lv
 LVs
 malabsorption
 Marylyn
@@ -190,7 +189,7 @@ PhenoPLIER
 phenotypes
 Pividori
 pleiotropy
-PLIER
+plier
 polyarthropathies
 polygenic
 PrediXcan
@@ -249,7 +248,6 @@ transcriptomes
 transcriptomic
 Translational
 TRIACYLGLYCEROL
-TWASs
 UBE
 UMAP
 unadjusted

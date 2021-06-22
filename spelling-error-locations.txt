@@ -21,10 +21,9 @@ content/02.introduction.md:6:dysregulated
 content/02.introduction.md:6:GWAS
 content/02.introduction.md:6:transcriptional
 content/02.introduction.md:9:eQTLs
-content/02.introduction.md:9:GWASs
+content/02.introduction.md:9:GWAS
 content/02.introduction.md:11:eQTLs
-content/02.introduction.md:11:TWASs
-content/02.introduction.md:13:GWASs
+content/02.introduction.md:13:GWAS
 content/02.introduction.md:14:pleiotropy
 content/02.introduction.md:14:polygenic
 content/02.introduction.md:14:transcriptional
@@ -97,7 +96,6 @@ content/04.05.01.crispr.md:12:celiac
 content/04.05.01.crispr.md:22:colocalization
 content/04.05.01.crispr.md:22:fastENLOC
 content/04.05.01.crispr.md:22:MultiXcan
-content/04.05.01.crispr.md:22:thresholded
 content/04.05.01.crispr.md:23:SCD
 content/04.05.01.crispr.md:24:ACACA
 content/04.05.01.crispr.md:24:CRISPR
@@ -123,7 +121,6 @@ content/04.05.01.crispr.md:39:LV
 content/04.05.01.crispr.md:40:ACACA
 content/04.05.01.crispr.md:40:CRISPR
 content/04.05.01.crispr.md:41:LV
-content/04.05.01.crispr.md:41:TWASs
 content/04.05.01.crispr.md:42:colocalized
 content/04.05.01.crispr.md:42:HMGCR
 content/04.05.01.crispr.md:42:LDLR
@@ -306,7 +303,6 @@ content/04.20.00.traits_clustering.md:133:organoids
 content/04.20.00.traits_clustering.md:142:LVs
 content/04.20.00.traits_clustering.md:142:transcriptional
 content/05.discussion.md:3:phenotypes
-content/05.discussion.md:3:TWASs
 content/05.discussion.md:6:interpretable
 content/05.discussion.md:7:transcriptional
 content/05.discussion.md:10:phenotypes
@@ -321,7 +317,6 @@ content/05.discussion.md:21:interpretability
 content/05.discussion.md:22:LVs
 content/05.discussion.md:22:transcriptional
 content/05.discussion.md:23:dataset
-content/05.discussion.md:24:TWASs
 content/05.discussion.md:25:GWAS
 content/05.discussion.md:25:LD
 content/05.discussion.md:26:eQTLs
