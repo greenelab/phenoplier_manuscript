@@ -18,7 +18,7 @@ author-meta:
 - Casey S. Greene
 bibliography:
 - content/manual-references.json
-date-meta: '2021-06-22'
+date-meta: '2021-06-29'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -37,9 +37,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Projecting genetic associations and drug transcriptional profiles through gene expression patterns reveal disease etiology and potential mechanisms for therapeutic strategies" />
 
-  <meta name="dc.date" content="2021-06-22" />
+  <meta name="dc.date" content="2021-06-29" />
 
-  <meta name="citation_publication_date" content="2021-06-22" />
+  <meta name="citation_publication_date" content="2021-06-29" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -69,9 +69,13 @@ header-includes: '<!--
 
   <meta name="citation_author_institution" content="Department of Biomedical Data Science, Stanford University, Stanford, CA, USA" />
 
+  <meta name="citation_author_orcid" content="0000-0002-0103-6107" />
+
   <meta name="citation_author" content="Chun Su" />
 
   <meta name="citation_author_institution" content="Center for Spatial and Functional Genomics, Children&#39;s Hospital of Philadelphia, Philadelphia, PA, 19104, USA" />
+
+  <meta name="citation_author_orcid" content="0000-0001-6388-8666" />
 
   <meta name="citation_author" content="Matthew E. Johnson" />
 
@@ -107,7 +111,11 @@ header-includes: '<!--
 
   <meta name="citation_author" content="Carsten Skarke" />
 
-  <meta name="citation_author_institution" content="Institute for Translational Medicine and Therapeutics, Department of Medicine, University of Pennsylvania, Philadelphia, PA, USA" />
+  <meta name="citation_author_institution" content="Institute for Translational Medicine and Therapeutics, Department of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
+
+  <meta name="citation_author_orcid" content="0000-0001-5145-3681" />
+
+  <meta name="twitter:creator" content="@CarstenSkarke" />
 
   <meta name="citation_author" content="Marylyn D. Ritchie" />
 
@@ -151,11 +159,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/7c933f876e8438a679386ec65da8a1bc9d6d3b75/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/b3c413c35c69b237520a842b5b34dd1342915056/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/7c933f876e8438a679386ec65da8a1bc9d6d3b75/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/b3c413c35c69b237520a842b5b34dd1342915056/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/7c933f876e8438a679386ec65da8a1bc9d6d3b75/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/b3c413c35c69b237520a842b5b34dd1342915056/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -193,10 +201,10 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/7c933f876e8438a679386ec65da8a1bc9d6d3b75/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/b3c413c35c69b237520a842b5b34dd1342915056/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@7c933f8](https://github.com/greenelab/phenoplier_manuscript/tree/7c933f876e8438a679386ec65da8a1bc9d6d3b75)
-on June 22, 2021.
+from [greenelab/phenoplier_manuscript@b3c413c](https://github.com/greenelab/phenoplier_manuscript/tree/b3c413c35c69b237520a842b5b34dd1342915056)
+on June 29, 2021.
 </em></small>
 
 ## Authors
@@ -220,12 +228,18 @@ on June 22, 2021.
      Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
   </small>
 
-+ **Binglan Li**<br><br>
++ **Binglan Li**<br>
+    ![ORCID icon](images/orcid.svg){.inline_icon}
+    [0000-0002-0103-6107](https://orcid.org/0000-0002-0103-6107)<br>
   <small>
      Department of Biomedical Data Science, Stanford University, Stanford, CA, USA
   </small>
 
-+ **Chun Su**<br><br>
++ **Chun Su**<br>
+    ![ORCID icon](images/orcid.svg){.inline_icon}
+    [0000-0001-6388-8666](https://orcid.org/0000-0001-6388-8666)
+    · ![GitHub icon](images/github.svg){.inline_icon}
+    [sckinta](https://github.com/sckinta)<br>
   <small>
      Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
   </small>
@@ -270,9 +284,13 @@ on June 22, 2021.
      School of Computing, University of Utah, Salt Lake City, UT, USA
   </small>
 
-+ **Carsten Skarke**<br><br>
++ **Carsten Skarke**<br>
+    ![ORCID icon](images/orcid.svg){.inline_icon}
+    [0000-0001-5145-3681](https://orcid.org/0000-0001-5145-3681)
+    · ![Twitter icon](images/twitter.svg){.inline_icon}
+    [CarstenSkarke](https://twitter.com/CarstenSkarke)<br>
   <small>
-     Institute for Translational Medicine and Therapeutics, Department of Medicine, University of Pennsylvania, Philadelphia, PA, USA
+     Institute for Translational Medicine and Therapeutics, Department of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
   </small>
 
 + **Marylyn D. Ritchie**<br>
@@ -326,7 +344,7 @@ Given the availability of gene expression data across several tissues [@doi:10.1
 TWAS relies on testing whether perturbations in gene regulatory mechanisms mediate the association between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367].
 However, TWAS have not reliably detected tissue-specific effects because eQTLs are commonly shared across tissues [@doi:10.1016/j.ajhg.2017.01.031; @doi:10.1038/s41588-018-0081-4].
 This sharing makes it challenging to identify the tissue or tissues specifically associated with a phenotype.
-Alternative existing statistical approaches that connect GWAS findings with gene expression data can infer disease-relevant tissues and cell types [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2011.09.002; @doi:10.1093/bioinformatics/btu326; @doi:10.1038/ng.3598; @doi:10.1038/ncomms6890; @doi:10.1038/ng.3981; @doi:10.1038/nrg2825; @doi:10.1038/s41592-019-0456-1], but they generally rely on small sets of expression data compared with the total number of RNA-seq samples that are increasingly available [@doi:10.1038/s41467-018-03751-6; @doi:10.1038/nbt.3838].
+Alternative existing statistical approaches that connect GWAS findings with gene expression data can infer disease-relevant tissues and cell types [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2011.09.002; @doi:10.1093/bioinformatics/btu326; @doi:10.1038/ng.3598; @doi:10.1038/ncomms6890; @doi:10.1038/ng.3981], but they generally rely on small sets of expression data compared with the total number of RNA-seq samples that are increasingly available [@doi:10.1038/s41467-018-03751-6; @doi:10.1038/nbt.3838].
 Moreover, widespread gene pleiotropy and polygenic traits reveal the highly interconnected nature of transcriptional networks [@doi:10.1038/s41588-019-0481-0; @doi:10.1038/ng.3570], where potentially all genes expressed in disease-relevant cell types have a non-zero effect [@doi:10.1016/j.cell.2017.05.038; @doi:10.1016/j.cell.2019.04.014].
 Consequently, this complicates the interpretation of genetic effects and hampers translational efforts.
 

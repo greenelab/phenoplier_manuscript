@@ -29,6 +29,7 @@ Cardiomegaly
 cardiometabolic
 cardiomyocytes
 Carsten
+CarstenSkarke
 Cas
 catabolism
 celiac
@@ -38,7 +39,7 @@ CHEMIOSMOTIC
 Chronotype
 Chun
 cis
-coeliac
+Coeliac
 colocalization
 colocalized
 colour
@@ -64,7 +65,7 @@ EAC
 EFO
 eQTL
 eQTLs
-erythematosus
+Erythematosus
 Erythematous
 erythropoiesis
 expiratory
@@ -91,7 +92,7 @@ GTEx
 gtn
 GWAS
 Haematocrit
-Haemoglobin
+haemoglobin
 handgrip
 HC
 HCAR
@@ -114,8 +115,8 @@ interpretability
 interpretable
 Intervertebral
 Intra
-Intraocular
-Ischaemic
+intraocular
+ischaemic
 Jurkat
 KEGG
 keratometry
@@ -130,7 +131,7 @@ levothyroxine
 LINCS
 lipolysis
 lipoprotein
-LIPOPROTEINS
+lipoproteins
 lisinopril
 loadings
 LPL
@@ -219,6 +220,7 @@ Ritchie
 ROC
 SCAP
 SCD
+sckinta
 Sensorineural
 SGBS
 singulair
@@ -246,7 +248,7 @@ transcriptional
 transcriptome
 transcriptomes
 transcriptomic
-Translational
+translational
 TRIACYLGLYCEROL
 UBE
 UMAP
