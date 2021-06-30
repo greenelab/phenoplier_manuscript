@@ -18,7 +18,7 @@ author-meta:
 - Casey S. Greene
 bibliography:
 - content/manual-references.json
-date-meta: '2021-06-29'
+date-meta: '2021-06-30'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -37,9 +37,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Projecting genetic associations and drug transcriptional profiles through gene expression patterns reveal disease etiology and potential mechanisms for therapeutic strategies" />
 
-  <meta name="dc.date" content="2021-06-29" />
+  <meta name="dc.date" content="2021-06-30" />
 
-  <meta name="citation_publication_date" content="2021-06-29" />
+  <meta name="citation_publication_date" content="2021-06-30" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -159,11 +159,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/b3c413c35c69b237520a842b5b34dd1342915056/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/3824f0be6e23843bb28b6aed3a2636db538ce008/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/b3c413c35c69b237520a842b5b34dd1342915056/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/3824f0be6e23843bb28b6aed3a2636db538ce008/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/b3c413c35c69b237520a842b5b34dd1342915056/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/3824f0be6e23843bb28b6aed3a2636db538ce008/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -201,10 +201,10 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/b3c413c35c69b237520a842b5b34dd1342915056/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/3824f0be6e23843bb28b6aed3a2636db538ce008/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@b3c413c](https://github.com/greenelab/phenoplier_manuscript/tree/b3c413c35c69b237520a842b5b34dd1342915056)
-on June 29, 2021.
+from [greenelab/phenoplier_manuscript@3824f0b](https://github.com/greenelab/phenoplier_manuscript/tree/3824f0be6e23843bb28b6aed3a2636db538ce008)
+on June 30, 2021.
 </em></small>
 
 ## Authors
@@ -327,9 +327,17 @@ on June 29, 2021.
 
 ## Abstract {.page_break_before}
 
-<!-- Tissue specificity is a key feature of human diseases. In this context, determining how genes influence these complex phenotypes requires mechanistically understanding expression regulation across different cell types, which in turn should lead to improved treatments. Integrating functional and GWAS data has improved the identification of these transcriptional mechanisms which, when dysregulated, commonly result in tissue- and cell lineage-specific pathology. However, widespread gene pleiotropy and polygenic traits reveal the highly interconnected nature of transcriptional networks, which complicates the interpretation of genetic effects and hampers translational efforts. We have developed a polygenic approach that maps both gene-trait associations and drug-transcriptional responses into a common representation based on tissue-specific gene co-expression patterns.
-
-We integrated thousands of gene-trait associations (using TWAS from PhenomeXcan) and transcriptional profiles of drugs (LINCS L1000) into a low-dimensional representation learned from public gene expression data on tens of thousands of RNA-seq samples (recount2). This low-dimensional space comprised features representing groups of genes (gene modules) with coordinated expression across different tissues and cell types. When mapping gene-trait associations to this reduced expression space, we observed that diseases were significantly associated with gene modules expressed in relevant cell types, such as hypothyroidism with T cells and thyroid, coronary artery disease with cardiomyocytes, hypertension and lipids with adipose tissue, and heart problems with heart ventricle and muscle cells. We replicated gene module associations with cardiovascular and autoimmune diseases in the Electronic Medical Records and Genomics (eMERGE) network. We also performed a CRISPR-screen to analyze lipid regulation in HepG2 cells and observed more consistent trait associations with modules than we observe with individual genes. Compared to a single-gene approach, our module-based method also better predicted FDA-approved drug-disease links by capturing tissue-specific pathophysiological mechanisms linked with the mechanisms of action of drugs (e.g. niacin with cardiovascular traits via a known immune mechanism). Exploring the phenotype-module space also revealed stable trait clusters across different resolutions, including a complex branch involving lipids with cardiovascular, autoimmune, and neuropsychiatric disorders. We offer a novel gene module approach to enhance the understanding of complex diseases and their therapeutic modalities. -->
+Understanding how dysregulated transcriptional processes result in tissue-specific pathology requires a mechanistic interpretation of expression regulation across different cell types.
+It has been shown that this insight is key for the development of new therapies.
+These mechanisms can be identified with transcriptome-wide association studies (TWAS), which have represented an important step forward to test the mediating role of gene expression in GWAS hits.
+<!-- By training expression prediction models across several tissues, TWAS computes a gene-trait association by correlating predicted expression with the phenotype of interest. -->
+However, due to pervasive eQTLs sharing across tissues, TWAS has not been successful in identifying causal tissues, and other methods generally do not take advantage of the large amounts of RNA-seq data publicly available.
+Here we introduce a polygenic approach that leverages gene modules (genes with similar co-expression patterns) to project both gene-trait associations and pharmacological perturbation data into a common latent representation for a joint analysis.
+We observed that diseases were significantly associated with gene modules expressed in relevant cell types, such as hypothyroidism with T cells and thyroid, hypertension and lipids with adipose tissue, and heart problems with heart ventricle and muscle cells.
+Our approach was more accurate in predicting known drug-disease pairs and revealed stable trait clusters, including a complex branch involving lipids with cardiovascular, autoimmune, and neuropsychiatric disorders.
+<!-- We replicated gene module associations with cardiovascular and autoimmune diseases in the Electronic Medical Records and Genomics (eMERGE) network. -->
+Furthermore, using a CRISPR-screen, we show that genes involved in lipid regulation exhibit more consistent trait associations through gene modules than individual genes.
+Our results suggest that a gene module perspective can contextualize genetic associations and prioritize alternative therapeutical targets when GWAS hits are not druggable.
 
 
 ## Introduction

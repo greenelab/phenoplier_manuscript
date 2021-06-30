@@ -44,7 +44,7 @@ colocalization
 colocalized
 colour
 COTRANSLATIONAL
-CRISPR
+crispr
 crit
 dataset
 datasets
@@ -59,13 +59,14 @@ dimensionality
 DNase
 DOID
 DrugBank
+druggable
 DVT
 dysregulated
 EAC
 EFO
 eQTL
 eQTLs
-Erythematosus
+erythematosus
 Erythematous
 erythropoiesis
 expiratory
@@ -78,7 +79,7 @@ fibroblasts
 FinnGen
 func
 GBMF
-Genotype
+genotype
 glioma
 GMM
 Golabi
@@ -92,7 +93,7 @@ GTEx
 gtn
 GWAS
 Haematocrit
-haemoglobin
+Haemoglobin
 handgrip
 HC
 HCAR
@@ -172,7 +173,7 @@ neuropsychiatric
 neutrophil
 Neutrophill
 neutrophils
-Nicotinic
+nicotinic
 NMR
 organoids
 osteoblasts
@@ -190,7 +191,7 @@ PhenoPLIER
 phenotypes
 Pividori
 pleiotropy
-plier
+PLIER
 polyarthropathies
 polygenic
 PrediXcan
@@ -217,7 +218,7 @@ reticulocytes
 revascularizations
 RIBOSOME
 Ritchie
-ROC
+roc
 SCAP
 SCD
 sckinta
@@ -228,7 +229,7 @@ Skarke
 SLE
 SOX
 sphered
-spirometry
+Spirometry
 Spondylosis
 SRP
 SRPR
@@ -241,6 +242,7 @@ submatrix
 Sumei
 TCA
 TCF
+therapeutical
 thresholded
 thrombocytes
 thyrotoxicosis
@@ -248,7 +250,7 @@ transcriptional
 transcriptome
 transcriptomes
 transcriptomic
-translational
+Translational
 TRIACYLGLYCEROL
 UBE
 UMAP
