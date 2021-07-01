@@ -165,11 +165,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/d685f936fbc1f4e540f7f9a678de12df0227bd8b/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/1833e89e77b1d95672971aaa1138de16e2fd032c/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/d685f936fbc1f4e540f7f9a678de12df0227bd8b/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/1833e89e77b1d95672971aaa1138de16e2fd032c/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/d685f936fbc1f4e540f7f9a678de12df0227bd8b/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/1833e89e77b1d95672971aaa1138de16e2fd032c/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -199,17 +199,17 @@ title: Projecting genetic associations through gene expression patterns highligh
 
 
 
-[
+<!-- [
 <i class="fas fa-info-circle fa-lg"></i> **Draft manuscript**<br>
 Text in <span style="color: red">red</span>/<span class="red">red</span> are internal comments
-]{.banner .lightblue}
+]{.banner .lightblue} -->
 
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/d685f936fbc1f4e540f7f9a678de12df0227bd8b/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/1833e89e77b1d95672971aaa1138de16e2fd032c/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@d685f93](https://github.com/greenelab/phenoplier_manuscript/tree/d685f936fbc1f4e540f7f9a678de12df0227bd8b)
+from [greenelab/phenoplier_manuscript@1833e89](https://github.com/greenelab/phenoplier_manuscript/tree/1833e89e77b1d95672971aaa1138de16e2fd032c)
 on July 1, 2021.
 </em></small>
 
