@@ -2,13 +2,13 @@ content/01.abstract.md:3:dysregulated
 content/01.abstract.md:3:transcriptional
 content/01.abstract.md:5:GWAS
 content/01.abstract.md:5:transcriptome
-content/01.abstract.md:7:eQTLs
+content/01.abstract.md:7:eQTL
 content/01.abstract.md:8:polygenic
+content/01.abstract.md:9:cardiomyocytes
 content/01.abstract.md:10:neuropsychiatric
 content/01.abstract.md:12:CRISPR
 content/01.abstract.md:13:druggable
 content/01.abstract.md:13:GWAS
-content/01.abstract.md:13:therapeutical
 content/02.introduction.md:4:phenotypes
 content/02.introduction.md:5:DNase
 content/02.introduction.md:6:dysregulated
@@ -68,6 +68,7 @@ content/04.05.00.results_framework.md:26:LVs
 content/04.05.00.results_framework.md:26:neutrophil
 content/04.05.00.results_framework.md:27:GTEx
 content/04.05.00.results_framework.md:27:GTEx
+content/04.05.00.results_framework.md:28:dataset
 content/04.05.00.results_framework.md:28:transcriptional
 content/04.05.01.crispr.md:1:LVs
 content/04.05.01.crispr.md:3:CRISPR
@@ -482,7 +483,6 @@ content/50.00.supplementary_material.md:312:thyrotoxicosis
 content/50.00.supplementary_material.md:313:levothyroxine
 content/50.00.supplementary_material.md:315:PhenomeXcan
 content/50.00.supplementary_material.md:319:Phecode
-content/50.00.supplementary_material.md:333:chemichals
 content/50.00.supplementary_material.md:341:coeliac
 content/50.00.supplementary_material.md:341:malabsorption
 content/50.00.supplementary_material.md:342:Coeliac
@@ -561,7 +561,6 @@ content/50.00.supplementary_material.md:706:uninodular
 content/50.00.supplementary_material.md:707:multinodular
 content/50.00.supplementary_material.md:718:LVs
 content/50.00.supplementary_material.md:719:LV
-content/50.00.supplementary_material.md:719:thresholded
 content/50.00.supplementary_material.md:722:fibroblasts
 content/50.00.supplementary_material.md:730:PhenomeXcan
 content/50.00.supplementary_material.md:734:Phecode

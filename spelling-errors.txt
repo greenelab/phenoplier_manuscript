@@ -34,7 +34,6 @@ Cas
 catabolism
 celiac
 cgreene
-chemichals
 CHEMIOSMOTIC
 Chronotype
 Chun
@@ -44,7 +43,7 @@ colocalization
 colocalized
 colour
 COTRANSLATIONAL
-crispr
+CRISPR
 crit
 dataset
 datasets
@@ -79,7 +78,7 @@ fibroblasts
 FinnGen
 func
 GBMF
-genotype
+Genotype
 glioma
 GMM
 Golabi
@@ -93,7 +92,7 @@ GTEx
 gtn
 GWAS
 Haematocrit
-Haemoglobin
+haemoglobin
 handgrip
 HC
 HCAR
@@ -117,11 +116,12 @@ interpretable
 Intervertebral
 Intra
 intraocular
-ischaemic
+Ischaemic
 Jurkat
 KEGG
 keratometry
 Kiryluk
+kirylukk
 Krzysztof
 Kullo
 LD
@@ -168,6 +168,7 @@ myeloma
 myelopathy
 myxoedema
 Namjou
+Nephrology
 neurodevelopmental
 neuropsychiatric
 neutrophil
@@ -186,7 +187,7 @@ pectoris
 PEF
 perturbagens
 Phecode
-phenomexcan
+PhenomeXcan
 PhenoPLIER
 phenotypes
 Pividori
@@ -218,7 +219,7 @@ reticulocytes
 revascularizations
 RIBOSOME
 Ritchie
-roc
+ROC
 SCAP
 SCD
 sckinta
@@ -242,8 +243,6 @@ submatrix
 Sumei
 TCA
 TCF
-therapeutical
-thresholded
 thrombocytes
 thyrotoxicosis
 transcriptional
@@ -256,3 +255,4 @@ UBE
 UMAP
 unadjusted
 uninodular
+Vagelos

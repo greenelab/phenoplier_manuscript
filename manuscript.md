@@ -18,7 +18,7 @@ author-meta:
 - Casey S. Greene
 bibliography:
 - content/manual-references.json
-date-meta: '2021-06-30'
+date-meta: '2021-07-01'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -29,17 +29,17 @@ header-includes: '<!--
 
   <meta name="dc.format" content="text/html" />
 
-  <meta name="dc.title" content="Projecting genetic associations and drug transcriptional profiles through gene expression patterns reveal disease etiology and potential mechanisms for therapeutic strategies" />
+  <meta name="dc.title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
 
-  <meta name="citation_title" content="Projecting genetic associations and drug transcriptional profiles through gene expression patterns reveal disease etiology and potential mechanisms for therapeutic strategies" />
+  <meta name="citation_title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
 
-  <meta property="og:title" content="Projecting genetic associations and drug transcriptional profiles through gene expression patterns reveal disease etiology and potential mechanisms for therapeutic strategies" />
+  <meta property="og:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
 
-  <meta property="twitter:title" content="Projecting genetic associations and drug transcriptional profiles through gene expression patterns reveal disease etiology and potential mechanisms for therapeutic strategies" />
+  <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
 
-  <meta name="dc.date" content="2021-06-30" />
+  <meta name="dc.date" content="2021-07-01" />
 
-  <meta name="citation_publication_date" content="2021-06-30" />
+  <meta name="citation_publication_date" content="2021-07-01" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -89,13 +89,19 @@ header-includes: '<!--
 
   <meta name="citation_author_institution" content="Vanderbilt University Medical Center" />
 
+  <meta name="citation_author_orcid" content="0000-0002-6213-793X" />
+
   <meta name="citation_author" content="Bahram Namjou" />
 
   <meta name="citation_author_institution" content="Cincinnati Children&#39;s Hospital Medical Center" />
 
   <meta name="citation_author" content="Krzysztof Kiryluk" />
 
-  <meta name="citation_author_institution" content="Columbia University" />
+  <meta name="citation_author_institution" content="Department of Medicine, Division of Nephrology, Vagelos College of Physicians &amp; Surgeons, Columbia University, New York, New York" />
+
+  <meta name="citation_author_orcid" content="0000-0002-5047-6715" />
+
+  <meta name="twitter:creator" content="@kirylukk" />
 
   <meta name="citation_author" content="Iftikhar Kullo" />
 
@@ -159,11 +165,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/3824f0be6e23843bb28b6aed3a2636db538ce008/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/ae59a1b440b25f1c6dacd774e025c3dbda91844c/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/3824f0be6e23843bb28b6aed3a2636db538ce008/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/ae59a1b440b25f1c6dacd774e025c3dbda91844c/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/3824f0be6e23843bb28b6aed3a2636db538ce008/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/ae59a1b440b25f1c6dacd774e025c3dbda91844c/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -186,7 +192,7 @@ manubot-clear-requests-cache: false
 manubot-output-bibliography: output/references.json
 manubot-output-citekeys: output/citations.tsv
 manubot-requests-cache-path: ci/cache/requests-cache
-title: Projecting genetic associations and drug transcriptional profiles through gene expression patterns reveal disease etiology and potential mechanisms for therapeutic strategies
+title: Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms
 ...
 
 
@@ -201,10 +207,10 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/3824f0be6e23843bb28b6aed3a2636db538ce008/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/ae59a1b440b25f1c6dacd774e025c3dbda91844c/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@3824f0b](https://github.com/greenelab/phenoplier_manuscript/tree/3824f0be6e23843bb28b6aed3a2636db538ce008)
-on June 30, 2021.
+from [greenelab/phenoplier_manuscript@ae59a1b](https://github.com/greenelab/phenoplier_manuscript/tree/ae59a1b440b25f1c6dacd774e025c3dbda91844c)
+on July 1, 2021.
 </em></small>
 
 ## Authors
@@ -254,7 +260,9 @@ on June 30, 2021.
      Vanderbilt University Medical Center
   </small>
 
-+ **Qiping Feng**<br><br>
++ **Qiping Feng**<br>
+    ![ORCID icon](images/orcid.svg){.inline_icon}
+    [0000-0002-6213-793X](https://orcid.org/0000-0002-6213-793X)<br>
   <small>
      Vanderbilt University Medical Center
   </small>
@@ -264,9 +272,13 @@ on June 30, 2021.
      Cincinnati Children's Hospital Medical Center
   </small>
 
-+ **Krzysztof Kiryluk**<br><br>
++ **Krzysztof Kiryluk**<br>
+    ![ORCID icon](images/orcid.svg){.inline_icon}
+    [0000-0002-5047-6715](https://orcid.org/0000-0002-5047-6715)
+    · ![Twitter icon](images/twitter.svg){.inline_icon}
+    [kirylukk](https://twitter.com/kirylukk)<br>
   <small>
-     Columbia University
+     Department of Medicine, Division of Nephrology, Vagelos College of Physicians & Surgeons, Columbia University, New York, New York
   </small>
 
 + **Iftikhar Kullo**<br><br>
@@ -329,15 +341,15 @@ on June 30, 2021.
 
 Understanding how dysregulated transcriptional processes result in tissue-specific pathology requires a mechanistic interpretation of expression regulation across different cell types.
 It has been shown that this insight is key for the development of new therapies.
-These mechanisms can be identified with transcriptome-wide association studies (TWAS), which have represented an important step forward to test the mediating role of gene expression in GWAS hits.
+These mechanisms can be identified with transcriptome-wide association studies (TWAS), which have represented an important step forward to test the mediating role of gene expression in GWAS associations.
 <!-- By training expression prediction models across several tissues, TWAS computes a gene-trait association by correlating predicted expression with the phenotype of interest. -->
-However, due to pervasive eQTLs sharing across tissues, TWAS has not been successful in identifying causal tissues, and other methods generally do not take advantage of the large amounts of RNA-seq data publicly available.
+However, due to pervasive eQTL sharing across tissues, TWAS has not been successful in identifying causal tissues, and other methods generally do not take advantage of the large amounts of RNA-seq data publicly available.
 Here we introduce a polygenic approach that leverages gene modules (genes with similar co-expression patterns) to project both gene-trait associations and pharmacological perturbation data into a common latent representation for a joint analysis.
-We observed that diseases were significantly associated with gene modules expressed in relevant cell types, such as hypothyroidism with T cells and thyroid, hypertension and lipids with adipose tissue, and heart problems with heart ventricle and muscle cells.
+We observed that diseases were significantly associated with gene modules expressed in relevant cell types, such as hypothyroidism with T cells and thyroid, hypertension and lipids with adipose tissue, and coronary artery disease with cardiomyocytes.
 Our approach was more accurate in predicting known drug-disease pairs and revealed stable trait clusters, including a complex branch involving lipids with cardiovascular, autoimmune, and neuropsychiatric disorders.
 <!-- We replicated gene module associations with cardiovascular and autoimmune diseases in the Electronic Medical Records and Genomics (eMERGE) network. -->
 Furthermore, using a CRISPR-screen, we show that genes involved in lipid regulation exhibit more consistent trait associations through gene modules than individual genes.
-Our results suggest that a gene module perspective can contextualize genetic associations and prioritize alternative therapeutical targets when GWAS hits are not druggable.
+Our results suggest that a gene module perspective can contextualize genetic associations and prioritize alternative treatment targets when GWAS hits are not druggable.
 
 
 ## Introduction
@@ -404,11 +416,11 @@ PhenoPLIER translates gene-trait associations to an LV-trait score, linking diff
 Examining these LVs is possible because the MultiPLIER models link to samples, which may be annotated for experimental conditions (represented by matrix $\mathbf{B}$ in Figure @fig:entire_process a) in which genes in an LV are expressed.
 
 
-In the original MultiPLIER study, the authors found LV603 to be significantly associated with a known neutrophil pathway and highly correlated with neutrophil estimates from gene expression [@doi:10.1186/s13059-016-1070-5].
+In the original MultiPLIER study, the authors found one of the latent variables, LV603, to be significantly associated with a known neutrophil pathway and highly correlated with neutrophil count estimates from gene expression [@doi:10.1186/s13059-016-1070-5].
 We analyzed LV603 using PhenoPLIER (Figure @fig:entire_process b) and found that neutrophil counts and other white blood cell traits were ranked among the top 10 traits for this LV, suggesting a high degree of internal consistency.
 We adapted the gene-property approach from MAGMA [@doi:10.1371/journal.pcbi.1004219] for LVs and found that gene weights in this LV were predictive of gene associations for neutrophil abundance (FDR < 0.01).
 These initial results strongly suggested that shared patterns exist in the gene expression space (which has no GTEx samples) and the TWAS space (with gene models trained using GTEx v8);
-the approach linked transcriptional patterns from large and different collections of data, including tissue samples and perturbation experiments, to complex traits.
+the approach linked transcriptional patterns from large and diverse dataset collections, including tissue samples and perturbation experiments, to complex traits.
 
 
 ### LVs link genes that alter lipid accumulation with relevant traits and tissues
@@ -428,7 +440,7 @@ In this case, we also found lipid-related traits among the top 25, including hyp
 ![
 **Tissues and traits associated with a gene module related to lipid metabolism (LV246).**
 <!--  -->
-**a)** Top cell types/tissues where genes in LV246 are expressed on.
+**a)** Top cell types/tissues where LV246's genes are expressed in.
 Values in the $y$-axis come from matrix $\mathbf{B}$ in the MultiPLIER models (Figure @fig:entire_process a).
 In the $x$-axis, cell types/tissues are sorted by the maximum value.
 <!--  -->
@@ -683,7 +695,7 @@ To our knowledge, projection through a representation learned on complementary b
 Our approach rests on the assumption that gene modules with coordinated expression will also manifest coordinated pathological effects.
 Our implementation in this work integrates two complementary approaches.
 One, MultiPLIER, which extracts latent variables from large expression datasets.
-In this case, we use a previously a published model derived from the analysis of recount2, which was designed for interpretability.
+In this case, we use a previously published model derived from the analysis of recount2, which was designed for interpretability.
 The MultiPLIER LVs could represent real transcriptional processes or technical factors ("batch effects").
 Also, the underlying factorization method rests on linear combinations of variables, which could miss important and more complex co-expression patterns, and the training dataset of recount2 has since been surpassed in size and scale by other resources [@doi:10.1038/s41467-018-03751-6; @doi:10.1101/2021.05.21.445138].
 Second, TWAS have several limitations that can lead to false positives [@doi:10.1038/s41588-019-0385-z; @doi:10.1016/j.ajhg.2020.11.012].
@@ -1222,7 +1234,7 @@ Table: Significant trait associations of LV155 in eMERGE. {#tbl:sup:emerge_assoc
 ![
 **Cell types for LV844.**
 <!--  -->
-`Note`{.red} "Cell types from brain" come from [@doi:10.1073/pnas.1516645112], treated with different chemichals; I don't have enough information to separate cell types.
+<!-- `Note`{.red} "Cell types from brain" come from [@doi:10.1073/pnas.1516645112], treated with different chemichals; I don't have enough information to separate cell types. -->
 <!--  -->
 ](images/lvs_analysis/lv844/lv844-cell_types.svg "Cell types for LV844"){#fig:sup:lv844 width="80%"}
 
@@ -1607,8 +1619,8 @@ Table: Significant trait associations of LV5 in eMERGE. {#tbl:sup:emerge_assocs:
 ![
 **Cell types for LV434.**
 <!--  -->
-`FIXME:`{.red} create a section for all LVs and clarify how figures were generated, like:
-The top samples in human breast cancer cells have larger LV values that were thresholded at 3.0 for visualization purposes.
+<!-- `FIXME:`{.red} create a section for all LVs and clarify how figures were generated, like: -->
+<!-- The top samples in human breast cancer cells have larger LV values that were thresholded at 3.0 for visualization purposes. -->
 <!--  -->
 HEK293 is a cell line derived from human embryonic kidney cells;
 3T3 is a cell line derived from mouse embryonic fibroblasts.
