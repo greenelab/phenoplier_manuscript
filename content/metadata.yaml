@@ -1,5 +1,5 @@
 ---
-title: "Projecting genetic associations and drug transcriptional profiles through gene expression patterns reveal disease etiology and potential mechanisms for therapeutic strategies"
+title: "Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms"
 keywords:
   - gene co-expression
   - MultiPLIER
@@ -43,6 +43,7 @@ authors:
       - Vanderbilt University Medical Center
 
   - name: Qiping Feng
+    orcid: 0000-0002-6213-793X
     affiliations:
       - Vanderbilt University Medical Center
 
@@ -51,8 +52,10 @@ authors:
       - Cincinnati Children's Hospital Medical Center
 
   - name: Krzysztof Kiryluk
+    orcid: 0000-0002-5047-6715
+    twitter: kirylukk
     affiliations:
-      - Columbia University
+      - Department of Medicine, Division of Nephrology, Vagelos College of Physicians & Surgeons, Columbia University, New York, New York
 
   - name: Iftikhar Kullo
     affiliations:
