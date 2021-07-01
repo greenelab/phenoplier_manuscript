@@ -165,11 +165,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/ae59a1b440b25f1c6dacd774e025c3dbda91844c/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/d685f936fbc1f4e540f7f9a678de12df0227bd8b/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/ae59a1b440b25f1c6dacd774e025c3dbda91844c/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/d685f936fbc1f4e540f7f9a678de12df0227bd8b/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/ae59a1b440b25f1c6dacd774e025c3dbda91844c/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/d685f936fbc1f4e540f7f9a678de12df0227bd8b/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -207,9 +207,9 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/ae59a1b440b25f1c6dacd774e025c3dbda91844c/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/d685f936fbc1f4e540f7f9a678de12df0227bd8b/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@ae59a1b](https://github.com/greenelab/phenoplier_manuscript/tree/ae59a1b440b25f1c6dacd774e025c3dbda91844c)
+from [greenelab/phenoplier_manuscript@d685f93](https://github.com/greenelab/phenoplier_manuscript/tree/d685f936fbc1f4e540f7f9a678de12df0227bd8b)
 on July 1, 2021.
 </em></small>
 
@@ -777,11 +777,6 @@ $$ {#eq:proj}
 where in $\hat{\mathbf{M}}^{l \times n}$ all traits in PhenomeXcan are now described by gene modules.
 
 
-### CRISPR-Cas9 screening
-
-`Add details`{.red}
-
-
 ### Gene module-trait associations
 
 To compute an association between a gene module and a trait, we used an approach similar to the gene-property analysis in MAGMA [@doi:10.1371/journal.pcbi.1004219],
@@ -896,6 +891,70 @@ Next, we removed this LV from $\hat{\mathbf{M}}$ (regardless of being previously
 We repeated this procedure 20 times to extract the top 20 LVs that better discriminate traits in a cluster from the rest.
 
 
+### CRISPR-Cas9 screening
+
+**Cell culture.**
+HepG2 cells were obtained from ATCC (ATCC® HB-8065™), and main-tained in Eagle’s Minimum Essential Medium with L-Glutamine (EMEM, Cat. 112-018-101, Quality Biology) supplemented with 10% Fetal Bovine Serum (FBS, Gibco, Cat.16000-044), and 1% Pen/Strep (Gibco, Cat.15140-122).
+Cells were kept at 37oC in a humidity-controlled incubator with 5% CO2, and were maintained at a density not exceed more than 80% confluency.
+
+**Genome-wide lentiviral pooled CRISPR-Cas9 library.**
+3rd lentiviral generation, Broad GPP genome-wide Human Brunello CRISPR knockout Pooled library was provided by David Root and John Doench from Addgene (Cat. 73179-LV), and was used for HepG2 cell transduction.
+It consists of 76,441 sgRNAs, targets 19,114 genes in the human genome with an average of 4 sgRNAs per gene.
+Each 20nt sgRNA cassette was inserted into lentiCRIS-PRv2 backbone between U6 promoter and gRNA scaffold.
+Through cell transduction, the lentiviral vectors which encode Cas9 were used to deliver the sgRNA cassette containing plasmids into cells during cell replication. 
+Unsuccessful transduced cells were excluded through puromycin selection.
+
+**Lentiviral titer determination.**
+No-spin lentiviral transduction was utilized for the screen.
+In a Collagen-I coated 6-wells plate, approximate 2.5 M cells were seeded each well in the presence of 8ug/ml polybrene (Millipore Sigma, Cat. TR-1003 G), and a different titrated virus volume (e.g., 0, 50, 100, 200, 250, and 400ul) was assigned to each well.
+EMEM complete media was added to make the final volume of 1.24ml. 16-18hrs post transduction, virus/polybrene containing media was removed from each well.
+Cells were washed twice with 1x DPBS, and replaced with fresh EMEM.
+At 24h, cells in each well were trypsinized, diluted (e.g.,1:10), and seeded in pairs of wells of 6-well plates. At 60hr post transduction, cell media in each well was replaced with fresh EMEM. 2ug/ml of puromycin (Gibco, Cat. A1113803) was added to one well out of the pair. 2-5 days after puromycin selection, or the 0 virus well treated with puromycin had no survival of cells, cells in both wells with/without puromycin were collected and counted for viability.
+Percentage of Infection (PI%) was obtained by comparing the cell numbers with/without puromycin selection within each pair.
+By means of Poisson’s distribution theory, when transduction efficiency (PI%) is between 30-50%, which corresponding to a MOI (Multiplicity of Infection) of ~0.35-0.70. At MOI equal or close to 0.3, around 95% of infected cells are predicted to have only one copy of virus.
+Therefore, a volume of virus (120ul) yielding 30-40% of transduction effi-ciency was chosen for further large-scale viral transduction.
+
+**Lentiviral Transduction in HepG2 Using Brunello CRISPR Knockout Pooled Library.**
+In order to achieve a coverage (representation) of at least 500 cells per sgRNA, and at a MOI between 0.3-0.4 to ensure 95% of infected cells get only one viral particle per cell, ~200M cells were initiated for the screen.
+Transduction was carried out in the similar fashion as de-scribed above.
+Briefly, 2.5M cells were seeded in each well of 14 6-well plates, along with 8ug/ml of polybrene.
+Volume of 120ul of virus was added to each experimental well. 18hrs post transduction, virus/PB mix medium was removed, and cells in each well were collect-ed, counted, and pooled into T175 flasks.
+At 60hr post transduction, 2ug/ml of puromycin was added to each flask.
+Mediums were changed every 2 days with fresh EMEM, topped with 2ug/ml puromycin. 7 days after puromycin selection, cells were collected, pooled, counted, and replated.
+
+**Fluorescent dye staining.** 9 days after puromycin selection, cells were assigned to 2 groups. 20-30M cells were collected as Unsorted Control.
+Cell pellet was spun down at 500 x g for 5min at 4oC.
+Dry pellet was kept at -80oC for further genomic DNA isolation.
+The rest of the cells (approximately 200M) were kept in 100mm dishes, and stained with fluo-rescent dye (LipidSpotTM 488, Biotium, Cat. 70065-T).
+In Brief, LipidSpot 488 was diluted to 1:100 with DPBS. 4ml of staining solution was used for each dish, and incubated at 37oC for 30min.
+Cell images were captured through fluorescent microscope EVOS for GFP signal detection (Supplementary Figure @fig:sup:crispr:fig1).
+
+**Fluorescence-activated cell sorting (FACS).**
+Cells were immediately collected into 50ml tubes (From this point on, keep cells cold), and spin at 500 x g for 5min at 4oC.
+After DPBS wash, cell pellets were resuspended with FACS Sorting Buffer (1x DPBS without Ca2+/Mg2+, 2.5mM EDTA, 25mM HEPES, 1% BSA.
+Solution was filter sterilized, and kept at 4oC), pi-pet gently to make single cells.
+Cell solution then filtered through cell strainer (Falcon, Cat. 352235), and were kept on ice protected from light.
+Collected cells were sorted on FACSJazz. 100um nozzle was used for sorting. ~20% of each GFP-High and GFP-Low (Supplementary Figure @fig:sup:crispr:fig2) were collected into 15ml tubes.
+After sorting, cells were immediately spun down. Pellets were kept in -80oC for further genomic DNA isolation.
+
+**Genomic DNA isolation and verification.**
+3 conditions of Genomic DNA (Un-Sorted Con-trol, lentiV2 GFP-High, and lentiV2 GFP-Low) were extracted using QIAamp DNA Blood Mini Kit (Qiagen, Cat.51104), followed by UV Spectroscopy (Nanodrop) to access the quality and quantity of the gDNA.
+Total 80-160ug of gDNA was isolated for each condi-tion. sgRNA cassette and lentiviral specific transgene in isolated gDNA were verified through PCR (Supplementary Figure @fig:sup:crispr:fig3).
+
+**Illumina libraries generation and sequencing.**
+Fragment containing sgRNA cassette was amplified using P5 /P7 primers, as indicated in [@pmid:26780180] and primer sequences were adapted from Broad Institute protocol (Supplementary Figure @fig:sup:crispr:table1).
+Stagger sequence (0-8nt) was included in P5, and 8bp uniquely barcoded sequence in P7.
+Primers were syn-thesized through Integrated DNA Technologies (IDT), each primer was PAGE purified. 32 PCR reactions were set up for each condition.
+Each 100ul PCR reaction consists of roughly 5ug of gDNA, 5ul of each 10uM P5 and P7. ExTaq DNA Polymerase (TaKaRa, Cat. RR001A) was used to amplify the amplicon.
+PCR Thermal Cycler Parameters set as: Initial at 95oC for 1min; followed by 24 cycles of Denaturation at 94oC for 30 seconds, Annealing at 52.5oC for 30 seconds, Extension at 72oC for 30 seconds.
+A final Elongation at 72oC for 10 minutes. 285bp-293bp PCR products were expected (Supplementary Figure @fig:sup:crispr:fig4 A).
+PCR products within the same condition were pooled and purified using SPRIselect beads (Beckman Coulter, Cat. B23318).
+Purified illumina libraries were quantitated on Qubit, and the quality of the library were analyzed on Bio-analyzer using High Sensitivity DNA Chip.
+A single approxi-mate 285bp peak was expected. (Supplementary Figure @fig:sup:crispr:fig4 B).
+Final illumina library samples were se-quenced on Nova-seq 6000.
+Samples were pooled and loaded on a SP flow cell, along with 20% PhiX control v3 library spike-in.
+
+
 ## References {.page_break_before}
 
 <!-- Explicitly insert bibliography here -->
@@ -903,6 +962,46 @@ We repeated this procedure 20 times to extract the top 20 LVs that better discri
 
 
 ## Supplementary material
+
+
+### CRISPR-screen
+
+![
+**EVOS Fluorescent Microscope Image Capture.**
+A. HepG2_lentiV2_Ctrl with no-viral transduction.
+B. HepG2_lentiV2 with viral transduction.
+<!--  -->
+](images/crispr/figure1.png "EVOS Fluorescent Microscope Image Capture"){#fig:sup:crispr:fig1 width="80%"}
+
+
+![
+**Fluorescence-Activated Cell Sorting Gate Setting.**
+A. HepG2_UnStained WT.
+B. HepG2_lentiV2 with viral transduction.
+<!--  -->
+](images/crispr/figure2.png "Fluorescence-Activated Cell Sorting Gate Setting"){#fig:sup:crispr:fig2 width="80%"}
+
+
+![
+**Verification of sgRNA cassette and lentiV2 transgene.**
+A. 20nt sgRNA cassette was verified in lentiV2 transduced genomic DNA population, 163 bp PCR product obtained, while WT HepG2 didn’t possess the cassette, thus, no PCR product.
+B. lentiviral-specific transgene WPRE was verified in lentiV2 transduced genomic DNA population, while no transduced WT didn’t have the transgene, therefore, no 173 bp PCR product observed.
+<!--  -->
+](images/crispr/figure3.png "Verification of sgRNA cassette and lentiV2 transgene"){#fig:sup:crispr:fig3 width="80%"}
+
+
+![
+<!-- **XXX.** -->
+<!--  -->
+<!--  -->
+](images/crispr/table1.png "Table 1"){#fig:sup:crispr:table1 width="80%"}
+
+
+![
+**Illumina library generation.**
+A. Construct for generating illumina libraries.
+B. Final illumina library from HS DNA ---showed a single ~285bp peak was generated.
+](images/crispr/figure4.png "xxxx"){#fig:sup:crispr:fig4 width="80%"}
 
 
 ### Gene modules enriched for lipids gene-sets
