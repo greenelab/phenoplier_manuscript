@@ -32,6 +32,7 @@ BMD
 BMI
 BMR
 Brunello
+bvoight
 Cardiomegaly
 cardiometabolic
 cardiomyocytes
@@ -42,14 +43,15 @@ catabolism
 celiac
 cgreene
 CHEMIOSMOTIC
-Chronotype
+chronotype
 Chun
 ciency
 cis
-coeliac
+Coeliac
 colocalization
 colocalized
 colour
+compendia
 condi
 confluency
 COTRANSLATIONAL
@@ -82,7 +84,7 @@ EFO
 EMEM
 eQTL
 eQTLs
-erythematosus
+Erythematosus
 Erythematous
 erythropoiesis
 EVOS
@@ -103,7 +105,7 @@ func
 GBMF
 gDNA
 Genomic
-genotype
+Genotype
 GFP
 Gibco
 glioma
@@ -142,7 +144,7 @@ IBD
 ICD
 IDT
 Iftikhar
-Illumina
+illumina
 initializations
 INSIG
 interpretability
@@ -150,7 +152,7 @@ interpretable
 Intervertebral
 Intra
 Intraocular
-Ischaemic
+ischaemic
 Jurkat
 KEGG
 keratometry
@@ -170,7 +172,7 @@ LipidSpot
 LipidSpotTM
 lipolysis
 lipoprotein
-lipoproteins
+LIPOPROTEINS
 lisinopril
 loadings
 LPL
@@ -275,7 +277,7 @@ reticulocytes
 revascularizations
 RIBOSOME
 Ritchie
-ROC
+roc
 SCAP
 SCD
 sckinta
@@ -289,7 +291,7 @@ Skarke
 SLE
 SOX
 sphered
-Spirometry
+spirometry
 Spondylosis
 SPRIselect
 SRP
@@ -317,7 +319,7 @@ transcriptomes
 transcriptomic
 transduced
 transgene
-translational
+Translational
 TRIACYLGLYCEROL
 trol
 trypsinized
@@ -327,4 +329,5 @@ UMAP
 unadjusted
 uninodular
 Vagelos
+Voight
 WPRE

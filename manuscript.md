@@ -12,13 +12,14 @@ author-meta:
 - Iftikhar Kullo
 - Yuan Luo
 - Blair D. Sullivan
+- Benjamin F. Voight
 - Carsten Skarke
 - Marylyn D. Ritchie
 - Struan F.A. Grant
 - Casey S. Greene
 bibliography:
 - content/manual-references.json
-date-meta: '2021-07-01'
+date-meta: '2021-07-13'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -37,9 +38,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
 
-  <meta name="dc.date" content="2021-07-01" />
+  <meta name="dc.date" content="2021-07-13" />
 
-  <meta name="citation_publication_date" content="2021-07-01" />
+  <meta name="citation_publication_date" content="2021-07-13" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -115,6 +116,18 @@ header-includes: '<!--
 
   <meta name="citation_author_institution" content="School of Computing, University of Utah, Salt Lake City, UT, USA" />
 
+  <meta name="citation_author" content="Benjamin F. Voight" />
+
+  <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
+
+  <meta name="citation_author_institution" content="Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
+
+  <meta name="citation_author_institution" content="Institute for Translational Medicine and Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
+
+  <meta name="citation_author_orcid" content="0000-0002-6205-9994" />
+
+  <meta name="twitter:creator" content="@bvoight28" />
+
   <meta name="citation_author" content="Carsten Skarke" />
 
   <meta name="citation_author_institution" content="Institute for Translational Medicine and Therapeutics, Department of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
@@ -165,11 +178,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/1833e89e77b1d95672971aaa1138de16e2fd032c/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/0eb32646fa5e9164011605797e6d3d3f2c619684/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/1833e89e77b1d95672971aaa1138de16e2fd032c/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/0eb32646fa5e9164011605797e6d3d3f2c619684/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/1833e89e77b1d95672971aaa1138de16e2fd032c/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/0eb32646fa5e9164011605797e6d3d3f2c619684/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -207,10 +220,10 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/1833e89e77b1d95672971aaa1138de16e2fd032c/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/0eb32646fa5e9164011605797e6d3d3f2c619684/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@1833e89](https://github.com/greenelab/phenoplier_manuscript/tree/1833e89e77b1d95672971aaa1138de16e2fd032c)
-on July 1, 2021.
+from [greenelab/phenoplier_manuscript@0eb3264](https://github.com/greenelab/phenoplier_manuscript/tree/0eb32646fa5e9164011605797e6d3d3f2c619684)
+on July 13, 2021.
 </em></small>
 
 ## Authors
@@ -296,6 +309,17 @@ on July 1, 2021.
      School of Computing, University of Utah, Salt Lake City, UT, USA
   </small>
 
++ **Benjamin F. Voight**<br>
+    ![ORCID icon](images/orcid.svg){.inline_icon}
+    [0000-0002-6205-9994](https://orcid.org/0000-0002-6205-9994)
+    · ![GitHub icon](images/github.svg){.inline_icon}
+    [bvoight](https://github.com/bvoight)
+    · ![Twitter icon](images/twitter.svg){.inline_icon}
+    [bvoight28](https://twitter.com/bvoight28)<br>
+  <small>
+     Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA; Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA; Institute for Translational Medicine and Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
+  </small>
+
 + **Carsten Skarke**<br>
     ![ORCID icon](images/orcid.svg){.inline_icon}
     [0000-0001-5145-3681](https://orcid.org/0000-0001-5145-3681)
@@ -342,14 +366,13 @@ on July 1, 2021.
 Understanding how dysregulated transcriptional processes result in tissue-specific pathology requires a mechanistic interpretation of expression regulation across different cell types.
 It has been shown that this insight is key for the development of new therapies.
 These mechanisms can be identified with transcriptome-wide association studies (TWAS), which have represented an important step forward to test the mediating role of gene expression in GWAS associations.
-<!-- By training expression prediction models across several tissues, TWAS computes a gene-trait association by correlating predicted expression with the phenotype of interest. -->
 However, due to pervasive eQTL sharing across tissues, TWAS has not been successful in identifying causal tissues, and other methods generally do not take advantage of the large amounts of RNA-seq data publicly available.
-Here we introduce a polygenic approach that leverages gene modules (genes with similar co-expression patterns) to project both gene-trait associations and pharmacological perturbation data into a common latent representation for a joint analysis.
-We observed that diseases were significantly associated with gene modules expressed in relevant cell types, such as hypothyroidism with T cells and thyroid, hypertension and lipids with adipose tissue, and coronary artery disease with cardiomyocytes.
-Our approach was more accurate in predicting known drug-disease pairs and revealed stable trait clusters, including a complex branch involving lipids with cardiovascular, autoimmune, and neuropsychiatric disorders.
-<!-- We replicated gene module associations with cardiovascular and autoimmune diseases in the Electronic Medical Records and Genomics (eMERGE) network. -->
-Furthermore, using a CRISPR-screen, we show that genes involved in lipid regulation exhibit more consistent trait associations through gene modules than individual genes.
-Our results suggest that a gene module perspective can contextualize genetic associations and prioritize alternative treatment targets when GWAS hits are not druggable.
+Here we introduce PhenoPLIER, a polygenic approach that leverages modules of genes with shared expression patterns across large data compendia to project both gene-trait associations and pharmacological perturbation data into a common latent representation for a joint analysis.
+We observed that diseases were significantly associated with gene modules expressed in relevant cell types, such as hypothyroidism with T cells and thyroid.
+Our approach was more accurate in predicting known drug-disease pairs and identifying known mechanisms of action.
+Furthermore, using a CRISPR-screen for the analysis of lipid regulation, we show that PhenoPLIER is more robust to prioritize drug targets than a standard single-gene method.
+<!-- Our results also revealed stable trait clusters, including a complex branch involving lipids with cardiovascular, autoimmune, and neuropsychiatric disorders. -->
+PhenoPLIER can contextualize genetic associations and reveal potentially attractive targets for pharmacologic intervention when phenotype-associated genes are not druggable.
 
 
 ## Introduction
@@ -373,12 +396,13 @@ We propose PhenoPLIER, a polygenic approach that maps both gene-trait associatio
 For this, we integrated more than 4,000 gene-trait associations (using TWAS from PhenomeXcan [@doi:10.1126/sciadv.aba2083]) and transcriptional profiles of drugs (LINCS L1000 [@doi:10.1016/j.cell.2017.10.049]) into a low-dimensional space learned from public gene expression data on tens of thousands of RNA-seq samples (recount2 [@doi:10.1016/j.cels.2019.04.003; @doi:10.1038/nbt.3838]).
 We used a latent representation defined by a computational approach [@doi:10.1038/s41592-019-0456-1] that learns recurrent gene co-expression patterns with certain sparsity constraints and preferences for those that align with prior knowledge (pathways).
 This low-dimensional space comprised features representing groups of genes (gene modules) with coordinated expression across different tissues and cell types.
-When mapping gene-trait associations to this reduced expression space, we observed that diseases were significantly associated with gene modules expressed in relevant cell types, such as hypothyroidism with T cells and thyroid, coronary artery disease with cardiomyocytes, hypertension and lipids with adipose tissue, and heart problems with heart ventricle and muscle cells.
+When mapping gene-trait associations to this reduced expression space, we observed that diseases were significantly associated with gene modules expressed in relevant cell types, such as hypothyroidism with T cells and thyroid, hypertension and lipids with adipose tissue, and myocardial infarction with cardiomyocytes.
 We replicated gene module associations with cardiovascular and autoimmune diseases in the Electronic Medical Records and Genomics (eMERGE) network phase III [@doi:10.1038/gim.2013.72].
 Moreover, we performed a CRISPR-screen to analyze lipid regulation in HepG2 cells and observed more consistent trait associations with modules than we observe with individual genes.
 Our approach was also robust in finding meaningful gene module-trait associations, even when individual genes involved in lipid metabolism did not reach genome-wide significance in lipid-related traits.
 Compared to a single-gene approach, our module-based method also better predicted FDA-approved drug-disease links by capturing tissue-specific pathophysiological mechanisms linked with the mechanism of action of drugs (e.g., niacin with cardiovascular traits via a known immune mechanism), suggesting that modules may provide a better means to examine drug-phenotype relationships than individual genes.
 Finally, exploring the phenotype-module space also revealed stable trait clusters associated with relevant tissues, including a complex branch involving lipids with cardiovascular, autoimmune, and neuropsychiatric disorders.
+In summary, PhenoPLIER is a phenotype-module method that can improve interpretation in genetic studies, and can aid future endeavors focused on identifying potential disease-drug relationships.
 
 
 ## Results
