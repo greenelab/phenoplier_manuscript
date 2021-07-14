@@ -1,4 +1,5 @@
 ACACA
+Acknowledgements
 acyltransferase
 Addgene
 ADHD
@@ -26,6 +27,7 @@ Behmel
 bendroflumethiazide
 Binglan
 Biobank
+BioRender
 Biotium
 BLCAP
 BMD
@@ -47,7 +49,7 @@ chronotype
 Chun
 ciency
 cis
-Coeliac
+coeliac
 colocalization
 colocalized
 colour
@@ -84,7 +86,7 @@ EFO
 EMEM
 eQTL
 eQTLs
-Erythematosus
+erythematosus
 Erythematous
 erythropoiesis
 EVOS
@@ -104,7 +106,7 @@ fluo
 func
 GBMF
 gDNA
-Genomic
+genomic
 Genotype
 GFP
 Gibco
@@ -165,7 +167,7 @@ LDL
 LDLR
 lentiCRIS
 lentiV
-lentiviral
+Lentiviral
 levothyroxine
 LINCS
 LipidSpot
@@ -178,7 +180,7 @@ loadings
 LPL
 Luo
 luteine
-lv
+LV
 LVs
 malabsorption
 Marylyn
@@ -319,7 +321,7 @@ transcriptomes
 transcriptomic
 transduced
 transgene
-Translational
+translational
 TRIACYLGLYCEROL
 trol
 trypsinized

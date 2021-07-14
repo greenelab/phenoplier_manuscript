@@ -19,7 +19,7 @@ author-meta:
 - Casey S. Greene
 bibliography:
 - content/manual-references.json
-date-meta: '2021-07-13'
+date-meta: '2021-07-14'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -38,9 +38,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
 
-  <meta name="dc.date" content="2021-07-13" />
+  <meta name="dc.date" content="2021-07-14" />
 
-  <meta name="citation_publication_date" content="2021-07-13" />
+  <meta name="citation_publication_date" content="2021-07-14" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -178,11 +178,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/0eb32646fa5e9164011605797e6d3d3f2c619684/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/45c9bc59d20d07cd360119da997c1e8e252622e7/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/0eb32646fa5e9164011605797e6d3d3f2c619684/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/45c9bc59d20d07cd360119da997c1e8e252622e7/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/0eb32646fa5e9164011605797e6d3d3f2c619684/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/45c9bc59d20d07cd360119da997c1e8e252622e7/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -220,10 +220,10 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/0eb32646fa5e9164011605797e6d3d3f2c619684/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/45c9bc59d20d07cd360119da997c1e8e252622e7/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@0eb3264](https://github.com/greenelab/phenoplier_manuscript/tree/0eb32646fa5e9164011605797e6d3d3f2c619684)
-on July 13, 2021.
+from [greenelab/phenoplier_manuscript@45c9bc5](https://github.com/greenelab/phenoplier_manuscript/tree/45c9bc59d20d07cd360119da997c1e8e252622e7)
+on July 14, 2021.
 </em></small>
 
 ## Authors
@@ -421,11 +421,13 @@ Air pollution linked to neurodegeneration markers
 
 ![
 **Schematic of the PhenoPLIER framework.**
-**a)** The integration process between gene co-expression patterns from MultiPLIER (top) and TWAS results from PhenomeXcan (bottom).
+**a)** High-level schematic of PhenoPLIER (a gene module-based method) in the context of TWAS (single-gene) and GWAS (genetic variants).
+PhenoPLIER integrates gene modules expressed in specific cell types with gene-trait associations.
+**b)** A more detailed schematic of how PhenoPLIER works by integrating gene co-expression patterns from MultiPLIER (top) and TWAS results from PhenomeXcan (bottom).
 PhenoPLIER projects gene-trait associations to a latent space learned from large gene expression datasets.
 The process generates matrix $\mathbf{\hat{M}}$, where each trait is now described by latent variables (LV) or gene modules.
-**b)** After the integration process, we found that neutrophil counts and other white blood cells (bottom) were ranked among the top 10 traits for LV603, which was termed a neutrophil signature in the original MultiPLIER study.
-Genes in LV603 were expressed in relevant cell types (top).
+After the integration process, we found that neutrophil counts and other white blood cells (bottom right) were ranked among the top 10 traits for LV603, which was termed a neutrophil signature in the original MultiPLIER study.
+Genes in LV603 were expressed in relevant cell types (top right).
 PBMC: peripheral blood mononuclear cells;
 mDCs: myeloid dendritic cells.
 ](images/entire_process/entire_process.svg "PhenoPLIER framework"){#fig:entire_process width="100%"}
@@ -434,15 +436,16 @@ mDCs: myeloid dendritic cells.
 PhenoPLIER combines TWAS results with gene co-expression patterns by projecting gene-trait associations onto a latent gene expression representation (Figure @fig:entire_process).
 We used PhenomeXcan [@doi:10.1126/sciadv.aba2083], a TWAS resource for the UK Biobank [@doi:10.1038/s41586-018-0579-z] and other cohorts that provides results for 4,091 different diseases and traits.
 We obtained a latent gene expression representation from MultiPLIER [@doi:10.1016/j.cels.2019.04.003], an unsupervised learning approach applied to recount2 [@doi:10.1038/nbt.3838] (a gene expression dataset including RNA-seq data on a huge and heterogeneous number of samples, including rare diseases, cell types on specific differentiation stages, or under different stimuli, among others).
-Each of the 987 latent variables (LV) represents a gene module, essentially a group of genes with coordinated expression patterns (i.e., expressed together in the same tissues and cell types as a functional unit).
+MultiPLIER extracted 987 latent variables (LVs) from the data, each of them representing a gene module, essentially a group of genes expressed together in the same tissues and cell types.
 Since LVs might represent a functional set of genes regulated by the same transcriptional program [@doi:10.1186/1471-2164-7-187; @doi:10.1186/s13059-019-1835-8], the projection of TWAS results into this latent space could provide context for their interpretation.
 PhenoPLIER translates gene-trait associations to an LV-trait score, linking different traits and diseases to LVs representing specific cell types and tissues, even at specific developmental stages or under distinct stimuli.
-Examining these LVs is possible because the MultiPLIER models link to samples, which may be annotated for experimental conditions (represented by matrix $\mathbf{B}$ in Figure @fig:entire_process a) in which genes in an LV are expressed.
+Examining these LVs is possible because the MultiPLIER models link to samples, which may be annotated for experimental conditions (represented by matrix $\mathbf{B}$ in Figure @fig:entire_process b) in which genes in an LV are expressed.
 
 
 In the original MultiPLIER study, the authors found one of the latent variables, LV603, to be significantly associated with a known neutrophil pathway and highly correlated with neutrophil count estimates from gene expression [@doi:10.1186/s13059-016-1070-5].
-We analyzed LV603 using PhenoPLIER (Figure @fig:entire_process b) and found that neutrophil counts and other white blood cell traits were ranked among the top 10 traits for this LV, suggesting a high degree of internal consistency.
-We adapted the gene-property approach from MAGMA [@doi:10.1371/journal.pcbi.1004219] for LVs and found that gene weights in this LV were predictive of gene associations for neutrophil abundance (FDR < 0.01).
+We analyzed LV603 using PhenoPLIER (Figure @fig:entire_process b right) and found that neutrophil counts and other white blood cell traits were ranked among the top 10 traits (out of 4,091) for this LV, suggesting a high degree of internal consistency.
+To further analyze LV-trait associations, we adapted the gene-property approach from MAGMA [@doi:10.1371/journal.pcbi.1004219] to compute an LV-trait $p$-value by fitting a regression model with LV weights as predictors of a trait's gene associations.
+We found that gene weights in LV603 were predictive of gene associations for neutrophil abundance (FDR < 0.01).
 These initial results strongly suggested that shared patterns exist in the gene expression space (which has no GTEx samples) and the TWAS space (with gene models trained using GTEx v8);
 the approach linked transcriptional patterns from large and diverse dataset collections, including tissue samples and perturbation experiments, to complex traits.
 
@@ -983,6 +986,11 @@ Samples were pooled and loaded on a SP flow cell, along with 20% PhiX control v3
 
 <!-- Explicitly insert bibliography here -->
 <div id="refs"></div>
+
+
+## Acknowledgements
+
+Figure 1 was created with BioRender.com.
 
 
 ## Supplementary material
