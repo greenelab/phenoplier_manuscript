@@ -51,13 +51,13 @@ ciency
 cis
 CKD
 claudication
-coeliac
+Coeliac
 colocalization
 colocalized
 compendia
 condi
 confluency
-crispr
+CRISPR
 crit
 Ctrl
 CXCR
@@ -114,7 +114,7 @@ func
 GBMF
 gDNA
 Genomic
-genotype
+Genotype
 GFP
 Gibco
 glioma
@@ -123,7 +123,7 @@ GMM
 Golabi
 GPP
 GPR
-granulocyte
+Granulocyte
 granulosa
 GreeneScientist
 gRNA
@@ -176,7 +176,7 @@ LDL
 LDLR
 lentiCRIS
 lentiV
-lentiviral
+Lentiviral
 levothyroxine
 LINCS
 LipidSpot
@@ -222,11 +222,11 @@ Nephrology
 neurodegenerative
 neurodevelopmental
 neuropsychiatric
-Neutrophil
+neutrophil
 Neutrophill
-Neutrophils
+neutrophils
 NFAT
-Nicotinic
+nicotinic
 NMR
 oC
 omnigenic
@@ -241,7 +241,7 @@ PCYT
 pectoris
 perturbagens
 Phecode
-phenomexcan
+PhenomeXcan
 PhenoPLIER
 phenotypes
 PhiX
@@ -337,7 +337,7 @@ transcriptomes
 transcriptomic
 transduced
 transgene
-translational
+Translational
 Treg
 TRIACYLGLYCEROL
 trol

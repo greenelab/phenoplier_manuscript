@@ -178,11 +178,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/250b3e6d448d0a6b30c16591ae4d9de2d44e8f3a/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/f5a1db472633ca9a2354da1c6b9f5cf76795efe7/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/250b3e6d448d0a6b30c16591ae4d9de2d44e8f3a/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/f5a1db472633ca9a2354da1c6b9f5cf76795efe7/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/250b3e6d448d0a6b30c16591ae4d9de2d44e8f3a/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/f5a1db472633ca9a2354da1c6b9f5cf76795efe7/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -220,9 +220,9 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/250b3e6d448d0a6b30c16591ae4d9de2d44e8f3a/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/f5a1db472633ca9a2354da1c6b9f5cf76795efe7/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@250b3e6](https://github.com/greenelab/phenoplier_manuscript/tree/250b3e6d448d0a6b30c16591ae4d9de2d44e8f3a)
+from [greenelab/phenoplier_manuscript@f5a1db4](https://github.com/greenelab/phenoplier_manuscript/tree/f5a1db472633ca9a2354da1c6b9f5cf76795efe7)
 on July 24, 2021.
 </em></small>
 
@@ -397,7 +397,7 @@ The approach maps both gene-trait associations and drug-transcriptional response
 For this, we integrated more than 4,000 gene-trait associations (using TWAS from PhenomeXcan [@doi:10.1126/sciadv.aba2083]) and transcriptional profiles of drugs (LINCS L1000 [@doi:10.1016/j.cell.2017.10.049]) into a low-dimensional space learned from public gene expression data on tens of thousands of RNA-seq samples (recount2 [@doi:10.1016/j.cels.2019.04.003; @doi:10.1038/nbt.3838]).
 We used a latent representation defined by a computational approach [@doi:10.1038/s41592-019-0456-1] that learns recurrent gene co-expression patterns with certain sparsity constraints and preferences for those that align with prior knowledge (pathways).
 This low-dimensional space comprised features representing groups of genes (gene modules) with coordinated expression across different tissues and cell types.
-When mapping gene-trait associations to this reduced expression space, we observed that diseases were significantly associated with gene modules expressed in relevant cell types, such as hypothyroidism with T cells and thyroid, hypertension and lipids with adipose tissue, and myocardial infarction with cardiomyocytes.
+When mapping gene-trait associations to this reduced expression space, we observed that diseases were significantly associated with gene modules expressed in relevant cell types, such as hypothyroidism with T cells and thyroid, corneal endothelial cells with keratometry measurements, hematological assays on specific blood cell types, plasma lipids with adipose tissue, and neuropsychiatric disorders with brain cell types.
 We replicated gene module associations with cardiovascular and autoimmune diseases in the Electronic Medical Records and Genomics (eMERGE) network phase III [@doi:10.1038/gim.2013.72].
 Moreover, we performed a CRISPR-screen to analyze lipid regulation in HepG2 cells and observed more robust trait associations with modules than with individual genes, even when single genes known to be involved in lipid metabolism did not reach genome-wide significance.
 <!-- Since our approach incorporates groups of genes associated with a phenotype instead single genes, it was also more robust in finding meaningful gene module-trait associations, even when individual genes involved in lipid metabolism did not reach genome-wide significance in lipid-related traits. -->

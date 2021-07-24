@@ -30,7 +30,8 @@ content/02.introduction.md:19:transcriptional
 content/02.introduction.md:20:LINCS
 content/02.introduction.md:20:PhenomeXcan
 content/02.introduction.md:20:transcriptional
-content/02.introduction.md:23:cardiomyocytes
+content/02.introduction.md:23:keratometry
+content/02.introduction.md:23:neuropsychiatric
 content/02.introduction.md:25:CRISPR
 content/02.introduction.md:27:pathophysiological
 content/02.introduction.md:28:neuropsychiatric
