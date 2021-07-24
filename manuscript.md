@@ -178,11 +178,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/6202be1e464c31cd403c80c734e9b3dcfae3514b/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/250b3e6d448d0a6b30c16591ae4d9de2d44e8f3a/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/6202be1e464c31cd403c80c734e9b3dcfae3514b/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/250b3e6d448d0a6b30c16591ae4d9de2d44e8f3a/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/6202be1e464c31cd403c80c734e9b3dcfae3514b/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/250b3e6d448d0a6b30c16591ae4d9de2d44e8f3a/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -220,9 +220,9 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/6202be1e464c31cd403c80c734e9b3dcfae3514b/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/250b3e6d448d0a6b30c16591ae4d9de2d44e8f3a/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@6202be1](https://github.com/greenelab/phenoplier_manuscript/tree/6202be1e464c31cd403c80c734e9b3dcfae3514b)
+from [greenelab/phenoplier_manuscript@250b3e6](https://github.com/greenelab/phenoplier_manuscript/tree/250b3e6d448d0a6b30c16591ae4d9de2d44e8f3a)
 on July 24, 2021.
 </em></small>
 
@@ -703,7 +703,7 @@ These were
 1) heel bone-densitometry measurements,
 2) hematological assays on red blood cells,
 3) physical measures, including spirometry and body impedance, and anthropometric traits with fat-free and fat mass measures in separate sub-branches, and
-4) a "complex" branch including keratometry measurements, assays on white blood cells and platelets, skin and hair color traits, autoimmune disorders (type 1 diabetes, psoriasis, hyper/hypothyroidism, rheumatoid arthritis, systemic lupus erythematosus, celiac disease), and cardiovascular diseases (hypertension, coronary artery disease, myocardial infraction, hypercholesterolemia, and other cardiovascular-related traits such hand-grip strength [@pmid:25982160], and environmental/behavioral factors such as physical activity and diet) (See Supplementary Files 1-5 for clustering results).
+4) a "complex" branch including keratometry measurements, assays on white blood cells and platelets, skin and hair color traits, autoimmune disorders (type 1 diabetes, psoriasis, hyper/hypothyroidism, rheumatoid arthritis, systemic lupus erythematosus, celiac disease), and cardiovascular diseases (hypertension, coronary artery disease, myocardial infraction, hypercholesterolemia, and other cardiovascular-related traits such hand-grip strength [@pmid:25982160], and environmental/behavioral factors such as physical activity and diet) (See Supplementary Files 2-6 for clustering results).
 Within these branches, results were relatively stable.
 The same traits were often clustered together across different resolutions, even with the consensus algorithm using random initializations at each level.
 Arrows between different clusters show traits moving from one group to another across different resolutions.
@@ -1043,6 +1043,11 @@ Purified illumina libraries were quantitated on Qubit, and the quality of the li
 A single approxi-mate 285bp peak was expected. (Supplementary Figure @fig:sup:crispr:fig4 B).
 Final illumina library samples were se-quenced on Nova-seq 6000.
 Samples were pooled and loaded on a SP flow cell, along with 20% PhiX control v3 library spike-in.
+
+
+### Code availability
+
+The code to reproduce all the analyses in this work is available in [https://github.com/greenelab/phenoplier](https://github.com/greenelab/phenoplier)
 
 
 ## References {.page_break_before}

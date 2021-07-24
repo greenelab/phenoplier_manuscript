@@ -45,7 +45,7 @@ Cas
 catabolism
 celiac
 cgreene
-chronotype
+Chronotype
 Chun
 ciency
 cis
@@ -123,14 +123,14 @@ GMM
 Golabi
 GPP
 GPR
-Granulocyte
+granulocyte
 granulosa
 GreeneScientist
 gRNA
 GTEx
 GWAS
 Haematocrit
-Haemoglobin
+haemoglobin
 HB
 HC
 HCAR
@@ -213,7 +213,7 @@ monocytes
 mononuclear
 MSigDB
 MultiXcan
-myeloid
+Myeloid
 myeloma
 myelopathy
 Namjou
@@ -226,7 +226,7 @@ Neutrophil
 Neutrophill
 Neutrophils
 NFAT
-nicotinic
+Nicotinic
 NMR
 oC
 omnigenic
@@ -289,7 +289,7 @@ reticulocyte
 reticulocytes
 Ritchie
 RO
-ROC
+roc
 Salm
 SCAP
 SCD
@@ -337,7 +337,7 @@ transcriptomes
 transcriptomic
 transduced
 transgene
-Translational
+translational
 Treg
 TRIACYLGLYCEROL
 trol
