@@ -50,12 +50,11 @@ Chun
 cis
 CKD
 claudication
-coeliac
+Coeliac
 colocalization
 colocalized
-compendia
 confluency
-crispr
+CRISPR
 crit
 Ctrl
 CXCR
@@ -186,7 +185,7 @@ LPL
 LPSstimulated
 Luo
 lv
-lvs
+LVs
 Lymphadenitis
 malabsorption
 Marylyn
@@ -210,7 +209,7 @@ monocytes
 mononuclear
 MSigDB
 MultiXcan
-Myeloid
+myeloid
 myeloma
 myelopathy
 Namjou
@@ -246,7 +245,7 @@ PID
 Pividori
 plasmids
 pleiotropy
-plier
+PLIER
 polyarthropathies
 polybrene
 polygenic

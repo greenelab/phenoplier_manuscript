@@ -178,11 +178,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/16c23607848b35d610632b72c5e7211a09c37604/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/1195a38011e8b1b00ace31dbc80c5366e6b031a0/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/16c23607848b35d610632b72c5e7211a09c37604/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/1195a38011e8b1b00ace31dbc80c5366e6b031a0/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/16c23607848b35d610632b72c5e7211a09c37604/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/1195a38011e8b1b00ace31dbc80c5366e6b031a0/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -220,9 +220,9 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/16c23607848b35d610632b72c5e7211a09c37604/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/1195a38011e8b1b00ace31dbc80c5366e6b031a0/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@16c2360](https://github.com/greenelab/phenoplier_manuscript/tree/16c23607848b35d610632b72c5e7211a09c37604)
+from [greenelab/phenoplier_manuscript@1195a38](https://github.com/greenelab/phenoplier_manuscript/tree/1195a38011e8b1b00ace31dbc80c5366e6b031a0)
 on July 29, 2021.
 </em></small>
 
@@ -365,14 +365,13 @@ on July 29, 2021.
 
 Understanding how dysregulated transcriptional processes result in tissue-specific pathology requires a mechanistic interpretation of expression regulation across different cell types.
 It has been shown that this insight is key for the development of new therapies.
-These mechanisms can be identified with transcriptome-wide association studies (TWAS), which have represented an important step forward to test the mediating role of gene expression in GWAS associations.
-However, due to pervasive eQTL sharing across tissues, TWAS has not been successful in identifying causal tissues, and other methods generally do not take advantage of the large amounts of RNA-seq data publicly available.
-Here we introduce PhenoPLIER, a polygenic approach that leverages modules of genes with shared expression patterns across large data compendia to project both gene-trait associations and pharmacological perturbation data into a common latent representation for a joint analysis.
-We observed that diseases were significantly associated with gene modules expressed in relevant cell types, such as hypothyroidism with T cells and thyroid.
-Our approach was more accurate in predicting known drug-disease pairs and identifying known mechanisms of action.
-Furthermore, using a CRISPR-screen for the analysis of lipid regulation, we show that PhenoPLIER is more robust to prioritize drug targets than a standard single-gene method.
-<!-- Our results also revealed stable trait clusters, including a complex branch involving lipids with cardiovascular, autoimmune, and neuropsychiatric disorders. -->
-By incorporating groups of co-expressed genes, PhenoPLIER can contextualize genetic associations and reveal potentially attractive targets for pharmacologic intervention when single disease-associated genes are not detected or are not druggable.
+These mechanisms can be identified with transcriptome-wide association studies (TWAS), which have represented a significant step forward to test the mediating role of gene expression in GWAS associations.
+However, it is hard to disentangle causal cell types using eQTL data alone, and other methods generally do not use the large amounts of publicly available RNA-seq data.
+Here we introduce PhenoPLIER, a polygenic approach that maps both gene-trait associations and pharmacological perturbation data into a common latent representation for a joint analysis.
+This representation is based on modules of genes with similar expression patterns across the same tissues.
+We observed that diseases were significantly associated with gene modules expressed in relevant cell types, and our approach was accurate in predicting known drug-disease pairs and inferring mechanisms of action.
+Furthermore, using a CRISPR screen to analyze lipid regulation, we found that functionally important players lacked TWAS associations but were prioritized in phenotype-associated modules by PhenoPLIER.
+By incorporating groups of co-expressed genes, PhenoPLIER can contextualize genetic associations and reveal potential targets within associated processes that are missed by single-gene strategies.
 
 
 ## Introduction
@@ -385,7 +384,7 @@ Integrating functional genomics data and GWAS data [@doi:10.1016/j.ajhg.2018.04.
 
 Given the availability of gene expression data across several tissues [@doi:10.1038/nbt.3838; @doi:10.1038/s41467-018-03751-6; @doi:10.1126/science.aaz1776; @doi:10.1186/s13040-020-00216-9], a popular approach to identify these biological processes is the transcription-wide association study (TWAS), which integrates expression quantitative trait loci (eQTLs) data to provide a mechanistic interpretation for GWAS findings.
 TWAS relies on testing whether perturbations in gene regulatory mechanisms mediate the association between genetic variants and human diseases [@doi:10.1371/journal.pgen.1009482; @doi:10.1038/ng.3506; @doi:10.1371/journal.pgen.1007889; @doi:10.1038/ng.3367].
-However, TWAS have not reliably detected tissue-specific effects because eQTLs are commonly shared across tissues [@doi:10.1016/j.ajhg.2017.01.031; @doi:10.1038/s41588-018-0081-4].
+However, TWAS has not reliably detected tissue-specific effects because eQTLs are commonly shared across tissues [@doi:10.1016/j.ajhg.2017.01.031; @doi:10.1038/s41588-018-0081-4].
 This sharing makes it challenging to identify the tissue or tissues that are etiologically relevant.
 Existing methods that connect GWAS findings with gene expression data can infer disease-relevant tissues and cell types [@doi:10.1038/s41588-018-0081-4; @doi:10.1016/j.ajhg.2011.09.002; @doi:10.1093/bioinformatics/btu326; @doi:10.1038/ng.3598; @doi:10.1038/ncomms6890; @doi:10.1038/ng.3981], but they generally rely on small sets of expression data compared with the total number of RNA-seq samples that are increasingly available [@doi:10.1038/s41467-018-03751-6; @doi:10.1038/nbt.3838].
 Moreover, widespread gene pleiotropy across complex traits reveals the highly interconnected nature of transcriptional networks [@doi:10.1038/s41588-019-0481-0; @doi:10.1038/ng.3570], where potentially all genes expressed in disease-relevant cell types have a non-zero effect [@doi:10.1016/j.cell.2017.05.038; @doi:10.1016/j.cell.2019.04.014].
@@ -393,18 +392,20 @@ Consequently, this complicates the interpretation of genetic effects and hampers
 
 
 We propose PhenoPLIER, a polygenic approach that infers how groups of functionally-related genes influence complex traits, and how pharmacological perturbations affect these genes' activity to exert their effects.
-The approach maps both gene-trait associations and drug-transcriptional responses into a common representation for a joint analysis.
+The approach maps both gene-trait associations and drug-induced transcriptional responses into a common representation for a joint analysis.
 For this, we integrated more than 4,000 gene-trait associations (using TWAS from PhenomeXcan [@doi:10.1126/sciadv.aba2083]) and transcriptional profiles of drugs (LINCS L1000 [@doi:10.1016/j.cell.2017.10.049]) into a low-dimensional space learned from public gene expression data on tens of thousands of RNA-seq samples (recount2 [@doi:10.1016/j.cels.2019.04.003; @doi:10.1038/nbt.3838]).
 We used a latent representation defined by a computational approach [@doi:10.1038/s41592-019-0456-1] that learns recurrent gene co-expression patterns with certain sparsity constraints and preferences for those that align with prior knowledge (pathways).
 This low-dimensional space comprised features representing groups of genes (gene modules) with coordinated expression across different tissues and cell types.
-When mapping gene-trait associations to this reduced expression space, we observed that diseases were significantly associated with gene modules expressed in relevant cell types, such as hypothyroidism with T cells and thyroid, corneal endothelial cells with keratometry measurements, hematological assays on specific blood cell types, plasma lipids with adipose tissue, and neuropsychiatric disorders with brain cell types.
+When mapping gene-trait associations to this reduced expression space, we observed that diseases were significantly associated with gene modules expressed in relevant cell types, such as hypothyroidism with T cells and thyroid, corneal endothelial cells with keratometry measurements, hematological assays on specific blood cell types, plasma lipids with adipose tissue, and neuropsychiatric disorders with different brain cell types.
+Moreover, since we rely on a large and heterogeneous RNA-seq dataset, we were also able to identify modules associated with cell types under specific stimuli or disease states.
 We replicated gene module associations with cardiovascular and autoimmune diseases in the Electronic Medical Records and Genomics (eMERGE) network phase III [@doi:10.1038/gim.2013.72].
-Moreover, we performed a CRISPR-screen to analyze lipid regulation in HepG2 cells and observed more robust trait associations with modules than with individual genes, even when single genes known to be involved in lipid metabolism did not reach genome-wide significance.
+Furthermore, we performed a CRISPR screen to analyze lipid regulation in HepG2 cells and observed more robust trait associations with modules than with individual genes, even when single genes known to be involved in lipid metabolism did not reach genome-wide significance.
 <!-- Since our approach incorporates groups of genes associated with a phenotype instead single genes, it was also more robust in finding meaningful gene module-trait associations, even when individual genes involved in lipid metabolism did not reach genome-wide significance in lipid-related traits. -->
 Compared to a single-gene approach, our module-based method also better predicted FDA-approved drug-disease links by capturing tissue-specific pathophysiological mechanisms linked with the mechanism of action of drugs (e.g., niacin with cardiovascular traits via a known immune mechanism), suggesting that modules may provide a better means to examine drug-disease relationships than individual genes.
 Finally, exploring the phenotype-module space also revealed stable trait clusters associated with relevant tissues, including a complex branch involving lipids with cardiovascular, autoimmune, and neuropsychiatric disorders.
-In summary, instead of considering single genes associated with different complex traits, PhenoPLIER incorporates groups of genes that act together to carry out different functions in specific cell types, and this improves robustness to detect and interpret genetic associations.
-The approach can aid future endeavors focused on identifying potential drug targets for complex disease phenotypes.
+In summary, instead of considering single genes associated with different complex traits, PhenoPLIER incorporates groups of genes that act together to carry out different functions in specific cell types.
+This improves robustness to detect and interpret genetic associations, and here we show how it can prioritize alternative and potentially more promising candidate targets when important single gene associations are not detected.
+The approach represents a conceptual shift in the interpretation of genetic studies, and has the potential to extract mechanistic insight from statistical associations to enhance the understanding of complex diseases and their therapeutic modalities.
 
 
 ## Results
