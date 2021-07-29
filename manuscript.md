@@ -19,7 +19,7 @@ author-meta:
 - Casey S. Greene
 bibliography:
 - content/manual-references.json
-date-meta: '2021-07-24'
+date-meta: '2021-07-29'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -38,9 +38,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
 
-  <meta name="dc.date" content="2021-07-24" />
+  <meta name="dc.date" content="2021-07-29" />
 
-  <meta name="citation_publication_date" content="2021-07-24" />
+  <meta name="citation_publication_date" content="2021-07-29" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -178,11 +178,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/f5a1db472633ca9a2354da1c6b9f5cf76795efe7/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/16c23607848b35d610632b72c5e7211a09c37604/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/f5a1db472633ca9a2354da1c6b9f5cf76795efe7/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/16c23607848b35d610632b72c5e7211a09c37604/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/f5a1db472633ca9a2354da1c6b9f5cf76795efe7/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/16c23607848b35d610632b72c5e7211a09c37604/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -220,10 +220,10 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/f5a1db472633ca9a2354da1c6b9f5cf76795efe7/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/16c23607848b35d610632b72c5e7211a09c37604/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@f5a1db4](https://github.com/greenelab/phenoplier_manuscript/tree/f5a1db472633ca9a2354da1c6b9f5cf76795efe7)
-on July 24, 2021.
+from [greenelab/phenoplier_manuscript@16c2360](https://github.com/greenelab/phenoplier_manuscript/tree/16c23607848b35d610632b72c5e7211a09c37604)
+on July 29, 2021.
 </em></small>
 
 ## Authors
@@ -425,7 +425,7 @@ Air pollution linked to neurodegeneration markers
 **Schematic of the PhenoPLIER framework.**
 **a)** High-level schematic of PhenoPLIER (a gene module-based method) in the context of TWAS (single-gene) and GWAS (genetic variants).
 PhenoPLIER integrates groups of genes co-expressed in specific cell types (gene modules) with gene-trait and gene-drug associations.
-**b)** The integration consists in projecting gene-trait/gene-drug associations from PhenomeXcan/LINCS L1000 (bottom) to a latent space based on gene modules (represented by latent variables/LVs) from MultiPLIER (top).
+**b)** The integration consists of projecting gene-trait/gene-drug associations from PhenomeXcan/LINCS L1000 (bottom) to a latent space based on gene modules (represented by latent variables/LVs) from MultiPLIER (top).
 The process generates matrix $\mathbf{\hat{M}}$, where each trait/drug is now described by LVs (only traits are shown).
 **c)** LV603, termed as a neutrophil signature in the original MultiPLIER study, was associated in PhenoPLIER with neutrophil counts and other white blood cells (bottom, showing the top 10 traits for LV603).
 Genes in LV603 were expressed in relevant cell types (top).
@@ -435,9 +435,8 @@ mDCs: myeloid dendritic cells.
 
 
 PhenoPLIER combines TWAS and drug-induced transcriptional responses with gene co-expression patterns by projecting gene-trait and gene-drug associations onto a latent gene expression representation (Figure @fig:entire_process).
-We used PhenomeXcan [@doi:10.1126/sciadv.aba2083], a TWAS resource for the UK Biobank [@doi:10.1038/s41586-018-0579-z] and other cohorts with 4,091 different diseases and traits;
-and the transcriptional responses to small molecule perturbations from LINCS L1000 [@doi:10.1016/j.cell.2017.10.049] comprising 1,170 compounds.
-We obtained a latent gene expression representation from MultiPLIER [@doi:10.1016/j.cels.2019.04.003], an unsupervised learning approach applied to recount2 [@doi:10.1038/nbt.3838] -- a uniformly-curated collection of transcript level gene expression quantified by RNA-seq in large, diverse set of samples collected across a range of disease state, cell types differentiation stages, and various stimuli (Methods).
+We used PhenomeXcan [@doi:10.1126/sciadv.aba2083], a TWAS resource for the UK Biobank [@doi:10.1038/s41586-018-0579-z] and other cohorts with 4,091 different diseases and traits, and the transcriptional responses to small molecule perturbations from LINCS L1000 [@doi:10.1016/j.cell.2017.10.049] comprising 1,170 compounds.
+We obtained a latent gene expression representation from MultiPLIER [@doi:10.1016/j.cels.2019.04.003], an unsupervised learning approach applied to recount2 [@doi:10.1038/nbt.3838] -- a uniformly-curated collection of transcript-level gene expression quantified by RNA-seq in a large, diverse set of samples collected across a range of disease state, cell types differentiation stages, and various stimuli (Methods).
 MultiPLIER extracted 987 latent variables (LV) by optimizing data reconstruction but also the alignment of LVs with prior knowledge/pathways (Methods).
 Each LV or gene module represents a group of weighted genes expressed together in the same tissues and cell types as a functional unit.
 Since LVs might represent a functional set of genes regulated by the same transcriptional program [@doi:10.1186/1471-2164-7-187; @doi:10.1186/s13059-019-1835-8], we conjecture that the projection of TWAS and pharmacologic perturbations data into this latent space could provide context for their interpretation.
@@ -448,16 +447,16 @@ Examining these LVs is possible because the MultiPLIER's models link to samples,
 To further analyze LV-trait associations, we adapted the gene-property approach from MAGMA [@doi:10.1371/journal.pcbi.1004219] to compute an LV-trait $p$-value by fitting a regression model with LV weights as predictors of a trait's gene associations.
 Thus PhenoPLIER allows the user to address specific questions, namely:
 do disease-associated genes belong to modules expressed in specific tissues and cell types?
-are these cell type-specific modules associated with different diseases (thus, potentially representing a "network pleiotropy" example from an omnigenic point of view [@doi:10.1016/j.cell.2017.05.038])?
-is there a subset of module's genes that is closer to the definition of "core" genes (i.e., directly affecting the trait with no mediated regulation of other genes [@doi:10.1016/j.cell.2019.04.014]) and thus represent alternative and potentially better drug targets?
-are drugs perturbing these transcriptional mechanisms, and if so, can they suggest potential mechanisms of action?
+Are these cell type-specific modules associated with different diseases (thus, potentially representing a "network pleiotropy" example from an omnigenic point of view [@doi:10.1016/j.cell.2017.05.038])?
+Is there a subset of module's genes that is closer to the definition of "core" genes (i.e., directly affecting the trait with no mediated regulation of other genes [@doi:10.1016/j.cell.2019.04.014]) and thus represent alternative and potentially better drug targets?
+Are drugs perturbing these transcriptional mechanisms, and if so, can they suggest potential mechanisms of action?
 
 
 In the original MultiPLIER study, the authors reported that one of the latent variables, identified as LV603, was associated with a known neutrophil pathway and highly correlated with neutrophil count estimates from whole blood RNA-seq profiles [@doi:10.1186/s13059-016-1070-5].
 We analyzed LV603 using PhenoPLIER (Figure @fig:entire_process c) and found that
 1) neutrophil counts and other white blood cell traits were ranked among the top 10 traits out of 4,091 (Figure @fig:entire_process c, bottom) and significantly associated with this LV (Supplementary Table @tbl:sup:phenomexcan_assocs:lv603) when using the gene-property approach,
 and 2) LV603's genes were expressed in highly relevant cell types (Figure @fig:entire_process c, top).
-These results suggested that groups of functionally-related and co-expressed genes tend to correspond to groups of trait-associated genes.
+These results suggested that groups of functionally related and co-expressed genes tend to correspond to groups of trait-associated genes.
 Thus, the gene expression space (which has no GTEx samples) and the TWAS space (with gene models trained using GTEx v8) contained shared patterns, and the approach can link transcriptional mechanisms from large and diverse dataset collections to complex traits.
 
 
@@ -527,7 +526,7 @@ These results suggested that our LV-based approach can contextualize genetic ass
 
 ### PhenoPLIER with LVs predicts drug-disease pairs better than single genes
 
-We next determined the extent in which substituting LVs in place of individual genes predicted known treatment-disease relationships.
+We next determined the extent to which substituting LVs in place of individual genes predicted known treatment-disease relationships.
 For this, we used the transcriptional responses to small molecule perturbations profiled in LINCS L1000 [@doi:10.1016/j.cell.2017.10.049], which were further processed and mapped to DrugBank IDs [@doi:10.1093/nar/gkt1068; @doi:10.7554/eLife.26726; @doi:10.5281/zenodo.47223].
 Based on an established drug repurposing strategy that matches reversed transcriptome patterns between genes and drug-induced perturbations [@doi:10.1126/scitranslmed.3002648; @doi:10.1126/scitranslmed.3001318], we adopted a previously described framework that uses imputed transcriptomes from TWAS to prioritize drug candidates [@doi:10.1038/nn.4618].
 For this, we computed a drug-disease score by calculating the negative dot product between the $z$-scores for a disease (from TWAS) and the $z$-scores for a drug (from LINCS) across sets of genes of different size (see Methods).
@@ -555,7 +554,7 @@ We examined a specific drug-disease pair to determine whether the LVs driving th
 Nicotinic acid (niacin) is a B vitamin widely used clinically to treat lipid disorders, although there is controversy on its clinical utility to prevent cardiovascular disease [@pmid:22085343; @pmid:25014686; @pmid:30977858].
 Niacin exerts its effects on multiple tissues, although its mechanisms are not well understood [@doi:10.1016/j.amjcard.2008.02.029; @doi:10.1194/jlr.S092007; @pmid:24363242; @pmid:24713591].
 This compound can increase high-density lipoprotein (HDL) by inhibiting an HDL catabolism receptor in the liver.
-Niacin also inhibits diacylglycerol acyltransferase–2 (DGAT2), which decreases the production of low-density lipoproteins (LDL) by modulating triglyceride synthesis in hepatocytes, or by inhibiting adipocyte triglyceride lipolysis [@doi:10.1016/j.amjcard.2008.02.029].
+Niacin also inhibits diacylglycerol acyltransferase–2 (DGAT2), which decreases the production of low-density lipoproteins (LDL) by modulating triglyceride synthesis in hepatocytes or by inhibiting adipocyte triglyceride lipolysis [@doi:10.1016/j.amjcard.2008.02.029].
 <!--  -->
 Niacin was one of the drugs in the gold standard set indicated for atherosclerosis (AT) and coronary artery disease (CAD).
 We observed that this compound was predicted by the gene-based and LV-based approach as a medical indication for coronary artery disease (CAD), with scores above the mean (0.51 and 0.96, respectively).
@@ -600,7 +599,7 @@ In addition, flushing, a common adverse effect of niacin, is also produced by th
 This alternative mechanism for niacin could have been hypothesized by examining the cell types where the top-contributing modules are expressed:
 for instance, LV116 and LV931 (Figure @fig:lv116:cell_types, Supplementary Figure @fig:sup:lv931, and Supplementary Tables @tbl:sup:multiplier_pathways:lv116 and @tbl:sup:multiplier_pathways:lv931) were the top two modules for AT, with a strong signature in monocytes, macrophages, neutrophils, dendritic cells, among others.
 In Figure @fig:lv116:cell_types, it can be seen that LV116's genes are expressed as an immune response when these cell types are under different stimuli, such as diarrhea caused by different pathogens [@doi:10.1371/journal.pone.0192082], samples from multiple sclerosis or systemic lupus erythematosus [@doi:10.1371/journal.pone.0109760; @doi:10.1126/science.aac7442], or infected with different viruses (such as herpes simplex [@url:https://www.ncbi.nlm.nih.gov/bioproject/PRJNA258384], West Nile virus [@doi:10.3390/v5071664], *Salmonella typhimurium* [@doi:10.1038/srep16882], among others).
-These three LVs (LV246, LV116 and LV931) were among the top 20 modules contributing for the niacin prediction across different cardiovascular traits (Table @tbl:niacin:cardio:top_lvs).
+These three LVs (LV246, LV116 and LV931) were among the top 20 modules contributing to the niacin prediction across different cardiovascular traits (Table @tbl:niacin:cardio:top_lvs).
 Given the current controversy around this compound and its effect on cardiovascular disease, our approach may help to better understand different pathophysiological mechanisms linked with the mechanism of action of niacin.
 
 
@@ -637,7 +636,7 @@ Our LV-based approach could be helpful to generate novel hypotheses to evaluate 
 A linear (PCA) and non-linear (UMAP) dimensionality reduction techniques were applied to the input data, and the three data versions were processed by five different clustering algorithms.
 These algorithms derive partitions from the data using different sets of parameters (such as the number of clusters), leading to an ensemble of 4,428 partitions.
 Then, a distance matrix is derived by counting how many times a pair of traits were grouped in different clusters across the ensemble.
-Finally, a consensus function is applied to the distance matrix to generate consolidated partitions with different number of clusters (from 2 to $\sqrt{n}\approx$ 60).
+Finally, a consensus function is applied to the distance matrix to generate consolidated partitions with different numbers of clusters (from 2 to $\sqrt{n}\approx$ 60).
 These final solutions were represented in the clustering tree (Figure @fig:clustering:tree).
 <!--  -->
 **b)** The clusters found by the consensus function were used as labels to train a decision tree classifier on the original input data, which detects the LVs that better differentiate groups of traits.
@@ -658,7 +657,7 @@ To understand which latent variables differentiated the group of traits, we trai
 **Clustering tree using multiple resolutions for clusters of traits.**
 <!--  -->
 Each row represents a partition/grouping of the traits, and each circle is a cluster from that partition.
-The number of clusters go from 5 to 29.
+The number of clusters goes from 5 to 29.
 Arrows indicate how traits in one cluster move across clusters from different partitions.
 Most of the clusters are preserved across different resolutions, showing highly stable solutions even with independent runs of the clustering algorithm.
 <!--  -->
@@ -697,13 +696,13 @@ AD: Alzheimer's disease;
 ](images/clustering/clustering_tree.svg "Clustering tree on groups of traits"){#fig:clustering:tree width="100%"}
 
 
-We found that phenotypes grouped into five clear branches (Figure @fig:clustering:tree).
+We found that phenotypes were grouped into five clear branches (Figure @fig:clustering:tree).
 These were
 0) a "large" branch that includes most of the traits subdivided only starting at $k$=16 (with asthma, subjective well-being traits, and nutrient intake clusters),
 1) heel bone-densitometry measurements,
 2) hematological assays on red blood cells,
 3) physical measures, including spirometry and body impedance, and anthropometric traits with fat-free and fat mass measures in separate sub-branches, and
-4) a "complex" branch including keratometry measurements, assays on white blood cells and platelets, skin and hair color traits, autoimmune disorders (type 1 diabetes, psoriasis, hyper/hypothyroidism, rheumatoid arthritis, systemic lupus erythematosus, celiac disease), and cardiovascular diseases (hypertension, coronary artery disease, myocardial infraction, hypercholesterolemia, and other cardiovascular-related traits such hand-grip strength [@pmid:25982160], and environmental/behavioral factors such as physical activity and diet) (See Supplementary Files 2-6 for clustering results).
+4) a "complex" branch including keratometry measurements, assays on white blood cells and platelets, skin and hair color traits, autoimmune disorders (type 1 diabetes, psoriasis, hyper/hypothyroidism, rheumatoid arthritis, systemic lupus erythematosus, celiac disease), and cardiovascular diseases (hypertension, coronary artery disease, myocardial infarction, hypercholesterolemia, and other cardiovascular-related traits such hand-grip strength [@pmid:25982160], and environmental/behavioral factors such as physical activity and diet) (See Supplementary Files 2-6 for clustering results).
 Within these branches, results were relatively stable.
 The same traits were often clustered together across different resolutions, even with the consensus algorithm using random initializations at each level.
 Arrows between different clusters show traits moving from one group to another across different resolutions.
@@ -723,16 +722,16 @@ Standardized values from -5 (lighter color) to 16 (darker color).
 Next, we analyzed which LVs were driving these clusters of traits.
 We trained decision tree classifiers on the input data (Figure @fig:clustering:design) using each cluster at $k$=29 (bottom of Figure @fig:clustering:tree) as labels (see Methods).
 This yielded for each cluster the top LVs, where several of them were well-aligned to existing pathways (Figure @fig:clustering:heatmap), and others were novel and expressed in relevant tissues (Supplementary Figure @fig:sup:clustering:novel:heatmap).
-In Figure @fig:clustering:heatmap it can be seen that some LVs were highly specific to certain types of traits, while others were associated with a wide range of different phenotypes, thus potentially involved in more general biological functions.
-For example, LVs such as LV928 and LV30, which were well-aligned to early progenitors of the erythrocytes lineage [@doi:10.1016/j.cell.2011.01.004] (Supplementary Tables @tbl:sup:multiplier_pathways:lv928 and @tbl:sup:multiplier_pathways:lv30), were predominantly expressed in early differentiation stages of erythropoiesis (Supplementary Figures @fig:sup:lv928 and @fig:sup:lv30), and strongly associated with different assays on red blood cells (FDR < 0.05; Supplementary Tables @tbl:sup:phenomexcan_assocs:lv928, @tbl:sup:emerge_assocs:lv928, and @tbl:sup:emerge_assocs:lv30).
+In Figure @fig:clustering:heatmap, it can be seen that some LVs were highly specific to certain types of traits, while others were associated with a wide range of different phenotypes, thus potentially involved in more general biological functions.
+For example, LVs such as LV928 and LV30, which were well-aligned to early progenitors of the erythrocytes lineage [@doi:10.1016/j.cell.2011.01.004] (Supplementary Tables @tbl:sup:multiplier_pathways:lv928 and @tbl:sup:multiplier_pathways:lv30), were predominantly expressed in early differentiation stages of erythropoiesis (Supplementary Figures @fig:sup:lv928 and @fig:sup:lv30) and strongly associated with different assays on red blood cells (FDR < 0.05; Supplementary Tables @tbl:sup:phenomexcan_assocs:lv928, @tbl:sup:emerge_assocs:lv928, and @tbl:sup:emerge_assocs:lv30).
 In contrast, other LVs were highly specific, such as LV730, which is expressed in thrombocytes from different cancer samples (Supplementary Figures @fig:sup:lv730 and Supplementary Table @tbl:sup:multiplier_pathways:lv730), and strongly associated with hematological assays on platelets (FDR < 2e-4, Supplementary Table @tbl:sup:phenomexcan_assocs:lv730);
 or LV598, whose genes were expressed in corneal endothelial cells (Supplementary Figures @fig:sup:lv598 and Supplementary Table @tbl:sup:multiplier_pathways:lv598) and associated with keratometry measurements (FDR < 4e-05; Supplementary Table @tbl:sup:phenomexcan_assocs:lv598).
 
 
 The autoimmune diseases sub-branch also had significant LVs associations expressed in relevant cell types.
 LV844 was the most strongly associated gene module with autoimmune disorders in both PhenomeXcan (FDR < 7e-16; Supplementary Tables @tbl:sup:phenomexcan_assocs:lv844) and eMERGE (FDR < 2e-6, @tbl:sup:emerge_assocs:lv844), and was expressed in a wide range of cell types, including blood, breast organoids, myeloma cells, lung fibroblasts, and different cell types from the brain (Supplementary Figures @fig:sup:lv844 and Supplementary Table @tbl:sup:multiplier_pathways:lv844).
-LV155 was strongly expressed in thyroid (Supplementary Figures @fig:sup:lv155 and Supplementary Table @tbl:sup:multiplier_pathways:lv155), and significantly associated with hypothyroidism both in PhenomeXcan (FDR < 0.05, Supplementary Table @tbl:sup:phenomexcan_assocs:lv155) and eMERGE (FDR < 0.10, Supplementary Table @tbl:sup:emerge_assocs:lv155).
-Other important LVs associated with autoimmunity in both PhenomeXcan and eMERGE were LV57 expressed in T cells (Supplementary Figure @fig:sup:lv57 and Supplementary Tables @tbl:sup:multiplier_pathways:lv57, @tbl:sup:phenomexcan_assocs:lv57, @tbl:sup:emerge_assocs:lv57), and LV54 expressed in different soft tissue tumors, breast, lung, pterygia and epithelial cells (Supplementary Figure @fig:sup:lv54 and Supplementary Tables @tbl:sup:multiplier_pathways:lv54, @tbl:sup:phenomexcan_assocs:lv54, @tbl:sup:emerge_assocs:lv54).
+LV155 was strongly expressed in the thyroid (Supplementary Figures @fig:sup:lv155 and Supplementary Table @tbl:sup:multiplier_pathways:lv155) and significantly associated with hypothyroidism both in PhenomeXcan (FDR < 0.05, Supplementary Table @tbl:sup:phenomexcan_assocs:lv155) and eMERGE (FDR < 0.10, Supplementary Table @tbl:sup:emerge_assocs:lv155).
+Other important LVs associated with autoimmunity in both PhenomeXcan and eMERGE were LV57, expressed in T cells (Supplementary Figure @fig:sup:lv57 and Supplementary Tables @tbl:sup:multiplier_pathways:lv57, @tbl:sup:phenomexcan_assocs:lv57, @tbl:sup:emerge_assocs:lv57), and LV54, expressed in different soft tissue tumors, breast, lung, pterygia and epithelial cells (Supplementary Figure @fig:sup:lv54 and Supplementary Tables @tbl:sup:multiplier_pathways:lv54, @tbl:sup:phenomexcan_assocs:lv54, @tbl:sup:emerge_assocs:lv54).
 
 
 The cardiovascular sub-branch also exhibited significant associations.
@@ -745,7 +744,7 @@ These modules were associated mainly with cardiovascular traits in eMERGE.
 
 
 Within the cardiovascular sub-branch, we found neuropsychiatric and neurodevelopmental disorders such as Alzheimer's disease, schizophrenia, and attention deficit hyperactivity disorder (ADHD).
-These disorders were previously linked to the cardiovascular system [@pmid:12093424; @doi:10.1161/CIRCULATIONAHA.113.002065; @doi:10.1192/bjp.bp.117.202606; @doi:10.1161/CIRCRESAHA.118.313563], and share several risk factors, including hypertension, high cholesterol, obesity, smoking, among others [@doi:10.1186/s12916-014-0206-2; @doi:10.1111/j.1076-7460.2007.06696.x].
+These disorders were previously linked to the cardiovascular system [@pmid:12093424; @doi:10.1161/CIRCULATIONAHA.113.002065; @doi:10.1192/bjp.bp.117.202606; @doi:10.1161/CIRCRESAHA.118.313563] and share several risk factors, including hypertension, high cholesterol, obesity, smoking, among others [@doi:10.1186/s12916-014-0206-2; @doi:10.1111/j.1076-7460.2007.06696.x].
 In our results, however, these diseases were grouped by potentially shared transcriptional processes expressed in specific tissues/cell types.
 Alzheimer's disease, for example, was significantly associated with LV21 in PhenomeXcan (FDR < 2e-19, Supplementary Table @tbl:sup:phenomexcan_assocs:lv21) and with LV5 (FDR < 3e-3, Supplementary Table @tbl:sup:phenomexcan_assocs:lv5).
 LV21 was strongly expressed in a variety of soft tissue sarcomas, monocytes/macrophages (including microglia from cortex samples), and aortic valves (Supplementary Figure @fig:sup:lv21 and Supplementary Table @tbl:sup:multiplier_pathways:lv21).
@@ -761,46 +760,53 @@ None of these LVs were significantly aligned to prior pathways, which might repr
 
 ## Discussion
 
-We have introduced a novel computational approach that can map TWAS results into a representation learned from gene expression to infer cell type-specific features of complex phenotypes.
-Our key innovation is that we project association statistics through a representation and that representation is derived not strictly from measures of normal tissue but also cell types under a variety of stimuli and at various developmental stages.
-We found that this analysis using latent representations prioritized relevant associations, even when single gene-trait effects are not detected with standard methods.
-Projecting gene-trait and gene-drug associations into this common representation links drug-disease treatment pairs more accurately than the single-gene method we derived this strategy from; and the findings were more interpretable for potential mechanisms of action.
-Finally, we found that the analysis of associations through latent representations provided reasonable groupings of diseases and traits affected by the same transcriptional processes and highlighted disease-specific modules expressed in highly relevant tissues.
+We have introduced a novel computational strategy that integrates statistical associations from TWAS with groups of genes (gene modules) that have similar expression patterns across the same cell types.
+Our key innovation is that we project gene-trait associations through a latent representation derived not strictly from measures of normal tissue but also cell types under a variety of stimuli and at various developmental stages.
+This improves interpretation by going beyond statistical associations to infer cell type-specific features of complex phenotypes.
+We found that our approach can identify disease-relevant cell types from summary statistics, and several disease-associated gene modules were replicated in eMERGE.
+Using a CRISPR screen to analyze lipid regulation, we found that our gene module-based approach can prioritize causal genes even when single gene associations are not detected.
+We interpret these findings with an omnigenic perspective of "core" and "peripheral" genes, suggesting that the approach can identify genes that directly affect the trait with no mediated regulation of other genes, and thus prioritize alternative and potentially more attractive therapeutic targets.
+Using our gene module perspective, we also integrated drug-induced transcriptional profiles, which allowed us to connect diseases, drugs, and cell types.
+Furthermore, and beyond statistical prediction, we focused on a particular drug (niacin) and set of traits (cardiovascular diseases) to show that the approach connects disease-relevant transcriptional processes with known mechanisms of action.
+This suggests that the conceptual approach may reveal the mechanisms of pharmacological effect of known or experimental drugs.
+Finally, we found that the analysis of associations through latent representations provided reasonable groupings of diseases and traits affected by shared and distinct transcriptional mechanisms expressed in highly relevant tissues.
 
 
-In some cases, the features linked to phenotypes appear to be associated with specific cell types.
-Associations with such cell type marker genes may reveal cell types that are potentially causal for a phenotype with more precision.
+In some cases, the features/LVs linked to phenotypes appear to be associated with specific cell types.
+Associations with such cell type marker genes may reveal potentially causal cell types for a phenotype with more precision.
 We observed modules expressed primarily in one tissue (such as adipose in LV246, thyroid in LV155, or ovary in LV66).
-Others appeared to be expressed in many contexts.
-These may capture pathways associated with a set of related complex diseases (for example, LV136 is associated with coronary artery disease and keratometry measurements, and expressed in fibroblasts, osteoblasts, pancreas, liver, and cardiomyocytes).
-From an omnigenic point of view, these patterns might represent cases of "network pleiotropy", where traits are mediated by the same cell types.
+Others appeared to be expressed in many contexts, and these may capture pathways associated with a set of related complex diseases.
+For example, LV136 is associated with cardiovascular disease and measures of corneal biomechanics, and expressed in fibroblasts, osteoblasts, pancreas, liver, and cardiomyocytes, among others.
+Another example is LV844, expressed in whole blood samples and strongly associated with a range of autoimmune diseases.
+From an omnigenic point of view, these patterns might represent cases of "network pleiotropy," where the same cell types mediate molecularly related traits.
 To our knowledge, projection through a representation learned on complementary but distinct datasets is a novel approach to identify cell type and pathway effects on complex phenotypes that is computationally simple to implement.
 
 
-Our approach rests on the assumption that gene modules with coordinated expression will also manifest coordinated pathological effects.
+Our approach rests on the assumption that gene modules with coordinated expression patterns will also manifest coordinated pathological effects.
 Our implementation in this work integrates two complementary approaches.
 The first is MultiPLIER, which extracts latent variables from large expression datasets, and these LVs could represent either real transcriptional processes or technical factors ("batch effects").
-We used a previously published model derived from the analysis of recount2, which was designed for rare disorders but might not be the optimal latent representation for the analysis of wide range of complex diseases.
-Also, the underlying factorization method rests on linear combinations of variables, which could miss important and more complex co-expression patterns, and the training dataset of recount2 has since been surpassed in size and scale by other resources [@doi:10.1038/s41467-018-03751-6; @doi:10.1101/2021.05.21.445138].
+We used a previously published model derived from recount2, which was designed to analyze rare disorders but might not be the optimal latent representation for the wide range of complex diseases considered here.
+Also, the underlying factorization method rests on linear combinations of variables, which could miss important and more complex co-expression patterns.
+In addition, recount2, the training dataset used, has since been surpassed in size and scale by other resources [@doi:10.1038/s41467-018-03751-6; @doi:10.1101/2021.05.21.445138].
 The second approach we used in this study is TWAS, where we are only considering the hypothesis that GWAS loci affect traits via changes in gene expression, and other effects such as coding variants disrupting protein-protein interactions are not captured.
-Additionally, TWAS have several limitations that can lead to false positives [@doi:10.1038/s41588-019-0385-z; @doi:10.1016/j.ajhg.2020.11.012].
-Like GWAS, which generally detects groups of associated variants in LD (linkage disequilibrium), TWAS usually identifies several genes within the same locus [@doi:10.1038/s41588-018-0092-1; @doi:10.1038/ng.3367].
-This is due to sharing of GWAS variants in gene expression models, to correlated expression of nearby genes, or even correlation of their predicted expression due to eQTLs in LD, among others [@doi:10.1038/s41588-019-0385-z].
+Additionally, TWAS has several limitations that can lead to false positives [@doi:10.1038/s41588-019-0385-z; @doi:10.1016/j.ajhg.2020.11.012].
+Like GWAS, which generally detects groups of associated variants in linkage disequilibrium (LD), TWAS usually identifies several genes within the same locus [@doi:10.1038/s41588-018-0092-1; @doi:10.1038/ng.3367].
+This is due to sharing of GWAS variants in gene expression models, correlated expression of nearby genes, or even correlation of their predicted expression due to eQTLs in LD, among others [@doi:10.1038/s41588-019-0385-z].
 Larger datasets and methods designed to learn representations with this application in mind could further refine the approach and are a promising avenue for future research.
 
 
 Our findings are concordant with previous studies showing that drugs with genetic support are more likely to succeed through the drug development pipeline [@doi:10.1038/ng.3314; @doi:10.1038/nn.4618].
 In this case, projecting association results through latent variables better prioritized disease-treatment pairs than considering single-gene effects alone.
-An additional benefit is that the latent variables driving predictions can be examined.
-Here we prioritized drugs for diseases with very different tissue etiologies, and a challenge of the approach is to select the most appropriate tissue model from TWAS to find the reversed transcriptome patterns between genes and drug-induced perturbations.
-We also demonstrated that clustering trees, introduced as a means to examine developmental processes in single-cell data, provide multi-resolution grouping of phenotypes based on latent variable associations.
+An additional benefit is that the latent variables driving predictions can be examined to infer potential mechanisms of action.
+Here we prioritized drugs for diseases with very different tissue etiologies, and a challenge of the approach is to select the most appropriate tissue model from TWAS to find reversed transcriptome patterns between genes and drug-induced perturbations.
+We also demonstrated that clustering trees, introduced initially as a means to examine developmental processes in single-cell data, provide a multi-resolution grouping of phenotypes based on latent variable associations.
 We employed hard-partitioning algorithms (one trait belongs exclusively to one cluster) where the distance between two traits takes into account all gene modules.
-However, it is likely for two complex diseases to share only a few biological processes instead of being similar across most of them.
+However, it is also plausible for two complex diseases to share only a few biological processes instead of being similar across most of them.
 In this portion, we used S-MultiXcan associations, which only provide the association strength between a gene and a trait, but with no direction of effect.
 This does mean that traits are grouped based on associated genes, but genes could have opposite effects on traits within the same cluster.
 Considering groups of related diseases was previously shown to be more powerful to detect shared genetic etiology [@doi:10.1038/ng.3985; @doi:10.1038/s41588-018-0121-0], and clustering trees provide a way to explore such relationships in the context of latent variables.
-Finally, our TWAS results were derived from a large set of GWAS of different sample size and quality.
-The potential issues derived from this data heterogeneity was addressed before performing cluster analysis of traits, however, data preprocessing steps are always challenging and might not avoid bias completely.
+Finally, our TWAS results were derived from a large set of GWAS of different sample sizes and qualities.
+Although the potential issues derived from this data heterogeneity were addressed before performing cluster analysis of traits, data preprocessing steps are always challenging and might not avoid bias altogether.
 
 
 Ultimately, the quality of the representations is essential to performance.
@@ -809,6 +815,7 @@ Detailed perturbation datasets and single-cell profiling of tissues, with and wi
 On the other hand, the key to interpretability is driven by the annotation of sample metadata.
 New approaches to infer and annotate with structured metadata are promising and can be directly applied to existing data [@doi:10.1101/2021.05.10.443525].
 Rapid improvements in both areas set the stage for latent variable projections to be widely applied to disentangle the genetic basis of complex human phenotypes.
+By providing a new perspective for a mechanistic understanding of statistical associations from TWAS, our method can generate testable hypotheses for the post-GWAS functional characterization of complex diseases, which will likely be an area of great importance in the coming years.
 
 
 ## Methods
@@ -819,14 +826,14 @@ We used TWAS results from PhenomeXcan [@doi:10.1126/sciadv.aba2083] on 4,091 tra
 PhenomeXcan was built using publicly available GWAS summary statistics to compute
 1) gene-based associations with the PrediXcan family of methods [@doi:10.1038/ng.3367; @doi:10.1038/s41467-018-03621-1; @doi:10.1371/journal.pgen.1007889], and
 2) a posterior probability of colocalization between GWAS loci and *cis*-eQTL with fastENLOC [@doi:10.1126/sciadv.aba2083; @doi:10.1101/2020.07.01.182097].
-The PrediXcan family of methods first build prediction models using data from the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] for gene expression imputation and then correlate this predicted expression with the phenotype of interest.
+The PrediXcan family of methods first builds prediction models using data from the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] for gene expression imputation and then correlate this predicted expression with the phenotype of interest.
 This family is comprised of
 S-PrediXcan [@doi:10.1038/s41467-018-03621-1] (which computes a gene-tissue-trait association using GWAS as input)
 and S-MultiXcan [@doi:10.1371/journal.pgen.1007889] (which computes a gene-trait association by aggregating evidence of associations across all tissues).
 
 
 We refer to the standardized effect sizes ($z$-scores) of S-PrediXcan across $n$ traits and $m$ genes in tissue $t$ as $\mathbf{M}^{t} \in \mathbb{R}^{n \times m}$.
-For S-MultiXcan we do not have the direction of effect, and we used the $p$-values converted to $z$-scores $\mathbf{M}=\Phi^{-1}(1 - p/2)$, where $\Phi^{-1}$ is the probit function.
+For S-MultiXcan, we do not have the direction of effect, and we used the $p$-values converted to $z$-scores $\mathbf{M}=\Phi^{-1}(1 - p/2)$, where $\Phi^{-1}$ is the probit function.
 Higher $z$-scores correspond to stronger associations.
 
 
@@ -853,10 +860,10 @@ and $\lambda_i$ are different regularization parameters used in the training ste
 $\mathbf{Z}$ is a low-dimensional representation of the gene space where each LV aligns as much as possible to prior knowledge, and it might represent either a known or novel gene module (i.e., a meaningful biological pattern) or noise.
 
 
-We projected $\mathbf{M}$ (either from S-PrediXcan across each tissue, or S-MultiXcan) into the low-dimensional gene module space learned by MultiPLIER using:
+We projected $\mathbf{M}$ (either from S-PrediXcan across each tissue, or S-MultiXcan) into the low-dimensional gene module space learned by MultiPLIER using
 
 $$
-\hat{\mathbf{M}} = (\mathbf{Z}^{\top} \mathbf{Z} + \lambda_{2} \mathbf{I})^{-1} \mathbf{Z}^{\top} \mathbf{M}.
+\hat{\mathbf{M}} = (\mathbf{Z}^{\top} \mathbf{Z} + \lambda_{2} \mathbf{I})^{-1} \mathbf{Z}^{\top} \mathbf{M},
 $$ {#eq:proj}
 
 where in $\hat{\mathbf{M}}^{l \times n}$ all traits in PhenomeXcan are now described by gene modules.
@@ -895,7 +902,7 @@ Finally, $\hat{\Sigma} = \sum_t \hat{\Sigma}^t / |t|$ where $|t|$=49 is the numb
 
 Because of computational reasons, we did not run the gene-property analysis on all possible LV-trait pairs.
 In PhenomeXcan, we reduced the number of LV-trait pairs by considering only the top discriminative LVs for each cluster (see "Cluster interpretation" section in Methods) and the traits in that cluster, leading to 5,782 LV-trait tests.
-For replication in eMERGE, we selected all the 25 LVs analyzed in the text and run the gene-property analysis against all 309 traits in this cohort, leading to 7,725 tests.
+For replication in eMERGE, we selected all the 25 LVs analyzed in the main text and ran the gene-property analysis against all 309 traits in this cohort, leading to 7,725 tests.
 We adjusted the $p$-values using the Benjamini-Hochberg procedure.
 
 
@@ -909,7 +916,7 @@ Finally, for each drug-disease pair, we took the maximum prediction score across
 
 The same procedure was used for the gene module-based approach, where we projected S-PrediXcan results into our latent representation, leading to $\hat{\mathbf{M}}^t$;
 and also $\mathbf{L}$, leading to $\hat{\mathbf{L}}^{l \times c}$.
-Finally, $\mathbf{D}^{t,k}=-1 \cdot \hat{\mathbf{M}}^{t,k} \hat{\mathbf{L}}^\top$, where in this case $k$ could be all LVs or the top 5, 10, 25 and 50 (since have an order of magnitude less LVs than genes).
+Finally, $\mathbf{D}^{t,k}=-1 \cdot \hat{\mathbf{M}}^{t,k} \hat{\mathbf{L}}^\top$, where in this case $k$ could be all LVs or the top 5, 10, 25 and 50 (since we have an order of magnitude less LVs than genes).
 
 
 Since the gold standard of drug-disease medical indications used contained Disease Ontology IDs (DOID) [@doi:10.1093/nar/gky1032], we mapped PhenomeXcan traits to the Experimental Factor Ontology [@doi:10.1093/bioinformatics/btq099] using [@url:https://github.com/EBISPOT/EFO-UKB-mappings], and then to DOID.
@@ -920,7 +927,7 @@ Since the gold standard of drug-disease medical indications used contained Disea
 We performed two preprocessing steps on the S-MultiXcan results before the cluster analysis procedure.
 First, we combined results in $\mathbf{M}$ (S-MultiXcan) for traits that mapped to the same Experimental Factor Ontology (EFO) [@doi:10.1093/bioinformatics/btq099] term using the Stouffer's method: $\sum w_i M_{ij} / \sqrt{\sum w_i^2}$, where $w_i$ is a weight based on the GWAS sample size for trait $i$, and $M_{ij}$ is the $z$-score for gene $j$.
 Second, we standardized all $z$-scores for each trait $i$ by their sum to reduce the effect of highly polygenic traits: $M_{ij} / \sum M_{ij}$.
-Finally, we projected this data matrix using Equation @eq:proj, obtaining $\hat{\mathbf{M}}$ with $n$=3752 traits and $l$=987 LVs as the input of our clustering pipeline.
+Finally, we projected this data matrix using Equation @eq:proj, obtaining $\hat{\mathbf{M}}$ with $n$=3,752 traits and $l$=987 LVs as the input of our clustering pipeline.
 
 
 A partitioning of $\hat{\mathbf{M}}$ with $n$ traits into $k$ clusters is represented as a label vector $\pi \in \mathbb{N}^n$.
@@ -948,7 +955,7 @@ where $d_{ij}$ is the number of times traits $i$ and $j$ were grouped in differe
 Then, $\Gamma$ can be any similarity-based clustering algorithm, which is applied on $\mathbf{D}$ to derive the final partition $\pi^*$.
 
 
-For the ensemble generation step, we used different algorithms to create a highly diverse set of partitions (see Figure @fig:clustering:design), since diversity is an important property for ensembles [@doi:10.1016/j.ins.2016.04.027; @doi:10.1109/TPAMI.2011.84; @doi:10.1016/j.patcog.2014.04.005].
+For the ensemble generation step, we used different algorithms to create a highly diverse set of partitions (see Figure @fig:clustering:design) since diversity is an important property for ensembles [@doi:10.1016/j.ins.2016.04.027; @doi:10.1109/TPAMI.2011.84; @doi:10.1016/j.patcog.2014.04.005].
 We used three data representations: the raw dataset, its projection into the top 50 principal components, and the embedding learned by UMAP [@arxiv:1802.03426] using 50 components.
 <!--  -->
 For each of these, we applied five clustering algorithms, covering a wide range of different assumptions on the data structure: $k$-means [@Arthur2007], spectral clustering [@Ng2001], a Gaussian mixture model (GMM), hierarchical clustering, and DBSCAN [@Ester1996].
@@ -961,7 +968,7 @@ For DBSCAN, we combined different ranges for parameters $\epsilon$ (the maximum 
 Specifically, we used *minPts* values from 2 to 125, and for each data version, we determined a plausible range of $\epsilon$ values by observing the distribution of the mean distance of the *minPts*-nearest neighbors across all data points.
 Since some combinations of *minPts* and $\epsilon$ might not produce a meaningful partition (for instance, when all points are detected as noisy or only one cluster is found), we resampled partitions generated by DBSCAN to ensure an equal representation in the ensemble.
 <!--  -->
-This procedure generated a final ensemble of 4428 partitions.
+This procedure generated a final ensemble of 4,428 partitions.
 
 
 Finally, we used spectral clustering on $\mathbf{D}$ to derive the final consensus partitions.
@@ -984,7 +991,7 @@ We repeated this procedure 20 times to extract the top 20 LVs that better discri
 ### CRISPR-Cas9 screening
 
 **Cell culture.**
-HepG2 cells were obtained from ATCC (ATCC® HB-8065™), and main-tained in Eagle’s Minimum Essential Medium with L-Glutamine (EMEM, Cat. 112-018-101, Quality Biology) supplemented with 10% Fetal Bovine Serum (FBS, Gibco, Cat.16000-044), and 1% Pen/Strep (Gibco, Cat.15140-122).
+HepG2 cells were obtained from ATCC (ATCC® HB-8065™), and maintained in Eagle’s Minimum Essential Medium with L-Glutamine (EMEM, Cat. 112-018-101, Quality Biology) supplemented with 10% Fetal Bovine Serum (FBS, Gibco, Cat.16000-044), and 1% Pen/Strep (Gibco, Cat.15140-122).
 Cells were kept at 37oC in a humidity-controlled incubator with 5% CO2, and were maintained at a density not exceed more than 80% confluency.
 
 **Genome-wide lentiviral pooled CRISPR-Cas9 library.**
@@ -1001,12 +1008,12 @@ EMEM complete media was added to make the final volume of 1.24ml. 16-18hrs post 
 Cells were washed twice with 1x DPBS, and replaced with fresh EMEM.
 At 24h, cells in each well were trypsinized, diluted (e.g.,1:10), and seeded in pairs of wells of 6-well plates. At 60hr post transduction, cell media in each well was replaced with fresh EMEM. 2ug/ml of puromycin (Gibco, Cat. A1113803) was added to one well out of the pair. 2-5 days after puromycin selection, or the 0 virus well treated with puromycin had no survival of cells, cells in both wells with/without puromycin were collected and counted for viability.
 Percentage of Infection (PI%) was obtained by comparing the cell numbers with/without puromycin selection within each pair.
-By means of Poisson’s distribution theory, when transduction efficiency (PI%) is between 30-50%, which corresponding to a MOI (Multiplicity of Infection) of ~0.35-0.70. At MOI equal or close to 0.3, around 95% of infected cells are predicted to have only one copy of virus.
-Therefore, a volume of virus (120ul) yielding 30-40% of transduction effi-ciency was chosen for further large-scale viral transduction.
+By means of Poisson’s distribution theory, when transduction efficiency (PI%) is between 30-50%, which corresponding to an MOI (Multiplicity of Infection) of ~0.35-0.70. At MOI equal or close to 0.3, around 95% of infected cells are predicted to have only one copy of virus.
+Therefore, a volume of virus (120ul) yielding 30-40% of transduction efficiency was chosen for further large-scale viral transduction.
 
 **Lentiviral Transduction in HepG2 Using Brunello CRISPR Knockout Pooled Library.**
-In order to achieve a coverage (representation) of at least 500 cells per sgRNA, and at a MOI between 0.3-0.4 to ensure 95% of infected cells get only one viral particle per cell, ~200M cells were initiated for the screen.
-Transduction was carried out in the similar fashion as de-scribed above.
+In order to achieve a coverage (representation) of at least 500 cells per sgRNA, and at an MOI between 0.3-0.4 to ensure 95% of infected cells get only one viral particle per cell, ~200M cells were initiated for the screen.
+Transduction was carried out in the similar fashion as described above.
 Briefly, 2.5M cells were seeded in each well of 14 6-well plates, along with 8ug/ml of polybrene.
 Volume of 120ul of virus was added to each experimental well. 18hrs post transduction, virus/PB mix medium was removed, and cells in each well were collect-ed, counted, and pooled into T175 flasks.
 At 60hr post transduction, 2ug/ml of puromycin was added to each flask.
@@ -1015,7 +1022,7 @@ Mediums were changed every 2 days with fresh EMEM, topped with 2ug/ml puromycin.
 **Fluorescent dye staining.** 9 days after puromycin selection, cells were assigned to 2 groups. 20-30M cells were collected as Unsorted Control.
 Cell pellet was spun down at 500 x g for 5min at 4oC.
 Dry pellet was kept at -80oC for further genomic DNA isolation.
-The rest of the cells (approximately 200M) were kept in 100mm dishes, and stained with fluo-rescent dye (LipidSpotTM 488, Biotium, Cat. 70065-T).
+The rest of the cells (approximately 200M) were kept in 100mm dishes, and stained with fluorescent dye (LipidSpotTM 488, Biotium, Cat. 70065-T).
 In Brief, LipidSpot 488 was diluted to 1:100 with DPBS. 4ml of staining solution was used for each dish, and incubated at 37oC for 30min.
 Cell images were captured through fluorescent microscope EVOS for GFP signal detection (Supplementary Figure @fig:sup:crispr:fig1).
 
@@ -1028,20 +1035,20 @@ Collected cells were sorted on FACSJazz. 100um nozzle was used for sorting. ~20%
 After sorting, cells were immediately spun down. Pellets were kept in -80oC for further genomic DNA isolation.
 
 **Genomic DNA isolation and verification.**
-3 conditions of Genomic DNA (Un-Sorted Con-trol, lentiV2 GFP-High, and lentiV2 GFP-Low) were extracted using QIAamp DNA Blood Mini Kit (Qiagen, Cat.51104), followed by UV Spectroscopy (Nanodrop) to access the quality and quantity of the gDNA.
-Total 80-160ug of gDNA was isolated for each condi-tion. sgRNA cassette and lentiviral specific transgene in isolated gDNA were verified through PCR (Supplementary Figure @fig:sup:crispr:fig3).
+3 conditions of Genomic DNA (Un-Sorted Control, lentiV2 GFP-High, and lentiV2 GFP-Low) were extracted using QIAamp DNA Blood Mini Kit (Qiagen, Cat.51104), followed by UV Spectroscopy (Nanodrop) to access the quality and quantity of the gDNA.
+Total 80-160ug of gDNA was isolated for each condition. sgRNA cassette and lentiviral specific transgene in isolated gDNA were verified through PCR (Supplementary Figure @fig:sup:crispr:fig3).
 
 **Illumina libraries generation and sequencing.**
 Fragment containing sgRNA cassette was amplified using P5 /P7 primers, as indicated in [@pmid:26780180] and primer sequences were adapted from Broad Institute protocol (Supplementary Figure @fig:sup:crispr:table1).
 Stagger sequence (0-8nt) was included in P5, and 8bp uniquely barcoded sequence in P7.
-Primers were syn-thesized through Integrated DNA Technologies (IDT), each primer was PAGE purified. 32 PCR reactions were set up for each condition.
+Primers were synthesized through Integrated DNA Technologies (IDT), each primer was PAGE purified. 32 PCR reactions were set up for each condition.
 Each 100ul PCR reaction consists of roughly 5ug of gDNA, 5ul of each 10uM P5 and P7. ExTaq DNA Polymerase (TaKaRa, Cat. RR001A) was used to amplify the amplicon.
 PCR Thermal Cycler Parameters set as: Initial at 95oC for 1min; followed by 24 cycles of Denaturation at 94oC for 30 seconds, Annealing at 52.5oC for 30 seconds, Extension at 72oC for 30 seconds.
 A final Elongation at 72oC for 10 minutes. 285bp-293bp PCR products were expected (Supplementary Figure @fig:sup:crispr:fig4 A).
 PCR products within the same condition were pooled and purified using SPRIselect beads (Beckman Coulter, Cat. B23318).
 Purified illumina libraries were quantitated on Qubit, and the quality of the library were analyzed on Bio-analyzer using High Sensitivity DNA Chip.
-A single approxi-mate 285bp peak was expected. (Supplementary Figure @fig:sup:crispr:fig4 B).
-Final illumina library samples were se-quenced on Nova-seq 6000.
+A single approximate 285bp peak was expected. (Supplementary Figure @fig:sup:crispr:fig4 B).
+Final illumina library samples were sequenced on Nova-seq 6000.
 Samples were pooled and loaded on a SP flow cell, along with 20% PhiX control v3 library spike-in.
 
 
