@@ -178,11 +178,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/1195a38011e8b1b00ace31dbc80c5366e6b031a0/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/fa7963a78faebb17b72a9bcd010a4d03f8fec26e/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/1195a38011e8b1b00ace31dbc80c5366e6b031a0/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/fa7963a78faebb17b72a9bcd010a4d03f8fec26e/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/1195a38011e8b1b00ace31dbc80c5366e6b031a0/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/fa7963a78faebb17b72a9bcd010a4d03f8fec26e/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -220,9 +220,9 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/1195a38011e8b1b00ace31dbc80c5366e6b031a0/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/fa7963a78faebb17b72a9bcd010a4d03f8fec26e/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@1195a38](https://github.com/greenelab/phenoplier_manuscript/tree/1195a38011e8b1b00ace31dbc80c5366e6b031a0)
+from [greenelab/phenoplier_manuscript@fa7963a](https://github.com/greenelab/phenoplier_manuscript/tree/fa7963a78faebb17b72a9bcd010a4d03f8fec26e)
 on July 29, 2021.
 </em></small>
 
@@ -449,7 +449,7 @@ To further analyze LV-trait associations, we adapted the gene-property approach 
 Thus PhenoPLIER allows the user to address specific questions, namely:
 do disease-associated genes belong to modules expressed in specific tissues and cell types?
 Are these cell type-specific modules associated with different diseases (thus, potentially representing a "network pleiotropy" example from an omnigenic point of view [@doi:10.1016/j.cell.2017.05.038])?
-Is there a subset of module's genes that is closer to the definition of "core" genes (i.e., directly affecting the trait with no mediated regulation of other genes [@doi:10.1016/j.cell.2019.04.014]) and thus represent alternative and potentially better drug targets?
+Is there a subset of module's genes that is closer to the definition of "core" genes (i.e., directly affecting the trait with no mediated regulation of other genes [@doi:10.1016/j.cell.2019.04.014]) and thus represent alternative and potentially better candidate targets?
 Are drugs perturbing these transcriptional mechanisms, and if so, can they suggest potential mechanisms of action?
 
 
@@ -463,7 +463,7 @@ Thus, the gene expression space (which has no GTEx samples) and the TWAS space (
 
 ### LVs link genes that alter lipid accumulation with relevant traits and tissues
 
-Our first experiment attempted to answer whether genes in a disease-relevant LV could represent alternative drug targets.
+Our first experiment attempted to answer whether genes in a disease-relevant LV could represent potential therapeutic targets.
 For this, the first step was to obtain a set of genes strongly associated with a phenotype of interest.
 Therefore, we performed a fluorescence-based CRISPR-Cas9 in the HepG2 cell line and identified 462 genes associated with lipid regulation (Methods).
 From these, we selected two high-confidence gene-sets that either caused a decrease or increase of lipids:
