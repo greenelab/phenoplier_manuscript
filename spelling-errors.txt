@@ -50,11 +50,11 @@ Chun
 cis
 CKD
 claudication
-coeliac
+Coeliac
 colocalization
 colocalized
 confluency
-CRISPR
+crispr
 crit
 Ctrl
 CXCR
@@ -108,7 +108,7 @@ fibroblasts
 func
 GBMF
 gDNA
-genomic
+Genomic
 genotype
 GFP
 Gibco
@@ -118,7 +118,7 @@ GMM
 Golabi
 GPP
 GPR
-Granulocyte
+granulocyte
 granulosa
 GreeneScientist
 gRNA
@@ -149,7 +149,7 @@ ICD
 IDT
 IFNa
 Iftikhar
-illumina
+Illumina
 initializations
 INSIG
 INTEGRIN
@@ -158,7 +158,7 @@ interpretable
 Intervertebral
 Intra
 intraocular
-ischaemic
+Ischaemic
 Jurkat
 KEGG
 keratometry
@@ -171,7 +171,7 @@ LDL
 LDLR
 lentiCRIS
 lentiV
-Lentiviral
+lentiviral
 levothyroxine
 LINCS
 LipidSpot
@@ -209,7 +209,7 @@ monocytes
 mononuclear
 MSigDB
 MultiXcan
-myeloid
+Myeloid
 myeloma
 myelopathy
 Namjou
@@ -218,9 +218,9 @@ Nephrology
 neurodegenerative
 neurodevelopmental
 neuropsychiatric
-neutrophil
+Neutrophil
 Neutrophill
-Neutrophils
+neutrophils
 NFAT
 nicotinic
 NMR
@@ -245,7 +245,7 @@ PID
 Pividori
 plasmids
 pleiotropy
-PLIER
+plier
 polyarthropathies
 polybrene
 polygenic
@@ -327,7 +327,7 @@ transcriptomes
 transcriptomic
 transduced
 transgene
-translational
+Translational
 Treg
 TRIACYLGLYCEROL
 trypsinized

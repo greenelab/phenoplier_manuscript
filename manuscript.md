@@ -19,7 +19,7 @@ author-meta:
 - Casey S. Greene
 bibliography:
 - content/manual-references.json
-date-meta: '2021-07-29'
+date-meta: '2021-08-02'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -38,9 +38,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
 
-  <meta name="dc.date" content="2021-07-29" />
+  <meta name="dc.date" content="2021-08-02" />
 
-  <meta name="citation_publication_date" content="2021-07-29" />
+  <meta name="citation_publication_date" content="2021-08-02" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -178,11 +178,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/fa7963a78faebb17b72a9bcd010a4d03f8fec26e/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/68e512362d7b739dad6279b93e1938c674217853/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/fa7963a78faebb17b72a9bcd010a4d03f8fec26e/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/68e512362d7b739dad6279b93e1938c674217853/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/fa7963a78faebb17b72a9bcd010a4d03f8fec26e/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/68e512362d7b739dad6279b93e1938c674217853/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -220,10 +220,10 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/fa7963a78faebb17b72a9bcd010a4d03f8fec26e/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/68e512362d7b739dad6279b93e1938c674217853/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@fa7963a](https://github.com/greenelab/phenoplier_manuscript/tree/fa7963a78faebb17b72a9bcd010a4d03f8fec26e)
-on July 29, 2021.
+from [greenelab/phenoplier_manuscript@68e5123](https://github.com/greenelab/phenoplier_manuscript/tree/68e512362d7b739dad6279b93e1938c674217853)
+on August 2, 2021.
 </em></small>
 
 ## Authors
@@ -1053,9 +1053,9 @@ Final illumina library samples were sequenced on Nova-seq 6000.
 Samples were pooled and loaded on a SP flow cell, along with 20% PhiX control v3 library spike-in.
 
 
-### Code availability
+### Code and data availability
 
-The code to reproduce all the analyses in this work is available in [https://github.com/greenelab/phenoplier](https://github.com/greenelab/phenoplier)
+The code and data to reproduce all the analyses in this work are available in [https://github.com/greenelab/phenoplier](https://github.com/greenelab/phenoplier).
 
 
 ## References {.page_break_before}
