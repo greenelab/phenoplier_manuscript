@@ -23,7 +23,7 @@ atherogenesis
 AUC
 Bahram
 barcoded
-Basophil
+basophil
 Behmel
 bendroflumethiazide
 Benjamini
@@ -45,12 +45,12 @@ Cas
 catabolism
 celiac
 cgreene
-chronotype
+Chronotype
 Chun
 cis
 CKD
 claudication
-Coeliac
+coeliac
 colocalization
 colocalized
 confluency
@@ -118,7 +118,7 @@ GMM
 Golabi
 GPP
 GPR
-granulocyte
+Granulocyte
 granulosa
 GreeneScientist
 gRNA
@@ -149,7 +149,7 @@ ICD
 IDT
 IFNa
 Iftikhar
-Illumina
+illumina
 initializations
 INSIG
 INTEGRIN
@@ -158,7 +158,7 @@ interpretable
 Intervertebral
 Intra
 intraocular
-Ischaemic
+ischaemic
 Jurkat
 KEGG
 keratometry
@@ -184,8 +184,8 @@ loadings
 LPL
 LPSstimulated
 Luo
-LV
-LVs
+lv
+lvs
 Lymphadenitis
 malabsorption
 Marylyn
@@ -218,11 +218,11 @@ Nephrology
 neurodegenerative
 neurodevelopmental
 neuropsychiatric
-Neutrophil
+neutrophil
 Neutrophill
 neutrophils
 NFAT
-nicotinic
+Nicotinic
 NMR
 oC
 omnigenic
@@ -237,7 +237,7 @@ PCYT
 pectoris
 perturbagens
 Phecode
-phenomexcan
+PhenomeXcan
 PhenoPLIER
 phenotypes
 PhiX
@@ -245,7 +245,7 @@ PID
 Pividori
 plasmids
 pleiotropy
-plier
+PLIER
 polyarthropathies
 polybrene
 polygenic
@@ -279,7 +279,7 @@ repurposing
 resampled
 restimulated
 resuspended
-reticulocyte
+Reticulocyte
 reticulocytes
 Ritchie
 RO
@@ -327,7 +327,7 @@ transcriptomes
 transcriptomic
 transduced
 transgene
-Translational
+translational
 Treg
 TRIACYLGLYCEROL
 trypsinized
