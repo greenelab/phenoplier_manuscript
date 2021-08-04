@@ -54,7 +54,7 @@ coeliac
 colocalization
 colocalized
 confluency
-crispr
+CRISPR
 crit
 Ctrl
 CXCR
@@ -108,8 +108,8 @@ fibroblasts
 func
 GBMF
 gDNA
-Genomic
-genotype
+genomic
+Genotype
 GFP
 Gibco
 glioma
@@ -118,7 +118,7 @@ GMM
 Golabi
 GPP
 GPR
-Granulocyte
+granulocyte
 granulosa
 GreeneScientist
 gRNA
@@ -185,7 +185,7 @@ LPL
 LPSstimulated
 Luo
 lv
-lvs
+LVs
 Lymphadenitis
 malabsorption
 Marylyn
@@ -209,7 +209,7 @@ monocytes
 mononuclear
 MSigDB
 MultiXcan
-Myeloid
+myeloid
 myeloma
 myelopathy
 Namjou
@@ -237,7 +237,7 @@ PCYT
 pectoris
 perturbagens
 Phecode
-PhenomeXcan
+phenomexcan
 PhenoPLIER
 phenotypes
 PhiX
@@ -279,7 +279,7 @@ repurposing
 resampled
 restimulated
 resuspended
-Reticulocyte
+reticulocyte
 reticulocytes
 Ritchie
 RO
