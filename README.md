@@ -1,19 +1,19 @@
-# Automated scholarly manuscripts on GitHub
+# PhenoPLIER: Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms
 
 <!-- usage note: edit the H1 title above to personalize the manuscript -->
 
 [![HTML Manuscript](https://img.shields.io/badge/manuscript-HTML-blue.svg)](https://greenelab.github.io/phenoplier_manuscript/)
 [![PDF Manuscript](https://img.shields.io/badge/manuscript-PDF-blue.svg)](https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf)
 [![GitHub Actions Status](https://github.com/greenelab/phenoplier_manuscript/workflows/Manubot/badge.svg)](https://github.com/greenelab/phenoplier_manuscript/actions)
-[![Travis Build Status](https://travis-ci.com/greenelab/phenoplier_manuscript.svg?branch=master)](https://travis-ci.com/greenelab/phenoplier_manuscript)
-<!-- usage note: delete CI badges above for services not used by your manuscript -->
 
-## Manuscript description
+## Project description
 
 <!-- usage note: edit this section. -->
 
-This repository is a template manuscript (a.k.a. rootstock).
-Actual manuscript instances will clone this repository (see [`SETUP.md`](SETUP.md)) and replace this paragraph with a description of their manuscript.
+PhenoPLIER is new computational strategy that integrates statistical associations from GWAS/TWAS with groups of genes (gene modules) that have similar expression patterns across the same cell types.
+This allows us to go beyond gene-trait statistical associations and infer the cell types where gene expression regulation is likely to be disrupted, resulting in cell type-specific pathology.
+Check out our manuscript in [bioRxiv](https://doi.org/10.1101/2021.07.05.450786) or our [Manubot web version](https://greenelab.github.io/phenoplier_manuscript/) for more details.
+The Github repository with the source code for the analyses can be found [here](https://github.com/greenelab/phenoplier).
 
 ## Manubot
 
