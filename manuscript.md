@@ -19,7 +19,7 @@ author-meta:
 - Casey S. Greene
 bibliography:
 - content/manual-references.json
-date-meta: '2021-08-04'
+date-meta: '2021-08-06'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -38,9 +38,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
 
-  <meta name="dc.date" content="2021-08-04" />
+  <meta name="dc.date" content="2021-08-06" />
 
-  <meta name="citation_publication_date" content="2021-08-04" />
+  <meta name="citation_publication_date" content="2021-08-06" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -178,11 +178,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/c78c4a397721f7f0b4a2d7553c107249a8808ca4/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/1a88657100281a5d72aabfc03b271061dda271d1/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/c78c4a397721f7f0b4a2d7553c107249a8808ca4/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/1a88657100281a5d72aabfc03b271061dda271d1/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/c78c4a397721f7f0b4a2d7553c107249a8808ca4/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/1a88657100281a5d72aabfc03b271061dda271d1/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -220,10 +220,10 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/c78c4a397721f7f0b4a2d7553c107249a8808ca4/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/1a88657100281a5d72aabfc03b271061dda271d1/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@c78c4a3](https://github.com/greenelab/phenoplier_manuscript/tree/c78c4a397721f7f0b4a2d7553c107249a8808ca4)
-on August 4, 2021.
+from [greenelab/phenoplier_manuscript@1a88657](https://github.com/greenelab/phenoplier_manuscript/tree/1a88657100281a5d72aabfc03b271061dda271d1)
+on August 6, 2021.
 </em></small>
 
 ## Authors

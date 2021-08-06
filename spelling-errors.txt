@@ -23,7 +23,7 @@ atherogenesis
 AUC
 Bahram
 barcoded
-basophil
+Basophil
 Behmel
 bendroflumethiazide
 Benjamini
@@ -45,7 +45,7 @@ Cas
 catabolism
 celiac
 cgreene
-Chronotype
+chronotype
 Chun
 cis
 CKD
@@ -54,7 +54,7 @@ coeliac
 colocalization
 colocalized
 confluency
-CRISPR
+crispr
 crit
 Ctrl
 CXCR
@@ -109,7 +109,7 @@ func
 GBMF
 gDNA
 genomic
-Genotype
+genotype
 GFP
 Gibco
 glioma
@@ -125,7 +125,7 @@ gRNA
 GTEx
 GWAS
 Haematocrit
-Haemoglobin
+haemoglobin
 HB
 HC
 HCAR
@@ -149,7 +149,7 @@ ICD
 IDT
 IFNa
 Iftikhar
-illumina
+Illumina
 initializations
 INSIG
 INTEGRIN
@@ -171,7 +171,7 @@ LDL
 LDLR
 lentiCRIS
 lentiV
-lentiviral
+Lentiviral
 levothyroxine
 LINCS
 LipidSpot
@@ -185,7 +185,7 @@ LPL
 LPSstimulated
 Luo
 lv
-LVs
+lvs
 Lymphadenitis
 malabsorption
 Marylyn
@@ -209,7 +209,7 @@ monocytes
 mononuclear
 MSigDB
 MultiXcan
-myeloid
+Myeloid
 myeloma
 myelopathy
 Namjou
@@ -218,7 +218,7 @@ Nephrology
 neurodegenerative
 neurodevelopmental
 neuropsychiatric
-neutrophil
+Neutrophil
 Neutrophill
 neutrophils
 NFAT
@@ -245,7 +245,7 @@ PID
 Pividori
 plasmids
 pleiotropy
-PLIER
+plier
 polyarthropathies
 polybrene
 polygenic
@@ -279,11 +279,11 @@ repurposing
 resampled
 restimulated
 resuspended
-reticulocyte
+Reticulocyte
 reticulocytes
 Ritchie
 RO
-ROC
+roc
 Salm
 SCAP
 SCD
@@ -327,7 +327,7 @@ transcriptomes
 transcriptomic
 transduced
 transgene
-translational
+Translational
 Treg
 TRIACYLGLYCEROL
 trypsinized
