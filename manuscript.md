@@ -19,7 +19,7 @@ author-meta:
 - Casey S. Greene
 bibliography:
 - content/manual-references.json
-date-meta: '2021-08-06'
+date-meta: '2021-11-11'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -38,9 +38,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
 
-  <meta name="dc.date" content="2021-08-06" />
+  <meta name="dc.date" content="2021-11-11" />
 
-  <meta name="citation_publication_date" content="2021-08-06" />
+  <meta name="citation_publication_date" content="2021-11-11" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -178,11 +178,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/1a88657100281a5d72aabfc03b271061dda271d1/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/4a83f14b5c1a7b66a2dd97df248e8a541795d04d/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/1a88657100281a5d72aabfc03b271061dda271d1/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/4a83f14b5c1a7b66a2dd97df248e8a541795d04d/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/1a88657100281a5d72aabfc03b271061dda271d1/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/4a83f14b5c1a7b66a2dd97df248e8a541795d04d/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -210,7 +210,7 @@ title: Projecting genetic associations through gene expression patterns highligh
 
 
 
-
+<!--  -->
 
 <!-- [
 <i class="fas fa-info-circle fa-lg"></i> **Draft manuscript**<br>
@@ -220,10 +220,10 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/1a88657100281a5d72aabfc03b271061dda271d1/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/4a83f14b5c1a7b66a2dd97df248e8a541795d04d/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@1a88657](https://github.com/greenelab/phenoplier_manuscript/tree/1a88657100281a5d72aabfc03b271061dda271d1)
-on August 6, 2021.
+from [greenelab/phenoplier_manuscript@4a83f14](https://github.com/greenelab/phenoplier_manuscript/tree/4a83f14b5c1a7b66a2dd97df248e8a541795d04d)
+on November 11, 2021.
 </em></small>
 
 ## Authors
