@@ -1,4 +1,12 @@
 ---
+title: Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms
+keywords:
+- gene co-expression
+- MultiPLIER
+- PhenomeXcan
+- TWAS
+lang: en-US
+date-meta: '2022-03-25'
 author-meta:
 - Milton Pividori
 - Sumei Lu
@@ -17,195 +25,101 @@ author-meta:
 - Marylyn D. Ritchie
 - Struan F.A. Grant
 - Casey S. Greene
+header-includes: |-
+  <!--
+  Manubot generated metadata rendered from header-includes-template.html.
+  Suggest improvements at https://github.com/manubot/manubot/blob/main/manubot/process/header-includes-template.html
+  -->
+  <meta name="dc.format" content="text/html" />
+  <meta name="dc.title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
+  <meta name="citation_title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
+  <meta property="og:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
+  <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
+  <meta name="dc.date" content="2022-03-25" />
+  <meta name="citation_publication_date" content="2022-03-25" />
+  <meta name="dc.language" content="en-US" />
+  <meta name="citation_language" content="en-US" />
+  <meta name="dc.relation.ispartof" content="Manubot" />
+  <meta name="dc.publisher" content="Manubot" />
+  <meta name="citation_journal_title" content="Manubot" />
+  <meta name="citation_technical_report_institution" content="Manubot" />
+  <meta name="citation_author" content="Milton Pividori" />
+  <meta name="citation_author_institution" content="Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
+  <meta name="citation_author_orcid" content="0000-0002-3035-4403" />
+  <meta name="twitter:creator" content="@miltondp" />
+  <meta name="citation_author" content="Sumei Lu" />
+  <meta name="citation_author_institution" content="Center for Spatial and Functional Genomics, Children&#39;s Hospital of Philadelphia, Philadelphia, PA, 19104, USA" />
+  <meta name="citation_author" content="Binglan Li" />
+  <meta name="citation_author_institution" content="Department of Biomedical Data Science, Stanford University, Stanford, CA, USA" />
+  <meta name="citation_author_orcid" content="0000-0002-0103-6107" />
+  <meta name="citation_author" content="Chun Su" />
+  <meta name="citation_author_institution" content="Center for Spatial and Functional Genomics, Children&#39;s Hospital of Philadelphia, Philadelphia, PA, 19104, USA" />
+  <meta name="citation_author_orcid" content="0000-0001-6388-8666" />
+  <meta name="citation_author" content="Matthew E. Johnson" />
+  <meta name="citation_author_institution" content="Center for Spatial and Functional Genomics, Children&#39;s Hospital of Philadelphia, Philadelphia, PA, 19104, USA" />
+  <meta name="citation_author" content="Wei-Qi Wei" />
+  <meta name="citation_author_institution" content="Vanderbilt University Medical Center" />
+  <meta name="citation_author" content="Qiping Feng" />
+  <meta name="citation_author_institution" content="Vanderbilt University Medical Center" />
+  <meta name="citation_author_orcid" content="0000-0002-6213-793X" />
+  <meta name="citation_author" content="Bahram Namjou" />
+  <meta name="citation_author_institution" content="Cincinnati Children&#39;s Hospital Medical Center" />
+  <meta name="citation_author" content="Krzysztof Kiryluk" />
+  <meta name="citation_author_institution" content="Department of Medicine, Division of Nephrology, Vagelos College of Physicians &amp; Surgeons, Columbia University, New York, New York" />
+  <meta name="citation_author_orcid" content="0000-0002-5047-6715" />
+  <meta name="twitter:creator" content="@kirylukk" />
+  <meta name="citation_author" content="Iftikhar Kullo" />
+  <meta name="citation_author_institution" content="Mayo Clinic" />
+  <meta name="citation_author" content="Yuan Luo" />
+  <meta name="citation_author_institution" content="Northwestern University" />
+  <meta name="citation_author" content="Blair D. Sullivan" />
+  <meta name="citation_author_institution" content="School of Computing, University of Utah, Salt Lake City, UT, USA" />
+  <meta name="citation_author" content="Benjamin F. Voight" />
+  <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
+  <meta name="citation_author_institution" content="Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
+  <meta name="citation_author_institution" content="Institute for Translational Medicine and Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
+  <meta name="citation_author_orcid" content="0000-0002-6205-9994" />
+  <meta name="twitter:creator" content="@bvoight28" />
+  <meta name="citation_author" content="Carsten Skarke" />
+  <meta name="citation_author_institution" content="Institute for Translational Medicine and Therapeutics, Department of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
+  <meta name="citation_author_orcid" content="0000-0001-5145-3681" />
+  <meta name="twitter:creator" content="@CarstenSkarke" />
+  <meta name="citation_author" content="Marylyn D. Ritchie" />
+  <meta name="citation_author_institution" content="Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
+  <meta name="citation_author_orcid" content="0000-0002-1208-1720" />
+  <meta name="twitter:creator" content="@MarylynRitchie" />
+  <meta name="citation_author" content="Struan F.A. Grant" />
+  <meta name="citation_author_institution" content="Center for Spatial and Functional Genomics, Children&#39;s Hospital of Philadelphia, Philadelphia, PA, 19104, USA" />
+  <meta name="citation_author_institution" content="Department of Pediatrics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA" />
+  <meta name="citation_author_institution" content="Division of Human Genetics, Children&#39;s Hospital of Philadelphia, Philadelphia, PA, 19104, USA" />
+  <meta name="citation_author_orcid" content="0000-0003-2025-5302" />
+  <meta name="twitter:creator" content="@STRUANGRANT" />
+  <meta name="citation_author" content="Casey S. Greene" />
+  <meta name="citation_author_institution" content="Center for Health AI, University of Colorado School of Medicine, Aurora, CO 80045, USA" />
+  <meta name="citation_author_institution" content="Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, CO 80045, USA" />
+  <meta name="citation_author_orcid" content="0000-0001-8713-9213" />
+  <meta name="twitter:creator" content="@GreeneScientist" />
+  <link rel="canonical" href="https://greenelab.github.io/phenoplier_manuscript/" />
+  <meta property="og:url" content="https://greenelab.github.io/phenoplier_manuscript/" />
+  <meta property="twitter:url" content="https://greenelab.github.io/phenoplier_manuscript/" />
+  <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
+  <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
+  <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/79fa542ecae27b6892e0f647809b6eaf92783346/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/79fa542ecae27b6892e0f647809b6eaf92783346/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/79fa542ecae27b6892e0f647809b6eaf92783346/manuscript.pdf" />
+  <meta property="og:type" content="article" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
+  <link rel="mask-icon" href="https://manubot.org/safari-pinned-tab.svg" color="#ad1457" />
+  <meta name="theme-color" content="#ad1457" />
+  <!-- end Manubot generated metadata -->
 bibliography:
 - content/manual-references.json
-date-meta: '2021-11-11'
-header-includes: '<!--
-
-  Manubot generated metadata rendered from header-includes-template.html.
-
-  Suggest improvements at https://github.com/manubot/manubot/blob/master/manubot/process/header-includes-template.html
-
-  -->
-
-  <meta name="dc.format" content="text/html" />
-
-  <meta name="dc.title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
-
-  <meta name="citation_title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
-
-  <meta property="og:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
-
-  <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
-
-  <meta name="dc.date" content="2021-11-11" />
-
-  <meta name="citation_publication_date" content="2021-11-11" />
-
-  <meta name="dc.language" content="en-US" />
-
-  <meta name="citation_language" content="en-US" />
-
-  <meta name="dc.relation.ispartof" content="Manubot" />
-
-  <meta name="dc.publisher" content="Manubot" />
-
-  <meta name="citation_journal_title" content="Manubot" />
-
-  <meta name="citation_technical_report_institution" content="Manubot" />
-
-  <meta name="citation_author" content="Milton Pividori" />
-
-  <meta name="citation_author_institution" content="Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
-
-  <meta name="citation_author_orcid" content="0000-0002-3035-4403" />
-
-  <meta name="twitter:creator" content="@miltondp" />
-
-  <meta name="citation_author" content="Sumei Lu" />
-
-  <meta name="citation_author_institution" content="Center for Spatial and Functional Genomics, Children&#39;s Hospital of Philadelphia, Philadelphia, PA, 19104, USA" />
-
-  <meta name="citation_author" content="Binglan Li" />
-
-  <meta name="citation_author_institution" content="Department of Biomedical Data Science, Stanford University, Stanford, CA, USA" />
-
-  <meta name="citation_author_orcid" content="0000-0002-0103-6107" />
-
-  <meta name="citation_author" content="Chun Su" />
-
-  <meta name="citation_author_institution" content="Center for Spatial and Functional Genomics, Children&#39;s Hospital of Philadelphia, Philadelphia, PA, 19104, USA" />
-
-  <meta name="citation_author_orcid" content="0000-0001-6388-8666" />
-
-  <meta name="citation_author" content="Matthew E. Johnson" />
-
-  <meta name="citation_author_institution" content="Center for Spatial and Functional Genomics, Children&#39;s Hospital of Philadelphia, Philadelphia, PA, 19104, USA" />
-
-  <meta name="citation_author" content="Wei-Qi Wei" />
-
-  <meta name="citation_author_institution" content="Vanderbilt University Medical Center" />
-
-  <meta name="citation_author" content="Qiping Feng" />
-
-  <meta name="citation_author_institution" content="Vanderbilt University Medical Center" />
-
-  <meta name="citation_author_orcid" content="0000-0002-6213-793X" />
-
-  <meta name="citation_author" content="Bahram Namjou" />
-
-  <meta name="citation_author_institution" content="Cincinnati Children&#39;s Hospital Medical Center" />
-
-  <meta name="citation_author" content="Krzysztof Kiryluk" />
-
-  <meta name="citation_author_institution" content="Department of Medicine, Division of Nephrology, Vagelos College of Physicians &amp; Surgeons, Columbia University, New York, New York" />
-
-  <meta name="citation_author_orcid" content="0000-0002-5047-6715" />
-
-  <meta name="twitter:creator" content="@kirylukk" />
-
-  <meta name="citation_author" content="Iftikhar Kullo" />
-
-  <meta name="citation_author_institution" content="Mayo Clinic" />
-
-  <meta name="citation_author" content="Yuan Luo" />
-
-  <meta name="citation_author_institution" content="Northwestern University" />
-
-  <meta name="citation_author" content="Blair D. Sullivan" />
-
-  <meta name="citation_author_institution" content="School of Computing, University of Utah, Salt Lake City, UT, USA" />
-
-  <meta name="citation_author" content="Benjamin F. Voight" />
-
-  <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
-
-  <meta name="citation_author_institution" content="Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
-
-  <meta name="citation_author_institution" content="Institute for Translational Medicine and Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
-
-  <meta name="citation_author_orcid" content="0000-0002-6205-9994" />
-
-  <meta name="twitter:creator" content="@bvoight28" />
-
-  <meta name="citation_author" content="Carsten Skarke" />
-
-  <meta name="citation_author_institution" content="Institute for Translational Medicine and Therapeutics, Department of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
-
-  <meta name="citation_author_orcid" content="0000-0001-5145-3681" />
-
-  <meta name="twitter:creator" content="@CarstenSkarke" />
-
-  <meta name="citation_author" content="Marylyn D. Ritchie" />
-
-  <meta name="citation_author_institution" content="Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
-
-  <meta name="citation_author_orcid" content="0000-0002-1208-1720" />
-
-  <meta name="twitter:creator" content="@MarylynRitchie" />
-
-  <meta name="citation_author" content="Struan F.A. Grant" />
-
-  <meta name="citation_author_institution" content="Center for Spatial and Functional Genomics, Children&#39;s Hospital of Philadelphia, Philadelphia, PA, 19104, USA" />
-
-  <meta name="citation_author_institution" content="Department of Pediatrics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA" />
-
-  <meta name="citation_author_institution" content="Division of Human Genetics, Children&#39;s Hospital of Philadelphia, Philadelphia, PA, 19104, USA" />
-
-  <meta name="citation_author_orcid" content="0000-0003-2025-5302" />
-
-  <meta name="twitter:creator" content="@STRUANGRANT" />
-
-  <meta name="citation_author" content="Casey S. Greene" />
-
-  <meta name="citation_author_institution" content="Center for Health AI, University of Colorado School of Medicine, Aurora, CO 80045, USA" />
-
-  <meta name="citation_author_institution" content="Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, CO 80045, USA" />
-
-  <meta name="citation_author_orcid" content="0000-0001-8713-9213" />
-
-  <meta name="twitter:creator" content="@GreeneScientist" />
-
-  <link rel="canonical" href="https://greenelab.github.io/phenoplier_manuscript/" />
-
-  <meta property="og:url" content="https://greenelab.github.io/phenoplier_manuscript/" />
-
-  <meta property="twitter:url" content="https://greenelab.github.io/phenoplier_manuscript/" />
-
-  <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
-
-  <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-
-  <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/4a83f14b5c1a7b66a2dd97df248e8a541795d04d/" />
-
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/4a83f14b5c1a7b66a2dd97df248e8a541795d04d/" />
-
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/4a83f14b5c1a7b66a2dd97df248e8a541795d04d/manuscript.pdf" />
-
-  <meta property="og:type" content="article" />
-
-  <meta property="twitter:card" content="summary_large_image" />
-
-  <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
-
-  <link rel="mask-icon" href="https://manubot.org/safari-pinned-tab.svg" color="#ad1457" />
-
-  <meta name="theme-color" content="#ad1457" />
-
-  <!-- end Manubot generated metadata -->'
-keywords:
-- gene co-expression
-- MultiPLIER
-- PhenomeXcan
-- TWAS
-lang: en-US
-manubot-clear-requests-cache: false
 manubot-output-bibliography: output/references.json
 manubot-output-citekeys: output/citations.tsv
 manubot-requests-cache-path: ci/cache/requests-cache
-title: Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms
+manubot-clear-requests-cache: false
 ...
 
 
@@ -220,10 +134,10 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/4a83f14b5c1a7b66a2dd97df248e8a541795d04d/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/79fa542ecae27b6892e0f647809b6eaf92783346/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@4a83f14](https://github.com/greenelab/phenoplier_manuscript/tree/4a83f14b5c1a7b66a2dd97df248e8a541795d04d)
-on November 11, 2021.
+from [greenelab/phenoplier_manuscript@79fa542](https://github.com/greenelab/phenoplier_manuscript/tree/79fa542ecae27b6892e0f647809b6eaf92783346)
+on March 25, 2022.
 </em></small>
 
 ## Authors
@@ -231,11 +145,11 @@ on November 11, 2021.
 
 
 + **Milton Pividori**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0002-3035-4403](https://orcid.org/0000-0002-3035-4403)
-    · ![GitHub icon](images/github.svg){.inline_icon}
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [miltondp](https://github.com/miltondp)
-    · ![Twitter icon](images/twitter.svg){.inline_icon}
+    · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
     [miltondp](https://twitter.com/miltondp)<br>
   <small>
      Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
@@ -248,16 +162,16 @@ on November 11, 2021.
   </small>
 
 + **Binglan Li**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0002-0103-6107](https://orcid.org/0000-0002-0103-6107)<br>
   <small>
      Department of Biomedical Data Science, Stanford University, Stanford, CA, USA
   </small>
 
 + **Chun Su**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0001-6388-8666](https://orcid.org/0000-0001-6388-8666)
-    · ![GitHub icon](images/github.svg){.inline_icon}
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [sckinta](https://github.com/sckinta)<br>
   <small>
      Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
@@ -274,7 +188,7 @@ on November 11, 2021.
   </small>
 
 + **Qiping Feng**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0002-6213-793X](https://orcid.org/0000-0002-6213-793X)<br>
   <small>
      Vanderbilt University Medical Center
@@ -286,9 +200,9 @@ on November 11, 2021.
   </small>
 
 + **Krzysztof Kiryluk**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0002-5047-6715](https://orcid.org/0000-0002-5047-6715)
-    · ![Twitter icon](images/twitter.svg){.inline_icon}
+    · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
     [kirylukk](https://twitter.com/kirylukk)<br>
   <small>
      Department of Medicine, Division of Nephrology, Vagelos College of Physicians & Surgeons, Columbia University, New York, New York
@@ -310,49 +224,49 @@ on November 11, 2021.
   </small>
 
 + **Benjamin F. Voight**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0002-6205-9994](https://orcid.org/0000-0002-6205-9994)
-    · ![GitHub icon](images/github.svg){.inline_icon}
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [bvoight](https://github.com/bvoight)
-    · ![Twitter icon](images/twitter.svg){.inline_icon}
+    · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
     [bvoight28](https://twitter.com/bvoight28)<br>
   <small>
      Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA; Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA; Institute for Translational Medicine and Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
   </small>
 
 + **Carsten Skarke**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0001-5145-3681](https://orcid.org/0000-0001-5145-3681)
-    · ![Twitter icon](images/twitter.svg){.inline_icon}
+    · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
     [CarstenSkarke](https://twitter.com/CarstenSkarke)<br>
   <small>
      Institute for Translational Medicine and Therapeutics, Department of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
   </small>
 
 + **Marylyn D. Ritchie**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0002-1208-1720](https://orcid.org/0000-0002-1208-1720)
-    · ![Twitter icon](images/twitter.svg){.inline_icon}
+    · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
     [MarylynRitchie](https://twitter.com/MarylynRitchie)<br>
   <small>
      Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
   </small>
 
 + **Struan F.A. Grant**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0003-2025-5302](https://orcid.org/0000-0003-2025-5302)
-    · ![Twitter icon](images/twitter.svg){.inline_icon}
+    · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
     [STRUANGRANT](https://twitter.com/STRUANGRANT)<br>
   <small>
      Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA; Department of Pediatrics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA; Division of Human Genetics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
   </small>
 
 + **Casey S. Greene**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0001-8713-9213](https://orcid.org/0000-0001-8713-9213)
-    · ![GitHub icon](images/github.svg){.inline_icon}
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [cgreene](https://github.com/cgreene)
-    · ![Twitter icon](images/twitter.svg){.inline_icon}
+    · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
     [GreeneScientist](https://twitter.com/GreeneScientist)<br>
   <small>
      Center for Health AI, University of Colorado School of Medicine, Aurora, CO 80045, USA; Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, CO 80045, USA

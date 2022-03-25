@@ -1,5 +1,4 @@
 ACACA
-Acknowledgements
 acyltransferase
 Addgene
 ADHD
@@ -23,7 +22,7 @@ atherogenesis
 AUC
 Bahram
 barcoded
-basophil
+Basophil
 Behmel
 bendroflumethiazide
 Benjamini
@@ -45,7 +44,7 @@ Cas
 catabolism
 celiac
 cgreene
-chronotype
+Chronotype
 Chun
 cis
 CKD
@@ -91,7 +90,7 @@ EMEM
 eQTL
 eQTLs
 ERY
-ERYTHEMATOSUS
+erythematosus
 Erythematous
 erythropoiesis
 etiologically
@@ -108,8 +107,8 @@ fibroblasts
 func
 GBMF
 gDNA
-Genomic
-genotype
+genomic
+Genotype
 GFP
 Gibco
 glioma
@@ -118,14 +117,13 @@ GMM
 Golabi
 GPP
 GPR
-Granulocyte
+granulocyte
 granulosa
 GreeneScientist
 gRNA
 GTEx
 GWAS
 Haematocrit
-Haemoglobin
 HB
 HC
 HCAR
@@ -158,7 +156,6 @@ interpretable
 Intervertebral
 Intra
 intraocular
-ischaemic
 Jurkat
 KEGG
 keratometry
@@ -185,7 +182,7 @@ LPL
 LPSstimulated
 Luo
 lv
-lvs
+LVs
 Lymphadenitis
 malabsorption
 Marylyn
@@ -218,7 +215,7 @@ Nephrology
 neurodegenerative
 neurodevelopmental
 neuropsychiatric
-neutrophil
+Neutrophil
 Neutrophill
 neutrophils
 NFAT
@@ -237,7 +234,7 @@ PCYT
 pectoris
 perturbagens
 Phecode
-PhenomeXcan
+phenomexcan
 PhenoPLIER
 phenotypes
 PhiX
@@ -245,7 +242,7 @@ PID
 Pividori
 plasmids
 pleiotropy
-plier
+PLIER
 polyarthropathies
 polybrene
 polygenic
@@ -279,11 +276,11 @@ repurposing
 resampled
 restimulated
 resuspended
-reticulocyte
+Reticulocyte
 reticulocytes
 Ritchie
 RO
-ROC
+roc
 Salm
 SCAP
 SCD
@@ -327,7 +324,7 @@ transcriptomes
 transcriptomic
 transduced
 transgene
-Translational
+translational
 Treg
 TRIACYLGLYCEROL
 trypsinized

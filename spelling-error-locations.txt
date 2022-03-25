@@ -205,7 +205,6 @@ content/04.15.drug_disease_prediction.md:35:LV
 content/04.15.drug_disease_prediction.md:36:interpretable
 content/04.15.drug_disease_prediction.md:36:LVs
 content/04.15.drug_disease_prediction.md:36:LVs
-content/04.15.drug_disease_prediction.md:38:ischaemic
 content/04.15.drug_disease_prediction.md:48:mononuclear
 content/04.15.drug_disease_prediction.md:49:HSV
 content/04.15.drug_disease_prediction.md:51:WNV
@@ -236,14 +235,8 @@ content/04.15.drug_disease_prediction.md:75:typhimurium
 content/04.15.drug_disease_prediction.md:76:LVs
 content/04.15.drug_disease_prediction.md:77:pathophysiological
 content/04.15.drug_disease_prediction.md:81:LV
-content/04.15.drug_disease_prediction.md:84:ischaemic
-content/04.15.drug_disease_prediction.md:86:Ischaemic
-content/04.15.drug_disease_prediction.md:89:Ischaemic
-content/04.15.drug_disease_prediction.md:92:Ischaemic
 content/04.15.drug_disease_prediction.md:94:Biobank
 content/04.15.drug_disease_prediction.md:94:GWAS
-content/04.15.drug_disease_prediction.md:94:ischaemic
-content/04.15.drug_disease_prediction.md:94:Ischaemic
 content/04.15.drug_disease_prediction.md:94:LVs
 content/04.15.drug_disease_prediction.md:97:interpretable
 content/04.15.drug_disease_prediction.md:97:LV
@@ -285,7 +278,6 @@ content/04.20.00.traits_clustering.md:61:HDL
 content/04.20.00.traits_clustering.md:61:LDL
 content/04.20.00.traits_clustering.md:61:lipoprotein
 content/04.20.00.traits_clustering.md:61:methylene
-content/04.20.00.traits_clustering.md:62:ischaemic
 content/04.20.00.traits_clustering.md:63:monocyte
 content/04.20.00.traits_clustering.md:65:basophil
 content/04.20.00.traits_clustering.md:65:granulocyte
@@ -610,7 +602,6 @@ content/07.00.methods.md:231:illumina
 content/07.00.methods.md:232:PhiX
 content/07.00.methods.md:237:phenoplier
 content/07.00.methods.md:237:phenoplier
-content/15.acknowledgements.md:1:Acknowledgements
 content/15.acknowledgements.md:3:BioRender
 content/50.00.supplementary_material.md:4:CRISPR
 content/50.00.supplementary_material.md:7:EVOS
@@ -694,7 +685,6 @@ content/50.00.supplementary_material.md:146:NMR
 content/50.00.supplementary_material.md:148:Intra
 content/50.00.supplementary_material.md:149:BMD
 content/50.00.supplementary_material.md:150:NMR
-content/50.00.supplementary_material.md:154:Ischaemic
 content/50.00.supplementary_material.md:156:PhenomeXcan
 content/50.00.supplementary_material.md:160:Phecode
 content/50.00.supplementary_material.md:172:AUC
@@ -731,11 +721,9 @@ content/50.00.supplementary_material.md:259:reticulocyte
 content/50.00.supplementary_material.md:262:Reticulocyte
 content/50.00.supplementary_material.md:263:Reticulocyte
 content/50.00.supplementary_material.md:264:Reticulocyte
-content/50.00.supplementary_material.md:265:haemoglobin
 content/50.00.supplementary_material.md:266:reticulocyte
 content/50.00.supplementary_material.md:267:reticulocyte
 content/50.00.supplementary_material.md:268:reticulocyte
-content/50.00.supplementary_material.md:271:Haemoglobin
 content/50.00.supplementary_material.md:272:Haematocrit
 content/50.00.supplementary_material.md:274:PhenomeXcan
 content/50.00.supplementary_material.md:278:Phecode
@@ -747,7 +735,6 @@ content/50.00.supplementary_material.md:308:reticulocyte
 content/50.00.supplementary_material.md:309:reticulocyte
 content/50.00.supplementary_material.md:310:sphered
 content/50.00.supplementary_material.md:312:Reticulocyte
-content/50.00.supplementary_material.md:313:haemoglobin
 content/50.00.supplementary_material.md:314:reticulocyte
 content/50.00.supplementary_material.md:315:Reticulocyte
 content/50.00.supplementary_material.md:316:Reticulocyte
@@ -821,7 +808,6 @@ content/50.00.supplementary_material.md:619:REACTOME
 content/50.00.supplementary_material.md:620:REACTOME
 content/50.00.supplementary_material.md:621:AMYLOIDS
 content/50.00.supplementary_material.md:621:REACTOME
-content/50.00.supplementary_material.md:629:haemoglobin
 content/50.00.supplementary_material.md:635:bendroflumethiazide
 content/50.00.supplementary_material.md:636:sphered
 content/50.00.supplementary_material.md:641:reticulocyte
@@ -841,7 +827,6 @@ content/50.00.supplementary_material.md:706:ECM
 content/50.00.supplementary_material.md:706:KEGG
 content/50.00.supplementary_material.md:707:REACTOME
 content/50.00.supplementary_material.md:708:REACTOME
-content/50.00.supplementary_material.md:726:Ischaemic
 content/50.00.supplementary_material.md:733:PhenomeXcan
 content/50.00.supplementary_material.md:737:Phecode
 content/50.00.supplementary_material.md:754:AUC
