@@ -6,7 +6,7 @@ keywords:
 - PhenomeXcan
 - TWAS
 lang: en-US
-date-meta: '2022-03-25'
+date-meta: '2022-09-04'
 author-meta:
 - Milton Pividori
 - Sumei Lu
@@ -35,8 +35,8 @@ header-includes: |-
   <meta name="citation_title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="og:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
-  <meta name="dc.date" content="2022-03-25" />
-  <meta name="citation_publication_date" content="2022-03-25" />
+  <meta name="dc.date" content="2022-09-04" />
+  <meta name="citation_publication_date" content="2022-09-04" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -105,9 +105,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/79fa542ecae27b6892e0f647809b6eaf92783346/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/79fa542ecae27b6892e0f647809b6eaf92783346/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/79fa542ecae27b6892e0f647809b6eaf92783346/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/690a491ac1a629c8b082329bd974d854786069d0/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/690a491ac1a629c8b082329bd974d854786069d0/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/690a491ac1a629c8b082329bd974d854786069d0/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -134,17 +134,18 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/79fa542ecae27b6892e0f647809b6eaf92783346/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/690a491ac1a629c8b082329bd974d854786069d0/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@79fa542](https://github.com/greenelab/phenoplier_manuscript/tree/79fa542ecae27b6892e0f647809b6eaf92783346)
-on March 25, 2022.
+from [greenelab/phenoplier_manuscript@690a491](https://github.com/greenelab/phenoplier_manuscript/tree/690a491ac1a629c8b082329bd974d854786069d0)
+on September 4, 2022.
 </em></small>
 
 ## Authors
 
 
 
-+ **Milton Pividori**<br>
++ **Milton Pividori**
+  <br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0002-3035-4403](https://orcid.org/0000-0002-3035-4403)
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
@@ -156,19 +157,22 @@ on March 25, 2022.
      · Funded by The Gordon and Betty Moore Foundation GBMF 4552; The National Human Genome Research Institute (R01 HG010067)
   </small>
 
-+ **Sumei Lu**<br><br>
++ **Sumei Lu**
+  <br><br>
   <small>
      Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
   </small>
 
-+ **Binglan Li**<br>
++ **Binglan Li**
+  <br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0002-0103-6107](https://orcid.org/0000-0002-0103-6107)<br>
   <small>
      Department of Biomedical Data Science, Stanford University, Stanford, CA, USA
   </small>
 
-+ **Chun Su**<br>
++ **Chun Su**
+  <br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0001-6388-8666](https://orcid.org/0000-0001-6388-8666)
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
@@ -177,29 +181,34 @@ on March 25, 2022.
      Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
   </small>
 
-+ **Matthew E. Johnson**<br><br>
++ **Matthew E. Johnson**
+  <br><br>
   <small>
      Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
   </small>
 
-+ **Wei-Qi Wei**<br><br>
++ **Wei-Qi Wei**
+  <br><br>
   <small>
      Vanderbilt University Medical Center
   </small>
 
-+ **Qiping Feng**<br>
++ **Qiping Feng**
+  <br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0002-6213-793X](https://orcid.org/0000-0002-6213-793X)<br>
   <small>
      Vanderbilt University Medical Center
   </small>
 
-+ **Bahram Namjou**<br><br>
++ **Bahram Namjou**
+  <br><br>
   <small>
      Cincinnati Children's Hospital Medical Center
   </small>
 
-+ **Krzysztof Kiryluk**<br>
++ **Krzysztof Kiryluk**
+  <br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0002-5047-6715](https://orcid.org/0000-0002-5047-6715)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
@@ -208,22 +217,26 @@ on March 25, 2022.
      Department of Medicine, Division of Nephrology, Vagelos College of Physicians & Surgeons, Columbia University, New York, New York
   </small>
 
-+ **Iftikhar Kullo**<br><br>
++ **Iftikhar Kullo**
+  <br><br>
   <small>
      Mayo Clinic
   </small>
 
-+ **Yuan Luo**<br><br>
++ **Yuan Luo**
+  <br><br>
   <small>
      Northwestern University
   </small>
 
-+ **Blair D. Sullivan**<br><br>
++ **Blair D. Sullivan**
+  <br><br>
   <small>
      School of Computing, University of Utah, Salt Lake City, UT, USA
   </small>
 
-+ **Benjamin F. Voight**<br>
++ **Benjamin F. Voight**
+  <br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0002-6205-9994](https://orcid.org/0000-0002-6205-9994)
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
@@ -234,7 +247,8 @@ on March 25, 2022.
      Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA; Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA; Institute for Translational Medicine and Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
   </small>
 
-+ **Carsten Skarke**<br>
++ **Carsten Skarke**
+  <br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0001-5145-3681](https://orcid.org/0000-0001-5145-3681)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
@@ -243,7 +257,8 @@ on March 25, 2022.
      Institute for Translational Medicine and Therapeutics, Department of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
   </small>
 
-+ **Marylyn D. Ritchie**<br>
++ **Marylyn D. Ritchie**
+  <br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0002-1208-1720](https://orcid.org/0000-0002-1208-1720)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
@@ -252,7 +267,8 @@ on March 25, 2022.
      Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
   </small>
 
-+ **Struan F.A. Grant**<br>
++ **Struan F.A. Grant**
+  <br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0003-2025-5302](https://orcid.org/0000-0003-2025-5302)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
@@ -261,7 +277,8 @@ on March 25, 2022.
      Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA; Department of Pediatrics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA; Division of Human Genetics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
   </small>
 
-+ **Casey S. Greene**<br>
++ **Casey S. Greene**
+  ^[✉](#correspondence)^<br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0001-8713-9213](https://orcid.org/0000-0001-8713-9213)
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
@@ -273,6 +290,14 @@ on March 25, 2022.
      · Funded by The Gordon and Betty Moore Foundation (GBMF 4552); The National Human Genome Research Institute (R01 HG010067); The National Cancer Institute (R01 CA237170)
   </small>
 
+
+::: {#correspondence}
+✉ — Correspondence possible via [GitHub Issues](https://github.com/greenelab/phenoplier_manuscript/issues)
+or email to
+Casey S. Greene \<casey.s.greene@cuanschutz.edu\>.
+
+
+:::
 
 
 ## Abstract {.page_break_before}

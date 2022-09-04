@@ -5630,7 +5630,6 @@
         "given": "Eric R",
         "family": "Gamazon"
       },
-      {},
       {
         "given": "Heather E",
         "family": "Wheeler"
@@ -5670,7 +5669,8 @@
       {
         "given": "Hae Kyung",
         "family": "Im"
-      }
+      },
+      {}
     ],
     "container-title": "Nature Genetics",
     "language": "en",
@@ -7247,7 +7247,6 @@
         "given": "Hilary K.",
         "family": "Finucane"
       },
-      {},
       {
         "given": "Yakir A.",
         "family": "Reshef"
@@ -7327,7 +7326,8 @@
       {
         "given": "Alkes L.",
         "family": "Price"
-      }
+      },
+      {}
     ],
     "container-title": "Nature Genetics",
     "language": "en",
@@ -7360,7 +7360,6 @@
         "given": "Alexander",
         "family": "Gusev"
       },
-      {},
       {
         "given": "Nicholas",
         "family": "Mancuso"
@@ -7428,7 +7427,8 @@
       {
         "given": "Alkes L.",
         "family": "Price"
-      }
+      },
+      {}
     ],
     "container-title": "Nature Genetics",
     "language": "en",
@@ -11489,8 +11489,8 @@
       "date-parts": [
         [
           "2022",
-          3,
-          25
+          9,
+          4
         ]
       ]
     },
@@ -11506,8 +11506,8 @@
       "date-parts": [
         [
           "2022",
-          3,
-          25
+          9,
+          4
         ]
       ]
     },
@@ -11523,8 +11523,8 @@
       "date-parts": [
         [
           "2022",
-          3,
-          25
+          9,
+          4
         ]
       ]
     },

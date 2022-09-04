@@ -49,7 +49,7 @@ Chun
 cis
 CKD
 claudication
-coeliac
+Coeliac
 colocalization
 colocalized
 confluency
@@ -90,7 +90,7 @@ EMEM
 eQTL
 eQTLs
 ERY
-erythematosus
+Erythematosus
 Erythematous
 erythropoiesis
 etiologically
@@ -107,7 +107,7 @@ fibroblasts
 func
 GBMF
 gDNA
-genomic
+Genomic
 Genotype
 GFP
 Gibco
@@ -117,7 +117,7 @@ GMM
 Golabi
 GPP
 GPR
-granulocyte
+Granulocyte
 granulosa
 GreeneScientist
 gRNA
@@ -181,8 +181,8 @@ loadings
 LPL
 LPSstimulated
 Luo
-lv
-LVs
+LV
+lvs
 Lymphadenitis
 malabsorption
 Marylyn
@@ -215,7 +215,7 @@ Nephrology
 neurodegenerative
 neurodevelopmental
 neuropsychiatric
-Neutrophil
+neutrophil
 Neutrophill
 neutrophils
 NFAT
