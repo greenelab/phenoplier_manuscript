@@ -6,7 +6,7 @@ keywords:
 - PhenomeXcan
 - TWAS
 lang: en-US
-date-meta: '2022-09-04'
+date-meta: '2022-09-06'
 author-meta:
 - Milton Pividori
 - Sumei Lu
@@ -35,8 +35,8 @@ header-includes: |-
   <meta name="citation_title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="og:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
-  <meta name="dc.date" content="2022-09-04" />
-  <meta name="citation_publication_date" content="2022-09-04" />
+  <meta name="dc.date" content="2022-09-06" />
+  <meta name="citation_publication_date" content="2022-09-06" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -96,7 +96,7 @@ header-includes: |-
   <meta name="twitter:creator" content="@STRUANGRANT" />
   <meta name="citation_author" content="Casey S. Greene" />
   <meta name="citation_author_institution" content="Center for Health AI, University of Colorado School of Medicine, Aurora, CO 80045, USA" />
-  <meta name="citation_author_institution" content="Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, CO 80045, USA" />
+  <meta name="citation_author_institution" content="Department of Biomedical Informatics, University of Colorado School of Medicine, Aurora, CO 80045, USA" />
   <meta name="citation_author_orcid" content="0000-0001-8713-9213" />
   <meta name="twitter:creator" content="@GreeneScientist" />
   <link rel="canonical" href="https://greenelab.github.io/phenoplier_manuscript/" />
@@ -105,9 +105,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/690a491ac1a629c8b082329bd974d854786069d0/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/690a491ac1a629c8b082329bd974d854786069d0/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/690a491ac1a629c8b082329bd974d854786069d0/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/0cdc71df0bf228efd46f1d50677837146c23d677/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/0cdc71df0bf228efd46f1d50677837146c23d677/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/0cdc71df0bf228efd46f1d50677837146c23d677/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -134,10 +134,10 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/690a491ac1a629c8b082329bd974d854786069d0/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/0cdc71df0bf228efd46f1d50677837146c23d677/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@690a491](https://github.com/greenelab/phenoplier_manuscript/tree/690a491ac1a629c8b082329bd974d854786069d0)
-on September 4, 2022.
+from [greenelab/phenoplier_manuscript@0cdc71d](https://github.com/greenelab/phenoplier_manuscript/tree/0cdc71df0bf228efd46f1d50677837146c23d677)
+on September 6, 2022.
 </em></small>
 
 ## Authors
@@ -154,7 +154,7 @@ on September 4, 2022.
     [miltondp](https://twitter.com/miltondp)<br>
   <small>
      Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
-     · Funded by The Gordon and Betty Moore Foundation GBMF 4552; The National Human Genome Research Institute (R01 HG010067)
+     · Funded by The Gordon and Betty Moore Foundation GBMF 4552; The National Human Genome Research Institute (R01 HG010067); The National Human Genome Research Institute (K99HG011898)
   </small>
 
 + **Sumei Lu**
@@ -286,7 +286,7 @@ on September 4, 2022.
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
     [GreeneScientist](https://twitter.com/GreeneScientist)<br>
   <small>
-     Center for Health AI, University of Colorado School of Medicine, Aurora, CO 80045, USA; Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, CO 80045, USA
+     Center for Health AI, University of Colorado School of Medicine, Aurora, CO 80045, USA; Department of Biomedical Informatics, University of Colorado School of Medicine, Aurora, CO 80045, USA
      · Funded by The Gordon and Betty Moore Foundation (GBMF 4552); The National Human Genome Research Institute (R01 HG010067); The National Cancer Institute (R01 CA237170)
   </small>
 

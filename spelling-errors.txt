@@ -22,7 +22,7 @@ atherogenesis
 AUC
 Bahram
 barcoded
-Basophil
+basophil
 Behmel
 bendroflumethiazide
 Benjamini
@@ -49,7 +49,7 @@ Chun
 cis
 CKD
 claudication
-Coeliac
+coeliac
 colocalization
 colocalized
 confluency
@@ -90,7 +90,7 @@ EMEM
 eQTL
 eQTLs
 ERY
-Erythematosus
+ERYTHEMATOSUS
 Erythematous
 erythropoiesis
 etiologically
@@ -107,7 +107,7 @@ fibroblasts
 func
 GBMF
 gDNA
-Genomic
+genomic
 Genotype
 GFP
 Gibco
@@ -147,7 +147,7 @@ ICD
 IDT
 IFNa
 Iftikhar
-Illumina
+illumina
 initializations
 INSIG
 INTEGRIN
@@ -182,7 +182,7 @@ LPL
 LPSstimulated
 Luo
 LV
-lvs
+LVs
 Lymphadenitis
 malabsorption
 Marylyn
@@ -215,11 +215,11 @@ Nephrology
 neurodegenerative
 neurodevelopmental
 neuropsychiatric
-neutrophil
+Neutrophil
 Neutrophill
 neutrophils
 NFAT
-Nicotinic
+nicotinic
 NMR
 oC
 omnigenic
@@ -276,11 +276,11 @@ repurposing
 resampled
 restimulated
 resuspended
-Reticulocyte
+reticulocyte
 reticulocytes
 Ritchie
 RO
-roc
+ROC
 Salm
 SCAP
 SCD
@@ -324,7 +324,7 @@ transcriptomes
 transcriptomic
 transduced
 transgene
-translational
+Translational
 Treg
 TRIACYLGLYCEROL
 trypsinized
