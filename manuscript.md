@@ -105,9 +105,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/f8966f1767df00a53d3d01c66081ef4be00ea6cc/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/f8966f1767df00a53d3d01c66081ef4be00ea6cc/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/f8966f1767df00a53d3d01c66081ef4be00ea6cc/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/f467eed0356d9715c502c530b136646a78e6bed7/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/f467eed0356d9715c502c530b136646a78e6bed7/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/f467eed0356d9715c502c530b136646a78e6bed7/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -134,9 +134,9 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/f8966f1767df00a53d3d01c66081ef4be00ea6cc/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/f467eed0356d9715c502c530b136646a78e6bed7/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@f8966f1](https://github.com/greenelab/phenoplier_manuscript/tree/f8966f1767df00a53d3d01c66081ef4be00ea6cc)
+from [greenelab/phenoplier_manuscript@f467eed](https://github.com/greenelab/phenoplier_manuscript/tree/f467eed0356d9715c502c530b136646a78e6bed7)
 on September 8, 2022.
 </em></small>
 
@@ -899,11 +899,11 @@ We used a competitive test to predict gene-trait associations from TWAS using ge
 Thus, we fit the model
 
 $$
-\mathbf{p}=\beta_{0} + \mathbf{s} \beta_{s} + \sum_{i} \mathbf{x}_{i} \beta_{i} + \bm{\epsilon},
+\mathbf{m}=\beta_{0} + \mathbf{s} \beta_{s} + \sum_{i} \mathbf{x}_{i} \beta_{i} + \bm{\epsilon},
 $$
 
-where $\mathbf{p}$ is a vector of S-MultiXcan gene $p$-values for a trait (with a $-log_{10}$ transformation);
-$\mathbf{s}$ is a binary indicator vector with $s_{\ell}=1$ for the top 1% of genes in LV $\ell$ (approximately 67 genes for each LV) and zero otherwise;
+where $\mathbf{m}$ is a vector of S-MultiXcan gene $p$-values for a trait (with a $-log_{10}$ transformation);
+$\mathbf{s}$ is a binary indicator vector with $s_{\ell}=1$ for the top 1% of genes with the largest loadings for LV $\ell$ (from $\mathbf{Z}_{\ell}$) and zero otherwise;
 $\mathbf{x}_{i}$ is a gene property used as a covariate;
 $\beta$ are effect sizes (with $\beta_{0}$ as the intercept);
 and $\bm{\epsilon} \sim \mathrm{MVN}(0, \sigma^{2} \mathbf{R})$ is a vector of error terms with a multivariate normal distribution (MVN) where $\mathbf{R}$ is the matrix of gene correlations.

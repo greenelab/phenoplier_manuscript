@@ -509,7 +509,7 @@ content/07.00.methods.md:135:LV
 content/07.00.methods.md:138:LV
 content/07.00.methods.md:138:LV
 content/07.00.methods.md:145:MultiXcan
-content/07.00.methods.md:146:LV
+content/07.00.methods.md:146:loadings
 content/07.00.methods.md:146:LV
 content/07.00.methods.md:147:covariate
 content/07.00.methods.md:149:MVN
