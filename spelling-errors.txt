@@ -20,6 +20,7 @@ astrocytes
 ATCC
 atherogenesis
 AUC
+autocorrelation
 Bahram
 barcoded
 basophil
@@ -50,10 +51,15 @@ cis
 CKD
 claudication
 coeliac
+collinearity
 colocalization
 colocalized
+compendia
 confluency
-crispr
+covariances
+covariate
+covariates
+CRISPR
 crit
 Ctrl
 CXCR
@@ -90,7 +96,7 @@ EMEM
 eQTL
 eQTLs
 ERY
-ERYTHEMATOSUS
+erythematosus
 Erythematous
 erythropoiesis
 etiologically
@@ -147,7 +153,7 @@ ICD
 IDT
 IFNa
 Iftikhar
-illumina
+Illumina
 initializations
 INSIG
 INTEGRIN
@@ -175,7 +181,7 @@ LipidSpot
 LipidSpotTM
 lipolysis
 lipoprotein
-lipoproteins
+LIPOPROTEINS
 lisinopril
 loadings
 LPL
@@ -206,6 +212,7 @@ monocytes
 mononuclear
 MSigDB
 MultiXcan
+MVN
 myeloid
 myeloma
 myelopathy
@@ -215,11 +222,11 @@ Nephrology
 neurodegenerative
 neurodevelopmental
 neuropsychiatric
-Neutrophil
+neutrophil
 Neutrophill
 neutrophils
 NFAT
-nicotinic
+Nicotinic
 NMR
 oC
 omnigenic
@@ -234,7 +241,8 @@ PCYT
 pectoris
 perturbagens
 Phecode
-phenomexcan
+phecodes
+PhenomeXcan
 PhenoPLIER
 phenotypes
 PhiX
@@ -255,6 +263,7 @@ preprocessing
 probit
 proj
 PROPANOATE
+proportial
 PRv
 pseudotuberculosis
 PTEN
@@ -293,13 +302,18 @@ SIG
 simvastatin
 Skarke
 SLE
+smultixcan
+SNP
 SOX
 sphered
 spirometry
 SPLICEOSOME
 Spondylosis
+spredixcan
 SPRIselect
 SRPR
+SSM
+SSMs
 stellate
 Stouffer’s
 Struan
@@ -324,7 +338,7 @@ transcriptomes
 transcriptomic
 transduced
 transgene
-Translational
+translational
 Treg
 TRIACYLGLYCEROL
 trypsinized
@@ -334,6 +348,7 @@ ug
 UMAP
 unadjusted
 uninodular
+univariate
 Vagelos
 Voight
 WNV

@@ -6,7 +6,7 @@ keywords:
 - PhenomeXcan
 - TWAS
 lang: en-US
-date-meta: '2022-09-06'
+date-meta: '2022-09-08'
 author-meta:
 - Milton Pividori
 - Sumei Lu
@@ -35,8 +35,8 @@ header-includes: |-
   <meta name="citation_title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="og:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
-  <meta name="dc.date" content="2022-09-06" />
-  <meta name="citation_publication_date" content="2022-09-06" />
+  <meta name="dc.date" content="2022-09-08" />
+  <meta name="citation_publication_date" content="2022-09-08" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -105,9 +105,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/0cdc71df0bf228efd46f1d50677837146c23d677/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/0cdc71df0bf228efd46f1d50677837146c23d677/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/0cdc71df0bf228efd46f1d50677837146c23d677/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/c279c8c56c736c8c2d3ea90eef883894324fce4a/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/c279c8c56c736c8c2d3ea90eef883894324fce4a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/c279c8c56c736c8c2d3ea90eef883894324fce4a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -134,10 +134,10 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/0cdc71df0bf228efd46f1d50677837146c23d677/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/c279c8c56c736c8c2d3ea90eef883894324fce4a/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@0cdc71d](https://github.com/greenelab/phenoplier_manuscript/tree/0cdc71df0bf228efd46f1d50677837146c23d677)
-on September 6, 2022.
+from [greenelab/phenoplier_manuscript@c279c8c](https://github.com/greenelab/phenoplier_manuscript/tree/c279c8c56c736c8c2d3ea90eef883894324fce4a)
+on September 8, 2022.
 </em></small>
 
 ## Authors
@@ -758,32 +758,112 @@ Rapid improvements in both areas set the stage for latent variable projections t
 By providing a new perspective for a mechanistic understanding of statistical associations from TWAS, our method can generate testable hypotheses for the post-GWAS functional characterization of complex diseases, which will likely be an area of great importance in the coming years.
 
 
-## Methods
+## Methods and materials
 
-### PhenomeXcan: gene-based associations on 4,091 traits
-
-We used TWAS results from PhenomeXcan [@doi:10.1126/sciadv.aba2083] on 4,091 traits for 22,515 genes.
-PhenomeXcan was built using publicly available GWAS summary statistics to compute
-1) gene-based associations with the PrediXcan family of methods [@doi:10.1038/ng.3367; @doi:10.1038/s41467-018-03621-1; @doi:10.1371/journal.pgen.1007889], and
-2) a posterior probability of colocalization between GWAS loci and *cis*-eQTL with fastENLOC [@doi:10.1126/sciadv.aba2083; @doi:10.1101/2020.07.01.182097].
-The PrediXcan family of methods first builds prediction models using data from the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] for gene expression imputation and then correlate this predicted expression with the phenotype of interest.
-This family is comprised of
-S-PrediXcan [@doi:10.1038/s41467-018-03621-1] (which computes a gene-tissue-trait association using GWAS as input)
-and S-MultiXcan [@doi:10.1371/journal.pgen.1007889] (which computes a gene-trait association by aggregating evidence of associations across all tissues).
+PhenoPLIER is a framework that combines different computational approaches to integrate gene-trait associations and drug-induced transcriptional responses with groups of functionally-related genes (referred to as gene modules or latent variables/LVs).
+Gene-trait associations are computed using the PrediXcan family of methods, whereas latent variables are inferred by the MultiPLIER models applied on large gene expression compendia.
+PhenoPLIER provides
+1) a regression model to compute an LV-trait association,
+2) a consensus clustering approach applied to the latent space to learn shared and distinct transcriptomic properties between traits, and
+3) an interpretable, LV-based drug repurposing framework.
+We provide the details of these methods below.
 
 
-We refer to the standardized effect sizes ($z$-scores) of S-PrediXcan across $n$ traits and $m$ genes in tissue $t$ as $\mathbf{M}^{t} \in \mathbb{R}^{n \times m}$.
-For S-MultiXcan, we do not have the direction of effect, and we used the $p$-values converted to $z$-scores $\mathbf{M}=\Phi^{-1}(1 - p/2)$, where $\Phi^{-1}$ is the probit function.
+### The PrediXcan family of methods for gene-based associations
+
+We used Summary-PrediXcan (S-PrediXcan) [@doi:10.1038/s41467-018-03621-1] and Summary-MultiXcan (S-MultiXcan) [@doi:10.1371/journal.pgen.1007889] as the gene-based statistical approaches, which belong to the PrediXcan family of methods [@doi:10.1038/ng.3367].
+We broadly refer to these approaches as TWAS (transcription-wide association studies).
+S-PrediXcan, the summary-based version of PrediXcan, computes the univariate association between a trait and a gene's predicted expression in a single tissue.
+In contrast, S-MultiXcan, the summary-based version of MultiXcan, computes the joint association between a gene's predicted expression in all tissues and a trait.
+S-PrediXcan and S-MultiXcan only need GWAS summary statistics instead of individual-level genotype and phenotype data.
+
+Here we briefly provide the details about these TWAS methods that are necessary to explain our regression framework later (see the referenced articles for more information).
+In the following, we refer to $\mathbf{y}$ as a vector of traits for $n$ individuals that is centered for convenience (so that no intercept is necessary);
+$\mathbf{\tilde{t}}_l = \sum_{a \in \mathrm{model}_l} w_{a}^{l} X_{a}$ is the gene's predicted expression for all individuals in tissue $l$, $X_a$ is the genotype of SNP $a$ and $w_{a}$ its weight in the tissue prediction model $l$;
+and $\mathbf{t}_l$ is the standardized version of $\mathbf{\tilde{t}}_l$ with mean equal to zero and standard deviation equal to one.
+
+S-PrediXcan [@doi:10.1038/s41467-018-03621-1] is the summary version of PrediXcan [@doi:10.1038/ng.3367].
+PrediXcan models the trait as a linear function of the gene's expression on a single tissue using the univariate model
+
+$$
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+$$ {#eq:predixcan}
+
+where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$.
+The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$.
+<!--  -->
+PrediXcan needs individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
+
+$$
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+$$ {#eq:spredixcan}
+
+where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS.
+In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel.
+<!--  -->
+Since S-PrediXcan provides tissue-specific direction of effects (for instance, whether a higher or lower predicted expression of a gene confers more or less disease risk), we used the $z$-scores in our drug repurposing approach (described below).
+
+S-MultiXcan [@doi:10.1371/journal.pgen.1007889], on the other hand, is the summary version of MultiXcan.
+MultiXcan is more powerful than PrediXcan in detecting gene-trait associations, although it does not provide the direction of effects.
+Its main output is the $p$-value (obtained with an F-test) of the multiple tissue model
+
+$$
+\begin{split}
+\mathbf{y} & = \sum_{l=1}^{p} \mathbf{t}_l g_l + \mathbf{e} \\
+ & = \mathbf{T} \mathbf{g} + \mathbf{e},
+\end{split}
+$$ {#eq:multixcan}
+
+where $\mathbf{T}$ is a matrix with $p$ columns $\mathbf{t}_l$,
+$\hat{g}_l$ is the estimated effect size for the predicted gene expression in tissue $l$ (and thus $\mathbf{\hat{g}}$ is a vector with $p$ estimated effect sizes $\hat{g}_l$),
+and $\mathbf{e}$ are the error terms with variance $\sigma_{e}^{2}$.
+Given the high correlation between predicted expression values for a gene across different tissues, MultiXcan uses the principal components (PCs) of $\mathbf{T}$ to avoid collinearity issues.
+<!--  -->
+S-MultiXcan derives the joint regression estimates (effect sizes and their variances) in Equation (@eq:multixcan) using the marginal estimates from S-PrediXcan in Equation (@eq:spredixcan).
+Under the null hypothesis of no association, $\mathbf{\hat{g}}^{\top} \frac{\mathbf{T}^{\top}\mathbf{T}}{\sigma_{e}^{2}} \mathbf{\hat{g}} \sim \chi_{p}^{2}$, and therefore the significance of the association in S-MultiXcan is estimated with
+
+$$
+\begin{split}
+\frac{\mathbf{\hat{g}}^{\top} (\mathbf{T}^{\top}\mathbf{T}) \mathbf{\hat{g}}}{\sigma_{e}^{2}} & \approx \bm{\hat{\gamma}}^{\top} \frac{\sqrt{n-1}}{\sigma_{\epsilon}} \left(\frac{\mathbf{T}^{\top} \mathbf{T}}{n-1}\right)^{-1} \frac{\sqrt{n-1}}{\sigma_{\epsilon}} \bm{\hat{\gamma}} \\
+ & = \mathbf{\hat{z}}^{\top} Cor(\mathbf{T})^{-1} \mathbf{\hat{z}},
+\end{split}
+$$ {#eq:smultixcan}
+
+where $\mathbf{\hat{z}}$ is a vector with $p$ $z$-scores (Equation (@eq:spredixcan)) for each tissue available for the gene,
+and $Cor(\mathbf{T})$ is the autocorrelation matrix of $\mathbf{T}$.
+Since $\mathbf{T}^{\top}\mathbf{T}$ is singular for many genes, S-MultiXcan computes the pseudo-inverse $Cor(\mathbf{T})^{+}$ using the $k$ top PCs, and thus $\mathbf{\hat{z}}^{\top} Cor(\mathbf{T})^{+} \mathbf{\hat{z}} \sim \chi_k^2$.
+<!--  -->
+To arrive at this expression, S-MultiXcan uses the conservative approximation $\sigma_{e}^{2} \approx \sigma_{\epsilon}^{2}$, that is, the variance of the error terms in the joint regression is approximately equal to the residual variance of the marginal regressions.
+Another important point is that $Cor(\mathbf{T})$ is estimated using a global genotype covariance matrix, whereas marginal $\hat{z}_l$ in Equation (@eq:spredixcan) are approximated using tissue-specific genotype covariances.
+Although S-MultiXcan yields highly concordant estimates compared with MultiXcan, results are not perfectly correlated across genes [@doi:10.1371/journal.pgen.1007889].
+As we explain later, these differences are important for our LV-based regression model when computing the gene-gene correlation matrix.
+We used S-MultiXcan results for our LV-based regression model and our cluster analyses of traits.
+
+
+### TWAS resources
+
+We used two large TWAS resources from different cohorts for discovery and replication.
+<!--  -->
+PhenomeXcan [@doi:10.1126/sciadv.aba2083], our discovery cohort, provides results on 4,091 traits across different categories (`add phenotyp_info file with categories like in emerge`{.red}).
+PhenomeXcan was built using publicly available GWAS summary statistics to compute gene-based associations with the PrediXcan family of methods described before.
+<!--  -->
+We refer to the matrix of $z$-scores from S-PrediXcan (Equation (@eq:spredixcan)) across $q$ traits and $m$ genes in tissue $t$ as $\mathbf{M}^{t} \in \mathbb{R}^{q \times m}$.
+As explained later, matrices $\mathbf{M}^{t}$ were used in our LV-based drug repurposing framework since they provide direction of effects.
+<!--  -->
+The S-MultiXcan results (22,515 gene associations across 4,091 traits) were used in our LV-based regression framework and our cluster analyses of traits.
+For the cluster analyses, we used the $p$-values converted to $z$-scores: $\mathbf{M}=\Phi^{-1}(1 - p/2)$, where $\Phi^{-1}$ is the probit function.
 Higher $z$-scores correspond to stronger associations.
+
+Our discovery cohort was eMERGE [@doi:10.1038/gim.2013.72], where the same TWAS methods were run on 309 phecodes [@doi:10.1101/2021.10.21.21265225] across different categories (more information about traits are available in [@doi:10.1101/2021.10.21.21265225]).
+We used these results to replicate the associations found with our LV-based regression framework in PhenomeXcan.
 
 
 ### MultiPLIER and Pathway-level information extractor (PLIER)
 
 MultiPLIER [@doi:10.1016/j.cels.2019.04.003] extracts patterns of co-expressed genes from recount2 [@doi:10.1038/nbt.3838], a large gene expression dataset.
 The approach applies the pathway-level information extractor method (PLIER) [@doi:10.1038/s41592-019-0456-1], which performs unsupervised learning using prior knowledge (canonical pathways) to reduce technical noise.
-Via a matrix factorization approach, PLIER deconvolutes the gene expression data into a set of latent variables (LV), where each represents a gene module.
-This reduced the data dimensionality into 987 latent variables or gene modules.
-
+PLIER uses a matrix factorization approach that deconvolutes gene expression data into a set of latent variables (LV), where each LV represents a gene module.
+The MultiPLIER models reduced the dimensionality in recount2 to 987 LVs.
 
 Given a gene expression dataset $\mathbf{Y}^{m \times c}$ with $m$ genes and $c$ experimental conditions and a prior knowledge matrix $\mathbf{C} \in \{0,1\}^{m \times p}$ for $p$ MSigDB pathways [@doi:10.1016/j.cels.2015.12.004] (so that $\mathbf{C}_{ij} = 1$ if gene $i$ belongs to pathway $j$), PLIER finds $\mathbf{U}$, $\mathbf{Z}$, and $\mathbf{B}$ minimizing
 
@@ -799,75 +879,132 @@ and $\lambda_i$ are different regularization parameters used in the training ste
 <!--  -->
 $\mathbf{Z}$ is a low-dimensional representation of the gene space where each LV aligns as much as possible to prior knowledge, and it might represent either a known or novel gene module (i.e., a meaningful biological pattern) or noise.
 
-
-We projected $\mathbf{M}$ (either from S-PrediXcan across each tissue, or S-MultiXcan) into the low-dimensional gene module space learned by MultiPLIER using
+For our drug repurposing and cluster analyses, we used this model to project gene-trait (from TWAS) and gene-drug associations (from LINCS L1000) into this low-dimensional gene module space.
+<!--  -->
+For instance, TWAS associations $\mathbf{M}$ (either from S-PrediXcan or S-MultiXcan) were projected using
 
 $$
 \hat{\mathbf{M}} = (\mathbf{Z}^{\top} \mathbf{Z} + \lambda_{2} \mathbf{I})^{-1} \mathbf{Z}^{\top} \mathbf{M},
 $$ {#eq:proj}
 
-where in $\hat{\mathbf{M}}^{l \times n}$ all traits in PhenomeXcan are now described by gene modules.
+where $\hat{\mathbf{M}}^{l \times q}$ is a matrix where traits are represented by gene modules instead of single genes.
+<!--  -->
+As explained later, we used the same approach to project drug-induced transcriptional profiles in LINCS L1000 to obtain a representation of drugs using gene modules.
 
 
-### LV-trait associations via gene-property analysis
+### Regression model for LV-trait associations
 
-To compute an association between a gene module and a trait, we used an approach similar to the gene-property analysis in MAGMA [@doi:10.1371/journal.pcbi.1004219],
-which is essentially a competitive test using gene weights from $\mathbf{Z}$ to predict gene $z$-scores from $\mathbf{M}$.
-Thus, the regression model uses genes as data points by fitting $\mathbf{m}=\beta_0 + \mathbf{z} \beta_z + \epsilon$, where $\epsilon \sim \mathrm{MVN}(0, \hat{\Sigma})$, $\mathbf{m}$ are gene $p$-values (for a trait) from S-MultiXcan that we transformed to $z$-scores as mentioned before.
-Since we are only interested in whether genes with a stronger membership to a module (highest weights) are more associated with the phenotype, we performed a one-sided test on the coefficient $\beta_z$ with the null hypothesis of $\beta_z = 0$ against the alternative $\beta_z>0$.
-Since the error terms $\epsilon$ could be correlated due to correlation between predicted expression, we used a generalized least squares approach instead of standard linear regression.
-To calculate $\hat\Sigma$, we first estimated the correlation of predicted expression for each gene pair $(\mathbf{t}_i, \mathbf{t}_j)$ in tissue $t$ using equations from [@doi:10.1371/journal.pgen.1007889; @doi:10.1038/s41467-018-03621-1]:
+We adapted the gene-set analysis framework from MAGMA [@doi:10.1371/journal.pcbi.1004219] to TWAS.
+We used a competitive test to predict gene-trait associations from TWAS using gene weights from an LV, testing whether top-weighted genes for an LV are more strongly associated with the phenotype than other genes with relatively small or zero weights.
+Thus, we fit the model
+
+$$
+\mathbf{p}=\beta_{0} + \mathbf{s} \beta_{s} + \sum_{i} \mathbf{x}_{i} \beta_{i} + \bm{\epsilon},
+$$
+
+where $\mathbf{p}$ is a vector of S-MultiXcan gene $p$-values for a trait (with a $-log_{10}$ transformation);
+$\mathbf{s}$ is a binary indicator vector with $s_{\ell}=1$ for the top 1% of genes in LV $\ell$ (approximately 67 genes for each LV) and zero otherwise;
+$\mathbf{x}_{i}$ is a gene property used as a covariate;
+$\beta$ are effect sizes (with $\beta_{0}$ as the intercept);
+and $\bm{\epsilon} \sim \mathrm{MVN}(0, \sigma^{2} \mathbf{R})$ is a vector of error terms with a multivariate normal distribution (MVN) where $\mathbf{R}$ is the matrix of gene correlations.
+
+The model tests the null hypothesis $\beta_{s} = 0$ against the one-sided hypothesis $\beta_{s} > 0$.
+Therefore, $\beta_{s}$ reflects the difference in trait associations between genes that are part of LV $\ell$ and genes outside of it.
+Following the MAGMA framework, we used two gene properties as covariates:
+1) *gene size*, defined as the number of PCs retained in S-MultiXcan,
+and 2) *gene density*, defined as the ratio of the number of PCs to the number of tissues available.
+
+Since the error terms $\bm{\epsilon}$ could be correlated, we cannot assume they have independent normal distributions as in a standard linear regression model.
+In the PrediXcan family of methods, the predicted expression of a pair of genes could be correlated if they share eQTLs or if these are in LD [@doi:10.1038/s41588-019-0385-z].
+Therefore, we used a generalized least squares approach to account for these correlations.
+The gene-gene correlation matrix $\mathbf{R}$ was approximated by computing the correlations between the model sum of squares (SSM) for each pair of genes under the null hypothesis of no association.
+These correlations are derived from the individual-level MultiXcan model (Equation (@eq:multixcan)), where the predicted expression matrix $\mathbf{T}_{i} \in \mathbb{R}^{n \times p_i}$ of a gene $i$ across $p_i$ tissues is projected into its top $k_i$ PCs, resulting in matrix $\mathbf{P}_{i} \in \mathbb{R}^{n \times k_i}$.
+From the MAGMA framework, we know that the SSM for each gene is proportial to $\mathbf{y}^{\top} \mathbf{P}_{i} \mathbf{P}_{i}^{\top} \mathbf{y}$.
+Under the null hypothesis of no association, the covariances between the SSM of genes $i$ and $j$ is therefore given by $2 \times \mathrm{Trace}(\mathbf{P}_{i}^{\top} \mathbf{P}_{j} \mathbf{P}_{j}^{\top} \mathbf{P}_{i})$.
+The standard deviations of each SSM are given by $\sqrt{2 \times k_{i}} \times (n - 1)$.
+Therefore, the correlation between the SSMs for genes $i$ and $j$ can be written as follows:
 
 $$
 \begin{split}
-\hat{\Sigma}_{ij}^{t} & = Cor(\mathbf{t}_i, \mathbf{t}_j) \\
- & = \frac{ Cov(\mathbf{t}_i, \mathbf{t}_j) } { \sqrt{\widehat{\mathrm{var}}(\mathbf{t}_i) \widehat{\mathrm{var}}(\mathbf{t}_j)} } \\
- & = \frac{ Cov(\sum_{a \in \mathrm{model}_i} w_a^i X_a, \sum_{b \in \mathrm{model}_j} w_b^j X_b) }  {\sqrt{\widehat{\mathrm{var}}(\mathbf{t}_i) \widehat{\mathrm{var}}(\mathbf{t}_j)} } \\
- & = \frac{ \sum_{a \in \mathrm{model}_i \\ b \in \mathrm{model}_j} w_a^i w_b^j Cov(X_a, X_b)} {\sqrt{\widehat{\mathrm{var}}(\mathbf{t}_i) \widehat{\mathrm{var}}(\mathbf{t}_j)} } \\
- & = \frac{ \sum_{a \in \mathrm{model}_i \\ b \in \mathrm{model}_j} w_a^i w_b^j \Gamma_{ab}} {\sqrt{\widehat{\mathrm{var}}(\mathbf{t}_i) \widehat{\mathrm{var}}(\mathbf{t}_j)} },
+\mathbf{R}_{ij} & = \frac{2 \times \mathrm{Tr}(\mathbf{P}_{i}^{\top} \mathbf{P}_{j} \mathbf{P}_{j}^{\top} \mathbf{P}_{i})}{\sqrt{2 \times k_{i}} \times \sqrt{2 \times k_{j}} \times (n - 1)^2} \\
+& = \frac{2 \times \mathrm{Tr}(Cor(\mathbf{P}_{i}, \mathbf{P}_{j}) \times Cor(\mathbf{P}_{j}, \mathbf{P}_{i}))}{\sqrt{2 \times k_{i}} \times \sqrt{2 \times k_{j}}},
 \end{split}
-$$ {#eq:gene_corr}
+$$
 
-where $\Gamma = \widehat{\mathrm{var}}(\mathbf{X}) = (\mathbf{X} - \mathbf{\bar{X}})^{\top} (\mathbf{X} - \mathbf{\bar{X}}) / (m-1)$ is the genotype covariance matrix using 1000 Genomes Project data [@doi:10.1038/nature15393; @doi:10.5281/zenodo.3657902].
-The variances for predicted gene expression of gene $i$ is estimated as:
+where columns $\mathbf{P}$ are standardized,
+$\mathrm{Tr}$ is the trace of a matrix,
+and the cross-correlation matrix between PCs $Cor(\mathbf{P}_{i}, \mathbf{P}_{j}) \in \mathbb{R}^{k_i \times k_j}$ is given by
 
 $$
 \begin{split}
-\widehat{\mathrm{var}}(\mathbf{t}_i) & = (\mathbf{W}^i)^\top \Gamma^i \mathbf{W}^i \\
- & = \sum_{a \in \mathrm{model}_i \\ b \in \mathrm{model}_i} w_a^i w_b^i \Gamma_{ab}^i.
+Cor(\mathbf{P}_{i}, \mathbf{P}_{j}) & = Cor(\mathbf{T}_{i} \mathbf{V}_{i}^{\top} \mathrm{diag}(\lambda_i)^{-1/2}, \mathbf{T}_{j} \mathbf{V}_{j}^{\top} \mathrm{diag}(\lambda_j)^{-1/2}) \\
+& = \mathrm{diag}(\lambda_i)^{-1/2} \mathbf{V}_{i} (\frac{\mathbf{T}_{i}^{\top} \mathbf{T}_{j}}{n-1}) \mathbf{V}_{j}^{\top} \mathrm{diag}(\lambda_j)^{-1/2},
 \end{split}
-$$ {#eq:gene_var}
+$$
 
-Finally, $\hat{\Sigma} = \sum_t \hat{\Sigma}^t / |t|$ where $|t|$=49 is the number of tissues.
+where $\frac{\mathbf{T}_{i}^{\top} \mathbf{T}_{j}}{n-1} \in \mathbb{R}^{p_i \times p_j}$ is the cross-correlation matrix between the predicted expression levels of genes $i$ and $j$,
+and columns of $\mathbf{V}_{i}$ and scalars $\lambda_i$ are the eigenvectors and eigenvalues of $\mathbf{T}_{i}$, respectively.
+S-MultiXcan keeps only the top eigenvectors using a condition number threshold of $\frac{\max(\lambda_i)}{\lambda_i} < 30$.
+To estimate the correlation of predicted expression levels for genes $i$ in tissue $k$ and gene $j$ in tissue $l$, $(\mathbf{t}_k^i, \mathbf{t}_l^j)$ ($\mathbf{t}_k^i$ is the $k$th column of $\mathbf{T}_{i}$), we used [@doi:10.1371/journal.pgen.1007889]
 
-Because of computational reasons, we did not run the gene-property analysis on all possible LV-trait pairs.
-In PhenomeXcan, we reduced the number of LV-trait pairs by considering only the top discriminative LVs for each cluster (see "Cluster interpretation" section in Methods) and the traits in that cluster, leading to 5,782 LV-trait tests.
-For replication in eMERGE, we selected all the 25 LVs analyzed in the main text and ran the gene-property analysis against all 309 traits in this cohort, leading to 7,725 tests.
+$$
+\begin{split}
+\frac{(\mathbf{T}_{i}^{\top} \mathbf{T}_{j})_{kl}}{n-1} & = Cor(\mathbf{t}_k^i, \mathbf{t}_l^j) \\
+ & = \frac{ Cov(\mathbf{t}_k, \mathbf{t}_l) } { \sqrt{\widehat{\mathrm{var}}(\mathbf{t}_k) \widehat{\mathrm{var}}(\mathbf{t}_l)} } \\
+ & = \frac{ Cov(\sum_{a \in \mathrm{model}_k} w_a^k X_a, \sum_{b \in \mathrm{model}_l} w_b^l X_b) }  {\sqrt{\widehat{\mathrm{var}}(\mathbf{t}_k) \widehat{\mathrm{var}}(\mathbf{t}_l)} } \\
+ & = \frac{ \sum_{a \in \mathrm{model}_k \\ b \in \mathrm{model}_l} w_a^k w_b^l Cov(X_a, X_b)} {\sqrt{\widehat{\mathrm{var}}(\mathbf{t}_k) \widehat{\mathrm{var}}(\mathbf{t}_l)} } \\
+ & = \frac{ \sum_{a \in \mathrm{model}_k \\ b \in \mathrm{model}_l} w_a^k w_b^l \Gamma_{ab}} {\sqrt{\widehat{\mathrm{var}}(\mathbf{t}_k) \widehat{\mathrm{var}}(\mathbf{t}_l)} },
+\end{split}
+$$
+
+where $X_a$ is the genotype of SNP $a$,
+$w_a^k$ is the weight of SNP $a$ for gene expression prediction in the tissue model $k$,
+and $\Gamma = \widehat{\mathrm{var}}(\mathbf{X}) = (\mathbf{X} - \mathbf{\bar{X}})^{\top} (\mathbf{X} - \mathbf{\bar{X}}) / (n-1)$ is the genotype covariance matrix using GTEx v8 as the reference panel, which is the same used in all TWAS methods described here.
+The variance of the predicted expression values of gene $i$ in tissue $k$ is estimated as [@doi:10.1038/s41467-018-03621-1]:
+
+$$
+\begin{split}
+\widehat{\mathrm{var}}(\mathbf{t}_k^i) & = (\mathbf{W}^k)^\top \Gamma^k \mathbf{W}^k \\
+ & = \sum_{a \in \mathrm{model}_k \\ b \in \mathrm{model}_k} w_a^k w_b^k \Gamma_{ab}^k.
+\end{split}
+$$
+
+Note that, since we used the MultiXcan regression model (Equation (@eq:multixcan)), $\mathbf{R}$ is only an approximation of gene correlations in S-MultiXcan.
+As explained before, S-MultiXcan approximates the joint regression parameters in MultiXcan using the marginal regression estimates from S-PrediXcan in (@eq:spredixcan) with some simplifying assumptions and different genotype covariance matrices.
+This complicates the derivation of an S-MultiXcan-specific solution to compute $\mathbf{R}$.
+To account for this, we used a submatrix $\mathbf{R}_{\ell}$ corresponding to genes that are part of LV $\ell$ only (top 1% of genes) instead of the entire matrix $\mathbf{R}$.
+This simplification is conservative since correlations are accounted for top genes only.
+Our simulations (Supplementary Note `XXX`{.red}) show that the model is approximately well-calibrated and can correct for LVs with adjacent and highly correlated genes at the top (Supplementary Figure `YYY`{.red}).
+The model can also detect LVs associated with relevant traits (Figure @fig:lv246 and Table @tbl:sup:phenomexcan_assocs:lv246) that are replicated in a different cohort (Table @tbl:sup:emerge_assocs:lv246).
+
+We ran our regression model for all 987 LVs across the 4,091 traits in PhenomeXcan.
+For replication, we ran the model in the 309 phecodes in eMERGE.
 We adjusted the $p$-values using the Benjamini-Hochberg procedure.
 
 
-### Drug-disease prediction
+### LV-based drug repurposing approach
 
-For the drug-disease prediction, we used a method based on a drug repositioning framework previously used for psychiatry traits [@doi:10.1038/nn.4618] where gene-trait associations are anticorrelated with expression profiles for drugs.
-For the single-gene approach, we computed a drug-disease score by multiplying each S-PrediXcan set of results in tissue $t$, $\mathbf{M}^t$, with the transcriptional responses profiled in LINCS L1000 [@doi:10.1016/j.cell.2017.10.049], $\mathbf{L}^{c \times m}$ (for $c$ compounds): $\mathbf{D}^{t,k}=-1 \cdot \mathbf{M}^{t,k} \mathbf{L}^\top$, where $k$ refers to the number of most significant gene associations in $\mathbf{M}^t$ for each trait.
-As suggested in [@doi:10.1038/nn.4618], $k$ could be either all genes or the top 50, 100, 250, and 500; then we average score ranks across all $k$ and obtain $\mathbf{D}^t$.
+For the drug-disease prediction, we derived an LV-based method based on a drug repositioning framework previously used for psychiatry traits [@doi:10.1038/nn.4618], where individual/single genes associated with a trait are anticorrelated with expression profiles for drugs.
+We compared our LV-based method with this previously published, single-gene approach.
+For the single-gene method, we computed a drug-disease score by multiplying each S-PrediXcan set of results in tissue $t$, $\mathbf{M}^t$, with the transcriptional responses profiled in LINCS L1000 [@doi:10.1016/j.cell.2017.10.049], $\mathbf{L}^{c \times m}$ (for $c$ compounds): $\mathbf{D}^{t,k}=-1 \cdot \mathbf{M}^{t,k} \mathbf{L}^\top$, where $k$ refers to the number of most significant gene associations in $\mathbf{M}^t$ for each trait.
+As suggested in [@doi:10.1038/nn.4618], $k$ could be either all genes or the top 50, 100, 250, and 500; then, we averaged score ranks across all $k$ and obtained $\mathbf{D}^t$.
 Finally, for each drug-disease pair, we took the maximum prediction score across all tissues: $\mathbf{D}_{ij} = \max \{ \mathbf{D}_{ij}^t \mid \forall t \}$.
 
 
-The same procedure was used for the gene module-based approach, where we projected S-PrediXcan results into our latent representation, leading to $\hat{\mathbf{M}}^t$;
-and also $\mathbf{L}$, leading to $\hat{\mathbf{L}}^{l \times c}$.
-Finally, $\mathbf{D}^{t,k}=-1 \cdot \hat{\mathbf{M}}^{t,k} \hat{\mathbf{L}}^\top$, where in this case $k$ could be all LVs or the top 5, 10, 25 and 50 (since we have an order of magnitude less LVs than genes).
+The same procedure was used for the LV-based approach, where we projected $\mathbf{M}^{t}$ and $\mathbf{L}$ into the gene module latent space using Equation (@eq:proj), leading to $\hat{\mathbf{M}}^t$ and $\hat{\mathbf{L}}^{l \times c}$, respectively.
+<!--  -->
+Finally, $\mathbf{D}^{t,k}=-1 \cdot \hat{\mathbf{L}}^{\top} \hat{\mathbf{M}}^{t,k}$, where in this case $k$ could be all LVs or the top 5, 10, 25 and 50 (since we have an order of magnitude less LVs than genes).
 
 
-Since the gold standard of drug-disease medical indications used contained Disease Ontology IDs (DOID) [@doi:10.1093/nar/gky1032], we mapped PhenomeXcan traits to the Experimental Factor Ontology [@doi:10.1093/bioinformatics/btq099] using [@url:https://github.com/EBISPOT/EFO-UKB-mappings], and then to DOID.
+Since the gold standard of drug-disease medical indications is described with Disease Ontology IDs (DOID) [@doi:10.1093/nar/gky1032], we mapped PhenomeXcan traits to the Experimental Factor Ontology [@doi:10.1093/bioinformatics/btq099] using [@url:https://github.com/EBISPOT/EFO-UKB-mappings], and then to DOID.
 
 
 ### Consensus clustering of traits
 
-We performed two preprocessing steps on the S-MultiXcan results before the cluster analysis procedure.
-First, we combined results in $\mathbf{M}$ (S-MultiXcan) for traits that mapped to the same Experimental Factor Ontology (EFO) [@doi:10.1093/bioinformatics/btq099] term using the Stouffer's method: $\sum w_i M_{ij} / \sqrt{\sum w_i^2}$, where $w_i$ is a weight based on the GWAS sample size for trait $i$, and $M_{ij}$ is the $z$-score for gene $j$.
-Second, we standardized all $z$-scores for each trait $i$ by their sum to reduce the effect of highly polygenic traits: $M_{ij} / \sum M_{ij}$.
-Finally, we projected this data matrix using Equation @eq:proj, obtaining $\hat{\mathbf{M}}$ with $n$=3,752 traits and $l$=987 LVs as the input of our clustering pipeline.
+We performed two preprocessing steps on the S-MultiXcan results before the cluster analysis.
+First, we combined results in $\mathbf{M}$ (with $p$-values converted to $z$-scores, as described before) for traits that mapped to the same Experimental Factor Ontology (EFO) [@doi:10.1093/bioinformatics/btq099] term using the Stouffer's method: $\sum w_i M_{ij} / \sqrt{\sum w_i^2}$, where $w_i$ is a weight based on the GWAS sample size for trait $i$, and $M_{ij}$ is the $z$-score for gene $j$.
+Second, we divided all $z$-scores for each trait $i$ by their sum to reduce the effect of highly polygenic traits: $M_{ij} / \sum M_{ij}$.
+Finally, we projected this data matrix using Equation (@eq:proj), obtaining $\hat{\mathbf{M}}$ with $n$=3,752 traits and $l$=987 LVs as the input of our clustering pipeline.
 
 
 A partitioning of $\hat{\mathbf{M}}$ with $n$ traits into $k$ clusters is represented as a label vector $\pi \in \mathbb{N}^n$.
@@ -883,7 +1020,7 @@ $$ {#eq:consensus:obj_func}
 where $\mathcal{L}^i$ is a set of data indices with known cluster labels for partition $i$,
 $\phi\colon \mathbb{N}^n \times \mathbb{N}^n \to \mathbb{R}$ is a function that measures the similarity between two partitions,
 and $Q$ is a measure of central tendency, such as the mean or median.
-We used the adjusted Rand index (ARI) [@doi:10.1007/BF01908075] for $\phi$, and the median for $Q$.
+We used the adjusted Rand index (ARI) [@doi:10.1007/BF01908075] for $\phi$ and the median for $Q$.
 <!--  -->
 To obtain $\pi^*$, we define a consensus function $\Gamma\colon \mathbb{N}^{n \times r} \to \mathbb{N}^n$ with $\Pi$ as the input.
 We used consensus functions based on the evidence accumulation clustering (EAC) paradigm [@doi:10.1109/TPAMI.2005.113], where $\Pi$ is first transformed into a distance matrix
@@ -898,29 +1035,32 @@ Then, $\Gamma$ can be any similarity-based clustering algorithm, which is applie
 For the ensemble generation step, we used different algorithms to create a highly diverse set of partitions (see Figure @fig:clustering:design) since diversity is an important property for ensembles [@doi:10.1016/j.ins.2016.04.027; @doi:10.1109/TPAMI.2011.84; @doi:10.1016/j.patcog.2014.04.005].
 We used three data representations: the raw dataset, its projection into the top 50 principal components, and the embedding learned by UMAP [@arxiv:1802.03426] using 50 components.
 <!--  -->
-For each of these, we applied five clustering algorithms, covering a wide range of different assumptions on the data structure: $k$-means [@Arthur2007], spectral clustering [@Ng2001], a Gaussian mixture model (GMM), hierarchical clustering, and DBSCAN [@Ester1996].
+For each of these, we applied five clustering algorithms covering a wide range of different assumptions on the data structure: $k$-means [@Arthur2007], spectral clustering [@Ng2001], a Gaussian mixture model (GMM), hierarchical clustering, and DBSCAN [@Ester1996].
 <!--  -->
 For $k$-means, spectral clustering and GMM, we specified a range of $k$ between 2 and $\sqrt{n} \approx 60$, and for each $k$ we generated five partitions using random seeds.
 <!--  -->
-For hierarchical clustering, for each $k$ we generated four partitions using four common linkage criteria: ward, complete, average and single.
+For hierarchical clustering, for each $k$, we generated four partitions using common linkage criteria: ward, complete, average and single.
 <!--  -->
-For DBSCAN, we combined different ranges for parameters $\epsilon$ (the maximum distance between two data points to be considered part of the same neighborhood) and *minPts* (the minimum number of data points in a neighborhood for a data point to be considered a core point).
-Specifically, we used *minPts* values from 2 to 125, and for each data version, we determined a plausible range of $\epsilon$ values by observing the distribution of the mean distance of the *minPts*-nearest neighbors across all data points.
-Since some combinations of *minPts* and $\epsilon$ might not produce a meaningful partition (for instance, when all points are detected as noisy or only one cluster is found), we resampled partitions generated by DBSCAN to ensure an equal representation in the ensemble.
+For DBSCAN, we combined different ranges for parameters $\epsilon$ (the maximum distance between two data points to be considered part of the same neighborhood) and *minPts* (the minimum number of data points in a neighborhood for a data point to be considered a core point), based on the procedure in [@doi:10.1088/1755-1315/31/1/012012].
+Specifically, we used *minPts* values from 2 to 125.
+For each data representation (raw, PCA and UMAP), we determined a plausible range of $\epsilon$ values by observing the distribution of the mean distance of the *minPts*-nearest neighbors across all data points.
+Since some combinations of *minPts* and $\epsilon$ might not produce a meaningful partition (for instance, when all points are detected as noisy or only one cluster is found), we resampled partitions generated by DBSCAN to ensure an equal representation of this algorithm in the ensemble.
 <!--  -->
-This procedure generated a final ensemble of 4,428 partitions.
+This procedure generated a final ensemble of 4,428 partitions of 3,752 traits.
 
 
 Finally, we used spectral clustering on $\mathbf{D}$ to derive the final consensus partitions.
 $\mathbf{D}$ was first transformed into a similarity matrix by applying an RBF kernel $\mathrm{exp}(-\gamma \mathbf{D}^2)$ using four different values for $\gamma$ that we empirically determined to work best.
-Thus for each $k$ between 2 and 60, we derived four consensus partitions and selected the one that maximized Equation @eq:consensus:obj_func.
+Therefore, for each $k$ between 2 and 60, we derived four consensus partitions and selected the one that maximized Equation (@eq:consensus:obj_func).
 <!--  -->
 We further filtered this set of 59 solutions to keep only those with an ensemble agreement larger than the 75th percentile, leaving a total of 15 final consensus partitions shown in Figure @fig:clustering:tree.
 
-
-### Cluster interpretation
-
-We used a supervised learning approach to interpret clustering results by detecting which gene modules are the most important for clusters of traits.
+<!-- Clustering interpretation -->
+The input data in our clustering pipeline undergoes several linear and nonlinear transformations, including PCA, UMAP and the ensemble transformation using the EAC paradigm (distance matrix $\mathbf{D}$).
+Although consensus clustering has clear advantages for biological data [@pmid:27303057], this set of data transformations complicates the interpretation of results.
+<!--  -->
+To circumvent this, we used a supervised learning approach to detect which gene modules/LVs are the most important for each cluster of traits (Figure @fig:clustering:design b).
+`To address reviewer comment:`{.red} Note that we did not use this supervised model for prediction but only to learn which features (LVs) were most discriminative for each cluster.
 For this, we used the highest resolution partition ($k$=29, although any could be used) to train a decision tree model using each of the clusters as labels and the projected data $\hat{\mathbf{M}}$ as the training samples.
 For each $k$, we built a set of binary labels with the current cluster's traits as the positive class and the rest of the traits as the negative class.
 Then, we selected the LV in the root node of the trained model only if its threshold was positive and larger than one standard deviation.
@@ -931,65 +1071,69 @@ We repeated this procedure 20 times to extract the top 20 LVs that better discri
 ### CRISPR-Cas9 screening
 
 **Cell culture.**
-HepG2 cells were obtained from ATCC (ATCC® HB-8065™), and maintained in Eagle’s Minimum Essential Medium with L-Glutamine (EMEM, Cat. 112-018-101, Quality Biology) supplemented with 10% Fetal Bovine Serum (FBS, Gibco, Cat.16000-044), and 1% Pen/Strep (Gibco, Cat.15140-122).
-Cells were kept at 37oC in a humidity-controlled incubator with 5% CO2, and were maintained at a density not exceed more than 80% confluency.
+HepG2 cells were obtained from ATCC (ATCC® HB-8065™), and maintained in Eagle's Minimum Essential Medium with L-Glutamine (EMEM, Cat. 112-018-101, Quality Biology) supplemented with 10% Fetal Bovine Serum (FBS, Gibco, Cat.16000-044), and 1% Pen/Strep (Gibco, Cat.15140-122).
+Cells were kept at 37oC in a humidity-controlled incubator with 5% CO2, and were maintained at a density not exceeding more than 80% confluency.
 
 **Genome-wide lentiviral pooled CRISPR-Cas9 library.**
 3rd lentiviral generation, Broad GPP genome-wide Human Brunello CRISPR knockout Pooled library was provided by David Root and John Doench from Addgene (Cat. 73179-LV), and was used for HepG2 cell transduction.
-It consists of 76,441 sgRNAs, targets 19,114 genes in the human genome with an average of 4 sgRNAs per gene.
-Each 20nt sgRNA cassette was inserted into lentiCRIS-PRv2 backbone between U6 promoter and gRNA scaffold.
+It consists of 76,441 sgRNAs, and targets 19,114 genes in the human genome with an average of 4 sgRNAs per gene.
+Each 20nt sgRNA cassette was inserted into the lentiCRIS-PRv2 backbone between U6 promoter and gRNA scaffold.
 Through cell transduction, the lentiviral vectors which encode Cas9 were used to deliver the sgRNA cassette containing plasmids into cells during cell replication. 
 Unsuccessful transduced cells were excluded through puromycin selection.
 
 **Lentiviral titer determination.**
 No-spin lentiviral transduction was utilized for the screen.
 In a Collagen-I coated 6-wells plate, approximate 2.5 M cells were seeded each well in the presence of 8ug/ml polybrene (Millipore Sigma, Cat. TR-1003 G), and a different titrated virus volume (e.g., 0, 50, 100, 200, 250, and 400ul) was assigned to each well.
-EMEM complete media was added to make the final volume of 1.24ml. 16-18hrs post transduction, virus/polybrene containing media was removed from each well.
-Cells were washed twice with 1x DPBS, and replaced with fresh EMEM.
-At 24h, cells in each well were trypsinized, diluted (e.g.,1:10), and seeded in pairs of wells of 6-well plates. At 60hr post transduction, cell media in each well was replaced with fresh EMEM. 2ug/ml of puromycin (Gibco, Cat. A1113803) was added to one well out of the pair. 2-5 days after puromycin selection, or the 0 virus well treated with puromycin had no survival of cells, cells in both wells with/without puromycin were collected and counted for viability.
+EMEM complete media was added to make the final volume of 1.24ml. 16-18hrs post-transduction, virus/polybrene-containing media was removed from each well.
+Cells were washed twice with 1x DPBS and replaced with fresh EMEM.
+At 24h, cells in each well were trypsinized, diluted (e.g.,1:10), and seeded in pairs of wells of 6-well plates. At 60hr post-transduction, cell media in each well was replaced with fresh EMEM. 2ug/ml of puromycin (Gibco, Cat. A1113803) was added to one well out of the pair. 2-5 days after puromycin selection, or the 0 virus well treated with puromycin had no survival of cells, cells in both wells with/without puromycin were collected and counted for viability.
 Percentage of Infection (PI%) was obtained by comparing the cell numbers with/without puromycin selection within each pair.
-By means of Poisson’s distribution theory, when transduction efficiency (PI%) is between 30-50%, which corresponding to an MOI (Multiplicity of Infection) of ~0.35-0.70. At MOI equal or close to 0.3, around 95% of infected cells are predicted to have only one copy of virus.
+By means of Poisson's distribution theory, when transduction efficiency (PI%) is between 30-50%, which corresponds to an MOI (Multiplicity of Infection) of ~0.35-0.70. At MOI equal to or close to 0.3, around 95% of infected cells are predicted to have only one copy of the virus.
 Therefore, a volume of virus (120ul) yielding 30-40% of transduction efficiency was chosen for further large-scale viral transduction.
 
 **Lentiviral Transduction in HepG2 Using Brunello CRISPR Knockout Pooled Library.**
 In order to achieve a coverage (representation) of at least 500 cells per sgRNA, and at an MOI between 0.3-0.4 to ensure 95% of infected cells get only one viral particle per cell, ~200M cells were initiated for the screen.
-Transduction was carried out in the similar fashion as described above.
+Transduction was carried out in a similar fashion as described above.
 Briefly, 2.5M cells were seeded in each well of 14 6-well plates, along with 8ug/ml of polybrene.
-Volume of 120ul of virus was added to each experimental well. 18hrs post transduction, virus/PB mix medium was removed, and cells in each well were collect-ed, counted, and pooled into T175 flasks.
-At 60hr post transduction, 2ug/ml of puromycin was added to each flask.
-Mediums were changed every 2 days with fresh EMEM, topped with 2ug/ml puromycin. 7 days after puromycin selection, cells were collected, pooled, counted, and replated.
+A volume of 120ul of the virus was added to each experimental well. 18hrs post-transduction, virus/PB mix medium was removed, and cells in each well were collected, counted, and pooled into T175 flasks.
+At 60hr post-transduction, 2ug/ml of puromycin was added to each flask.
+Mediums were changed every two days with fresh EMEM, topped with 2ug/ml puromycin.
+Seven days after puromycin selection, cells were collected, pooled, counted, and replated.
 
 **Fluorescent dye staining.** 9 days after puromycin selection, cells were assigned to 2 groups. 20-30M cells were collected as Unsorted Control.
-Cell pellet was spun down at 500 x g for 5min at 4oC.
-Dry pellet was kept at -80oC for further genomic DNA isolation.
-The rest of the cells (approximately 200M) were kept in 100mm dishes, and stained with fluorescent dye (LipidSpotTM 488, Biotium, Cat. 70065-T).
-In Brief, LipidSpot 488 was diluted to 1:100 with DPBS. 4ml of staining solution was used for each dish, and incubated at 37oC for 30min.
+The cell pellet was spun down at 500 x g for 5min at 4oC.
+The dry pellet was kept at -80oC for further genomic DNA isolation.
+The rest of the cells (approximately 200M) were kept in 100mm dishes and stained with a fluorescent dye (LipidSpotTM 488, Biotium, Cat. 70065-T).
+In Brief, LipidSpot 488 was diluted to 1:100 with DPBS.
+4ml of staining solution was used for each dish and incubated at 37oC for 30min.
 Cell images were captured through fluorescent microscope EVOS for GFP signal detection (Supplementary Figure @fig:sup:crispr:fig1).
 
 **Fluorescence-activated cell sorting (FACS).**
-Cells were immediately collected into 50ml tubes (From this point on, keep cells cold), and spin at 500 x g for 5min at 4oC.
+Cells were immediately collected into 50ml tubes (From this point on, keep cells cold), and spun at 500 x g for 5min at 4oC.
 After DPBS wash, cell pellets were resuspended with FACS Sorting Buffer (1x DPBS without Ca2+/Mg2+, 2.5mM EDTA, 25mM HEPES, 1% BSA.
-Solution was filter sterilized, and kept at 4oC), pi-pet gently to make single cells.
-Cell solution then filtered through cell strainer (Falcon, Cat. 352235), and were kept on ice protected from light.
+The solution was filter sterilized, and kept at 4oC), pi-pet gently to make single cells.
+The cell solution was then filtered through a cell strainer (Falcon, Cat. 352235) and was kept on ice, protected from light.
 Collected cells were sorted on FACSJazz. 100um nozzle was used for sorting. ~20% of each GFP-High and GFP-Low (Supplementary Figure @fig:sup:crispr:fig2) were collected into 15ml tubes.
-After sorting, cells were immediately spun down. Pellets were kept in -80oC for further genomic DNA isolation.
+After sorting, cells were immediately spun down.
+Pellets were kept at -80oC for further genomic DNA isolation.
 
 **Genomic DNA isolation and verification.**
-3 conditions of Genomic DNA (Un-Sorted Control, lentiV2 GFP-High, and lentiV2 GFP-Low) were extracted using QIAamp DNA Blood Mini Kit (Qiagen, Cat.51104), followed by UV Spectroscopy (Nanodrop) to access the quality and quantity of the gDNA.
-Total 80-160ug of gDNA was isolated for each condition. sgRNA cassette and lentiviral specific transgene in isolated gDNA were verified through PCR (Supplementary Figure @fig:sup:crispr:fig3).
+Three conditions of Genomic DNA (Un-Sorted Control, lentiV2 GFP-High, and lentiV2 GFP-Low) were extracted using QIAamp DNA Blood Mini Kit (Qiagen, Cat.51104), followed by UV Spectroscopy (Nanodrop) to access the quality and quantity of the gDNA.
+A total of 80-160ug of gDNA was isolated for each condition.
+sgRNA cassette and lentiviral specific transgene in isolated gDNA were verified through PCR (Supplementary Figure @fig:sup:crispr:fig3).
 
 **Illumina libraries generation and sequencing.**
-Fragment containing sgRNA cassette was amplified using P5 /P7 primers, as indicated in [@pmid:26780180] and primer sequences were adapted from Broad Institute protocol (Supplementary Figure @fig:sup:crispr:table1).
-Stagger sequence (0-8nt) was included in P5, and 8bp uniquely barcoded sequence in P7.
-Primers were synthesized through Integrated DNA Technologies (IDT), each primer was PAGE purified. 32 PCR reactions were set up for each condition.
+The fragment containing sgRNA cassette was amplified using P5 /P7 primers, as indicated in [@pmid:26780180], and primer sequences were adapted from Broad Institute protocol (Supplementary Figure @fig:sup:crispr:table1).
+Stagger sequence (0-8nt) was included in P5 and 8bp uniquely barcoded sequence in P7.
+Primers were synthesized through Integrated DNA Technologies (IDT), and each primer was PAGE purified. 32 PCR reactions were set up for each condition.
 Each 100ul PCR reaction consists of roughly 5ug of gDNA, 5ul of each 10uM P5 and P7. ExTaq DNA Polymerase (TaKaRa, Cat. RR001A) was used to amplify the amplicon.
-PCR Thermal Cycler Parameters set as: Initial at 95oC for 1min; followed by 24 cycles of Denaturation at 94oC for 30 seconds, Annealing at 52.5oC for 30 seconds, Extension at 72oC for 30 seconds.
+PCR Thermal Cycler Parameters set as Initial at 95oC for 1min; followed by 24 cycles of Denaturation at 94oC for 30 seconds, Annealing at 52.5oC for 30 seconds, Extension at 72oC for 30 seconds.
 A final Elongation at 72oC for 10 minutes. 285bp-293bp PCR products were expected (Supplementary Figure @fig:sup:crispr:fig4 A).
 PCR products within the same condition were pooled and purified using SPRIselect beads (Beckman Coulter, Cat. B23318).
-Purified illumina libraries were quantitated on Qubit, and the quality of the library were analyzed on Bio-analyzer using High Sensitivity DNA Chip.
+Purified Illumina libraries were quantitated on Qubit, and the quality of the library was analyzed on Bio-analyzer using High Sensitivity DNA Chip.
 A single approximate 285bp peak was expected. (Supplementary Figure @fig:sup:crispr:fig4 B).
-Final illumina library samples were sequenced on Nova-seq 6000.
-Samples were pooled and loaded on a SP flow cell, along with 20% PhiX control v3 library spike-in.
+Final Illumina library samples were sequenced on Nova-seq 6000.
+Samples were pooled and loaded on an SP flow cell, along with a 20% PhiX control v3 library spike-in.
 
 
 ### Code and data availability
