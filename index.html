@@ -130,9 +130,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/f8966f1767df00a53d3d01c66081ef4be00ea6cc/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/f8966f1767df00a53d3d01c66081ef4be00ea6cc/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/f8966f1767df00a53d3d01c66081ef4be00ea6cc/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/f467eed0356d9715c502c530b136646a78e6bed7/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/f467eed0356d9715c502c530b136646a78e6bed7/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/f467eed0356d9715c502c530b136646a78e6bed7/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -161,9 +161,9 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 ]{.banner .lightblue} -->
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/phenoplier_manuscript/v/f8966f1767df00a53d3d01c66081ef4be00ea6cc/">permalink</a>)
+(<a href="https://greenelab.github.io/phenoplier_manuscript/v/f467eed0356d9715c502c530b136646a78e6bed7/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/f8966f1767df00a53d3d01c66081ef4be00ea6cc">greenelab/phenoplier_manuscript@f8966f1</a>
+from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/f467eed0356d9715c502c530b136646a78e6bed7">greenelab/phenoplier_manuscript@f467eed</a>
 on September 8, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -868,10 +868,10 @@ As explained later, we used the same approach to project drug-induced transcript
 We used a competitive test to predict gene-trait associations from TWAS using gene weights from an LV, testing whether top-weighted genes for an LV are more strongly associated with the phenotype than other genes with relatively small or zero weights.
 Thus, we fit the model</p>
 <p><span class="math display">\[
-\mathbf{p}=\beta_{0} + \mathbf{s} \beta_{s} + \sum_{i} \mathbf{x}_{i} \beta_{i} + \bm{\epsilon},
+\mathbf{m}=\beta_{0} + \mathbf{s} \beta_{s} + \sum_{i} \mathbf{x}_{i} \beta_{i} + \bm{\epsilon},
 \]</span></p>
-<p>where <span class="math inline">\(\mathbf{p}\)</span> is a vector of S-MultiXcan gene <span class="math inline">\(p\)</span>-values for a trait (with a <span class="math inline">\(-log_{10}\)</span> transformation);
-<span class="math inline">\(\mathbf{s}\)</span> is a binary indicator vector with <span class="math inline">\(s_{\ell}=1\)</span> for the top 1% of genes in LV <span class="math inline">\(\ell\)</span> (approximately 67 genes for each LV) and zero otherwise;
+<p>where <span class="math inline">\(\mathbf{m}\)</span> is a vector of S-MultiXcan gene <span class="math inline">\(p\)</span>-values for a trait (with a <span class="math inline">\(-log_{10}\)</span> transformation);
+<span class="math inline">\(\mathbf{s}\)</span> is a binary indicator vector with <span class="math inline">\(s_{\ell}=1\)</span> for the top 1% of genes with the largest loadings for LV <span class="math inline">\(\ell\)</span> (from <span class="math inline">\(\mathbf{Z}_{\ell}\)</span>) and zero otherwise;
 <span class="math inline">\(\mathbf{x}_{i}\)</span> is a gene property used as a covariate;
 <span class="math inline">\(\beta\)</span> are effect sizes (with <span class="math inline">\(\beta_{0}\)</span> as the intercept);
 and <span class="math inline">\(\bm{\epsilon} \sim \mathrm{MVN}(0, \sigma^{2} \mathbf{R})\)</span> is a vector of error terms with a multivariate normal distribution (MVN) where <span class="math inline">\(\mathbf{R}\)</span> is the matrix of gene correlations.</p>
