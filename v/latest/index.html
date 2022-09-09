@@ -21,7 +21,7 @@
   <meta name="author" content="Marylyn D. Ritchie" />
   <meta name="author" content="Struan F.A. Grant" />
   <meta name="author" content="Casey S. Greene" />
-  <meta name="dcterms.date" content="2022-09-08" />
+  <meta name="dcterms.date" content="2022-09-09" />
   <meta name="keywords" content="gene co-expression, MultiPLIER, PhenomeXcan, TWAS" />
   <title>Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms</title>
   <style>
@@ -60,8 +60,8 @@
   <meta name="citation_title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="og:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
-  <meta name="dc.date" content="2022-09-08" />
-  <meta name="citation_publication_date" content="2022-09-08" />
+  <meta name="dc.date" content="2022-09-09" />
+  <meta name="citation_publication_date" content="2022-09-09" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -130,9 +130,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/f467eed0356d9715c502c530b136646a78e6bed7/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/f467eed0356d9715c502c530b136646a78e6bed7/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/f467eed0356d9715c502c530b136646a78e6bed7/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/d1e86d6550e2823fa10cd1b5aae67050396f728c/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/d1e86d6550e2823fa10cd1b5aae67050396f728c/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/d1e86d6550e2823fa10cd1b5aae67050396f728c/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -161,10 +161,10 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 ]{.banner .lightblue} -->
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/phenoplier_manuscript/v/f467eed0356d9715c502c530b136646a78e6bed7/">permalink</a>)
+(<a href="https://greenelab.github.io/phenoplier_manuscript/v/d1e86d6550e2823fa10cd1b5aae67050396f728c/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/f467eed0356d9715c502c530b136646a78e6bed7">greenelab/phenoplier_manuscript@f467eed</a>
-on September 8, 2022.
+from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/d1e86d6550e2823fa10cd1b5aae67050396f728c">greenelab/phenoplier_manuscript@d1e86d6</a>
+on September 9, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -828,7 +828,9 @@ We used S-MultiXcan results for our LV-based regression model and our cluster an
 <p>We used two large TWAS resources from different cohorts for discovery and replication.
 <!--  -->
 PhenomeXcan <span class="citation" data-cites="lY5ln3dB">[<a href="#ref-lY5ln3dB" role="doc-biblioref">32</a>]</span>, our discovery cohort, provides results on 4,091 traits across different categories (<code class="red">add phenotyp_info file with categories like in emerge</code>).
-PhenomeXcan was built using publicly available GWAS summary statistics to compute gene-based associations with the PrediXcan family of methods described before.
+PhenomeXcan was built using publicly available GWAS summary statistics to compute
+1) gene-based associations with the PrediXcan family of methods (described before), and
+2) a posterior probability of colocalization between GWAS loci and <em>cis</em>-eQTL with fastENLOC <span class="citation" data-cites="lY5ln3dB ndd3tW4g">[<a href="#ref-lY5ln3dB" role="doc-biblioref">32</a>,<a href="#ref-ndd3tW4g" role="doc-biblioref">86</a>]</span>.
 <!--  -->
 We refer to the matrix of <span class="math inline">\(z\)</span>-scores from S-PrediXcan (Equation (<a href="#eq:spredixcan">2</a>)) across <span class="math inline">\(q\)</span> traits and <span class="math inline">\(m\)</span> genes in tissue <span class="math inline">\(t\)</span> as <span class="math inline">\(\mathbf{M}^{t} \in \mathbb{R}^{q \times m}\)</span>.
 As explained later, matrices <span class="math inline">\(\mathbf{M}^{t}\)</span> were used in our LV-based drug repurposing framework since they provide direction of effects.
@@ -867,9 +869,9 @@ As explained later, we used the same approach to project drug-induced transcript
 <p>We adapted the gene-set analysis framework from MAGMA <span class="citation" data-cites="19XiXgYmd">[<a href="#ref-19XiXgYmd" role="doc-biblioref">41</a>]</span> to TWAS.
 We used a competitive test to predict gene-trait associations from TWAS using gene weights from an LV, testing whether top-weighted genes for an LV are more strongly associated with the phenotype than other genes with relatively small or zero weights.
 Thus, we fit the model</p>
-<p><span class="math display">\[
+<p><span id="eq:reg:model" class="eqnos"><span class="math display">\[
 \mathbf{m}=\beta_{0} + \mathbf{s} \beta_{s} + \sum_{i} \mathbf{x}_{i} \beta_{i} + \bm{\epsilon},
-\]</span></p>
+\]</span><span class="eqnos-number">(7)</span></span> </p>
 <p>where <span class="math inline">\(\mathbf{m}\)</span> is a vector of S-MultiXcan gene <span class="math inline">\(p\)</span>-values for a trait (with a <span class="math inline">\(-log_{10}\)</span> transformation);
 <span class="math inline">\(\mathbf{s}\)</span> is a binary indicator vector with <span class="math inline">\(s_{\ell}=1\)</span> for the top 1% of genes with the largest loadings for LV <span class="math inline">\(\ell\)</span> (from <span class="math inline">\(\mathbf{Z}_{\ell}\)</span>) and zero otherwise;
 <span class="math inline">\(\mathbf{x}_{i}\)</span> is a gene property used as a covariate;
@@ -889,26 +891,26 @@ From the MAGMA framework, we know that the SSM for each gene is proportial to <s
 Under the null hypothesis of no association, the covariances between the SSM of genes <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span> is therefore given by <span class="math inline">\(2 \times \mathrm{Trace}(\mathbf{P}_{i}^{\top} \mathbf{P}_{j} \mathbf{P}_{j}^{\top} \mathbf{P}_{i})\)</span>.
 The standard deviations of each SSM are given by <span class="math inline">\(\sqrt{2 \times k_{i}} \times (n - 1)\)</span>.
 Therefore, the correlation between the SSMs for genes <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span> can be written as follows:</p>
-<p><span class="math display">\[
+<p><span id="eq:reg:r" class="eqnos"><span class="math display">\[
 \begin{split}
 \mathbf{R}_{ij} &amp; = \frac{2 \times \mathrm{Tr}(\mathbf{P}_{i}^{\top} \mathbf{P}_{j} \mathbf{P}_{j}^{\top} \mathbf{P}_{i})}{\sqrt{2 \times k_{i}} \times \sqrt{2 \times k_{j}} \times (n - 1)^2} \\
 &amp; = \frac{2 \times \mathrm{Tr}(Cor(\mathbf{P}_{i}, \mathbf{P}_{j}) \times Cor(\mathbf{P}_{j}, \mathbf{P}_{i}))}{\sqrt{2 \times k_{i}} \times \sqrt{2 \times k_{j}}},
 \end{split}
-\]</span></p>
+\]</span><span class="eqnos-number">(8)</span></span> </p>
 <p>where columns <span class="math inline">\(\mathbf{P}\)</span> are standardized,
 <span class="math inline">\(\mathrm{Tr}\)</span> is the trace of a matrix,
 and the cross-correlation matrix between PCs <span class="math inline">\(Cor(\mathbf{P}_{i}, \mathbf{P}_{j}) \in \mathbb{R}^{k_i \times k_j}\)</span> is given by</p>
-<p><span class="math display">\[
+<p><span id="eq:reg:cor_pp" class="eqnos"><span class="math display">\[
 \begin{split}
 Cor(\mathbf{P}_{i}, \mathbf{P}_{j}) &amp; = Cor(\mathbf{T}_{i} \mathbf{V}_{i}^{\top} \mathrm{diag}(\lambda_i)^{-1/2}, \mathbf{T}_{j} \mathbf{V}_{j}^{\top} \mathrm{diag}(\lambda_j)^{-1/2}) \\
 &amp; = \mathrm{diag}(\lambda_i)^{-1/2} \mathbf{V}_{i} (\frac{\mathbf{T}_{i}^{\top} \mathbf{T}_{j}}{n-1}) \mathbf{V}_{j}^{\top} \mathrm{diag}(\lambda_j)^{-1/2},
 \end{split}
-\]</span></p>
+\]</span><span class="eqnos-number">(9)</span></span> </p>
 <p>where <span class="math inline">\(\frac{\mathbf{T}_{i}^{\top} \mathbf{T}_{j}}{n-1} \in \mathbb{R}^{p_i \times p_j}\)</span> is the cross-correlation matrix between the predicted expression levels of genes <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>,
 and columns of <span class="math inline">\(\mathbf{V}_{i}\)</span> and scalars <span class="math inline">\(\lambda_i\)</span> are the eigenvectors and eigenvalues of <span class="math inline">\(\mathbf{T}_{i}\)</span>, respectively.
 S-MultiXcan keeps only the top eigenvectors using a condition number threshold of <span class="math inline">\(\frac{\max(\lambda_i)}{\lambda_i} &lt; 30\)</span>.
 To estimate the correlation of predicted expression levels for genes <span class="math inline">\(i\)</span> in tissue <span class="math inline">\(k\)</span> and gene <span class="math inline">\(j\)</span> in tissue <span class="math inline">\(l\)</span>, <span class="math inline">\((\mathbf{t}_k^i, \mathbf{t}_l^j)\)</span> (<span class="math inline">\(\mathbf{t}_k^i\)</span> is the <span class="math inline">\(k\)</span>th column of <span class="math inline">\(\mathbf{T}_{i}\)</span>), we used <span class="citation" data-cites="1FFzCXo1s">[<a href="#ref-1FFzCXo1s" role="doc-biblioref">19</a>]</span></p>
-<p><span class="math display">\[
+<p><span id="eq:reg:corr_genes" class="eqnos"><span class="math display">\[
 \begin{split}
 \frac{(\mathbf{T}_{i}^{\top} \mathbf{T}_{j})_{kl}}{n-1} &amp; = Cor(\mathbf{t}_k^i, \mathbf{t}_l^j) \\
 &amp; = \frac{ Cov(\mathbf{t}_k, \mathbf{t}_l) } { \sqrt{\widehat{\mathrm{var}}(\mathbf{t}_k) \widehat{\mathrm{var}}(\mathbf{t}_l)} } \\
@@ -916,17 +918,17 @@ To estimate the correlation of predicted expression levels for genes <span class
 &amp; = \frac{ \sum_{a \in \mathrm{model}_k \\ b \in \mathrm{model}_l} w_a^k w_b^l Cov(X_a, X_b)} {\sqrt{\widehat{\mathrm{var}}(\mathbf{t}_k) \widehat{\mathrm{var}}(\mathbf{t}_l)} } \\
 &amp; = \frac{ \sum_{a \in \mathrm{model}_k \\ b \in \mathrm{model}_l} w_a^k w_b^l \Gamma_{ab}} {\sqrt{\widehat{\mathrm{var}}(\mathbf{t}_k) \widehat{\mathrm{var}}(\mathbf{t}_l)} },
 \end{split}
-\]</span></p>
+\]</span><span class="eqnos-number">(10)</span></span> </p>
 <p>where <span class="math inline">\(X_a\)</span> is the genotype of SNP <span class="math inline">\(a\)</span>,
 <span class="math inline">\(w_a^k\)</span> is the weight of SNP <span class="math inline">\(a\)</span> for gene expression prediction in the tissue model <span class="math inline">\(k\)</span>,
 and <span class="math inline">\(\Gamma = \widehat{\mathrm{var}}(\mathbf{X}) = (\mathbf{X} - \mathbf{\bar{X}})^{\top} (\mathbf{X} - \mathbf{\bar{X}}) / (n-1)\)</span> is the genotype covariance matrix using GTEx v8 as the reference panel, which is the same used in all TWAS methods described here.
 The variance of the predicted expression values of gene <span class="math inline">\(i\)</span> in tissue <span class="math inline">\(k\)</span> is estimated as <span class="citation" data-cites="vLyTudUB">[<a href="#ref-vLyTudUB" role="doc-biblioref">91</a>]</span>:</p>
-<p><span class="math display">\[
+<p><span id="eq:reg:var_gene" class="eqnos"><span class="math display">\[
 \begin{split}
 \widehat{\mathrm{var}}(\mathbf{t}_k^i) &amp; = (\mathbf{W}^k)^\top \Gamma^k \mathbf{W}^k \\
 &amp; = \sum_{a \in \mathrm{model}_k \\ b \in \mathrm{model}_k} w_a^k w_b^k \Gamma_{ab}^k.
 \end{split}
-\]</span></p>
+\]</span><span class="eqnos-number">(11)</span></span> </p>
 <p>Note that, since we used the MultiXcan regression model (Equation (<a href="#eq:multixcan">3</a>)), <span class="math inline">\(\mathbf{R}\)</span> is only an approximation of gene correlations in S-MultiXcan.
 As explained before, S-MultiXcan approximates the joint regression parameters in MultiXcan using the marginal regression estimates from S-PrediXcan in (<a href="#eq:spredixcan">2</a>) with some simplifying assumptions and different genotype covariance matrices.
 This complicates the derivation of an S-MultiXcan-specific solution to compute <span class="math inline">\(\mathbf{R}\)</span>.
@@ -959,7 +961,7 @@ Consensus clustering approaches consist of two steps:
 and 2) the combination of the ensemble into a consolidated solution defined as:</p>
 <p><span id="eq:consensus:obj_func" class="eqnos"><span class="math display">\[
 \pi^* = \mathrm{arg}\,\underset{\hat{\pi}}{\max} Q(\{ \lvert \mathcal{L}^i \lvert \phi(\hat{\pi}_{\mathcal{L}^i}, \pi_{i \mathcal{L}^i}) \mid i \in \{1,\ldots,r\} \}),
-\]</span><span class="eqnos-number">(7)</span></span> </p>
+\]</span><span class="eqnos-number">(12)</span></span> </p>
 <p>where <span class="math inline">\(\mathcal{L}^i\)</span> is a set of data indices with known cluster labels for partition <span class="math inline">\(i\)</span>,
 <span class="math inline">\(\phi\colon \mathbb{N}^n \times \mathbb{N}^n \to \mathbb{R}\)</span> is a function that measures the similarity between two partitions,
 and <span class="math inline">\(Q\)</span> is a measure of central tendency, such as the mean or median.
@@ -990,7 +992,7 @@ Since some combinations of <em>minPts</em> and <span class="math inline">\(\epsi
 This procedure generated a final ensemble of 4,428 partitions of 3,752 traits.</p>
 <p>Finally, we used spectral clustering on <span class="math inline">\(\mathbf{D}\)</span> to derive the final consensus partitions.
 <span class="math inline">\(\mathbf{D}\)</span> was first transformed into a similarity matrix by applying an RBF kernel <span class="math inline">\(\mathrm{exp}(-\gamma \mathbf{D}^2)\)</span> using four different values for <span class="math inline">\(\gamma\)</span> that we empirically determined to work best.
-Therefore, for each <span class="math inline">\(k\)</span> between 2 and 60, we derived four consensus partitions and selected the one that maximized Equation (<a href="#eq:consensus:obj_func">7</a>).
+Therefore, for each <span class="math inline">\(k\)</span> between 2 and 60, we derived four consensus partitions and selected the one that maximized Equation (<a href="#eq:consensus:obj_func">12</a>).
 <!--  -->
 We further filtered this set of 59 solutions to keep only those with an ensemble agreement larger than the 75th percentile, leaving a total of 15 final consensus partitions shown in Figure <a href="#fig:clustering:tree">6</a>.</p>
 <!-- Clustering interpretation -->
