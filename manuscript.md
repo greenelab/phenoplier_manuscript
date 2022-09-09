@@ -105,9 +105,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/d1e86d6550e2823fa10cd1b5aae67050396f728c/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/d1e86d6550e2823fa10cd1b5aae67050396f728c/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/d1e86d6550e2823fa10cd1b5aae67050396f728c/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/9b9f24361b536caab02792d8c94454834849c74a/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/9b9f24361b536caab02792d8c94454834849c74a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/9b9f24361b536caab02792d8c94454834849c74a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -134,9 +134,9 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/d1e86d6550e2823fa10cd1b5aae67050396f728c/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/9b9f24361b536caab02792d8c94454834849c74a/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@d1e86d6](https://github.com/greenelab/phenoplier_manuscript/tree/d1e86d6550e2823fa10cd1b5aae67050396f728c)
+from [greenelab/phenoplier_manuscript@9b9f243](https://github.com/greenelab/phenoplier_manuscript/tree/9b9f24361b536caab02792d8c94454834849c74a)
 on September 9, 2022.
 </em></small>
 
@@ -844,8 +844,10 @@ We used S-MultiXcan results for our LV-based regression model and our cluster an
 
 We used two large TWAS resources from different cohorts for discovery and replication.
 <!--  -->
-PhenomeXcan [@doi:10.1126/sciadv.aba2083], our discovery cohort, provides results on 4,091 traits across different categories (`add phenotyp_info file with categories like in emerge`{.red}).
-PhenomeXcan was built using publicly available GWAS summary statistics to compute
+PhenomeXcan [@doi:10.1126/sciadv.aba2083], our discovery cohort, provides results on 4,091 traits across different categories.
+Supplemenetary File `XXX`{.red} has all the details about the included GWAS, sample size and disease/trait categories. (`add phenotyp_info file with categories like in emerge`{.red}).
+<!--  -->
+In PhenomeXcan, these publicly available GWAS summary statistics were used to compute
 1) gene-based associations with the PrediXcan family of methods (described before), and
 2) a posterior probability of colocalization between GWAS loci and *cis*-eQTL with fastENLOC [@doi:10.1126/sciadv.aba2083; @doi:10.1016/j.ajhg.2020.11.012].
 <!--  -->
@@ -978,6 +980,11 @@ To account for this, we used a submatrix $\mathbf{R}_{\ell}$ corresponding to ge
 This simplification is conservative since correlations are accounted for top genes only.
 Our simulations (Supplementary Note `XXX`{.red}) show that the model is approximately well-calibrated and can correct for LVs with adjacent and highly correlated genes at the top (Supplementary Figure `YYY`{.red}).
 The model can also detect LVs associated with relevant traits (Figure @fig:lv246 and Table @tbl:sup:phenomexcan_assocs:lv246) that are replicated in a different cohort (Table @tbl:sup:emerge_assocs:lv246).
+
+In Equation (@eq:reg:corr_genes), we only considered SNPs present in GWAS used as input for the TWAS approaches, since otherwise correlations would not be accurately estimated [@doi:10.1371/journal.pgen.1007889].
+Therefore, we computed different correlation matrices for PhenomeXcan and eMERGE.
+In PhenomeXcan, most of the GWAS (4,049) were obtained from the UK Biobank using the same pipeline and including the same set of SNPs, so a single correlation matrix was used for this set.
+For the rest, we used a single correlation matrix for each group of traits that shared the same or most of the SNPs.
 
 We ran our regression model for all 987 LVs across the 4,091 traits in PhenomeXcan.
 For replication, we ran the model in the 309 phecodes in eMERGE.
