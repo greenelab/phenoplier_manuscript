@@ -6,7 +6,7 @@ keywords:
 - PhenomeXcan
 - TWAS
 lang: en-US
-date-meta: '2022-09-08'
+date-meta: '2022-09-09'
 author-meta:
 - Milton Pividori
 - Sumei Lu
@@ -35,8 +35,8 @@ header-includes: |-
   <meta name="citation_title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="og:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
-  <meta name="dc.date" content="2022-09-08" />
-  <meta name="citation_publication_date" content="2022-09-08" />
+  <meta name="dc.date" content="2022-09-09" />
+  <meta name="citation_publication_date" content="2022-09-09" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -105,9 +105,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/f467eed0356d9715c502c530b136646a78e6bed7/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/f467eed0356d9715c502c530b136646a78e6bed7/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/f467eed0356d9715c502c530b136646a78e6bed7/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/d1e86d6550e2823fa10cd1b5aae67050396f728c/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/d1e86d6550e2823fa10cd1b5aae67050396f728c/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/d1e86d6550e2823fa10cd1b5aae67050396f728c/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -134,10 +134,10 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/f467eed0356d9715c502c530b136646a78e6bed7/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/d1e86d6550e2823fa10cd1b5aae67050396f728c/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@f467eed](https://github.com/greenelab/phenoplier_manuscript/tree/f467eed0356d9715c502c530b136646a78e6bed7)
-on September 8, 2022.
+from [greenelab/phenoplier_manuscript@d1e86d6](https://github.com/greenelab/phenoplier_manuscript/tree/d1e86d6550e2823fa10cd1b5aae67050396f728c)
+on September 9, 2022.
 </em></small>
 
 ## Authors
@@ -845,7 +845,9 @@ We used S-MultiXcan results for our LV-based regression model and our cluster an
 We used two large TWAS resources from different cohorts for discovery and replication.
 <!--  -->
 PhenomeXcan [@doi:10.1126/sciadv.aba2083], our discovery cohort, provides results on 4,091 traits across different categories (`add phenotyp_info file with categories like in emerge`{.red}).
-PhenomeXcan was built using publicly available GWAS summary statistics to compute gene-based associations with the PrediXcan family of methods described before.
+PhenomeXcan was built using publicly available GWAS summary statistics to compute
+1) gene-based associations with the PrediXcan family of methods (described before), and
+2) a posterior probability of colocalization between GWAS loci and *cis*-eQTL with fastENLOC [@doi:10.1126/sciadv.aba2083; @doi:10.1016/j.ajhg.2020.11.012].
 <!--  -->
 We refer to the matrix of $z$-scores from S-PrediXcan (Equation (@eq:spredixcan)) across $q$ traits and $m$ genes in tissue $t$ as $\mathbf{M}^{t} \in \mathbb{R}^{q \times m}$.
 As explained later, matrices $\mathbf{M}^{t}$ were used in our LV-based drug repurposing framework since they provide direction of effects.
@@ -900,7 +902,7 @@ Thus, we fit the model
 
 $$
 \mathbf{m}=\beta_{0} + \mathbf{s} \beta_{s} + \sum_{i} \mathbf{x}_{i} \beta_{i} + \bm{\epsilon},
-$$
+$$ {#eq:reg:model}
 
 where $\mathbf{m}$ is a vector of S-MultiXcan gene $p$-values for a trait (with a $-log_{10}$ transformation);
 $\mathbf{s}$ is a binary indicator vector with $s_{\ell}=1$ for the top 1% of genes with the largest loadings for LV $\ell$ (from $\mathbf{Z}_{\ell}$) and zero otherwise;
@@ -929,7 +931,7 @@ $$
 \mathbf{R}_{ij} & = \frac{2 \times \mathrm{Tr}(\mathbf{P}_{i}^{\top} \mathbf{P}_{j} \mathbf{P}_{j}^{\top} \mathbf{P}_{i})}{\sqrt{2 \times k_{i}} \times \sqrt{2 \times k_{j}} \times (n - 1)^2} \\
 & = \frac{2 \times \mathrm{Tr}(Cor(\mathbf{P}_{i}, \mathbf{P}_{j}) \times Cor(\mathbf{P}_{j}, \mathbf{P}_{i}))}{\sqrt{2 \times k_{i}} \times \sqrt{2 \times k_{j}}},
 \end{split}
-$$
+$$ {#eq:reg:r}
 
 where columns $\mathbf{P}$ are standardized,
 $\mathrm{Tr}$ is the trace of a matrix,
@@ -940,7 +942,7 @@ $$
 Cor(\mathbf{P}_{i}, \mathbf{P}_{j}) & = Cor(\mathbf{T}_{i} \mathbf{V}_{i}^{\top} \mathrm{diag}(\lambda_i)^{-1/2}, \mathbf{T}_{j} \mathbf{V}_{j}^{\top} \mathrm{diag}(\lambda_j)^{-1/2}) \\
 & = \mathrm{diag}(\lambda_i)^{-1/2} \mathbf{V}_{i} (\frac{\mathbf{T}_{i}^{\top} \mathbf{T}_{j}}{n-1}) \mathbf{V}_{j}^{\top} \mathrm{diag}(\lambda_j)^{-1/2},
 \end{split}
-$$
+$$ {#eq:reg:cor_pp}
 
 where $\frac{\mathbf{T}_{i}^{\top} \mathbf{T}_{j}}{n-1} \in \mathbb{R}^{p_i \times p_j}$ is the cross-correlation matrix between the predicted expression levels of genes $i$ and $j$,
 and columns of $\mathbf{V}_{i}$ and scalars $\lambda_i$ are the eigenvectors and eigenvalues of $\mathbf{T}_{i}$, respectively.
@@ -955,7 +957,7 @@ $$
  & = \frac{ \sum_{a \in \mathrm{model}_k \\ b \in \mathrm{model}_l} w_a^k w_b^l Cov(X_a, X_b)} {\sqrt{\widehat{\mathrm{var}}(\mathbf{t}_k) \widehat{\mathrm{var}}(\mathbf{t}_l)} } \\
  & = \frac{ \sum_{a \in \mathrm{model}_k \\ b \in \mathrm{model}_l} w_a^k w_b^l \Gamma_{ab}} {\sqrt{\widehat{\mathrm{var}}(\mathbf{t}_k) \widehat{\mathrm{var}}(\mathbf{t}_l)} },
 \end{split}
-$$
+$$ {#eq:reg:corr_genes}
 
 where $X_a$ is the genotype of SNP $a$,
 $w_a^k$ is the weight of SNP $a$ for gene expression prediction in the tissue model $k$,
@@ -967,7 +969,7 @@ $$
 \widehat{\mathrm{var}}(\mathbf{t}_k^i) & = (\mathbf{W}^k)^\top \Gamma^k \mathbf{W}^k \\
  & = \sum_{a \in \mathrm{model}_k \\ b \in \mathrm{model}_k} w_a^k w_b^k \Gamma_{ab}^k.
 \end{split}
-$$
+$$ {#eq:reg:var_gene}
 
 Note that, since we used the MultiXcan regression model (Equation (@eq:multixcan)), $\mathbf{R}$ is only an approximation of gene correlations in S-MultiXcan.
 As explained before, S-MultiXcan approximates the joint regression parameters in MultiXcan using the marginal regression estimates from S-PrediXcan in (@eq:spredixcan) with some simplifying assumptions and different genotype covariance matrices.

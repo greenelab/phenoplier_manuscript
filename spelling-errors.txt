@@ -23,7 +23,7 @@ AUC
 autocorrelation
 Bahram
 barcoded
-Basophil
+basophil
 Behmel
 bendroflumethiazide
 Benjamini
@@ -114,7 +114,7 @@ func
 GBMF
 gDNA
 Genomic
-Genotype
+genotype
 GFP
 Gibco
 glioma
@@ -123,7 +123,7 @@ GMM
 Golabi
 GPP
 GPR
-granulocyte
+Granulocyte
 granulosa
 GreeneScientist
 gRNA
@@ -174,7 +174,7 @@ LDL
 LDLR
 lentiCRIS
 lentiV
-Lentiviral
+lentiviral
 levothyroxine
 LINCS
 LipidSpot
@@ -211,9 +211,9 @@ monocyte
 monocytes
 mononuclear
 MSigDB
-multixcan
+MultiXcan
 MVN
-myeloid
+Myeloid
 myeloma
 myelopathy
 Namjou
@@ -222,9 +222,9 @@ Nephrology
 neurodegenerative
 neurodevelopmental
 neuropsychiatric
-Neutrophil
+neutrophil
 Neutrophill
-neutrophils
+Neutrophils
 NFAT
 Nicotinic
 NMR
@@ -285,11 +285,11 @@ repurposing
 resampled
 restimulated
 resuspended
-reticulocyte
+Reticulocyte
 reticulocytes
 Ritchie
 RO
-ROC
+roc
 Salm
 SCAP
 SCD
@@ -338,7 +338,7 @@ transcriptomes
 transcriptomic
 transduced
 transgene
-translational
+Translational
 Treg
 TRIACYLGLYCEROL
 trypsinized
