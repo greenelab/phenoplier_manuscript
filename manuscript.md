@@ -105,9 +105,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/9b9f24361b536caab02792d8c94454834849c74a/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/9b9f24361b536caab02792d8c94454834849c74a/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/9b9f24361b536caab02792d8c94454834849c74a/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/c279c8c56c736c8c2d3ea90eef883894324fce4a/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/c279c8c56c736c8c2d3ea90eef883894324fce4a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/c279c8c56c736c8c2d3ea90eef883894324fce4a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -134,9 +134,9 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/9b9f24361b536caab02792d8c94454834849c74a/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/c279c8c56c736c8c2d3ea90eef883894324fce4a/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@9b9f243](https://github.com/greenelab/phenoplier_manuscript/tree/9b9f24361b536caab02792d8c94454834849c74a)
+from [greenelab/phenoplier_manuscript@c279c8c](https://github.com/greenelab/phenoplier_manuscript/tree/c279c8c56c736c8c2d3ea90eef883894324fce4a)
 on September 9, 2022.
 </em></small>
 
@@ -337,7 +337,7 @@ We used a latent representation defined by a computational approach [@doi:10.103
 This low-dimensional space comprised features representing groups of genes (gene modules) with coordinated expression across different tissues and cell types.
 When mapping gene-trait associations to this reduced expression space, we observed that diseases were significantly associated with gene modules expressed in relevant cell types, such as hypothyroidism with T cells and thyroid, corneal endothelial cells with keratometry measurements, hematological assays on specific blood cell types, plasma lipids with adipose tissue, and neuropsychiatric disorders with different brain cell types.
 Moreover, since we rely on a large and heterogeneous RNA-seq dataset, we were also able to identify modules associated with cell types under specific stimuli or disease states.
-We replicated gene module associations with cardiovascular and autoimmune diseases in the Electronic Medical Records and Genomics (eMERGE) network phase III [@doi:10.1038/gim.2013.72; @doi:10.1101/2021.10.21.21265225].
+We replicated gene module associations with cardiovascular and autoimmune diseases in the Electronic Medical Records and Genomics (eMERGE) network phase III [@doi:10.1038/gim.2013.72].
 Furthermore, we performed a CRISPR screen to analyze lipid regulation in HepG2 cells and observed more robust trait associations with modules than with individual genes, even when single genes known to be involved in lipid metabolism did not reach genome-wide significance.
 <!-- Since our approach incorporates groups of genes associated with a phenotype instead single genes, it was also more robust in finding meaningful gene module-trait associations, even when individual genes involved in lipid metabolism did not reach genome-wide significance in lipid-related traits. -->
 Compared to a single-gene approach, our module-based method also better predicted FDA-approved drug-disease links by capturing tissue-specific pathophysiological mechanisms linked with the mechanism of action of drugs (e.g., niacin with cardiovascular traits via a known immune mechanism), suggesting that modules may provide a better means to examine drug-disease relationships than individual genes.
@@ -844,12 +844,8 @@ We used S-MultiXcan results for our LV-based regression model and our cluster an
 
 We used two large TWAS resources from different cohorts for discovery and replication.
 <!--  -->
-PhenomeXcan [@doi:10.1126/sciadv.aba2083], our discovery cohort, provides results on 4,091 traits across different categories.
-Supplemenetary File `XXX`{.red} has all the details about the included GWAS, sample size and disease/trait categories. (`add phenotyp_info file with categories like in emerge`{.red}).
-<!--  -->
-In PhenomeXcan, these publicly available GWAS summary statistics were used to compute
-1) gene-based associations with the PrediXcan family of methods (described before), and
-2) a posterior probability of colocalization between GWAS loci and *cis*-eQTL with fastENLOC [@doi:10.1126/sciadv.aba2083; @doi:10.1016/j.ajhg.2020.11.012].
+PhenomeXcan [@doi:10.1126/sciadv.aba2083], our discovery cohort, provides results on 4,091 traits across different categories (`add phenotyp_info file with categories like in emerge`{.red}).
+PhenomeXcan was built using publicly available GWAS summary statistics to compute gene-based associations with the PrediXcan family of methods described before.
 <!--  -->
 We refer to the matrix of $z$-scores from S-PrediXcan (Equation (@eq:spredixcan)) across $q$ traits and $m$ genes in tissue $t$ as $\mathbf{M}^{t} \in \mathbb{R}^{q \times m}$.
 As explained later, matrices $\mathbf{M}^{t}$ were used in our LV-based drug repurposing framework since they provide direction of effects.
@@ -903,11 +899,11 @@ We used a competitive test to predict gene-trait associations from TWAS using ge
 Thus, we fit the model
 
 $$
-\mathbf{m}=\beta_{0} + \mathbf{s} \beta_{s} + \sum_{i} \mathbf{x}_{i} \beta_{i} + \bm{\epsilon},
-$$ {#eq:reg:model}
+\mathbf{p}=\beta_{0} + \mathbf{s} \beta_{s} + \sum_{i} \mathbf{x}_{i} \beta_{i} + \bm{\epsilon},
+$$
 
-where $\mathbf{m}$ is a vector of S-MultiXcan gene $p$-values for a trait (with a $-log_{10}$ transformation);
-$\mathbf{s}$ is a binary indicator vector with $s_{\ell}=1$ for the top 1% of genes with the largest loadings for LV $\ell$ (from $\mathbf{Z}_{\ell}$) and zero otherwise;
+where $\mathbf{p}$ is a vector of S-MultiXcan gene $p$-values for a trait (with a $-log_{10}$ transformation);
+$\mathbf{s}$ is a binary indicator vector with $s_{\ell}=1$ for the top 1% of genes in LV $\ell$ (approximately 67 genes for each LV) and zero otherwise;
 $\mathbf{x}_{i}$ is a gene property used as a covariate;
 $\beta$ are effect sizes (with $\beta_{0}$ as the intercept);
 and $\bm{\epsilon} \sim \mathrm{MVN}(0, \sigma^{2} \mathbf{R})$ is a vector of error terms with a multivariate normal distribution (MVN) where $\mathbf{R}$ is the matrix of gene correlations.
@@ -933,7 +929,7 @@ $$
 \mathbf{R}_{ij} & = \frac{2 \times \mathrm{Tr}(\mathbf{P}_{i}^{\top} \mathbf{P}_{j} \mathbf{P}_{j}^{\top} \mathbf{P}_{i})}{\sqrt{2 \times k_{i}} \times \sqrt{2 \times k_{j}} \times (n - 1)^2} \\
 & = \frac{2 \times \mathrm{Tr}(Cor(\mathbf{P}_{i}, \mathbf{P}_{j}) \times Cor(\mathbf{P}_{j}, \mathbf{P}_{i}))}{\sqrt{2 \times k_{i}} \times \sqrt{2 \times k_{j}}},
 \end{split}
-$$ {#eq:reg:r}
+$$
 
 where columns $\mathbf{P}$ are standardized,
 $\mathrm{Tr}$ is the trace of a matrix,
@@ -944,7 +940,7 @@ $$
 Cor(\mathbf{P}_{i}, \mathbf{P}_{j}) & = Cor(\mathbf{T}_{i} \mathbf{V}_{i}^{\top} \mathrm{diag}(\lambda_i)^{-1/2}, \mathbf{T}_{j} \mathbf{V}_{j}^{\top} \mathrm{diag}(\lambda_j)^{-1/2}) \\
 & = \mathrm{diag}(\lambda_i)^{-1/2} \mathbf{V}_{i} (\frac{\mathbf{T}_{i}^{\top} \mathbf{T}_{j}}{n-1}) \mathbf{V}_{j}^{\top} \mathrm{diag}(\lambda_j)^{-1/2},
 \end{split}
-$$ {#eq:reg:cor_pp}
+$$
 
 where $\frac{\mathbf{T}_{i}^{\top} \mathbf{T}_{j}}{n-1} \in \mathbb{R}^{p_i \times p_j}$ is the cross-correlation matrix between the predicted expression levels of genes $i$ and $j$,
 and columns of $\mathbf{V}_{i}$ and scalars $\lambda_i$ are the eigenvectors and eigenvalues of $\mathbf{T}_{i}$, respectively.
@@ -959,7 +955,7 @@ $$
  & = \frac{ \sum_{a \in \mathrm{model}_k \\ b \in \mathrm{model}_l} w_a^k w_b^l Cov(X_a, X_b)} {\sqrt{\widehat{\mathrm{var}}(\mathbf{t}_k) \widehat{\mathrm{var}}(\mathbf{t}_l)} } \\
  & = \frac{ \sum_{a \in \mathrm{model}_k \\ b \in \mathrm{model}_l} w_a^k w_b^l \Gamma_{ab}} {\sqrt{\widehat{\mathrm{var}}(\mathbf{t}_k) \widehat{\mathrm{var}}(\mathbf{t}_l)} },
 \end{split}
-$$ {#eq:reg:corr_genes}
+$$
 
 where $X_a$ is the genotype of SNP $a$,
 $w_a^k$ is the weight of SNP $a$ for gene expression prediction in the tissue model $k$,
@@ -971,7 +967,7 @@ $$
 \widehat{\mathrm{var}}(\mathbf{t}_k^i) & = (\mathbf{W}^k)^\top \Gamma^k \mathbf{W}^k \\
  & = \sum_{a \in \mathrm{model}_k \\ b \in \mathrm{model}_k} w_a^k w_b^k \Gamma_{ab}^k.
 \end{split}
-$$ {#eq:reg:var_gene}
+$$
 
 Note that, since we used the MultiXcan regression model (Equation (@eq:multixcan)), $\mathbf{R}$ is only an approximation of gene correlations in S-MultiXcan.
 As explained before, S-MultiXcan approximates the joint regression parameters in MultiXcan using the marginal regression estimates from S-PrediXcan in (@eq:spredixcan) with some simplifying assumptions and different genotype covariance matrices.
@@ -980,11 +976,6 @@ To account for this, we used a submatrix $\mathbf{R}_{\ell}$ corresponding to ge
 This simplification is conservative since correlations are accounted for top genes only.
 Our simulations (Supplementary Note `XXX`{.red}) show that the model is approximately well-calibrated and can correct for LVs with adjacent and highly correlated genes at the top (Supplementary Figure `YYY`{.red}).
 The model can also detect LVs associated with relevant traits (Figure @fig:lv246 and Table @tbl:sup:phenomexcan_assocs:lv246) that are replicated in a different cohort (Table @tbl:sup:emerge_assocs:lv246).
-
-In Equation (@eq:reg:corr_genes), we only considered SNPs present in GWAS used as input for the TWAS approaches, since otherwise correlations would not be accurately estimated [@doi:10.1371/journal.pgen.1007889].
-Therefore, we computed different correlation matrices for PhenomeXcan and eMERGE.
-In PhenomeXcan, most of the GWAS (4,049) were obtained from the UK Biobank using the same pipeline and including the same set of SNPs, so a single correlation matrix was used for this set.
-For the rest, we used a single correlation matrix for each group of traits that shared the same or most of the SNPs.
 
 We ran our regression model for all 987 LVs across the 4,091 traits in PhenomeXcan.
 For replication, we ran the model in the 309 phecodes in eMERGE.

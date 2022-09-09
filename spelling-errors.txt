@@ -23,7 +23,7 @@ AUC
 autocorrelation
 Bahram
 barcoded
-Basophil
+basophil
 Behmel
 bendroflumethiazide
 Benjamini
@@ -50,7 +50,7 @@ Chun
 cis
 CKD
 claudication
-Coeliac
+coeliac
 collinearity
 colocalization
 colocalized
@@ -114,7 +114,7 @@ func
 GBMF
 gDNA
 genomic
-Genotype
+genotype
 GFP
 Gibco
 glioma
@@ -123,7 +123,7 @@ GMM
 Golabi
 GPP
 GPR
-granulocyte
+Granulocyte
 granulosa
 GreeneScientist
 gRNA
@@ -174,7 +174,7 @@ LDL
 LDLR
 lentiCRIS
 lentiV
-lentiviral
+Lentiviral
 levothyroxine
 LINCS
 LipidSpot
@@ -187,7 +187,7 @@ loadings
 LPL
 LPSstimulated
 Luo
-LV
+lv
 LVs
 Lymphadenitis
 malabsorption
@@ -213,7 +213,7 @@ mononuclear
 MSigDB
 MultiXcan
 MVN
-myeloid
+Myeloid
 myeloma
 myelopathy
 Namjou
@@ -222,9 +222,9 @@ Nephrology
 neurodegenerative
 neurodevelopmental
 neuropsychiatric
-neutrophil
+Neutrophil
 Neutrophill
-Neutrophils
+neutrophils
 NFAT
 nicotinic
 NMR
@@ -285,7 +285,7 @@ repurposing
 resampled
 restimulated
 resuspended
-Reticulocyte
+reticulocyte
 reticulocytes
 Ritchie
 RO
@@ -304,7 +304,6 @@ Skarke
 SLE
 smultixcan
 SNP
-SNPs
 SOX
 sphered
 spirometry
@@ -322,7 +321,6 @@ STRUANGRANT
 Su
 submatrix
 Sumei
-Supplemenetary
 SVM
 SYNDECAN
 TaKaRa
@@ -340,7 +338,7 @@ transcriptomes
 transcriptomic
 transduced
 transgene
-translational
+Translational
 Treg
 TRIACYLGLYCEROL
 trypsinized
