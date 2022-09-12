@@ -23,7 +23,7 @@ AUC
 autocorrelation
 Bahram
 barcoded
-basophil
+Basophil
 Behmel
 bendroflumethiazide
 Benjamini
@@ -45,7 +45,7 @@ Cas
 catabolism
 celiac
 cgreene
-chronotype
+Chronotype
 Chun
 cis
 CKD
@@ -59,7 +59,7 @@ confluency
 covariances
 covariate
 covariates
-CRISPR
+crispr
 crit
 Ctrl
 CXCR
@@ -113,8 +113,8 @@ fibroblasts
 func
 GBMF
 gDNA
-genomic
-genotype
+Genomic
+Genotype
 GFP
 Gibco
 glioma
@@ -123,7 +123,7 @@ GMM
 Golabi
 GPP
 GPR
-Granulocyte
+granulocyte
 granulosa
 GreeneScientist
 gRNA
@@ -174,20 +174,20 @@ LDL
 LDLR
 lentiCRIS
 lentiV
-Lentiviral
+lentiviral
 levothyroxine
 LINCS
 LipidSpot
 LipidSpotTM
 lipolysis
 lipoprotein
-lipoproteins
+LIPOPROTEINS
 lisinopril
 loadings
 LPL
 LPSstimulated
 Luo
-lv
+LV
 LVs
 Lymphadenitis
 malabsorption
@@ -222,9 +222,9 @@ Nephrology
 neurodegenerative
 neurodevelopmental
 neuropsychiatric
-Neutrophil
+neutrophil
 Neutrophill
-neutrophils
+Neutrophils
 NFAT
 nicotinic
 NMR
@@ -289,7 +289,7 @@ reticulocyte
 reticulocytes
 Ritchie
 RO
-roc
+ROC
 Salm
 SCAP
 SCD
@@ -304,6 +304,7 @@ Skarke
 SLE
 smultixcan
 SNP
+SNPs
 SOX
 sphered
 spirometry
@@ -321,6 +322,7 @@ STRUANGRANT
 Su
 submatrix
 Sumei
+Supplemenetary
 SVM
 SYNDECAN
 TaKaRa
@@ -338,7 +340,7 @@ transcriptomes
 transcriptomic
 transduced
 transgene
-Translational
+translational
 Treg
 TRIACYLGLYCEROL
 trypsinized
