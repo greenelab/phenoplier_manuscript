@@ -6,7 +6,7 @@ keywords:
 - PhenomeXcan
 - TWAS
 lang: en-US
-date-meta: '2022-09-12'
+date-meta: '2022-09-15'
 author-meta:
 - Milton Pividori
 - Sumei Lu
@@ -35,8 +35,8 @@ header-includes: |-
   <meta name="citation_title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="og:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
-  <meta name="dc.date" content="2022-09-12" />
-  <meta name="citation_publication_date" content="2022-09-12" />
+  <meta name="dc.date" content="2022-09-15" />
+  <meta name="citation_publication_date" content="2022-09-15" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -105,9 +105,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/9c36e6d56f9ac75a919ef3468a9f9bd73c380800/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/9c36e6d56f9ac75a919ef3468a9f9bd73c380800/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/9c36e6d56f9ac75a919ef3468a9f9bd73c380800/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/5bfc1a358b84019ce5289bb3293e465fca307a58/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/5bfc1a358b84019ce5289bb3293e465fca307a58/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/5bfc1a358b84019ce5289bb3293e465fca307a58/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -134,10 +134,10 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/9c36e6d56f9ac75a919ef3468a9f9bd73c380800/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/5bfc1a358b84019ce5289bb3293e465fca307a58/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@9c36e6d](https://github.com/greenelab/phenoplier_manuscript/tree/9c36e6d56f9ac75a919ef3468a9f9bd73c380800)
-on September 12, 2022.
+from [greenelab/phenoplier_manuscript@5bfc1a3](https://github.com/greenelab/phenoplier_manuscript/tree/5bfc1a358b84019ce5289bb3293e465fca307a58)
+on September 15, 2022.
 </em></small>
 
 ## Authors
@@ -905,7 +905,7 @@ where $\hat{\mathbf{M}}^{l \times q}$ is a matrix where traits are represented b
 As explained later, we used the same approach to project drug-induced transcriptional profiles in LINCS L1000 to obtain a representation of drugs using gene modules.
 
 
-### Regression model for LV-trait associations
+### Regression model for LV-trait associations {#sec:methods}
 
 We adapted the gene-set analysis framework from MAGMA [@doi:10.1371/journal.pcbi.1004219] to TWAS.
 We used a competitive test to predict gene-trait associations from TWAS using gene weights from an LV, testing whether top-weighted genes for an LV are more strongly associated with the phenotype than other genes with relatively small or zero weights.
@@ -987,10 +987,11 @@ As explained before, S-MultiXcan approximates the joint regression parameters in
 This complicates the derivation of an S-MultiXcan-specific solution to compute $\mathbf{R}$.
 To account for this, we used a submatrix $\mathbf{R}_{\ell}$ corresponding to genes that are part of LV $\ell$ only (top 1% of genes) instead of the entire matrix $\mathbf{R}$.
 This simplification is conservative since correlations are accounted for top genes only.
-Our simulations (Supplementary Note `XXX`{.red}) show that the model is approximately well-calibrated and can correct for LVs with adjacent and highly correlated genes at the top (Supplementary Figure `YYY`{.red}).
+Our simulations ([Supplementary Note 1](#sm:reg:null_sim)) show that the model is approximately well-calibrated and can correct for LVs with adjacent and highly correlated genes at the top (e.g., Figure @fig:reg:nulls:qqplot:lv234).
 The model can also detect LVs associated with relevant traits (Figure @fig:lv246 and Table @tbl:sup:phenomexcan_assocs:lv246) that are replicated in a different cohort (Table @tbl:sup:emerge_assocs:lv246).
 
-In Equation (@eq:reg:corr_genes), we only considered SNPs present in GWAS used as input for the TWAS approaches, since otherwise correlations would not be accurately estimated [@doi:10.1371/journal.pgen.1007889].
+In Equation (@eq:reg:corr_genes), for each gene, we only considered tissue models present in S-PrediXcan results, as well as SNPs present in GWAS used as input for the TWAS approaches.
+This is necessary to obtain more accurate correlations estimates [@doi:10.1371/journal.pgen.1007889].
 Therefore, we computed different correlation matrices for PhenomeXcan and eMERGE.
 In PhenomeXcan, most of the GWAS (4,049) were obtained from the UK Biobank using the same pipeline and including the same set of SNPs, so a single correlation matrix was used for this set.
 For the rest, we used a single correlation matrix for each group of traits that shared the same or most of the SNPs.
@@ -1124,32 +1125,32 @@ The dry pellet was kept at -80oC for further genomic DNA isolation.
 The rest of the cells (approximately 200M) were kept in 100mm dishes and stained with a fluorescent dye (LipidSpotTM 488, Biotium, Cat. 70065-T).
 In Brief, LipidSpot 488 was diluted to 1:100 with DPBS.
 4ml of staining solution was used for each dish and incubated at 37oC for 30min.
-Cell images were captured through fluorescent microscope EVOS for GFP signal detection (Supplementary Figure @fig:sup:crispr:fig1).
+Cell images were captured through fluorescent microscope EVOS for GFP signal detection (Figure @fig:sup:crispr:fig1).
 
 **Fluorescence-activated cell sorting (FACS).**
 Cells were immediately collected into 50ml tubes (From this point on, keep cells cold), and spun at 500 x g for 5min at 4oC.
 After DPBS wash, cell pellets were resuspended with FACS Sorting Buffer (1x DPBS without Ca2+/Mg2+, 2.5mM EDTA, 25mM HEPES, 1% BSA.
 The solution was filter sterilized, and kept at 4oC), pi-pet gently to make single cells.
 The cell solution was then filtered through a cell strainer (Falcon, Cat. 352235) and was kept on ice, protected from light.
-Collected cells were sorted on FACSJazz. 100um nozzle was used for sorting. ~20% of each GFP-High and GFP-Low (Supplementary Figure @fig:sup:crispr:fig2) were collected into 15ml tubes.
+Collected cells were sorted on FACSJazz. 100um nozzle was used for sorting. ~20% of each GFP-High and GFP-Low (Figure @fig:sup:crispr:fig2) were collected into 15ml tubes.
 After sorting, cells were immediately spun down.
 Pellets were kept at -80oC for further genomic DNA isolation.
 
 **Genomic DNA isolation and verification.**
 Three conditions of Genomic DNA (Un-Sorted Control, lentiV2 GFP-High, and lentiV2 GFP-Low) were extracted using QIAamp DNA Blood Mini Kit (Qiagen, Cat.51104), followed by UV Spectroscopy (Nanodrop) to access the quality and quantity of the gDNA.
 A total of 80-160ug of gDNA was isolated for each condition.
-sgRNA cassette and lentiviral specific transgene in isolated gDNA were verified through PCR (Supplementary Figure @fig:sup:crispr:fig3).
+sgRNA cassette and lentiviral specific transgene in isolated gDNA were verified through PCR (Figure @fig:sup:crispr:fig3).
 
 **Illumina libraries generation and sequencing.**
-The fragment containing sgRNA cassette was amplified using P5 /P7 primers, as indicated in [@pmid:26780180], and primer sequences were adapted from Broad Institute protocol (Supplementary Figure @fig:sup:crispr:table1).
+The fragment containing sgRNA cassette was amplified using P5 /P7 primers, as indicated in [@pmid:26780180], and primer sequences were adapted from Broad Institute protocol (Figure @fig:sup:crispr:table1).
 Stagger sequence (0-8nt) was included in P5 and 8bp uniquely barcoded sequence in P7.
 Primers were synthesized through Integrated DNA Technologies (IDT), and each primer was PAGE purified. 32 PCR reactions were set up for each condition.
 Each 100ul PCR reaction consists of roughly 5ug of gDNA, 5ul of each 10uM P5 and P7. ExTaq DNA Polymerase (TaKaRa, Cat. RR001A) was used to amplify the amplicon.
 PCR Thermal Cycler Parameters set as Initial at 95oC for 1min; followed by 24 cycles of Denaturation at 94oC for 30 seconds, Annealing at 52.5oC for 30 seconds, Extension at 72oC for 30 seconds.
-A final Elongation at 72oC for 10 minutes. 285bp-293bp PCR products were expected (Supplementary Figure @fig:sup:crispr:fig4 A).
+A final Elongation at 72oC for 10 minutes. 285bp-293bp PCR products were expected (Figure @fig:sup:crispr:fig4 A).
 PCR products within the same condition were pooled and purified using SPRIselect beads (Beckman Coulter, Cat. B23318).
 Purified Illumina libraries were quantitated on Qubit, and the quality of the library was analyzed on Bio-analyzer using High Sensitivity DNA Chip.
-A single approximate 285bp peak was expected. (Supplementary Figure @fig:sup:crispr:fig4 B).
+A single approximate 285bp peak was expected. (Figure @fig:sup:crispr:fig4 B).
 Final Illumina library samples were sequenced on Nova-seq 6000.
 Samples were pooled and loaded on an SP flow cell, along with a 20% PhiX control v3 library spike-in.
 
@@ -1172,15 +1173,93 @@ Figure 1 was created with BioRender.com.
 
 ## Supplementary material
 
+### Regression model for LV-trait associations
 
-### CRISPR-screen
+#### Supplementary Note 1: mean type I error rates and calibration of LV-based regression model {#sm:reg:null_sim}
+
+We assessed our GLS model type I error rates (proportion of $p$-values below 0.05) and calibration using a null model of random traits and genotype data from 1000 Genomes Phase III.
+We selected 312 individuals with European ancestry, and then analyzed 1,000 traits drawn from a standard normal distribution $\mathcal{N}(0,1)$.
+We ran all the standard procedures for the TWAS approaches (S-PrediXcan and S-MultiXcan), including:
+1) a standard GWAS using linear regression under an additive genetic model,
+2) different GWAS processing steps, including harmonization and imputation procedures as defined in [@doi:10.1002/gepi.22346],
+3) S-PrediXcan and S-MultiXcan analyses.
+Below we provide details for each of these steps.
+
+**Step 1 - GWAS**. We performed standard QC procedures such as
+filtering out variants with missing call rates eexceeding 0.01, MAF below 1% or MAC below 20, and HWE below 1e-6,
+and removing samples with high sex-discrepancy and high-relatedness (first and second degree).
+We included sex and the top 20 principal components as covariates, performing the association test on 5,923,554 variants across all 1,000 random phenotypes.
+
+**Step 2 - GWAS processing**. These steps include harmonization of GWAS and imputation of $z$-scores, which are part of the TWAS pipeline and are needed in order to ensure an acceptable overlap with SNPs in prediction models.
+The scripts to run these steps are available in [@url:https://github.com/hakyimlab/summary-gwas-imputation].
+These procedures were run for all 1,000 random phenotypes and generated a total number of 8,325,729 variants, including those with original and imputed $z$-scores.
+`maybe show some manhattan plot?`{.red}
+
+**Step 3 - TWAS**. We processed the imputed GWAS with S-PrediXcan using the MASHR prediction models on 49 tissues from GTEx v8.
+Then, S-MultiXcan was ran using the GWAS and S-PrediXcan outputs to generate gene-trait association $p$-values.
+`maybe show some manhattan plot?`{.red}
+
+Finally, we ran our GLS model (Equation (@eq:reg:model)) to compute an association between each of the 987 LVs in MultiPLIER and the 1,000 S-MultiXcan results on random phenotypes.
+For this, we built a gene correlation matrix specifically for this cohort (see [Methods](#sec:methods)).
+Then, we compared the GLS results with an equivalent, baseline ordinarly least squares (OLS) model assuming independence between genes.
+Figure @fig:reg:nulls:qqplots compares the distribution of $p$-values of the OLS and GLS models.
+The GLS model has a slightly smaller mean type I error rate (0.0558, SD=0.0127) than the baseline OLS model (0.0584, SD=0.0140), and $p$-values follow more closely the expected uniform distribution.
+Importantly, the GLS model is able to correct for LVs with adjacent and highly correlated genes at the top such as LV234 (Figure @fig:reg:nulls:qqplot:lv234), LV847 (Figure @fig:reg:nulls:qqplot:lv847), LV45 (Figure @fig:reg:nulls:qqplot:lv45), or LV800 (Figure @fig:reg:nulls:qqplot:lv800), among others.
+In contrast and as expected, the OLS model has higher mean type I errors and smaller-than-expected $p$-values in all these cases.
+
+We also detected other LVs with higher-than-expected mean type I errors for both the GLS and OLS models, although they don't have a relatively large number of adjacent genes at the top.
+One example is LV914, shown in Figure @fig:reg:nulls:qqplot:lv914.
+Inflation in these LVs might be explained by inaccuracies in correlation estimates between the individual-level MultiXcan model and its summary-based version (see Methods).
+Therefore, we flagged those with a type I error rate larger than 0.07 (127 LVs) and excluded them from our main analyses.
+
+![
+**QQ-plots for OLS (baseline) and GLS (PhenoPLIER) models on random phenotypes.**
+](images/gls/null_sims/models_qqplots.png "QQ-plots for OLS and GLS models"){#fig:reg:nulls:qqplots width="80%"}
+
+![
+**QQ-plots for LV234 on random phenotypes.**
+Among the top 1% of genes in this LV, 17 are located in band 6p22.2, 5 in 6p22.1 and 3 in 7q11.23.
+](images/gls/null_sims/models_lv234.png "QQ-plots for LV234"){#fig:reg:nulls:qqplot:lv234 width="80%"}
+
+![
+**QQ-plots for LV847 on random phenotypes.**
+Among the top 1% of genes in this LV, 15 are located in band 6p22.2, 5 in 6p22.1 and 2 in 15q26.1.
+](images/gls/null_sims/models_lv847.png "QQ-plots for LV847"){#fig:reg:nulls:qqplot:lv847 width="80%"}
+
+![
+**QQ-plots for LV45 on random phenotypes.**
+Among the top 1% of genes in this LV, 12 are located in band 6p22.2, 6 in 6p22.1 and 3 in 1q23.3.
+](images/gls/null_sims/models_lv45.png "QQ-plots for LV45"){#fig:reg:nulls:qqplot:lv45 width="80%"}
+
+![
+**QQ-plots for LV800 on random phenotypes.**
+Among the top 1% of genes in this LV, 16 are located in band 19q13.43, 9 in 19p13.2 and 9 in 19q13.31.
+](images/gls/null_sims/models_lv800.png "QQ-plots for LV800"){#fig:reg:nulls:qqplot:lv800 width="80%"}
+
+![
+**QQ-plots for LV914 on random phenotypes.**
+Among the top 1% of genes in this LV, 2 are located in band 13q13.3, 2 in 7p15.2 and 2 in 19q13.2.
+](images/gls/null_sims/models_lv914.png "QQ-plots for LV914"){#fig:reg:nulls:qqplot:lv914 width="80%"}
+
+
+#### LV-trait associations in real data
+
+![
+**QQ-plots of LV-trait associations in real data.**
+QQ-plot in PhenomeXcan (left, discovery cohort) across 4,091 traits and 987 LVs, and eMERGE (right, replication cohort) across 309 traits and 987 LVs.
+](images/gls/real_data/qqplots.png "QQ-plots in real data"){#fig:reg:real:qqplots width="80%"}
+
+
+### CRISPR-Cas9
+
+#### Screening steps
 
 ![
 **EVOS Fluorescent Microscope Image Capture.**
 A. HepG2_lentiV2_Ctrl with no-viral transduction.
 B. HepG2_lentiV2 with viral transduction.
 <!--  -->
-](images/crispr/figure1.png "EVOS Fluorescent Microscope Image Capture"){#fig:sup:crispr:fig1 width="80%"}
+](images/crispr/figure1.png "EVOS Fluorescent Microscope Image Capture"){#fig:sup:crispr:fig1 tag="S1" width="80%"}
 
 
 ![
@@ -1188,7 +1267,7 @@ B. HepG2_lentiV2 with viral transduction.
 A. HepG2_UnStained WT.
 B. HepG2_lentiV2 with viral transduction.
 <!--  -->
-](images/crispr/figure2.png "Fluorescence-Activated Cell Sorting Gate Setting"){#fig:sup:crispr:fig2 width="80%"}
+](images/crispr/figure2.png "Fluorescence-Activated Cell Sorting Gate Setting"){#fig:sup:crispr:fig2 tag="S2" width="80%"}
 
 
 ![
@@ -1196,24 +1275,83 @@ B. HepG2_lentiV2 with viral transduction.
 A. 20nt sgRNA cassette was verified in lentiV2 transduced genomic DNA population, 163 bp PCR product obtained, while WT HepG2 didn’t possess the cassette, thus, no PCR product.
 B. lentiviral-specific transgene WPRE was verified in lentiV2 transduced genomic DNA population, while no transduced WT didn’t have the transgene, therefore, no 173 bp PCR product observed.
 <!--  -->
-](images/crispr/figure3.png "Verification of sgRNA cassette and lentiV2 transgene"){#fig:sup:crispr:fig3 width="80%"}
+](images/crispr/figure3.png "Verification of sgRNA cassette and lentiV2 transgene"){#fig:sup:crispr:fig3 tag="S3" width="80%"}
 
 
 ![
 <!-- **XXX.** -->
 <!--  -->
 <!--  -->
-](images/crispr/table1.png "Table 1"){#fig:sup:crispr:table1 width="80%"}
+](images/crispr/table1.png "Table 1"){#fig:sup:crispr:table1 tag="S4" width="80%"}
 
 
 ![
 **Illumina library generation.**
 A. Construct for generating illumina libraries.
 B. Final illumina library from HS DNA ---showed a single ~285bp peak was generated.
-](images/crispr/figure4.png "xxxx"){#fig:sup:crispr:fig4 width="80%"}
+](images/crispr/figure4.png "xxxx"){#fig:sup:crispr:fig4 tag="S5" width="80%"}
 
 
-### LV603
+
+#### Gene modules enrichment for lipids gene-sets
+
+<!-- lipids_gene_sets:modules_enriched_increase:start -->
+| Gene module   | Lipids gene-set   | Leading edge      | p-value   |
+|:--------------|:------------------|:------------------|:----------|
+| **LV246**     | increase          | *DGAT2*, *ACACA*  | 0.0035    |
+| LV702         | increase          | *ACACA*, *DGAT2*  | 0.0046    |
+| **LV607**     | increase          | *ACACA*, *DGAT2*  | 0.0058    |
+| LV890         | increase          | *ACACA*, *DGAT2*  | 0.0067    |
+| **LV74**      | increase          | *MBTPS1*, *DGAT2* | 0.0078    |
+| **LV865**     | increase          | *ACACA*, *DGAT2*  | 0.0092    |
+| LV841         | increase          | *ACACA*, *DGAT2*  | 0.0096    |
+
+Table: Gene modules (LVs) nominally enriched for the lipids-increasing gene-set from the CRISPR-screen (*P* < 0.01). LVs significantly aligned with pathways (FDR < 0.05) from the MultiPLIER models are shown in boldface. {#tbl:sup:lipids_crispr:modules_enriched_increase}
+<!-- lipids_gene_sets:modules_enriched_increase:end -->
+
+
+<!-- lipids_gene_sets:modules_enriched_decrease:start -->
+| Gene module   | Lipids gene-set   | Leading edge       | p-value   |
+|:--------------|:------------------|:-------------------|:----------|
+| LV520         | decrease          | *FBXW7*, *TCF7L2*  | 0.0006    |
+| LV801         | decrease          | *UBE2J2*, *TCF7L2* | 0.0022    |
+| LV512         | decrease          | *FBXW7*, *TCF7L2*  | 0.0025    |
+| **LV612**     | decrease          | *PTEN*, *FBXW7*    | 0.0036    |
+| LV41          | decrease          | *PCYT2*, *TCF7L2*  | 0.0041    |
+| **LV838**     | decrease          | *UBE2J2*, *TCF7L2* | 0.0070    |
+| LV302         | decrease          | *TCF7L2*, *PTEN*   | 0.0083    |
+| LV959         | decrease          | *TCF7L2*, *PTEN*   | 0.0092    |
+
+Table: Gene modules (LVs) nominally enriched for the lipids-decreasing gene-set from the CRISPR-screen (*P* < 0.01). LVs significantly aligned with pathways (FDR < 0.05) from the MultiPLIER models are shown in boldface. {#tbl:sup:lipids_crispr:modules_enriched_decrease}
+<!-- lipids_gene_sets:modules_enriched_decrease:end -->
+
+
+
+### Consensus clustering of traits
+
+#### Agreement of consensus clustering partitions with the ensemble
+
+![
+**Final selected partitions for follow-up analysis.**
+<!--  -->
+From all consensus clustering partitions generated with $k$ from 2 to 60, we selected those with a median adjusted Rand index (ARI) with the ensemble members greater the 75th percentile.
+](images/clustering/selected_best_partitions_by_k.svg "Consensus partitions agreement with ensemble"){#fig:sup:consensus_agreement width="80%"}
+
+
+
+#### Cluster-specific and general transcriptional processes associated with disease
+
+![
+**Cluster-specific and general transcriptional processes associated with disease using novel LVs.**
+The plot shows a submatrix of $\hat{\mathbf{M}}$ for the main trait clusters at $k$=29, considering only LVs (rows) that are not aligned with any pathway.
+Standardized values from -6 (lighter color) to 21 (darker color).
+](images/clustering/global_clustermap-novel-plain.svg "Heatmap with novel gene modules and traits"){#fig:sup:clustering:novel:heatmap width="100%"}
+
+
+
+### Latent variables (gene modules) information
+
+#### LV603
 
 <!-- LV603:multiplier_pathways:start -->
 | Pathway                             | AUC   | FDR      |
@@ -1250,40 +1388,7 @@ Table: Significant trait associations of LV603 in eMERGE. {#tbl:sup:emerge_assoc
 <!-- LV603:emerge_traits_assocs:end -->
 
 
-### Gene modules enrichment for lipids gene-sets
-
-<!-- lipids_gene_sets:modules_enriched_increase:start -->
-| Gene module   | Lipids gene-set   | Leading edge      | p-value   |
-|:--------------|:------------------|:------------------|:----------|
-| **LV246**     | increase          | *DGAT2*, *ACACA*  | 0.0035    |
-| LV702         | increase          | *ACACA*, *DGAT2*  | 0.0046    |
-| **LV607**     | increase          | *ACACA*, *DGAT2*  | 0.0058    |
-| LV890         | increase          | *ACACA*, *DGAT2*  | 0.0067    |
-| **LV74**      | increase          | *MBTPS1*, *DGAT2* | 0.0078    |
-| **LV865**     | increase          | *ACACA*, *DGAT2*  | 0.0092    |
-| LV841         | increase          | *ACACA*, *DGAT2*  | 0.0096    |
-
-Table: Gene modules (LVs) nominally enriched for the lipids-increasing gene-set from the CRISPR-screen (*P* < 0.01). LVs significantly aligned with pathways (FDR < 0.05) from the MultiPLIER models are shown in boldface. {#tbl:sup:lipids_crispr:modules_enriched_increase}
-<!-- lipids_gene_sets:modules_enriched_increase:end -->
-
-
-<!-- lipids_gene_sets:modules_enriched_decrease:start -->
-| Gene module   | Lipids gene-set   | Leading edge       | p-value   |
-|:--------------|:------------------|:-------------------|:----------|
-| LV520         | decrease          | *FBXW7*, *TCF7L2*  | 0.0006    |
-| LV801         | decrease          | *UBE2J2*, *TCF7L2* | 0.0022    |
-| LV512         | decrease          | *FBXW7*, *TCF7L2*  | 0.0025    |
-| **LV612**     | decrease          | *PTEN*, *FBXW7*    | 0.0036    |
-| LV41          | decrease          | *PCYT2*, *TCF7L2*  | 0.0041    |
-| **LV838**     | decrease          | *UBE2J2*, *TCF7L2* | 0.0070    |
-| LV302         | decrease          | *TCF7L2*, *PTEN*   | 0.0083    |
-| LV959         | decrease          | *TCF7L2*, *PTEN*   | 0.0092    |
-
-Table: Gene modules (LVs) nominally enriched for the lipids-decreasing gene-set from the CRISPR-screen (*P* < 0.01). LVs significantly aligned with pathways (FDR < 0.05) from the MultiPLIER models are shown in boldface. {#tbl:sup:lipids_crispr:modules_enriched_decrease}
-<!-- lipids_gene_sets:modules_enriched_decrease:end -->
-
-
-### LV246
+#### LV246
 
 <!-- LV246:multiplier_pathways:start -->
 | Pathway                                                        | AUC   | FDR      |
@@ -1338,7 +1443,7 @@ Table: Significant trait associations of LV246 in eMERGE. {#tbl:sup:emerge_assoc
 <!-- LV246:emerge_traits_assocs:end -->
 
 
-### LV116
+#### LV116
 
 <!-- LV116:multiplier_pathways:start -->
 | Pathway                                              | AUC   | FDR      |
@@ -1355,7 +1460,7 @@ Table: Pathways aligned to LV116 from the MultiPLIER models. {#tbl:sup:multiplie
 <!-- LV116:multiplier_pathways:end -->
 
 
-### LV931
+#### LV931
 
 ![
 **Cell types for LV931.**
@@ -1373,7 +1478,7 @@ Table: Pathways aligned to LV931 from the MultiPLIER models. {#tbl:sup:multiplie
 <!-- LV931:multiplier_pathways:end -->
 
 
-### LV66
+#### LV66
 
 ![
 **Cell types for LV66.**
@@ -1389,26 +1494,7 @@ Table: Pathways aligned to LV66 from the MultiPLIER models. {#tbl:sup:multiplier
 <!-- LV66:multiplier_pathways:end -->
 
 
-### Agreement of consensus clustering partitions with the ensemble by number of clusters
-
-![
-**Final selected partitions for follow-up analysis.**
-<!--  -->
-From all consensus clustering partitions generated with $k$ from 2 to 60, we selected those with a median adjusted Rand index (ARI) with the ensemble members greater the 75th percentile.
-](images/clustering/selected_best_partitions_by_k.svg "Consensus partitions agreement with ensemble"){#fig:sup:consensus_agreement width="80%"}
-
-
-
-### Cluster-specific and general transcriptional processes associated with disease
-
-![
-**Cluster-specific and general transcriptional processes associated with disease using novel LVs.**
-The plot shows a submatrix of $\hat{\mathbf{M}}$ for the main trait clusters at $k$=29, considering only LVs (rows) that are not aligned with any pathway.
-Standardized values from -6 (lighter color) to 21 (darker color).
-](images/clustering/global_clustermap-novel-plain.svg "Heatmap with novel gene modules and traits"){#fig:sup:clustering:novel:heatmap width="100%"}
-
-
-### LV928
+#### LV928
 
 ![
 **Cell types for LV928.**
@@ -1457,7 +1543,7 @@ Table: Significant trait associations of LV928 in eMERGE. {#tbl:sup:emerge_assoc
 <!-- LV928:emerge_traits_assocs:end -->
 
 
-### LV30
+#### LV30
 
 ![
 **Cell types for LV30.**
@@ -1500,7 +1586,7 @@ Table: Significant trait associations of LV30 in eMERGE. {#tbl:sup:emerge_assocs
 <!-- LV30:emerge_traits_assocs:end -->
 
 
-### LV730
+#### LV730
 
 ![
 **Cell types for LV730.**
@@ -1536,7 +1622,7 @@ Table: Significant trait associations of LV730 in eMERGE. {#tbl:sup:emerge_assoc
 <!-- LV730:emerge_traits_assocs:end -->
 
 
-### LV598
+#### LV598
 
 ![
 **Cell types for LV598.**
@@ -1576,7 +1662,7 @@ Table: Significant trait associations of LV598 in eMERGE. {#tbl:sup:emerge_assoc
 <!-- LV598:emerge_traits_assocs:end -->
 
 
-### LV844
+#### LV844
 
 ![
 **Cell types for LV844.**
@@ -1630,7 +1716,7 @@ Table: Significant trait associations of LV844 in eMERGE. {#tbl:sup:emerge_assoc
 <!-- LV844:emerge_traits_assocs:end -->
 
 
-### LV155
+#### LV155
 
 ![
 **Cell types for LV155.**
@@ -1664,7 +1750,7 @@ Table: Trait associations of LV155 in eMERGE. {#tbl:sup:emerge_assocs:lv155}
 <!-- LV155:emerge_traits_assocs:end -->
 
 
-### LV57
+#### LV57
 
 ![
 **Cell types for LV57.**
@@ -1711,7 +1797,7 @@ Table: Significant trait associations of LV57 in eMERGE. {#tbl:sup:emerge_assocs
 <!-- LV57:emerge_traits_assocs:end -->
 
 
-### LV54
+#### LV54
 
 ![
 **Cell types for LV54.**
@@ -1778,7 +1864,7 @@ Table: Significant trait associations of LV54 in eMERGE. {#tbl:sup:emerge_assocs
 <!-- LV54:emerge_traits_assocs:end -->
 
 
-### LV847
+#### LV847
 
 ![
 **Cell types for LV847.**
@@ -1863,7 +1949,7 @@ Table: Significant trait associations of LV847 in eMERGE. {#tbl:sup:emerge_assoc
 <!-- LV847:emerge_traits_assocs:end -->
 
 
-### LV136
+#### LV136
 
 ![
 **Cell types for LV136.**
@@ -1915,7 +2001,7 @@ Table: Trait associations of LV136 in eMERGE. {#tbl:sup:emerge_assocs:lv136}
 <!-- LV136:emerge_traits_assocs:end -->
 
 
-### LV93
+#### LV93
 
 ![
 **Cell types for LV93.**
@@ -1956,7 +2042,7 @@ Table: Significant trait associations of LV93 in eMERGE. {#tbl:sup:emerge_assocs
 <!-- LV93:emerge_traits_assocs:end -->
 
 
-### LV206
+#### LV206
 
 ![
 **Cell types for LV206.**
@@ -1992,7 +2078,7 @@ Table: Significant trait associations of LV206 in eMERGE. {#tbl:sup:emerge_assoc
 <!-- LV206:emerge_traits_assocs:end -->
 
 
-### LV260
+#### LV260
 
 ![
 **Cell types for LV260.**
@@ -2025,7 +2111,7 @@ Table: Trait associations of LV260 in eMERGE. {#tbl:sup:emerge_assocs:lv260}
 <!-- LV260:emerge_traits_assocs:end -->
 
 
-### LV21
+#### LV21
 
 ![
 **Cell types for LV21.**
@@ -2060,7 +2146,7 @@ Table: Trait associations of LV21 in eMERGE. {#tbl:sup:emerge_assocs:lv21}
 <!-- LV21:emerge_traits_assocs:end -->
 
 
-### LV5
+#### LV5
 
 ![
 **Cell types for LV5.**
@@ -2104,7 +2190,7 @@ Table: Trait associations of LV5 in eMERGE. {#tbl:sup:emerge_assocs:lv5}
 <!-- LV5:emerge_traits_assocs:end -->
 
 
-### LV434
+#### LV434
 
 ![
 **Cell types for LV434.**

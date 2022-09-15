@@ -21,7 +21,7 @@
   <meta name="author" content="Marylyn D. Ritchie" />
   <meta name="author" content="Struan F.A. Grant" />
   <meta name="author" content="Casey S. Greene" />
-  <meta name="dcterms.date" content="2022-09-12" />
+  <meta name="dcterms.date" content="2022-09-15" />
   <meta name="keywords" content="gene co-expression, MultiPLIER, PhenomeXcan, TWAS" />
   <title>Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms</title>
   <style>
@@ -60,8 +60,8 @@
   <meta name="citation_title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="og:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
-  <meta name="dc.date" content="2022-09-12" />
-  <meta name="citation_publication_date" content="2022-09-12" />
+  <meta name="dc.date" content="2022-09-15" />
+  <meta name="citation_publication_date" content="2022-09-15" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -130,9 +130,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/9c36e6d56f9ac75a919ef3468a9f9bd73c380800/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/9c36e6d56f9ac75a919ef3468a9f9bd73c380800/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/9c36e6d56f9ac75a919ef3468a9f9bd73c380800/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/5bfc1a358b84019ce5289bb3293e465fca307a58/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/5bfc1a358b84019ce5289bb3293e465fca307a58/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/5bfc1a358b84019ce5289bb3293e465fca307a58/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -161,10 +161,10 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 ]{.banner .lightblue} -->
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/phenoplier_manuscript/v/9c36e6d56f9ac75a919ef3468a9f9bd73c380800/">permalink</a>)
+(<a href="https://greenelab.github.io/phenoplier_manuscript/v/5bfc1a358b84019ce5289bb3293e465fca307a58/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/9c36e6d56f9ac75a919ef3468a9f9bd73c380800">greenelab/phenoplier_manuscript@9c36e6d</a>
-on September 12, 2022.
+from <a href="https://github.com/greenelab/phenoplier_manuscript/tree/5bfc1a358b84019ce5289bb3293e465fca307a58">greenelab/phenoplier_manuscript@5bfc1a3</a>
+on September 15, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -389,7 +389,7 @@ Is there a subset of module’s genes that is closer to the definition of “cor
 Are drugs perturbing these transcriptional mechanisms, and if so, can they suggest potential mechanisms of action?</p>
 <p>In the original MultiPLIER study, the authors reported that one of the latent variables, identified as LV603, was associated with a known neutrophil pathway and highly correlated with neutrophil count estimates from whole blood RNA-seq profiles <span class="citation" data-cites="18TSqd1tG">[<a href="#ref-18TSqd1tG" role="doc-biblioref">42</a>]</span>.
 We analyzed LV603 using PhenoPLIER (Figure <a href="#fig:entire_process">1</a> c) and found that
-1) neutrophil counts and other white blood cell traits were ranked among the top 10 traits out of 4,091 (Figure <a href="#fig:entire_process">1</a> c, bottom) and significantly associated with this LV (Supplementary Table <a href="#tbl:sup:phenomexcan_assocs:lv603">3</a>) when using the gene-property approach,
+1) neutrophil counts and other white blood cell traits were ranked among the top 10 traits out of 4,091 (Figure <a href="#fig:entire_process">1</a> c, bottom) and significantly associated with this LV (Supplementary Table <a href="#tbl:sup:phenomexcan_assocs:lv603">5</a>) when using the gene-property approach,
 and 2) LV603’s genes were expressed in highly relevant cell types (Figure <a href="#fig:entire_process">1</a> c, top).
 These results suggested that groups of functionally related and co-expressed genes tend to correspond to groups of trait-associated genes.
 Thus, the gene expression space (which has no GTEx samples) and the TWAS space (with gene models trained using GTEx v8) contained shared patterns, and the approach can link transcriptional mechanisms from large and diverse dataset collections to complex traits.</p>
@@ -437,7 +437,7 @@ RCP: locus regional colocalization probability.
 <!--  --></figcaption>
 </figure>
 </div>
-<p>Next, we analyzed all 987 LVs using Fast Gene Set Enrichment Analysis (FGSEA) <span class="citation" data-cites="Z8WXLD67">[<a href="#ref-Z8WXLD67" role="doc-biblioref">43</a>]</span>, and found 15 LVs nominally enriched (unadjusted <em>P</em> &lt; 0.01) with these lipid-altering gene-sets (Supplementary Tables <a href="#tbl:sup:lipids_crispr:modules_enriched_increase">5</a> and <a href="#tbl:sup:lipids_crispr:modules_enriched_decrease">6</a>).
+<p>Next, we analyzed all 987 LVs using Fast Gene Set Enrichment Analysis (FGSEA) <span class="citation" data-cites="Z8WXLD67">[<a href="#ref-Z8WXLD67" role="doc-biblioref">43</a>]</span>, and found 15 LVs nominally enriched (unadjusted <em>P</em> &lt; 0.01) with these lipid-altering gene-sets (Supplementary Tables <a href="#tbl:sup:lipids_crispr:modules_enriched_increase">2</a> and <a href="#tbl:sup:lipids_crispr:modules_enriched_decrease">3</a>).
 <!-- When we considered the increasing-lipids gene-set, genes and LVs were associated with a more diverse set of traits, such as blood count tests, impedance measures, and bone-densitometry (Supplementary Tables @tbl:sup:single_genes:lipids_increasing:top_traits and @tbl:sup:modules:lipids_increasing:top_traits). -->
 <!-- FGSEA found 27 LVs nominally enriched for the increasing-lipids gene-set which were associated with the same traits, and additionally to lung function, arterial stiffness, intraocular pressure, handgrip strength, rheumatoid arthritis, and celiac disease. -->
 Among those with reliable sample metadata, LV246, the top LV associated with the lipids-increasing gene-set, contained genes mainly co-expressed in adipose tissue (Figure <a href="#fig:lv246">2</a> a), which plays a key role in coordinating and regulating lipid metabolism.
@@ -517,7 +517,7 @@ It was initially thought that the antiatherogenic effects of niacin were solely 
 However, it has been shown that nicotinic acid can reduce atherosclerosis progression independently of its antidyslipidemic activity through the activation of <em>GPR109A</em> in immune cells <span class="citation" data-cites="1Bz0jRHYo">[<a href="#ref-1Bz0jRHYo" role="doc-biblioref">60</a>]</span>, thus boosting anti-inflammatory processes <span class="citation" data-cites="1DblG8swn">[<a href="#ref-1DblG8swn" role="doc-biblioref">61</a>]</span>.
 In addition, flushing, a common adverse effect of niacin, is also produced by the activation of GPR109A in Langerhans cells (macrophages of the skin).
 This alternative mechanism for niacin could have been hypothesized by examining the cell types where the top-contributing modules are expressed:
-for instance, LV116 and LV931 (Figure <a href="#fig:lv116:cell_types">4</a>, Supplementary Figure <a href="#fig:sup:lv931">13</a>, and Supplementary Tables <a href="#tbl:sup:multiplier_pathways:lv116">10</a> and <a href="#tbl:sup:multiplier_pathways:lv931">11</a>) were the top two modules for AT, with a strong signature in monocytes, macrophages, neutrophils, dendritic cells, among others.
+for instance, LV116 and LV931 (Figure <a href="#fig:lv116:cell_types">4</a>, Supplementary Figure <a href="#fig:sup:lv931">17</a>, and Supplementary Tables <a href="#tbl:sup:multiplier_pathways:lv116">10</a> and <a href="#tbl:sup:multiplier_pathways:lv931">11</a>) were the top two modules for AT, with a strong signature in monocytes, macrophages, neutrophils, dendritic cells, among others.
 In Figure <a href="#fig:lv116:cell_types">4</a>, it can be seen that LV116’s genes are expressed as an immune response when these cell types are under different stimuli, such as diarrhea caused by different pathogens <span class="citation" data-cites="RliFvowC">[<a href="#ref-RliFvowC" role="doc-biblioref">62</a>]</span>, samples from multiple sclerosis or systemic lupus erythematosus <span class="citation" data-cites="D5XBhzim EnoqU4ga">[<a href="#ref-D5XBhzim" role="doc-biblioref">63</a>,<a href="#ref-EnoqU4ga" role="doc-biblioref">64</a>]</span>, or infected with different viruses (such as herpes simplex <span class="citation" data-cites="11eausmiy">[<a href="#ref-11eausmiy" role="doc-biblioref">65</a>]</span>, West Nile virus <span class="citation" data-cites="mtMYROCN">[<a href="#ref-mtMYROCN" role="doc-biblioref">66</a>]</span>, <em>Salmonella typhimurium</em> <span class="citation" data-cites="1kgcHkGm">[<a href="#ref-1kgcHkGm" role="doc-biblioref">67</a>]</span>, among others).
 These three LVs (LV246, LV116 and LV931) were among the top 20 modules contributing to the niacin prediction across different cardiovascular traits (Table <a href="#tbl:niacin:cardio:top_lvs">1</a>).
 Given the current controversy around this compound and its effect on cardiovascular disease, our approach may help to better understand different pathophysiological mechanisms linked with the mechanism of action of niacin.</p>
@@ -593,7 +593,7 @@ Given the current controversy around this compound and its effect on cardiovascu
 </div>
 <p>The LV-based method was able to integrate different data types to provide an interpretable approach for drug repositioning research based on genetic studies.
 Additionally, our approach could also be helpful to understand better the mechanism of pharmacological effect of known or experimental drugs.
-For example, LV66, one of the top LVs affected by niacin (Supplementary Figure <a href="#fig:sup:lv66">14</a>) was mainly expressed in ovarian granulosa cells.
+For example, LV66, one of the top LVs affected by niacin (Supplementary Figure <a href="#fig:sup:lv66">18</a>) was mainly expressed in ovarian granulosa cells.
 This compound has been very recently considered as a potential therapeutic for ovarian diseases <span class="citation" data-cites="kLRErKXz TovvsrDr">[<a href="#ref-kLRErKXz" role="doc-biblioref">68</a>,<a href="#ref-TovvsrDr" role="doc-biblioref">69</a>]</span>, as it was found to promote follicle growth and inhibit granulosa cell apoptosis in animal models.
 Our LV-based approach could be helpful to generate novel hypotheses to evaluate potential mechanisms of action, or even adverse effects, of different drugs.</p>
 <h3 id="lv-projections-reveal-trait-clusters-with-shared-transcriptomic-properties">LV projections reveal trait clusters with shared transcriptomic properties</h3>
@@ -690,31 +690,31 @@ Standardized values from -5 (lighter color) to 16 (darker color).</figcaption>
 We trained decision tree classifiers on the input data (Figure <a href="#fig:clustering:design">5</a>) using each cluster at <span class="math inline">\(k\)</span>=29 (bottom of Figure <a href="#fig:clustering:tree">6</a>) as labels (see Methods).
 This yielded for each cluster the top LVs, where several of them were well-aligned to existing pathways (Figure <a href="#fig:clustering:heatmap">7</a>), and others were novel and expressed in relevant tissues (Supplementary Figure <a href="#fig:sup:clustering:novel:heatmap">16</a>).
 In Figure <a href="#fig:clustering:heatmap">7</a>, it can be seen that some LVs were highly specific to certain types of traits, while others were associated with a wide range of different phenotypes, thus potentially involved in more general biological functions.
-For example, LVs such as LV928 and LV30, which were well-aligned to early progenitors of the erythrocytes lineage <span class="citation" data-cites="Zk82GvJV">[<a href="#ref-Zk82GvJV" role="doc-biblioref">72</a>]</span> (Supplementary Tables <a href="#tbl:sup:multiplier_pathways:lv928">13</a> and <a href="#tbl:sup:multiplier_pathways:lv30">16</a>), were predominantly expressed in early differentiation stages of erythropoiesis (Supplementary Figures <a href="#fig:sup:lv928">17</a> and <a href="#fig:sup:lv30">18</a>) and strongly associated with different assays on red blood cells (FDR &lt; 0.05; Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv928">14</a>, <a href="#tbl:sup:emerge_assocs:lv928">15</a>, and <a href="#tbl:sup:emerge_assocs:lv30">18</a>).
-In contrast, other LVs were highly specific, such as LV730, which is expressed in thrombocytes from different cancer samples (Supplementary Figures <a href="#fig:sup:lv730">19</a> and Supplementary Table <a href="#tbl:sup:multiplier_pathways:lv730">19</a>), and strongly associated with hematological assays on platelets (FDR &lt; 2e-4, Supplementary Table <a href="#tbl:sup:phenomexcan_assocs:lv730">20</a>);
-or LV598, whose genes were expressed in corneal endothelial cells (Supplementary Figures <a href="#fig:sup:lv598">20</a> and Supplementary Table <a href="#tbl:sup:multiplier_pathways:lv598">22</a>) and associated with keratometry measurements (FDR &lt; 4e-05; Supplementary Table <a href="#tbl:sup:phenomexcan_assocs:lv598">23</a>).</p>
+For example, LVs such as LV928 and LV30, which were well-aligned to early progenitors of the erythrocytes lineage <span class="citation" data-cites="Zk82GvJV">[<a href="#ref-Zk82GvJV" role="doc-biblioref">72</a>]</span> (Supplementary Tables <a href="#tbl:sup:multiplier_pathways:lv928">13</a> and <a href="#tbl:sup:multiplier_pathways:lv30">16</a>), were predominantly expressed in early differentiation stages of erythropoiesis (Supplementary Figures <a href="#fig:sup:lv928">19</a> and <a href="#fig:sup:lv30">20</a>) and strongly associated with different assays on red blood cells (FDR &lt; 0.05; Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv928">14</a>, <a href="#tbl:sup:emerge_assocs:lv928">15</a>, and <a href="#tbl:sup:emerge_assocs:lv30">18</a>).
+In contrast, other LVs were highly specific, such as LV730, which is expressed in thrombocytes from different cancer samples (Supplementary Figures <a href="#fig:sup:lv730">21</a> and Supplementary Table <a href="#tbl:sup:multiplier_pathways:lv730">19</a>), and strongly associated with hematological assays on platelets (FDR &lt; 2e-4, Supplementary Table <a href="#tbl:sup:phenomexcan_assocs:lv730">20</a>);
+or LV598, whose genes were expressed in corneal endothelial cells (Supplementary Figures <a href="#fig:sup:lv598">22</a> and Supplementary Table <a href="#tbl:sup:multiplier_pathways:lv598">22</a>) and associated with keratometry measurements (FDR &lt; 4e-05; Supplementary Table <a href="#tbl:sup:phenomexcan_assocs:lv598">23</a>).</p>
 <p>The autoimmune diseases sub-branch also had significant LVs associations expressed in relevant cell types.
-LV844 was the most strongly associated gene module with autoimmune disorders in both PhenomeXcan (FDR &lt; 7e-16; Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv844">26</a>) and eMERGE (FDR &lt; 2e-6, <a href="#tbl:sup:emerge_assocs:lv844">27</a>), and was expressed in a wide range of cell types, including blood, breast organoids, myeloma cells, lung fibroblasts, and different cell types from the brain (Supplementary Figures <a href="#fig:sup:lv844">21</a> and Supplementary Table <a href="#tbl:sup:multiplier_pathways:lv844">25</a>).
-LV155 was strongly expressed in the thyroid (Supplementary Figures <a href="#fig:sup:lv155">22</a> and Supplementary Table <a href="#tbl:sup:multiplier_pathways:lv155">28</a>) and significantly associated with hypothyroidism both in PhenomeXcan (FDR &lt; 0.05, Supplementary Table <a href="#tbl:sup:phenomexcan_assocs:lv155">29</a>) and eMERGE (FDR &lt; 0.10, Supplementary Table <a href="#tbl:sup:emerge_assocs:lv155">30</a>).
-Other important LVs associated with autoimmunity in both PhenomeXcan and eMERGE were LV57, expressed in T cells (Supplementary Figure <a href="#fig:sup:lv57">23</a> and Supplementary Tables <a href="#tbl:sup:multiplier_pathways:lv57">31</a>, <a href="#tbl:sup:phenomexcan_assocs:lv57">32</a>, <a href="#tbl:sup:emerge_assocs:lv57">33</a>), and LV54, expressed in different soft tissue tumors, breast, lung, pterygia and epithelial cells (Supplementary Figure <a href="#fig:sup:lv54">24</a> and Supplementary Tables <a href="#tbl:sup:multiplier_pathways:lv54">34</a>, <a href="#tbl:sup:phenomexcan_assocs:lv54">35</a>, <a href="#tbl:sup:emerge_assocs:lv54">36</a>).</p>
+LV844 was the most strongly associated gene module with autoimmune disorders in both PhenomeXcan (FDR &lt; 7e-16; Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv844">26</a>) and eMERGE (FDR &lt; 2e-6, <a href="#tbl:sup:emerge_assocs:lv844">27</a>), and was expressed in a wide range of cell types, including blood, breast organoids, myeloma cells, lung fibroblasts, and different cell types from the brain (Supplementary Figures <a href="#fig:sup:lv844">23</a> and Supplementary Table <a href="#tbl:sup:multiplier_pathways:lv844">25</a>).
+LV155 was strongly expressed in the thyroid (Supplementary Figures <a href="#fig:sup:lv155">24</a> and Supplementary Table <a href="#tbl:sup:multiplier_pathways:lv155">28</a>) and significantly associated with hypothyroidism both in PhenomeXcan (FDR &lt; 0.05, Supplementary Table <a href="#tbl:sup:phenomexcan_assocs:lv155">29</a>) and eMERGE (FDR &lt; 0.10, Supplementary Table <a href="#tbl:sup:emerge_assocs:lv155">30</a>).
+Other important LVs associated with autoimmunity in both PhenomeXcan and eMERGE were LV57, expressed in T cells (Supplementary Figure <a href="#fig:sup:lv57">25</a> and Supplementary Tables <a href="#tbl:sup:multiplier_pathways:lv57">31</a>, <a href="#tbl:sup:phenomexcan_assocs:lv57">32</a>, <a href="#tbl:sup:emerge_assocs:lv57">33</a>), and LV54, expressed in different soft tissue tumors, breast, lung, pterygia and epithelial cells (Supplementary Figure <a href="#fig:sup:lv54">26</a> and Supplementary Tables <a href="#tbl:sup:multiplier_pathways:lv54">34</a>, <a href="#tbl:sup:phenomexcan_assocs:lv54">35</a>, <a href="#tbl:sup:emerge_assocs:lv54">36</a>).</p>
 <p>The cardiovascular sub-branch also exhibited significant associations.
-LV847 (Supplementary Figure <a href="#fig:sup:lv847">25</a> and Supplementary Table <a href="#tbl:sup:multiplier_pathways:lv847">37</a>) was strongly associated with hypertension in PhenomeXcan (FDR &lt; 2e-13, Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv847">38</a>) and several cardiovascular diseases, type 1 diabetes, prostate cancer, and others in eMERGE (FDR &lt; 0.05, Supplementary Table <a href="#tbl:sup:emerge_assocs:lv847">39</a>).
+LV847 (Supplementary Figure <a href="#fig:sup:lv847">27</a> and Supplementary Table <a href="#tbl:sup:multiplier_pathways:lv847">37</a>) was strongly associated with hypertension in PhenomeXcan (FDR &lt; 2e-13, Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv847">38</a>) and several cardiovascular diseases, type 1 diabetes, prostate cancer, and others in eMERGE (FDR &lt; 0.05, Supplementary Table <a href="#tbl:sup:emerge_assocs:lv847">39</a>).
 LV847 was expressed in CD19 (B cells) (which are related to preeclampsia <span class="citation" data-cites="YyXvsbU9">[<a href="#ref-YyXvsbU9" role="doc-biblioref">73</a>]</span>), Jurkat cells (T lymphocyte cells), and cervical carcinoma cell lines (the uterus was previously reported to be linked to blood pressure through a potential hormonal pathway <span class="citation" data-cites="Om8ZhS06 meFYGVLK">[<a href="#ref-Om8ZhS06" role="doc-biblioref">74</a>,<a href="#ref-meFYGVLK" role="doc-biblioref">75</a>]</span>).
 LV136 was aligned with known collagen formation and muscle contraction pathways (Supplementary Table <a href="#tbl:sup:multiplier_pathways:lv136">40</a>), and it was associated with coronary artery disease (FDR &lt; 2e-8), myocardial infarction (FDR &lt; 6e-4) and keratometry measurements (FDR &lt; 1e-7) in PhenomeXcan (Supplementary Tables <a href="#tbl:sup:phenomexcan_assocs:lv136">41</a>), but with no strong associations in eMERGE (FDR &lt; 0.20, Supplementary Table <a href="#tbl:sup:emerge_assocs:lv136">42</a>).
-This LV was expressed in a wide range of cell types, including fibroblasts, mesenchymal stem cells, osteoblasts, pancreatic stellate cells, cardiomyocytes, and adipocytes (Supplementary Figure <a href="#fig:sup:lv136">26</a>).
-Lipids, clustered with chronotype and Alzheimer’s disease, were significantly associated with several modules expressed mainly in brain cell types, including LV93 (Supplementary Figure <a href="#fig:sup:lv93">27</a> and Supplementary Tables <a href="#tbl:sup:multiplier_pathways:lv93">43</a>, <a href="#tbl:sup:phenomexcan_assocs:lv93">44</a>, <a href="#tbl:sup:emerge_assocs:lv93">45</a>), LV206 (Supplementary Figure <a href="#fig:sup:lv206">28</a> and Supplementary Tables <a href="#tbl:sup:multiplier_pathways:lv206">46</a>, <a href="#tbl:sup:phenomexcan_assocs:lv206">47</a>, <a href="#tbl:sup:emerge_assocs:lv206">48</a>), and LV260 (Supplementary Figure <a href="#fig:sup:lv260">29</a> and Supplementary Tables <a href="#tbl:sup:multiplier_pathways:lv260">49</a>, <a href="#tbl:sup:phenomexcan_assocs:lv260">50</a> and <a href="#tbl:sup:emerge_assocs:lv260">51</a>).
+This LV was expressed in a wide range of cell types, including fibroblasts, mesenchymal stem cells, osteoblasts, pancreatic stellate cells, cardiomyocytes, and adipocytes (Supplementary Figure <a href="#fig:sup:lv136">28</a>).
+Lipids, clustered with chronotype and Alzheimer’s disease, were significantly associated with several modules expressed mainly in brain cell types, including LV93 (Supplementary Figure <a href="#fig:sup:lv93">29</a> and Supplementary Tables <a href="#tbl:sup:multiplier_pathways:lv93">43</a>, <a href="#tbl:sup:phenomexcan_assocs:lv93">44</a>, <a href="#tbl:sup:emerge_assocs:lv93">45</a>), LV206 (Supplementary Figure <a href="#fig:sup:lv206">30</a> and Supplementary Tables <a href="#tbl:sup:multiplier_pathways:lv206">46</a>, <a href="#tbl:sup:phenomexcan_assocs:lv206">47</a>, <a href="#tbl:sup:emerge_assocs:lv206">48</a>), and LV260 (Supplementary Figure <a href="#fig:sup:lv260">31</a> and Supplementary Tables <a href="#tbl:sup:multiplier_pathways:lv260">49</a>, <a href="#tbl:sup:phenomexcan_assocs:lv260">50</a> and <a href="#tbl:sup:emerge_assocs:lv260">51</a>).
 These modules were associated mainly with cardiovascular traits in eMERGE.</p>
 <p>Within the cardiovascular sub-branch, we found neuropsychiatric and neurodevelopmental disorders such as Alzheimer’s disease, schizophrenia, and attention deficit hyperactivity disorder (ADHD).
 These disorders were previously linked to the cardiovascular system <span class="citation" data-cites="10qjLoufR j2Sl4DAE 17LYMnG9n 13t4TuFeJ">[<a href="#ref-10qjLoufR" role="doc-biblioref">76</a>,<a href="#ref-j2Sl4DAE" role="doc-biblioref">77</a>,<a href="#ref-17LYMnG9n" role="doc-biblioref">78</a>,<a href="#ref-13t4TuFeJ" role="doc-biblioref">79</a>]</span> and share several risk factors, including hypertension, high cholesterol, obesity, smoking, among others <span class="citation" data-cites="D83Aqhga 9BGyO071">[<a href="#ref-D83Aqhga" role="doc-biblioref">80</a>,<a href="#ref-9BGyO071" role="doc-biblioref">81</a>]</span>.
 In our results, however, these diseases were grouped by potentially shared transcriptional processes expressed in specific tissues/cell types.
 Alzheimer’s disease, for example, was significantly associated with LV21 in PhenomeXcan (FDR &lt; 2e-19, Supplementary Table <a href="#tbl:sup:phenomexcan_assocs:lv21">53</a>) and with LV5 (FDR &lt; 3e-3, Supplementary Table <a href="#tbl:sup:phenomexcan_assocs:lv5">56</a>).
-LV21 was strongly expressed in a variety of soft tissue sarcomas, monocytes/macrophages (including microglia from cortex samples), and aortic valves (Supplementary Figure <a href="#fig:sup:lv21">30</a> and Supplementary Table <a href="#tbl:sup:multiplier_pathways:lv21">52</a>).
+LV21 was strongly expressed in a variety of soft tissue sarcomas, monocytes/macrophages (including microglia from cortex samples), and aortic valves (Supplementary Figure <a href="#fig:sup:lv21">32</a> and Supplementary Table <a href="#tbl:sup:multiplier_pathways:lv21">52</a>).
 This LV was also associated with lipids: LDL cholesterol (FDR &lt; 1e-4) and triglycerides (FDR &lt; 0.02).
 As discussed previously, macrophages play a key role in the reverse cholesterol transport and thus atherogenesis <span class="citation" data-cites="idlBgtFz">[<a href="#ref-idlBgtFz" role="doc-biblioref">82</a>]</span>, and lipid metabolism in microglia has been recently identified as an important factor in the development of neurodegenerative diseases <span class="citation" data-cites="18I4ish9s">[<a href="#ref-18I4ish9s" role="doc-biblioref">83</a>]</span>.
-On the other hand, LV5 was expressed in breast cancer and brain glioma samples, microglia (cortex), liver, and kidney, among other cell types (Supplementary Figure <a href="#fig:sup:lv5">31</a> and Supplementary Table <a href="#tbl:sup:multiplier_pathways:lv5">55</a>).
+On the other hand, LV5 was expressed in breast cancer and brain glioma samples, microglia (cortex), liver, and kidney, among other cell types (Supplementary Figure <a href="#fig:sup:lv5">33</a> and Supplementary Table <a href="#tbl:sup:multiplier_pathways:lv5">55</a>).
 In addition to lipids, LV5 was also associated with depression traits from the UK Biobank (FDR &lt; 0.05, Supplementary Table <a href="#tbl:sup:phenomexcan_assocs:lv5">56</a>).
 Since Alzheimer’s disease was not present in eMERGE, we could not replicate this association.
-ADHD was the only significantly associated trait for LV434 (FDR &lt; 6e-3) (Supplementary Table <a href="#tbl:sup:phenomexcan_assocs:lv434">59</a>), which was expressed in breast cancer and glioma cells, cerebral organoids, and several different cell populations from the brain: fetal neurons (replicating and quiescence), microglia, and astrocytes (Supplementary Figure <a href="#fig:sup:lv434">32</a> and Supplementary Table <a href="#tbl:sup:multiplier_pathways:lv434">58</a>).
+ADHD was the only significantly associated trait for LV434 (FDR &lt; 6e-3) (Supplementary Table <a href="#tbl:sup:phenomexcan_assocs:lv434">59</a>), which was expressed in breast cancer and glioma cells, cerebral organoids, and several different cell populations from the brain: fetal neurons (replicating and quiescence), microglia, and astrocytes (Supplementary Figure <a href="#fig:sup:lv434">34</a> and Supplementary Table <a href="#tbl:sup:multiplier_pathways:lv434">58</a>).
 Schizophrenia was not significantly associated (FDR &lt; 0.05) with any gene module tested in our analysis.
 None of these LVs were significantly aligned to prior pathways, which might represent potentially novel transcriptional processes affecting the cardiovascular and central nervous systems.</p>
 <h2 id="discussion">Discussion</h2>
@@ -874,7 +874,7 @@ For instance, TWAS associations <span class="math inline">\(\mathbf{M}\)</span> 
 <p>where <span class="math inline">\(\hat{\mathbf{M}}^{l \times q}\)</span> is a matrix where traits are represented by gene modules instead of single genes.
 <!--  -->
 As explained later, we used the same approach to project drug-induced transcriptional profiles in LINCS L1000 to obtain a representation of drugs using gene modules.</p>
-<h3 id="regression-model-for-lv-trait-associations">Regression model for LV-trait associations</h3>
+<h3 id="sec:methods">Regression model for LV-trait associations</h3>
 <p>We adapted the gene-set analysis framework from MAGMA <span class="citation" data-cites="19XiXgYmd">[<a href="#ref-19XiXgYmd" role="doc-biblioref">41</a>]</span> to TWAS.
 We used a competitive test to predict gene-trait associations from TWAS using gene weights from an LV, testing whether top-weighted genes for an LV are more strongly associated with the phenotype than other genes with relatively small or zero weights.
 Thus, we fit the model</p>
@@ -943,9 +943,10 @@ As explained before, S-MultiXcan approximates the joint regression parameters in
 This complicates the derivation of an S-MultiXcan-specific solution to compute <span class="math inline">\(\mathbf{R}\)</span>.
 To account for this, we used a submatrix <span class="math inline">\(\mathbf{R}_{\ell}\)</span> corresponding to genes that are part of LV <span class="math inline">\(\ell\)</span> only (top 1% of genes) instead of the entire matrix <span class="math inline">\(\mathbf{R}\)</span>.
 This simplification is conservative since correlations are accounted for top genes only.
-Our simulations (Supplementary Note <code class="red">XXX</code>) show that the model is approximately well-calibrated and can correct for LVs with adjacent and highly correlated genes at the top (Supplementary Figure <code class="red">YYY</code>).
+Our simulations (<a href="#sm:reg:null_sim">Supplementary Note 1</a>) show that the model is approximately well-calibrated and can correct for LVs with adjacent and highly correlated genes at the top (e.g., Figure <a href="#fig:reg:nulls:qqplot:lv234">9</a>).
 The model can also detect LVs associated with relevant traits (Figure <a href="#fig:lv246">2</a> and Table <a href="#tbl:sup:phenomexcan_assocs:lv246">8</a>) that are replicated in a different cohort (Table <a href="#tbl:sup:emerge_assocs:lv246">9</a>).</p>
-<p>In Equation (<a href="#eq:reg:corr_genes">10</a>), we only considered SNPs present in GWAS used as input for the TWAS approaches, since otherwise correlations would not be accurately estimated <span class="citation" data-cites="1FFzCXo1s">[<a href="#ref-1FFzCXo1s" role="doc-biblioref">19</a>]</span>.
+<p>In Equation (<a href="#eq:reg:corr_genes">10</a>), for each gene, we only considered tissue models present in S-PrediXcan results, as well as SNPs present in GWAS used as input for the TWAS approaches.
+This is necessary to obtain more accurate correlations estimates <span class="citation" data-cites="1FFzCXo1s">[<a href="#ref-1FFzCXo1s" role="doc-biblioref">19</a>]</span>.
 Therefore, we computed different correlation matrices for PhenomeXcan and eMERGE.
 In PhenomeXcan, most of the GWAS (4,049) were obtained from the UK Biobank using the same pipeline and including the same set of SNPs, so a single correlation matrix was used for this set.
 For the rest, we used a single correlation matrix for each group of traits that shared the same or most of the SNPs.</p>
@@ -1052,29 +1053,29 @@ The dry pellet was kept at -80oC for further genomic DNA isolation.
 The rest of the cells (approximately 200M) were kept in 100mm dishes and stained with a fluorescent dye (LipidSpotTM 488, Biotium, Cat. 70065-T).
 In Brief, LipidSpot 488 was diluted to 1:100 with DPBS.
 4ml of staining solution was used for each dish and incubated at 37oC for 30min.
-Cell images were captured through fluorescent microscope EVOS for GFP signal detection (Supplementary Figure <a href="#fig:sup:crispr:fig1">8</a>).</p>
+Cell images were captured through fluorescent microscope EVOS for GFP signal detection (Figure <a href="#fig:sup:crispr:fig1">S1</a>).</p>
 <p><strong>Fluorescence-activated cell sorting (FACS).</strong>
 Cells were immediately collected into 50ml tubes (From this point on, keep cells cold), and spun at 500 x g for 5min at 4oC.
 After DPBS wash, cell pellets were resuspended with FACS Sorting Buffer (1x DPBS without Ca2+/Mg2+, 2.5mM EDTA, 25mM HEPES, 1% BSA.
 The solution was filter sterilized, and kept at 4oC), pi-pet gently to make single cells.
 The cell solution was then filtered through a cell strainer (Falcon, Cat. 352235) and was kept on ice, protected from light.
-Collected cells were sorted on FACSJazz. 100um nozzle was used for sorting. ~20% of each GFP-High and GFP-Low (Supplementary Figure <a href="#fig:sup:crispr:fig2">9</a>) were collected into 15ml tubes.
+Collected cells were sorted on FACSJazz. 100um nozzle was used for sorting. ~20% of each GFP-High and GFP-Low (Figure <a href="#fig:sup:crispr:fig2">S2</a>) were collected into 15ml tubes.
 After sorting, cells were immediately spun down.
 Pellets were kept at -80oC for further genomic DNA isolation.</p>
 <p><strong>Genomic DNA isolation and verification.</strong>
 Three conditions of Genomic DNA (Un-Sorted Control, lentiV2 GFP-High, and lentiV2 GFP-Low) were extracted using QIAamp DNA Blood Mini Kit (Qiagen, Cat.51104), followed by UV Spectroscopy (Nanodrop) to access the quality and quantity of the gDNA.
 A total of 80-160ug of gDNA was isolated for each condition.
-sgRNA cassette and lentiviral specific transgene in isolated gDNA were verified through PCR (Supplementary Figure <a href="#fig:sup:crispr:fig3">10</a>).</p>
+sgRNA cassette and lentiviral specific transgene in isolated gDNA were verified through PCR (Figure <a href="#fig:sup:crispr:fig3">S3</a>).</p>
 <p><strong>Illumina libraries generation and sequencing.</strong>
-The fragment containing sgRNA cassette was amplified using P5 /P7 primers, as indicated in <span class="citation" data-cites="vNXTnmxp">[<a href="#ref-vNXTnmxp" role="doc-biblioref">107</a>]</span>, and primer sequences were adapted from Broad Institute protocol (Supplementary Figure <a href="#fig:sup:crispr:table1">11</a>).
+The fragment containing sgRNA cassette was amplified using P5 /P7 primers, as indicated in <span class="citation" data-cites="vNXTnmxp">[<a href="#ref-vNXTnmxp" role="doc-biblioref">107</a>]</span>, and primer sequences were adapted from Broad Institute protocol (Figure <a href="#fig:sup:crispr:table1">S4</a>).
 Stagger sequence (0-8nt) was included in P5 and 8bp uniquely barcoded sequence in P7.
 Primers were synthesized through Integrated DNA Technologies (IDT), and each primer was PAGE purified. 32 PCR reactions were set up for each condition.
 Each 100ul PCR reaction consists of roughly 5ug of gDNA, 5ul of each 10uM P5 and P7. ExTaq DNA Polymerase (TaKaRa, Cat. RR001A) was used to amplify the amplicon.
 PCR Thermal Cycler Parameters set as Initial at 95oC for 1min; followed by 24 cycles of Denaturation at 94oC for 30 seconds, Annealing at 52.5oC for 30 seconds, Extension at 72oC for 30 seconds.
-A final Elongation at 72oC for 10 minutes. 285bp-293bp PCR products were expected (Supplementary Figure <a href="#fig:sup:crispr:fig4">12</a> A).
+A final Elongation at 72oC for 10 minutes. 285bp-293bp PCR products were expected (Figure <a href="#fig:sup:crispr:fig4">S5</a> A).
 PCR products within the same condition were pooled and purified using SPRIselect beads (Beckman Coulter, Cat. B23318).
 Purified Illumina libraries were quantitated on Qubit, and the quality of the library was analyzed on Bio-analyzer using High Sensitivity DNA Chip.
-A single approximate 285bp peak was expected. (Supplementary Figure <a href="#fig:sup:crispr:fig4">12</a> B).
+A single approximate 285bp peak was expected. (Figure <a href="#fig:sup:crispr:fig4">S5</a> B).
 Final Illumina library samples were sequenced on Nova-seq 6000.
 Samples were pooled and loaded on an SP flow cell, along with a 20% PhiX control v3 library spike-in.</p>
 <h3 id="code-and-data-availability">Code and data availability</h3>
@@ -1407,18 +1408,105 @@ Cells as Indicators of Preeclampsia</strong> <div class="csl-block">Federico Jen
 <div id="ref-vNXTnmxp" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">107. </div><div class="csl-right-inline"><strong>Optimized sgRNA design to maximize activity and minimize off-target effects of CRISPR-Cas9.</strong> <div class="csl-block">John G Doench, Nicolo Fusi, Meagan Sullender, Mudra Hegde, Emma W Vaimberg, Katherine F Donovan, Ian Smith, Zuzana Tothova, Craig Wilen, Robert Orchard, … David E Root</div> <em>Nature biotechnology</em> (2016-01-18) <a href="https://www.ncbi.nlm.nih.gov/pubmed/26780180">https://www.ncbi.nlm.nih.gov/pubmed/26780180</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nbt.3437">10.1038/nbt.3437</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26780180">26780180</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4744125">PMC4744125</a></div></div>
 </div>
+<div id="ref-SiobXsoB" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">108. </div><div class="csl-right-inline"><strong>Fine‐mapping and QTL tissue‐sharing information improves the reliability of causal gene identification</strong> <div class="csl-block">Alvaro N Barbeira, Owen J Melia, Yanyu Liang, Rodrigo Bonazzola, Gao Wang, Heather E Wheeler, François Aguet, Kristin G Ardlie, Xiaoquan Wen, Hae K Im</div> <em>Genetic Epidemiology</em> (2020-11) <a href="https://doi.org/gqsvf7">https://doi.org/gqsvf7</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1002/gepi.22346">10.1002/gepi.22346</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32964524">32964524</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7693040">PMC7693040</a></div></div>
+</div>
+<div id="ref-GPHGnFRN" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">109. </div><div class="csl-right-inline"><strong>GitHub - hakyimlab/summary-gwas-imputation: harmonization, liftover, and imputation of summary statistics from GWAS</strong> <div class="csl-block">GitHub</div> <a href="https://github.com/hakyimlab/summary-gwas-imputation">https://github.com/hakyimlab/summary-gwas-imputation</a></div>
+</div>
 <div id="ref-VKYS05n1" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">108. </div><div class="csl-right-inline"><strong>Homo sapiens (ID 232177) - BioProject - NCBI</strong> <a href="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA232177">https://www.ncbi.nlm.nih.gov/bioproject/PRJNA232177</a></div>
+<div class="csl-left-margin">110. </div><div class="csl-right-inline"><strong>Homo sapiens (ID 232177) - BioProject - NCBI</strong> <a href="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA232177">https://www.ncbi.nlm.nih.gov/bioproject/PRJNA232177</a></div>
 </div>
 </div>
 <h2 id="acknowledgements">Acknowledgements</h2>
 <p>Figure 1 was created with BioRender.com.</p>
 <h2 id="supplementary-material">Supplementary material</h2>
-<h3 id="crispr-screen">CRISPR-screen</h3>
+<h3 id="regression-model-for-lv-trait-associations">Regression model for LV-trait associations</h3>
+<h4 id="sm:reg:null_sim">Supplementary Note 1: mean type I error rates and calibration of LV-based regression model</h4>
+<p>We assessed our GLS model type I error rates (proportion of <span class="math inline">\(p\)</span>-values below 0.05) and calibration using a null model of random traits and genotype data from 1000 Genomes Phase III.
+We selected 312 individuals with European ancestry, and then analyzed 1,000 traits drawn from a standard normal distribution <span class="math inline">\(\mathcal{N}(0,1)\)</span>.
+We ran all the standard procedures for the TWAS approaches (S-PrediXcan and S-MultiXcan), including:
+1) a standard GWAS using linear regression under an additive genetic model,
+2) different GWAS processing steps, including harmonization and imputation procedures as defined in <span class="citation" data-cites="SiobXsoB">[<a href="#ref-SiobXsoB" role="doc-biblioref">108</a>]</span>,
+3) S-PrediXcan and S-MultiXcan analyses.
+Below we provide details for each of these steps.</p>
+<p><strong>Step 1 - GWAS</strong>. We performed standard QC procedures such as
+filtering out variants with missing call rates eexceeding 0.01, MAF below 1% or MAC below 20, and HWE below 1e-6,
+and removing samples with high sex-discrepancy and high-relatedness (first and second degree).
+We included sex and the top 20 principal components as covariates, performing the association test on 5,923,554 variants across all 1,000 random phenotypes.</p>
+<p><strong>Step 2 - GWAS processing</strong>. These steps include harmonization of GWAS and imputation of <span class="math inline">\(z\)</span>-scores, which are part of the TWAS pipeline and are needed in order to ensure an acceptable overlap with SNPs in prediction models.
+The scripts to run these steps are available in <span class="citation" data-cites="GPHGnFRN">[<a href="#ref-GPHGnFRN" role="doc-biblioref">109</a>]</span>.
+These procedures were run for all 1,000 random phenotypes and generated a total number of 8,325,729 variants, including those with original and imputed <span class="math inline">\(z\)</span>-scores.
+<code class="red">maybe show some manhattan plot?</code></p>
+<p><strong>Step 3 - TWAS</strong>. We processed the imputed GWAS with S-PrediXcan using the MASHR prediction models on 49 tissues from GTEx v8.
+Then, S-MultiXcan was ran using the GWAS and S-PrediXcan outputs to generate gene-trait association <span class="math inline">\(p\)</span>-values.
+<code class="red">maybe show some manhattan plot?</code></p>
+<p>Finally, we ran our GLS model (Equation (<a href="#eq:reg:model">7</a>)) to compute an association between each of the 987 LVs in MultiPLIER and the 1,000 S-MultiXcan results on random phenotypes.
+For this, we built a gene correlation matrix specifically for this cohort (see <a href="#sec:methods">Methods</a>).
+Then, we compared the GLS results with an equivalent, baseline ordinarly least squares (OLS) model assuming independence between genes.
+Figure <a href="#fig:reg:nulls:qqplots">8</a> compares the distribution of <span class="math inline">\(p\)</span>-values of the OLS and GLS models.
+The GLS model has a slightly smaller mean type I error rate (0.0558, SD=0.0127) than the baseline OLS model (0.0584, SD=0.0140), and <span class="math inline">\(p\)</span>-values follow more closely the expected uniform distribution.
+Importantly, the GLS model is able to correct for LVs with adjacent and highly correlated genes at the top such as LV234 (Figure <a href="#fig:reg:nulls:qqplot:lv234">9</a>), LV847 (Figure <a href="#fig:reg:nulls:qqplot:lv847">10</a>), LV45 (Figure <a href="#fig:reg:nulls:qqplot:lv45">11</a>), or LV800 (Figure <a href="#fig:reg:nulls:qqplot:lv800">12</a>), among others.
+In contrast and as expected, the OLS model has higher mean type I errors and smaller-than-expected <span class="math inline">\(p\)</span>-values in all these cases.</p>
+<p>We also detected other LVs with higher-than-expected mean type I errors for both the GLS and OLS models, although they don’t have a relatively large number of adjacent genes at the top.
+One example is LV914, shown in Figure <a href="#fig:reg:nulls:qqplot:lv914">13</a>.
+Inflation in these LVs might be explained by inaccuracies in correlation estimates between the individual-level MultiXcan model and its summary-based version (see Methods).
+Therefore, we flagged those with a type I error rate larger than 0.07 (127 LVs) and excluded them from our main analyses.</p>
+<div id="fig:reg:nulls:qqplots" class="fignos">
+<figure>
+<img src="images/gls/null_sims/models_qqplots.png" style="width:80.0%" alt="Figure 8: QQ-plots for OLS (baseline) and GLS (PhenoPLIER) models on random phenotypes." />
+<figcaption aria-hidden="true"><span>Figure 8:</span> <strong>QQ-plots for OLS (baseline) and GLS (PhenoPLIER) models on random phenotypes.</strong></figcaption>
+</figure>
+</div>
+<div id="fig:reg:nulls:qqplot:lv234" class="fignos">
+<figure>
+<img src="images/gls/null_sims/models_lv234.png" style="width:80.0%" alt="Figure 9: QQ-plots for LV234 on random phenotypes. Among the top 1% of genes in this LV, 17 are located in band 6p22.2, 5 in 6p22.1 and 3 in 7q11.23." />
+<figcaption aria-hidden="true"><span>Figure 9:</span> <strong>QQ-plots for LV234 on random phenotypes.</strong>
+Among the top 1% of genes in this LV, 17 are located in band 6p22.2, 5 in 6p22.1 and 3 in 7q11.23.</figcaption>
+</figure>
+</div>
+<div id="fig:reg:nulls:qqplot:lv847" class="fignos">
+<figure>
+<img src="images/gls/null_sims/models_lv847.png" style="width:80.0%" alt="Figure 10: QQ-plots for LV847 on random phenotypes. Among the top 1% of genes in this LV, 15 are located in band 6p22.2, 5 in 6p22.1 and 2 in 15q26.1." />
+<figcaption aria-hidden="true"><span>Figure 10:</span> <strong>QQ-plots for LV847 on random phenotypes.</strong>
+Among the top 1% of genes in this LV, 15 are located in band 6p22.2, 5 in 6p22.1 and 2 in 15q26.1.</figcaption>
+</figure>
+</div>
+<div id="fig:reg:nulls:qqplot:lv45" class="fignos">
+<figure>
+<img src="images/gls/null_sims/models_lv45.png" style="width:80.0%" alt="Figure 11: QQ-plots for LV45 on random phenotypes. Among the top 1% of genes in this LV, 12 are located in band 6p22.2, 6 in 6p22.1 and 3 in 1q23.3." />
+<figcaption aria-hidden="true"><span>Figure 11:</span> <strong>QQ-plots for LV45 on random phenotypes.</strong>
+Among the top 1% of genes in this LV, 12 are located in band 6p22.2, 6 in 6p22.1 and 3 in 1q23.3.</figcaption>
+</figure>
+</div>
+<div id="fig:reg:nulls:qqplot:lv800" class="fignos">
+<figure>
+<img src="images/gls/null_sims/models_lv800.png" style="width:80.0%" alt="Figure 12: QQ-plots for LV800 on random phenotypes. Among the top 1% of genes in this LV, 16 are located in band 19q13.43, 9 in 19p13.2 and 9 in 19q13.31." />
+<figcaption aria-hidden="true"><span>Figure 12:</span> <strong>QQ-plots for LV800 on random phenotypes.</strong>
+Among the top 1% of genes in this LV, 16 are located in band 19q13.43, 9 in 19p13.2 and 9 in 19q13.31.</figcaption>
+</figure>
+</div>
+<div id="fig:reg:nulls:qqplot:lv914" class="fignos">
+<figure>
+<img src="images/gls/null_sims/models_lv914.png" style="width:80.0%" alt="Figure 13: QQ-plots for LV914 on random phenotypes. Among the top 1% of genes in this LV, 2 are located in band 13q13.3, 2 in 7p15.2 and 2 in 19q13.2." />
+<figcaption aria-hidden="true"><span>Figure 13:</span> <strong>QQ-plots for LV914 on random phenotypes.</strong>
+Among the top 1% of genes in this LV, 2 are located in band 13q13.3, 2 in 7p15.2 and 2 in 19q13.2.</figcaption>
+</figure>
+</div>
+<h4 id="lv-trait-associations-in-real-data">LV-trait associations in real data</h4>
+<div id="fig:reg:real:qqplots" class="fignos">
+<figure>
+<img src="images/gls/real_data/qqplots.png" style="width:80.0%" alt="Figure 14: QQ-plots of LV-trait associations in real data. QQ-plot in PhenomeXcan (left, discovery cohort) across 4,091 traits and 987 LVs, and eMERGE (right, replication cohort) across 309 traits and 987 LVs." />
+<figcaption aria-hidden="true"><span>Figure 14:</span> <strong>QQ-plots of LV-trait associations in real data.</strong>
+QQ-plot in PhenomeXcan (left, discovery cohort) across 4,091 traits and 987 LVs, and eMERGE (right, replication cohort) across 309 traits and 987 LVs.</figcaption>
+</figure>
+</div>
+<h3 id="crispr-cas9">CRISPR-Cas9</h3>
+<h4 id="screening-steps">Screening steps</h4>
 <div id="fig:sup:crispr:fig1" class="fignos">
 <figure>
-<img src="images/crispr/figure1.png" style="width:80.0%" alt="Figure 8: EVOS Fluorescent Microscope Image Capture. A. HepG2_lentiV2_Ctrl with no-viral transduction. B. HepG2_lentiV2 with viral transduction. " />
-<figcaption aria-hidden="true"><span>Figure 8:</span> <strong>EVOS Fluorescent Microscope Image Capture.</strong>
+<img src="images/crispr/figure1.png" data-tag="S1" style="width:80.0%" alt="Figure S1: EVOS Fluorescent Microscope Image Capture. A. HepG2_lentiV2_Ctrl with no-viral transduction. B. HepG2_lentiV2 with viral transduction. " />
+<figcaption aria-hidden="true"><span>Figure S1:</span> <strong>EVOS Fluorescent Microscope Image Capture.</strong>
 A. HepG2_lentiV2_Ctrl with no-viral transduction.
 B. HepG2_lentiV2 with viral transduction.
 <!--  --></figcaption>
@@ -1426,8 +1514,8 @@ B. HepG2_lentiV2 with viral transduction.
 </div>
 <div id="fig:sup:crispr:fig2" class="fignos">
 <figure>
-<img src="images/crispr/figure2.png" style="width:80.0%" alt="Figure 9: Fluorescence-Activated Cell Sorting Gate Setting. A. HepG2_UnStained WT. B. HepG2_lentiV2 with viral transduction. " />
-<figcaption aria-hidden="true"><span>Figure 9:</span> <strong>Fluorescence-Activated Cell Sorting Gate Setting.</strong>
+<img src="images/crispr/figure2.png" data-tag="S2" style="width:80.0%" alt="Figure S2: Fluorescence-Activated Cell Sorting Gate Setting. A. HepG2_UnStained WT. B. HepG2_lentiV2 with viral transduction. " />
+<figcaption aria-hidden="true"><span>Figure S2:</span> <strong>Fluorescence-Activated Cell Sorting Gate Setting.</strong>
 A. HepG2_UnStained WT.
 B. HepG2_lentiV2 with viral transduction.
 <!--  --></figcaption>
@@ -1435,8 +1523,8 @@ B. HepG2_lentiV2 with viral transduction.
 </div>
 <div id="fig:sup:crispr:fig3" class="fignos">
 <figure>
-<img src="images/crispr/figure3.png" style="width:80.0%" alt="Figure 10: Verification of sgRNA cassette and lentiV2 transgene. A. 20nt sgRNA cassette was verified in lentiV2 transduced genomic DNA population, 163 bp PCR product obtained, while WT HepG2 didn’t possess the cassette, thus, no PCR product. B. lentiviral-specific transgene WPRE was verified in lentiV2 transduced genomic DNA population, while no transduced WT didn’t have the transgene, therefore, no 173 bp PCR product observed. " />
-<figcaption aria-hidden="true"><span>Figure 10:</span> <strong>Verification of sgRNA cassette and lentiV2 transgene.</strong>
+<img src="images/crispr/figure3.png" data-tag="S3" style="width:80.0%" alt="Figure S3: Verification of sgRNA cassette and lentiV2 transgene. A. 20nt sgRNA cassette was verified in lentiV2 transduced genomic DNA population, 163 bp PCR product obtained, while WT HepG2 didn’t possess the cassette, thus, no PCR product. B. lentiviral-specific transgene WPRE was verified in lentiV2 transduced genomic DNA population, while no transduced WT didn’t have the transgene, therefore, no 173 bp PCR product observed. " />
+<figcaption aria-hidden="true"><span>Figure S3:</span> <strong>Verification of sgRNA cassette and lentiV2 transgene.</strong>
 A. 20nt sgRNA cassette was verified in lentiV2 transduced genomic DNA population, 163 bp PCR product obtained, while WT HepG2 didn’t possess the cassette, thus, no PCR product.
 B. lentiviral-specific transgene WPRE was verified in lentiV2 transduced genomic DNA population, while no transduced WT didn’t have the transgene, therefore, no 173 bp PCR product observed.
 <!--  --></figcaption>
@@ -1444,25 +1532,170 @@ B. lentiviral-specific transgene WPRE was verified in lentiV2 transduced genomic
 </div>
 <div id="fig:sup:crispr:table1" class="fignos">
 <figure>
-<img src="images/crispr/table1.png" style="width:80.0%" alt="Figure 11:   " />
-<figcaption aria-hidden="true"><span>Figure 11:</span> <!-- **XXX.** -->
+<img src="images/crispr/table1.png" data-tag="S4" style="width:80.0%" alt="Figure S4:   " />
+<figcaption aria-hidden="true"><span>Figure S4:</span> <!-- **XXX.** -->
 <!--  -->
 <!--  --></figcaption>
 </figure>
 </div>
 <div id="fig:sup:crispr:fig4" class="fignos">
 <figure>
-<img src="images/crispr/figure4.png" style="width:80.0%" alt="Figure 12: Illumina library generation. A. Construct for generating illumina libraries. B. Final illumina library from HS DNA —showed a single ~285bp peak was generated." />
-<figcaption aria-hidden="true"><span>Figure 12:</span> <strong>Illumina library generation.</strong>
+<img src="images/crispr/figure4.png" data-tag="S5" style="width:80.0%" alt="Figure S5: Illumina library generation. A. Construct for generating illumina libraries. B. Final illumina library from HS DNA —showed a single ~285bp peak was generated." />
+<figcaption aria-hidden="true"><span>Figure S5:</span> <strong>Illumina library generation.</strong>
 A. Construct for generating illumina libraries.
 B. Final illumina library from HS DNA —showed a single ~285bp peak was generated.</figcaption>
 </figure>
 </div>
-<h3 id="lv603">LV603</h3>
+<h4 id="gene-modules-enrichment-for-lipids-gene-sets">Gene modules enrichment for lipids gene-sets</h4>
+<!-- lipids_gene_sets:modules_enriched_increase:start -->
+<div id="tbl:sup:lipids_crispr:modules_enriched_increase" class="tablenos">
+<table id="tbl:sup:lipids_crispr:modules_enriched_increase">
+<caption><span>Table 2:</span> Gene modules (LVs) nominally enriched for the lipids-increasing gene-set from the CRISPR-screen (<em>P</em> &lt; 0.01). LVs significantly aligned with pathways (FDR &lt; 0.05) from the MultiPLIER models are shown in boldface.
+<!-- lipids_gene_sets:modules_enriched_increase:end --></caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Gene module</th>
+<th style="text-align: left;">Lipids gene-set</th>
+<th style="text-align: left;">Leading edge</th>
+<th style="text-align: left;">p-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>LV246</strong></td>
+<td style="text-align: left;">increase</td>
+<td style="text-align: left;"><em>DGAT2</em>, <em>ACACA</em></td>
+<td style="text-align: left;">0.0035</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">LV702</td>
+<td style="text-align: left;">increase</td>
+<td style="text-align: left;"><em>ACACA</em>, <em>DGAT2</em></td>
+<td style="text-align: left;">0.0046</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LV607</strong></td>
+<td style="text-align: left;">increase</td>
+<td style="text-align: left;"><em>ACACA</em>, <em>DGAT2</em></td>
+<td style="text-align: left;">0.0058</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">LV890</td>
+<td style="text-align: left;">increase</td>
+<td style="text-align: left;"><em>ACACA</em>, <em>DGAT2</em></td>
+<td style="text-align: left;">0.0067</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LV74</strong></td>
+<td style="text-align: left;">increase</td>
+<td style="text-align: left;"><em>MBTPS1</em>, <em>DGAT2</em></td>
+<td style="text-align: left;">0.0078</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LV865</strong></td>
+<td style="text-align: left;">increase</td>
+<td style="text-align: left;"><em>ACACA</em>, <em>DGAT2</em></td>
+<td style="text-align: left;">0.0092</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">LV841</td>
+<td style="text-align: left;">increase</td>
+<td style="text-align: left;"><em>ACACA</em>, <em>DGAT2</em></td>
+<td style="text-align: left;">0.0096</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- lipids_gene_sets:modules_enriched_decrease:start -->
+<div id="tbl:sup:lipids_crispr:modules_enriched_decrease" class="tablenos">
+<table id="tbl:sup:lipids_crispr:modules_enriched_decrease">
+<caption><span>Table 3:</span> Gene modules (LVs) nominally enriched for the lipids-decreasing gene-set from the CRISPR-screen (<em>P</em> &lt; 0.01). LVs significantly aligned with pathways (FDR &lt; 0.05) from the MultiPLIER models are shown in boldface.
+<!-- lipids_gene_sets:modules_enriched_decrease:end --></caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Gene module</th>
+<th style="text-align: left;">Lipids gene-set</th>
+<th style="text-align: left;">Leading edge</th>
+<th style="text-align: left;">p-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">LV520</td>
+<td style="text-align: left;">decrease</td>
+<td style="text-align: left;"><em>FBXW7</em>, <em>TCF7L2</em></td>
+<td style="text-align: left;">0.0006</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">LV801</td>
+<td style="text-align: left;">decrease</td>
+<td style="text-align: left;"><em>UBE2J2</em>, <em>TCF7L2</em></td>
+<td style="text-align: left;">0.0022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">LV512</td>
+<td style="text-align: left;">decrease</td>
+<td style="text-align: left;"><em>FBXW7</em>, <em>TCF7L2</em></td>
+<td style="text-align: left;">0.0025</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LV612</strong></td>
+<td style="text-align: left;">decrease</td>
+<td style="text-align: left;"><em>PTEN</em>, <em>FBXW7</em></td>
+<td style="text-align: left;">0.0036</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">LV41</td>
+<td style="text-align: left;">decrease</td>
+<td style="text-align: left;"><em>PCYT2</em>, <em>TCF7L2</em></td>
+<td style="text-align: left;">0.0041</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>LV838</strong></td>
+<td style="text-align: left;">decrease</td>
+<td style="text-align: left;"><em>UBE2J2</em>, <em>TCF7L2</em></td>
+<td style="text-align: left;">0.0070</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">LV302</td>
+<td style="text-align: left;">decrease</td>
+<td style="text-align: left;"><em>TCF7L2</em>, <em>PTEN</em></td>
+<td style="text-align: left;">0.0083</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">LV959</td>
+<td style="text-align: left;">decrease</td>
+<td style="text-align: left;"><em>TCF7L2</em>, <em>PTEN</em></td>
+<td style="text-align: left;">0.0092</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="consensus-clustering-of-traits-1">Consensus clustering of traits</h3>
+<h4 id="agreement-of-consensus-clustering-partitions-with-the-ensemble">Agreement of consensus clustering partitions with the ensemble</h4>
+<div id="fig:sup:consensus_agreement" class="fignos">
+<figure>
+<img src="images/clustering/selected_best_partitions_by_k.svg" style="width:80.0%" alt="Figure 15: Final selected partitions for follow-up analysis.  From all consensus clustering partitions generated with k from 2 to 60, we selected those with a median adjusted Rand index (ARI) with the ensemble members greater the 75th percentile." />
+<figcaption aria-hidden="true"><span>Figure 15:</span> <strong>Final selected partitions for follow-up analysis.</strong>
+<!--  -->
+From all consensus clustering partitions generated with <span class="math inline">\(k\)</span> from 2 to 60, we selected those with a median adjusted Rand index (ARI) with the ensemble members greater the 75th percentile.</figcaption>
+</figure>
+</div>
+<h4 id="cluster-specific-and-general-transcriptional-processes-associated-with-disease">Cluster-specific and general transcriptional processes associated with disease</h4>
+<div id="fig:sup:clustering:novel:heatmap" class="fignos">
+<figure>
+<img src="images/clustering/global_clustermap-novel-plain.svg" style="width:100.0%" alt="Figure 16: Cluster-specific and general transcriptional processes associated with disease using novel LVs. The plot shows a submatrix of \hat{\mathbf{M}} for the main trait clusters at k=29, considering only LVs (rows) that are not aligned with any pathway. Standardized values from -6 (lighter color) to 21 (darker color)." />
+<figcaption aria-hidden="true"><span>Figure 16:</span> <strong>Cluster-specific and general transcriptional processes associated with disease using novel LVs.</strong>
+The plot shows a submatrix of <span class="math inline">\(\hat{\mathbf{M}}\)</span> for the main trait clusters at <span class="math inline">\(k\)</span>=29, considering only LVs (rows) that are not aligned with any pathway.
+Standardized values from -6 (lighter color) to 21 (darker color).</figcaption>
+</figure>
+</div>
+<h3 id="latent-variables-gene-modules-information">Latent variables (gene modules) information</h3>
+<h4 id="lv603">LV603</h4>
 <!-- LV603:multiplier_pathways:start -->
 <div id="tbl:sup:multiplier_pathways:lv603" class="tablenos">
 <table id="tbl:sup:multiplier_pathways:lv603">
-<caption><span>Table 2:</span> Pathways aligned to LV603 from the MultiPLIER models.
+<caption><span>Table 4:</span> Pathways aligned to LV603 from the MultiPLIER models.
 <!-- LV603:multiplier_pathways:end --></caption>
 <thead>
 <tr class="header">
@@ -1498,7 +1731,7 @@ B. Final illumina library from HS DNA —showed a single ~285bp peak was generat
 <!-- LV603:phenomexcan_traits_assocs:start -->
 <div id="tbl:sup:phenomexcan_assocs:lv603" class="tablenos">
 <table id="tbl:sup:phenomexcan_assocs:lv603">
-<caption><span>Table 3:</span> Significant trait associations of LV603 in PhenomeXcan.
+<caption><span>Table 5:</span> Significant trait associations of LV603 in PhenomeXcan.
 <!-- LV603:phenomexcan_traits_assocs:end --></caption>
 <colgroup>
 <col style="width: 47%" />
@@ -1569,7 +1802,7 @@ B. Final illumina library from HS DNA —showed a single ~285bp peak was generat
 <!-- LV603:emerge_traits_assocs:start -->
 <div id="tbl:sup:emerge_assocs:lv603" class="tablenos">
 <table id="tbl:sup:emerge_assocs:lv603">
-<caption><span>Table 4:</span> Significant trait associations of LV603 in eMERGE.
+<caption><span>Table 6:</span> Significant trait associations of LV603 in eMERGE.
 <!-- LV603:emerge_traits_assocs:end --></caption>
 <colgroup>
 <col style="width: 35%" />
@@ -1598,132 +1831,7 @@ B. Final illumina library from HS DNA —showed a single ~285bp peak was generat
 </tbody>
 </table>
 </div>
-<h3 id="gene-modules-enrichment-for-lipids-gene-sets">Gene modules enrichment for lipids gene-sets</h3>
-<!-- lipids_gene_sets:modules_enriched_increase:start -->
-<div id="tbl:sup:lipids_crispr:modules_enriched_increase" class="tablenos">
-<table id="tbl:sup:lipids_crispr:modules_enriched_increase">
-<caption><span>Table 5:</span> Gene modules (LVs) nominally enriched for the lipids-increasing gene-set from the CRISPR-screen (<em>P</em> &lt; 0.01). LVs significantly aligned with pathways (FDR &lt; 0.05) from the MultiPLIER models are shown in boldface.
-<!-- lipids_gene_sets:modules_enriched_increase:end --></caption>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Gene module</th>
-<th style="text-align: left;">Lipids gene-set</th>
-<th style="text-align: left;">Leading edge</th>
-<th style="text-align: left;">p-value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><strong>LV246</strong></td>
-<td style="text-align: left;">increase</td>
-<td style="text-align: left;"><em>DGAT2</em>, <em>ACACA</em></td>
-<td style="text-align: left;">0.0035</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">LV702</td>
-<td style="text-align: left;">increase</td>
-<td style="text-align: left;"><em>ACACA</em>, <em>DGAT2</em></td>
-<td style="text-align: left;">0.0046</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><strong>LV607</strong></td>
-<td style="text-align: left;">increase</td>
-<td style="text-align: left;"><em>ACACA</em>, <em>DGAT2</em></td>
-<td style="text-align: left;">0.0058</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">LV890</td>
-<td style="text-align: left;">increase</td>
-<td style="text-align: left;"><em>ACACA</em>, <em>DGAT2</em></td>
-<td style="text-align: left;">0.0067</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><strong>LV74</strong></td>
-<td style="text-align: left;">increase</td>
-<td style="text-align: left;"><em>MBTPS1</em>, <em>DGAT2</em></td>
-<td style="text-align: left;">0.0078</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>LV865</strong></td>
-<td style="text-align: left;">increase</td>
-<td style="text-align: left;"><em>ACACA</em>, <em>DGAT2</em></td>
-<td style="text-align: left;">0.0092</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">LV841</td>
-<td style="text-align: left;">increase</td>
-<td style="text-align: left;"><em>ACACA</em>, <em>DGAT2</em></td>
-<td style="text-align: left;">0.0096</td>
-</tr>
-</tbody>
-</table>
-</div>
-<!-- lipids_gene_sets:modules_enriched_decrease:start -->
-<div id="tbl:sup:lipids_crispr:modules_enriched_decrease" class="tablenos">
-<table id="tbl:sup:lipids_crispr:modules_enriched_decrease">
-<caption><span>Table 6:</span> Gene modules (LVs) nominally enriched for the lipids-decreasing gene-set from the CRISPR-screen (<em>P</em> &lt; 0.01). LVs significantly aligned with pathways (FDR &lt; 0.05) from the MultiPLIER models are shown in boldface.
-<!-- lipids_gene_sets:modules_enriched_decrease:end --></caption>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Gene module</th>
-<th style="text-align: left;">Lipids gene-set</th>
-<th style="text-align: left;">Leading edge</th>
-<th style="text-align: left;">p-value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">LV520</td>
-<td style="text-align: left;">decrease</td>
-<td style="text-align: left;"><em>FBXW7</em>, <em>TCF7L2</em></td>
-<td style="text-align: left;">0.0006</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">LV801</td>
-<td style="text-align: left;">decrease</td>
-<td style="text-align: left;"><em>UBE2J2</em>, <em>TCF7L2</em></td>
-<td style="text-align: left;">0.0022</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">LV512</td>
-<td style="text-align: left;">decrease</td>
-<td style="text-align: left;"><em>FBXW7</em>, <em>TCF7L2</em></td>
-<td style="text-align: left;">0.0025</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>LV612</strong></td>
-<td style="text-align: left;">decrease</td>
-<td style="text-align: left;"><em>PTEN</em>, <em>FBXW7</em></td>
-<td style="text-align: left;">0.0036</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">LV41</td>
-<td style="text-align: left;">decrease</td>
-<td style="text-align: left;"><em>PCYT2</em>, <em>TCF7L2</em></td>
-<td style="text-align: left;">0.0041</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>LV838</strong></td>
-<td style="text-align: left;">decrease</td>
-<td style="text-align: left;"><em>UBE2J2</em>, <em>TCF7L2</em></td>
-<td style="text-align: left;">0.0070</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">LV302</td>
-<td style="text-align: left;">decrease</td>
-<td style="text-align: left;"><em>TCF7L2</em>, <em>PTEN</em></td>
-<td style="text-align: left;">0.0083</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">LV959</td>
-<td style="text-align: left;">decrease</td>
-<td style="text-align: left;"><em>TCF7L2</em>, <em>PTEN</em></td>
-<td style="text-align: left;">0.0092</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="lv246">LV246</h3>
+<h4 id="lv246">LV246</h4>
 <!-- LV246:multiplier_pathways:start -->
 <div id="tbl:sup:multiplier_pathways:lv246" class="tablenos">
 <table id="tbl:sup:multiplier_pathways:lv246" style="width:100%;">
@@ -1976,7 +2084,7 @@ B. Final illumina library from HS DNA —showed a single ~285bp peak was generat
 </tbody>
 </table>
 </div>
-<h3 id="lv116">LV116</h3>
+<h4 id="lv116">LV116</h4>
 <!-- LV116:multiplier_pathways:start -->
 <div id="tbl:sup:multiplier_pathways:lv116" class="tablenos">
 <table id="tbl:sup:multiplier_pathways:lv116">
@@ -2033,11 +2141,11 @@ B. Final illumina library from HS DNA —showed a single ~285bp peak was generat
 </tbody>
 </table>
 </div>
-<h3 id="lv931">LV931</h3>
+<h4 id="lv931">LV931</h4>
 <div id="fig:sup:lv931" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv931/lv931-cell_types.svg" style="width:80.0%" alt="Figure 13: Cell types for LV931. " />
-<figcaption aria-hidden="true"><span>Figure 13:</span> <strong>Cell types for LV931.</strong>
+<img src="images/lvs_analysis/lv931/lv931-cell_types.svg" style="width:80.0%" alt="Figure 17: Cell types for LV931. " />
+<figcaption aria-hidden="true"><span>Figure 17:</span> <strong>Cell types for LV931.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
@@ -2067,11 +2175,11 @@ B. Final illumina library from HS DNA —showed a single ~285bp peak was generat
 </tbody>
 </table>
 </div>
-<h3 id="lv66">LV66</h3>
+<h4 id="lv66">LV66</h4>
 <div id="fig:sup:lv66" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv66/lv66-cell_types.svg" style="width:80.0%" alt="Figure 14: Cell types for LV66. " />
-<figcaption aria-hidden="true"><span>Figure 14:</span> <strong>Cell types for LV66.</strong>
+<img src="images/lvs_analysis/lv66/lv66-cell_types.svg" style="width:80.0%" alt="Figure 18: Cell types for LV66. " />
+<figcaption aria-hidden="true"><span>Figure 18:</span> <strong>Cell types for LV66.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
@@ -2096,29 +2204,11 @@ B. Final illumina library from HS DNA —showed a single ~285bp peak was generat
 </tbody>
 </table>
 </div>
-<h3 id="agreement-of-consensus-clustering-partitions-with-the-ensemble-by-number-of-clusters">Agreement of consensus clustering partitions with the ensemble by number of clusters</h3>
-<div id="fig:sup:consensus_agreement" class="fignos">
-<figure>
-<img src="images/clustering/selected_best_partitions_by_k.svg" style="width:80.0%" alt="Figure 15: Final selected partitions for follow-up analysis.  From all consensus clustering partitions generated with k from 2 to 60, we selected those with a median adjusted Rand index (ARI) with the ensemble members greater the 75th percentile." />
-<figcaption aria-hidden="true"><span>Figure 15:</span> <strong>Final selected partitions for follow-up analysis.</strong>
-<!--  -->
-From all consensus clustering partitions generated with <span class="math inline">\(k\)</span> from 2 to 60, we selected those with a median adjusted Rand index (ARI) with the ensemble members greater the 75th percentile.</figcaption>
-</figure>
-</div>
-<h3 id="cluster-specific-and-general-transcriptional-processes-associated-with-disease">Cluster-specific and general transcriptional processes associated with disease</h3>
-<div id="fig:sup:clustering:novel:heatmap" class="fignos">
-<figure>
-<img src="images/clustering/global_clustermap-novel-plain.svg" style="width:100.0%" alt="Figure 16: Cluster-specific and general transcriptional processes associated with disease using novel LVs. The plot shows a submatrix of \hat{\mathbf{M}} for the main trait clusters at k=29, considering only LVs (rows) that are not aligned with any pathway. Standardized values from -6 (lighter color) to 21 (darker color)." />
-<figcaption aria-hidden="true"><span>Figure 16:</span> <strong>Cluster-specific and general transcriptional processes associated with disease using novel LVs.</strong>
-The plot shows a submatrix of <span class="math inline">\(\hat{\mathbf{M}}\)</span> for the main trait clusters at <span class="math inline">\(k\)</span>=29, considering only LVs (rows) that are not aligned with any pathway.
-Standardized values from -6 (lighter color) to 21 (darker color).</figcaption>
-</figure>
-</div>
-<h3 id="lv928">LV928</h3>
+<h4 id="lv928">LV928</h4>
 <div id="fig:sup:lv928" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv928/lv928-cell_types.svg" style="width:80.0%" alt="Figure 17: Cell types for LV928. " />
-<figcaption aria-hidden="true"><span>Figure 17:</span> <strong>Cell types for LV928.</strong>
+<img src="images/lvs_analysis/lv928/lv928-cell_types.svg" style="width:80.0%" alt="Figure 19: Cell types for LV928. " />
+<figcaption aria-hidden="true"><span>Figure 19:</span> <strong>Cell types for LV928.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
@@ -2324,11 +2414,11 @@ Standardized values from -6 (lighter color) to 21 (darker color).</figcaption>
 </tbody>
 </table>
 </div>
-<h3 id="lv30">LV30</h3>
+<h4 id="lv30">LV30</h4>
 <div id="fig:sup:lv30" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv30/lv30-cell_types.svg" style="width:80.0%" alt="Figure 18: Cell types for LV30. " />
-<figcaption aria-hidden="true"><span>Figure 18:</span> <strong>Cell types for LV30.</strong>
+<img src="images/lvs_analysis/lv30/lv30-cell_types.svg" style="width:80.0%" alt="Figure 20: Cell types for LV30. " />
+<figcaption aria-hidden="true"><span>Figure 20:</span> <strong>Cell types for LV30.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
@@ -2490,11 +2580,11 @@ Standardized values from -6 (lighter color) to 21 (darker color).</figcaption>
 </tbody>
 </table>
 </div>
-<h3 id="lv730">LV730</h3>
+<h4 id="lv730">LV730</h4>
 <div id="fig:sup:lv730" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv730/lv730-cell_types.svg" style="width:80.0%" alt="Figure 19: Cell types for LV730. " />
-<figcaption aria-hidden="true"><span>Figure 19:</span> <strong>Cell types for LV730.</strong>
+<img src="images/lvs_analysis/lv730/lv730-cell_types.svg" style="width:80.0%" alt="Figure 21: Cell types for LV730. " />
+<figcaption aria-hidden="true"><span>Figure 21:</span> <strong>Cell types for LV730.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
@@ -2611,11 +2701,11 @@ Standardized values from -6 (lighter color) to 21 (darker color).</figcaption>
 </tbody>
 </table>
 </div>
-<h3 id="lv598">LV598</h3>
+<h4 id="lv598">LV598</h4>
 <div id="fig:sup:lv598" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv598/lv598-cell_types.svg" style="width:80.0%" alt="Figure 20: Cell types for LV598. " />
-<figcaption aria-hidden="true"><span>Figure 20:</span> <strong>Cell types for LV598.</strong>
+<img src="images/lvs_analysis/lv598/lv598-cell_types.svg" style="width:80.0%" alt="Figure 22: Cell types for LV598. " />
+<figcaption aria-hidden="true"><span>Figure 22:</span> <strong>Cell types for LV598.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
@@ -2758,11 +2848,11 @@ Standardized values from -6 (lighter color) to 21 (darker color).</figcaption>
 </tbody>
 </table>
 </div>
-<h3 id="lv844">LV844</h3>
+<h4 id="lv844">LV844</h4>
 <div id="fig:sup:lv844" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv844/lv844-cell_types.svg" style="width:80.0%" alt="Figure 21: Cell types for LV844." />
-<figcaption aria-hidden="true"><span>Figure 21:</span> <strong>Cell types for LV844.</strong></figcaption>
+<img src="images/lvs_analysis/lv844/lv844-cell_types.svg" style="width:80.0%" alt="Figure 23: Cell types for LV844." />
+<figcaption aria-hidden="true"><span>Figure 23:</span> <strong>Cell types for LV844.</strong></figcaption>
 </figure>
 </div>
 <!-- LV844:multiplier_pathways:start -->
@@ -3011,11 +3101,11 @@ Standardized values from -6 (lighter color) to 21 (darker color).</figcaption>
 </tbody>
 </table>
 </div>
-<h3 id="lv155">LV155</h3>
+<h4 id="lv155">LV155</h4>
 <div id="fig:sup:lv155" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv155/lv155-cell_types.svg" style="width:80.0%" alt="Figure 22: Cell types for LV155. " />
-<figcaption aria-hidden="true"><span>Figure 22:</span> <strong>Cell types for LV155.</strong>
+<img src="images/lvs_analysis/lv155/lv155-cell_types.svg" style="width:80.0%" alt="Figure 24: Cell types for LV155. " />
+<figcaption aria-hidden="true"><span>Figure 24:</span> <strong>Cell types for LV155.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
@@ -3118,11 +3208,11 @@ Standardized values from -6 (lighter color) to 21 (darker color).</figcaption>
 </tbody>
 </table>
 </div>
-<h3 id="lv57">LV57</h3>
+<h4 id="lv57">LV57</h4>
 <div id="fig:sup:lv57" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv57/lv57-cell_types.svg" style="width:80.0%" alt="Figure 23: Cell types for LV57." />
-<figcaption aria-hidden="true"><span>Figure 23:</span> <strong>Cell types for LV57.</strong></figcaption>
+<img src="images/lvs_analysis/lv57/lv57-cell_types.svg" style="width:80.0%" alt="Figure 25: Cell types for LV57." />
+<figcaption aria-hidden="true"><span>Figure 25:</span> <strong>Cell types for LV57.</strong></figcaption>
 </figure>
 </div>
 <!-- LV57:multiplier_pathways:start -->
@@ -3310,11 +3400,11 @@ Standardized values from -6 (lighter color) to 21 (darker color).</figcaption>
 </tbody>
 </table>
 </div>
-<h3 id="lv54">LV54</h3>
+<h4 id="lv54">LV54</h4>
 <div id="fig:sup:lv54" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv54/lv54-cell_types.svg" style="width:80.0%" alt="Figure 24: Cell types for LV54." />
-<figcaption aria-hidden="true"><span>Figure 24:</span> <strong>Cell types for LV54.</strong></figcaption>
+<img src="images/lvs_analysis/lv54/lv54-cell_types.svg" style="width:80.0%" alt="Figure 26: Cell types for LV54." />
+<figcaption aria-hidden="true"><span>Figure 26:</span> <strong>Cell types for LV54.</strong></figcaption>
 </figure>
 </div>
 <!-- LV54:multiplier_pathways:start -->
@@ -3654,11 +3744,11 @@ Standardized values from -6 (lighter color) to 21 (darker color).</figcaption>
 </tbody>
 </table>
 </div>
-<h3 id="lv847">LV847</h3>
+<h4 id="lv847">LV847</h4>
 <div id="fig:sup:lv847" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv847/lv847-cell_types.svg" style="width:80.0%" alt="Figure 25: Cell types for LV847." />
-<figcaption aria-hidden="true"><span>Figure 25:</span> <strong>Cell types for LV847.</strong></figcaption>
+<img src="images/lvs_analysis/lv847/lv847-cell_types.svg" style="width:80.0%" alt="Figure 27: Cell types for LV847." />
+<figcaption aria-hidden="true"><span>Figure 27:</span> <strong>Cell types for LV847.</strong></figcaption>
 </figure>
 </div>
 <!-- LV847:multiplier_pathways:start -->
@@ -4118,13 +4208,13 @@ Standardized values from -6 (lighter color) to 21 (darker color).</figcaption>
 </tbody>
 </table>
 </div>
-<h3 id="lv136">LV136</h3>
+<h4 id="lv136">LV136</h4>
 <div id="fig:sup:lv136" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv136/lv136-cell_types.svg" style="width:80.0%" alt="Figure 26: Cell types for LV136.  Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours or more [108];" />
-<figcaption aria-hidden="true"><span>Figure 26:</span> <strong>Cell types for LV136.</strong>
+<img src="images/lvs_analysis/lv136/lv136-cell_types.svg" style="width:80.0%" alt="Figure 28: Cell types for LV136.  Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours or more [110];" />
+<figcaption aria-hidden="true"><span>Figure 28:</span> <strong>Cell types for LV136.</strong>
 <!--  -->
-Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours or more <span class="citation" data-cites="VKYS05n1">[<a href="#ref-VKYS05n1" role="doc-biblioref">108</a>]</span>;</figcaption>
+Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours or more <span class="citation" data-cites="VKYS05n1">[<a href="#ref-VKYS05n1" role="doc-biblioref">110</a>]</span>;</figcaption>
 </figure>
 </div>
 <!-- LV136:multiplier_pathways:start -->
@@ -4339,11 +4429,11 @@ Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours o
 </tbody>
 </table>
 </div>
-<h3 id="lv93">LV93</h3>
+<h4 id="lv93">LV93</h4>
 <div id="fig:sup:lv93" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv93/lv93-cell_types.svg" style="width:80.0%" alt="Figure 27: Cell types for LV93. " />
-<figcaption aria-hidden="true"><span>Figure 27:</span> <strong>Cell types for LV93.</strong>
+<img src="images/lvs_analysis/lv93/lv93-cell_types.svg" style="width:80.0%" alt="Figure 29: Cell types for LV93. " />
+<figcaption aria-hidden="true"><span>Figure 29:</span> <strong>Cell types for LV93.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
@@ -4495,11 +4585,11 @@ Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours o
 </tbody>
 </table>
 </div>
-<h3 id="lv206">LV206</h3>
+<h4 id="lv206">LV206</h4>
 <div id="fig:sup:lv206" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv206/lv206-cell_types.svg" style="width:80.0%" alt="Figure 28: Cell types for LV206. " />
-<figcaption aria-hidden="true"><span>Figure 28:</span> <strong>Cell types for LV206.</strong>
+<img src="images/lvs_analysis/lv206/lv206-cell_types.svg" style="width:80.0%" alt="Figure 30: Cell types for LV206. " />
+<figcaption aria-hidden="true"><span>Figure 30:</span> <strong>Cell types for LV206.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
@@ -4616,11 +4706,11 @@ Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours o
 </tbody>
 </table>
 </div>
-<h3 id="lv260">LV260</h3>
+<h4 id="lv260">LV260</h4>
 <div id="fig:sup:lv260" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv260/lv260-cell_types.svg" style="width:80.0%" alt="Figure 29: Cell types for LV260. " />
-<figcaption aria-hidden="true"><span>Figure 29:</span> <strong>Cell types for LV260.</strong>
+<img src="images/lvs_analysis/lv260/lv260-cell_types.svg" style="width:80.0%" alt="Figure 31: Cell types for LV260. " />
+<figcaption aria-hidden="true"><span>Figure 31:</span> <strong>Cell types for LV260.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
@@ -4716,11 +4806,11 @@ Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours o
 </tbody>
 </table>
 </div>
-<h3 id="lv21">LV21</h3>
+<h4 id="lv21">LV21</h4>
 <div id="fig:sup:lv21" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv21/lv21-cell_types.svg" style="width:80.0%" alt="Figure 30: Cell types for LV21. " />
-<figcaption aria-hidden="true"><span>Figure 30:</span> <strong>Cell types for LV21.</strong>
+<img src="images/lvs_analysis/lv21/lv21-cell_types.svg" style="width:80.0%" alt="Figure 32: Cell types for LV21. " />
+<figcaption aria-hidden="true"><span>Figure 32:</span> <strong>Cell types for LV21.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
@@ -4830,11 +4920,11 @@ Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours o
 </tbody>
 </table>
 </div>
-<h3 id="lv5">LV5</h3>
+<h4 id="lv5">LV5</h4>
 <div id="fig:sup:lv5" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv5/lv5-cell_types.svg" style="width:80.0%" alt="Figure 31: Cell types for LV5. " />
-<figcaption aria-hidden="true"><span>Figure 31:</span> <strong>Cell types for LV5.</strong>
+<img src="images/lvs_analysis/lv5/lv5-cell_types.svg" style="width:80.0%" alt="Figure 33: Cell types for LV5. " />
+<figcaption aria-hidden="true"><span>Figure 33:</span> <strong>Cell types for LV5.</strong>
 <!--  --></figcaption>
 </figure>
 </div>
@@ -5007,11 +5097,11 @@ Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours o
 </tbody>
 </table>
 </div>
-<h3 id="lv434">LV434</h3>
+<h4 id="lv434">LV434</h4>
 <div id="fig:sup:lv434" class="fignos">
 <figure>
-<img src="images/lvs_analysis/lv434/lv434-cell_types.svg" style="width:80.0%" alt="Figure 32: Cell types for LV434. HEK293 is a cell line derived from human embryonic kidney cells; 3T3 is a cell line derived from mouse embryonic fibroblasts." />
-<figcaption aria-hidden="true"><span>Figure 32:</span> <strong>Cell types for LV434.</strong>
+<img src="images/lvs_analysis/lv434/lv434-cell_types.svg" style="width:80.0%" alt="Figure 34: Cell types for LV434. HEK293 is a cell line derived from human embryonic kidney cells; 3T3 is a cell line derived from mouse embryonic fibroblasts." />
+<figcaption aria-hidden="true"><span>Figure 34:</span> <strong>Cell types for LV434.</strong>
 HEK293 is a cell line derived from human embryonic kidney cells;
 3T3 is a cell line derived from mouse embryonic fibroblasts.</figcaption>
 </figure>
