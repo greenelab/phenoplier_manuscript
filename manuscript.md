@@ -6,7 +6,7 @@ keywords:
 - PhenomeXcan
 - TWAS
 lang: en-US
-date-meta: '2022-09-15'
+date-meta: '2022-09-19'
 author-meta:
 - Milton Pividori
 - Sumei Lu
@@ -35,8 +35,8 @@ header-includes: |-
   <meta name="citation_title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="og:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
-  <meta name="dc.date" content="2022-09-15" />
-  <meta name="citation_publication_date" content="2022-09-15" />
+  <meta name="dc.date" content="2022-09-19" />
+  <meta name="citation_publication_date" content="2022-09-19" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -105,9 +105,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/6fc883dbd8f4221fd380635c2b12c8cc20c1a3a8/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/6fc883dbd8f4221fd380635c2b12c8cc20c1a3a8/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/6fc883dbd8f4221fd380635c2b12c8cc20c1a3a8/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/0c4c8e943b983db91df1892cb941b6bddacc9e11/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/0c4c8e943b983db91df1892cb941b6bddacc9e11/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/0c4c8e943b983db91df1892cb941b6bddacc9e11/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -134,10 +134,10 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/6fc883dbd8f4221fd380635c2b12c8cc20c1a3a8/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/0c4c8e943b983db91df1892cb941b6bddacc9e11/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@6fc883d](https://github.com/greenelab/phenoplier_manuscript/tree/6fc883dbd8f4221fd380635c2b12c8cc20c1a3a8)
-on September 15, 2022.
+from [greenelab/phenoplier_manuscript@0c4c8e9](https://github.com/greenelab/phenoplier_manuscript/tree/0c4c8e943b983db91df1892cb941b6bddacc9e11)
+on September 19, 2022.
 </em></small>
 
 ## Authors
@@ -302,15 +302,16 @@ Casey S. Greene \<casey.s.greene@cuanschutz.edu\>.
 
 ## Abstract {.page_break_before}
 
-Genes act in concert with each other in specific contexts to perform their functions, and determining how these genes influence complex traits requires a mechanistic understanding of expression regulation across different conditions.
-It has been shown that this insight is key for the development of new therapies.
-The mechanism of individual genes can be identified with transcriptome-wide association studies (TWAS), which have represented a significant step forward to test the mediating role of gene expression in GWAS associations.
-However, modern models of the architecture of complex traits predict that gene-gene interactions play a key role in disease origin and progression.
-Here we introduce PhenoPLIER, an omnigenic approach that maps both gene-trait associations and pharmacological perturbation data into a common latent representation for a joint analysis.
+Genes act in concert with each other in specific contexts to perform their functions.
+Determining how these genes influence complex traits requires a mechanistic understanding of expression regulation across different conditions.
+It has been shown that this insight is critical for developing new therapies.
+In this regard, the mechanism of individual genes can be identified with transcriptome-wide association studies (TWAS), which have represented a significant step forward in testing the mediating role of gene expression in GWAS associations.
+However, modern models of the architecture of complex traits predict that gene-gene interactions play a crucial role in disease origin and progression.
+Here we introduce PhenoPLIER, a computational approach that maps gene-trait associations and pharmacological perturbation data into a common latent representation for a joint analysis.
 This representation is based on modules of genes with similar expression patterns across the same conditions.
 We observed that diseases were significantly associated with gene modules expressed in relevant cell types, and our approach was accurate in predicting known drug-disease pairs and inferring mechanisms of action.
-Furthermore, using a CRISPR screen to analyze lipid regulation, we found that functionally important players lacked TWAS associations but were prioritized in phenotype-associated modules by PhenoPLIER.
-By incorporating groups of co-expressed genes, PhenoPLIER can contextualize genetic associations and reveal potential targets within associated processes that are missed by single-gene strategies.
+Furthermore, using a CRISPR screen to analyze lipid regulation, we found that functionally important players lacked TWAS associations but were prioritized in trait-associated modules by PhenoPLIER.
+By incorporating groups of co-expressed genes, PhenoPLIER can contextualize genetic associations and reveal potential targets missed by single-gene strategies.
 
 
 ## Introduction
@@ -327,31 +328,34 @@ TWAS relies on testing whether perturbations in gene regulatory mechanisms media
 However, TWAS works at the individual gene level, which does not capture more complex interactions at the network level.
 
 
-These gene-gene interactions play a key role in current theories of the architecture of complex traits, such as the omnigenic model [@doi:10.1016/j.cell.2017.05.038], which suggests that disease-relevant mechanisms are extremely complex to disentangle.
+These gene-gene interactions play a crucial role in current theories of the architecture of complex traits, such as the omnigenic model [@doi:10.1016/j.cell.2017.05.038], which suggests that disease-relevant mechanisms are hard to disentangle.
 Widespread gene pleiotropy, for instance, reveals the highly interconnected nature of transcriptional networks [@doi:10.1038/s41588-019-0481-0; @doi:10.1038/ng.3570], where potentially all genes expressed in disease-relevant cell types have a non-zero effect on the trait [@doi:10.1016/j.cell.2017.05.038; @doi:10.1016/j.cell.2019.04.014].
 In this context, several unsupervised approaches have been proposed to infer these gene-gene connections by extracting gene modules from co-expression patterns [@pmid:9843981; @pmid:24662387; @pmid:16333293].
-A gene module can capture part of the complexity present in transcriptional programs [@pmid:22955619], and is defined as a group of genes with similar expression profiles across different conditions.
-Modules often suggest shared function and they have been useful to understand disease etiology [@pmid:25344726; @doi:10.1038/ng.3259].
-Clustering methods, for instance, are among the most popular [@pmid:28915372; @pmid:23467089], although they can miss patterns that are only present in a subset of conditions and usually cannot assign a gene to multiple modules.
-On the other hand, matrix factorization techniques like independent or principal component analysis (ICA/PCA) have shown superior performance in this task [@doi:10.1038/s41467-018-03424-4], since they capture local expression effects from a subset of samples and can handle modules overlap effectively.
+A gene module, defined as a group of genes with similar expression profiles across different conditions, can capture part of the complexity present in transcriptional programs [@pmid:22955619].
+Modules often suggest shared function and have helped understand disease etiology [@pmid:25344726; @doi:10.1038/ng.3259].
+Clustering, for instance, is among the most popular methods [@pmid:28915372; @pmid:23467089], although it can miss patterns only present in a subset of conditions and usually cannot assign a gene to multiple modules.
+On the other hand, matrix factorization techniques like independent or principal component analysis (ICA/PCA) have shown superior performance in this task [@doi:10.1038/s41467-018-03424-4] since they capture local expression effects from a subset of samples and can handle modules overlap effectively.
 Therefore, integrating genetic studies with gene modules extracted using unsupervised learning could further improve our understanding of disease origin [@pmid:25344726] and progression [@pmid:18631455].
 
 
 Here we propose PhenoPLIER, an omnigenic approach that provides a gene module perspective to genetic studies.
-The flexibility of our method allows to integrate different data modalities into the same representation for a joint analysis.
-In this work, we show how this gene module perspective can infer how groups of functionally-related genes influence complex traits, analyze the shared and distinct transcriptomic properties among traits, and predict how pharmacological perturbations affect genes' activity to exert their effects.
-This is done by maping both gene-trait associations and drug-induced transcriptional responses into a common latent representation.
+The flexibility of our method allows integrating different data modalities into the same representation for a joint analysis.
+In this work, we show that this module perspective can infer how groups of functionally-related genes influence complex traits, detect shared and distinct transcriptomic properties among traits, and predict how pharmacological perturbations affect genes' activity to exert their effects.
+PhenoPLIER maps gene-trait associations and drug-induced transcriptional responses into a common latent representation.
 For this, we integrated thousands of gene-trait associations (using TWAS from PhenomeXcan [@doi:10.1126/sciadv.aba2083]) and transcriptional profiles of drugs (from LINCS L1000 [@doi:10.1016/j.cell.2017.10.049]) into a low-dimensional space learned from public gene expression data on tens of thousands of RNA-seq samples (recount2 [@doi:10.1016/j.cels.2019.04.003; @doi:10.1038/nbt.3838]).
 We used a latent representation defined by a matrix factorization approach [@doi:10.1038/s41592-019-0456-1; @doi:10.1016/j.cels.2019.04.003] that extracts gene modules with certain sparsity constraints and preferences for those that align with prior knowledge (pathways).
-When mapping gene-trait associations to this reduced expression space, we observed that diseases were significantly associated with gene modules expressed in relevant cell types, such as hypothyroidism with T cells and thyroid, corneal endothelial cells with keratometry measurements, hematological assays on specific blood cell types, plasma lipids with adipose tissue, and neuropsychiatric disorders with different brain cell types.
-Moreover, since PhenoPLIER relies on a large and heterogeneous RNA-seq dataset, we were also able to identify modules associated with cell types under specific stimuli or disease states.
+When mapping gene-trait associations to this reduced expression space, we observed that diseases were significantly associated with gene modules expressed in relevant cell types: such as hypothyroidism with T cells, corneal endothelial cells with keratometry measurements, hematological assays on specific blood cell types, plasma lipids with adipose tissue, and neuropsychiatric disorders with different brain cell types.
+Moreover, since PhenoPLIER can use models derived from large and heterogeneous RNA-seq datasets, we could also identify modules associated with cell types under specific stimuli or disease states.
 We observed that significant module-trait associations in PhenomeXcan (our discovery cohort) replicated in the Electronic Medical Records and Genomics (eMERGE) network phase III [@doi:10.1038/gim.2013.72; @doi:10.1101/2021.10.21.21265225] (our replication cohort).
-Furthermore, we performed a CRISPR screen to analyze lipid regulation in HepG2 cells and observed more robust trait associations with modules than with individual genes, even when single genes known to be involved in lipid metabolism did not reach genome-wide significance.
-Compared to a single-gene approach, our module-based method also better predicted FDA-approved drug-disease links by capturing tissue-specific pathophysiological mechanisms linked with the mechanism of action of drugs (e.g., niacin with cardiovascular traits via a known immune mechanism), suggesting that modules may provide a better means to examine drug-disease relationships than individual genes.
-Finally, exploring the phenotype-module space also revealed stable trait clusters associated with relevant tissues, including a complex branch involving lipids with cardiovascular, autoimmune, and neuropsychiatric disorders.
+Furthermore, we performed a CRISPR screen to analyze lipid regulation in HepG2 cells.
+We observed more robust trait associations with modules than with individual genes, even when single genes known to be involved in lipid metabolism did not reach genome-wide significance.
+Compared to a single-gene approach, our module-based method also better predicted FDA-approved drug-disease links by capturing tissue-specific pathophysiological mechanisms linked with the mechanism of action of drugs (e.g., niacin with cardiovascular traits via a known immune mechanism).
+This improved drug-disease prediction suggested that modules may provide a better means to examine drug-disease relationships than individual genes.
+Finally, exploring the phenotype-module space revealed stable trait clusters associated with relevant tissues, including a complex branch involving lipids with cardiovascular, autoimmune, and neuropsychiatric disorders.
 In summary, instead of considering single genes associated with different complex traits, PhenoPLIER incorporates groups of genes that act together to carry out different functions in specific cell types.
-This improves robustness to detect and interpret genetic associations, and here we show how it can prioritize alternative and potentially more promising candidate targets even when important single gene associations are not detected.
-The approach represents a conceptual shift in the interpretation of genetic studies, and has the potential to extract mechanistic insight from statistical associations to enhance the understanding of complex diseases and their therapeutic modalities.
+This approach improves robustness in detecting and interpreting genetic associations, and here we show how it can prioritize alternative and potentially more promising candidate targets even when known single gene associations are not detected.
+The approach represents a conceptual shift in the interpretation of genetic studies.
+It has the potential to extract mechanistic insight from statistical associations to enhance the understanding of complex diseases and their therapeutic modalities.
 
 
 ## Results
@@ -368,89 +372,88 @@ Air pollution linked to neurodegeneration markers
 
 ### PhenoPLIER: an integration framework based on gene co-expression patterns
 
-`NOTES:`{.Red}
-- in methods I refer to PhenomeXcan as discovery cohort
-- and eMERGE as replication cohort
-
 ![
 **Schematic of the PhenoPLIER framework.**
 **a)** High-level schematic of PhenoPLIER (a gene module-based method) in the context of TWAS (single-gene) and GWAS (genetic variants).
 PhenoPLIER integrates groups of genes co-expressed in specific cell types (gene modules) with gene-trait and gene-drug associations.
 **b)** The integration consists of projecting gene-trait/gene-drug associations from PhenomeXcan/LINCS L1000 (bottom) to a latent space based on gene modules (represented by latent variables/LVs) from MultiPLIER (top).
-The process generates matrix $\mathbf{\hat{M}}$, where each trait/drug is now described by LVs (only traits are shown).
-**c)** LV603, termed as a neutrophil signature in the original MultiPLIER study, was associated in PhenoPLIER with neutrophil counts and other white blood cells (bottom, showing the top 10 traits for LV603).
-Genes in LV603 were expressed in relevant cell types (top).
+This process generates matrices $\mathbf{\hat{L}}$ and $\mathbf{\hat{M}}$, where LVs now describe each trait/drug.
+In the middle, we show the three main computational components provided by PhenoPLIER to perform this integration:
+1) an LV-based regression model,
+2) a clustering framework to learn groups of traits,
+and 3) an LV-based drug repurposing approach.
+**c)** LV603, termed as a neutrophil signature in the original MultiPLIER study, was associated in PhenoPLIER with neutrophil counts and other white blood cells (bottom, showing the top 10 traits for LV603 after projecting gene-trait associations in PhenomeXcan).
+Genes that are part of LV603 were expressed in relevant cell types (top).
 PBMC: peripheral blood mononuclear cells;
 mDCs: myeloid dendritic cells.
 ](images/entire_process/entire_process.svg "PhenoPLIER framework"){#fig:entire_process width="100%"}
 
 
-PhenoPLIER combines TWAS and drug-induced transcriptional responses with gene co-expression patterns by projecting gene-trait and gene-drug associations onto a latent gene expression representation (Figure @fig:entire_process).
-We used PhenomeXcan [@doi:10.1126/sciadv.aba2083], a TWAS resource for the UK Biobank [@doi:10.1038/s41586-018-0579-z] and other cohorts with 4,091 different diseases and traits, and the transcriptional responses to small molecule perturbations from LINCS L1000 [@doi:10.1016/j.cell.2017.10.049] comprising 1,170 compounds.
-We obtained a latent gene expression representation from MultiPLIER [@doi:10.1016/j.cels.2019.04.003], an unsupervised learning approach applied to recount2 [@doi:10.1038/nbt.3838] -- a uniformly-curated collection of transcript-level gene expression quantified by RNA-seq in a large, diverse set of samples collected across a range of disease state, cell types differentiation stages, and various stimuli (Methods).
-MultiPLIER extracted 987 latent variables (LV) by optimizing data reconstruction but also the alignment of LVs with prior knowledge/pathways (Methods).
+PhenoPLIER is a flexible computational framework that combines gene-trait and gene-drug associations with gene modules expressed in specific contexts (Figure {@fig:entire_process}a).
+The approach uses a latent representation (with latent variables or LVs representing gene modules) derived from a large gene expression compendium (Figure {@fig:entire_process}b, top) to integrate TWAS with drug-induced transcriptional responses (Figure {@fig:entire_process}b, bottom) for a joint analysis.
+The approach consists in three main components (Figure {@fig:entire_process}b, middle, see [Methods](#sec:methods)):
+1) an LV-based regression model to compute an association between an LV and a trait,
+2) a clustering framework to learn groups of traits with shared transcriptomic properties,
+and 3) an LV-based drug repurposing approach that links diseases to potential treatments.
+We performed extensive simulations for our regression model ([Supplementary Note 1](#sm:reg:null_sim)) and clustering framework ([Supplementary Note 2](#sm:clustering:null_sim)) to ensure proper calibration and expected results under a model of no association.
+
+
+We used TWAS results from PhenomeXcan [@doi:10.1126/sciadv.aba2083] and the eMERGE network [@doi:10.1101/2021.10.21.21265225] as discovery and replication cohorts, respectively ([Methods](#sec:methods:twas)).
+PhenomeXcan provides gene-trait associations for 4,091 different diseases and traits from the UK Biobank [@doi:10.1038/s41586-018-0579-z] and other studies, whereas the analyses on eMERGE were performed across 309 phecodes.
+TWAS results were derived using two statistical methods (see [Methods](#sec:methods:predixcan)):
+1) Summary-MultiXcan (S-MultiXcan) associations were used for the regression and clustering components,
+and 2) Summary-PrediXcan (S-PrediXcan) associations were used for the drug repurposing component.
+In addition, we also used colocalization results, which provide a probability of overlap between the GWAS and eQTL signals.
+For the drug-repurposing approach, we used transcriptional responses to small molecule perturbations from LINCS L1000 [@doi:10.1016/j.cell.2017.10.049] comprising 1,170 compounds.
+
+
+The latent gene expression representation was obtained from the MultiPLIER models [@doi:10.1016/j.cels.2019.04.003], which were derived by applying a matrix factorization method (the pathway-level information extractor or PLIER [@doi:10.1038/s41592-019-0456-1]) to recount2 [@doi:10.1038/nbt.3838] -- a uniformly-curated collection of transcript-level gene expression quantified by RNA-seq in a large, diverse set of samples collected across a range of disease states, cell types differentiation stages, and various stimuli (see [Methods](#sec:methods:multiplier)).
+The MultiPLIER models extracted 987 LVs by optimizing data reconstruction but also the alignment of LVs with prior knowledge/pathways.
+
+
 Each LV or gene module represents a group of weighted genes expressed together in the same tissues and cell types as a functional unit.
-Since LVs might represent a functional set of genes regulated by the same transcriptional program [@doi:10.1186/1471-2164-7-187; @doi:10.1186/s13059-019-1835-8], we conjecture that the projection of TWAS and pharmacologic perturbations data into this latent space could provide context for their interpretation.
-PhenoPLIER converts gene associations to an LV score:
-all genes' standardized effect sizes for a trait (from TWAS) or differential expression values for a drug (from pharmacologic perturbation data) are multiplied by the LV genes' weights and summed, producing a single value.
-This process links different traits and drugs to LVs representing cell types and tissues, even at specific developmental stages or under distinct stimuli.
-Examining these LVs is possible because the MultiPLIER's models link to samples, which may be annotated for experimental conditions (represented by matrix $\mathbf{B}$ in Figure @fig:entire_process b, top) in which genes in an LV are expressed.
-To further analyze LV-trait associations, we adapted the gene-property approach from MAGMA [@doi:10.1371/journal.pcbi.1004219] to compute an LV-trait $p$-value by fitting a regression model with LV weights as predictors of a trait's gene associations.
-Thus PhenoPLIER allows the user to address specific questions, namely:
-do disease-associated genes belong to modules expressed in specific tissues and cell types?
-Are these cell type-specific modules associated with different diseases (thus, potentially representing a "network pleiotropy" example from an omnigenic point of view [@doi:10.1016/j.cell.2017.05.038])?
-Is there a subset of module's genes that is closer to the definition of "core" genes (i.e., directly affecting the trait with no mediated regulation of other genes [@doi:10.1016/j.cell.2019.04.014]) and thus represent alternative and potentially better candidate targets?
-Are drugs perturbing these transcriptional mechanisms, and if so, can they suggest potential mechanisms of action?
-
-
+Since LVs might represent a functional set of genes regulated by the same transcriptional program [@doi:10.1186/1471-2164-7-187; @doi:10.1186/s13059-019-1835-8], we conjecture that the projection of TWAS and pharmacologic perturbations data into this latent space could provide a better mechanistic understanding.
+For this projection of different data modalities into the same space, PhenoPLIER converts gene associations to an LV score: all genes' standardized effect sizes for a trait (from TWAS) or differential expression values for a drug (from pharmacologic perturbation data) are multiplied by the LV genes' weights and summed, producing a single value.
+Instead of looking at individual genes, this process links different traits and drugs to functionally-related groups of genes or LVs.
+PhenoPLIER uses LVs annotations about the specific conditions where the group of genes is expressed, such as cell types and tissues, even at specific developmental stages, disease stages or under distinct stimuli.
+Although this is not strictly necessary for PhenoPLIER to work, these annotations can dramatically improve the interpretability of results.
+MultiPLIER's models provide this information by linking LVs to samples, which may be annotated for experimental conditions (represented by matrix $\mathbf{B}$ at the top of Figure {@fig:entire_process}b) in which genes in an LV are expressed.
+<!--  -->
+An example of this is shown in Figure {@fig:entire_process}c.
 In the original MultiPLIER study, the authors reported that one of the latent variables, identified as LV603, was associated with a known neutrophil pathway and highly correlated with neutrophil count estimates from whole blood RNA-seq profiles [@doi:10.1186/s13059-016-1070-5].
-We analyzed LV603 using PhenoPLIER (Figure @fig:entire_process c) and found that
-1) neutrophil counts and other white blood cell traits were ranked among the top 10 traits out of 4,091 (Figure @fig:entire_process c, bottom) and significantly associated with this LV (Supplementary Table @tbl:sup:phenomexcan_assocs:lv603) when using the gene-property approach,
-and 2) LV603's genes were expressed in highly relevant cell types (Figure @fig:entire_process c, top).
-These results suggested that groups of functionally related and co-expressed genes tend to correspond to groups of trait-associated genes.
-Thus, the gene expression space (which has no GTEx samples) and the TWAS space (with gene models trained using GTEx v8) contained shared patterns, and the approach can link transcriptional mechanisms from large and diverse dataset collections to complex traits.
+We analyzed LV603 using PhenoPLIER and found that
+1) neutrophil counts and other white blood cell traits were ranked among the top 10 traits out of 4,091 (Figure {@fig:entire_process}c, bottom), and basophils count and percentage were significantly associated with this LV when using our regression method (Supplementary Table @tbl:sup:phenomexcan_assocs:lv603),
+and 2) LV603's genes were expressed in highly relevant cell types (Figure {@fig:entire_process}c, top).
+These initial results suggested that groups of functionally related and co-expressed genes tend to correspond to groups of trait-associated genes, and the approach can link transcriptional mechanisms from large and diverse dataset collections to complex traits.
+
+
+Therefore, PhenoPLIER allows the user to address specific questions, namely:
+do disease-associated genes belong to modules expressed in specific tissues and cell types?
+Are these cell type-specific modules associated with _different_ diseases, thus potentially representing a "network pleiotropy" example from an omnigenic point of view [@doi:10.1016/j.cell.2017.05.038]?
+Is there a subset of module's genes that is closer to the definition of "core" genes (i.e., directly affecting the trait with no mediated regulation of other genes [@doi:10.1016/j.cell.2019.04.014]) and thus represents alternative and potentially better candidate targets?
+Are drugs perturbing these transcriptional mechanisms, and can they suggest potential mechanisms of action?
 
 
 ### LVs link genes that alter lipid accumulation with relevant traits and tissues
 
 Our first experiment attempted to answer whether genes in a disease-relevant LV could represent potential therapeutic targets.
 For this, the first step was to obtain a set of genes strongly associated with a phenotype of interest.
-Therefore, we performed a fluorescence-based CRISPR-Cas9 in the HepG2 cell line and identified 462 genes associated with lipid regulation (Methods).
-From these, we selected two high-confidence gene-sets that either caused a decrease or increase of lipids:
+Therefore, we performed a fluorescence-based CRISPR-Cas9 in the HepG2 cell line and identified 462 genes associated with lipid regulation ([Methods](#sec:methods:crispr)).
+From these, we selected two high-confidence gene sets that either caused a decrease or increase of lipids:
 a lipids-decreasing gene-set with eight genes: *BLCAP*, *FBXW7*, *INSIG2*, *PCYT2*, *PTEN*, *SOX9*, *TCF7L2*, *UBE2J2*;
-and a lipids-increasing gene-set with six genes: *ACACA*, *DGAT2*, *HILPDA*, *MBTPS1*, *SCAP*, *SRPR* (Supplementary File 1).
-
-
-<!-- From these, we selected four gene-sets that either caused a decrease or increase of lipids with varying degrees of confidence:
-a median-confidence lipids-decreasing gene-set had 96 genes in total, with a subset of eight high-confidence genes: *BLCAP*, *FBXW7*, *INSIG2*, *PCYT2*, *PTEN*, *SOX9*, *TCF7L2*, *UBE2J2*;
-a median-confidence lipids-increasing gene-set had 175 genes in total, with a subset of eight high-confidence genes: *ACACA*, *DGAT2*, *HILPDA*, *MBTPS1*, *SCAP*, *SRPR* (Supplementary File 1). -->
-<!-- Using Fast Gene Set Enrichment Analysis (FGSEA) [@doi:10.1101/060012], we found four LVs significantly enriched for the medium-confidence lipid-altering gene-sets (FDR < 0.05) (Supplementary Table @tbl:sup:lipids_crispr:modules_enriched).
-Using the gene-property method, we found that three of these LVs were significantly associated with cardiovascular traits both in PhenomeXcan and eMERGE (Supplementary Tables @tbl:sup:phenomexcan_assocs:lv707, @tbl:sup:emerge_assocs:lv707, @tbl:sup:phenomexcan_assocs:lv905, @tbl:sup:emerge_assocs:lv905, @tbl:sup:phenomexcan_assocs:lv915, @tbl:sup:emerge_assocs:lv915). -->
-
-
-<!-- Next, we analyzed all 987 LVs using Fast Gene Set Enrichment Analysis (FGSEA) [@doi:10.1101/060012], and found 15 LVs nominally enriched (unadjusted *P* < 0.01) with these lipid-altering gene-sets (Supplementary Tables @tbl:sup:lipids_crispr:modules_enriched_increase and @tbl:sup:lipids_crispr:modules_enriched_decrease).
-To maximize interpretability, we only considered LVs that were well-aligned with at least one pathway from the MultiPLIER models (FDR < 0.05) and those where reliable sample metadata about tissue/cell type was available. -->
-<!-- We found four LVs nominally enriched (unadjusted *P* < 0.01) with the lipids-increasing gene-set (Supplementary Table @tbl:sup:lipids_crispr:modules_enriched_increase) and two LVs nominally enriched with the lipids-decreasing gene-set (Supplementary Table @tbl:sup:lipids_crispr:modules_enriched_decrease).
-By applying our adapted gene-property method, we found that `XXX`{.red} of these LVs were significantly associated with `XXX`{.red} traits both in PhenomeXcan and eMERGE (Supplementary Tables @, @, @, @, @, @).
-`Talk briefly about the other LVs`{.red} -->
-<!--  -->
-<!--  -->
-<!-- First, for each lipid-altering gene-set, we assessed the genes' effects on all phenotypes by adding their $p$-values (from S-MultiXcan, transformed to $z$-scores, with no direction of effect and standardized to account for large sample sizes) and obtaining a ranked list of traits. -->
-<!-- The top associated traits for genes in the decreasing-lipids gene-set were highly relevant to lipid levels, such as hypertension, diastolic and systolic blood pressure, and vascular diseases, also including asthma and lung function (Supplementary Table @tbl:sup:single_genes:lipids_decreasing:top_traits). -->
-<!-- We performed the same operation for our LV-based approach by considering 24 LVs nominally enriched (unadjusted $p$-value < 0.05) with the decreasing-lipids gene-set by using Fast Gene Set Enrichment Analysis (FGSEA) [@doi:10.1101/060012]. -->
-<!-- In this case, we also found lipid-related traits among the top 25, including hypertension, blood pressure, cardiometabolic diseases like atherosclerosis, and celiac disease (Supplementary Table @tbl:sup:modules:lipids_decreasing:top_traits). -->
+and a lipids-increasing gene-set with six genes: *ACACA*, *DGAT2*, *HILPDA*, *MBTPS1*, *SCAP*, *SRPR* (Supplementary File 2).
 
 
 ![
 **Tissues and traits associated with a gene module related to lipid metabolism (LV246).**
 <!--  -->
-**a)** Top cell types/tissues where LV246's genes are expressed in.
-Values in the $y$-axis come from matrix $\mathbf{B}$ in the MultiPLIER models (Figure @fig:entire_process b, see Methods).
+**a)** Top cell types/tissues in which LV246's genes are expressed.
+Values in the $y$-axis come from matrix $\mathbf{B}$ in the MultiPLIER models (Figure {@fig:entire_process}b, see Methods).
 In the $x$-axis, cell types/tissues are sorted by the maximum sample value.
 <!--  -->
 **b)** Gene-trait associations (S-MultiXcan; threshold at -log($p$)=10) and colocalization probability (fastENLOC) for the top traits in LV246.
 The top 40 genes in LV246 are shown, sorted by their LV weight (matrix $\mathbf{Z}$), from largest (the top gene *SCD*) to smallest (*FAR2*);
-*DGAT2* and *ACACA*, in boldface, are two of the six high-confidence genes in the lipids-increasing gene-set from the CRISPR-screen.
+*DGAT2* and *ACACA*, in boldface, are two of the six high-confidence genes in the lipids-increasing gene set from the CRISPR screen.
 Cardiovascular-related traits are in boldface.
 <!--  -->
 SGBS: Simpson Golabi Behmel Syndrome;
@@ -462,61 +465,61 @@ RCP: locus regional colocalization probability.
 
 
 Next, we analyzed all 987 LVs using Fast Gene Set Enrichment Analysis (FGSEA) [@doi:10.1101/060012], and found 15 LVs nominally enriched (unadjusted *P* < 0.01) with these lipid-altering gene-sets (Supplementary Tables @tbl:sup:lipids_crispr:modules_enriched_increase and @tbl:sup:lipids_crispr:modules_enriched_decrease).
-<!-- When we considered the increasing-lipids gene-set, genes and LVs were associated with a more diverse set of traits, such as blood count tests, impedance measures, and bone-densitometry (Supplementary Tables @tbl:sup:single_genes:lipids_increasing:top_traits and @tbl:sup:modules:lipids_increasing:top_traits). -->
-<!-- FGSEA found 27 LVs nominally enriched for the increasing-lipids gene-set which were associated with the same traits, and additionally to lung function, arterial stiffness, intraocular pressure, handgrip strength, rheumatoid arthritis, and celiac disease. -->
-Among those with reliable sample metadata, LV246, the top LV associated with the lipids-increasing gene-set, contained genes mainly co-expressed in adipose tissue (Figure @fig:lv246 a), which plays a key role in coordinating and regulating lipid metabolism.
-<!-- Gene-trait associations and colocalization for the top genes in this LV are shown in Figure @fig:lv246 b). -->
-Using the gene-property analysis method, we found that gene weights for this LV were predictive of gene associations for plasma lipids and high cholesterol (Supplementary Table @tbl:sup:phenomexcan_assocs:lv246).
-Two high-confidence genes from our CRISPR screening, *DGAT2* and *ACACA*, are responsible for encoding enzymes for triglycerides and fatty acid synthesis and were among the highest-weighted genes of LV246 (Figure @fig:lv246 b, in boldface).
-However, in contrast to other members of this LV, *DGAT2* and *ACACA* were not strongly associated nor colocalized with any of the cardiovascular-related traits and thus would not have been prioritized by TWAS alone;
-other members of LV246, such as *SCD*, *LPL*, *FADS2*, *HMGCR*, and *LDLR*, were instead significantly associated and colocalized with lipid-related traits.
-This lack of association/colocalization of two high-confidence genes from our CRISPR-screen might be explained from an omnigenic point of view [@doi:10.1016/j.cell.2019.04.014].
+Among those with reliable sample metadata, LV246, the top LV associated with the lipids-increasing gene-set, contained genes mainly co-expressed in adipose tissue (Figure {@fig:lv246}a), which plays a key role in coordinating and regulating lipid metabolism.
+Using our regression framework across all traits in PhenomeXcan, we found that gene weights for this LV were predictive of gene associations for plasma lipids, high cholesterol, and Alzheimer's disease (Supplementary Table @tbl:sup:phenomexcan_assocs:lv246, FDR < 1e-23).
+These lipids-related associations also replicated across the 309 traits in eMERGE (Supplementary Table @tbl:sup:emerge_assocs:lv246), where LV246 was significantly associated hypercholesterolemia (phecode: 272.11, FDR < 4e-9), hyperlipidemia (phecode: 272.1, FDR < 4e-7) and disorders of lipoid metabolism (phecode: 272, FDR < 4e-7).
+
+
+Two high-confidence genes from our CRISPR screening, *DGAT2* and *ACACA*, are responsible for encoding enzymes for triglycerides and fatty acid synthesis and were among the highest-weighted genes of LV246 (Figure {@fig:lv246}b, in boldface).
+However, in contrast to other members of LV246, *DGAT2* and *ACACA* were not associated nor colocalized with any of the cardiovascular-related traits and thus would not have been prioritized by TWAS alone;
+instead, other members of LV246, such as *SCD*, *LPL*, *FADS2*, *HMGCR*, and *LDLR*, were significantly associated and colocalized with lipid-related traits.
+This lack of association of two high-confidence genes from our CRISPR screen might be explained from an omnigenic point of view [@doi:10.1016/j.cell.2019.04.014].
 Assuming that the TWAS models for *DGAT2* and *ACACA* capture all common *cis*-eQTLs (the only genetic component of gene expression that TWAS can capture) and there are no rare *cis*-eQTLs, these two genes might represent "core" genes (i.e., they directly affect the trait with no mediated regulation of other genes), and many of the rest in the LV are "peripheral" genes that *trans*-regulate them.
-These results suggested that our LV-based approach can contextualize genetic associations and prioritize alternative therapeutic targets, mainly when TWAS cannot detect them or hits are not druggable.
 
 
-### PhenoPLIER with LVs predicts drug-disease pairs better than single genes
 
-We next determined the extent to which substituting LVs in place of individual genes predicted known treatment-disease relationships.
+### LVs predict drug-disease pairs better than single genes
+
+We next determined how substituting LVs for individual genes predicted known treatment-disease relationships.
 For this, we used the transcriptional responses to small molecule perturbations profiled in LINCS L1000 [@doi:10.1016/j.cell.2017.10.049], which were further processed and mapped to DrugBank IDs [@doi:10.1093/nar/gkt1068; @doi:10.7554/eLife.26726; @doi:10.5281/zenodo.47223].
 Based on an established drug repurposing strategy that matches reversed transcriptome patterns between genes and drug-induced perturbations [@doi:10.1126/scitranslmed.3002648; @doi:10.1126/scitranslmed.3001318], we adopted a previously described framework that uses imputed transcriptomes from TWAS to prioritize drug candidates [@doi:10.1038/nn.4618].
-For this, we computed a drug-disease score by calculating the negative dot product between the $z$-scores for a disease (from TWAS) and the $z$-scores for a drug (from LINCS) across sets of genes of different size (see Methods).
-Therefore, a large score for a drug-disease pair indicated that a higher (lower) predicted expression of disease-associated genes are down (up)-regulated by the drug, thus predicting a potential treatment.
-Similarly, for the LV-based approach, we estimated how pharmacological perturbations affected the gene module activity by projecting expression profiles of drugs into our latent representation (Figure @fig:entire_process b).
+For this, we computed a drug-disease score by calculating the negative dot product between the $z$-scores for a disease (from TWAS) and the $z$-scores for a drug (from LINCS) across sets of genes of different sizes (see [Methods](#sec:methods:drug)).
+Therefore, a large score for a drug-disease pair indicated that higher (lower) predicted expression values of disease-associated genes are down (up)-regulated by the drug, thus predicting a potential treatment.
+Similarly, for the LV-based approach, we estimated how pharmacological perturbations affected the gene module activity by projecting expression profiles of drugs into our latent representation (Figure {@fig:entire_process}b).
 We used a manually-curated gold standard set of drug-disease medical indications [@doi:10.7554/eLife.26726; @doi:10.5281/zenodo.47664] for 322 drugs across 53 diseases to evaluate the prediction performance.
 
 
 ![
-**Drug-disease prediction performance for gene-based and module-based approaches.**
+**Drug-disease prediction performance for gene-based and LV-based approaches.**
 <!--  -->
-The receiver operating characteristic (ROC) (left) and the precision-recall curves (right) for a gene-based and our module-based approach.
+The receiver operating characteristic (ROC) (left) and the precision-recall curves (right) for a gene-based and LV-based approach.
 <!--  -->
 AUC: area under the curve; AP: average precision.
 <!--  -->
 ](images/drug_disease_prediction/roc_pr_curves.svg "ROC-PR curves for drug-disease prediction"){#fig:drug_disease:roc_pr width="80%"}
 
 
-The gene-trait associations and drug-induced expression profiles projected into the latent space represent a compressed version of the entire set of results.
+It is important to note that the gene-trait associations and drug-induced expression profiles projected into the latent space represent a compressed version of the entire set of results.
 Despite this information loss, the LV-based method outperformed the gene-based one with an area under the curve of 0.632 and an average precision of 0.858 (Figure @fig:drug_disease:roc_pr).
 The prediction results suggested that this low-dimensional space captures biologically meaningful patterns that can link pathophysiological processes with the mechanism of action of drugs.
 
 
 We examined a specific drug-disease pair to determine whether the LVs driving the prediction were biologically plausible.
-Nicotinic acid (niacin) is a B vitamin widely used clinically to treat lipid disorders, although there is controversy on its clinical utility to prevent cardiovascular disease [@pmid:22085343; @pmid:25014686; @pmid:30977858].
+Nicotinic acid (niacin) is a B vitamin widely used clinically to treat lipid disorders, although there is controversy on its clinical utility in preventing cardiovascular disease [@pmid:22085343; @pmid:25014686; @pmid:30977858].
 Niacin exerts its effects on multiple tissues, although its mechanisms are not well understood [@doi:10.1016/j.amjcard.2008.02.029; @doi:10.1194/jlr.S092007; @pmid:24363242; @pmid:24713591].
 This compound can increase high-density lipoprotein (HDL) by inhibiting an HDL catabolism receptor in the liver.
-Niacin also inhibits diacylglycerol acyltransferase–2 (DGAT2), which decreases the production of low-density lipoproteins (LDL) by modulating triglyceride synthesis in hepatocytes or by inhibiting adipocyte triglyceride lipolysis [@doi:10.1016/j.amjcard.2008.02.029].
+Niacin also inhibits diacylglycerol acyltransferase–2 (DGAT2), which decreases the production of low-density lipoproteins (LDL) either by modulating triglyceride synthesis in hepatocytes or by inhibiting adipocyte triglyceride lipolysis [@doi:10.1016/j.amjcard.2008.02.029].
 <!--  -->
 Niacin was one of the drugs in the gold standard set indicated for atherosclerosis (AT) and coronary artery disease (CAD).
 We observed that this compound was predicted by the gene-based and LV-based approach as a medical indication for coronary artery disease (CAD), with scores above the mean (0.51 and 0.96, respectively).
 For AT, the LV-based approach predicted niacin as a therapeutic drug with a score of 0.52, whereas the gene-based method assigned a negative score of -0.01 (below the mean).
-Since LVs represent interpretable features associated with specific cell types, we analyzed which LVs were positively contributing to these predictions (i.e., with an opposite direction between niacin and the disease).
+Since LVs represent interpretable features associated with specific cell types, we analyzed which LVs positively contributed to these predictions (i.e., with an opposite direction between niacin and the disease).
 Notably, LV246 (Figure @fig:lv246), expressed in adipose tissue and liver and associated with plasma lipids and high cholesterol (Supplementary Table @tbl:sup:phenomexcan_assocs:lv246), was the 16th most important module in the prediction of niacin as a therapeutic drug for AT.
 Besides the gold standard set, LV246 was among the top modules for other cardiovascular diseases, such as ischaemic heart disease (wide definition, 15th module) and high cholesterol (7th module).
 
 ![
-**Top cell types/tissues where LV116's genes are expressed in.**
-Values in the $y$-axis come from matrix $\mathbf{B}$ in the MultiPLIER models (Figure @fig:entire_process b).
+**Top cell types/tissues where LV116's genes are expressed.**
+Values in the $y$-axis come from matrix $\mathbf{B}$ in the MultiPLIER models (Figure {@fig:entire_process}b).
 In the $x$-axis, cell types/tissues are sorted by the maximum sample value.
 The figure shows a clear immune response with cell types under different stimuli.
 <!-- https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP045500 -->
@@ -544,14 +547,13 @@ SLE: Systemic lupus erythematosus.
 The analysis of other top niacin-contributing LVs across different cardiovascular diseases revealed additional mechanisms of action.
 <!--  -->
 For example, *GPR109A/HCAR2* encodes a G protein-coupled high-affinity niacin receptor in adipocytes and immune cells, including monocytes, macrophages, neutrophils and dendritic cells [@doi:10.1016/j.tips.2006.05.008; @doi:10.1038/sj.jid.5700586].
-It was initially thought that the antiatherogenic effects of niacin were solely due to inhibition of lipolysis in adipose tissue.
-However, it has been shown that nicotinic acid can reduce atherosclerosis progression independently of its antidyslipidemic activity through the activation of *GPR109A* in immune cells [@doi:10.1172/JCI41651], thus boosting anti-inflammatory processes [@doi:10.1161/ATVBAHA.108.179283].
+It was initially thought that the antiatherogenic effects of niacin were solely due to the inhibition of lipolysis in adipose tissue.
+However, it has been shown that nicotinic acid can reduce atherosclerosis progression independently of its antidyslipidemic activity by activating *GPR109A* in immune cells [@doi:10.1172/JCI41651], thus boosting anti-inflammatory processes [@doi:10.1161/ATVBAHA.108.179283].
 In addition, flushing, a common adverse effect of niacin, is also produced by the activation of GPR109A in Langerhans cells (macrophages of the skin).
 This alternative mechanism for niacin could have been hypothesized by examining the cell types where the top-contributing modules are expressed:
 for instance, LV116 and LV931 (Figure @fig:lv116:cell_types, Supplementary Figure @fig:sup:lv931, and Supplementary Tables @tbl:sup:multiplier_pathways:lv116 and @tbl:sup:multiplier_pathways:lv931) were the top two modules for AT, with a strong signature in monocytes, macrophages, neutrophils, dendritic cells, among others.
 In Figure @fig:lv116:cell_types, it can be seen that LV116's genes are expressed as an immune response when these cell types are under different stimuli, such as diarrhea caused by different pathogens [@doi:10.1371/journal.pone.0192082], samples from multiple sclerosis or systemic lupus erythematosus [@doi:10.1371/journal.pone.0109760; @doi:10.1126/science.aac7442], or infected with different viruses (such as herpes simplex [@url:https://www.ncbi.nlm.nih.gov/bioproject/PRJNA258384], West Nile virus [@doi:10.3390/v5071664], *Salmonella typhimurium* [@doi:10.1038/srep16882], among others).
 These three LVs (LV246, LV116 and LV931) were among the top 20 modules contributing to the niacin prediction across different cardiovascular traits (Table @tbl:niacin:cardio:top_lvs).
-Given the current controversy around this compound and its effect on cardiovascular disease, our approach may help to better understand different pathophysiological mechanisms linked with the mechanism of action of niacin.
 
 
 <!-- niacin:cardiovascular:top_lvs:start DISABLE NOW, BUT HAS TO BE ADDED THE "end" version just below to update table -->
@@ -568,25 +570,23 @@ Given the current controversy around this compound and its effect on cardiovascu
 |       |                       | High cholesterol (self-reported)             |
 |       |                       | Ischaemic heart disease (wide definition)    |
 
-Table: LVs among the top 20 contributors of prediction of niacin for five cardiovascular diseases. "Heart attack, angina, stroke or hypertension" refers to the UK Biobank data-field 6150. GWAS sample size: Atherosclerosis (361,194 in total and 566 cases), Chronic ischaemic heart disease (361,194 in total and 12,769 cases), Heart attack, angina, stroke or hypertension (360,420 in total and 253,565 cases), Ischaemic heart disease/wide definition (361,194 in total and 20,857 cases), High cholesterol/self-reported (361,141 in total and 43,957 cases).  {#tbl:niacin:cardio:top_lvs}
+Table: LVs among the top 20 contributors to the prediction of niacin for five cardiovascular diseases. "Heart attack, angina, stroke or hypertension" refers to the UK Biobank data-field 6150. GWAS sample size: Atherosclerosis (361,194 in total and 566 cases), Chronic ischaemic heart disease (361,194 in total and 12,769 cases), Heart attack, angina, stroke or hypertension (360,420 in total and 253,565 cases), Ischaemic heart disease/wide definition (361,194 in total and 20,857 cases), High cholesterol/self-reported (361,141 in total and 43,957 cases).  {#tbl:niacin:cardio:top_lvs}
 
 
-The LV-based method was able to integrate different data types to provide an interpretable approach for drug repositioning research based on genetic studies.
-Additionally, our approach could also be helpful to understand better the mechanism of pharmacological effect of known or experimental drugs.
-For example, LV66, one of the top LVs affected by niacin (Supplementary Figure @fig:sup:lv66) was mainly expressed in ovarian granulosa cells.
-This compound has been very recently considered as a potential therapeutic for ovarian diseases [@doi:10.1159/000495051; @doi:10.1071/RD20306], as it was found to promote follicle growth and inhibit granulosa cell apoptosis in animal models.
-Our LV-based approach could be helpful to generate novel hypotheses to evaluate potential mechanisms of action, or even adverse effects, of different drugs.
+Beyond cardiovascular traits, there are other potentially interesting LVs that could extend our understanding of the mechanisms of niacin.
+For example, LV66, one of the top LVs affected by niacin (Supplementary Figure @fig:sup:lv66), was mainly expressed in ovarian granulosa cells.
+This compound has been very recently considered a potential therapeutic for ovarian diseases [@doi:10.1159/000495051; @doi:10.1071/RD20306], as it was found to promote follicle growth and inhibit granulosa cell apoptosis in animal models.
 
 
-### LV projections reveal trait clusters with shared transcriptomic properties
+### LVs reveal trait clusters with shared transcriptomic properties
 
 ![
 **Cluster analysis on traits using the latent gene expression representation.**
 <!--  -->
-**a)** The projection of TWAS results on $n$=3,752 traits into the latent gene expression representation is the input data to the clustering process.
-A linear (PCA) and non-linear (UMAP) dimensionality reduction techniques were applied to the input data, and the three data versions were processed by five different clustering algorithms.
-These algorithms derive partitions from the data using different sets of parameters (such as the number of clusters), leading to an ensemble of 4,428 partitions.
-Then, a distance matrix is derived by counting how many times a pair of traits were grouped in different clusters across the ensemble.
+**a)** The projection of TWAS results on 3,752 traits into the latent gene expression representation is the input data to the clustering process.
+A linear (PCA) and non-linear (UMAP) dimensionality reduction techniques were applied to the input data, and five different clustering algorithms processed all data versions.
+These algorithms derive partitions from the data using different parameters (such as the number of clusters), leading to an ensemble of 4,428 partitions.
+Then, a distance matrix is derived by counting how many times a pair of traits was grouped in different clusters across the ensemble.
 Finally, a consensus function is applied to the distance matrix to generate consolidated partitions with different numbers of clusters (from 2 to $\sqrt{n}\approx$ 60).
 These final solutions were represented in the clustering tree (Figure @fig:clustering:tree).
 <!--  -->
@@ -595,13 +595,15 @@ These final solutions were represented in the clustering tree (Figure @fig:clust
 ](images/clustering/clustering_design.svg "Cluster analysis on traits"){#fig:clustering:design width="100%"}
 
 
-The previous results suggested that the compression into $\hat{\mathbf{M}}$ increases the signal-to-noise ratio.
-Thus, we analyzed $\hat{\mathbf{M}}$ to find groups of traits that were affected by the same transcriptional processes.
-To identify relationships that were robust to the selection of a specific clustering algorithm (each of which makes particular assumptions about the structure of data), we employed a consensus clustering approach.
-Therefore, we applied different methods with varying sets of parameters and later combined these into a consolidated solution (Methods).
-Our clustering pipeline generated 15 final consensus clustering solutions with 5 to 29 clusters (Supplementary Figure @fig:sup:consensus_agreement).
-Instead of selecting a specific number of clusters, we used a clustering tree [@doi:10.1093/gigascience/giy083] (Figure @fig:clustering:tree) to examine stable groups of traits across multiple resolutions.
-To understand which latent variables differentiated the group of traits, we trained a decision tree classifier on the input data $\hat{\mathbf{M}}$ using the clusters found as labels.
+We used the projection of gene-trait associations into the latent space to find groups of clusters linked by the same transcriptional processes.
+Since individual clustering algorithms have different biases (i.e., assumptions about the data structure), we designed a consensus clustering framework that combines solutions or partitions of traits generated by different methods ([Methods](#sec:methods:clustering)).
+Consensus or ensemble approaches have been recommended to avoid several pitfalls when performing cluster analysis on biological data [@doi:10.1126/scisignal.aad1932].
+Since diversity in the ensemble is crucial for these methods, we generated different data versions which were processed using different methods with varying sets of parameters (Figure {@fig:clustering:design}a).
+Then, a consensus function combines the ensemble into a consolidated solution, which has been shown to outperform any individual member of the ensemble [@Strehl2002; @doi:10.1109/TPAMI.2005.113].
+Our clustering pipeline generated 15 final consensus clustering solutions (Supplementary Figure @fig:sup:clustering:agreement).
+The number of clusters of these partitions (between 5 to 29) was learned from the data by selecting the partitions with the largest agreement with the ensemble [@Strehl2002].
+Instead of selecting one of these final solutions with a specific number of clusters, we used a clustering tree [@doi:10.1093/gigascience/giy083] (Figure @fig:clustering:tree) to examine stable groups of traits across multiple resolutions.
+To understand which latent variables differentiated the group of traits, we trained a decision tree classifier on the input data $\hat{\mathbf{M}}$ using the clusters found as labels (Figure {@fig:clustering:design}b, see [Methods](#sec:methods:clustering)).
 
 
 ![
@@ -647,73 +649,58 @@ AD: Alzheimer's disease;
 ](images/clustering/clustering_tree.svg "Clustering tree on groups of traits"){#fig:clustering:tree width="100%"}
 
 
-We found that phenotypes were grouped into five clear branches (Figure @fig:clustering:tree).
-These were
+We found that phenotypes were grouped into five clear branches, defined by their first node at the top of the Figure @fig:clustering:tree:
 0) a "large" branch that includes most of the traits subdivided only starting at $k$=16 (with asthma, subjective well-being traits, and nutrient intake clusters),
 1) heel bone-densitometry measurements,
 2) hematological assays on red blood cells,
 3) physical measures, including spirometry and body impedance, and anthropometric traits with fat-free and fat mass measures in separate sub-branches, and
-4) a "complex" branch including keratometry measurements, assays on white blood cells and platelets, skin and hair color traits, autoimmune disorders (type 1 diabetes, psoriasis, hyper/hypothyroidism, rheumatoid arthritis, systemic lupus erythematosus, celiac disease), and cardiovascular diseases (hypertension, coronary artery disease, myocardial infarction, hypercholesterolemia, and other cardiovascular-related traits such hand-grip strength [@pmid:25982160], and environmental/behavioral factors such as physical activity and diet) (See Supplementary Files 2-6 for clustering results).
-Within these branches, results were relatively stable.
-The same traits were often clustered together across different resolutions, even with the consensus algorithm using random initializations at each level.
-Arrows between different clusters show traits moving from one group to another across different resolutions.
-This mainly happens between clusters within the "complex" branch, and between clusters from the "large" branch to the "complex" branch.
-We would expect that continuing to explore higher dimensionalities would result in further subdivisions of these large groupings.
-This behavior was expected since complex diseases are usually associated with shared genetic and environmental factors and are thus hard to categorize into a single cluster.
-We would also expect that exploring solutions with a larger number of clusters would result in further subdivisions of these large groupings.
+4) a "complex" branch including keratometry measurements, assays on white blood cells and platelets, skin and hair color traits, autoimmune disorders, and cardiovascular diseases (which also included other cardiovascular-related traits such as hand-grip strength [@pmid:25982160], and environmental/behavioral factors such as physical activity and diet) (see Supplementary Files 3-6 for clustering results).
+Within these branches, results were relatively stable, with the same traits often clustered together across different resolutions.
+Arrows between clusters show traits moving from one group to another, and this mainly happens between clusters within the "complex" branch (4) and between clusters from the "large" branch (0) to the "complex" branch.
+This behavior is expected since complex diseases are usually associated with shared genetic and environmental factors and are thus hard to categorize into a single cluster.
 
 
 ![
-**Cluster-specific and general transcriptional processes associated with disease.**
+**Cluster-specific and general transcriptional processes associated with different diseases.**
 The plot shows a submatrix of $\hat{\mathbf{M}}$ for the main trait clusters at $k$=29, considering only LVs (rows) that are well-aligned with at least one pathway.
-Standardized values from -5 (lighter color) to 16 (darker color).
 ](images/clustering/global_clustermap-plain.svg "Heatmap with gene modules and traits"){#fig:clustering:heatmap width="100%"}
 
 
 Next, we analyzed which LVs were driving these clusters of traits.
-We trained decision tree classifiers on the input data (Figure @fig:clustering:design) using each cluster at $k$=29 (bottom of Figure @fig:clustering:tree) as labels (see Methods).
-This yielded for each cluster the top LVs, where several of them were well-aligned to existing pathways (Figure @fig:clustering:heatmap), and others were novel and expressed in relevant tissues (Supplementary Figure @fig:sup:clustering:novel:heatmap).
-In Figure @fig:clustering:heatmap, it can be seen that some LVs were highly specific to certain types of traits, while others were associated with a wide range of different phenotypes, thus potentially involved in more general biological functions.
+For this, we trained decision tree classifiers on the input data using each cluster at $k$=29 (bottom of Figure @fig:clustering:tree) as labels (see [Methods](#sec:methods:clustering)).
+This procedure yielded the top LVs that were most discriminative for each cluster.
+Several of these LVs were well-aligned to existing pathways (Figure @fig:clustering:heatmap), whereas others were not aligned to prior knowledge but still expressed in relevant tissues (Supplementary Figure @fig:sup:clustering:novel:heatmap).
+In Figure @fig:clustering:heatmap, it can be seen that some LVs were highly specific to certain traits, while others were associated with a wide range of different phenotypes, thus potentially involved in more general biological functions.
+We used our regression framework to determine whether these LVs were significantly associated with different traits.
 For example, LVs such as LV928 and LV30, which were well-aligned to early progenitors of the erythrocytes lineage [@doi:10.1016/j.cell.2011.01.004] (Supplementary Tables @tbl:sup:multiplier_pathways:lv928 and @tbl:sup:multiplier_pathways:lv30), were predominantly expressed in early differentiation stages of erythropoiesis (Supplementary Figures @fig:sup:lv928 and @fig:sup:lv30) and strongly associated with different assays on red blood cells (FDR < 0.05; Supplementary Tables @tbl:sup:phenomexcan_assocs:lv928, @tbl:sup:emerge_assocs:lv928, and @tbl:sup:emerge_assocs:lv30).
-In contrast, other LVs were highly specific, such as LV730, which is expressed in thrombocytes from different cancer samples (Supplementary Figures @fig:sup:lv730 and Supplementary Table @tbl:sup:multiplier_pathways:lv730), and strongly associated with hematological assays on platelets (FDR < 2e-4, Supplementary Table @tbl:sup:phenomexcan_assocs:lv730);
-or LV598, whose genes were expressed in corneal endothelial cells (Supplementary Figures @fig:sup:lv598 and Supplementary Table @tbl:sup:multiplier_pathways:lv598) and associated with keratometry measurements (FDR < 4e-05; Supplementary Table @tbl:sup:phenomexcan_assocs:lv598).
+In contrast, other LVs were highly specific, such as LV730, which is expressed in thrombocytes from different cancer samples (Supplementary Figures @fig:sup:lv730 and Supplementary Table @tbl:sup:multiplier_pathways:lv730), and strongly associated with hematological assays on platelets (FDR < 0.05, Supplementary Table @tbl:sup:phenomexcan_assocs:lv730);
+or LV598, whose genes were expressed in corneal endothelial cells (Supplementary Figures @fig:sup:lv598 and Supplementary Table @tbl:sup:multiplier_pathways:lv598) and associated with keratometry measurements (Supplementary Table @tbl:sup:phenomexcan_assocs:lv598).
 
 
-The autoimmune diseases sub-branch also had significant LVs associations expressed in relevant cell types.
-LV844 was the most strongly associated gene module with autoimmune disorders in both PhenomeXcan (FDR < 7e-16; Supplementary Tables @tbl:sup:phenomexcan_assocs:lv844) and eMERGE (FDR < 2e-6, @tbl:sup:emerge_assocs:lv844), and was expressed in a wide range of cell types, including blood, breast organoids, myeloma cells, lung fibroblasts, and different cell types from the brain (Supplementary Figures @fig:sup:lv844 and Supplementary Table @tbl:sup:multiplier_pathways:lv844).
-LV155 was strongly expressed in the thyroid (Supplementary Figures @fig:sup:lv155 and Supplementary Table @tbl:sup:multiplier_pathways:lv155) and significantly associated with hypothyroidism both in PhenomeXcan (FDR < 0.05, Supplementary Table @tbl:sup:phenomexcan_assocs:lv155) and eMERGE (FDR < 0.10, Supplementary Table @tbl:sup:emerge_assocs:lv155).
-Other important LVs associated with autoimmunity in both PhenomeXcan and eMERGE were LV57, expressed in T cells (Supplementary Figure @fig:sup:lv57 and Supplementary Tables @tbl:sup:multiplier_pathways:lv57, @tbl:sup:phenomexcan_assocs:lv57, @tbl:sup:emerge_assocs:lv57), and LV54, expressed in different soft tissue tumors, breast, lung, pterygia and epithelial cells (Supplementary Figure @fig:sup:lv54 and Supplementary Tables @tbl:sup:multiplier_pathways:lv54, @tbl:sup:phenomexcan_assocs:lv54, @tbl:sup:emerge_assocs:lv54).
+The sub-branches of autoimmune and cardiovascular diseases merged together at $k=10$ (middle of Figure @fig:clustering:tree), so we expected to find LVs that specifically affect one or both of these types of diseases.
+For example, LV57, expressed in T cells (Supplementary Figure @fig:sup:lv57 and Supplementary Table @tbl:sup:multiplier_pathways:lv57), was the most strongly associated gene module with autoimmune disorders in PhenomeXcan (Supplementary Table @tbl:sup:phenomexcan_assocs:lv57), with significant associations with hypothyroidism that were replicated in eMERGE (@tbl:sup:emerge_assocs:lv57).
+However, this LV was also strongly associated with deep venous thrombosis in both PhenomeXcan and eMERGE.
+<!--  -->
+On the other hand, LV844 was more autoimmune-specific, with associations to polymyalgia rheumatica, type 1 diabetes, rheumatoid arthritis, and celiac disease in PhenomeXcan (Supplementary Table @tbl:sup:phenomexcan_assocs:lv844).
+However, these did not replicate in eMERGE.
+This LV was expressed in a wide range of cell types, including blood, breast organoids, myeloma cells, lung fibroblasts, and different cell types from the brain (Supplementary Figure @fig:sup:lv844 and Supplementary Table @tbl:sup:multiplier_pathways:lv844).
 
 
-The cardiovascular sub-branch also exhibited significant associations.
-LV847 (Supplementary Figure @fig:sup:lv847 and Supplementary Table @tbl:sup:multiplier_pathways:lv847) was strongly associated with hypertension in PhenomeXcan (FDR < 2e-13, Supplementary Tables @tbl:sup:phenomexcan_assocs:lv847) and several cardiovascular diseases, type 1 diabetes, prostate cancer, and others in eMERGE (FDR < 0.05, Supplementary Table @tbl:sup:emerge_assocs:lv847).
-LV847 was expressed in CD19 (B cells) (which are related to preeclampsia [@doi:10.1161/HYPERTENSIONAHA.111.188276]), Jurkat cells (T lymphocyte cells), and cervical carcinoma cell lines (the uterus was previously reported to be linked to blood pressure through a potential hormonal pathway [@doi:10.1038/s41467-018-06022-6; @doi:10.1007/s11906-006-0080-1]).
-LV136 was aligned with known collagen formation and muscle contraction pathways (Supplementary Table @tbl:sup:multiplier_pathways:lv136), and it was associated with coronary artery disease (FDR < 2e-8), myocardial infarction (FDR < 6e-4) and keratometry measurements (FDR < 1e-7) in PhenomeXcan (Supplementary Tables @tbl:sup:phenomexcan_assocs:lv136), but with no strong associations in eMERGE (FDR < 0.20, Supplementary Table @tbl:sup:emerge_assocs:lv136).
-This LV was expressed in a wide range of cell types, including fibroblasts, mesenchymal stem cells, osteoblasts, pancreatic stellate cells, cardiomyocytes, and adipocytes (Supplementary Figure @fig:sup:lv136).
-Lipids, clustered with chronotype and Alzheimer's disease, were significantly associated with several modules expressed mainly in brain cell types, including LV93 (Supplementary Figure @fig:sup:lv93 and Supplementary Tables @tbl:sup:multiplier_pathways:lv93, @tbl:sup:phenomexcan_assocs:lv93, @tbl:sup:emerge_assocs:lv93), LV206 (Supplementary Figure @fig:sup:lv206 and Supplementary Tables @tbl:sup:multiplier_pathways:lv206, @tbl:sup:phenomexcan_assocs:lv206, @tbl:sup:emerge_assocs:lv206), and LV260 (Supplementary Figure @fig:sup:lv260 and Supplementary Tables @tbl:sup:multiplier_pathways:lv260, @tbl:sup:phenomexcan_assocs:lv260 and @tbl:sup:emerge_assocs:lv260).
-These modules were associated mainly with cardiovascular traits in eMERGE.
-
-
+The cardiovascular sub-branch had 129 significant LV-trait associations in PhenomeXcan and 23 in eMERGE.
+LV136, aligned with known collagen formation and muscle contraction pathways (Supplementary Table @tbl:sup:multiplier_pathways:lv136), was associated with coronary artery disease and keratometry measurements in PhenomeXcan (Supplementary Tables @tbl:sup:phenomexcan_assocs:lv136).
+In eMERGE, this LV was associated with coronary atherosclerosis (phecode: 411.4) (Supplementary Table @tbl:sup:emerge_assocs:lv136).
+LV136 was expressed in a wide range of cell types, including fibroblasts, mesenchymal stem cells, osteoblasts, pancreatic stellate cells, cardiomyocytes, and adipocytes (Supplementary Figure @fig:sup:lv136).
+<!--  -->
 Within the cardiovascular sub-branch, we found neuropsychiatric and neurodevelopmental disorders such as Alzheimer's disease, schizophrenia, and attention deficit hyperactivity disorder (ADHD).
 These disorders were previously linked to the cardiovascular system [@pmid:12093424; @doi:10.1161/CIRCULATIONAHA.113.002065; @doi:10.1192/bjp.bp.117.202606; @doi:10.1161/CIRCRESAHA.118.313563] and share several risk factors, including hypertension, high cholesterol, obesity, smoking, among others [@doi:10.1186/s12916-014-0206-2; @doi:10.1111/j.1076-7460.2007.06696.x].
-In our results, however, these diseases were grouped by potentially shared transcriptional processes expressed in specific tissues/cell types.
-Alzheimer's disease, for example, was significantly associated with LV21 in PhenomeXcan (FDR < 2e-19, Supplementary Table @tbl:sup:phenomexcan_assocs:lv21) and with LV5 (FDR < 3e-3, Supplementary Table @tbl:sup:phenomexcan_assocs:lv5).
-LV21 was strongly expressed in a variety of soft tissue sarcomas, monocytes/macrophages (including microglia from cortex samples), and aortic valves (Supplementary Figure @fig:sup:lv21 and Supplementary Table @tbl:sup:multiplier_pathways:lv21).
-This LV was also associated with lipids: LDL cholesterol (FDR < 1e-4) and triglycerides (FDR < 0.02).
+However, our results grouped these diseases by potentially shared transcriptional processes expressed in specific tissues/cell types.
+Alzheimer's disease (not present in eMERGE), for instance, was significantly associated with LV21 in PhenomeXcan (Supplementary Table @tbl:sup:phenomexcan_assocs:lv21).
+LV21, a gene module not aligned to prior pathways, was strongly expressed in a variety of soft tissue sarcomas, monocytes/macrophages (including microglia from cortex samples), and aortic valves (Supplementary Figure @fig:sup:lv21 and Supplementary Table @tbl:sup:multiplier_pathways:lv21).
+This LV was also strongly associated with lipids and high cholesterol in PhenomeXcan and hyperlipidemia (phecode: 272.1) in eMERGE (Supplementary Table @tbl:sup:emerge_assocs:lv21).
 As discussed previously, macrophages play a key role in the reverse cholesterol transport and thus atherogenesis [@doi:10.1093/qjmed/hci136], and lipid metabolism in microglia has been recently identified as an important factor in the development of neurodegenerative diseases [@doi:10.3389/fphys.2020.00393].
-On the other hand, LV5 was expressed in breast cancer and brain glioma samples, microglia (cortex), liver, and kidney, among other cell types (Supplementary Figure @fig:sup:lv5 and Supplementary Table @tbl:sup:multiplier_pathways:lv5).
-In addition to lipids, LV5 was also associated with depression traits from the UK Biobank (FDR < 0.05, Supplementary Table @tbl:sup:phenomexcan_assocs:lv5).
-Since Alzheimer's disease was not present in eMERGE, we could not replicate this association.
-ADHD was the only significantly associated trait for LV434 (FDR < 6e-3) (Supplementary Table @tbl:sup:phenomexcan_assocs:lv434), which was expressed in breast cancer and glioma cells, cerebral organoids, and several different cell populations from the brain: fetal neurons (replicating and quiescence), microglia, and astrocytes (Supplementary Figure @fig:sup:lv434 and Supplementary Table @tbl:sup:multiplier_pathways:lv434).
-Schizophrenia was not significantly associated (FDR < 0.05) with any gene module tested in our analysis.
-None of these LVs were significantly aligned to prior pathways, which might represent potentially novel transcriptional processes affecting the cardiovascular and central nervous systems.
 
 
 ## Discussion
-
-`NOTE:`{.red}
-- mention GenomeSuperSignature here, we do not rely on a single representation
-- gene modules represent interpretable features, but we do not really need metadata on sample to perform the tasks in this study (although much would be lost)
 
 We have introduced a novel computational strategy that integrates statistical associations from TWAS with groups of genes (gene modules) that have similar expression patterns across the same cell types.
 Our key innovation is that we project gene-trait associations through a latent representation derived not strictly from measures of normal tissue but also cell types under a variety of stimuli and at various developmental stages.
@@ -721,20 +708,33 @@ This improves interpretation by going beyond statistical associations to infer c
 We found that our approach can identify disease-relevant cell types from summary statistics, and several disease-associated gene modules were replicated in eMERGE.
 Using a CRISPR screen to analyze lipid regulation, we found that our gene module-based approach can prioritize causal genes even when single gene associations are not detected.
 We interpret these findings with an omnigenic perspective of "core" and "peripheral" genes, suggesting that the approach can identify genes that directly affect the trait with no mediated regulation of other genes, and thus prioritize alternative and potentially more attractive therapeutic targets.
+
+
 Using our gene module perspective, we also integrated drug-induced transcriptional profiles, which allowed us to connect diseases, drugs, and cell types.
-Furthermore, and beyond statistical prediction, we focused on a particular drug (niacin) and set of traits (cardiovascular diseases) to show that the approach connects disease-relevant transcriptional processes with known mechanisms of action.
-This suggests that the conceptual approach may reveal the mechanisms of pharmacological effect of known or experimental drugs.
+We showed that the LV-based drug-repurposing approach outperformed the gene-based one when predicting drug-disease links for 322 drugs across 53 diseases.
+Furthermore, and beyond statistical prediction, we focused on cardiovascular traits and a particular drug, niacin, to show that the approach connects pathophysiological processes with known mechanisms of action, including those in adipose tissue, immune cells, and ovarian granulosa cells.
+Our LV-based approach could be helpful to generate novel hypotheses to evaluate potential mechanisms of action, or even adverse effects, of known or experimental drugs.
+
+
 Finally, we found that the analysis of associations through latent representations provided reasonable groupings of diseases and traits affected by shared and distinct transcriptional mechanisms expressed in highly relevant tissues.
-
-
+Our cluster analysis approach also detected the LVs that were most discriminative for each cluster, which were significantly associated with different traits.
+Some LVs were strongly aligned with known pathways, but others (like LV57) were not, which might represent novel disease-relevant mechanisms.
 In some cases, the features/LVs linked to phenotypes appear to be associated with specific cell types.
 Associations with such cell type marker genes may reveal potentially causal cell types for a phenotype with more precision.
-We observed modules expressed primarily in one tissue (such as adipose in LV246, thyroid in LV155, or ovary in LV66).
+We observed modules expressed primarily in one tissue (such as adipose in LV246 or ovary in LV66).
 Others appeared to be expressed in many contexts, and these may capture pathways associated with a set of related complex diseases.
 For example, LV136 is associated with cardiovascular disease and measures of corneal biomechanics, and expressed in fibroblasts, osteoblasts, pancreas, liver, and cardiomyocytes, among others.
-Another example is LV844, expressed in whole blood samples and strongly associated with a range of autoimmune diseases.
+Other examples include LV844, expressed in whole blood samples and associated with a range of autoimmune diseases;
+or LV57, which is clearly expressed in T cells and strongly associated with both autoimmune and venous thromboembolism.
 From an omnigenic point of view, these patterns might represent cases of "network pleiotropy," where the same cell types mediate molecularly related traits.
 To our knowledge, projection through a representation learned on complementary but distinct datasets is a novel approach to identify cell type and pathway effects on complex phenotypes that is computationally simple to implement.
+
+
+We applied our regression framework on all traits in PhenomeXcan and eMERGE.
+In PhenomeXcan, we found 3,450 significant LV-trait associations (FDR < 0.05) with 686 LVs associated with at least one trait, and 1,176 traits associated with at least one LV.
+We only focused on a few disease types, but the complete set of associations is available for future research on other disease domains.
+As we noted in [Methods](#sec:methods:reg), one limitation of the regression approach is that the gene-gene correlations are only approximately accurate, which could lead to false positives.
+This has to be taken into account when interpreting these results.
 
 
 Our approach rests on the assumption that gene modules with coordinated expression patterns will also manifest coordinated pathological effects.
@@ -743,16 +743,18 @@ The first is MultiPLIER, which extracts latent variables from large expression d
 We used a previously published model derived from recount2, which was designed to analyze rare disorders but might not be the optimal latent representation for the wide range of complex diseases considered here.
 Also, the underlying factorization method rests on linear combinations of variables, which could miss important and more complex co-expression patterns.
 In addition, recount2, the training dataset used, has since been surpassed in size and scale by other resources [@doi:10.1038/s41467-018-03751-6; @doi:10.1101/2021.05.21.445138].
+It is important to note, however, that our models impose very little assumptions on the latent expression representation, and we should, in theory, easily replace MultiPLIER by other similar approaches like GenomicSuperSignature [@doi:10.1038/s41467-022-31411-3].
 The second approach we used in this study is TWAS, where we are only considering the hypothesis that GWAS loci affect traits via changes in gene expression, and other effects such as coding variants disrupting protein-protein interactions are not captured.
 Additionally, TWAS has several limitations that can lead to false positives [@doi:10.1038/s41588-019-0385-z; @doi:10.1016/j.ajhg.2020.11.012].
 Like GWAS, which generally detects groups of associated variants in linkage disequilibrium (LD), TWAS usually identifies several genes within the same locus [@doi:10.1038/s41588-018-0092-1; @doi:10.1038/ng.3367].
 This is due to sharing of GWAS variants in gene expression models, correlated expression of nearby genes, or even correlation of their predicted expression due to eQTLs in LD, among others [@doi:10.1038/s41588-019-0385-z].
-Larger datasets and methods designed to learn representations with this application in mind could further refine the approach and are a promising avenue for future research.
+Our LV-based regression framework, however, accounts for this gene-gene correlations in TWAS.
+<!-- Larger datasets and methods designed to learn representations with this application in mind could further refine the approach and are a promising avenue for future research. -->
 
 
 Our findings are concordant with previous studies showing that drugs with genetic support are more likely to succeed through the drug development pipeline [@doi:10.1038/ng.3314; @doi:10.1038/nn.4618].
 In this case, projecting association results through latent variables better prioritized disease-treatment pairs than considering single-gene effects alone.
-An additional benefit is that the latent variables driving predictions can be examined to infer potential mechanisms of action.
+An additional benefit is that the latent variables driving predictions represent interpretable genetic features that can be examined to infer potential mechanisms of action.
 Here we prioritized drugs for diseases with very different tissue etiologies, and a challenge of the approach is to select the most appropriate tissue model from TWAS to find reversed transcriptome patterns between genes and drug-induced perturbations.
 We also demonstrated that clustering trees, introduced initially as a means to examine developmental processes in single-cell data, provide a multi-resolution grouping of phenotypes based on latent variable associations.
 We employed hard-partitioning algorithms (one trait belongs exclusively to one cluster) where the distance between two traits takes into account all gene modules.
@@ -773,7 +775,7 @@ Rapid improvements in both areas set the stage for latent variable projections t
 By providing a new perspective for a mechanistic understanding of statistical associations from TWAS, our method can generate testable hypotheses for the post-GWAS functional characterization of complex diseases, which will likely be an area of great importance in the coming years.
 
 
-## Methods and materials
+## Methods and materials {#sec:methods}
 
 PhenoPLIER is a framework that combines different computational approaches to integrate gene-trait associations and drug-induced transcriptional responses with groups of functionally-related genes (referred to as gene modules or latent variables/LVs).
 Gene-trait associations are computed using the PrediXcan family of methods, whereas latent variables are inferred by the MultiPLIER models applied on large gene expression compendia.
@@ -784,7 +786,7 @@ PhenoPLIER provides
 We provide the details of these methods below.
 
 
-### The PrediXcan family of methods for gene-based associations
+### The PrediXcan family of methods for gene-based associations {#sec:methods:predixcan}
 
 We used Summary-PrediXcan (S-PrediXcan) [@doi:10.1038/s41467-018-03621-1] and Summary-MultiXcan (S-MultiXcan) [@doi:10.1371/journal.pgen.1007889] as the gene-based statistical approaches, which belong to the PrediXcan family of methods [@doi:10.1038/ng.3367].
 We broadly refer to these approaches as TWAS (transcription-wide association studies).
@@ -855,12 +857,12 @@ As we explain later, these differences are important for our LV-based regression
 We used S-MultiXcan results for our LV-based regression model and our cluster analyses of traits.
 
 
-### TWAS resources
+### TWAS resources {#sec:methods:twas}
 
 We used two large TWAS resources from different cohorts for discovery and replication.
 <!--  -->
 PhenomeXcan [@doi:10.1126/sciadv.aba2083], our discovery cohort, provides results on 4,091 traits across different categories.
-Supplemenetary File `XXX`{.red} has all the details about the included GWAS, sample size and disease/trait categories. (`add phenotyp_info file with categories like in emerge`{.red}).
+Supplemenetary File 1 has all the details about the included GWAS, sample size and disease/trait categories.
 <!--  -->
 In PhenomeXcan, these publicly available GWAS summary statistics were used to compute
 1) gene-based associations with the PrediXcan family of methods (described before), and
@@ -877,9 +879,9 @@ Our discovery cohort was eMERGE [@doi:10.1038/gim.2013.72], where the same TWAS 
 We used these results to replicate the associations found with our LV-based regression framework in PhenomeXcan.
 
 
-### MultiPLIER and Pathway-level information extractor (PLIER)
+### MultiPLIER and Pathway-level information extractor (PLIER) {#sec:methods:multiplier}
 
-MultiPLIER [@doi:10.1016/j.cels.2019.04.003] extracts patterns of co-expressed genes from recount2 [@doi:10.1038/nbt.3838], a large gene expression dataset.
+MultiPLIER [@doi:10.1016/j.cels.2019.04.003] extracts patterns of co-expressed genes from recount2 [@doi:10.1038/nbt.3838] (without including GTEx samples), a large gene expression dataset.
 The approach applies the pathway-level information extractor method (PLIER) [@doi:10.1038/s41592-019-0456-1], which performs unsupervised learning using prior knowledge (canonical pathways) to reduce technical noise.
 PLIER uses a matrix factorization approach that deconvolutes gene expression data into a set of latent variables (LV), where each LV represents a gene module.
 The MultiPLIER models reduced the dimensionality in recount2 to 987 LVs.
@@ -911,7 +913,7 @@ where $\hat{\mathbf{M}}^{l \times q}$ is a matrix where traits are represented b
 As explained later, we used the same approach to project drug-induced transcriptional profiles in LINCS L1000 to obtain a representation of drugs using gene modules.
 
 
-### Regression model for LV-trait associations {#sec:methods}
+### Regression model for LV-trait associations {#sec:methods:reg}
 
 We adapted the gene-set analysis framework from MAGMA [@doi:10.1371/journal.pcbi.1004219] to TWAS.
 We used a competitive test to predict gene-trait associations from TWAS using gene weights from an LV, testing whether top-weighted genes for an LV are more strongly associated with the phenotype than other genes with relatively small or zero weights.
@@ -1007,7 +1009,7 @@ For replication, we ran the model in the 309 phecodes in eMERGE.
 We adjusted the $p$-values using the Benjamini-Hochberg procedure.
 
 
-### LV-based drug repurposing approach
+### LV-based drug repurposing approach {#sec:methods:drug}
 
 For the drug-disease prediction, we derived an LV-based method based on a drug repositioning framework previously used for psychiatry traits [@doi:10.1038/nn.4618], where individual/single genes associated with a trait are anticorrelated with expression profiles for drugs.
 We compared our LV-based method with this previously published, single-gene approach.
@@ -1024,7 +1026,7 @@ Finally, $\mathbf{D}^{t,k}=-1 \cdot \hat{\mathbf{L}}^{\top} \hat{\mathbf{M}}^{t,
 Since the gold standard of drug-disease medical indications is described with Disease Ontology IDs (DOID) [@doi:10.1093/nar/gky1032], we mapped PhenomeXcan traits to the Experimental Factor Ontology [@doi:10.1093/bioinformatics/btq099] using [@url:https://github.com/EBISPOT/EFO-UKB-mappings], and then to DOID.
 
 
-### Consensus clustering of traits
+### Consensus clustering of traits {#sec:methods:clustering}
 
 We performed two preprocessing steps on the S-MultiXcan results before the cluster analysis.
 First, we combined results in $\mathbf{M}$ (with $p$-values converted to $z$-scores, as described before) for traits that mapped to the same Experimental Factor Ontology (EFO) [@doi:10.1093/bioinformatics/btq099] term using the Stouffer's method: $\sum w_i M_{ij} / \sqrt{\sum w_i^2}$, where $w_i$ is a weight based on the GWAS sample size for trait $i$, and $M_{ij}$ is the $z$-score for gene $j$.
@@ -1078,22 +1080,24 @@ Finally, we used spectral clustering on $\mathbf{D}$ to derive the final consens
 $\mathbf{D}$ was first transformed into a similarity matrix by applying an RBF kernel $\mathrm{exp}(-\gamma \mathbf{D}^2)$ using four different values for $\gamma$ that we empirically determined to work best.
 Therefore, for each $k$ between 2 and 60, we derived four consensus partitions and selected the one that maximized Equation (@eq:consensus:obj_func).
 <!--  -->
-We further filtered this set of 59 solutions to keep only those with an ensemble agreement larger than the 75th percentile, leaving a total of 15 final consensus partitions shown in Figure @fig:clustering:tree.
+We further filtered this set of 59 solutions to keep only those with an ensemble agreement larger than the 75th percentile (Supplementary Figure @fig:sup:clustering:agreement), leaving a total of 15 final consensus partitions shown in Figure @fig:clustering:tree.
 
 <!-- Clustering interpretation -->
 The input data in our clustering pipeline undergoes several linear and nonlinear transformations, including PCA, UMAP and the ensemble transformation using the EAC paradigm (distance matrix $\mathbf{D}$).
 Although consensus clustering has clear advantages for biological data [@pmid:27303057], this set of data transformations complicates the interpretation of results.
 <!--  -->
-To circumvent this, we used a supervised learning approach to detect which gene modules/LVs are the most important for each cluster of traits (Figure @fig:clustering:design b).
-`To address reviewer comment:`{.red} Note that we did not use this supervised model for prediction but only to learn which features (LVs) were most discriminative for each cluster.
+To circumvent this, we used a supervised learning approach to detect which gene modules/LVs are the most important for each cluster of traits (Figure {@fig:clustering:design}b).
+Note that we did not use this supervised model for prediction but only to learn which features (LVs) were most discriminative for each cluster.
 For this, we used the highest resolution partition ($k$=29, although any could be used) to train a decision tree model using each of the clusters as labels and the projected data $\hat{\mathbf{M}}$ as the training samples.
 For each $k$, we built a set of binary labels with the current cluster's traits as the positive class and the rest of the traits as the negative class.
 Then, we selected the LV in the root node of the trained model only if its threshold was positive and larger than one standard deviation.
 Next, we removed this LV from $\hat{\mathbf{M}}$ (regardless of being previously selected or not) and trained the model again.
 We repeated this procedure 20 times to extract the top 20 LVs that better discriminate traits in a cluster from the rest.
 
+In [Supplementary Note 2](#sm:clustering:null_sim), we performed several analyses under a null hypothesis of no structure in the data to verify that the clustering results detected by this pipeline were real.
 
-### CRISPR-Cas9 screening
+
+### CRISPR-Cas9 screening {#sec:methods:crispr}
 
 **Cell culture.**
 HepG2 cells were obtained from ATCC (ATCC® HB-8065™), and maintained in Eagle's Minimum Essential Medium with L-Glutamine (EMEM, Cat. 112-018-101, Quality Biology) supplemented with 10% Fetal Bovine Serum (FBS, Gibco, Cat.16000-044), and 1% Pen/Strep (Gibco, Cat.15140-122).
@@ -1199,14 +1203,12 @@ We included sex and the top 20 principal components as covariates, performing th
 **Step 2 - GWAS processing**. These steps include harmonization of GWAS and imputation of $z$-scores, which are part of the TWAS pipeline and are needed in order to ensure an acceptable overlap with SNPs in prediction models.
 The scripts to run these steps are available in [@url:https://github.com/hakyimlab/summary-gwas-imputation].
 These procedures were run for all 1,000 random phenotypes and generated a total number of 8,325,729 variants, including those with original and imputed $z$-scores.
-`maybe show some manhattan plot?`{.red}
 
 **Step 3 - TWAS**. We processed the imputed GWAS with S-PrediXcan using the MASHR prediction models on 49 tissues from GTEx v8.
 Then, S-MultiXcan was ran using the GWAS and S-PrediXcan outputs to generate gene-trait association $p$-values.
-`maybe show some manhattan plot?`{.red}
 
 Finally, we ran our GLS model (Equation (@eq:reg:model)) to compute an association between each of the 987 LVs in MultiPLIER and the 1,000 S-MultiXcan results on random phenotypes.
-For this, we built a gene correlation matrix specifically for this cohort (see [Methods](#sec:methods)).
+For this, we built a gene correlation matrix specifically for this cohort (see [Methods](#sec:methods:reg)).
 Then, we compared the GLS results with an equivalent, baseline ordinarly least squares (OLS) model assuming independence between genes.
 Figure @fig:reg:nulls:qqplots compares the distribution of $p$-values of the OLS and GLS models.
 The GLS model has a slightly smaller mean type I error rate (0.0558, SD=0.0127) than the baseline OLS model (0.0584, SD=0.0140), and $p$-values follow more closely the expected uniform distribution.
@@ -1335,14 +1337,45 @@ Table: Gene modules (LVs) nominally enriched for the lipids-decreasing gene-set 
 
 ### Consensus clustering of traits
 
-#### Agreement of consensus clustering partitions with the ensemble
+#### Supplementary Note 2: Cluster analyses under the null hypothesis of no structure in the data {#sm:clustering:null_sim}
+
+For our clustering pipeline, we simulated different escenarios where there is no structure in the input data matrix $\hat{\mathbf{M}}$ (gene-trait associations from PhenomeXcan projected into the latent gene expression representation).
+For this, we simulated two cases where any groupings of traits are removed:
+1) the gene-trait association matrix $\mathbf{M}$ (from S-MultiXcan) does not have any meaningful structure to find groups of traits, while preserving the latent variables in $\mathbf{Z}$ from the MultiPLIER models;
+and 2) the latent variables in matrix $\mathbf{Z}$ does not have any meaningful structure to find groups of traits, while preserving the gene-trait association matrix $\mathbf{M}$.
+
+For the first scenario, we shuffled genes in $\mathbf{M}$ for each trait, and this randomized matrix was then projected into the latent space.
+For the second scenario, we projected matrix $\mathbf{M}$ into the latent space, and then shuffled LVs in $\hat{\mathbf{M}}$ for each trait.
+For each of these scenarios, we ran exactly the same clustering pipeline we used for the real data ([Methods](#sec:methods:clustering)), generating an ensemble of partitions that was later combined using the same consensus functions to derive the final partitions of traits.
+Finally, we computed
+1) stability statistics on the ensemble partitions from different algorithms
+and 2) the agreement of the final consensus partition with the ensemble.
+
 
 ![
-**Final selected partitions for follow-up analysis.**
+**Agreement of consensus partitions with ensemble.**
 <!--  -->
-From all consensus clustering partitions generated with $k$ from 2 to 60, we selected those with a median adjusted Rand index (ARI) with the ensemble members greater the 75th percentile.
-](images/clustering/selected_best_partitions_by_k.svg "Consensus partitions agreement with ensemble"){#fig:sup:consensus_agreement width="80%"}
+A real and two simulated scenarios with no data structure are shown.
+For each scenario, one final consensus partition was derived for each $k$ from 2 to 60 ($x$-axis) following our clustering pipeline.
+For each partition, the agreement with the corresponding ensemble was computed using the ARI ($y$-axis).
+For the real data scenario, partitions with an agreement above the 75th percentile (dashed line) were selected for follow-up analyses in the main text.
+](images/clustering/selected_best_partitions_by_k.svg "Agreement of consensus partitions with ensemble"){#fig:sup:clustering:agreement width="100%"}
 
+
+The results of this analysis (Figure @fig:sup:clustering:agreement) show that, under the two simulated null scenarios, the agreement of the consensus partitions with the ensemble is very close to zero.
+This means, as expected, that there is no consensus among ensemble partitions generated with different clustering algorithms and data representations.
+In contrast, using the real data, the consensus clustering approach finds trait pairs that are grouped together across the different members of the ensemble.
+The partitions above the 75th percentile were considered in the main analyses, and are shown in the clustering tree in Figure @fig:clustering:tree.
+
+
+<!--
+IMPORTANT:
+
+- 59 partitions for each scenario
+-   but say how many were selected for each
+- add table of stats of coassociation matrix (frequency that two pair of traits were grouped together)
+- add also heatmap showing how many times pairs of traits were grouped together
+-->
 
 
 #### Cluster-specific and general transcriptional processes associated with disease
@@ -1371,16 +1404,11 @@ Table: Pathways aligned to LV603 from the MultiPLIER models. {#tbl:sup:multiplie
 <!-- LV603:multiplier_pathways:end -->
 
 <!-- LV603:phenomexcan_traits_assocs:start -->
-| Trait description                  | Sample size   | Cases   | FDR            |
-|:-----------------------------------|:--------------|:--------|:---------------|
-| Myeloid White Cell Count           | 173,480       |         | 3.63e&#8209;07 |
-| Sum Basophil Neutrophil Count      | 173,480       |         | 4.07e&#8209;07 |
-| Neutrophil Count                   | 173,480       |         | 4.17e&#8209;07 |
-| Sum Neutrophil Eosinophil Count    | 173,480       |         | 4.72e&#8209;07 |
-| Granulocyte Count                  | 173,480       |         | 5.16e&#8209;07 |
-| White Blood Cell Count             | 173,480       |         | 2.67e&#8209;06 |
-| Neutrophill count                  | 349,856       |         | 1.58e&#8209;05 |
-| White blood cell (leukocyte) count | 350,470       |         | 2.06e&#8209;05 |
+| Trait description                         | Sample size   | Cases   | FDR            |
+|:------------------------------------------|:--------------|:--------|:---------------|
+| Basophill percentage                      | 349,861       |         | 1.19e&#8209;10 |
+| Basophill count                           | 349,856       |         | 1.89e&#8209;05 |
+| Treatment/medication code: ispaghula husk | 361,141       | 327     | 1.36e&#8209;02 |
 
 Table: Significant trait associations of LV603 in PhenomeXcan. {#tbl:sup:phenomexcan_assocs:lv603}
 <!-- LV603:phenomexcan_traits_assocs:end -->
@@ -1409,41 +1437,42 @@ Table: Pathways aligned to LV246 from the MultiPLIER models. {#tbl:sup:multiplie
 <!-- LV246:multiplier_pathways:end -->
 
 <!-- LV246:phenomexcan_traits_assocs:start -->
-| Trait description                                        | Sample size   | Cases   | FDR            |
-|:---------------------------------------------------------|:--------------|:--------|:---------------|
-| CH2DB NMR                                                | 24,154        |         | 1.05e&#8209;12 |
-| High cholesterol (self-reported)                         | 361,141       | 43,957  | 7.78e&#8209;07 |
-| Ankle spacing width                                      | 206,589       |         | 2.06e&#8209;05 |
-| Ankle spacing width (right)                              | 114,614       |         | 9.03e&#8209;05 |
-| HDL Cholesterol NMR                                      | 19,270        |         | 2.46e&#8209;04 |
-| Cholesterol lowering medication                          | 193,148       | 24,247  | 2.54e&#8209;04 |
-| Ankle spacing width (left)                               | 114,630       |         | 5.39e&#8209;04 |
-| Fasting Glucose                                          | 46,186        |         | 1.90e&#8209;03 |
-| Cholesterol lowering medication                          | 165,340       | 38,057  | 6.74e&#8209;03 |
-| Pulse rate, automated reading                            | 340,162       |         | 8.61e&#8209;03 |
-| Recent easy annoyance or irritability                    | 117,483       |         | 1.04e&#8209;02 |
-| Treatment/medication code: simvastatin                   | 361,141       | 40,921  | 1.11e&#8209;02 |
-| Pulse rate                                               | 118,850       |         | 1.19e&#8209;02 |
-| Mean platelet (thrombocyte) volume                       | 350,470       |         | 1.37e&#8209;02 |
-| Duration of moderate activity                            | 268,826       |         | 1.69e&#8209;02 |
-| LDL Cholesterol NMR                                      | 13,527        |         | 1.94e&#8209;02 |
-| Red blood cell (erythrocyte) distribution width          | 350,473       |         | 1.99e&#8209;02 |
-| Intra-ocular pressure, corneal-compensated (right)       | 76,630        |         | 2.63e&#8209;02 |
-| Heel bone mineral density (BMD) (right)                  | 114,552       |         | 2.74e&#8209;02 |
-| Triglycerides NMR                                        | 21,559        |         | 3.47e&#8209;02 |
-| Heel bone mineral density T-score, automated (right)     | 114,614       |         | 3.75e&#8209;02 |
-| Heel quantitative ultrasound index, direct entry (right) | 114,614       |         | 3.75e&#8209;02 |
-| Days/week of moderate physical activity 10+ minutes      | 343,943       |         | 4.85e&#8209;02 |
-| Ischaemic heart disease (wide definition)                | 361,194       | 20,857  | 4.97e&#8209;02 |
+| Trait description                                                                          | Sample size   | Cases   | FDR            |
+|:-------------------------------------------------------------------------------------------|:--------------|:--------|:---------------|
+| Triglycerides NMR                                                                          | 21,559        |         | 1.66e&#8209;26 |
+| LDL Cholesterol NMR                                                                        | 13,527        |         | 3.92e&#8209;26 |
+| High cholesterol (self-reported)                                                           | 361,141       | 43,957  | 1.08e&#8209;24 |
+| Cholesterol lowering medication                                                            | 193,148       | 24,247  | 4.28e&#8209;24 |
+| Treatment/medication code: simvastatin                                                     | 361,141       | 40,921  | 2.56e&#8209;19 |
+| CH2DB NMR                                                                                  | 24,154        |         | 1.05e&#8209;15 |
+| Cholesterol lowering medication                                                            | 165,340       | 38,057  | 9.58e&#8209;15 |
+| Treatment/medication code: atorvastatin                                                    | 361,141       | 10,805  | 2.54e&#8209;14 |
+| Illnesses of mother: Alzheimer's disease/dementia                                          | 331,041       | 28,507  | 2.76e&#8209;08 |
+| Illnesses of father: Alzheimer's disease/dementia                                          | 312,666       | 15,022  | 2.76e&#8209;08 |
+| Alzheimers Disease                                                                         | 54,162        | 17,008  | 1.10e&#8209;07 |
+| Non-butter spread type details: Flora Pro-Active or Benecol                                | 190,094       | 29,048  | 5.63e&#8209;07 |
+| Illnesses of siblings: Alzheimer's disease/dementia                                        | 279,062       | 1,609   | 6.16e&#8209;07 |
+| Any dementia                                                                               | 361,194       | 243     | 2.86e&#8209;05 |
+| Illnesses of father: None of the above (group 1)                                           | 314,797       | 116,736 | 3.56e&#8209;05 |
+| Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones (females) | 193,148       | 133,338 | 1.10e&#8209;04 |
+| Treatment/medication code: lipitor 10mg tablet                                             | 361,141       | 2,584   | 1.55e&#8209;04 |
+| Treatment/medication code: rosuvastatin                                                    | 361,141       | 2,227   | 1.37e&#8209;03 |
+| Illnesses of father: Heart disease                                                         | 318,570       | 104,110 | 1.89e&#8209;03 |
+| Dementia                                                                                   | 361,194       | 157     | 9.58e&#8209;03 |
+| Mother still alive                                                                         | 355,029       | 140,246 | 1.76e&#8209;02 |
+| Job SOC coding: Librarians                                                                 | 91,149        | 1,248   | 3.22e&#8209;02 |
+| Alzheimer’s disease                                                                        | 361,194       | 119     | 3.61e&#8209;02 |
 
 Table: Significant trait associations of LV246 in PhenomeXcan. {#tbl:sup:phenomexcan_assocs:lv246}
 <!-- LV246:phenomexcan_traits_assocs:end -->
 
 <!-- LV246:emerge_traits_assocs:start -->
-| Phecode   | Trait description          | Sample size   | Cases   | FDR            |
-|:----------|:---------------------------|:--------------|:--------|:---------------|
-| 276.41    | Acidosis                   | 41,838        | 1,526   | 2.40e&#8209;03 |
-| 276.4     | Acid-base balance disorder | 42,005        | 1,693   | 2.97e&#8209;03 |
+| Phecode   | Trait description              | Sample size   | Cases   | FDR            |
+|:----------|:-------------------------------|:--------------|:--------|:---------------|
+| 272.11    | Hypercholesterolemia           | 40,786        | 14,138  | 4.40e&#8209;09 |
+| 272.1     | Hyperlipidemia                 | 55,843        | 29,195  | 3.57e&#8209;07 |
+| 272       | Disorders of lipoid metabolism | 55,892        | 29,244  | 3.79e&#8209;07 |
+| 292.3     | Memory loss                    | 48,785        | 2,094   | 1.80e&#8209;02 |
 
 Table: Significant trait associations of LV246 in eMERGE. {#tbl:sup:emerge_assocs:lv246}
 <!-- LV246:emerge_traits_assocs:end -->
@@ -1517,33 +1546,28 @@ Table: Pathways aligned to LV928 from the MultiPLIER models. {#tbl:sup:multiplie
 <!-- LV928:multiplier_pathways:end -->
 
 <!-- LV928:phenomexcan_traits_assocs:start -->
-| Trait description                               | Sample size   | Cases   | Partition / cluster   | FDR            |
-|:------------------------------------------------|:--------------|:--------|:----------------------|:---------------|
-| Mean sphered cell volume                        | 344,729       |         | 29 / 2                | 2.18e&#8209;46 |
-| Mean reticulocyte volume                        | 344,728       |         | 29 / 2                | 4.08e&#8209;44 |
-| Mean corpuscular volume                         | 350,473       |         | 29 / 2                | 5.57e&#8209;33 |
-| Red blood cell (erythrocyte) distribution width | 350,473       |         | 29 / 23               | 7.62e&#8209;31 |
-| Reticulocyte percentage                         | 344,728       |         | 29 / 4                | 2.12e&#8209;29 |
-| Reticulocyte count                              | 344,729       |         | 29 / 4                | 6.88e&#8209;28 |
-| Reticulocyte Count                              | 173,480       |         | 29 / 4                | 1.06e&#8209;23 |
-| Mean corpuscular haemoglobin                    | 350,472       |         | 29 / 2                | 7.89e&#8209;23 |
-| High light scatter reticulocyte count           | 344,729       |         | 29 / 4                | 3.05e&#8209;21 |
-| Immature reticulocyte fraction                  | 344,728       |         | 29 / 4                | 5.04e&#8209;21 |
-| High light scatter reticulocyte percentage      | 344,729       |         | 29 / 4                | 1.57e&#8209;16 |
-| Red blood cell (erythrocyte) count              | 350,475       |         | 29 / 5                | 2.53e&#8209;16 |
-| Red Blood Cell Count                            | 173,480       |         | 29 / 5                | 2.62e&#8209;09 |
-| Haemoglobin concentration                       | 350,474       |         | 29 / 5                | 1.25e&#8209;03 |
-| Haematocrit percentage                          | 350,475       |         | 29 / 5                | 3.77e&#8209;03 |
+| Trait description                               | Sample size   | Cases   | FDR            |
+|:------------------------------------------------|:--------------|:--------|:---------------|
+| Mean sphered cell volume                        | 344,729       |         | 1.60e&#8209;20 |
+| Mean corpuscular haemoglobin concentration      | 350,468       |         | 1.42e&#8209;17 |
+| Mean reticulocyte volume                        | 344,728       |         | 1.77e&#8209;17 |
+| Reticulocyte count                              | 344,729       |         | 2.28e&#8209;10 |
+| Reticulocyte percentage                         | 344,728       |         | 1.37e&#8209;09 |
+| Red blood cell (erythrocyte) distribution width | 350,473       |         | 2.90e&#8209;09 |
+| Reticulocyte Count                              | 173,480       |         | 1.09e&#8209;07 |
+| Mean corpuscular volume                         | 350,473       |         | 1.46e&#8209;03 |
+| High light scatter reticulocyte count           | 344,729       |         | 3.49e&#8209;03 |
+| Age at first episode of depression              | 61,033        |         | 1.33e&#8209;02 |
+| High Light Scatter Reticulocyte Count           | 173,480       |         | 1.48e&#8209;02 |
+| Mean corpuscular haemoglobin                    | 350,472       |         | 4.02e&#8209;02 |
 
 Table: Significant trait associations of LV928 in PhenomeXcan. {#tbl:sup:phenomexcan_assocs:lv928}
 <!-- LV928:phenomexcan_traits_assocs:end -->
 
 <!-- LV928:emerge_traits_assocs:start -->
-| Phecode   | Trait description                                | Sample size   | Cases   | FDR            |
-|:----------|:-------------------------------------------------|:--------------|:--------|:---------------|
-| 250.24    | Type 2 diabetes with neurological manifestations | 43,236        | 2,963   | 1.44e&#8209;02 |
-| 195       | Cancer, suspected or other                       | 50,040        | 2,250   | 2.42e&#8209;02 |
-| 514.2     | Solitary pulmonary nodule                        | 50,389        | 2,270   | 4.65e&#8209;02 |
+| Phecode                     | Trait description   | Sample size   | Cases   | FDR   |
+|:----------------------------|:--------------------|:--------------|:--------|:------|
+| No significant associations |                     |               |         |       |
 
 Table: Significant trait associations of LV928 in eMERGE. {#tbl:sup:emerge_assocs:lv928}
 <!-- LV928:emerge_traits_assocs:end -->
@@ -1567,18 +1591,23 @@ Table: Pathways aligned to LV30 from the MultiPLIER models. {#tbl:sup:multiplier
 <!-- LV30:multiplier_pathways:end -->
 
 <!-- LV30:phenomexcan_traits_assocs:start -->
-| Trait description                          | Sample size   | Cases   | Partition / cluster   | FDR            |
-|:-------------------------------------------|:--------------|:--------|:----------------------|:---------------|
-| Mean reticulocyte volume                   | 344,728       |         | 29 / 2                | 1.41e&#8209;51 |
-| Immature reticulocyte fraction             | 344,728       |         | 29 / 4                | 5.79e&#8209;40 |
-| Mean sphered cell volume                   | 344,729       |         | 29 / 2                | 3.26e&#8209;36 |
-| Mean corpuscular volume                    | 350,473       |         | 29 / 2                | 3.18e&#8209;35 |
-| Reticulocyte percentage                    | 344,728       |         | 29 / 4                | 1.41e&#8209;28 |
-| Mean corpuscular haemoglobin               | 350,472       |         | 29 / 2                | 3.72e&#8209;28 |
-| High light scatter reticulocyte count      | 344,729       |         | 29 / 4                | 8.20e&#8209;28 |
-| Reticulocyte count                         | 344,729       |         | 29 / 4                | 2.13e&#8209;26 |
-| Reticulocyte Count                         | 173,480       |         | 29 / 4                | 1.11e&#8209;24 |
-| High light scatter reticulocyte percentage | 344,729       |         | 29 / 4                | 4.05e&#8209;22 |
+| Trait description                                         | Sample size   | Cases   | FDR            |
+|:----------------------------------------------------------|:--------------|:--------|:---------------|
+| Mean reticulocyte volume                                  | 344,728       |         | 1.09e&#8209;32 |
+| Mean sphered cell volume                                  | 344,729       |         | 1.38e&#8209;24 |
+| Reticulocyte Count                                        | 173,480       |         | 6.28e&#8209;18 |
+| Reticulocyte percentage                                   | 344,728       |         | 1.27e&#8209;17 |
+| Mean corpuscular haemoglobin concentration                | 350,468       |         | 1.62e&#8209;17 |
+| Reticulocyte count                                        | 344,729       |         | 1.62e&#8209;17 |
+| High light scatter reticulocyte count                     | 344,729       |         | 4.78e&#8209;11 |
+| High Light Scatter Reticulocyte Count                     | 173,480       |         | 8.49e&#8209;11 |
+| Immature reticulocyte fraction                            | 344,728       |         | 4.31e&#8209;10 |
+| High light scatter reticulocyte percentage                | 344,729       |         | 1.21e&#8209;05 |
+| Mean corpuscular volume                                   | 350,473       |         | 2.28e&#8209;05 |
+| Red blood cell (erythrocyte) distribution width           | 350,473       |         | 3.00e&#8209;05 |
+| Mean platelet (thrombocyte) volume                        | 350,470       |         | 6.75e&#8209;04 |
+| Mean corpuscular haemoglobin                              | 350,472       |         | 3.90e&#8209;03 |
+| Illnesses of adopted mother: Chronic bronchitis/emphysema | 2,938         | 238     | 1.92e&#8209;02 |
 
 Table: Significant trait associations of LV30 in PhenomeXcan. {#tbl:sup:phenomexcan_assocs:lv30}
 <!-- LV30:phenomexcan_traits_assocs:end -->
@@ -1608,13 +1637,11 @@ Table: Pathways aligned to LV730 from the MultiPLIER models. {#tbl:sup:multiplie
 <!-- LV730:multiplier_pathways:end -->
 
 <!-- LV730:phenomexcan_traits_assocs:start -->
-| Trait description                  | Sample size   | Cases   | Partition / cluster   | FDR            |
-|:-----------------------------------|:--------------|:--------|:----------------------|:---------------|
-| Platelet distribution width        | 350,470       |         | 29 / 1                | 2.88e&#8209;13 |
-| Mean platelet (thrombocyte) volume | 350,470       |         | 29 / 1                | 7.26e&#8209;13 |
-| Platelet count                     | 350,474       |         | 29 / 1                | 1.24e&#8209;07 |
-| Platelet Count                     | 173,480       |         | 29 / 1                | 1.21e&#8209;06 |
-| Platelet crit                      | 350,471       |         | 29 / 1                | 1.38e&#8209;04 |
+| Trait description                                                 | Sample size   | Cases   | FDR            |
+|:------------------------------------------------------------------|:--------------|:--------|:---------------|
+| Platelet distribution width                                       | 350,470       |         | 1.13e&#8209;10 |
+| Mean platelet (thrombocyte) volume                                | 350,470       |         | 3.47e&#8209;04 |
+| Reason former drinker stopped drinking alcohol: Financial reasons | 12,110        | 233     | 3.71e&#8209;02 |
 
 Table: Significant trait associations of LV730 in PhenomeXcan. {#tbl:sup:phenomexcan_assocs:lv730}
 <!-- LV730:phenomexcan_traits_assocs:end -->
@@ -1645,16 +1672,17 @@ Table: Pathways aligned to LV598 from the MultiPLIER models. {#tbl:sup:multiplie
 <!-- LV598:multiplier_pathways:end -->
 
 <!-- LV598:phenomexcan_traits_assocs:start -->
-| Trait description           | Sample size   | Cases   | Partition / cluster   | FDR            |
-|:----------------------------|:--------------|:--------|:----------------------|:---------------|
-| 6mm strong meridian (right) | 66,256        |         | 29 / 10               | 3.21e&#8209;07 |
-| 6mm weak meridian (right)   | 66,256        |         | 29 / 10               | 2.04e&#8209;06 |
-| 6mm strong meridian (left)  | 65,551        |         | 29 / 10               | 2.44e&#8209;06 |
-| 3mm strong meridian (left)  | 75,398        |         | 29 / 10               | 2.53e&#8209;06 |
-| 6mm weak meridian (left)    | 65,551        |         | 29 / 10               | 1.20e&#8209;05 |
-| 3mm weak meridian (left)    | 75,398        |         | 29 / 10               | 1.58e&#8209;05 |
-| 3mm strong meridian (right) | 75,410        |         | 29 / 10               | 2.95e&#8209;05 |
-| 3mm weak meridian (right)   | 75,410        |         | 29 / 10               | 3.86e&#8209;05 |
+| Trait description                                       | Sample size   | Cases   | FDR            |
+|:--------------------------------------------------------|:--------------|:--------|:---------------|
+| Corneal resistance factor (right)                       | 76,630        |         | 4.05e&#8209;04 |
+| Corneal resistance factor (left)                        | 76,510        |         | 1.86e&#8209;03 |
+| 6mm strong meridian (left)                              | 65,551        |         | 2.58e&#8209;03 |
+| Corneal hysteresis (right)                              | 76,630        |         | 1.21e&#8209;02 |
+| 6mm strong meridian (right)                             | 66,256        |         | 2.18e&#8209;02 |
+| Treatment/medication code: evening primrose oil product | 361,141       | 814     | 2.58e&#8209;02 |
+| 6mm weak meridian (left)                                | 65,551        |         | 3.67e&#8209;02 |
+| Hand grip strength (left)                               | 359,704       |         | 4.15e&#8209;02 |
+| 3mm strong meridian (left)                              | 75,398        |         | 4.74e&#8209;02 |
 
 Table: Significant trait associations of LV598 in PhenomeXcan. {#tbl:sup:phenomexcan_assocs:lv598}
 <!-- LV598:phenomexcan_traits_assocs:end -->
@@ -1666,94 +1694,6 @@ Table: Significant trait associations of LV598 in PhenomeXcan. {#tbl:sup:phenome
 
 Table: Significant trait associations of LV598 in eMERGE. {#tbl:sup:emerge_assocs:lv598}
 <!-- LV598:emerge_traits_assocs:end -->
-
-
-#### LV844
-
-![
-**Cell types for LV844.**
-](images/lvs_analysis/lv844/lv844-cell_types.svg "Cell types for LV844"){#fig:sup:lv844 width="80%"}
-
-<!-- LV844:multiplier_pathways:start -->
-| Pathway                                  | AUC   | FDR      |
-|:-----------------------------------------|:------|:---------|
-| KEGG ANTIGEN PROCESSING AND PRESENTATION | 0.80  | 1.35e-03 |
-
-Table: Pathways aligned to LV844 from the MultiPLIER models. {#tbl:sup:multiplier_pathways:lv844}
-<!-- LV844:multiplier_pathways:end -->
-
-<!-- LV844:phenomexcan_traits_assocs:start -->
-| Trait description                                     | Sample size   | Cases   | Partition / cluster   | FDR            |
-|:------------------------------------------------------|:--------------|:--------|:----------------------|:---------------|
-| Rheumatoid Arthritis                                  | 80,799        | 19,234  | 29 / 26               | 1.20e&#8209;57 |
-| malabsorption/coeliac disease (self-reported)         | 361,141       | 1,587   | 29 / 8                | 1.25e&#8209;43 |
-| Coeliac disease                                       | 361,194       | 842     | 29 / 8                | 1.52e&#8209;41 |
-| Intestinal malabsorption (ICD10 K90)                  | 361,194       | 922     | 29 / 8                | 5.28e&#8209;40 |
-| Started insulin within one year diagnosis of diabetes | 16,415        | 1,999   | 29 / 13               | 7.77e&#8209;38 |
-| Systemic Lupus Erythematosus                          | 23,210        | 7,219   | 29 / 26               | 6.45e&#8209;35 |
-| Age diabetes diagnosed                                | 16,166        |         | 29 / 13               | 1.92e&#8209;34 |
-| Never eat: Wheat products                             | 359,777       | 9,573   | 29 / 13               | 1.37e&#8209;31 |
-| hyperthyroidism (self-reported)                       | 361,141       | 2,730   | 29 / 13               | 3.41e&#8209;30 |
-| Medication: insulin product                           | 361,141       | 3,545   | 29 / 13               | 1.78e&#8209;25 |
-| Insulin medication (females)                          | 193,148       | 1,476   | 29 / 13               | 2.79e&#8209;23 |
-| Insulin medication (males)                            | 165,340       | 2,248   | 29 / 13               | 1.27e&#8209;20 |
-| hypothyroidism (self-reported)                        | 361,141       | 17,574  | 29 / 13               | 3.35e&#8209;20 |
-| Medication: levothyroxine sodium                      | 361,141       | 14,689  | 29 / 13               | 2.76e&#8209;19 |
-| psoriasis (self-reported)                             | 361,141       | 4,192   | 29 / 13               | 6.74e&#8209;16 |
-
-Table: Significant trait associations of LV844 in PhenomeXcan. {#tbl:sup:phenomexcan_assocs:lv844}
-<!-- LV844:phenomexcan_traits_assocs:end -->
-
-<!-- LV844:emerge_traits_assocs:start -->
-| Phecode   | Trait description                                                                    | Sample size   | Cases   | FDR            |
-|:----------|:-------------------------------------------------------------------------------------|:--------------|:--------|:---------------|
-| 714.1     | Rheumatoid arthritis                                                                 | 49,453        | 2,541   | 1.53e&#8209;08 |
-| 250.1     | Type 1 diabetes                                                                      | 42,723        | 2,450   | 3.85e&#8209;08 |
-| 714       | Rheumatoid arthritis and other inflammatory polyarthropathies                        | 50,215        | 3,303   | 1.02e&#8209;06 |
-| 440       | Atherosclerosis                                                                      | 47,471        | 4,993   | 6.73e&#8209;03 |
-| 578.8     | Hemorrhage of rectum and anus                                                        | 47,545        | 1,991   | 6.73e&#8209;03 |
-| 585.32    | End stage renal disease                                                              | 43,309        | 1,842   | 9.01e&#8209;03 |
-| 440.2     | Atherosclerosis of the extremities                                                   | 45,524        | 3,046   | 1.09e&#8209;02 |
-| 514.2     | Solitary pulmonary nodule                                                            | 50,389        | 2,270   | 1.39e&#8209;02 |
-| 444       | Arterial embolism and thrombosis                                                     | 43,378        | 900     | 2.97e&#8209;02 |
-| 440.22    | Atherosclerosis of native arteries of the extremities with intermittent claudication | 44,639        | 2,161   | 3.61e&#8209;02 |
-
-Table: Significant trait associations of LV844 in eMERGE. {#tbl:sup:emerge_assocs:lv844}
-<!-- LV844:emerge_traits_assocs:end -->
-
-
-#### LV155
-
-![
-**Cell types for LV155.**
-<!--  -->
-](images/lvs_analysis/lv155/lv155-cell_types.svg "Cell types for LV155"){#fig:sup:lv155 width="80%"}
-
-<!-- LV155:multiplier_pathways:start -->
-| Pathway                            | AUC   | FDR   |
-|:-----------------------------------|:------|:------|
-| No pathways significantly enriched |       |       |
-
-Table: Pathways aligned to LV155 from the MultiPLIER models. {#tbl:sup:multiplier_pathways:lv155}
-<!-- LV155:multiplier_pathways:end -->
-
-<!-- LV155:phenomexcan_traits_assocs:start -->
-| Trait description                | Sample size   | Cases   | Partition / cluster   | FDR            |
-|:---------------------------------|:--------------|:--------|:----------------------|:---------------|
-| hypothyroidism (self-reported)   | 361,141       | 17,574  | 29 / 13               | 1.65e&#8209;03 |
-| hyperthyroidism (self-reported)  | 361,141       | 2,730   | 29 / 13               | 1.03e&#8209;02 |
-| Medication: levothyroxine sodium | 361,141       | 14,689  | 29 / 13               | 1.12e&#8209;02 |
-
-Table: Significant trait associations of LV155 in PhenomeXcan. {#tbl:sup:phenomexcan_assocs:lv155}
-<!-- LV155:phenomexcan_traits_assocs:end -->
-
-<!-- LV155:emerge_traits_assocs:start -->
-| Phecode   | Trait description       | Sample size   | Cases   | FDR            |
-|:----------|:------------------------|:--------------|:--------|:---------------|
-| 244.2     | Acquired hypothyroidism | 45,839        | 1,155   | 5.66e&#8209;02 |
-
-Table: Trait associations of LV155 in eMERGE. {#tbl:sup:emerge_assocs:lv155}
-<!-- LV155:emerge_traits_assocs:end -->
 
 
 #### LV57
@@ -1777,182 +1717,90 @@ Table: Pathways aligned to LV57 from the MultiPLIER models. {#tbl:sup:multiplier
 <!-- LV57:multiplier_pathways:end -->
 
 <!-- LV57:phenomexcan_traits_assocs:start -->
-| Trait description                                     | Sample size   | Cases   | Partition / cluster   | FDR            |
-|:------------------------------------------------------|:--------------|:--------|:----------------------|:---------------|
-| hypothyroidism (self-reported)                        | 361,141       | 17,574  | 29 / 13               | 7.21e&#8209;25 |
-| Medication: levothyroxine sodium                      | 361,141       | 14,689  | 29 / 13               | 3.71e&#8209;23 |
-| hyperthyroidism (self-reported)                       | 361,141       | 2,730   | 29 / 13               | 8.93e&#8209;07 |
-| Started insulin within one year diagnosis of diabetes | 16,415        | 1,999   | 29 / 13               | 6.60e&#8209;05 |
-| Medication: insulin product                           | 361,141       | 3,545   | 29 / 13               | 5.20e&#8209;04 |
-| Insulin medication (females)                          | 193,148       | 1,476   | 29 / 13               | 9.40e&#8209;04 |
-| Insulin medication (males)                            | 165,340       | 2,248   | 29 / 13               | 3.63e&#8209;03 |
+| Trait description                                                                                                          | Sample size   | Cases   | FDR            |
+|:---------------------------------------------------------------------------------------------------------------------------|:--------------|:--------|:---------------|
+| Non-cancer illness code, self-reported: deep venous thrombosis (dvt)                                                       | 361,141       | 7,237   | 1.76e&#8209;13 |
+| Blood clot, DVT, bronchitis, emphysema, asthma, rhinitis, eczema, allergy diagnosed by doctor: Blood clot in the leg (DVT) | 360,527       | 7,386   | 1.22e&#8209;12 |
+| Diagnoses - main ICD10: I80 Phlebitis and thrombophlebitis                                                                 | 361,194       | 2,289   | 7.62e&#8209;12 |
+| DVT of lower extremities                                                                                                   | 361,194       | 2,116   | 1.27e&#8209;09 |
+| Venous thromboembolism                                                                                                     | 361,194       | 4,620   | 2.28e&#8209;08 |
+| DVT of lower extremities and pulmonary embolism                                                                            | 361,194       | 4,319   | 4.36e&#8209;08 |
+| Inflammatory Bowel Disease                                                                                                 | 34,652        | 12,882  | 1.95e&#8209;05 |
+| hypothyroidism (self-reported)                                                                                             | 361,141       | 17,574  | 3.84e&#8209;05 |
+| Medication: levothyroxine sodium                                                                                           | 361,141       | 14,689  | 8.43e&#8209;05 |
+| Mouth/teeth dental problems: Mouth ulcers                                                                                  | 359,841       | 36,831  | 1.02e&#8209;03 |
+| Crohns Disease                                                                                                             | 20,833        | 5,956   | 1.02e&#8209;02 |
+| Facial ageing                                                                                                              | 330,409       |         | 1.04e&#8209;02 |
+| Ulcerative Colitis                                                                                                         | 27,432        | 6,968   | 1.27e&#8209;02 |
+| Hair colour (natural, before greying): Black                                                                               | 360,270       | 15,809  | 1.99e&#8209;02 |
+| Hair colour (natural, before greying): Light brown                                                                         | 360,270       | 147,560 | 4.69e&#8209;02 |
 
 Table: Significant trait associations of LV57 in PhenomeXcan. {#tbl:sup:phenomexcan_assocs:lv57}
 <!-- LV57:phenomexcan_traits_assocs:end -->
 
 <!-- LV57:emerge_traits_assocs:start -->
-| Phecode   | Trait description                                             | Sample size   | Cases   | FDR            |
-|:----------|:--------------------------------------------------------------|:--------------|:--------|:---------------|
-| 244       | Hypothyroidism                                                | 54,404        | 9,720   | 7.66e&#8209;09 |
-| 244.4     | Hypothyroidism NOS                                            | 53,968        | 9,284   | 7.66e&#8209;09 |
-| 279       | Disorders involving the immune mechanism                      | 56,771        | 3,309   | 1.07e&#8209;02 |
-| 514.2     | Solitary pulmonary nodule                                     | 50,389        | 2,270   | 2.62e&#8209;02 |
-| 714       | Rheumatoid arthritis and other inflammatory polyarthropathies | 50,215        | 3,303   | 3.77e&#8209;02 |
+| Phecode   | Trait description                    | Sample size   | Cases   | FDR            |
+|:----------|:-------------------------------------|:--------------|:--------|:---------------|
+| 286       | Coagulation defects                  | 50,182        | 2,976   | 1.33e&#8209;11 |
+| 452       | Other venous embolism and thrombosis | 40,476        | 3,816   | 1.52e&#8209;05 |
+| 452.2     | Deep vein thrombosis [DVT]           | 38,791        | 2,131   | 4.47e&#8209;05 |
+| 244.4     | Hypothyroidism NOS                   | 53,968        | 9,284   | 1.12e&#8209;02 |
+| 244       | Hypothyroidism                       | 54,404        | 9,720   | 1.42e&#8209;02 |
 
 Table: Significant trait associations of LV57 in eMERGE. {#tbl:sup:emerge_assocs:lv57}
 <!-- LV57:emerge_traits_assocs:end -->
 
 
-#### LV54
+#### LV844
 
 ![
-**Cell types for LV54.**
-](images/lvs_analysis/lv54/lv54-cell_types.svg "Cell types for LV54"){#fig:sup:lv54 width="80%"}
+**Cell types for LV844.**
+](images/lvs_analysis/lv844/lv844-cell_types.svg "Cell types for LV844"){#fig:sup:lv844 width="80%"}
 
-<!-- LV54:multiplier_pathways:start -->
-| Pathway                            | AUC   | FDR   |
-|:-----------------------------------|:------|:------|
-| No pathways significantly enriched |       |       |
+<!-- LV844:multiplier_pathways:start -->
+| Pathway                                  | AUC   | FDR      |
+|:-----------------------------------------|:------|:---------|
+| KEGG ANTIGEN PROCESSING AND PRESENTATION | 0.80  | 1.35e-03 |
 
-Table: Pathways aligned to LV54 from the MultiPLIER models. {#tbl:sup:multiplier_pathways:lv54}
-<!-- LV54:multiplier_pathways:end -->
+Table: Pathways aligned to LV844 from the MultiPLIER models. {#tbl:sup:multiplier_pathways:lv844}
+<!-- LV844:multiplier_pathways:end -->
 
-<!-- LV54:phenomexcan_traits_assocs:start -->
-| Trait description                                     | Sample size   | Cases   | Partition / cluster   | FDR            |
-|:------------------------------------------------------|:--------------|:--------|:----------------------|:---------------|
-| Intestinal malabsorption (ICD10 K90)                  | 361,194       | 922     | 29 / 8                | 3.10e&#8209;25 |
-| Coeliac disease                                       | 361,194       | 842     | 29 / 8                | 4.78e&#8209;25 |
-| Never eat: Wheat products                             | 359,777       | 9,573   | 29 / 13               | 3.93e&#8209;23 |
-| Systemic Lupus Erythematosus                          | 23,210        | 7,219   | 29 / 26               | 8.16e&#8209;23 |
-| Started insulin within one year diagnosis of diabetes | 16,415        | 1,999   | 29 / 13               | 2.57e&#8209;20 |
-| hyperthyroidism (self-reported)                       | 361,141       | 2,730   | 29 / 13               | 6.70e&#8209;19 |
-| Medication: insulin product                           | 361,141       | 3,545   | 29 / 13               | 3.62e&#8209;18 |
-| Age diabetes diagnosed                                | 16,166        |         | 29 / 13               | 9.20e&#8209;18 |
-| malabsorption/coeliac disease (self-reported)         | 361,141       | 1,587   | 29 / 8                | 9.63e&#8209;15 |
-| Insulin medication (males)                            | 165,340       | 2,248   | 29 / 13               | 6.01e&#8209;14 |
-| psoriasis (self-reported)                             | 361,141       | 4,192   | 29 / 13               | 1.81e&#8209;13 |
-| Rheumatoid Arthritis                                  | 80,799        | 19,234  | 29 / 26               | 2.17e&#8209;13 |
-| Insulin medication (females)                          | 193,148       | 1,476   | 29 / 13               | 2.61e&#8209;12 |
-| Medication: levothyroxine sodium                      | 361,141       | 14,689  | 29 / 13               | 4.25e&#8209;10 |
-| hypothyroidism (self-reported)                        | 361,141       | 17,574  | 29 / 13               | 2.49e&#8209;08 |
+<!-- LV844:phenomexcan_traits_assocs:start -->
+| Trait description                                               | Sample size   | Cases   | FDR            |
+|:----------------------------------------------------------------|:--------------|:--------|:---------------|
+| Non-cancer illness code, self-reported: polymyalgia rheumatica  | 361,141       | 753     | 5.22e&#8209;06 |
+| Non-cancer illness code, self-reported: type 1 diabetes         | 361,141       | 318     | 4.71e&#8209;05 |
+| Type 1 diabetes with ketoacidosis                               | 361,194       | 168     | 1.03e&#8209;04 |
+| Age diabetes diagnosed                                          | 16,166        |         | 3.86e&#8209;04 |
+| Milk type used: Other type of milk                              | 360,806       | 4,213   | 5.48e&#8209;04 |
+| Non-cancer illness code, self-reported: appendicitis            | 361,141       | 3,058   | 6.12e&#8209;04 |
+| Diabetic ketoacidosis                                           | 361,194       | 234     | 7.13e&#8209;04 |
+| Rheumatoid Arthritis                                            | 80,799        | 19,234  | 7.46e&#8209;04 |
+| Type 1 diabetes without complications                           | 361,194       | 247     | 1.05e&#8209;03 |
+| Started insulin within one year diagnosis of diabetes           | 16,415        | 1,999   | 1.30e&#8209;03 |
+| Insulin medication (males)                                      | 165,340       | 2,248   | 3.61e&#8209;03 |
+| Medication: insulin product                                     | 361,141       | 3,545   | 5.48e&#8209;03 |
+| Insulin medication (females)                                    | 193,148       | 1,476   | 7.93e&#8209;03 |
+| Type 1 diabetes                                                 | 361,194       | 583     | 1.04e&#8209;02 |
+| Diagnoses - main ICD10: E10 Insulin-dependent diabetes mellitus | 361,194       | 470     | 1.08e&#8209;02 |
+| Treatment/medication code: sulfasalazine                        | 361,141       | 710     | 1.10e&#8209;02 |
+| malabsorption/coeliac disease (self-reported)                   | 361,141       | 1,587   | 3.12e&#8209;02 |
+| Job coding: school inspector, education inspector               | 89,866        | 238     | 3.71e&#8209;02 |
+| Seropositive rheumatoid arthritis                               | 361,194       | 327     | 3.86e&#8209;02 |
+| Non-cancer illness code, self-reported: rheumatoid arthritis    | 361,141       | 4,017   | 4.21e&#8209;02 |
+| Age hayfever or allergic rhinitis diagnosed by doctor           | 20,904        |         | 4.44e&#8209;02 |
+| Other/unspecified seropositiverheumatoid arthritis              | 361,194       | 299     | 4.88e&#8209;02 |
 
-Table: Significant trait associations of LV54 in PhenomeXcan. {#tbl:sup:phenomexcan_assocs:lv54}
-<!-- LV54:phenomexcan_traits_assocs:end -->
+Table: Significant trait associations of LV844 in PhenomeXcan. {#tbl:sup:phenomexcan_assocs:lv844}
+<!-- LV844:phenomexcan_traits_assocs:end -->
 
-<!-- LV54:emerge_traits_assocs:start -->
-| Phecode   | Trait description                                             | Sample size   | Cases   | FDR            |
-|:----------|:--------------------------------------------------------------|:--------------|:--------|:---------------|
-| 250.1     | Type 1 diabetes                                               | 42,723        | 2,450   | 1.69e&#8209;13 |
-| 244       | Hypothyroidism                                                | 54,404        | 9,720   | 1.01e&#8209;05 |
-| 244.4     | Hypothyroidism NOS                                            | 53,968        | 9,284   | 1.01e&#8209;05 |
-| 695       | Erythematous conditions                                       | 48,347        | 4,210   | 8.54e&#8209;05 |
-| 714       | Rheumatoid arthritis and other inflammatory polyarthropathies | 50,215        | 3,303   | 6.58e&#8209;04 |
-| 440       | Atherosclerosis                                               | 47,471        | 4,993   | 1.90e&#8209;03 |
-| 585       | Renal failure                                                 | 51,437        | 9,970   | 7.10e&#8209;03 |
-| 585.33    | Chronic Kidney Disease, Stage III                             | 46,279        | 4,812   | 7.49e&#8209;03 |
-| 585.32    | End stage renal disease                                       | 43,309        | 1,842   | 7.49e&#8209;03 |
-| 250.6     | Polyneuropathy in diabetes                                    | 41,948        | 1,675   | 8.55e&#8209;03 |
-| 250       | Diabetes mellitus                                             | 52,531        | 12,258  | 1.02e&#8209;02 |
-| 285.2     | Anemia of chronic disease                                     | 39,673        | 2,606   | 1.64e&#8209;02 |
-| 502       | Postinflammatory pulmonary fibrosis                           | 42,396        | 1,723   | 1.77e&#8209;02 |
-| 415.1     | Acute pulmonary heart disease                                 | 49,887        | 1,857   | 1.88e&#8209;02 |
-| 285.21    | Anemia in chronic kidney disease                              | 38,616        | 1,549   | 2.53e&#8209;02 |
-| 585.3     | Chronic renal failure [CKD]                                   | 49,204        | 7,737   | 2.62e&#8209;02 |
-| 743       | Osteoporosis, osteopenia and pathological fracture            | 55,165        | 11,990  | 2.87e&#8209;02 |
-| 415.11    | Pulmonary embolism and infarction, acute                      | 49,867        | 1,837   | 3.04e&#8209;02 |
-| 577       | Diseases of pancreas                                          | 60,538        | 1,795   | 3.06e&#8209;02 |
-| 585.1     | Acute renal failure                                           | 46,803        | 5,336   | 3.23e&#8209;02 |
-| 195       | Cancer, suspected or other                                    | 50,040        | 2,250   | 3.27e&#8209;02 |
-| 289.4     | Lymphadenitis                                                 | 47,564        | 3,078   | 3.67e&#8209;02 |
-| 440.2     | Atherosclerosis of the extremities                            | 45,524        | 3,046   | 4.52e&#8209;02 |
+<!-- LV844:emerge_traits_assocs:start -->
+| Phecode                     | Trait description   | Sample size   | Cases   | FDR   |
+|:----------------------------|:--------------------|:--------------|:--------|:------|
+| No significant associations |                     |               |         |       |
 
-Table: Significant trait associations of LV54 in eMERGE. {#tbl:sup:emerge_assocs:lv54}
-<!-- LV54:emerge_traits_assocs:end -->
-
-
-#### LV847
-
-![
-**Cell types for LV847.**
-](images/lvs_analysis/lv847/lv847-cell_types.svg "Cell types for LV847"){#fig:sup:lv847 width="80%"}
-
-<!-- LV847:multiplier_pathways:start -->
-| Pathway                           | AUC   | FDR      |
-|:----------------------------------|:------|:---------|
-| KEGG SYSTEMIC LUPUS ERYTHEMATOSUS | 0.74  | 1.86e-04 |
-| REACTOME MEIOTIC RECOMBINATION    | 0.78  | 3.60e-04 |
-| REACTOME RNA POL I TRANSCRIPTION  | 0.75  | 5.56e-04 |
-| REACTOME AMYLOIDS                 | 0.76  | 2.17e-03 |
-
-Table: Pathways aligned to LV847 from the MultiPLIER models. {#tbl:sup:multiplier_pathways:lv847}
-<!-- LV847:multiplier_pathways:end -->
-
-<!-- LV847:phenomexcan_traits_assocs:start -->
-| Trait description                                                                          | Sample size   | Cases   | Partition / cluster   | FDR            |
-|:-------------------------------------------------------------------------------------------|:--------------|:--------|:----------------------|:---------------|
-| Mean corpuscular haemoglobin                                                               | 350,472       |         | 29 / 2                | 7.34e&#8209;73 |
-| Mean corpuscular volume                                                                    | 350,473       |         | 29 / 2                | 1.43e&#8209;50 |
-| Blood pressure medication (females)                                                        | 193,148       | 33,519  | 29 / 17               | 1.38e&#8209;18 |
-| Heart attack, angina, stroke or hypertension                                               | 360,420       | 253,565 | 29 / 17               | 2.92e&#8209;15 |
-| hypertension                                                                               | 360,420       | 97,139  | 29 / 17               | 4.82e&#8209;14 |
-| hypertension (self-reported)                                                               | 361,141       | 93,560  | 29 / 17               | 1.02e&#8209;13 |
-| Medication: bendroflumethiazide                                                            | 361,141       | 20,196  | 29 / 17               | 1.06e&#8209;08 |
-| Mean sphered cell volume                                                                   | 344,729       |         | 29 / 2                | 2.16e&#8209;08 |
-| Blood pressure medication (males)                                                          | 165,340       | 40,987  | 29 / 17               | 1.14e&#8209;07 |
-| Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones (females) | 193,148       | 133,338 | 29 / 17               | 1.21e&#8209;06 |
-| Diastolic blood pressure, automated reading                                                | 340,162       |         | 29 / 17               | 2.93e&#8209;06 |
-| Medication for cholesterol, blood pressure or diabetes (males)                             | 165,340       | 110,372 | 29 / 17               | 5.01e&#8209;06 |
-| Mean reticulocyte volume                                                                   | 344,728       |         | 29 / 2                | 8.38e&#8209;03 |
-
-Table: Significant trait associations of LV847 in PhenomeXcan. {#tbl:sup:phenomexcan_assocs:lv847}
-<!-- LV847:phenomexcan_traits_assocs:end -->
-
-<!-- LV847:emerge_traits_assocs:start -->
-| Phecode   | Trait description                                                                    | Sample size   | Cases   | FDR            |
-|:----------|:-------------------------------------------------------------------------------------|:--------------|:--------|:---------------|
-| 585.32    | End stage renal disease                                                              | 43,309        | 1,842   | 3.11e&#8209;08 |
-| 443       | Peripheral vascular disease                                                          | 47,867        | 5,389   | 4.13e&#8209;06 |
-| 442.1     | Aortic aneurysm                                                                      | 45,589        | 3,111   | 1.01e&#8209;05 |
-| 411.3     | Angina pectoris                                                                      | 43,503        | 4,382   | 4.28e&#8209;05 |
-| 440.2     | Atherosclerosis of the extremities                                                   | 45,524        | 3,046   | 6.57e&#8209;05 |
-| 415.11    | Pulmonary embolism and infarction, acute                                             | 49,867        | 1,837   | 9.90e&#8209;05 |
-| 416       | Cardiomegaly                                                                         | 53,289        | 5,259   | 1.34e&#8209;04 |
-| 415.1     | Acute pulmonary heart disease                                                        | 49,887        | 1,857   | 1.49e&#8209;04 |
-| 599.3     | Dysuria                                                                              | 42,858        | 3,581   | 1.74e&#8209;04 |
-| 585       | Renal failure                                                                        | 51,437        | 9,970   | 3.90e&#8209;04 |
-| 411       | Ischemic Heart Disease                                                               | 54,275        | 15,154  | 1.19e&#8209;03 |
-| 531       | Peptic ulcer (excl. esophageal)                                                      | 59,472        | 1,561   | 2.26e&#8209;03 |
-| 250.6     | Polyneuropathy in diabetes                                                           | 41,948        | 1,675   | 2.32e&#8209;03 |
-| 443.9     | Peripheral vascular disease, unspecified                                             | 46,926        | 4,448   | 2.40e&#8209;03 |
-| 519       | Other diseases of respiratory system, not elsewhere classified                       | 56,909        | 2,056   | 2.43e&#8209;03 |
-| 401.2     | Hypertensive heart and/or renal disease                                              | 30,405        | 6,253   | 2.43e&#8209;03 |
-| 411.8     | Other chronic ischemic heart disease, unspecified                                    | 44,123        | 5,002   | 2.71e&#8209;03 |
-| 440.22    | Atherosclerosis of native arteries of the extremities with intermittent claudication | 44,639        | 2,161   | 2.97e&#8209;03 |
-| 401.22    | Hypertensive chronic kidney disease                                                  | 28,944        | 4,792   | 5.61e&#8209;03 |
-| 514       | Abnormal findings examination of lungs                                               | 54,668        | 6,549   | 6.96e&#8209;03 |
-| 427.6     | Premature beats                                                                      | 31,575        | 2,453   | 1.27e&#8209;02 |
-| 585.1     | Acute renal failure                                                                  | 46,803        | 5,336   | 1.39e&#8209;02 |
-| 418       | Nonspecific chest pain                                                               | 51,082        | 17,765  | 1.39e&#8209;02 |
-| 250.1     | Type 1 diabetes                                                                      | 42,723        | 2,450   | 1.44e&#8209;02 |
-| 285.21    | Anemia in chronic kidney disease                                                     | 38,616        | 1,549   | 1.82e&#8209;02 |
-| 368       | Visual disturbances                                                                  | 56,141        | 2,694   | 1.88e&#8209;02 |
-| 427.5     | Arrhythmia (cardiac) NOS                                                             | 36,861        | 7,739   | 2.01e&#8209;02 |
-| 687.1     | Rash and other nonspecific skin eruption                                             | 47,039        | 4,964   | 2.15e&#8209;02 |
-| 185       | Cancer of prostate                                                                   | 52,630        | 2,815   | 2.31e&#8209;02 |
-| 747       | Cardiac and circulatory congenital anomalies                                         | 59,494        | 2,167   | 2.47e&#8209;02 |
-| 444       | Arterial embolism and thrombosis                                                     | 43,378        | 900     | 2.53e&#8209;02 |
-| 585.3     | Chronic renal failure [CKD]                                                          | 49,204        | 7,737   | 2.53e&#8209;02 |
-| 440       | Atherosclerosis                                                                      | 47,471        | 4,993   | 2.62e&#8209;02 |
-| 591       | Urinary tract infection                                                              | 49,727        | 10,016  | 2.94e&#8209;02 |
-| 411.1     | Unstable angina (intermediate coronary syndrome)                                     | 41,763        | 2,642   | 3.06e&#8209;02 |
-| 285.2     | Anemia of chronic disease                                                            | 39,673        | 2,606   | 3.06e&#8209;02 |
-| 274.1     | Gout                                                                                 | 59,252        | 3,394   | 3.23e&#8209;02 |
-| 585.34    | Chronic Kidney Disease, Stage IV                                                     | 43,322        | 1,855   | 3.84e&#8209;02 |
-| 452       | Other venous embolism and thrombosis                                                 | 40,476        | 3,816   | 4.49e&#8209;02 |
-| 427.12    | Paroxysmal ventricular tachycardia                                                   | 31,154        | 2,032   | 4.52e&#8209;02 |
-
-Table: Significant trait associations of LV847 in eMERGE. {#tbl:sup:emerge_assocs:lv847}
-<!-- LV847:emerge_traits_assocs:end -->
+Table: Significant trait associations of LV844 in eMERGE. {#tbl:sup:emerge_assocs:lv844}
+<!-- LV844:emerge_traits_assocs:end -->
 
 
 #### LV136
@@ -1975,146 +1823,45 @@ Table: Pathways aligned to LV136 from the MultiPLIER models. {#tbl:sup:multiplie
 <!-- LV136:multiplier_pathways:end -->
 
 <!-- LV136:phenomexcan_traits_assocs:start -->
-| Trait description                                  | Sample size   | Cases   | Partition / cluster   | FDR            |
-|:---------------------------------------------------|:--------------|:--------|:----------------------|:---------------|
-| 3mm strong meridian (right)                        | 75,410        |         | 29 / 10               | 6.37e&#8209;11 |
-| 6mm strong meridian (left)                         | 65,551        |         | 29 / 10               | 1.53e&#8209;09 |
-| 6mm strong meridian (right)                        | 66,256        |         | 29 / 10               | 1.78e&#8209;09 |
-| 3mm strong meridian (left)                         | 75,398        |         | 29 / 10               | 9.90e&#8209;09 |
-| Coronary Artery Disease                            | 184,305       | 60,801  | 29 / 11               | 1.26e&#8209;08 |
-| 3mm weak meridian (right)                          | 75,410        |         | 29 / 10               | 1.26e&#8209;08 |
-| 6mm weak meridian (right)                          | 66,256        |         | 29 / 10               | 2.41e&#8209;08 |
-| 3mm weak meridian (left)                           | 75,398        |         | 29 / 10               | 3.96e&#8209;08 |
-| 6mm weak meridian (left)                           | 65,551        |         | 29 / 10               | 9.31e&#8209;08 |
-| Coronary atherosclerosis                           | 361,194       | 14,334  | 29 / 14               | 3.04e&#8209;06 |
-| Ischaemic heart disease (wide definition)          | 361,194       | 20,857  | 29 / 14               | 5.71e&#8209;06 |
-| Heart attack                                       | 360,420       | 8,288   | 29 / 14               | 2.36e&#8209;04 |
-| Myocardial infarction                              | 361,194       | 7,018   | 29 / 14               | 5.20e&#8209;04 |
-| Acute myocardial infarction (ICD10 I21)            | 361,194       | 5,948   | 29 / 14               | 8.14e&#8209;04 |
-| heart attack/myocardial infarction (self-reported) | 361,141       | 8,239   | 29 / 14               | 1.16e&#8209;03 |
-| Major coronary heart disease event                 | 361,194       | 10,157  | 29 / 14               | 1.47e&#8209;02 |
+| Trait description                                               | Sample size   | Cases   | FDR            |
+|:----------------------------------------------------------------|:--------------|:--------|:---------------|
+| Coronary atherosclerosis                                        | 361,194       | 14,334  | 1.84e&#8209;09 |
+| Chronic ischaemic heart disease (ICD10 I25)                     | 361,194       | 12,769  | 3.52e&#8209;09 |
+| Ischaemic heart disease (wide definition)                       | 361,194       | 20,857  | 3.95e&#8209;08 |
+| Coronary Artery Disease                                         | 184,305       | 60,801  | 4.18e&#8209;08 |
+| 3mm strong meridian (right)                                     | 75,410        |         | 5.54e&#8209;05 |
+| 6mm strong meridian (left)                                      | 65,551        |         | 1.35e&#8209;04 |
+| Corneal resistance factor (right)                               | 76,630        |         | 2.02e&#8209;04 |
+| 6mm strong meridian (right)                                     | 66,256        |         | 2.58e&#8209;04 |
+| Heart attack                                                    | 360,420       | 8,288   | 3.75e&#8209;04 |
+| Myocardial infarction                                           | 361,194       | 7,018   | 4.85e&#8209;04 |
+| Myocardial infarction, strict                                   | 361,194       | 7,018   | 4.85e&#8209;04 |
+| 3mm strong meridian (left)                                      | 75,398        |         | 6.65e&#8209;04 |
+| heart attack/myocardial infarction (self-reported)              | 361,141       | 8,239   | 1.07e&#8209;03 |
+| 6mm weak meridian (left)                                        | 65,551        |         | 1.10e&#8209;03 |
+| 6mm weak meridian (right)                                       | 66,256        |         | 1.61e&#8209;03 |
+| Acute myocardial infarction (ICD10 I21)                         | 361,194       | 5,948   | 2.24e&#8209;03 |
+| 3mm weak meridian (right)                                       | 75,410        |         | 3.69e&#8209;03 |
+| 3mm weak meridian (left)                                        | 75,398        |         | 3.96e&#8209;03 |
+| Intra-ocular pressure, Goldmann-correlated (right)              | 76,630        |         | 8.64e&#8209;03 |
+| 6mm asymmetry angle (right)                                     | 41,390        |         | 1.03e&#8209;02 |
+| Corneal resistance factor (left)                                | 76,510        |         | 1.03e&#8209;02 |
+| Other specified disorders of muscle                             | 361,194       | 257     | 1.09e&#8209;02 |
+| Major coronary heart disease event excluding revascularizations | 361,194       | 10,157  | 2.44e&#8209;02 |
+| Major coronary heart disease event                              | 361,194       | 10,157  | 2.44e&#8209;02 |
+| Non-cancer illness code, self-reported: angina                  | 361,141       | 11,370  | 4.53e&#8209;02 |
+| Eye problems/disorders: Glaucoma                                | 117,890       | 5,092   | 4.94e&#8209;02 |
 
 Table: Significant trait associations of LV136 in PhenomeXcan. {#tbl:sup:phenomexcan_assocs:lv136}
 <!-- LV136:phenomexcan_traits_assocs:end -->
 
 <!-- LV136:emerge_traits_assocs:start -->
-| Phecode   | Trait description            | Sample size   | Cases   | FDR            |
-|:----------|:-----------------------------|:--------------|:--------|:---------------|
-| 747.1     | Cardiac congenital anomalies | 59,198        | 1,871   | 1.57e&#8209;01 |
-| 411.4     | Coronary atherosclerosis     | 52,836        | 13,715  | 1.60e&#8209;01 |
+| Phecode   | Trait description        | Sample size   | Cases   | FDR            |
+|:----------|:-------------------------|:--------------|:--------|:---------------|
+| 411.4     | Coronary atherosclerosis | 52,836        | 13,715  | 1.42e&#8209;03 |
 
-Table: Trait associations of LV136 in eMERGE. {#tbl:sup:emerge_assocs:lv136}
+Table: Significant trait associations of LV136 in eMERGE. {#tbl:sup:emerge_assocs:lv136}
 <!-- LV136:emerge_traits_assocs:end -->
-
-
-#### LV93
-
-![
-**Cell types for LV93.**
-<!--  -->
-](images/lvs_analysis/lv93/lv93-cell_types.svg "Cell types for LV93"){#fig:sup:lv93 width="80%"}
-
-<!-- LV93:multiplier_pathways:start -->
-| Pathway                            | AUC   | FDR   |
-|:-----------------------------------|:------|:------|
-| No pathways significantly enriched |       |       |
-
-Table: Pathways aligned to LV93 from the MultiPLIER models. {#tbl:sup:multiplier_pathways:lv93}
-<!-- LV93:multiplier_pathways:end -->
-
-<!-- LV93:phenomexcan_traits_assocs:start -->
-| Trait description                          | Sample size   | Cases   | Partition / cluster   | FDR            |
-|:-------------------------------------------|:--------------|:--------|:----------------------|:---------------|
-| CH2DB NMR                                  | 24,154        |         | 29 / 16               | 5.91e&#8209;24 |
-| Reticulocyte Count                         | 173,480       |         | 29 / 4                | 1.33e&#8209;14 |
-| High light scatter reticulocyte count      | 344,729       |         | 29 / 4                | 2.52e&#8209;13 |
-| Reticulocyte count                         | 344,729       |         | 29 / 4                | 1.35e&#8209;12 |
-| Reticulocyte percentage                    | 344,728       |         | 29 / 4                | 4.93e&#8209;11 |
-| High light scatter reticulocyte percentage | 344,729       |         | 29 / 4                | 2.18e&#8209;10 |
-| Immature reticulocyte fraction             | 344,728       |         | 29 / 4                | 2.31e&#8209;08 |
-| Chronotype                                 | 128,266       |         | 29 / 16               | 9.73e&#8209;04 |
-| HDL Cholesterol NMR                        | 19,270        |         | 29 / 16               | 2.41e&#8209;03 |
-
-Table: Significant trait associations of LV93 in PhenomeXcan. {#tbl:sup:phenomexcan_assocs:lv93}
-<!-- LV93:phenomexcan_traits_assocs:end -->
-
-<!-- LV93:emerge_traits_assocs:start -->
-| Phecode   | Trait description                  | Sample size   | Cases   | FDR            |
-|:----------|:-----------------------------------|:--------------|:--------|:---------------|
-| 208       | Benign neoplasm of colon           | 55,694        | 8,597   | 1.39e&#8209;02 |
-| 440.2     | Atherosclerosis of the extremities | 45,524        | 3,046   | 2.87e&#8209;02 |
-
-Table: Significant trait associations of LV93 in eMERGE. {#tbl:sup:emerge_assocs:lv93}
-<!-- LV93:emerge_traits_assocs:end -->
-
-
-#### LV206
-
-![
-**Cell types for LV206.**
-<!--  -->
-](images/lvs_analysis/lv206/lv206-cell_types.svg "Cell types for LV206"){#fig:sup:lv206 width="80%"}
-
-<!-- LV206:multiplier_pathways:start -->
-| Pathway                            | AUC   | FDR   |
-|:-----------------------------------|:------|:------|
-| No pathways significantly enriched |       |       |
-
-Table: Pathways aligned to LV206 from the MultiPLIER models. {#tbl:sup:multiplier_pathways:lv206}
-<!-- LV206:multiplier_pathways:end -->
-
-<!-- LV206:phenomexcan_traits_assocs:start -->
-| Trait description   | Sample size   | Cases   | Partition / cluster   | FDR            |
-|:--------------------|:--------------|:--------|:----------------------|:---------------|
-| CH2DB NMR           | 24,154        |         | 29 / 16               | 5.04e&#8209;21 |
-| HDL Cholesterol NMR | 19,270        |         | 29 / 16               | 5.20e&#8209;03 |
-
-Table: Significant trait associations of LV206 in PhenomeXcan. {#tbl:sup:phenomexcan_assocs:lv206}
-<!-- LV206:phenomexcan_traits_assocs:end -->
-
-<!-- LV206:emerge_traits_assocs:start -->
-| Phecode   | Trait description            | Sample size   | Cases   | FDR            |
-|:----------|:-----------------------------|:--------------|:--------|:---------------|
-| 458       | Hypotension                  | 51,341        | 4,432   | 3.06e&#8209;02 |
-| 286.9     | Abnormal coagulation profile | 48,006        | 800     | 3.39e&#8209;02 |
-| 458.9     | Hypotension NOS              | 50,150        | 3,241   | 3.58e&#8209;02 |
-| 428.2     | Heart failure NOS            | 48,178        | 3,584   | 3.71e&#8209;02 |
-
-Table: Significant trait associations of LV206 in eMERGE. {#tbl:sup:emerge_assocs:lv206}
-<!-- LV206:emerge_traits_assocs:end -->
-
-
-#### LV260
-
-![
-**Cell types for LV260.**
-<!--  -->
-](images/lvs_analysis/lv260/lv260-cell_types.svg "Cell types for LV260"){#fig:sup:lv260 width="80%"}
-
-<!-- LV260:multiplier_pathways:start -->
-| Pathway                            | AUC   | FDR   |
-|:-----------------------------------|:------|:------|
-| No pathways significantly enriched |       |       |
-
-Table: Pathways aligned to LV260 from the MultiPLIER models. {#tbl:sup:multiplier_pathways:lv260}
-<!-- LV260:multiplier_pathways:end -->
-
-<!-- LV260:phenomexcan_traits_assocs:start -->
-| Trait description   | Sample size   | Cases   | Partition / cluster   | FDR            |
-|:--------------------|:--------------|:--------|:----------------------|:---------------|
-| CH2DB NMR           | 24,154        |         | 29 / 16               | 4.35e&#8209;17 |
-| HDL Cholesterol NMR | 19,270        |         | 29 / 16               | 1.88e&#8209;02 |
-
-Table: Significant trait associations of LV260 in PhenomeXcan. {#tbl:sup:phenomexcan_assocs:lv260}
-<!-- LV260:phenomexcan_traits_assocs:end -->
-
-<!-- LV260:emerge_traits_assocs:start -->
-| Phecode   | Trait description   | Sample size   | Cases   | FDR            |
-|:----------|:--------------------|:--------------|:--------|:---------------|
-| 427.6     | Premature beats     | 31,575        | 2,453   | 7.90e&#8209;02 |
-
-Table: Trait associations of LV260 in eMERGE. {#tbl:sup:emerge_assocs:lv260}
-<!-- LV260:emerge_traits_assocs:end -->
 
 
 #### LV21
@@ -2133,101 +1880,40 @@ Table: Pathways aligned to LV21 from the MultiPLIER models. {#tbl:sup:multiplier
 <!-- LV21:multiplier_pathways:end -->
 
 <!-- LV21:phenomexcan_traits_assocs:start -->
-| Trait description   | Sample size   | Cases   | Partition / cluster   | FDR            |
-|:--------------------|:--------------|:--------|:----------------------|:---------------|
-| Alzheimers Disease  | 54,162        | 17,008  | 29 / 16               | 1.11e&#8209;19 |
-| LDL Cholesterol NMR | 13,527        |         | 29 / 16               | 9.53e&#8209;05 |
-| Triglycerides NMR   | 21,559        |         | 29 / 16               | 1.74e&#8209;02 |
+| Trait description                                              | Sample size   | Cases   | FDR            |
+|:---------------------------------------------------------------|:--------------|:--------|:---------------|
+| LDL Cholesterol NMR                                            | 13,527        |         | 1.08e&#8209;12 |
+| HDL Cholesterol NMR                                            | 19,270        |         | 3.03e&#8209;11 |
+| Alzheimers Disease                                             | 54,162        | 17,008  | 1.96e&#8209;09 |
+| Triglycerides NMR                                              | 21,559        |         | 2.05e&#8209;09 |
+| Illnesses of mother: Alzheimer's disease/dementia              | 331,041       | 28,507  | 1.36e&#8209;08 |
+| Illnesses of father: Alzheimer's disease/dementia              | 312,666       | 15,022  | 3.15e&#8209;08 |
+| Illnesses of siblings: Alzheimer's disease/dementia            | 279,062       | 1,609   | 1.55e&#8209;07 |
+| Any dementia                                                   | 361,194       | 243     | 5.63e&#8209;07 |
+| Treatment/medication code: simvastatin                         | 361,141       | 40,921  | 2.88e&#8209;06 |
+| Cholesterol lowering medication                                | 193,148       | 24,247  | 4.45e&#8209;05 |
+| High cholesterol (self-reported)                               | 361,141       | 43,957  | 9.90e&#8209;05 |
+| Cholesterol lowering medication                                | 165,340       | 38,057  | 4.86e&#8209;04 |
+| Dementia                                                       | 361,194       | 157     | 9.80e&#8209;04 |
+| Alzheimer’s disease                                            | 361,194       | 119     | 1.33e&#8209;03 |
+| Mean reticulocyte volume                                       | 344,728       |         | 1.76e&#8209;03 |
+| Father's age at death                                          | 266,231       |         | 6.68e&#8209;03 |
+| Illnesses of mother: None of the above (group 1)               | 332,611       | 138,291 | 1.42e&#8209;02 |
+| ECG, phase time                                                | 53,998        |         | 1.60e&#8209;02 |
+| Treatment/medication code: atorvastatin                        | 361,141       | 10,805  | 2.92e&#8209;02 |
+| Mean sphered cell volume                                       | 344,729       |         | 3.33e&#8209;02 |
+| Non-cancer illness code, self-reported: cellulitis             | 361,141       | 232     | 3.40e&#8209;02 |
+| Medication for cholesterol, blood pressure or diabetes (males) | 165,340       | 110,372 | 3.66e&#8209;02 |
+| Mother still alive                                             | 355,029       | 140,246 | 4.96e&#8209;02 |
 
 Table: Significant trait associations of LV21 in PhenomeXcan. {#tbl:sup:phenomexcan_assocs:lv21}
 <!-- LV21:phenomexcan_traits_assocs:end -->
 
 <!-- LV21:emerge_traits_assocs:start -->
-| Phecode   | Trait description        | Sample size   | Cases   | FDR            |
-|:----------|:-------------------------|:--------------|:--------|:---------------|
-| 573       | Other disorders of liver | 47,826        | 2,524   | 2.99e&#8209;02 |
-| 577       | Diseases of pancreas     | 60,538        | 1,795   | 5.51e&#8209;02 |
+| Phecode   | Trait description              | Sample size   | Cases   | FDR            |
+|:----------|:-------------------------------|:--------------|:--------|:---------------|
+| 272.1     | Hyperlipidemia                 | 55,843        | 29,195  | 4.22e&#8209;03 |
+| 272       | Disorders of lipoid metabolism | 55,892        | 29,244  | 4.50e&#8209;03 |
 
-Table: Trait associations of LV21 in eMERGE. {#tbl:sup:emerge_assocs:lv21}
+Table: Significant trait associations of LV21 in eMERGE. {#tbl:sup:emerge_assocs:lv21}
 <!-- LV21:emerge_traits_assocs:end -->
-
-
-#### LV5
-
-![
-**Cell types for LV5.**
-<!--  -->
-](images/lvs_analysis/lv5/lv5-cell_types.svg "Cell types for LV5"){#fig:sup:lv5 width="80%"}
-
-<!-- LV5:multiplier_pathways:start -->
-| Pathway                            | AUC   | FDR   |
-|:-----------------------------------|:------|:------|
-| No pathways significantly enriched |       |       |
-
-Table: Pathways aligned to LV5 from the MultiPLIER models. {#tbl:sup:multiplier_pathways:lv5}
-<!-- LV5:multiplier_pathways:end -->
-
-<!-- LV5:phenomexcan_traits_assocs:start -->
-| Trait description                                             | Sample size   | Cases   | Partition / cluster   | FDR            |
-|:--------------------------------------------------------------|:--------------|:--------|:----------------------|:---------------|
-| LDL Cholesterol NMR                                           | 13,527        |         | 29 / 16               | 1.44e&#8209;04 |
-| Triglycerides NMR                                             | 21,559        |         | 29 / 16               | 4.03e&#8209;04 |
-| Alzheimers Disease                                            | 54,162        | 17,008  | 29 / 16               | 2.47e&#8209;03 |
-| Ever had prolonged feelings of sadness or depression          | 117,763       | 64,374  | 29 / 27               | 6.92e&#8209;03 |
-| Medication for depression                                     | 117,763       | 28,351  | 29 / 27               | 8.24e&#8209;03 |
-| Recent feelings of depression                                 | 117,656       |         | 29 / 27               | 1.05e&#8209;02 |
-| Ever contemplated self-harm                                   | 117,610       |         | 29 / 27               | 1.50e&#8209;02 |
-| Recent lack of interest or pleasure in doing things           | 117,757       |         | 29 / 27               | 1.65e&#8209;02 |
-| Amount of alcohol drunk on a typical drinking day             | 108,256       |         | 29 / 27               | 2.77e&#8209;02 |
-| Ever sought or received professional help for mental distress | 117,677       | 46,020  | 29 / 27               | 3.08e&#8209;02 |
-| General happiness                                             | 117,442       |         | 29 / 27               | 3.73e&#8209;02 |
-| Depression (diagnosed by a professional)                      | 117,782       | 25,087  | 29 / 27               | 4.03e&#8209;02 |
-
-Table: Significant trait associations of LV5 in PhenomeXcan. {#tbl:sup:phenomexcan_assocs:lv5}
-<!-- LV5:phenomexcan_traits_assocs:end -->
-
-<!-- LV5:emerge_traits_assocs:start -->
-| Phecode   | Trait description          | Sample size   | Cases   | FDR            |
-|:----------|:---------------------------|:--------------|:--------|:---------------|
-| 241       | Nontoxic nodular goiter    | 47,842        | 3,158   | 1.92e&#8209;02 |
-| 241.1     | Nontoxic uninodular goiter | 47,125        | 2,441   | 6.84e&#8209;02 |
-
-Table: Trait associations of LV5 in eMERGE. {#tbl:sup:emerge_assocs:lv5}
-<!-- LV5:emerge_traits_assocs:end -->
-
-
-#### LV434
-
-![
-**Cell types for LV434.**
-HEK293 is a cell line derived from human embryonic kidney cells;
-3T3 is a cell line derived from mouse embryonic fibroblasts.
-](images/lvs_analysis/lv434/lv434-cell_types.svg "Cell types for LV434"){#fig:sup:lv434 width="80%"}
-
-<!-- LV434:multiplier_pathways:start -->
-| Pathway                            | AUC   | FDR   |
-|:-----------------------------------|:------|:------|
-| No pathways significantly enriched |       |       |
-
-Table: Pathways aligned to LV434 from the MultiPLIER models. {#tbl:sup:multiplier_pathways:lv434}
-<!-- LV434:multiplier_pathways:end -->
-
-<!-- LV434:phenomexcan_traits_assocs:start -->
-| Trait description                        | Sample size   | Cases   | Partition / cluster   | FDR            |
-|:-----------------------------------------|:--------------|:--------|:----------------------|:---------------|
-| Attention Deficit Hyperactivity Disorder | 53,293        | 19,099  | 29 / 21               | 5.62e&#8209;03 |
-
-Table: Significant trait associations of LV434 in PhenomeXcan. {#tbl:sup:phenomexcan_assocs:lv434}
-<!-- LV434:phenomexcan_traits_assocs:end -->
-
-<!-- LV434:emerge_traits_assocs:start -->
-| Phecode   | Trait description                | Sample size   | Cases   | FDR            |
-|:----------|:---------------------------------|:--------------|:--------|:---------------|
-| 722       | Intervertebral disc disorders    | 47,659        | 7,458   | 1.44e&#8209;02 |
-| 721       | Spondylosis and allied disorders | 47,517        | 7,316   | 1.64e&#8209;02 |
-| 250.4     | Abnormal glucose                 | 45,220        | 4,947   | 2.23e&#8209;02 |
-| 721.1     | Spondylosis without myelopathy   | 47,315        | 7,114   | 2.66e&#8209;02 |
-| 720       | Spinal stenosis                  | 44,807        | 4,606   | 3.99e&#8209;02 |
-
-Table: Significant trait associations of LV434 in eMERGE. {#tbl:sup:emerge_assocs:lv434}
-<!-- LV434:emerge_traits_assocs:end -->
