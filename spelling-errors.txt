@@ -106,7 +106,7 @@ fibroblasts
 func
 GBMF
 gDNA
-genomic
+Genomic
 GenomicSuperSignature
 genotype
 GFP
@@ -140,7 +140,7 @@ Hochberg
 HSV
 HTN
 HWE
-hypercholesterolemia
+Hypercholesterolemia
 Hyperlipidemia
 hypoxia
 IBD
@@ -149,7 +149,7 @@ ICD
 IDT
 IFNa
 Iftikhar
-Illumina
+illumina
 INSIG
 INTEGRIN
 interpretability
@@ -184,7 +184,7 @@ loadings
 LPL
 LPSstimulated
 Luo
-LV
+lv
 LVs
 MAF
 malabsorption
@@ -219,7 +219,7 @@ Nephrology
 neurodegenerative
 neurodevelopmental
 neuropsychiatric
-neutrophil
+Neutrophil
 neutrophils
 NFAT
 nicotinic
@@ -246,7 +246,7 @@ PID
 Pividori
 plasmids
 pleiotropy
-plier
+PLIER
 polybrene
 polygenic
 Polymerase
@@ -286,7 +286,7 @@ revascularizations
 rheumatica
 Ritchie
 RO
-ROC
+roc
 rosuvastatin
 Salm
 SCAP
