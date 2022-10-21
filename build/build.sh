@@ -78,7 +78,7 @@ if [ "${BUILD_PDF}" != "false" ] && [ "${MANUBOT_USE_DOCKER}" == "true" ]; then
     --security-opt=seccomp:unconfined \
     arachnysdocker/athenapdf:2.16.0 \
     athenapdf \
-    --delay=${MANUBOT_ATHENAPDF_DELAY:-1100} \
+    --delay=${MANUBOT_ATHENAPDF_DELAY:-5000} \
     --pagesize=A4 \
     manuscript.html manuscript.pdf
   rm -rf output/images
