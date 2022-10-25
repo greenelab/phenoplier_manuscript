@@ -6,7 +6,7 @@ keywords:
 - PhenomeXcan
 - TWAS
 lang: en-US
-date-meta: '2022-09-20'
+date-meta: '2022-10-25'
 author-meta:
 - Milton Pividori
 - Sumei Lu
@@ -35,8 +35,8 @@ header-includes: |-
   <meta name="citation_title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="og:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
-  <meta name="dc.date" content="2022-09-20" />
-  <meta name="citation_publication_date" content="2022-09-20" />
+  <meta name="dc.date" content="2022-10-25" />
+  <meta name="citation_publication_date" content="2022-10-25" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -90,8 +90,10 @@ header-includes: |-
   <meta name="twitter:creator" content="@MarylynRitchie" />
   <meta name="citation_author" content="Struan F.A. Grant" />
   <meta name="citation_author_institution" content="Center for Spatial and Functional Genomics, Children&#39;s Hospital of Philadelphia, Philadelphia, PA, 19104, USA" />
-  <meta name="citation_author_institution" content="Department of Pediatrics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA" />
+  <meta name="citation_author_institution" content="Division of Endocrinology and Diabetes, Children&#39;s Hospital of Philadelphia, Philadelphia, PA, 19104, USA" />
   <meta name="citation_author_institution" content="Division of Human Genetics, Children&#39;s Hospital of Philadelphia, Philadelphia, PA, 19104, USA" />
+  <meta name="citation_author_institution" content="Department of Pediatrics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA" />
+  <meta name="citation_author_institution" content="Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA" />
   <meta name="citation_author_orcid" content="0000-0003-2025-5302" />
   <meta name="twitter:creator" content="@STRUANGRANT" />
   <meta name="citation_author" content="Casey S. Greene" />
@@ -105,9 +107,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/3bdcdc7790a9bc333880d73484c9df41e0d055f8/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/3bdcdc7790a9bc333880d73484c9df41e0d055f8/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/3bdcdc7790a9bc333880d73484c9df41e0d055f8/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/36d49118010477859f522d49e4df5a77a690d16a/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/36d49118010477859f522d49e4df5a77a690d16a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/36d49118010477859f522d49e4df5a77a690d16a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -134,10 +136,10 @@ Text in <span style="color: red">red</span>/<span class="red">red</span> are int
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/3bdcdc7790a9bc333880d73484c9df41e0d055f8/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/36d49118010477859f522d49e4df5a77a690d16a/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@3bdcdc7](https://github.com/greenelab/phenoplier_manuscript/tree/3bdcdc7790a9bc333880d73484c9df41e0d055f8)
-on September 20, 2022.
+from [greenelab/phenoplier_manuscript@36d4911](https://github.com/greenelab/phenoplier_manuscript/tree/36d49118010477859f522d49e4df5a77a690d16a)
+on October 25, 2022.
 </em></small>
 
 ## Authors
@@ -151,14 +153,15 @@ on September 20, 2022.
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [miltondp](https://github.com/miltondp)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
-    [miltondp](https://twitter.com/miltondp)<br>
+    [miltondp](https://twitter.com/miltondp)
+    <br>
   <small>
      Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
      · Funded by The Gordon and Betty Moore Foundation GBMF 4552; The National Human Genome Research Institute (R01 HG010067); The National Human Genome Research Institute (K99HG011898)
   </small>
 
 + **Sumei Lu**
-  <br><br>
+  <br>
   <small>
      Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
   </small>
@@ -166,7 +169,8 @@ on September 20, 2022.
 + **Binglan Li**
   <br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
-    [0000-0002-0103-6107](https://orcid.org/0000-0002-0103-6107)<br>
+    [0000-0002-0103-6107](https://orcid.org/0000-0002-0103-6107)
+    <br>
   <small>
      Department of Biomedical Data Science, Stanford University, Stanford, CA, USA
   </small>
@@ -176,19 +180,20 @@ on September 20, 2022.
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0001-6388-8666](https://orcid.org/0000-0001-6388-8666)
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
-    [sckinta](https://github.com/sckinta)<br>
+    [sckinta](https://github.com/sckinta)
+    <br>
   <small>
      Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
   </small>
 
 + **Matthew E. Johnson**
-  <br><br>
+  <br>
   <small>
      Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
   </small>
 
 + **Wei-Qi Wei**
-  <br><br>
+  <br>
   <small>
      Vanderbilt University Medical Center
   </small>
@@ -196,13 +201,14 @@ on September 20, 2022.
 + **Qiping Feng**
   <br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
-    [0000-0002-6213-793X](https://orcid.org/0000-0002-6213-793X)<br>
+    [0000-0002-6213-793X](https://orcid.org/0000-0002-6213-793X)
+    <br>
   <small>
      Vanderbilt University Medical Center
   </small>
 
 + **Bahram Namjou**
-  <br><br>
+  <br>
   <small>
      Cincinnati Children's Hospital Medical Center
   </small>
@@ -212,25 +218,26 @@ on September 20, 2022.
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0002-5047-6715](https://orcid.org/0000-0002-5047-6715)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
-    [kirylukk](https://twitter.com/kirylukk)<br>
+    [kirylukk](https://twitter.com/kirylukk)
+    <br>
   <small>
      Department of Medicine, Division of Nephrology, Vagelos College of Physicians & Surgeons, Columbia University, New York, New York
   </small>
 
 + **Iftikhar Kullo**
-  <br><br>
+  <br>
   <small>
      Mayo Clinic
   </small>
 
 + **Yuan Luo**
-  <br><br>
+  <br>
   <small>
      Northwestern University
   </small>
 
 + **Blair D. Sullivan**
-  <br><br>
+  <br>
   <small>
      School of Computing, University of Utah, Salt Lake City, UT, USA
   </small>
@@ -242,7 +249,8 @@ on September 20, 2022.
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [bvoight](https://github.com/bvoight)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
-    [bvoight28](https://twitter.com/bvoight28)<br>
+    [bvoight28](https://twitter.com/bvoight28)
+    <br>
   <small>
      Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA; Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA; Institute for Translational Medicine and Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
   </small>
@@ -252,7 +260,8 @@ on September 20, 2022.
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0001-5145-3681](https://orcid.org/0000-0001-5145-3681)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
-    [CarstenSkarke](https://twitter.com/CarstenSkarke)<br>
+    [CarstenSkarke](https://twitter.com/CarstenSkarke)
+    <br>
   <small>
      Institute for Translational Medicine and Therapeutics, Department of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
   </small>
@@ -262,7 +271,8 @@ on September 20, 2022.
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0002-1208-1720](https://orcid.org/0000-0002-1208-1720)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
-    [MarylynRitchie](https://twitter.com/MarylynRitchie)<br>
+    [MarylynRitchie](https://twitter.com/MarylynRitchie)
+    <br>
   <small>
      Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
   </small>
@@ -272,9 +282,10 @@ on September 20, 2022.
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0003-2025-5302](https://orcid.org/0000-0003-2025-5302)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
-    [STRUANGRANT](https://twitter.com/STRUANGRANT)<br>
+    [STRUANGRANT](https://twitter.com/STRUANGRANT)
+    <br>
   <small>
-     Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA; Department of Pediatrics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA; Division of Human Genetics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
+     Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA; Division of Endocrinology and Diabetes, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA; Division of Human Genetics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA; Department of Pediatrics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA; Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA
   </small>
 
 + **Casey S. Greene**
@@ -284,7 +295,8 @@ on September 20, 2022.
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [cgreene](https://github.com/cgreene)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
-    [GreeneScientist](https://twitter.com/GreeneScientist)<br>
+    [GreeneScientist](https://twitter.com/GreeneScientist)
+    <br>
   <small>
      Center for Health AI, University of Colorado School of Medicine, Aurora, CO 80045, USA; Department of Biomedical Informatics, University of Colorado School of Medicine, Aurora, CO 80045, USA
      · Funded by The Gordon and Betty Moore Foundation (GBMF 4552); The National Human Genome Research Institute (R01 HG010067); The National Cancer Institute (R01 CA237170)
@@ -305,7 +317,7 @@ Casey S. Greene \<casey.s.greene@cuanschutz.edu\>.
 Genes act in concert with each other in specific contexts to perform their functions.
 Determining how these genes influence complex traits requires a mechanistic understanding of expression regulation across different conditions.
 It has been shown that this insight is critical for developing new therapies.
-In this regard, the mechanism of individual genes can be identified with transcriptome-wide association studies (TWAS), which have represented a significant step forward in testing the mediating role of gene expression in GWAS associations.
+In this regard, the role of individual genes in disease-relevant mechanisms can be hypothesized with transcriptome-wide association studies (TWAS), which have represented a significant step forward in testing the mediating role of gene expression in GWAS associations.
 However, modern models of the architecture of complex traits predict that gene-gene interactions play a crucial role in disease origin and progression.
 Here we introduce PhenoPLIER, a computational approach that maps gene-trait associations and pharmacological perturbation data into a common latent representation for a joint analysis.
 This representation is based on modules of genes with similar expression patterns across the same conditions.
@@ -328,13 +340,13 @@ TWAS relies on testing whether perturbations in gene regulatory mechanisms media
 However, TWAS works at the individual gene level, which does not capture more complex interactions at the network level.
 
 
-These gene-gene interactions play a crucial role in current theories of the architecture of complex traits, such as the omnigenic model [@doi:10.1016/j.cell.2017.05.038], which suggests that disease-relevant mechanisms are hard to disentangle.
+These gene-gene interactions play a crucial role in current theories of the architecture of complex traits, such as the omnigenic model [@doi:10.1016/j.cell.2017.05.038], which suggests that methods need to incorporate this complexity to disentangle disease-relevant mechanisms.
 Widespread gene pleiotropy, for instance, reveals the highly interconnected nature of transcriptional networks [@doi:10.1038/s41588-019-0481-0; @doi:10.1038/ng.3570], where potentially all genes expressed in disease-relevant cell types have a non-zero effect on the trait [@doi:10.1016/j.cell.2017.05.038; @doi:10.1016/j.cell.2019.04.014].
+One way to learn these gene-gene interactions is using the concept of gene module: a group of genes with similar expression profiles across different conditions [@pmid:22955619; @pmid:25344726; @doi:10.1038/ng.3259].
 In this context, several unsupervised approaches have been proposed to infer these gene-gene connections by extracting gene modules from co-expression patterns [@pmid:9843981; @pmid:24662387; @pmid:16333293].
-A gene module, defined as a group of genes with similar expression profiles across different conditions, can capture part of the complexity present in transcriptional programs [@pmid:22955619].
-Modules often suggest shared function and have helped understand disease etiology [@pmid:25344726; @doi:10.1038/ng.3259].
-Clustering, for instance, is among the most popular methods [@pmid:28915372; @pmid:23467089], although it can miss patterns only present in a subset of conditions and usually cannot assign a gene to multiple modules.
-On the other hand, matrix factorization techniques like independent or principal component analysis (ICA/PCA) have shown superior performance in this task [@doi:10.1038/s41467-018-03424-4] since they capture local expression effects from a subset of samples and can handle modules overlap effectively.
+<!-- A gene module, defined as a group of genes with similar expression profiles across different conditions, can capture part of the complexity present in transcriptional programs to aid in the understanding of disease etiology [@pmid:22955619; @pmid:25344726; @doi:10.1038/ng.3259]. -->
+<!-- Clustering, for instance, is among the most popular methods [@pmid:28915372; @pmid:23467089], although it can miss patterns only present in a subset of conditions and usually cannot assign a gene to multiple modules. -->
+Matrix factorization techniques like independent or principal component analysis (ICA/PCA) have shown superior performance in this task [@doi:10.1038/s41467-018-03424-4] since they capture local expression effects from a subset of samples and can handle modules overlap effectively.
 Therefore, integrating genetic studies with gene modules extracted using unsupervised learning could further improve our understanding of disease origin [@pmid:25344726] and progression [@pmid:18631455].
 
 
@@ -377,7 +389,7 @@ Air pollution linked to neurodegeneration markers
 **a)** High-level schematic of PhenoPLIER (a gene module-based method) in the context of TWAS (single-gene) and GWAS (genetic variants).
 PhenoPLIER integrates groups of genes co-expressed in specific cell types (gene modules) with gene-trait and gene-drug associations.
 **b)** The integration consists of projecting gene-trait/gene-drug associations from PhenomeXcan/LINCS L1000 (bottom) to a latent space based on gene modules (represented by latent variables/LVs) from MultiPLIER (top).
-This process generates matrices $\mathbf{\hat{L}}$ and $\mathbf{\hat{M}}$, where LVs now describe each trait/drug.
+This process generates matrices $\mathbf{\hat{L}}$ and $\mathbf{\hat{M}}$, where LVs now describe each drug/trait.
 In the middle, we show the three main computational components provided by PhenoPLIER to perform this integration:
 1) an LV-based regression model,
 2) a clustering framework to learn groups of traits,
@@ -467,7 +479,7 @@ RCP: locus regional colocalization probability.
 Next, we analyzed all 987 LVs using Fast Gene Set Enrichment Analysis (FGSEA) [@doi:10.1101/060012], and found 15 LVs nominally enriched (unadjusted *P* < 0.01) with these lipid-altering gene-sets (Supplementary Tables @tbl:sup:lipids_crispr:modules_enriched_increase and @tbl:sup:lipids_crispr:modules_enriched_decrease).
 Among those with reliable sample metadata, LV246, the top LV associated with the lipids-increasing gene-set, contained genes mainly co-expressed in adipose tissue (Figure {@fig:lv246}a), which plays a key role in coordinating and regulating lipid metabolism.
 Using our regression framework across all traits in PhenomeXcan, we found that gene weights for this LV were predictive of gene associations for plasma lipids, high cholesterol, and Alzheimer's disease (Supplementary Table @tbl:sup:phenomexcan_assocs:lv246, FDR < 1e-23).
-These lipids-related associations also replicated across the 309 traits in eMERGE (Supplementary Table @tbl:sup:emerge_assocs:lv246), where LV246 was significantly associated hypercholesterolemia (phecode: 272.11, FDR < 4e-9), hyperlipidemia (phecode: 272.1, FDR < 4e-7) and disorders of lipoid metabolism (phecode: 272, FDR < 4e-7).
+These lipids-related associations also replicated across the 309 traits in eMERGE (Supplementary Table @tbl:sup:emerge_assocs:lv246), where LV246 was significantly associated with hypercholesterolemia (phecode: 272.11, FDR < 4e-9), hyperlipidemia (phecode: 272.1, FDR < 4e-7) and disorders of lipoid metabolism (phecode: 272, FDR < 4e-7).
 
 
 Two high-confidence genes from our CRISPR screening, *DGAT2* and *ACACA*, are responsible for encoding enzymes for triglycerides and fatty acid synthesis and were among the highest-weighted genes of LV246 (Figure {@fig:lv246}b, in boldface).
@@ -745,7 +757,7 @@ Finally, we developed an LV-based regression framework to detect whether gene mo
 We used PhenomeXcan as a discovery cohort across four thousand traits, and many LV-trait associations replicated in eMERGE.
 In PhenomeXcan, we found 3,450 significant LV-trait associations (FDR < 0.05) with 686 LVs (out of 987) associated with at least one trait and 1,176 traits associated with at least one LV.
 In eMERGE, we found 196 significant LV-trait associations, with 116 LVs associated with at least one trait/phecode and 81 traits with at least one LV.
-We only focused on a few disease types from our trait clusters, but the complete set of associations on other disease domains is available for future research.
+We only focused on a few disease types from our trait clusters, but the complete set of associations on other disease domains is available in our [Github repository](https://github.com/greenelab/phenoplier) for future research.
 As noted in [Methods](#sec:methods:reg), one limitation of the regression approach is that the gene-gene correlations are only approximately accurate, which could lead to false positives if the correlation among the top genes in a module is not precisely captured.
 The regression model, however, is approximately well-calibrated, and we did not observe inflation when running the method in real data.
 
@@ -866,7 +878,7 @@ We used S-MultiXcan results for our LV-based regression model and our cluster an
 
 ### TWAS resources {#sec:methods:twas}
 
-We used two large TWAS resources from different cohorts for discovery and replication.
+We used two large TWAS resources from different cohorts for discovery and replication, all obtained from European ancestries.
 <!--  -->
 PhenomeXcan [@doi:10.1126/sciadv.aba2083], our discovery cohort, provides results on 4,091 traits across different categories.
 Supplemenetary File 1 has all the details about the included GWAS, sample size and disease/trait categories.
@@ -1020,7 +1032,10 @@ We adjusted the $p$-values using the Benjamini-Hochberg procedure.
 
 For the drug-disease prediction, we derived an LV-based method based on a drug repositioning framework previously used for psychiatry traits [@doi:10.1038/nn.4618], where individual/single genes associated with a trait are anticorrelated with expression profiles for drugs.
 We compared our LV-based method with this previously published, single-gene approach.
-For the single-gene method, we computed a drug-disease score by multiplying each S-PrediXcan set of results in tissue $t$, $\mathbf{M}^t$, with the transcriptional responses profiled in LINCS L1000 [@doi:10.1016/j.cell.2017.10.049], $\mathbf{L}^{c \times m}$ (for $c$ compounds): $\mathbf{D}^{t,k}=-1 \cdot \mathbf{M}^{t,k} \mathbf{L}^\top$, where $k$ refers to the number of most significant gene associations in $\mathbf{M}^t$ for each trait.
+For the single-gene method, we computed a drug-disease score by multiplying each S-PrediXcan set of signed $z$-scores in tissue $t$, $\mathbf{M}^t$, with another set of signed $z$-scores from transcriptional responses profiled in LINCS L1000 [@doi:10.1016/j.cell.2017.10.049], $\mathbf{L}^{c \times m}$ (for $c$ compounds).
+Here $\mathbf{M}^t$ contains information about whether a higher or lower predicted expression of a gene is associated with disease risk, whereas $\mathbf{L}$ indicates whether a drug increases or decreases the expression of a gene.
+Therefore, these two matrices can be multiplied to compute a score for a drug-disease pair.
+The result of this product is $\mathbf{D}^{t,k}=-1 \cdot \mathbf{M}^{t,k} \mathbf{L}^\top$, where $k$ refers to the number of most significant gene associations in $\mathbf{M}^t$ for each trait.
 As suggested in [@doi:10.1038/nn.4618], $k$ could be either all genes or the top 50, 100, 250, and 500; then, we averaged score ranks across all $k$ and obtained $\mathbf{D}^t$.
 Finally, for each drug-disease pair, we took the maximum prediction score across all tissues: $\mathbf{D}_{ij} = \max \{ \mathbf{D}_{ij}^t \mid \forall t \}$.
 
@@ -1185,10 +1200,10 @@ The code and data to reproduce all the analyses in this work are available in [h
 
 ## Acknowledgements
 
-Figure 1 was created with BioRender.com.
+Figure {@fig:entire_process}a was created with BioRender.com.
 
 
-## Supplementary material
+## Supplementary material {.page_break_before}
 
 ### Regression model for LV-trait associations
 

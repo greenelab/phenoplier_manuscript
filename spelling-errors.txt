@@ -55,7 +55,7 @@ confluency
 covariances
 covariate
 covariates
-CRISPR
+crispr
 crit
 Crohns
 Ctrl
@@ -106,9 +106,9 @@ fibroblasts
 func
 GBMF
 gDNA
-Genomic
+genomic
 GenomicSuperSignature
-genotype
+Genotype
 GFP
 Gibco
 GLS
@@ -141,7 +141,7 @@ HSV
 HTN
 HWE
 Hypercholesterolemia
-Hyperlipidemia
+hyperlipidemia
 hypoxia
 IBD
 ICA
@@ -185,7 +185,7 @@ LPL
 LPSstimulated
 Luo
 lv
-LVs
+lvs
 MAF
 malabsorption
 Marylyn
@@ -219,8 +219,8 @@ Nephrology
 neurodegenerative
 neurodevelopmental
 neuropsychiatric
-Neutrophil
-neutrophils
+neutrophil
+Neutrophils
 NFAT
 nicotinic
 NMR
@@ -236,7 +236,7 @@ PCA
 PCR
 PCYT
 perturbagens
-Phecode
+phecode
 phecodes
 phenomexcan
 PhenoPLIER
@@ -280,13 +280,13 @@ repurposing
 resampled
 restimulated
 resuspended
-reticulocyte
+Reticulocyte
 reticulocytes
 revascularizations
 rheumatica
 Ritchie
 RO
-roc
+ROC
 rosuvastatin
 Salm
 SCAP
