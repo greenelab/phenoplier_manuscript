@@ -6,7 +6,7 @@ keywords:
 - PhenomeXcan
 - TWAS
 lang: en-US
-date-meta: '2022-10-25'
+date-meta: '2022-11-28'
 author-meta:
 - Milton Pividori
 - Sumei Lu
@@ -35,8 +35,8 @@ header-includes: |-
   <meta name="citation_title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="og:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
-  <meta name="dc.date" content="2022-10-25" />
-  <meta name="citation_publication_date" content="2022-10-25" />
+  <meta name="dc.date" content="2022-11-28" />
+  <meta name="citation_publication_date" content="2022-11-28" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -107,9 +107,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/36d49118010477859f522d49e4df5a77a690d16a/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/36d49118010477859f522d49e4df5a77a690d16a/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/36d49118010477859f522d49e4df5a77a690d16a/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/d9edb51093d5dfbf0e5099484d8d167bacd51f14/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/d9edb51093d5dfbf0e5099484d8d167bacd51f14/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/d9edb51093d5dfbf0e5099484d8d167bacd51f14/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -126,21 +126,16 @@ manubot-clear-requests-cache: false
 
 
 
-<!--  -->
+_A DOI-citable version of this manuscript is available at <https://doi.org/10.1101/2021.07.05.450786>_.
 
-<!-- [
-<i class="fas fa-info-circle fa-lg"></i> **Draft manuscript**<br>
-Text in <span style="color: red">red</span>/<span class="red">red</span> are internal comments
-]{.banner .lightblue} -->
-
-
+<!-- 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/36d49118010477859f522d49e4df5a77a690d16a/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/d9edb51093d5dfbf0e5099484d8d167bacd51f14/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@36d4911](https://github.com/greenelab/phenoplier_manuscript/tree/36d49118010477859f522d49e4df5a77a690d16a)
-on October 25, 2022.
-</em></small>
+from [greenelab/phenoplier_manuscript@d9edb51](https://github.com/greenelab/phenoplier_manuscript/tree/d9edb51093d5dfbf0e5099484d8d167bacd51f14)
+on November 28, 2022.
+</em></small> -->
 
 ## Authors
 

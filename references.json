@@ -3324,7 +3324,7 @@
   {
     "publisher": "Springer Science and Business Media LLC",
     "issue": "7820",
-    "abstract": "<jats:title>Abstract</jats:title><jats:p>DNase I hypersensitive sites (DHSs) are generic markers of regulatory DNA<jats:sup>1–5</jats:sup> and contain genetic variations associated with diseases and phenotypic traits<jats:sup>6–8</jats:sup>. We created high-resolution maps of DHSs from 733 human biosamples encompassing 438 cell and tissue types and states, and integrated these to delineate and numerically index approximately 3.6 million DHSs within the human genome sequence, providing a common coordinate system for regulatory DNA. Here we show that these maps highly resolve the <jats:italic>cis</jats:italic>-regulatory compartment of the human genome, which encodes unexpectedly diverse cell- and tissue-selective regulatory programs at very high density. These programs can be captured comprehensively by a simple vocabulary that enables the assignment to each DHS of a regulatory barcode that encapsulates its tissue manifestations, and global annotation of protein-coding and non-coding RNA genes in a manner orthogonal to gene expression. Finally, we show that sharply resolved DHSs markedly enhance the genetic association and heritability signals of diseases and traits. Rather than being confined to a small number of distal elements or promoters, we find that genetic signals converge on congruently regulated sets of DHSs that decorate entire gene bodies. Together, our results create a universal, extensible coordinate system and vocabulary for human regulatory DNA marked by DHSs, and provide a new global perspective on the architecture of human gene regulation.</jats:p>",
+    "abstract": "<jats:title>Abstract</jats:title><jats:p>DNase I hypersensitive sites (DHSs) are generic markers of regulatory DNA<jats:sup>1–5</jats:sup>and contain genetic variations associated with diseases and phenotypic traits<jats:sup>6–8</jats:sup>. We created high-resolution maps of DHSs from 733 human biosamples encompassing 438 cell and tissue types and states, and integrated these to delineate and numerically index approximately 3.6 million DHSs within the human genome sequence, providing a common coordinate system for regulatory DNA. Here we show that these maps highly resolve the<jats:italic>cis</jats:italic>-regulatory compartment of the human genome, which encodes unexpectedly diverse cell- and tissue-selective regulatory programs at very high density. These programs can be captured comprehensively by a simple vocabulary that enables the assignment to each DHS of a regulatory barcode that encapsulates its tissue manifestations, and global annotation of protein-coding and non-coding RNA genes in a manner orthogonal to gene expression. Finally, we show that sharply resolved DHSs markedly enhance the genetic association and heritability signals of diseases and traits. Rather than being confined to a small number of distal elements or promoters, we find that genetic signals converge on congruently regulated sets of DHSs that decorate entire gene bodies. Together, our results create a universal, extensible coordinate system and vocabulary for human regulatory DNA marked by DHSs, and provide a new global perspective on the architecture of human gene regulation.</jats:p>",
     "DOI": "10.1038/s41586-020-2559-3",
     "type": "article-journal",
     "page": "244-251",
@@ -5035,7 +5035,7 @@
   {
     "publisher": "American Association for the Advancement of Science (AAAS)",
     "issue": "6509",
-    "abstract": "<jats:p>The Genotype-Tissue Expression (GTEx) project was established to characterize genetic effects on the transcriptome across human tissues and to link these regulatory mechanisms to trait and disease associations. Here, we present analyses of the version 8 data, examining 15,201 RNA-sequencing samples from 49 tissues of 838 postmortem donors. We comprehensively characterize genetic associations for gene expression and splicing in cis and trans, showing that regulatory associations are found for almost all genes, and describe the underlying molecular mechanisms and their contribution to allelic heterogeneity and pleiotropy of complex traits. Leveraging the large diversity of tissues, we provide insights into the tissue specificity of genetic effects and show that cell type composition is a key factor in understanding gene regulatory mechanisms in human tissues.</jats:p>",
+    "abstract": "<jats:p>The Genotype-Tissue Expression (GTEx) project dissects how genetic variation affects gene expression and splicing.</jats:p>",
     "DOI": "10.1126/science.aaz1776",
     "type": "article-journal",
     "page": "1318-1330",
@@ -5043,7 +5043,695 @@
     "title": "The GTEx Consortium atlas of genetic regulatory effects across human tissues",
     "volume": "369",
     "author": [
-      {}
+      {},
+      {
+        "given": "François",
+        "family": "Aguet"
+      },
+      {
+        "given": "Shankara",
+        "family": "Anand"
+      },
+      {
+        "given": "Kristin G.",
+        "family": "Ardlie"
+      },
+      {
+        "given": "Stacey",
+        "family": "Gabriel"
+      },
+      {
+        "given": "Gad A.",
+        "family": "Getz"
+      },
+      {
+        "given": "Aaron",
+        "family": "Graubert"
+      },
+      {
+        "given": "Kane",
+        "family": "Hadley"
+      },
+      {
+        "given": "Robert E.",
+        "family": "Handsaker"
+      },
+      {
+        "given": "Katherine H.",
+        "family": "Huang"
+      },
+      {
+        "given": "Seva",
+        "family": "Kashin"
+      },
+      {
+        "given": "Xiao",
+        "family": "Li"
+      },
+      {
+        "given": "Daniel G.",
+        "family": "MacArthur"
+      },
+      {
+        "given": "Samuel R.",
+        "family": "Meier"
+      },
+      {
+        "given": "Jared L.",
+        "family": "Nedzel"
+      },
+      {
+        "given": "Duyen T.",
+        "family": "Nguyen"
+      },
+      {
+        "given": "Ayellet V.",
+        "family": "Segrè"
+      },
+      {
+        "given": "Ellen",
+        "family": "Todres"
+      },
+      {
+        "given": "Brunilda",
+        "family": "Balliu"
+      },
+      {
+        "given": "Alvaro N.",
+        "family": "Barbeira"
+      },
+      {
+        "given": "Alexis",
+        "family": "Battle"
+      },
+      {
+        "given": "Rodrigo",
+        "family": "Bonazzola"
+      },
+      {
+        "given": "Andrew",
+        "family": "Brown"
+      },
+      {
+        "given": "Christopher D.",
+        "family": "Brown"
+      },
+      {
+        "given": "Stephane E.",
+        "family": "Castel"
+      },
+      {
+        "given": "Donald F.",
+        "family": "Conrad"
+      },
+      {
+        "given": "Daniel J.",
+        "family": "Cotter"
+      },
+      {
+        "given": "Nancy",
+        "family": "Cox"
+      },
+      {
+        "given": "Sayantan",
+        "family": "Das"
+      },
+      {
+        "given": "Olivia M.",
+        "family": "de Goede"
+      },
+      {
+        "given": "Emmanouil T.",
+        "family": "Dermitzakis"
+      },
+      {
+        "given": "Jonah",
+        "family": "Einson"
+      },
+      {
+        "given": "Barbara E.",
+        "family": "Engelhardt"
+      },
+      {
+        "given": "Eleazar",
+        "family": "Eskin"
+      },
+      {
+        "given": "Tiffany Y.",
+        "family": "Eulalio"
+      },
+      {
+        "given": "Nicole M.",
+        "family": "Ferraro"
+      },
+      {
+        "given": "Elise D.",
+        "family": "Flynn"
+      },
+      {
+        "given": "Laure",
+        "family": "Fresard"
+      },
+      {
+        "given": "Eric R.",
+        "family": "Gamazon"
+      },
+      {
+        "given": "Diego",
+        "family": "Garrido-Martín"
+      },
+      {
+        "given": "Nicole R.",
+        "family": "Gay"
+      },
+      {
+        "given": "Michael J.",
+        "family": "Gloudemans"
+      },
+      {
+        "given": "Roderic",
+        "family": "Guigó"
+      },
+      {
+        "given": "Andrew R.",
+        "family": "Hame"
+      },
+      {
+        "given": "Yuan",
+        "family": "He"
+      },
+      {
+        "given": "Paul J.",
+        "family": "Hoffman"
+      },
+      {
+        "given": "Farhad",
+        "family": "Hormozdiari"
+      },
+      {
+        "given": "Lei",
+        "family": "Hou"
+      },
+      {
+        "given": "Hae Kyung",
+        "family": "Im"
+      },
+      {
+        "given": "Brian",
+        "family": "Jo"
+      },
+      {
+        "given": "Silva",
+        "family": "Kasela"
+      },
+      {
+        "given": "Manolis",
+        "family": "Kellis"
+      },
+      {
+        "given": "Sarah",
+        "family": "Kim-Hellmuth"
+      },
+      {
+        "given": "Alan",
+        "family": "Kwong"
+      },
+      {
+        "given": "Tuuli",
+        "family": "Lappalainen"
+      },
+      {
+        "given": "Xin",
+        "family": "Li"
+      },
+      {
+        "given": "Yanyu",
+        "family": "Liang"
+      },
+      {
+        "given": "Serghei",
+        "family": "Mangul"
+      },
+      {
+        "given": "Pejman",
+        "family": "Mohammadi"
+      },
+      {
+        "given": "Stephen B.",
+        "family": "Montgomery"
+      },
+      {
+        "given": "Manuel",
+        "family": "Muñoz-Aguirre"
+      },
+      {
+        "given": "Daniel C.",
+        "family": "Nachun"
+      },
+      {
+        "given": "Andrew B.",
+        "family": "Nobel"
+      },
+      {
+        "given": "Meritxell",
+        "family": "Oliva"
+      },
+      {
+        "given": "YoSon",
+        "family": "Park"
+      },
+      {
+        "given": "Yongjin",
+        "family": "Park"
+      },
+      {
+        "given": "Princy",
+        "family": "Parsana"
+      },
+      {
+        "given": "Abhiram S.",
+        "family": "Rao"
+      },
+      {
+        "given": "Ferran",
+        "family": "Reverter"
+      },
+      {
+        "given": "John M.",
+        "family": "Rouhana"
+      },
+      {
+        "given": "Chiara",
+        "family": "Sabatti"
+      },
+      {
+        "given": "Ashis",
+        "family": "Saha"
+      },
+      {
+        "given": "Matthew",
+        "family": "Stephens"
+      },
+      {
+        "given": "Barbara E.",
+        "family": "Stranger"
+      },
+      {
+        "given": "Benjamin J.",
+        "family": "Strober"
+      },
+      {
+        "given": "Nicole A.",
+        "family": "Teran"
+      },
+      {
+        "given": "Ana",
+        "family": "Viñuela"
+      },
+      {
+        "given": "Gao",
+        "family": "Wang"
+      },
+      {
+        "given": "Xiaoquan",
+        "family": "Wen"
+      },
+      {
+        "given": "Fred",
+        "family": "Wright"
+      },
+      {
+        "given": "Valentin",
+        "family": "Wucher"
+      },
+      {
+        "given": "Yuxin",
+        "family": "Zou"
+      },
+      {
+        "given": "Pedro G.",
+        "family": "Ferreira"
+      },
+      {
+        "given": "Gen",
+        "family": "Li"
+      },
+      {
+        "given": "Marta",
+        "family": "Melé"
+      },
+      {
+        "given": "Esti",
+        "family": "Yeger-Lotem"
+      },
+      {
+        "given": "Mary E.",
+        "family": "Barcus"
+      },
+      {
+        "given": "Debra",
+        "family": "Bradbury"
+      },
+      {
+        "given": "Tanya",
+        "family": "Krubit"
+      },
+      {
+        "given": "Jeffrey A.",
+        "family": "McLean"
+      },
+      {
+        "given": "Liqun",
+        "family": "Qi"
+      },
+      {
+        "given": "Karna",
+        "family": "Robinson"
+      },
+      {
+        "given": "Nancy V.",
+        "family": "Roche"
+      },
+      {
+        "given": "Anna M.",
+        "family": "Smith"
+      },
+      {
+        "given": "Leslie",
+        "family": "Sobin"
+      },
+      {
+        "given": "David E.",
+        "family": "Tabor"
+      },
+      {
+        "given": "Anita",
+        "family": "Undale"
+      },
+      {
+        "given": "Jason",
+        "family": "Bridge"
+      },
+      {
+        "given": "Lori E.",
+        "family": "Brigham"
+      },
+      {
+        "given": "Barbara A.",
+        "family": "Foster"
+      },
+      {
+        "given": "Bryan M.",
+        "family": "Gillard"
+      },
+      {
+        "given": "Richard",
+        "family": "Hasz"
+      },
+      {
+        "given": "Marcus",
+        "family": "Hunter"
+      },
+      {
+        "given": "Christopher",
+        "family": "Johns"
+      },
+      {
+        "given": "Mark",
+        "family": "Johnson"
+      },
+      {
+        "given": "Ellen",
+        "family": "Karasik"
+      },
+      {
+        "given": "Gene",
+        "family": "Kopen"
+      },
+      {
+        "given": "William F.",
+        "family": "Leinweber"
+      },
+      {
+        "given": "Alisa",
+        "family": "McDonald"
+      },
+      {
+        "given": "Michael T.",
+        "family": "Moser"
+      },
+      {
+        "given": "Kevin",
+        "family": "Myer"
+      },
+      {
+        "given": "Kimberley D.",
+        "family": "Ramsey"
+      },
+      {
+        "given": "Brian",
+        "family": "Roe"
+      },
+      {
+        "given": "Saboor",
+        "family": "Shad"
+      },
+      {
+        "given": "Jeffrey A.",
+        "family": "Thomas"
+      },
+      {
+        "given": "Gary",
+        "family": "Walters"
+      },
+      {
+        "given": "Michael",
+        "family": "Washington"
+      },
+      {
+        "given": "Joseph",
+        "family": "Wheeler"
+      },
+      {
+        "given": "Scott D.",
+        "family": "Jewell"
+      },
+      {
+        "given": "Daniel C.",
+        "family": "Rohrer"
+      },
+      {
+        "given": "Dana R.",
+        "family": "Valley"
+      },
+      {
+        "given": "David A.",
+        "family": "Davis"
+      },
+      {
+        "given": "Deborah C.",
+        "family": "Mash"
+      },
+      {
+        "given": "Philip A.",
+        "family": "Branton"
+      },
+      {
+        "given": "Laura K.",
+        "family": "Barker"
+      },
+      {
+        "given": "Heather M.",
+        "family": "Gardiner"
+      },
+      {
+        "given": "Maghboeba",
+        "family": "Mosavel"
+      },
+      {
+        "given": "Laura A.",
+        "family": "Siminoff"
+      },
+      {
+        "given": "Paul",
+        "family": "Flicek"
+      },
+      {
+        "given": "Maximilian",
+        "family": "Haeussler"
+      },
+      {
+        "given": "Thomas",
+        "family": "Juettemann"
+      },
+      {
+        "given": "W. James",
+        "family": "Kent"
+      },
+      {
+        "given": "Christopher M.",
+        "family": "Lee"
+      },
+      {
+        "given": "Conner C.",
+        "family": "Powell"
+      },
+      {
+        "given": "Kate R.",
+        "family": "Rosenbloom"
+      },
+      {
+        "given": "Magali",
+        "family": "Ruffier"
+      },
+      {
+        "given": "Dan",
+        "family": "Sheppard"
+      },
+      {
+        "given": "Kieron",
+        "family": "Taylor"
+      },
+      {
+        "given": "Stephen J.",
+        "family": "Trevanion"
+      },
+      {
+        "given": "Daniel R.",
+        "family": "Zerbino"
+      },
+      {
+        "given": "Nathan S.",
+        "family": "Abell"
+      },
+      {
+        "given": "Joshua",
+        "family": "Akey"
+      },
+      {
+        "given": "Lin",
+        "family": "Chen"
+      },
+      {
+        "given": "Kathryn",
+        "family": "Demanelis"
+      },
+      {
+        "given": "Jennifer A.",
+        "family": "Doherty"
+      },
+      {
+        "given": "Andrew P.",
+        "family": "Feinberg"
+      },
+      {
+        "given": "Kasper D.",
+        "family": "Hansen"
+      },
+      {
+        "given": "Peter F.",
+        "family": "Hickey"
+      },
+      {
+        "given": "Farzana",
+        "family": "Jasmine"
+      },
+      {
+        "given": "Lihua",
+        "family": "Jiang"
+      },
+      {
+        "given": "Rajinder",
+        "family": "Kaul"
+      },
+      {
+        "given": "Muhammad G.",
+        "family": "Kibriya"
+      },
+      {
+        "given": "Jin Billy",
+        "family": "Li"
+      },
+      {
+        "given": "Qin",
+        "family": "Li"
+      },
+      {
+        "given": "Shin",
+        "family": "Lin"
+      },
+      {
+        "given": "Sandra E.",
+        "family": "Linder"
+      },
+      {
+        "given": "Brandon L.",
+        "family": "Pierce"
+      },
+      {
+        "given": "Lindsay F.",
+        "family": "Rizzardi"
+      },
+      {
+        "given": "Andrew D.",
+        "family": "Skol"
+      },
+      {
+        "given": "Kevin S.",
+        "family": "Smith"
+      },
+      {
+        "given": "Michael",
+        "family": "Snyder"
+      },
+      {
+        "given": "John",
+        "family": "Stamatoyannopoulos"
+      },
+      {
+        "given": "Hua",
+        "family": "Tang"
+      },
+      {
+        "given": "Meng",
+        "family": "Wang"
+      },
+      {
+        "given": "Latarsha J.",
+        "family": "Carithers"
+      },
+      {
+        "given": "Ping",
+        "family": "Guan"
+      },
+      {
+        "given": "Susan E.",
+        "family": "Koester"
+      },
+      {
+        "given": "A. Roger",
+        "family": "Little"
+      },
+      {
+        "given": "Helen M.",
+        "family": "Moore"
+      },
+      {
+        "given": "Concepcion R.",
+        "family": "Nierras"
+      },
+      {
+        "given": "Abhi K.",
+        "family": "Rao"
+      },
+      {
+        "given": "Jimmie B.",
+        "family": "Vaught"
+      },
+      {
+        "given": "Simona",
+        "family": "Volpi"
+      }
     ],
     "container-title": "Science",
     "language": "en",
@@ -5052,7 +5740,7 @@
         [
           2020,
           9,
-          10
+          11
         ]
       ]
     },
@@ -7154,1405 +7842,60 @@
     "note": "This CSL Item was generated by Manubot v0.5.2 from its persistent identifier (standard_id).\nstandard_id: doi:10.7554/elife.26726"
   },
   {
-    "title": "Depression as a predictor for coronary heart disease. a review and meta-analysis.",
-    "volume": "23",
-    "issue": "1",
-    "page": "51-61",
-    "container-title": "American journal of preventive medicine",
-    "container-title-short": "Am J Prev Med",
-    "ISSN": "0749-3797",
-    "issued": {
-      "date-parts": [
-        [
-          2002,
-          7
-        ]
-      ]
-    },
-    "author": [
-      {
-        "given": "Reiner",
-        "family": "Rugulies"
-      }
-    ],
-    "PMID": "12093424",
-    "DOI": "10.1016/s0749-3797(02)00439-7",
-    "abstract": "To review and quantify the impact of depression on the development of coronary heart disease (CHD) in initially healthy subjects.",
-    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/12093424",
-    "type": "article-journal",
-    "id": "10qjLoufR",
-    "note": "This CSL Item was generated by Manubot v0.5.2 from its persistent identifier (standard_id).\nstandard_id: pubmed:12093424"
-  },
-  {
-    "title": "Elevated rates of protein secretion, evolution, and disease among tissue-specific genes.",
-    "volume": "14",
-    "issue": "1",
-    "page": "54-61",
-    "container-title": "Genome research",
-    "container-title-short": "Genome Res",
-    "ISSN": "1088-9051",
-    "issued": {
-      "date-parts": [
-        [
-          2004,
-          1
-        ]
-      ]
-    },
-    "author": [
-      {
-        "given": "Eitan E",
-        "family": "Winter"
-      },
-      {
-        "given": "Leo",
-        "family": "Goodstadt"
-      },
-      {
-        "given": "Chris P",
-        "family": "Ponting"
-      }
-    ],
-    "PMID": "14707169",
-    "PMCID": "PMC314278",
-    "DOI": "10.1101/gr.1924004",
-    "abstract": "Variation in gene expression has been held responsible for the functional and morphological specialization of tissues. The tissue specificity of genes is known to correlate positively with gene evolution rates. We show here, using large data sets, that when a gene is expressed highly in a small number of tissues, its protein is more likely to be secreted and more likely to be mutated in genetic diseases with Mendelian inheritance. We find that secreted proteins are evolving at faster rates than nonsecreted proteins, and that their evolutionary rates are highly correlated with tissue specificity. However, the impact of secretion on evolutionary rates is countered by tissue-specific constraints that have been held constant over the past 75 million years. We find that disease genes are underrepresented among intracellular and slowly evolving housekeeping genes. These findings illuminate major selective pressures that have shaped the gene repertoires expressed in different mammalian tissues.",
-    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/14707169",
-    "type": "article-journal",
-    "id": "18jYvPauB",
-    "note": "This CSL Item was generated by Manubot v0.5.2 from its persistent identifier (standard_id).\nstandard_id: pubmed:14707169"
-  },
-  {
-    "title": "How does gene expression clustering work?",
-    "volume": "23",
-    "issue": "12",
-    "page": "1499-501",
-    "container-title": "Nature biotechnology",
-    "container-title-short": "Nat Biotechnol",
-    "ISSN": "1087-0156",
-    "issued": {
-      "date-parts": [
-        [
-          2005,
-          12
-        ]
-      ]
-    },
-    "author": [
-      {
-        "given": "Patrik",
-        "family": "D'haeseleer"
-      }
-    ],
-    "PMID": "16333293",
-    "DOI": "10.1038/nbt1205-1499",
-    "abstract": "Clustering is often one of the first steps in gene expression analysis. How do clustering algorithms work, which ones should we use and what can we expect from them?",
-    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/16333293",
-    "type": "article-journal",
-    "id": "VzZoy0BD",
-    "note": "This CSL Item was generated by Manubot v0.5.2 from its persistent identifier (standard_id).\nstandard_id: pubmed:16333293"
-  },
-  {
-    "title": "A modular analysis framework for blood genomics studies: application to systemic lupus erythematosus.",
-    "volume": "29",
-    "issue": "1",
-    "page": "150-64",
-    "container-title": "Immunity",
-    "container-title-short": "Immunity",
-    "ISSN": "1097-4180",
-    "issued": {
-      "date-parts": [
-        [
-          2008,
-          7,
-          18
-        ]
-      ]
-    },
-    "author": [
-      {
-        "given": "Damien",
-        "family": "Chaussabel"
-      },
-      {
-        "given": "Charles",
-        "family": "Quinn"
-      },
-      {
-        "given": "Jing",
-        "family": "Shen"
-      },
-      {
-        "given": "Pinakeen",
-        "family": "Patel"
-      },
-      {
-        "given": "Casey",
-        "family": "Glaser"
-      },
-      {
-        "given": "Nicole",
-        "family": "Baldwin"
-      },
-      {
-        "given": "Dorothee",
-        "family": "Stichweh"
-      },
-      {
-        "given": "Derek",
-        "family": "Blankenship"
-      },
-      {
-        "given": "Lei",
-        "family": "Li"
-      },
-      {
-        "given": "Indira",
-        "family": "Munagala"
-      },
-      {
-        "given": "Lynda",
-        "family": "Bennett"
-      },
-      {
-        "given": "Florence",
-        "family": "Allantaz"
-      },
-      {
-        "given": "Asuncion",
-        "family": "Mejias"
-      },
-      {
-        "given": "Monica",
-        "family": "Ardura"
-      },
-      {
-        "given": "Ellen",
-        "family": "Kaizer"
-      },
-      {
-        "given": "Laurence",
-        "family": "Monnet"
-      },
-      {
-        "given": "Windy",
-        "family": "Allman"
-      },
-      {
-        "given": "Henry",
-        "family": "Randall"
-      },
-      {
-        "given": "Diane",
-        "family": "Johnson"
-      },
-      {
-        "given": "Aimee",
-        "family": "Lanier"
-      },
-      {
-        "given": "Marilynn",
-        "family": "Punaro"
-      },
-      {
-        "given": "Knut M",
-        "family": "Wittkowski"
-      },
-      {
-        "given": "Perrin",
-        "family": "White"
-      },
-      {
-        "given": "Joseph",
-        "family": "Fay"
-      },
-      {
-        "given": "Goran",
-        "family": "Klintmalm"
-      },
-      {
-        "given": "Octavio",
-        "family": "Ramilo"
-      },
-      {
-        "given": "A Karolina",
-        "family": "Palucka"
-      },
-      {
-        "given": "Jacques",
-        "family": "Banchereau"
-      },
-      {
-        "given": "Virginia",
-        "family": "Pascual"
-      }
-    ],
-    "PMID": "18631455",
-    "PMCID": "PMC2727981",
-    "DOI": "10.1016/j.immuni.2008.05.012",
-    "abstract": "The analysis of patient blood transcriptional profiles offers a means to investigate the immunological mechanisms relevant to human diseases on a genome-wide scale. In addition, such studies provide a basis for the discovery of clinically relevant biomarker signatures. We designed a strategy for microarray analysis that is based on the identification of transcriptional modules formed by genes coordinately expressed in multiple disease data sets. Mapping changes in gene expression at the module level generated disease-specific transcriptional fingerprints that provide a stable framework for the visualization and functional interpretation of microarray data. These transcriptional modules were used as a basis for the selection of biomarkers and the development of a multivariate transcriptional indicator of disease progression in patients with systemic lupus erythematosus. Thus, this work describes the implementation and application of a methodology designed to support systems-scale analysis of the human immune system in translational research settings.",
-    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/18631455",
-    "type": "article-journal",
-    "id": "S56q1qoc",
-    "note": "This CSL Item was generated by Manubot v0.5.2 from its persistent identifier (standard_id).\nstandard_id: pubmed:18631455"
-  },
-  {
-    "title": "A large-scale analysis of tissue-specific pathology and gene expression of human disease genes and complexes.",
-    "volume": "105",
-    "issue": "52",
-    "page": "20870-5",
-    "container-title": "Proceedings of the National Academy of Sciences of the United States of America",
-    "container-title-short": "Proc Natl Acad Sci U S A",
-    "ISSN": "1091-6490",
-    "issued": {
-      "date-parts": [
-        [
-          2008,
-          12,
-          22
-        ]
-      ]
-    },
-    "author": [
-      {
-        "given": "Kasper",
-        "family": "Lage"
-      },
-      {
-        "given": "Niclas Tue",
-        "family": "Hansen"
-      },
-      {
-        "given": "E Olof",
-        "family": "Karlberg"
-      },
-      {
-        "given": "Aron C",
-        "family": "Eklund"
-      },
-      {
-        "given": "Francisco S",
-        "family": "Roque"
-      },
-      {
-        "given": "Patricia K",
-        "family": "Donahoe"
-      },
-      {
-        "given": "Zoltan",
-        "family": "Szallasi"
-      },
-      {
-        "given": "Thomas Skøt",
-        "family": "Jensen"
-      },
-      {
-        "given": "Søren",
-        "family": "Brunak"
-      }
-    ],
-    "PMID": "19104045",
-    "PMCID": "PMC2606902",
-    "DOI": "10.1073/pnas.0810772105",
-    "abstract": "Heritable diseases are caused by germ-line mutations that, despite tissuewide presence, often lead to tissue-specific pathology. Here, we make a systematic analysis of the link between tissue-specific gene expression and pathological manifestations in many human diseases and cancers. Diseases were systematically mapped to tissues they affect from disease-relevant literature in PubMed to create a disease-tissue covariation matrix of high-confidence associations of >1,000 diseases to 73 tissues. By retrieving >2,000 known disease genes, and generating 1,500 disease-associated protein complexes, we analyzed the differential expression of a gene or complex involved in a particular disease in the tissues affected by the disease, compared with nonaffected tissues. When this analysis is scaled to all diseases in our dataset, there is a significant tendency for disease genes and complexes to be overexpressed in the normal tissues where defects cause pathology. In contrast, cancer genes and complexes were not overexpressed in the tissues from which the tumors emanate. We specifically identified a complex involved in XY sex reversal that is testis-specific and down-regulated in ovaries. We also identified complexes in Parkinson disease, cardiomyopathies, and muscular dystrophy syndromes that are similarly tissue specific. Our method represents a conceptual scaffold for organism-spanning analyses and reveals an extensive list of tissue-specific draft molecular pathways, both known and unexpected, that might be disrupted in disease.",
-    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/19104045",
-    "type": "article-journal",
-    "id": "e0tRKjE5",
-    "note": "This CSL Item was generated by Manubot v0.5.2 from its persistent identifier (standard_id).\nstandard_id: pubmed:19104045"
-  },
-  {
-    "title": "Relaxed purifying selection and possibly high rate of adaptation in primate lineage-specific genes.",
-    "volume": "2",
-    "page": "393-409",
-    "container-title": "Genome biology and evolution",
-    "container-title-short": "Genome Biol Evol",
-    "ISSN": "1759-6653",
-    "issued": {
-      "date-parts": [
-        [
-          2010,
-          7,
-          12
-        ]
-      ]
-    },
-    "author": [
-      {
-        "given": "James J",
-        "family": "Cai"
-      },
-      {
-        "given": "Dmitri A",
-        "family": "Petrov"
-      }
-    ],
-    "PMID": "20624743",
-    "PMCID": "PMC2997544",
-    "DOI": "10.1093/gbe/evq019",
-    "abstract": "Genes in the same organism vary in the time since their evolutionary origin. Without horizontal gene transfer, young genes are necessarily restricted to a few closely related species, whereas old genes can be broadly distributed across the phylogeny. It has been shown that young genes evolve faster than old genes; however, the evolutionary forces responsible for this pattern remain obscure. Here, we classify human-chimp protein-coding genes into different age classes, according to the breath of their phylogenetic distribution. We estimate the strength of purifying selection and the rate of adaptive selection for genes in different age classes. We find that older genes carry fewer and less frequent nonsynonymous single-nucleotide polymorphisms than younger genes suggesting that older genes experience a stronger purifying selection at the protein-coding level. We infer the distribution of fitness effects of new deleterious mutations and find that older genes have proportionally more slightly deleterious mutations and fewer nearly neutral mutations than younger genes. To investigate the role of adaptive selection of genes in different age classes, we determine the selection coefficient (gamma = 2N(e)s) of genes using the MKPRF approach and estimate the ratio of the rate of adaptive nonsynonymous substitution to synonymous substitution (omega(A)) using the DoFE method. Although the proportion of positively selected genes (gamma > 0) is significantly higher in younger genes, we find no correlation between omega(A) and gene age. Collectively, these results provide strong evidence that younger genes are subject to weaker purifying selection and more tenuous evidence that they also undergo adaptive evolution more frequently.",
-    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/20624743",
-    "type": "article-journal",
-    "id": "O0e3EhY6",
-    "note": "This CSL Item was generated by Manubot v0.5.2 from its persistent identifier (standard_id).\nstandard_id: pubmed:20624743"
-  },
-  {
-    "title": "Niacin in patients with low HDL cholesterol levels receiving intensive statin therapy.",
-    "volume": "365",
-    "issue": "24",
-    "page": "2255-67",
-    "container-title": "The New England journal of medicine",
-    "container-title-short": "N Engl J Med",
-    "ISSN": "1533-4406",
-    "issued": {
-      "date-parts": [
-        [
-          2011,
-          11,
-          15
-        ]
-      ]
-    },
-    "author": [
-      {},
-      {
-        "given": "William E",
-        "family": "Boden"
-      },
-      {
-        "given": "Jeffrey L",
-        "family": "Probstfield"
-      },
-      {
-        "given": "Todd",
-        "family": "Anderson"
-      },
-      {
-        "given": "Bernard R",
-        "family": "Chaitman"
-      },
-      {
-        "given": "Patrice",
-        "family": "Desvignes-Nickens"
-      },
-      {
-        "given": "Kent",
-        "family": "Koprowicz"
-      },
-      {
-        "given": "Ruth",
-        "family": "McBride"
-      },
-      {
-        "given": "Koon",
-        "family": "Teo"
-      },
-      {
-        "given": "William",
-        "family": "Weintraub"
-      }
-    ],
-    "PMID": "22085343",
-    "DOI": "10.1056/nejmoa1107579",
-    "abstract": "In patients with established cardiovascular disease, residual cardiovascular risk persists despite the achievement of target low-density lipoprotein (LDL) cholesterol levels with statin therapy. It is unclear whether extended-release niacin added to simvastatin to raise low levels of high-density lipoprotein (HDL) cholesterol is superior to simvastatin alone in reducing such residual risk.",
-    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/22085343",
-    "type": "article-journal",
-    "id": "bRPc66OD",
-    "note": "This CSL Item was generated by Manubot v0.5.2 from its persistent identifier (standard_id).\nstandard_id: pubmed:22085343"
-  },
-  {
-    "title": "Architecture of the human regulatory network derived from ENCODE data.",
-    "volume": "489",
-    "issue": "7414",
-    "page": "91-100",
-    "container-title": "Nature",
-    "container-title-short": "Nature",
-    "ISSN": "1476-4687",
-    "issued": {
-      "date-parts": [
-        [
-          2012,
-          9,
-          6
-        ]
-      ]
-    },
-    "author": [
-      {
-        "given": "Mark B",
-        "family": "Gerstein"
-      },
-      {
-        "given": "Anshul",
-        "family": "Kundaje"
-      },
-      {
-        "given": "Manoj",
-        "family": "Hariharan"
-      },
-      {
-        "given": "Stephen G",
-        "family": "Landt"
-      },
-      {
-        "given": "Koon-Kiu",
-        "family": "Yan"
-      },
-      {
-        "given": "Chao",
-        "family": "Cheng"
-      },
-      {
-        "given": "Xinmeng Jasmine",
-        "family": "Mu"
-      },
-      {
-        "given": "Ekta",
-        "family": "Khurana"
-      },
-      {
-        "given": "Joel",
-        "family": "Rozowsky"
-      },
-      {
-        "given": "Roger",
-        "family": "Alexander"
-      },
-      {
-        "given": "Renqiang",
-        "family": "Min"
-      },
-      {
-        "given": "Pedro",
-        "family": "Alves"
-      },
-      {
-        "given": "Alexej",
-        "family": "Abyzov"
-      },
-      {
-        "given": "Nick",
-        "family": "Addleman"
-      },
-      {
-        "given": "Nitin",
-        "family": "Bhardwaj"
-      },
-      {
-        "given": "Alan P",
-        "family": "Boyle"
-      },
-      {
-        "given": "Philip",
-        "family": "Cayting"
-      },
-      {
-        "given": "Alexandra",
-        "family": "Charos"
-      },
-      {
-        "given": "David Z",
-        "family": "Chen"
-      },
-      {
-        "given": "Yong",
-        "family": "Cheng"
-      },
-      {
-        "given": "Declan",
-        "family": "Clarke"
-      },
-      {
-        "given": "Catharine",
-        "family": "Eastman"
-      },
-      {
-        "given": "Ghia",
-        "family": "Euskirchen"
-      },
-      {
-        "given": "Seth",
-        "family": "Frietze"
-      },
-      {
-        "given": "Yao",
-        "family": "Fu"
-      },
-      {
-        "given": "Jason",
-        "family": "Gertz"
-      },
-      {
-        "given": "Fabian",
-        "family": "Grubert"
-      },
-      {
-        "given": "Arif",
-        "family": "Harmanci"
-      },
-      {
-        "given": "Preti",
-        "family": "Jain"
-      },
-      {
-        "given": "Maya",
-        "family": "Kasowski"
-      },
-      {
-        "given": "Phil",
-        "family": "Lacroute"
-      },
-      {
-        "given": "Jing Jane",
-        "family": "Leng"
-      },
-      {
-        "given": "Jin",
-        "family": "Lian"
-      },
-      {
-        "given": "Hannah",
-        "family": "Monahan"
-      },
-      {
-        "given": "Henriette",
-        "family": "O'Geen"
-      },
-      {
-        "given": "Zhengqing",
-        "family": "Ouyang"
-      },
-      {
-        "given": "E Christopher",
-        "family": "Partridge"
-      },
-      {
-        "given": "Dorrelyn",
-        "family": "Patacsil"
-      },
-      {
-        "given": "Florencia",
-        "family": "Pauli"
-      },
-      {
-        "given": "Debasish",
-        "family": "Raha"
-      },
-      {
-        "given": "Lucia",
-        "family": "Ramirez"
-      },
-      {
-        "given": "Timothy E",
-        "family": "Reddy"
-      },
-      {
-        "given": "Brian",
-        "family": "Reed"
-      },
-      {
-        "given": "Minyi",
-        "family": "Shi"
-      },
-      {
-        "given": "Teri",
-        "family": "Slifer"
-      },
-      {
-        "given": "Jing",
-        "family": "Wang"
-      },
-      {
-        "given": "Linfeng",
-        "family": "Wu"
-      },
-      {
-        "given": "Xinqiong",
-        "family": "Yang"
-      },
-      {
-        "given": "Kevin Y",
-        "family": "Yip"
-      },
-      {
-        "given": "Gili",
-        "family": "Zilberman-Schapira"
-      },
-      {
-        "given": "Serafim",
-        "family": "Batzoglou"
-      },
-      {
-        "given": "Arend",
-        "family": "Sidow"
-      },
-      {
-        "given": "Peggy J",
-        "family": "Farnham"
-      },
-      {
-        "given": "Richard M",
-        "family": "Myers"
-      },
-      {
-        "given": "Sherman M",
-        "family": "Weissman"
-      },
-      {
-        "given": "Michael",
-        "family": "Snyder"
-      }
-    ],
-    "PMID": "22955619",
-    "PMCID": "PMC4154057",
-    "DOI": "10.1038/nature11245",
-    "abstract": "Transcription factors bind in a combinatorial fashion to specify the on-and-off states of genes; the ensemble of these binding events forms a regulatory network, constituting the wiring diagram for a cell. To examine the principles of the human transcriptional regulatory network, we determined the genomic binding information of 119 transcription-related factors in over 450 distinct experiments. We found the combinatorial, co-association of transcription factors to be highly context specific: distinct combinations of factors bind at specific genomic locations. In particular, there are significant differences in the binding proximal and distal to genes. We organized all the transcription factor binding into a hierarchy and integrated it with other genomic information (for example, microRNA regulation), forming a dense meta-network. Factors at different levels have different properties; for instance, top-level transcription factors more strongly influence expression and middle-level ones co-regulate targets to mitigate information-flow bottlenecks. Moreover, these co-regulations give rise to many enriched network motifs (for example, noise-buffering feed-forward loops). Finally, more connected network components are under stronger selection and exhibit a greater degree of allele-specific activity (that is, differential binding to the two parental alleles). The regulatory information obtained in this study will be crucial for interpreting personal genome sequences and understanding basic principles of human biology and disease.",
-    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/22955619",
-    "type": "article-journal",
-    "id": "jrAMOJCD",
-    "note": "This CSL Item was generated by Manubot v0.5.2 from its persistent identifier (standard_id).\nstandard_id: pubmed:22955619"
-  },
-  {
-    "title": "The therapeutic role of niacin in dyslipidemia management.",
-    "volume": "19",
-    "issue": "2",
-    "page": "141-58",
-    "container-title": "Journal of cardiovascular pharmacology and therapeutics",
-    "container-title-short": "J Cardiovasc Pharmacol Ther",
-    "ISSN": "1940-4034",
-    "issued": {
-      "date-parts": [
-        [
-          2013,
-          12,
-          20
-        ]
-      ]
-    },
-    "author": [
-      {
-        "given": "William E",
-        "family": "Boden"
-      },
-      {
-        "given": "Mandeep S",
-        "family": "Sidhu"
-      },
-      {
-        "given": "Peter P",
-        "family": "Toth"
-      }
-    ],
-    "PMID": "24363242",
-    "DOI": "10.1177/1074248413514481",
-    "abstract": "There is abundant epidemiologic evidence to support the independent, inverse relationship between low levels of high-density lipoprotein cholesterol (HDL-C) and incident cardiovascular (CV) risk, the clinical importance of which is underscored by the high prevalence of low HDL-C in populations with coronary heart disease (CHD), with or without elevated levels of low-density lipoprotein cholesterol (LDL-C). The National Cholesterol Education Program recommended that optimal treatment for high-risk patients includes both lowering LDL-C and non-HDL-C to risk stratified levels and raising HDL-C when it is <40 mg/dL, although no target level for the latter lipoprotein was suggested. Niacin is the most powerful agent currently available for raising low levels of HDL-C. It also induces significant reductions in triglycerides, lipoprotein(a), and LDL-C levels while also favorably altering LDL particle size and number. In the Coronary Drug Project, niacin treatment was associated with significant reductions in CV events and long-term mortality, similar to the reductions seen in the statin monotherapy trials. In combination trials, niacin plus a statin or bile acid sequestrant produces additive reductions in CHD morbidity and mortality and promotes regression of coronary atherosclerosis. Recently, 2 clinical outcome trials (Atherothrombosis Intervention in Metabolic Syndrome With Low HDL/High Triglycerides and Impact on Global Health Outcomes [AIM-HIGH] and Second Heart Protection Study [HPS-2 THRIVE]) failed to show a reduction in CV events in patients treated to optimally low levels of LDL-C. Despite favorable effects on HDL-C and triglycerides, these studies did not demonstrate incremental clinical benefit with niacin when added to simvastatin, although notable limitations were identified in each of these trials. Thus, there is insufficient evidence from clinical trials to recommend HDL-targeted therapy for additional event reduction at the present time. However, niacin should continue to be used as an adjuvant therapy for reducing atherogenic lipoprotein burden in patients who have not reached their risk stratified LDL-C and non-HDL-C targets. ",
-    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/24363242",
-    "type": "article-journal",
-    "id": "OOAkmacQ",
-    "note": "This CSL Item was generated by Manubot v0.5.2 from its persistent identifier (standard_id).\nstandard_id: pubmed:24363242"
-  },
-  {
-    "title": "Democratizing systems immunology with modular transcriptional repertoire analyses.",
-    "volume": "14",
-    "issue": "4",
-    "page": "271-80",
-    "container-title": "Nature reviews. Immunology",
-    "container-title-short": "Nat Rev Immunol",
-    "ISSN": "1474-1741",
-    "issued": {
-      "date-parts": [
-        [
-          2014,
-          4
-        ]
-      ]
-    },
-    "author": [
-      {
-        "given": "Damien",
-        "family": "Chaussabel"
-      },
-      {
-        "given": "Nicole",
-        "family": "Baldwin"
-      }
-    ],
-    "PMID": "24662387",
-    "PMCID": "PMC4118927",
-    "DOI": "10.1038/nri3642",
-    "abstract": "Individual elements that constitute the immune system have been characterized over the few past decades, mostly through reductionist approaches. The introduction of large-scale profiling platforms has more recently facilitated the assessment of these elements on a global scale. However, the analysis and the interpretation of such large-scale datasets remains a challenge and a barrier for the wider adoption of systems approaches in immunological and clinical studies. In this Innovation article, we describe an analytical strategy that relies on the a priori determination of co-dependent gene sets for a given biological system. Such modular transcriptional repertoires can in turn be used to simplify the analysis and the interpretation of large-scale datasets, and to design targeted immune fingerprinting assays and web applications that will further facilitate the dissemination of systems approaches in immunology.",
-    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/24662387",
-    "type": "article-journal",
-    "id": "f2r8LLIn",
-    "note": "This CSL Item was generated by Manubot v0.5.2 from its persistent identifier (standard_id).\nstandard_id: pubmed:24662387"
-  },
-  {
-    "title": "High-density lipoproteins in the prevention of cardiovascular disease: changing the paradigm.",
-    "volume": "96",
-    "issue": "1",
-    "page": "48-56",
-    "container-title": "Clinical pharmacology and therapeutics",
-    "container-title-short": "Clin Pharmacol Ther",
-    "ISSN": "1532-6535",
-    "issued": {
-      "date-parts": [
-        [
-          2014,
-          4,
-          8
-        ]
-      ]
-    },
-    "author": [
-      {
-        "given": "S",
-        "family": "Tuteja"
-      },
-      {
-        "given": "D J",
-        "family": "Rader"
-      }
-    ],
-    "PMID": "24713591",
-    "DOI": "10.1038/clpt.2014.79",
-    "abstract": "High-density-lipoprotein cholesterol (HDL-C) has been identified in population studies as an independent inverse predictor of cardiovascular events. Although the causal nature of this association has been questioned, HDL and its major protein, apolipoprotein (apo)A1, have been shown to prevent and reverse atherosclerosis in animal models. In addition, HDL and apoA1 have several putatively atheroprotective functions, such as the ability to promote efflux of cholesterol from macrophages in the artery wall, inhibit vascular inflammation, and enhance endothelial function. Therefore, HDL-C and apoA1 have been investigated as therapeutic targets for coronary heart disease. However, recent clinical trials with drugs that raise HDL-C, such as niacin and inhibitors of cholesteryl ester transfer protein, have been disappointing. Here, we review the current state of the science regarding HDL as a therapeutic target. ",
-    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/24713591",
-    "type": "article-journal",
-    "id": "13meq3Hgt",
-    "note": "This CSL Item was generated by Manubot v0.5.2 from its persistent identifier (standard_id).\nstandard_id: pubmed:24713591"
-  },
-  {
-    "title": "Effects of extended-release niacin with laropiprant in high-risk patients.",
-    "volume": "371",
-    "issue": "3",
-    "page": "203-12",
-    "container-title": "The New England journal of medicine",
-    "container-title-short": "N Engl J Med",
-    "ISSN": "1533-4406",
-    "issued": {
-      "date-parts": [
-        [
-          2014,
-          7,
-          17
-        ]
-      ]
-    },
-    "author": [
-      {},
-      {
-        "given": "Martin J",
-        "family": "Landray"
-      },
-      {
-        "given": "Richard",
-        "family": "Haynes"
-      },
-      {
-        "given": "Jemma C",
-        "family": "Hopewell"
-      },
-      {
-        "given": "Sarah",
-        "family": "Parish"
-      },
-      {
-        "given": "Theingi",
-        "family": "Aung"
-      },
-      {
-        "given": "Joseph",
-        "family": "Tomson"
-      },
-      {
-        "given": "Karl",
-        "family": "Wallendszus"
-      },
-      {
-        "given": "Martin",
-        "family": "Craig"
-      },
-      {
-        "given": "Lixin",
-        "family": "Jiang"
-      },
-      {
-        "given": "Rory",
-        "family": "Collins"
-      },
-      {
-        "given": "Jane",
-        "family": "Armitage"
-      }
-    ],
-    "PMID": "25014686",
-    "DOI": "10.1056/nejmoa1300955",
-    "abstract": "Patients with evidence of vascular disease are at increased risk for subsequent vascular events despite effective use of statins to lower the low-density lipoprotein (LDL) cholesterol level. Niacin lowers the LDL cholesterol level and raises the high-density lipoprotein (HDL) cholesterol level, but its clinical efficacy and safety are uncertain.",
-    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/25014686",
-    "type": "article-journal",
-    "id": "13ZGxHjQ5",
-    "note": "This CSL Item was generated by Manubot v0.5.2 from its persistent identifier (standard_id).\nstandard_id: pubmed:25014686"
-  },
-  {
-    "title": "A narrow repertoire of transcriptional modules responsive to pyogenic bacteria is impaired in patients carrying loss-of-function mutations in MYD88 or IRAK4.",
-    "volume": "15",
-    "issue": "12",
-    "page": "1134-42",
-    "container-title": "Nature immunology",
-    "container-title-short": "Nat Immunol",
-    "ISSN": "1529-2916",
-    "issued": {
-      "date-parts": [
-        [
-          2014,
-          10,
-          26
-        ]
-      ]
-    },
-    "author": [
-      {
-        "given": "Laia",
-        "family": "Alsina"
-      },
-      {
-        "given": "Elisabeth",
-        "family": "Israelsson"
-      },
-      {
-        "given": "Matthew C",
-        "family": "Altman"
-      },
-      {
-        "given": "Kristen K",
-        "family": "Dang"
-      },
-      {
-        "given": "Pegah",
-        "family": "Ghandil"
-      },
-      {
-        "given": "Laura",
-        "family": "Israel"
-      },
-      {
-        "given": "Horst",
-        "family": "von Bernuth"
-      },
-      {
-        "given": "Nicole",
-        "family": "Baldwin"
-      },
-      {
-        "given": "Huanying",
-        "family": "Qin"
-      },
-      {
-        "given": "Zongbo",
-        "family": "Jin"
-      },
-      {
-        "given": "Romain",
-        "family": "Banchereau"
-      },
-      {
-        "given": "Esperanza",
-        "family": "Anguiano"
-      },
-      {
-        "given": "Alexei",
-        "family": "Ionan"
-      },
-      {
-        "given": "Laurent",
-        "family": "Abel"
-      },
-      {
-        "given": "Anne",
-        "family": "Puel"
-      },
-      {
-        "given": "Capucine",
-        "family": "Picard"
-      },
-      {
-        "given": "Virginia",
-        "family": "Pascual"
-      },
-      {
-        "given": "Jean Laurent",
-        "family": "Casanova"
-      },
-      {
-        "given": "Damien",
-        "family": "Chaussabel"
-      }
-    ],
-    "PMID": "25344726",
-    "PMCID": "PMC4281021",
-    "DOI": "10.1038/ni.3028",
-    "abstract": "Loss of function of the kinase IRAK4 or the adaptor MyD88 in humans interrupts a pathway critical for pathogen sensing and ignition of inflammation. However, patients with loss-of-function mutations in the genes encoding these factors are, unexpectedly, susceptible to only a limited range of pathogens. We employed a systems approach to investigate transcriptome responses following in vitro exposure of patients' blood to agonists of Toll-like receptors (TLRs) and receptors for interleukin 1 (IL-1Rs) and to whole pathogens. Responses to purified agonists were globally abolished, but variable residual responses were present following exposure to whole pathogens. Further delineation of the latter responses identified a narrow repertoire of transcriptional programs affected by loss of MyD88 function or IRAK4 function. Our work introduces the use of a systems approach for the global assessment of innate immune responses and the characterization of human primary immunodeficiencies. ",
-    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/25344726",
-    "type": "article-journal",
-    "id": "SjGoBywE",
-    "note": "This CSL Item was generated by Manubot v0.5.2 from its persistent identifier (standard_id).\nstandard_id: pubmed:25344726"
-  },
-  {
-    "title": "Prognostic value of grip strength: findings from the Prospective Urban Rural Epidemiology (PURE) study.",
-    "volume": "386",
-    "issue": "9990",
-    "page": "266-73",
-    "container-title": "Lancet (London, England)",
-    "container-title-short": "Lancet",
-    "ISSN": "1474-547X",
-    "issued": {
-      "date-parts": [
-        [
-          2015,
-          5,
-          13
-        ]
-      ]
-    },
-    "author": [
-      {
-        "given": "Darryl P",
-        "family": "Leong"
-      },
-      {
-        "given": "Koon K",
-        "family": "Teo"
-      },
-      {
-        "given": "Sumathy",
-        "family": "Rangarajan"
-      },
-      {
-        "given": "Patricio",
-        "family": "Lopez-Jaramillo"
-      },
-      {
-        "given": "Alvaro",
-        "family": "Avezum"
-      },
-      {
-        "given": "Andres",
-        "family": "Orlandini"
-      },
-      {
-        "given": "Pamela",
-        "family": "Seron"
-      },
-      {
-        "given": "Suad H",
-        "family": "Ahmed"
-      },
-      {
-        "given": "Annika",
-        "family": "Rosengren"
-      },
-      {
-        "given": "Roya",
-        "family": "Kelishadi"
-      },
-      {
-        "given": "Omar",
-        "family": "Rahman"
-      },
-      {
-        "given": "Sumathi",
-        "family": "Swaminathan"
-      },
-      {
-        "given": "Romaina",
-        "family": "Iqbal"
-      },
-      {
-        "given": "Rajeev",
-        "family": "Gupta"
-      },
-      {
-        "given": "Scott A",
-        "family": "Lear"
-      },
-      {
-        "given": "Aytekin",
-        "family": "Oguz"
-      },
-      {
-        "given": "Khalid",
-        "family": "Yusoff"
-      },
-      {
-        "given": "Katarzyna",
-        "family": "Zatonska"
-      },
-      {
-        "given": "Jephat",
-        "family": "Chifamba"
-      },
-      {
-        "given": "Ehimario",
-        "family": "Igumbor"
-      },
-      {
-        "given": "Viswanathan",
-        "family": "Mohan"
-      },
-      {
-        "given": "Ranjit Mohan",
-        "family": "Anjana"
-      },
-      {
-        "given": "Hongqiu",
-        "family": "Gu"
-      },
-      {
-        "given": "Wei",
-        "family": "Li"
-      },
-      {
-        "given": "Salim",
-        "family": "Yusuf"
-      },
-      {}
-    ],
-    "PMID": "25982160",
-    "DOI": "10.1016/s0140-6736(14)62000-6",
-    "abstract": "Reduced muscular strength, as measured by grip strength, has been associated with an increased risk of all-cause and cardiovascular mortality. Grip strength is appealing as a simple, quick, and inexpensive means of stratifying an individual's risk of cardiovascular death. However, the prognostic value of grip strength with respect to the number and range of populations and confounders is unknown. The aim of this study was to assess the independent prognostic importance of grip strength measurement in socioculturally and economically diverse countries.",
-    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/25982160",
-    "type": "article-journal",
-    "id": "aBVh8zt1",
-    "note": "This CSL Item was generated by Manubot v0.5.2 from its persistent identifier (standard_id).\nstandard_id: pubmed:25982160"
-  },
-  {
-    "title": "Optimized sgRNA design to maximize activity and minimize off-target effects of CRISPR-Cas9.",
-    "volume": "34",
-    "issue": "2",
-    "page": "184-191",
-    "container-title": "Nature biotechnology",
-    "container-title-short": "Nat Biotechnol",
-    "ISSN": "1546-1696",
-    "issued": {
-      "date-parts": [
-        [
-          2016,
-          1,
-          18
-        ]
-      ]
-    },
-    "author": [
-      {
-        "given": "John G",
-        "family": "Doench"
-      },
-      {
-        "given": "Nicolo",
-        "family": "Fusi"
-      },
-      {
-        "given": "Meagan",
-        "family": "Sullender"
-      },
-      {
-        "given": "Mudra",
-        "family": "Hegde"
-      },
-      {
-        "given": "Emma W",
-        "family": "Vaimberg"
-      },
-      {
-        "given": "Katherine F",
-        "family": "Donovan"
-      },
-      {
-        "given": "Ian",
-        "family": "Smith"
-      },
-      {
-        "given": "Zuzana",
-        "family": "Tothova"
-      },
-      {
-        "given": "Craig",
-        "family": "Wilen"
-      },
-      {
-        "given": "Robert",
-        "family": "Orchard"
-      },
-      {
-        "given": "Herbert W",
-        "family": "Virgin"
-      },
-      {
-        "given": "Jennifer",
-        "family": "Listgarten"
-      },
-      {
-        "given": "David E",
-        "family": "Root"
-      }
-    ],
-    "PMID": "26780180",
-    "PMCID": "PMC4744125",
-    "DOI": "10.1038/nbt.3437",
-    "abstract": "CRISPR-Cas9-based genetic screens are a powerful new tool in biology. By simply altering the sequence of the single-guide RNA (sgRNA), one can reprogram Cas9 to target different sites in the genome with relative ease, but the on-target activity and off-target effects of individual sgRNAs can vary widely. Here, we use recently devised sgRNA design rules to create human and mouse genome-wide libraries, perform positive and negative selection screens and observe that the use of these rules produced improved results. Additionally, we profile the off-target activity of thousands of sgRNAs and develop a metric to predict off-target sites. We incorporate these findings from large-scale, empirical data to improve our computational design rules and create optimized sgRNA libraries that maximize on-target activity and minimize off-target effects to enable more effective and efficient genetic screens and genome engineering. ",
-    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/26780180",
-    "type": "article-journal",
-    "id": "vNXTnmxp",
-    "note": "This CSL Item was generated by Manubot v0.5.2 from its persistent identifier (standard_id).\nstandard_id: pubmed:26780180"
-  },
-  {
-    "title": "Avoiding common pitfalls when clustering biological data.",
-    "volume": "9",
-    "issue": "432",
-    "page": "re6",
-    "container-title": "Science signaling",
-    "container-title-short": "Sci Signal",
-    "ISSN": "1937-9145",
-    "issued": {
-      "date-parts": [
-        [
-          2016,
-          6,
-          14
-        ]
-      ]
-    },
-    "author": [
-      {
-        "given": "Tom",
-        "family": "Ronan"
-      },
-      {
-        "given": "Zhijie",
-        "family": "Qi"
-      },
-      {
-        "given": "Kristen M",
-        "family": "Naegle"
-      }
-    ],
-    "PMID": "27303057",
-    "DOI": "10.1126/scisignal.aad1932",
-    "abstract": "Clustering is an unsupervised learning method, which groups data points based on similarity, and is used to reveal the underlying structure of data. This computational approach is essential to understanding and visualizing the complex data that are acquired in high-throughput multidimensional biological experiments. Clustering enables researchers to make biological inferences for further experiments. Although a powerful technique, inappropriate application can lead biological researchers to waste resources and time in experimental follow-up. We review common pitfalls identified from the published molecular biology literature and present methods to avoid them. Commonly encountered pitfalls relate to the high-dimensional nature of biological data from high-throughput experiments, the failure to consider more than one clustering method for a given problem, and the difficulty in determining whether clustering has produced meaningful results. We present concrete examples of problems and solutions (clustering results) in the form of toy problems and real biological data for these issues. We also discuss ensemble clustering as an easy-to-implement method that enables the exploration of multiple clustering solutions and improves robustness of clustering solutions. Increased awareness of common clustering pitfalls will help researchers avoid overinterpreting or misinterpreting the results and missing valuable insights when clustering biological data.",
-    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/27303057",
-    "type": "article-journal",
-    "id": "S7LBsfcF",
-    "note": "This CSL Item was generated by Manubot v0.5.2 from its persistent identifier (standard_id).\nstandard_id: pubmed:27303057"
-  },
-  {
-    "title": "Assessment of the Role of Niacin in Managing Cardiovascular Disease Outcomes: A Systematic Review and Meta-analysis.",
-    "volume": "2",
-    "issue": "4",
-    "page": "e192224",
-    "container-title": "JAMA network open",
-    "container-title-short": "JAMA Netw Open",
-    "ISSN": "2574-3805",
-    "issued": {
-      "date-parts": [
-        [
-          2019,
-          4,
-          5
-        ]
-      ]
-    },
-    "author": [
-      {
-        "given": "Elvira",
-        "family": "D'Andrea"
-      },
-      {
-        "given": "Spencer P",
-        "family": "Hey"
-      },
-      {
-        "given": "Cherie L",
-        "family": "Ramirez"
-      },
-      {
-        "given": "Aaron S",
-        "family": "Kesselheim"
-      }
-    ],
-    "PMID": "30977858",
-    "PMCID": "PMC6481429",
-    "DOI": "10.1001/jamanetworkopen.2019.2224",
-    "abstract": "Niacin remains a therapeutic option for patients with cardiovascular disease, but recent studies have called into question the effectiveness of other drugs that increase high-density lipoprotein cholesterol levels.",
-    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/30977858",
-    "type": "article-journal",
-    "id": "ZGvG75Bj",
-    "note": "This CSL Item was generated by Manubot v0.5.2 from its persistent identifier (standard_id).\nstandard_id: pubmed:30977858"
-  },
-  {
-    "title": "Shared and distinct genetic risk factors for childhood-onset and adult-onset asthma: genome-wide and transcriptome-wide studies.",
-    "volume": "7",
-    "issue": "6",
-    "page": "509-522",
-    "container-title": "The Lancet. Respiratory medicine",
-    "container-title-short": "Lancet Respir Med",
-    "ISSN": "2213-2619",
-    "issued": {
-      "date-parts": [
-        [
-          2019,
-          4,
-          27
-        ]
-      ]
-    },
-    "author": [
-      {
-        "given": "Milton",
-        "family": "Pividori"
-      },
-      {
-        "given": "Nathan",
-        "family": "Schoettler"
-      },
-      {
-        "given": "Dan L",
-        "family": "Nicolae"
-      },
-      {
-        "given": "Carole",
-        "family": "Ober"
-      },
-      {
-        "given": "Hae Kyung",
-        "family": "Im"
-      }
-    ],
-    "PMID": "31036433",
-    "PMCID": "PMC6534440",
-    "DOI": "10.1016/s2213-2600(19)30055-4",
-    "abstract": "Childhood-onset and adult-onset asthma differ with respect to severity and comorbidities. Whether they also differ with respect to genetic risk factors has not been previously investigated in large samples. The goals of this study were to identify shared and distinct genetic risk loci for childhood-onset and adult-onset asthma, and to identify the genes that might mediate the effects of associated variation.",
-    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/31036433",
-    "type": "article-journal",
-    "id": "zwpq2IXD",
-    "note": "This CSL Item was generated by Manubot v0.5.2 from its persistent identifier (standard_id).\nstandard_id: pubmed:31036433"
-  },
-  {
-    "title": "UTMOST, a single and cross-tissue TWAS (Transcriptome Wide Association Study), reveals new ASD (Autism Spectrum Disorder) associated genes.",
-    "volume": "11",
-    "issue": "1",
-    "page": "256",
-    "container-title": "Translational psychiatry",
-    "container-title-short": "Transl Psychiatry",
-    "ISSN": "2158-3188",
-    "issued": {
-      "date-parts": [
-        [
-          2021,
-          4,
-          30
-        ]
-      ]
-    },
-    "author": [
-      {
-        "given": "Cristina",
-        "family": "Rodriguez-Fontenla"
-      },
-      {
-        "given": "Angel",
-        "family": "Carracedo"
-      }
-    ],
-    "PMID": "33931583",
-    "PMCID": "PMC8087708",
-    "DOI": "10.1038/s41398-021-01378-8",
-    "abstract": "Autism spectrum disorders (ASD) is a complex neurodevelopmental disorder that may significantly impact on the affected individual's life. Common variation (SNPs) could explain about 50% of ASD heritability. Despite this fact and the large size of the last GWAS meta-analysis, it is believed that hundreds of risk genes in ASD have yet to be discovered. New tools, such as TWAS (Transcriptome Wide Association Studies) which integrate tissue expression and genetic data, are a great approach to identify new ASD susceptibility genes. The main goal of this study is to use UTMOST with the publicly available summary statistics from the largest ASD GWAS meta-analysis as genetic input. In addition, an in silico biological characterization for the novel associated loci was performed. Our results have shown the association of 4 genes at the brain level (CIPC, PINX1, NKX2-2, and PTPRE) and have highlighted the association of NKX2-2, MANBA, ERI1, and MITF at the gastrointestinal level. The gastrointestinal associations are quite relevant given the well-established but unexplored relationship between ASD and gastrointestinal symptoms. Cross-tissue analysis has shown the association of NKX2-2 and BLK. UTMOST-associated genes together with their in silico biological characterization seems to point to different biological mechanisms underlying ASD etiology. Thus, it would not be restricted to brain tissue and it will involve the participation of other body tissues such as the gastrointestinal.",
-    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/33931583",
-    "type": "article-journal",
-    "id": "ktVcsmYD",
-    "note": "This CSL Item was generated by Manubot v0.5.2 from its persistent identifier (standard_id).\nstandard_id: pubmed:33931583"
-  },
-  {
-    "title": "Cluster analysis and display of genome-wide expression patterns.",
-    "volume": "95",
-    "issue": "25",
-    "page": "14863-8",
-    "container-title": "Proceedings of the National Academy of Sciences of the United States of America",
-    "container-title-short": "Proc Natl Acad Sci U S A",
-    "ISSN": "0027-8424",
-    "issued": {
-      "date-parts": [
-        [
-          1998,
-          12,
-          8
-        ]
-      ]
-    },
-    "author": [
-      {
-        "given": "M B",
-        "family": "Eisen"
-      },
-      {
-        "given": "P T",
-        "family": "Spellman"
-      },
-      {
-        "given": "P O",
-        "family": "Brown"
-      },
-      {
-        "given": "D",
-        "family": "Botstein"
-      }
-    ],
-    "PMID": "9843981",
-    "PMCID": "PMC24541",
-    "DOI": "10.1073/pnas.95.25.14863",
-    "abstract": "A system of cluster analysis for genome-wide expression data from DNA microarray hybridization is described that uses standard statistical algorithms to arrange genes according to similarity in pattern of gene expression. The output is displayed graphically, conveying the clustering and the underlying expression data simultaneously in a form intuitive for biologists. We have found in the budding yeast Saccharomyces cerevisiae that clustering gene expression data groups together efficiently genes of known similar function, and we find a similar tendency in human data. Thus patterns seen in genome-wide expression experiments can be interpreted as indications of the status of cellular processes. Also, coexpression of genes of known function with poorly characterized or novel genes may provide a simple means of gaining leads to the functions of many genes for which information is not available currently.",
-    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/9843981",
-    "type": "article-journal",
-    "id": "S4e4WaP3",
-    "note": "This CSL Item was generated by Manubot v0.5.2 from its persistent identifier (standard_id).\nstandard_id: pubmed:9843981"
-  },
-  {
     "id": "16RTdMKxI",
-    "type": "webpage",
-    "abstract": "Contribute to EBISPOT/EFO-UKB-mappings development by creating an account on GitHub.",
-    "container-title": "GitHub",
-    "language": "en",
-    "title": "GitHub - EBISPOT/EFO-UKB-mappings",
+    "type": "book",
+    "note": "original-date: 2019-04-03T09:07:14Z\nThis CSL Item was generated by Manubot v0.5.2 from its persistent identifier (standard_id).\nstandard_id: url:https://github.com/EBISPOT/EFO-UKB-mappings",
+    "publisher": "EBISPOT",
+    "source": "GitHub",
+    "title": "Mapping UK Biobank to the Experimental Factor Ontology (EFO)",
     "URL": "https://github.com/EBISPOT/EFO-UKB-mappings",
     "accessed": {
       "date-parts": [
         [
           "2022",
-          10,
-          25
+          11,
+          28
         ]
       ]
     },
-    "note": "This CSL Item was generated by Manubot v0.5.2 from its persistent identifier (standard_id).\nstandard_id: url:https://github.com/EBISPOT/EFO-UKB-mappings"
+    "issued": {
+      "date-parts": [
+        [
+          "2022",
+          5,
+          3
+        ]
+      ]
+    }
   },
   {
     "id": "GPHGnFRN",
-    "type": "webpage",
-    "abstract": "harmonization, liftover, and imputation of summary statistics from GWAS - GitHub - hakyimlab/summary-gwas-imputation: harmonization, liftover, and imputation of summary statistics from GWAS",
-    "container-title": "GitHub",
-    "language": "en",
-    "title": "GitHub - hakyimlab/summary-gwas-imputation: harmonization, liftover, and imputation of summary statistics from GWAS",
-    "title-short": "GitHub - hakyimlab/summary-gwas-imputation",
+    "type": "book",
+    "abstract": "harmonization, liftover, and imputation of summary statistics from GWAS",
+    "genre": "Python",
+    "note": "original-date: 2018-10-26T20:24:35Z\nThis CSL Item was generated by Manubot v0.5.2 from its persistent identifier (standard_id).\nstandard_id: url:https://github.com/hakyimlab/summary-gwas-imputation",
+    "publisher": "hakyimlab",
+    "source": "GitHub",
+    "title": "Harmonization and Imputation Overview",
     "URL": "https://github.com/hakyimlab/summary-gwas-imputation",
     "accessed": {
       "date-parts": [
         [
           "2022",
-          10,
-          25
+          11,
+          28
         ]
       ]
     },
-    "note": "This CSL Item was generated by Manubot v0.5.2 from its persistent identifier (standard_id).\nstandard_id: url:https://github.com/hakyimlab/summary-gwas-imputation"
+    "issued": {
+      "date-parts": [
+        [
+          "2022",
+          10,
+          31
+        ]
+      ]
+    }
   },
   {
     "id": "VKYS05n1",
@@ -8564,8 +7907,8 @@
       "date-parts": [
         [
           "2022",
-          10,
-          25
+          11,
+          28
         ]
       ]
     },
@@ -8581,8 +7924,8 @@
       "date-parts": [
         [
           "2022",
-          10,
-          25
+          11,
+          28
         ]
       ]
     },

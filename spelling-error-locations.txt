@@ -1,3 +1,4 @@
+content/00.front-matter.md:7:citable
 content/01.abstract.md:6:GWAS
 content/01.abstract.md:6:transcriptome
 content/01.abstract.md:8:PhenoPLIER

@@ -46,6 +46,7 @@ celiac
 cgreene
 Chun
 cis
+citable
 coeliac
 collinearity
 colocalization
@@ -108,7 +109,7 @@ GBMF
 gDNA
 genomic
 GenomicSuperSignature
-Genotype
+genotype
 GFP
 Gibco
 GLS
@@ -149,7 +150,7 @@ ICD
 IDT
 IFNa
 Iftikhar
-illumina
+Illumina
 INSIG
 INTEGRIN
 interpretability
@@ -178,7 +179,7 @@ lipitor
 lipoid
 lipolysis
 lipoprotein
-lipoproteins
+LIPOPROTEINS
 lisinopril
 loadings
 LPL
@@ -220,7 +221,7 @@ neurodegenerative
 neurodevelopmental
 neuropsychiatric
 neutrophil
-Neutrophils
+neutrophils
 NFAT
 nicotinic
 NMR
@@ -236,9 +237,9 @@ PCA
 PCR
 PCYT
 perturbagens
-phecode
+Phecode
 phecodes
-phenomexcan
+PhenomeXcan
 PhenoPLIER
 phenotypes
 PhiX
