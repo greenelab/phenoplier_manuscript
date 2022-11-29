@@ -107,7 +107,7 @@ fibroblasts
 func
 GBMF
 gDNA
-genomic
+Genomic
 GenomicSuperSignature
 genotype
 GFP
@@ -141,7 +141,7 @@ Hochberg
 HSV
 HTN
 HWE
-Hypercholesterolemia
+hypercholesterolemia
 hyperlipidemia
 hypoxia
 IBD
@@ -150,7 +150,7 @@ ICD
 IDT
 IFNa
 Iftikhar
-Illumina
+illumina
 INSIG
 INTEGRIN
 interpretability
@@ -186,7 +186,7 @@ LPL
 LPSstimulated
 Luo
 lv
-lvs
+LVs
 MAF
 malabsorption
 Marylyn
@@ -237,9 +237,9 @@ PCA
 PCR
 PCYT
 perturbagens
-Phecode
+phecode
 phecodes
-PhenomeXcan
+phenomexcan
 PhenoPLIER
 phenotypes
 PhiX
@@ -252,7 +252,7 @@ polybrene
 polygenic
 Polymerase
 polymyalgia
-PrediXcan
+predixcan
 preprocessing
 probit
 proj

@@ -6,7 +6,7 @@ keywords:
 - PhenomeXcan
 - TWAS
 lang: en-US
-date-meta: '2022-11-28'
+date-meta: '2022-11-29'
 author-meta:
 - Milton Pividori
 - Sumei Lu
@@ -35,8 +35,8 @@ header-includes: |-
   <meta name="citation_title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="og:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
-  <meta name="dc.date" content="2022-11-28" />
-  <meta name="citation_publication_date" content="2022-11-28" />
+  <meta name="dc.date" content="2022-11-29" />
+  <meta name="citation_publication_date" content="2022-11-29" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -134,7 +134,7 @@ This manuscript
 ([permalink](https://greenelab.github.io/phenoplier_manuscript/v/d9edb51093d5dfbf0e5099484d8d167bacd51f14/))
 was automatically generated
 from [greenelab/phenoplier_manuscript@d9edb51](https://github.com/greenelab/phenoplier_manuscript/tree/d9edb51093d5dfbf0e5099484d8d167bacd51f14)
-on November 28, 2022.
+on November 29, 2022.
 </em></small> -->
 
 ## Authors
