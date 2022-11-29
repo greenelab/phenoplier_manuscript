@@ -56,7 +56,7 @@ confluency
 covariances
 covariate
 covariates
-crispr
+CRISPR
 crit
 Crohns
 Ctrl
@@ -109,7 +109,7 @@ GBMF
 gDNA
 Genomic
 GenomicSuperSignature
-genotype
+Genotype
 GFP
 Gibco
 GLS
@@ -141,7 +141,7 @@ Hochberg
 HSV
 HTN
 HWE
-Hypercholesterolemia
+hypercholesterolemia
 Hyperlipidemia
 hypoxia
 IBD
@@ -150,7 +150,7 @@ ICD
 IDT
 IFNa
 Iftikhar
-Illumina
+illumina
 INSIG
 INTEGRIN
 interpretability
@@ -185,8 +185,8 @@ loadings
 LPL
 LPSstimulated
 Luo
-LV
-lvs
+lv
+LVs
 MAF
 malabsorption
 Marylyn
@@ -221,9 +221,9 @@ neurodegenerative
 neurodevelopmental
 neuropsychiatric
 neutrophil
-Neutrophils
+neutrophils
 NFAT
-Nicotinic
+nicotinic
 NMR
 oC
 OLS
@@ -237,7 +237,7 @@ PCA
 PCR
 PCYT
 perturbagens
-phecode
+Phecode
 phecodes
 phenomexcan
 PhenoPLIER
@@ -247,7 +247,7 @@ PID
 Pividori
 plasmids
 pleiotropy
-PLIER
+plier
 polybrene
 polygenic
 Polymerase
@@ -287,7 +287,7 @@ revascularizations
 rheumatica
 Ritchie
 RO
-roc
+ROC
 rosuvastatin
 Salm
 SCAP
