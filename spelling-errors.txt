@@ -109,7 +109,7 @@ GBMF
 gDNA
 Genomic
 GenomicSuperSignature
-Genotype
+genotype
 GFP
 Gibco
 GLS
@@ -150,7 +150,7 @@ ICD
 IDT
 IFNa
 Iftikhar
-illumina
+Illumina
 INSIG
 INTEGRIN
 interpretability
@@ -170,7 +170,7 @@ LDL
 LDLR
 lentiCRIS
 lentiV
-Lentiviral
+lentiviral
 levothyroxine
 LINCS
 LipidSpot
@@ -179,14 +179,14 @@ lipitor
 lipoid
 lipolysis
 lipoprotein
-lipoproteins
+LIPOPROTEINS
 lisinopril
 loadings
 LPL
 LPSstimulated
 Luo
-lv
-LVs
+LV
+lvs
 MAF
 malabsorption
 Marylyn
@@ -221,7 +221,7 @@ neurodegenerative
 neurodevelopmental
 neuropsychiatric
 neutrophil
-neutrophils
+Neutrophils
 NFAT
 Nicotinic
 NMR
@@ -247,7 +247,7 @@ PID
 Pividori
 plasmids
 pleiotropy
-plier
+PLIER
 polybrene
 polygenic
 Polymerase
