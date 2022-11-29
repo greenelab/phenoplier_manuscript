@@ -56,7 +56,7 @@ confluency
 covariances
 covariate
 covariates
-CRISPR
+crispr
 crit
 Crohns
 Ctrl
@@ -107,7 +107,7 @@ fibroblasts
 func
 GBMF
 gDNA
-genomic
+Genomic
 GenomicSuperSignature
 Genotype
 GFP
@@ -179,7 +179,7 @@ lipitor
 lipoid
 lipolysis
 lipoprotein
-LIPOPROTEINS
+lipoproteins
 lisinopril
 loadings
 LPL
@@ -210,7 +210,7 @@ monocyte
 monocytes
 mononuclear
 MSigDB
-multixcan
+MultiXcan
 MVN
 myeloid
 myeloma
@@ -221,9 +221,9 @@ neurodegenerative
 neurodevelopmental
 neuropsychiatric
 neutrophil
-Neutrophils
+neutrophils
 NFAT
-nicotinic
+Nicotinic
 NMR
 oC
 OLS
@@ -247,7 +247,7 @@ PID
 Pividori
 plasmids
 pleiotropy
-PLIER
+plier
 polybrene
 polygenic
 Polymerase
@@ -281,7 +281,7 @@ repurposing
 resampled
 restimulated
 resuspended
-Reticulocyte
+reticulocyte
 reticulocytes
 revascularizations
 rheumatica
