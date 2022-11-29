@@ -141,7 +141,7 @@ Hochberg
 HSV
 HTN
 HWE
-hypercholesterolemia
+Hypercholesterolemia
 Hyperlipidemia
 hypoxia
 IBD
@@ -170,7 +170,7 @@ LDL
 LDLR
 lentiCRIS
 lentiV
-lentiviral
+Lentiviral
 levothyroxine
 LINCS
 LipidSpot
@@ -179,13 +179,13 @@ lipitor
 lipoid
 lipolysis
 lipoprotein
-LIPOPROTEINS
+lipoproteins
 lisinopril
 loadings
 LPL
 LPSstimulated
 Luo
-lv
+LV
 LVs
 MAF
 malabsorption
@@ -221,9 +221,9 @@ neurodegenerative
 neurodevelopmental
 neuropsychiatric
 neutrophil
-neutrophils
+Neutrophils
 NFAT
-nicotinic
+Nicotinic
 NMR
 oC
 OLS
@@ -237,7 +237,7 @@ PCA
 PCR
 PCYT
 perturbagens
-Phecode
+phecode
 phecodes
 phenomexcan
 PhenoPLIER
@@ -252,7 +252,7 @@ polybrene
 polygenic
 Polymerase
 polymyalgia
-PrediXcan
+predixcan
 preprocessing
 probit
 proj
@@ -287,7 +287,7 @@ revascularizations
 rheumatica
 Ritchie
 RO
-ROC
+roc
 rosuvastatin
 Salm
 SCAP
