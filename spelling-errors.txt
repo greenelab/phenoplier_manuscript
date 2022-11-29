@@ -56,7 +56,7 @@ confluency
 covariances
 covariate
 covariates
-crispr
+CRISPR
 crit
 Crohns
 Ctrl
@@ -107,9 +107,9 @@ fibroblasts
 func
 GBMF
 gDNA
-Genomic
+genomic
 GenomicSuperSignature
-genotype
+Genotype
 GFP
 Gibco
 GLS
@@ -141,8 +141,8 @@ Hochberg
 HSV
 HTN
 HWE
-hypercholesterolemia
-hyperlipidemia
+Hypercholesterolemia
+Hyperlipidemia
 hypoxia
 IBD
 ICA
@@ -170,7 +170,7 @@ LDL
 LDLR
 lentiCRIS
 lentiV
-lentiviral
+Lentiviral
 levothyroxine
 LINCS
 LipidSpot
@@ -210,7 +210,7 @@ monocyte
 monocytes
 mononuclear
 MSigDB
-MultiXcan
+multixcan
 MVN
 myeloid
 myeloma
@@ -221,7 +221,7 @@ neurodegenerative
 neurodevelopmental
 neuropsychiatric
 neutrophil
-neutrophils
+Neutrophils
 NFAT
 nicotinic
 NMR
@@ -252,7 +252,7 @@ polybrene
 polygenic
 Polymerase
 polymyalgia
-predixcan
+PrediXcan
 preprocessing
 probit
 proj
@@ -287,7 +287,7 @@ revascularizations
 rheumatica
 Ritchie
 RO
-ROC
+roc
 rosuvastatin
 Salm
 SCAP
