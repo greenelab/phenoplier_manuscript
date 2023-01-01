@@ -56,7 +56,7 @@ confluency
 covariances
 covariate
 covariates
-CRISPR
+crispr
 crit
 Crohns
 Ctrl
@@ -107,9 +107,9 @@ fibroblasts
 func
 GBMF
 gDNA
-genomic
+Genomic
 GenomicSuperSignature
-Genotype
+genotype
 GFP
 Gibco
 GLS
@@ -150,7 +150,7 @@ ICD
 IDT
 IFNa
 Iftikhar
-Illumina
+illumina
 INSIG
 INTEGRIN
 interpretability
@@ -237,7 +237,7 @@ PCA
 PCR
 PCYT
 perturbagens
-phecode
+Phecode
 phecodes
 PhenomeXcan
 PhenoPLIER
@@ -247,7 +247,7 @@ PID
 Pividori
 plasmids
 pleiotropy
-plier
+PLIER
 polybrene
 polygenic
 Polymerase

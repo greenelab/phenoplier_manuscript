@@ -109,9 +109,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/5cbf79d690d795b5a4deb8cbfbf8305c332a29cb/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/5cbf79d690d795b5a4deb8cbfbf8305c332a29cb/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/5cbf79d690d795b5a4deb8cbfbf8305c332a29cb/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/e37277b585e05f4f1c06519c374488c6311d1ae5/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/e37277b585e05f4f1c06519c374488c6311d1ae5/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/e37277b585e05f4f1c06519c374488c6311d1ae5/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -133,9 +133,9 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 <!-- 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/5cbf79d690d795b5a4deb8cbfbf8305c332a29cb/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/e37277b585e05f4f1c06519c374488c6311d1ae5/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@5cbf79d](https://github.com/greenelab/phenoplier_manuscript/tree/5cbf79d690d795b5a4deb8cbfbf8305c332a29cb)
+from [greenelab/phenoplier_manuscript@e37277b](https://github.com/greenelab/phenoplier_manuscript/tree/e37277b585e05f4f1c06519c374488c6311d1ae5)
 on January 1, 2023.
 </em></small> -->
 
@@ -425,7 +425,6 @@ Instead of looking at individual genes, this process links different traits and 
 PhenoPLIER uses LVs annotations about the specific conditions where the group of genes is expressed, such as cell types and tissues, even at specific developmental stages, disease stages or under distinct stimuli.
 Although this is not strictly necessary for PhenoPLIER to work, these annotations can dramatically improve the interpretability of results.
 MultiPLIER's models provide this information by linking LVs to samples, which may be annotated for experimental conditions (represented by matrix $\mathbf{B}$ at the top of Figure {@fig:entire_process}b) in which genes in an LV are expressed.
-<!--  -->
 An example of this is shown in Figure {@fig:entire_process}c.
 In the original MultiPLIER study, the authors reported that one of the latent variables, identified as LV603, was associated with a known neutrophil pathway and highly correlated with neutrophil count estimates from whole blood RNA-seq profiles [@doi:10.1186/s13059-016-1070-5].
 We analyzed LV603 using PhenoPLIER and found that
