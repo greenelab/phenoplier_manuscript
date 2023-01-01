@@ -56,7 +56,7 @@ confluency
 covariances
 covariate
 covariates
-CRISPR
+crispr
 crit
 Crohns
 Ctrl
@@ -107,7 +107,7 @@ fibroblasts
 func
 GBMF
 gDNA
-Genomic
+genomic
 GenomicSuperSignature
 Genotype
 GFP
@@ -142,7 +142,7 @@ HSV
 HTN
 HWE
 Hypercholesterolemia
-Hyperlipidemia
+hyperlipidemia
 hypoxia
 IBD
 ICA
@@ -221,9 +221,9 @@ neurodegenerative
 neurodevelopmental
 neuropsychiatric
 neutrophil
-Neutrophils
+neutrophils
 NFAT
-Nicotinic
+nicotinic
 NMR
 oC
 OLS
@@ -247,12 +247,12 @@ PID
 Pividori
 plasmids
 pleiotropy
-plier
+PLIER
 polybrene
 polygenic
 Polymerase
 polymyalgia
-predixcan
+PrediXcan
 preprocessing
 probit
 proj
