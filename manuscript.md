@@ -109,9 +109,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/efb9bdd559f0ed162975076087c4be08a14375fc/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/efb9bdd559f0ed162975076087c4be08a14375fc/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/efb9bdd559f0ed162975076087c4be08a14375fc/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/5cbf79d690d795b5a4deb8cbfbf8305c332a29cb/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/5cbf79d690d795b5a4deb8cbfbf8305c332a29cb/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/5cbf79d690d795b5a4deb8cbfbf8305c332a29cb/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -133,9 +133,9 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 <!-- 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/efb9bdd559f0ed162975076087c4be08a14375fc/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/5cbf79d690d795b5a4deb8cbfbf8305c332a29cb/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@efb9bdd](https://github.com/greenelab/phenoplier_manuscript/tree/efb9bdd559f0ed162975076087c4be08a14375fc)
+from [greenelab/phenoplier_manuscript@5cbf79d](https://github.com/greenelab/phenoplier_manuscript/tree/5cbf79d690d795b5a4deb8cbfbf8305c332a29cb)
 on January 1, 2023.
 </em></small> -->
 
