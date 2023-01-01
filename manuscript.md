@@ -1,10 +1,12 @@
 ---
 title: Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms
 keywords:
+- genetic studies
+- functional genomics
 - gene co-expression
-- MultiPLIER
-- PhenomeXcan
-- TWAS
+- therapeutic targets
+- drug repurposing
+- clustering of complex traits
 lang: en-US
 date-meta: '2023-01-01'
 author-meta:
@@ -107,9 +109,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/3ddb94b3194b45384ca494af5fd15e46b5e22680/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/3ddb94b3194b45384ca494af5fd15e46b5e22680/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/3ddb94b3194b45384ca494af5fd15e46b5e22680/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/1aef3e5624ae63c20d43d617126e52dce0ae4e00/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/1aef3e5624ae63c20d43d617126e52dce0ae4e00/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/1aef3e5624ae63c20d43d617126e52dce0ae4e00/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -131,9 +133,9 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 <!-- 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/3ddb94b3194b45384ca494af5fd15e46b5e22680/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/1aef3e5624ae63c20d43d617126e52dce0ae4e00/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@3ddb94b](https://github.com/greenelab/phenoplier_manuscript/tree/3ddb94b3194b45384ca494af5fd15e46b5e22680)
+from [greenelab/phenoplier_manuscript@1aef3e5](https://github.com/greenelab/phenoplier_manuscript/tree/1aef3e5624ae63c20d43d617126e52dce0ae4e00)
 on January 1, 2023.
 </em></small> -->
 

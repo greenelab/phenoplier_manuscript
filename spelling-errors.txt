@@ -56,7 +56,7 @@ confluency
 covariances
 covariate
 covariates
-crispr
+CRISPR
 crit
 Crohns
 Ctrl
@@ -107,9 +107,9 @@ fibroblasts
 func
 GBMF
 gDNA
-genomic
+Genomic
 GenomicSuperSignature
-Genotype
+genotype
 GFP
 Gibco
 GLS
@@ -142,7 +142,7 @@ HSV
 HTN
 HWE
 Hypercholesterolemia
-hyperlipidemia
+Hyperlipidemia
 hypoxia
 IBD
 ICA
@@ -170,7 +170,7 @@ LDL
 LDLR
 lentiCRIS
 lentiV
-Lentiviral
+lentiviral
 levothyroxine
 LINCS
 LipidSpot
@@ -185,7 +185,7 @@ loadings
 LPL
 LPSstimulated
 Luo
-LV
+lv
 LVs
 MAF
 malabsorption
@@ -210,7 +210,7 @@ monocyte
 monocytes
 mononuclear
 MSigDB
-MultiXcan
+multixcan
 MVN
 myeloid
 myeloma
@@ -239,7 +239,7 @@ PCYT
 perturbagens
 phecode
 phecodes
-phenomexcan
+PhenomeXcan
 PhenoPLIER
 phenotypes
 PhiX
@@ -247,7 +247,7 @@ PID
 Pividori
 plasmids
 pleiotropy
-PLIER
+plier
 polybrene
 polygenic
 Polymerase
