@@ -56,7 +56,7 @@ confluency
 covariances
 covariate
 covariates
-CRISPR
+crispr
 crit
 Crohns
 Ctrl
@@ -107,7 +107,7 @@ fibroblasts
 func
 GBMF
 gDNA
-Genomic
+genomic
 GenomicSuperSignature
 genotype
 GFP
@@ -141,7 +141,7 @@ Hochberg
 HSV
 HTN
 HWE
-Hypercholesterolemia
+hypercholesterolemia
 Hyperlipidemia
 hypoxia
 IBD
@@ -150,7 +150,7 @@ ICD
 IDT
 IFNa
 Iftikhar
-illumina
+Illumina
 INSIG
 INTEGRIN
 interpretability
@@ -179,13 +179,13 @@ lipitor
 lipoid
 lipolysis
 lipoprotein
-lipoproteins
+LIPOPROTEINS
 lisinopril
 loadings
 LPL
 LPSstimulated
 Luo
-lv
+LV
 LVs
 MAF
 malabsorption
@@ -210,7 +210,7 @@ monocyte
 monocytes
 mononuclear
 MSigDB
-multixcan
+MultiXcan
 MVN
 myeloid
 myeloma
@@ -221,7 +221,7 @@ neurodegenerative
 neurodevelopmental
 neuropsychiatric
 neutrophil
-neutrophils
+Neutrophils
 NFAT
 nicotinic
 NMR
@@ -239,7 +239,7 @@ PCYT
 perturbagens
 phecode
 phecodes
-PhenomeXcan
+phenomexcan
 PhenoPLIER
 phenotypes
 PhiX
@@ -247,7 +247,7 @@ PID
 Pividori
 plasmids
 pleiotropy
-plier
+PLIER
 polybrene
 polygenic
 Polymerase

@@ -109,9 +109,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/1aef3e5624ae63c20d43d617126e52dce0ae4e00/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/1aef3e5624ae63c20d43d617126e52dce0ae4e00/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/1aef3e5624ae63c20d43d617126e52dce0ae4e00/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/efb9bdd559f0ed162975076087c4be08a14375fc/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/efb9bdd559f0ed162975076087c4be08a14375fc/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/efb9bdd559f0ed162975076087c4be08a14375fc/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -133,9 +133,9 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 <!-- 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/1aef3e5624ae63c20d43d617126e52dce0ae4e00/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/efb9bdd559f0ed162975076087c4be08a14375fc/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@1aef3e5](https://github.com/greenelab/phenoplier_manuscript/tree/1aef3e5624ae63c20d43d617126e52dce0ae4e00)
+from [greenelab/phenoplier_manuscript@efb9bdd](https://github.com/greenelab/phenoplier_manuscript/tree/efb9bdd559f0ed162975076087c4be08a14375fc)
 on January 1, 2023.
 </em></small> -->
 
@@ -341,8 +341,6 @@ These gene-gene interactions play a crucial role in current theories of the arch
 Widespread gene pleiotropy, for instance, reveals the highly interconnected nature of transcriptional networks [@doi:10.1038/s41588-019-0481-0; @doi:10.1038/ng.3570], where potentially all genes expressed in disease-relevant cell types have a non-zero effect on the trait [@doi:10.1016/j.cell.2017.05.038; @doi:10.1016/j.cell.2019.04.014].
 One way to learn these gene-gene interactions is using the concept of gene module: a group of genes with similar expression profiles across different conditions [@pmid:22955619; @pmid:25344726; @doi:10.1038/ng.3259].
 In this context, several unsupervised approaches have been proposed to infer these gene-gene connections by extracting gene modules from co-expression patterns [@pmid:9843981; @pmid:24662387; @pmid:16333293].
-<!-- A gene module, defined as a group of genes with similar expression profiles across different conditions, can capture part of the complexity present in transcriptional programs to aid in the understanding of disease etiology [@pmid:22955619; @pmid:25344726; @doi:10.1038/ng.3259]. -->
-<!-- Clustering, for instance, is among the most popular methods [@pmid:28915372; @pmid:23467089], although it can miss patterns only present in a subset of conditions and usually cannot assign a gene to multiple modules. -->
 Matrix factorization techniques like independent or principal component analysis (ICA/PCA) have shown superior performance in this task [@doi:10.1038/s41467-018-03424-4] since they capture local expression effects from a subset of samples and can handle modules overlap effectively.
 Therefore, integrating genetic studies with gene modules extracted using unsupervised learning could further improve our understanding of disease origin [@pmid:25344726] and progression [@pmid:18631455].
 
@@ -500,11 +498,8 @@ We used a manually-curated gold standard set of drug-disease medical indications
 
 ![
 **Drug-disease prediction performance for gene-based and LV-based approaches.**
-<!--  -->
 The receiver operating characteristic (ROC) (left) and the precision-recall curves (right) for a gene-based and LV-based approach.
-<!--  -->
 AUC: area under the curve; AP: average precision.
-<!--  -->
 ](images/drug_disease_prediction/roc_pr_curves.svg "ROC-PR curves for drug-disease prediction"){#fig:drug_disease:roc_pr width="80%"}
 
 
@@ -518,7 +513,6 @@ Nicotinic acid (niacin) is a B vitamin widely used clinically to treat lipid dis
 Niacin exerts its effects on multiple tissues, although its mechanisms are not well understood [@doi:10.1016/j.amjcard.2008.02.029; @doi:10.1194/jlr.S092007; @pmid:24363242; @pmid:24713591].
 This compound can increase high-density lipoprotein (HDL) by inhibiting an HDL catabolism receptor in the liver.
 Niacin also inhibits diacylglycerol acyltransferase–2 (DGAT2), which decreases the production of low-density lipoproteins (LDL) either by modulating triglyceride synthesis in hepatocytes or by inhibiting adipocyte triglyceride lipolysis [@doi:10.1016/j.amjcard.2008.02.029].
-<!--  -->
 Niacin was one of the drugs in the gold standard set indicated for atherosclerosis (AT) and coronary artery disease (CAD).
 We observed that this compound was predicted by the gene-based and LV-based approach as a medical indication for coronary artery disease (CAD), with scores above the mean (0.51 and 0.96, respectively).
 For AT, the LV-based approach predicted niacin as a therapeutic drug with a score of 0.52, whereas the gene-based method assigned a negative score of -0.01 (below the mean).
@@ -554,7 +548,6 @@ SLE: Systemic lupus erythematosus.
 
 
 The analysis of other top niacin-contributing LVs across different cardiovascular diseases revealed additional mechanisms of action.
-<!--  -->
 For example, *GPR109A/HCAR2* encodes a G protein-coupled high-affinity niacin receptor in adipocytes and immune cells, including monocytes, macrophages, neutrophils and dendritic cells [@doi:10.1016/j.tips.2006.05.008; @doi:10.1038/sj.jid.5700586].
 It was initially thought that the antiatherogenic effects of niacin were solely due to the inhibition of lipolysis in adipose tissue.
 However, it has been shown that nicotinic acid can reduce atherosclerosis progression independently of its antidyslipidemic activity by activating *GPR109A* in immune cells [@doi:10.1172/JCI41651], thus boosting anti-inflammatory processes [@doi:10.1161/ATVBAHA.108.179283].
@@ -591,16 +584,13 @@ This compound has been very recently considered a potential therapeutic for ovar
 
 ![
 **Cluster analysis on traits using the latent gene expression representation.**
-<!--  -->
 **a)** The projection of TWAS results on 3,752 traits into the latent gene expression representation is the input data to the clustering process.
 A linear (PCA) and non-linear (UMAP) dimensionality reduction techniques were applied to the input data, and five different clustering algorithms processed all data versions.
 These algorithms derive partitions from the data using different parameters (such as the number of clusters), leading to an ensemble of 4,428 partitions.
 Then, a distance matrix is derived by counting how many times a pair of traits was grouped in different clusters across the ensemble.
 Finally, a consensus function is applied to the distance matrix to generate consolidated partitions with different numbers of clusters (from 2 to $\sqrt{n}\approx$ 60).
 These final solutions were represented in the clustering tree (Figure @fig:clustering:tree).
-<!--  -->
 **b)** The clusters found by the consensus function were used as labels to train a decision tree classifier on the original input data, which detects the LVs that better differentiate groups of traits.
-<!--  -->
 ](images/clustering/clustering_design.svg "Cluster analysis on traits"){#fig:clustering:design width="100%"}
 
 
@@ -617,7 +607,6 @@ To understand which latent variables differentiated the group of traits, we trai
 
 ![
 **Clustering tree using multiple resolutions for clusters of traits.**
-<!--  -->
 Each row represents a partition/grouping of the traits, and each circle is a cluster from that partition.
 The number of clusters goes from 5 to 29.
 Arrows indicate how traits in one cluster move across clusters from different partitions.
@@ -689,7 +678,6 @@ or LV598, whose genes were expressed in corneal endothelial cells (Supplementary
 The sub-branches of autoimmune and cardiovascular diseases merged together at $k=10$ (middle of Figure @fig:clustering:tree), so we expected to find LVs that specifically affect one or both of these types of diseases.
 For example, LV57, expressed in T cells (Supplementary Figure @fig:sup:lv57 and Supplementary Table @tbl:sup:multiplier_pathways:lv57), was the most strongly associated gene module with autoimmune disorders in PhenomeXcan (Supplementary Table @tbl:sup:phenomexcan_assocs:lv57), with significant associations with hypothyroidism that were replicated in eMERGE (@tbl:sup:emerge_assocs:lv57).
 However, this LV was also strongly associated with deep venous thrombosis in both PhenomeXcan and eMERGE.
-<!--  -->
 On the other hand, LV844 was more autoimmune-specific, with associations to polymyalgia rheumatica, type 1 diabetes, rheumatoid arthritis, and celiac disease in PhenomeXcan (Supplementary Table @tbl:sup:phenomexcan_assocs:lv844).
 However, these did not replicate in eMERGE.
 This LV was expressed in a wide range of cell types, including blood, breast organoids, myeloma cells, lung fibroblasts, and different cell types from the brain (Supplementary Figure @fig:sup:lv844 and Supplementary Table @tbl:sup:multiplier_pathways:lv844).
@@ -699,7 +687,6 @@ The cardiovascular sub-branch had 129 significant LV-trait associations in Pheno
 LV136, aligned with known collagen formation and muscle contraction pathways (Supplementary Table @tbl:sup:multiplier_pathways:lv136), was associated with coronary artery disease and keratometry measurements in PhenomeXcan (Supplementary Tables @tbl:sup:phenomexcan_assocs:lv136).
 In eMERGE, this LV was associated with coronary atherosclerosis (phecode: 411.4) (Supplementary Table @tbl:sup:emerge_assocs:lv136).
 LV136 was expressed in a wide range of cell types, including fibroblasts, mesenchymal stem cells, osteoblasts, pancreatic stellate cells, cardiomyocytes, and adipocytes (Supplementary Figure @fig:sup:lv136).
-<!--  -->
 Within the cardiovascular sub-branch, we found neuropsychiatric and neurodevelopmental disorders such as Alzheimer's disease, schizophrenia, and attention deficit hyperactivity disorder (ADHD).
 These disorders were previously linked to the cardiovascular system [@pmid:12093424; @doi:10.1161/CIRCULATIONAHA.113.002065; @doi:10.1192/bjp.bp.117.202606; @doi:10.1161/CIRCRESAHA.118.313563] and share several risk factors, including hypertension, high cholesterol, obesity, smoking, among others [@doi:10.1186/s12916-014-0206-2; @doi:10.1111/j.1076-7460.2007.06696.x].
 However, our results grouped these diseases by potentially shared transcriptional processes expressed in specific tissues/cell types.
@@ -743,8 +730,6 @@ To our knowledge, projection through a representation learned on complementary b
 We also demonstrated that clustering trees, introduced initially as a means to examine developmental processes in single-cell data, provide a multi-resolution grouping of phenotypes based on latent variable associations.
 We employed hard-partitioning algorithms (one trait belongs exclusively to one cluster) where the distance between two traits takes into account all gene modules.
 However, it is also plausible for two complex diseases to share only a few biological processes instead of being similar across most of them.
-<!-- In this portion, we used S-MultiXcan associations, which only provide the association strength between a gene and a trait, but with no direction of effect.
-This does mean that traits are grouped based on associated genes, but genes could have opposite effects on traits within the same cluster. -->
 Another important consideration is that our TWAS results were derived from a large set of GWAS of different sample sizes and qualities.
 Although the potential issues derived from this data heterogeneity were addressed before performing our cluster analyses on traits, data preprocessing steps are always challenging and might not avoid bias altogether.
 Considering groups of related diseases was previously shown to be more powerful in detecting shared genetic etiology [@doi:10.1038/ng.3985; @doi:10.1038/s41588-018-0121-0], and clustering trees provide a way to explore such relationships in the context of latent variables.
@@ -773,7 +758,6 @@ Additionally, TWAS has several limitations that can lead to false positives [@do
 Like GWAS, which generally detects groups of associated variants in linkage disequilibrium (LD), TWAS usually identifies several genes within the same locus [@doi:10.1038/s41588-018-0092-1; @doi:10.1038/ng.3367].
 This is due to sharing of GWAS variants in gene expression models, correlated expression of nearby genes, or even correlation of their predicted expression due to eQTLs in LD, among others [@doi:10.1038/s41588-019-0385-z].
 Our LV-based regression framework, however, accounts for these gene-gene correlations in TWAS reasonably well.
-<!-- Larger datasets and methods designed to learn representations with this application in mind could further refine the approach and are a promising avenue for future research. -->
 
 
 Our findings are concordant with previous studies showing that drugs with genetic support are more likely to succeed through the drug development pipeline [@doi:10.1038/ng.3314; @doi:10.1038/nn.4618].
@@ -824,7 +808,6 @@ $$ {#eq:predixcan}
 
 where $\hat{\gamma}_l$ is the estimated effect size or regression coefficient, and $\bm{\epsilon}_l$ are the error terms with variance $\sigma_{\epsilon}^{2}$.
 The significance of the association is assessed by computing the $z$-score $\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)$ for a gene's tissue model $l$.
-<!--  -->
 PrediXcan needs individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan $z$-scores using only GWAS summary statistics with the expression
 
 $$
@@ -833,7 +816,6 @@ $$ {#eq:spredixcan}
 
 where $\hat{\sigma}_a$ is the variance of SNP $a$, $\hat{\sigma}_l$ is the variance of the predicted expression of a gene in tissue $l$, and $\hat{\beta}_a$ is the estimated effect size of SNP $a$ from the GWAS.
 In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8) [@doi:10.1126/science.aaz1776] as the reference panel.
-<!--  -->
 Since S-PrediXcan provides tissue-specific direction of effects (for instance, whether a higher or lower predicted expression of a gene confers more or less disease risk), we used the $z$-scores in our drug repurposing approach (described below).
 
 S-MultiXcan [@doi:10.1371/journal.pgen.1007889], on the other hand, is the summary version of MultiXcan.
@@ -851,7 +833,6 @@ where $\mathbf{T}$ is a matrix with $p$ columns $\mathbf{t}_l$,
 $\hat{g}_l$ is the estimated effect size for the predicted gene expression in tissue $l$ (and thus $\mathbf{\hat{g}}$ is a vector with $p$ estimated effect sizes $\hat{g}_l$),
 and $\mathbf{e}$ are the error terms with variance $\sigma_{e}^{2}$.
 Given the high correlation between predicted expression values for a gene across different tissues, MultiXcan uses the principal components (PCs) of $\mathbf{T}$ to avoid collinearity issues.
-<!--  -->
 S-MultiXcan derives the joint regression estimates (effect sizes and their variances) in Equation (@eq:multixcan) using the marginal estimates from S-PrediXcan in Equation (@eq:spredixcan).
 Under the null hypothesis of no association, $\mathbf{\hat{g}}^{\top} \frac{\mathbf{T}^{\top}\mathbf{T}}{\sigma_{e}^{2}} \mathbf{\hat{g}} \sim \chi_{p}^{2}$, and therefore the significance of the association in S-MultiXcan is estimated with
 
@@ -865,7 +846,6 @@ $$ {#eq:smultixcan}
 where $\mathbf{\hat{z}}$ is a vector with $p$ $z$-scores (Equation (@eq:spredixcan)) for each tissue available for the gene,
 and $Cor(\mathbf{T})$ is the autocorrelation matrix of $\mathbf{T}$.
 Since $\mathbf{T}^{\top}\mathbf{T}$ is singular for many genes, S-MultiXcan computes the pseudo-inverse $Cor(\mathbf{T})^{+}$ using the $k$ top PCs, and thus $\mathbf{\hat{z}}^{\top} Cor(\mathbf{T})^{+} \mathbf{\hat{z}} \sim \chi_k^2$.
-<!--  -->
 To arrive at this expression, S-MultiXcan uses the conservative approximation $\sigma_{e}^{2} \approx \sigma_{\epsilon}^{2}$, that is, the variance of the error terms in the joint regression is approximately equal to the residual variance of the marginal regressions.
 Another important point is that $Cor(\mathbf{T})$ is estimated using a global genotype covariance matrix, whereas marginal $\hat{z}_l$ in Equation (@eq:spredixcan) are approximated using tissue-specific genotype covariances.
 Although S-MultiXcan yields highly concordant estimates compared with MultiXcan, results are not perfectly correlated across genes [@doi:10.1371/journal.pgen.1007889].
@@ -876,17 +856,13 @@ We used S-MultiXcan results for our LV-based regression model and our cluster an
 ### TWAS resources {#sec:methods:twas}
 
 We used two large TWAS resources from different cohorts for discovery and replication, all obtained from European ancestries.
-<!--  -->
 PhenomeXcan [@doi:10.1126/sciadv.aba2083], our discovery cohort, provides results on 4,091 traits across different categories.
 Supplemenetary File 1 has all the details about the included GWAS, sample size and disease/trait categories.
-<!--  -->
 In PhenomeXcan, these publicly available GWAS summary statistics were used to compute
 1) gene-based associations with the PrediXcan family of methods (described before), and
 2) a posterior probability of colocalization between GWAS loci and *cis*-eQTL with fastENLOC [@doi:10.1126/sciadv.aba2083; @doi:10.1016/j.ajhg.2020.11.012].
-<!--  -->
 We refer to the matrix of $z$-scores from S-PrediXcan (Equation (@eq:spredixcan)) across $q$ traits and $m$ genes in tissue $t$ as $\mathbf{M}^{t} \in \mathbb{R}^{q \times m}$.
 As explained later, matrices $\mathbf{M}^{t}$ were used in our LV-based drug repurposing framework since they provide direction of effects.
-<!--  -->
 The S-MultiXcan results (22,515 gene associations across 4,091 traits) were used in our LV-based regression framework and our cluster analyses of traits.
 For the cluster analyses, we used the $p$-values converted to $z$-scores: $\mathbf{M}=\Phi^{-1}(1 - p/2)$, where $\Phi^{-1}$ is the probit function.
 Higher $z$-scores correspond to stronger associations.
@@ -913,11 +889,9 @@ $\mathbf{Z}^{m \times l}$ are the gene loadings with $l$ latent variables,
 $\mathbf{B}^{l \times c}$ is the latent space for $c$ conditions,
 $\mathbf{U}^{p \times l}$ specifies which of the $p$ prior-information pathways in $\mathbf{C}$ are represented for each LV,
 and $\lambda_i$ are different regularization parameters used in the training step.
-<!--  -->
 $\mathbf{Z}$ is a low-dimensional representation of the gene space where each LV aligns as much as possible to prior knowledge, and it might represent either a known or novel gene module (i.e., a meaningful biological pattern) or noise.
 
 For our drug repurposing and cluster analyses, we used this model to project gene-trait (from TWAS) and gene-drug associations (from LINCS L1000) into this low-dimensional gene module space.
-<!--  -->
 For instance, TWAS associations $\mathbf{M}$ (either from S-PrediXcan or S-MultiXcan) were projected using
 
 $$
@@ -925,7 +899,6 @@ $$
 $$ {#eq:proj}
 
 where $\hat{\mathbf{M}}^{l \times q}$ is a matrix where traits are represented by gene modules instead of single genes.
-<!--  -->
 As explained later, we used the same approach to project drug-induced transcriptional profiles in LINCS L1000 to obtain a representation of drugs using gene modules.
 
 
@@ -1038,7 +1011,6 @@ Finally, for each drug-disease pair, we took the maximum prediction score across
 
 
 The same procedure was used for the LV-based approach, where we projected $\mathbf{M}^{t}$ and $\mathbf{L}$ into the gene module latent space using Equation (@eq:proj), leading to $\hat{\mathbf{M}}^t$ and $\hat{\mathbf{L}}^{l \times c}$, respectively.
-<!--  -->
 Finally, $\mathbf{D}^{t,k}=-1 \cdot \hat{\mathbf{L}}^{\top} \hat{\mathbf{M}}^{t,k}$, where in this case $k$ could be all LVs or the top 5, 10, 25 and 50 (since we have an order of magnitude less LVs than genes).
 
 
@@ -1054,7 +1026,6 @@ Finally, we projected this data matrix using Equation (@eq:proj), obtaining $\ha
 
 
 A partitioning of $\hat{\mathbf{M}}$ with $n$ traits into $k$ clusters is represented as a label vector $\pi \in \mathbb{N}^n$.
-<!--  -->
 Consensus clustering approaches consist of two steps:
 1) the generation of an ensemble $\Pi$ with $r$ partitions of the dataset: $\Pi=\{\pi_1, \pi_2, \ldots, \pi_r\}$,
 and 2) the combination of the ensemble into a consolidated solution defined as:
@@ -1067,44 +1038,32 @@ where $\mathcal{L}^i$ is a set of data indices with known cluster labels for par
 $\phi\colon \mathbb{N}^n \times \mathbb{N}^n \to \mathbb{R}$ is a function that measures the similarity between two partitions,
 and $Q$ is a measure of central tendency, such as the mean or median.
 We used the adjusted Rand index (ARI) [@doi:10.1007/BF01908075] for $\phi$ and the median for $Q$.
-<!--  -->
 To obtain $\pi^*$, we define a consensus function $\Gamma\colon \mathbb{N}^{n \times r} \to \mathbb{N}^n$ with $\Pi$ as the input.
 We used consensus functions based on the evidence accumulation clustering (EAC) paradigm [@doi:10.1109/TPAMI.2005.113], where $\Pi$ is first transformed into a distance matrix
-<!--  -->
-<!-- $\mathbf{D}_{ij} = \frac{d_{ij}}{r}$, -->
 $\mathbf{D}_{ij} = d_{ij} / r$,
-<!--  -->
 where $d_{ij}$ is the number of times traits $i$ and $j$ were grouped in different clusters across all $r$ partitions in $\Pi$.
 Then, $\Gamma$ can be any similarity-based clustering algorithm, which is applied on $\mathbf{D}$ to derive the final partition $\pi^*$.
 
 
 For the ensemble generation step, we used different algorithms to create a highly diverse set of partitions (see Figure @fig:clustering:design) since diversity is an important property for ensembles [@doi:10.1016/j.ins.2016.04.027; @doi:10.1109/TPAMI.2011.84; @doi:10.1016/j.patcog.2014.04.005].
 We used three data representations: the raw dataset, its projection into the top 50 principal components, and the embedding learned by UMAP [@arxiv:1802.03426] using 50 components.
-<!--  -->
 For each of these, we applied five clustering algorithms covering a wide range of different assumptions on the data structure: $k$-means [@Arthur2007], spectral clustering [@Ng2001], a Gaussian mixture model (GMM), hierarchical clustering, and DBSCAN [@Ester1996].
-<!--  -->
 For $k$-means, spectral clustering and GMM, we specified a range of $k$ between 2 and $\sqrt{n} \approx 60$, and for each $k$ we generated five partitions using random seeds.
-<!--  -->
 For hierarchical clustering, for each $k$, we generated four partitions using common linkage criteria: ward, complete, average and single.
-<!--  -->
 For DBSCAN, we combined different ranges for parameters $\epsilon$ (the maximum distance between two data points to be considered part of the same neighborhood) and *minPts* (the minimum number of data points in a neighborhood for a data point to be considered a core point), based on the procedure in [@doi:10.1088/1755-1315/31/1/012012].
 Specifically, we used *minPts* values from 2 to 125.
 For each data representation (raw, PCA and UMAP), we determined a plausible range of $\epsilon$ values by observing the distribution of the mean distance of the *minPts*-nearest neighbors across all data points.
 Since some combinations of *minPts* and $\epsilon$ might not produce a meaningful partition (for instance, when all points are detected as noisy or only one cluster is found), we resampled partitions generated by DBSCAN to ensure an equal representation of this algorithm in the ensemble.
-<!--  -->
 This procedure generated a final ensemble of 4,428 partitions of 3,752 traits.
 
 
 Finally, we used spectral clustering on $\mathbf{D}$ to derive the final consensus partitions.
 $\mathbf{D}$ was first transformed into a similarity matrix by applying an RBF kernel $\mathrm{exp}(-\gamma \mathbf{D}^2)$ using four different values for $\gamma$ that we empirically determined to work best.
 Therefore, for each $k$ between 2 and 60, we derived four consensus partitions and selected the one that maximized Equation (@eq:consensus:obj_func).
-<!--  -->
 We further filtered this set of 59 solutions to keep only those with an ensemble agreement larger than the 75th percentile (Supplementary Figure @fig:sup:clustering:agreement), leaving a total of 15 final consensus partitions shown in Figure @fig:clustering:tree.
 
-<!-- Clustering interpretation -->
 The input data in our clustering pipeline undergoes several linear and nonlinear transformations, including PCA, UMAP and the ensemble transformation using the EAC paradigm (distance matrix $\mathbf{D}$).
 Although consensus clustering has clear advantages for biological data [@pmid:27303057], this set of data transformations complicates the interpretation of results.
-<!--  -->
 To circumvent this, we used a supervised learning approach to detect which gene modules/LVs are the most important for each cluster of traits (Figure {@fig:clustering:design}b).
 Note that we did not use this supervised model for prediction but only to learn which features (LVs) were most discriminative for each cluster.
 For this, we used the highest resolution partition ($k$=29, although any could be used) to train a decision tree model using each of the clusters as labels and the projected data $\hat{\mathbf{M}}$ as the training samples.
@@ -1285,7 +1244,6 @@ QQ-plot in PhenomeXcan (left, discovery cohort) across 4,091 traits and 987 LVs,
 **EVOS Fluorescent Microscope Image Capture.**
 A. HepG2_lentiV2_Ctrl with no-viral transduction.
 B. HepG2_lentiV2 with viral transduction.
-<!--  -->
 ](images/crispr/figure1.png "EVOS Fluorescent Microscope Image Capture"){#fig:sup:crispr:fig1 tag="S1" width="80%"}
 
 
@@ -1293,7 +1251,6 @@ B. HepG2_lentiV2 with viral transduction.
 **Fluorescence-Activated Cell Sorting Gate Setting.**
 A. HepG2_UnStained WT.
 B. HepG2_lentiV2 with viral transduction.
-<!--  -->
 ](images/crispr/figure2.png "Fluorescence-Activated Cell Sorting Gate Setting"){#fig:sup:crispr:fig2 tag="S2" width="80%"}
 
 
@@ -1301,14 +1258,10 @@ B. HepG2_lentiV2 with viral transduction.
 **Verification of sgRNA cassette and lentiV2 transgene.**
 A. 20nt sgRNA cassette was verified in lentiV2 transduced genomic DNA population, 163 bp PCR product obtained, while WT HepG2 didn’t possess the cassette, thus, no PCR product.
 B. lentiviral-specific transgene WPRE was verified in lentiV2 transduced genomic DNA population, while no transduced WT didn’t have the transgene, therefore, no 173 bp PCR product observed.
-<!--  -->
 ](images/crispr/figure3.png "Verification of sgRNA cassette and lentiV2 transgene"){#fig:sup:crispr:fig3 tag="S3" width="80%"}
 
 
 ![
-<!-- **XXX.** -->
-<!--  -->
-<!--  -->
 ](images/crispr/table1.png "Table 1"){#fig:sup:crispr:table1 tag="S4" width="80%"}
 
 
@@ -1373,7 +1326,6 @@ and 2) the agreement of the final consensus partition with the ensemble.
 
 ![
 **Agreement of consensus partitions with ensemble.**
-<!--  -->
 A real and two simulated scenarios with no data structure are shown.
 For each scenario, one final consensus partition was derived for each $k$ from 2 to 60 ($x$-axis) following our clustering pipeline.
 For each partition, the agreement with the corresponding ensemble was computed using the ARI ($y$-axis).
@@ -1385,16 +1337,6 @@ The results of this analysis (Figure @fig:sup:clustering:agreement) show that, u
 This means, as expected, that there is no consensus among ensemble partitions generated with different clustering algorithms and data representations.
 In contrast, using the real data, the consensus clustering approach finds trait pairs that are grouped together across the different members of the ensemble.
 The partitions above the 75th percentile were considered in the main analyses, and are shown in the clustering tree in Figure @fig:clustering:tree.
-
-
-<!--
-IMPORTANT:
-
-- 59 partitions for each scenario
--   but say how many were selected for each
-- add table of stats of coassociation matrix (frequency that two pair of traits were grouped together)
-- add also heatmap showing how many times pairs of traits were grouped together
--->
 
 
 #### Cluster-specific and general transcriptional processes associated with disease
