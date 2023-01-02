@@ -4,16 +4,19 @@ on:
     inputs:
       branch:
         description: 'Branch to revise'
+        required: true
         type: string
         default: 'main'
       model:
-        description: 'Language model to use'
+        description: 'Language model to use (https://beta.openai.com/docs/models/gpt-3)'
+        required: true
         type: string
         default: 'text-davinci-003'
-      branch_suffix:
-        description: 'Branch suffix. It can be empty (default), random, timestamp or short-commit-hash'
+      branch_name:
+        description: 'Branch name where revised text will be pushed'
+        required: true
         type: string
-        default: ''
+        default: 'ai-revision-davinci'
 
 jobs:
   chatgpt-revise:
@@ -30,7 +33,6 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           AI_EDITOR_LANGUAGE_MODEL: ${{ inputs.model }}
-          AI_EDITOR_FILENAME_SECTION_MAPPING: '{"04.05.01.crispr.md": "results", "04.15.drug_disease_prediction.md": "results", "04.20.00.traits_clustering.md": "results"}'
           # More variables can be specified to control the behavior of the model:
           #  https://github.com/greenelab/manubot-ai-editor/blob/main/libs/manubot/ai_editor/env_vars.py
         run: python ci/run-manuscript-editor.py
@@ -42,6 +44,5 @@ jobs:
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           add-paths: |
             content/*.md
-          branch: ai-revision
+          branch: ${{ inputs.branch_name }}
           draft: true
-          branch-suffix: ${{ inputs.branch_suffix }}
