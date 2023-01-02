@@ -142,7 +142,7 @@ HSV
 HTN
 HWE
 hypercholesterolemia
-hyperlipidemia
+Hyperlipidemia
 hypoxia
 IBD
 ICA
@@ -185,7 +185,7 @@ loadings
 LPL
 LPSstimulated
 Luo
-LV
+lv
 LVs
 MAF
 malabsorption
@@ -221,9 +221,9 @@ neurodegenerative
 neurodevelopmental
 neuropsychiatric
 Neutrophil
-Neutrophils
+neutrophils
 NFAT
-Nicotinic
+nicotinic
 NMR
 oC
 OLS
@@ -237,7 +237,7 @@ PCA
 PCR
 PCYT
 perturbagens
-Phecode
+phecode
 phecodes
 phenomexcan
 PhenoPLIER
