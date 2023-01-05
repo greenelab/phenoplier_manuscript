@@ -109,7 +109,7 @@ GBMF
 gDNA
 Genomic
 GenomicSuperSignature
-genotype
+Genotype
 GFP
 Gibco
 GLS
@@ -150,7 +150,7 @@ ICD
 IDT
 IFNa
 Iftikhar
-Illumina
+illumina
 INSIG
 INTEGRIN
 interpretability
@@ -185,7 +185,7 @@ loadings
 LPL
 LPSstimulated
 Luo
-lv
+LV
 LVs
 MAF
 malabsorption
@@ -210,7 +210,7 @@ monocyte
 monocytes
 mononuclear
 MSigDB
-MultiXcan
+multixcan
 MVN
 myeloid
 myeloma
@@ -220,10 +220,10 @@ Nephrology
 neurodegenerative
 neurodevelopmental
 neuropsychiatric
-Neutrophil
+neutrophil
 neutrophils
 NFAT
-nicotinic
+Nicotinic
 NMR
 oC
 OLS
@@ -252,7 +252,7 @@ polybrene
 polygenic
 Polymerase
 polymyalgia
-PrediXcan
+predixcan
 preprocessing
 probit
 proj
