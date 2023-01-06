@@ -56,7 +56,7 @@ confluency
 covariances
 covariate
 covariates
-crispr
+CRISPR
 crit
 Crohns
 Ctrl
@@ -109,7 +109,7 @@ GBMF
 gDNA
 Genomic
 GenomicSuperSignature
-Genotype
+genotype
 GFP
 Gibco
 GLS
@@ -141,7 +141,7 @@ Hochberg
 HSV
 HTN
 HWE
-hypercholesterolemia
+Hypercholesterolemia
 Hyperlipidemia
 hypoxia
 IBD
@@ -150,7 +150,7 @@ ICD
 IDT
 IFNa
 Iftikhar
-illumina
+Illumina
 INSIG
 INTEGRIN
 interpretability
@@ -210,7 +210,7 @@ monocyte
 monocytes
 mononuclear
 MSigDB
-multixcan
+MultiXcan
 MVN
 myeloid
 myeloma
@@ -252,7 +252,7 @@ polybrene
 polygenic
 Polymerase
 polymyalgia
-predixcan
+PrediXcan
 preprocessing
 probit
 proj
@@ -281,13 +281,13 @@ repurposing
 resampled
 restimulated
 resuspended
-reticulocyte
+Reticulocyte
 reticulocytes
 revascularizations
 rheumatica
 Ritchie
 RO
-ROC
+roc
 rosuvastatin
 Salm
 SCAP
