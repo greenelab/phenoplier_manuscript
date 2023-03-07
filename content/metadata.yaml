@@ -1,5 +1,6 @@
 ---
 title: "Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms"
+date: null  # Defaults to date generated, but can specify like '2022-10-31'.
 keywords:
   - genetic studies
   - functional genomics
@@ -14,6 +15,8 @@ authors:
     initials: MP
     orcid: 0000-0002-3035-4403
     twitter: miltondp
+    mastodon: miltondp
+    mastodon-server: genomic.social
     email: miltondp@gmail.com
     affiliations:
       - Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
@@ -21,6 +24,7 @@ authors:
       - The Gordon and Betty Moore Foundation GBMF 4552
       - The National Human Genome Research Institute (R01 HG010067)
       - The National Human Genome Research Institute (K99HG011898)
+      - The Eunice Kennedy Shriver National Institute of Child Health and Human Development (R01 HD109765)
   
   - name: Sumei Lu
     affiliations:
@@ -111,6 +115,8 @@ authors:
     initials: CSG
     orcid: 0000-0001-8713-9213
     twitter: GreeneScientist
+    mastodon: greenescientist
+    mastodon-server: genomic.social
     email: casey.s.greene@cuanschutz.edu
     affiliations:
       - Center for Health AI, University of Colorado School of Medicine, Aurora, CO 80045, USA
@@ -119,4 +125,5 @@ authors:
       - The Gordon and Betty Moore Foundation (GBMF 4552)
       - The National Human Genome Research Institute (R01 HG010067)
       - The National Cancer Institute (R01 CA237170)
+      - The Eunice Kennedy Shriver National Institute of Child Health and Human Development (R01 HD109765)
     corresponding: true
