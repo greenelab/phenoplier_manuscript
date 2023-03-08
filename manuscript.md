@@ -41,8 +41,8 @@ header-includes: |
   <meta name="dc.date" content="2023-03-08" />
   <meta name="citation_publication_date" content="2023-03-08" />
   <meta property="article:published_time" content="2023-03-08" />
-  <meta name="dc.modified" content="2023-03-08T14:38:18+00:00" />
-  <meta property="article:modified_time" content="2023-03-08T14:38:18+00:00" />
+  <meta name="dc.modified" content="2023-03-08T21:49:50+00:00" />
+  <meta property="article:modified_time" content="2023-03-08T21:49:50+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -113,9 +113,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/942a23ae5f75e3c6d7663afb742fb3f3221f756b/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/942a23ae5f75e3c6d7663afb742fb3f3221f756b/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/942a23ae5f75e3c6d7663afb742fb3f3221f756b/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/8e6dd96f72daa9ac7a4c17f610d41b2d274e9c07/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/8e6dd96f72daa9ac7a4c17f610d41b2d274e9c07/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/8e6dd96f72daa9ac7a4c17f610d41b2d274e9c07/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -137,9 +137,9 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 <!-- 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/942a23ae5f75e3c6d7663afb742fb3f3221f756b/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/8e6dd96f72daa9ac7a4c17f610d41b2d274e9c07/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@942a23a](https://github.com/greenelab/phenoplier_manuscript/tree/942a23ae5f75e3c6d7663afb742fb3f3221f756b)
+from [greenelab/phenoplier_manuscript@8e6dd96](https://github.com/greenelab/phenoplier_manuscript/tree/8e6dd96f72daa9ac7a4c17f610d41b2d274e9c07)
 on March 8, 2023.
 </em></small> -->
 
@@ -391,8 +391,9 @@ Air pollution linked to neurodegeneration markers
 
 ![
 **Schematic of the PhenoPLIER framework.**
-**a)** High-level schematic of PhenoPLIER (a gene module-based method) in the context of TWAS (single-gene) and GWAS (genetic variants).
+**a)** High-level schematic of PhenoPLIER (a gene module-based method) in the context of TWAS (single-gene) and GWAS (single-variant).
 PhenoPLIER integrates groups of genes co-expressed in specific cell types (gene modules) with gene-trait and gene-drug associations.
+At the bottom-right corner, we show how a drug downregulates two genes (A and C) that are part of the disease-associated Gene module 1.
 **b)** The integration consists of projecting gene-trait/gene-drug associations from PhenomeXcan/LINCS L1000 (bottom) to a latent space based on gene modules (represented by latent variables/LVs) from MultiPLIER (top).
 This process generates matrices $\mathbf{\hat{L}}$ and $\mathbf{\hat{M}}$, where LVs now describe each drug/trait.
 In the middle, we show the three main computational components provided by PhenoPLIER to perform this integration:
@@ -401,6 +402,7 @@ In the middle, we show the three main computational components provided by Pheno
 and 3) an LV-based drug repurposing approach.
 **c)** LV603, termed as a neutrophil signature in the original MultiPLIER study, was associated in PhenoPLIER with neutrophil counts and other white blood cells (bottom, showing the top 10 traits for LV603 after projecting gene-trait associations in PhenomeXcan).
 Genes that are part of LV603 were expressed in relevant cell types (top).
+MVN: multivariate normal distribution;
 PBMC: peripheral blood mononuclear cells;
 mDCs: myeloid dendritic cells.
 ](images/entire_process/entire_process.svg "PhenoPLIER framework"){#fig:entire_process width="100%"}
