@@ -1,11 +1,10 @@
 To export the odg to svg:
-1. Export to PDF from Draw, selecting lossless compression and unchecking
-reduce image resolution.
-1. Open PDF with Inkscape using the poppler importer.
+1. Export to PDF from Draw, selecting lossless compression and unchecking reduce image resolution.
+2. Open PDF with Inkscape using the poppler importer.
 Not needed now:
-    1. Add white-filled rectangle and clip to content to crop.
-    1. Check that nothing was wrongly cropped.
-    1. Resize page.
-1. Save as svg
-1. Remove PDF
+    a. Add white-filled rectangle and clip to content to crop.
+    b. Check that nothing was wrongly cropped.
+    c. Resize page.
+3. Save as svg
+4. Remove PDF
 
