@@ -8,7 +8,7 @@ keywords:
 - drug repurposing
 - clustering of complex traits
 lang: en-US
-date-meta: '2023-01-06'
+date-meta: '2023-03-08'
 author-meta:
 - Milton Pividori
 - Sumei Lu
@@ -27,18 +27,22 @@ author-meta:
 - Marylyn D. Ritchie
 - Struan F.A. Grant
 - Casey S. Greene
-header-includes: |-
+header-includes: |
   <!--
   Manubot generated metadata rendered from header-includes-template.html.
   Suggest improvements at https://github.com/manubot/manubot/blob/main/manubot/process/header-includes-template.html
   -->
   <meta name="dc.format" content="text/html" />
+  <meta property="og:type" content="article" />
   <meta name="dc.title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta name="citation_title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="og:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
-  <meta name="dc.date" content="2023-01-06" />
-  <meta name="citation_publication_date" content="2023-01-06" />
+  <meta name="dc.date" content="2023-03-08" />
+  <meta name="citation_publication_date" content="2023-03-08" />
+  <meta property="article:published_time" content="2023-03-08" />
+  <meta name="dc.modified" content="2023-03-08T14:38:18+00:00" />
+  <meta property="article:modified_time" content="2023-03-08T14:38:18+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -109,9 +113,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/6c7e35d0f284b4e1a310b8191d224feb12ec2558/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/6c7e35d0f284b4e1a310b8191d224feb12ec2558/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/6c7e35d0f284b4e1a310b8191d224feb12ec2558/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/942a23ae5f75e3c6d7663afb742fb3f3221f756b/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/942a23ae5f75e3c6d7663afb742fb3f3221f756b/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/942a23ae5f75e3c6d7663afb742fb3f3221f756b/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -133,11 +137,13 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 <!-- 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/6c7e35d0f284b4e1a310b8191d224feb12ec2558/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/942a23ae5f75e3c6d7663afb742fb3f3221f756b/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@6c7e35d](https://github.com/greenelab/phenoplier_manuscript/tree/6c7e35d0f284b4e1a310b8191d224feb12ec2558)
-on January 6, 2023.
+from [greenelab/phenoplier_manuscript@942a23a](https://github.com/greenelab/phenoplier_manuscript/tree/942a23ae5f75e3c6d7663afb742fb3f3221f756b)
+on March 8, 2023.
 </em></small> -->
+
+
 
 ## Authors
 
@@ -151,10 +157,12 @@ on January 6, 2023.
     [miltondp](https://github.com/miltondp)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
     [miltondp](https://twitter.com/miltondp)
+    · ![Mastodon icon](images/mastodon.svg){.inline_icon}
+    [\@miltondp@genomic.social](https://genomic.social/@miltondp)
     <br>
   <small>
      Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
-     · Funded by The Gordon and Betty Moore Foundation GBMF 4552; The National Human Genome Research Institute (R01 HG010067); The National Human Genome Research Institute (K99HG011898)
+     · Funded by The Gordon and Betty Moore Foundation GBMF 4552; The National Human Genome Research Institute (R01 HG010067); The National Human Genome Research Institute (K99HG011898); The Eunice Kennedy Shriver National Institute of Child Health and Human Development (R01 HD109765)
   </small>
 
 + **Sumei Lu**
@@ -293,10 +301,12 @@ on January 6, 2023.
     [cgreene](https://github.com/cgreene)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
     [GreeneScientist](https://twitter.com/GreeneScientist)
+    · ![Mastodon icon](images/mastodon.svg){.inline_icon}
+    [\@greenescientist@genomic.social](https://genomic.social/@greenescientist)
     <br>
   <small>
      Center for Health AI, University of Colorado School of Medicine, Aurora, CO 80045, USA; Department of Biomedical Informatics, University of Colorado School of Medicine, Aurora, CO 80045, USA
-     · Funded by The Gordon and Betty Moore Foundation (GBMF 4552); The National Human Genome Research Institute (R01 HG010067); The National Cancer Institute (R01 CA237170)
+     · Funded by The Gordon and Betty Moore Foundation (GBMF 4552); The National Human Genome Research Institute (R01 HG010067); The National Cancer Institute (R01 CA237170); The Eunice Kennedy Shriver National Institute of Child Health and Human Development (R01 HD109765)
   </small>
 
 
@@ -1877,3 +1887,4 @@ Table: Significant trait associations of LV21 in PhenomeXcan. {#tbl:sup:phenomex
 
 Table: Significant trait associations of LV21 in eMERGE. {#tbl:sup:emerge_assocs:lv21}
 <!-- LV21:emerge_traits_assocs:end -->
+

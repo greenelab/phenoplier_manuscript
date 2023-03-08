@@ -129,6 +129,7 @@ hayfever
 HB
 HC
 HCAR
+HD
 HDL
 heatmap
 hematocrit
@@ -141,8 +142,8 @@ Hochberg
 HSV
 HTN
 HWE
-Hypercholesterolemia
-Hyperlipidemia
+hypercholesterolemia
+hyperlipidemia
 hypoxia
 IBD
 ICA
@@ -150,7 +151,7 @@ ICD
 IDT
 IFNa
 Iftikhar
-Illumina
+illumina
 INSIG
 INTEGRIN
 interpretability
@@ -185,7 +186,7 @@ loadings
 LPL
 LPSstimulated
 Luo
-LV
+lv
 LVs
 MAF
 malabsorption
@@ -221,7 +222,7 @@ neurodegenerative
 neurodevelopmental
 neuropsychiatric
 neutrophil
-neutrophils
+Neutrophils
 NFAT
 Nicotinic
 NMR
@@ -281,13 +282,13 @@ repurposing
 resampled
 restimulated
 resuspended
-Reticulocyte
+reticulocyte
 reticulocytes
 revascularizations
 rheumatica
 Ritchie
 RO
-roc
+ROC
 rosuvastatin
 Salm
 SCAP
@@ -299,6 +300,7 @@ seropositiverheumatoid
 SGBS
 sgRNA
 sgRNAs
+Shriver
 SIG
 simvastatin
 Skarke
