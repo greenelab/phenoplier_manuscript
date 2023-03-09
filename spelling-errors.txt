@@ -97,6 +97,7 @@ erythropoiesis
 escenarios
 EVOS
 ExTaq
+FAC
 FACS
 FACSJazz
 fastENLOC
@@ -108,7 +109,7 @@ fibroblasts
 func
 GBMF
 gDNA
-genomic
+Genomic
 GenomicSuperSignature
 genotype
 GFP
@@ -152,7 +153,7 @@ ICD
 IDT
 IFNa
 Iftikhar
-illumina
+Illumina
 INSIG
 INTEGRIN
 interpretability
@@ -187,7 +188,7 @@ loadings
 LPL
 LPSstimulated
 Luo
-LV
+lv
 LVs
 MAF
 malabsorption
@@ -225,7 +226,7 @@ neuropsychiatric
 neutrophil
 neutrophils
 NFAT
-nicotinic
+Nicotinic
 NMR
 oC
 OLS
@@ -246,6 +247,7 @@ PhenoPLIER
 phenotypes
 PhiX
 PID
+pipetting
 Pividori
 plasmids
 pleiotropy
@@ -289,7 +291,7 @@ revascularizations
 rheumatica
 Ritchie
 RO
-roc
+ROC
 rosuvastatin
 Salm
 SCAP
