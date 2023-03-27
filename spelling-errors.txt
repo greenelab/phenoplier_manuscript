@@ -25,6 +25,7 @@ barcoded
 basophil
 Basophill
 basophils
+bdsullivan
 Behmel
 Benecol
 Benjamini
@@ -33,6 +34,7 @@ Biobank
 biomechanics
 BioRender
 Biotium
+blairdsullivan
 BLCAP
 BMI
 Brunello
@@ -109,7 +111,7 @@ fibroblasts
 func
 GBMF
 gDNA
-Genomic
+genomic
 GenomicSuperSignature
 genotype
 GFP
@@ -144,7 +146,7 @@ Hochberg
 HSV
 HTN
 HWE
-Hypercholesterolemia
+hypercholesterolemia
 Hyperlipidemia
 hypoxia
 IBD
@@ -182,13 +184,13 @@ lipitor
 lipoid
 lipolysis
 lipoprotein
-lipoproteins
+LIPOPROTEINS
 lisinopril
 loadings
 LPL
 LPSstimulated
 Luo
-lv
+LV
 LVs
 MAF
 malabsorption
@@ -240,9 +242,9 @@ PCA
 PCR
 PCYT
 perturbagens
-phecode
+Phecode
 phecodes
-phenomexcan
+PhenomeXcan
 PhenoPLIER
 phenotypes
 PhiX
@@ -251,7 +253,7 @@ pipetting
 Pividori
 plasmids
 pleiotropy
-PLIER
+plier
 polybrene
 polygenic
 Polymerase

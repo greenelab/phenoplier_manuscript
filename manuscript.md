@@ -8,7 +8,7 @@ keywords:
 - drug repurposing
 - clustering of complex traits
 lang: en-US
-date-meta: '2023-03-09'
+date-meta: '2023-03-27'
 author-meta:
 - Milton Pividori
 - Sumei Lu
@@ -38,11 +38,11 @@ header-includes: |
   <meta name="citation_title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="og:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
-  <meta name="dc.date" content="2023-03-09" />
-  <meta name="citation_publication_date" content="2023-03-09" />
-  <meta property="article:published_time" content="2023-03-09" />
-  <meta name="dc.modified" content="2023-03-09T13:51:35+00:00" />
-  <meta property="article:modified_time" content="2023-03-09T13:51:35+00:00" />
+  <meta name="dc.date" content="2023-03-27" />
+  <meta name="citation_publication_date" content="2023-03-27" />
+  <meta property="article:published_time" content="2023-03-27" />
+  <meta name="dc.modified" content="2023-03-27T17:29:04+00:00" />
+  <meta property="article:modified_time" content="2023-03-27T17:29:04+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -80,6 +80,8 @@ header-includes: |
   <meta name="citation_author_institution" content="Northwestern University" />
   <meta name="citation_author" content="Blair D. Sullivan" />
   <meta name="citation_author_institution" content="School of Computing, University of Utah, Salt Lake City, UT, USA" />
+  <meta name="citation_author_orcid" content="0000-0001-7720-6208" />
+  <meta name="twitter:creator" content="@blairdsullivan" />
   <meta name="citation_author" content="Benjamin F. Voight" />
   <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
   <meta name="citation_author_institution" content="Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
@@ -113,9 +115,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/b1593a9a619ae56b495ba7ba6a664c4ab01eb23d/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/b1593a9a619ae56b495ba7ba6a664c4ab01eb23d/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/b1593a9a619ae56b495ba7ba6a664c4ab01eb23d/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/6199a0927eb1c4964f0f79569e47b4e2c26937a7/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/6199a0927eb1c4964f0f79569e47b4e2c26937a7/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/6199a0927eb1c4964f0f79569e47b4e2c26937a7/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -137,10 +139,10 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 <!-- 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/b1593a9a619ae56b495ba7ba6a664c4ab01eb23d/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/6199a0927eb1c4964f0f79569e47b4e2c26937a7/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@b1593a9](https://github.com/greenelab/phenoplier_manuscript/tree/b1593a9a619ae56b495ba7ba6a664c4ab01eb23d)
-on March 9, 2023.
+from [greenelab/phenoplier_manuscript@6199a09](https://github.com/greenelab/phenoplier_manuscript/tree/6199a0927eb1c4964f0f79569e47b4e2c26937a7)
+on March 27, 2023.
 </em></small> -->
 
 
@@ -243,6 +245,13 @@ on March 9, 2023.
 
 + **Blair D. Sullivan**
   <br>
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
+    [0000-0001-7720-6208](https://orcid.org/0000-0001-7720-6208)
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
+    [bdsullivan](https://github.com/bdsullivan)
+    · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
+    [blairdsullivan](https://twitter.com/blairdsullivan)
+    <br>
   <small>
      School of Computing, University of Utah, Salt Lake City, UT, USA
   </small>
@@ -392,16 +401,19 @@ Air pollution linked to neurodegeneration markers
 ![
 **Schematic of the PhenoPLIER framework.**
 **a)** High-level schematic of PhenoPLIER (a gene module-based method) in the context of TWAS (single-gene) and GWAS (single-variant).
-PhenoPLIER integrates groups of genes co-expressed in specific cell types (gene modules) with gene-trait and gene-drug associations.
-At the bottom-right corner, we show how a drug downregulates two genes (A and C) that are part of the disease-associated Gene module 1.
-**b)** The integration consists of projecting gene-trait/gene-drug associations from PhenomeXcan/LINCS L1000 (bottom) to a latent space based on gene modules (represented by latent variables/LVs) from MultiPLIER (top).
-This process generates matrices $\mathbf{\hat{L}}$ and $\mathbf{\hat{M}}$, where LVs now describe each drug/trait.
-In the middle, we show the three main computational components provided by PhenoPLIER to perform this integration:
-1) an LV-based regression model,
-2) a clustering framework to learn groups of traits,
-and 3) an LV-based drug repurposing approach.
-**c)** LV603, termed as a neutrophil signature in the original MultiPLIER study, was associated in PhenoPLIER with neutrophil counts and other white blood cells (bottom, showing the top 10 traits for LV603 after projecting gene-trait associations in PhenomeXcan).
-Genes that are part of LV603 were expressed in relevant cell types (top).
+In GWAS, we identify variants associated with traits.
+In TWAS, first, we identify variants that are associated with gene expression levels (eQTLs); then, prediction models based on eQTLs are used to impute gene expression, which is used to compute gene-trait associations.
+Resources such as LINCS L1000 provide information about how a drug perturbs gene expression; at the bottom-right corner, we show how a drug downregulates two genes (A and C).
+In PhenoPLIER, these data types are integrated using groups of genes co-expressed across one or more conditions (such as cell types) that we call gene modules or latent variables/LVs.
+**b)** The integration process in PhenoPLIER uses low-dimensional representations (matrices $\mathbf{Z}$ and $\mathbf{B}$) learned from large gene expression datasets (top).
+We used gene-drug information $\mathbf{L}$ from LINCS L1000 and gene-trait associations $\mathbf{M}$ from TWAS: PhenomeXcan was used as the discovery cohort, and eMERGE as replication (middle).
+PhenoPLIER provides three computational components (bottom):
+1) an LV-based regression model that associates an LV $j$ ($\mathbf{Z}_j$) with a trait $i$ ($\mathbf{M}_i$),
+2) a clustering framework that learns groups of traits from TWAS associations projected into the LV space ($\hat{\mathbf{M}}$),
+and 3) an LV-based drug repurposing approach that uses the projection of TWAS ($\hat{\mathbf{M}}$) and LINCS L1000 ($\hat{\mathbf{L}}$) into the LV space.
+**c)** Genes that are part of LV603, termed as a neutrophil signature [@doi:10.1016/j.cels.2019.04.003], were expressed in relevant cell types (top).
+LV603 was associated in PhenoPLIER with neutrophil counts and other white blood cells (bottom, showing the top 10 traits for LV603 after projecting gene-trait associations in PhenomeXcan).
+eQTLs: expression quantitative trait loci;
 MVN: multivariate normal distribution;
 PBMC: peripheral blood mononuclear cells;
 mDCs: myeloid dendritic cells.
@@ -409,8 +421,8 @@ mDCs: myeloid dendritic cells.
 
 
 PhenoPLIER is a flexible computational framework that combines gene-trait and gene-drug associations with gene modules expressed in specific contexts (Figure {@fig:entire_process}a).
-The approach uses a latent representation (with latent variables or LVs representing gene modules) derived from a large gene expression compendium (Figure {@fig:entire_process}b, top) to integrate TWAS with drug-induced transcriptional responses (Figure {@fig:entire_process}b, bottom) for a joint analysis.
-The approach consists in three main components (Figure {@fig:entire_process}b, middle, see [Methods](#sec:methods)):
+The approach uses a latent representation (with latent variables or LVs representing gene modules) derived from a large gene expression compendium (Figure {@fig:entire_process}b, top) to integrate TWAS with drug-induced transcriptional responses (Figure {@fig:entire_process}b, middle) for a joint analysis.
+The approach consists in three main components (Figure {@fig:entire_process}b, bottom, see [Methods](#sec:methods)):
 1) an LV-based regression model to compute an association between an LV and a trait,
 2) a clustering framework to learn groups of traits with shared transcriptomic properties,
 and 3) an LV-based drug repurposing approach that links diseases to potential treatments.
