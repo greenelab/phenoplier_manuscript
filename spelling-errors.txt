@@ -113,7 +113,7 @@ GBMF
 gDNA
 Genomic
 GenomicSuperSignature
-Genotype
+genotype
 GFP
 Gibco
 GLS
@@ -146,8 +146,8 @@ Hochberg
 HSV
 HTN
 HWE
-Hypercholesterolemia
-hyperlipidemia
+hypercholesterolemia
+Hyperlipidemia
 hypoxia
 IBD
 ICA
@@ -184,14 +184,14 @@ lipitor
 lipoid
 lipolysis
 lipoprotein
-lipoproteins
+LIPOPROTEINS
 lisinopril
 loadings
 LPL
 LPSstimulated
 Luo
-LV
-lvs
+lv
+LVs
 MAF
 malabsorption
 Marylyn
@@ -244,7 +244,7 @@ PCYT
 perturbagens
 phecode
 phecodes
-phenomexcan
+PhenomeXcan
 PhenoPLIER
 phenotypes
 PhiX
@@ -258,7 +258,7 @@ polybrene
 polygenic
 Polymerase
 polymyalgia
-PrediXcan
+predixcan
 preprocessing
 probit
 proj
@@ -287,7 +287,7 @@ repurposing
 resampled
 restimulated
 resuspended
-reticulocyte
+Reticulocyte
 reticulocytes
 revascularizations
 rheumatica

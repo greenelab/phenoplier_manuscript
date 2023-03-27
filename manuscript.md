@@ -41,8 +41,8 @@ header-includes: |
   <meta name="dc.date" content="2023-03-27" />
   <meta name="citation_publication_date" content="2023-03-27" />
   <meta property="article:published_time" content="2023-03-27" />
-  <meta name="dc.modified" content="2023-03-27T18:19:42+00:00" />
-  <meta property="article:modified_time" content="2023-03-27T18:19:42+00:00" />
+  <meta name="dc.modified" content="2023-03-27T19:49:22+00:00" />
+  <meta property="article:modified_time" content="2023-03-27T19:49:22+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -115,9 +115,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/5608735666076fdb5223123a73b7c71896f2f6bc/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/5608735666076fdb5223123a73b7c71896f2f6bc/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/5608735666076fdb5223123a73b7c71896f2f6bc/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/a76d581dc1abb5e92063378f74f26ee653e30702/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/a76d581dc1abb5e92063378f74f26ee653e30702/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/a76d581dc1abb5e92063378f74f26ee653e30702/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -139,9 +139,9 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 <!-- 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/5608735666076fdb5223123a73b7c71896f2f6bc/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/a76d581dc1abb5e92063378f74f26ee653e30702/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@5608735](https://github.com/greenelab/phenoplier_manuscript/tree/5608735666076fdb5223123a73b7c71896f2f6bc)
+from [greenelab/phenoplier_manuscript@a76d581](https://github.com/greenelab/phenoplier_manuscript/tree/a76d581dc1abb5e92063378f74f26ee653e30702)
 on March 27, 2023.
 </em></small> -->
 
@@ -159,7 +159,7 @@ on March 27, 2023.
     [miltondp](https://github.com/miltondp)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
     [miltondp](https://twitter.com/miltondp)
-    · ![Mastodon icon](images/mastodon.svg){.inline_icon}
+    · ![Mastodon icon](images/mastodon.svg){.inline_icon width=16 height=16}
     [\@miltondp@genomic.social](https://genomic.social/@miltondp)
     <br>
   <small>
@@ -310,7 +310,7 @@ on March 27, 2023.
     [cgreene](https://github.com/cgreene)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
     [GreeneScientist](https://twitter.com/GreeneScientist)
-    · ![Mastodon icon](images/mastodon.svg){.inline_icon}
+    · ![Mastodon icon](images/mastodon.svg){.inline_icon width=16 height=16}
     [\@greenescientist@genomic.social](https://genomic.social/@greenescientist)
     <br>
   <small>
