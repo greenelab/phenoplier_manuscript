@@ -41,8 +41,8 @@ header-includes: |
   <meta name="dc.date" content="2023-03-27" />
   <meta name="citation_publication_date" content="2023-03-27" />
   <meta property="article:published_time" content="2023-03-27" />
-  <meta name="dc.modified" content="2023-03-27T17:29:04+00:00" />
-  <meta property="article:modified_time" content="2023-03-27T17:29:04+00:00" />
+  <meta name="dc.modified" content="2023-03-27T18:19:42+00:00" />
+  <meta property="article:modified_time" content="2023-03-27T18:19:42+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -115,9 +115,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/6199a0927eb1c4964f0f79569e47b4e2c26937a7/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/6199a0927eb1c4964f0f79569e47b4e2c26937a7/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/6199a0927eb1c4964f0f79569e47b4e2c26937a7/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/5608735666076fdb5223123a73b7c71896f2f6bc/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/5608735666076fdb5223123a73b7c71896f2f6bc/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/5608735666076fdb5223123a73b7c71896f2f6bc/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -139,9 +139,9 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 <!-- 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/6199a0927eb1c4964f0f79569e47b4e2c26937a7/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/5608735666076fdb5223123a73b7c71896f2f6bc/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@6199a09](https://github.com/greenelab/phenoplier_manuscript/tree/6199a0927eb1c4964f0f79569e47b4e2c26937a7)
+from [greenelab/phenoplier_manuscript@5608735](https://github.com/greenelab/phenoplier_manuscript/tree/5608735666076fdb5223123a73b7c71896f2f6bc)
 on March 27, 2023.
 </em></small> -->
 
@@ -1437,8 +1437,8 @@ Table: Pathways aligned to LV246 from the MultiPLIER models. {#tbl:sup:multiplie
 <!-- LV246:multiplier_pathways:end -->
 
 <!-- LV246:phenomexcan_traits_assocs:start -->
-| Trait description                                                                          | Sample size   | Cases   | FDR            |
-|:-------------------------------------------------------------------------------------------|:--------------|:--------|:---------------|
+| Trait description                                                                                       | Sample size   | Cases         | FDR            |
+|:--------------------------------------------------------------------------------------------------------|:--------------|:--------------|:---------------|
 | Triglycerides NMR                                                                          | 21,559        |         | 1.66e&#8209;26 |
 | LDL Cholesterol NMR                                                                        | 13,527        |         | 3.92e&#8209;26 |
 | High cholesterol (self-reported)                                                           | 361,141       | 43,957  | 1.08e&#8209;24 |
@@ -1717,35 +1717,35 @@ Table: Pathways aligned to LV57 from the MultiPLIER models. {#tbl:sup:multiplier
 <!-- LV57:multiplier_pathways:end -->
 
 <!-- LV57:phenomexcan_traits_assocs:start -->
-| Trait description                                                                                                          | Sample size   | Cases   | FDR            |
-|:---------------------------------------------------------------------------------------------------------------------------|:--------------|:--------|:---------------|
-| Non-cancer illness code, self-reported: deep venous thrombosis (dvt)                                                       | 361,141       | 7,237   | 1.76e&#8209;13 |
-| Blood clot, DVT, bronchitis, emphysema, asthma, rhinitis, eczema, allergy diagnosed by doctor: Blood clot in the leg (DVT) | 360,527       | 7,386   | 1.22e&#8209;12 |
-| Diagnoses - main ICD10: I80 Phlebitis and thrombophlebitis                                                                 | 361,194       | 2,289   | 7.62e&#8209;12 |
-| DVT of lower extremities                                                                                                   | 361,194       | 2,116   | 1.27e&#8209;09 |
-| Venous thromboembolism                                                                                                     | 361,194       | 4,620   | 2.28e&#8209;08 |
-| DVT of lower extremities and pulmonary embolism                                                                            | 361,194       | 4,319   | 4.36e&#8209;08 |
-| Inflammatory Bowel Disease                                                                                                 | 34,652        | 12,882  | 1.95e&#8209;05 |
-| hypothyroidism (self-reported)                                                                                             | 361,141       | 17,574  | 3.84e&#8209;05 |
-| Medication: levothyroxine sodium                                                                                           | 361,141       | 14,689  | 8.43e&#8209;05 |
-| Mouth/teeth dental problems: Mouth ulcers                                                                                  | 359,841       | 36,831  | 1.02e&#8209;03 |
-| Crohns Disease                                                                                                             | 20,833        | 5,956   | 1.02e&#8209;02 |
-| Facial ageing                                                                                                              | 330,409       |         | 1.04e&#8209;02 |
-| Ulcerative Colitis                                                                                                         | 27,432        | 6,968   | 1.27e&#8209;02 |
-| Hair colour (natural, before greying): Black                                                                               | 360,270       | 15,809  | 1.99e&#8209;02 |
-| Hair colour (natural, before greying): Light brown                                                                         | 360,270       | 147,560 | 4.69e&#8209;02 |
+| Trait description                                                                                       | Sample size   | Cases         | FDR            |
+|:--------------------------------------------------------------------------------------------------------|:--------------|:--------------|:---------------|
+| Non-cancer illness code, self-reported: deep venous thrombosis (dvt)                                                       | 361,141       | 7,237         | 1.76e&#8209;13 |
+| Blood clot, DVT, bronchitis, emphysema, asthma, rhinitis, eczema, allergy diagnosed by doctor: Blood clot in the leg (DVT) | 360,527       | 7,386         | 1.22e&#8209;12 |
+| Diagnoses - main ICD10: I80 Phlebitis and thrombophlebitis                                                                 | 361,194       | 2,289         | 7.62e&#8209;12 |
+| DVT of lower extremities                                                                                                   | 361,194       | 2,116         | 1.27e&#8209;09 |
+| Venous thromboembolism                                                                                                     | 361,194       | 4,620         | 2.28e&#8209;08 |
+| DVT of lower extremities and pulmonary embolism                                                                            | 361,194       | 4,319         | 4.36e&#8209;08 |
+| Inflammatory Bowel Disease                                                                                                 | 34,652        | 12,882        | 1.95e&#8209;05 |
+| hypothyroidism (self-reported)                                                                                             | 361,141       | 17,574        | 3.84e&#8209;05 |
+| Medication: levothyroxine sodium                                                                                           | 361,141       | 14,689        | 8.43e&#8209;05 |
+| Mouth/teeth dental problems: Mouth ulcers                                                                                  | 359,841       | 36,831        | 1.02e&#8209;03 |
+| Crohns Disease                                                                                                             | 20,833        | 5,956         | 1.02e&#8209;02 |
+| Facial ageing                                                                                                              | 330,409       |               | 1.04e&#8209;02 |
+| Ulcerative Colitis                                                                                                         | 27,432        | 6,968         | 1.27e&#8209;02 |
+| Hair colour (natural, before greying): Black                                                                               | 360,270       | 15,809        | 1.99e&#8209;02 |
+| Hair colour (natural, before greying): Light brown                                                                         | 360,270       | 147,560       | 4.69e&#8209;02 |
 
 Table: Significant trait associations of LV57 in PhenomeXcan. {#tbl:sup:phenomexcan_assocs:lv57}
 <!-- LV57:phenomexcan_traits_assocs:end -->
 
 <!-- LV57:emerge_traits_assocs:start -->
-| Phecode   | Trait description                    | Sample size   | Cases   | FDR            |
-|:----------|:-------------------------------------|:--------------|:--------|:---------------|
-| 286       | Coagulation defects                  | 50,182        | 2,976   | 1.33e&#8209;11 |
-| 452       | Other venous embolism and thrombosis | 40,476        | 3,816   | 1.52e&#8209;05 |
-| 452.2     | Deep vein thrombosis [DVT]           | 38,791        | 2,131   | 4.47e&#8209;05 |
-| 244.4     | Hypothyroidism NOS                   | 53,968        | 9,284   | 1.12e&#8209;02 |
-| 244       | Hypothyroidism                       | 54,404        | 9,720   | 1.42e&#8209;02 |
+| Phecode   | Trait description                    | Sample size   | Cases         | FDR            |
+|:----------|:-------------------------------------|:--------------|:--------------|:---------------|
+| 286       | Coagulation defects                  | 50,182        | 2,976         | 1.33e&#8209;11 |
+| 452       | Other venous embolism and thrombosis | 40,476        | 3,816         | 1.52e&#8209;05 |
+| 452.2     | Deep vein thrombosis [DVT]           | 38,791        | 2,131         | 4.47e&#8209;05 |
+| 244.4     | Hypothyroidism NOS                   | 53,968        | 9,284         | 1.12e&#8209;02 |
+| 244       | Hypothyroidism                       | 54,404        | 9,720         | 1.42e&#8209;02 |
 
 Table: Significant trait associations of LV57 in eMERGE. {#tbl:sup:emerge_assocs:lv57}
 <!-- LV57:emerge_traits_assocs:end -->
@@ -1766,30 +1766,30 @@ Table: Pathways aligned to LV844 from the MultiPLIER models. {#tbl:sup:multiplie
 <!-- LV844:multiplier_pathways:end -->
 
 <!-- LV844:phenomexcan_traits_assocs:start -->
-| Trait description                                               | Sample size   | Cases   | FDR            |
-|:----------------------------------------------------------------|:--------------|:--------|:---------------|
-| Non-cancer illness code, self-reported: polymyalgia rheumatica  | 361,141       | 753     | 5.22e&#8209;06 |
-| Non-cancer illness code, self-reported: type 1 diabetes         | 361,141       | 318     | 4.71e&#8209;05 |
-| Type 1 diabetes with ketoacidosis                               | 361,194       | 168     | 1.03e&#8209;04 |
-| Age diabetes diagnosed                                          | 16,166        |         | 3.86e&#8209;04 |
-| Milk type used: Other type of milk                              | 360,806       | 4,213   | 5.48e&#8209;04 |
-| Non-cancer illness code, self-reported: appendicitis            | 361,141       | 3,058   | 6.12e&#8209;04 |
-| Diabetic ketoacidosis                                           | 361,194       | 234     | 7.13e&#8209;04 |
-| Rheumatoid Arthritis                                            | 80,799        | 19,234  | 7.46e&#8209;04 |
-| Type 1 diabetes without complications                           | 361,194       | 247     | 1.05e&#8209;03 |
-| Started insulin within one year diagnosis of diabetes           | 16,415        | 1,999   | 1.30e&#8209;03 |
-| Insulin medication (males)                                      | 165,340       | 2,248   | 3.61e&#8209;03 |
-| Medication: insulin product                                     | 361,141       | 3,545   | 5.48e&#8209;03 |
-| Insulin medication (females)                                    | 193,148       | 1,476   | 7.93e&#8209;03 |
-| Type 1 diabetes                                                 | 361,194       | 583     | 1.04e&#8209;02 |
-| Diagnoses - main ICD10: E10 Insulin-dependent diabetes mellitus | 361,194       | 470     | 1.08e&#8209;02 |
-| Treatment/medication code: sulfasalazine                        | 361,141       | 710     | 1.10e&#8209;02 |
-| malabsorption/coeliac disease (self-reported)                   | 361,141       | 1,587   | 3.12e&#8209;02 |
-| Job coding: school inspector, education inspector               | 89,866        | 238     | 3.71e&#8209;02 |
-| Seropositive rheumatoid arthritis                               | 361,194       | 327     | 3.86e&#8209;02 |
-| Non-cancer illness code, self-reported: rheumatoid arthritis    | 361,141       | 4,017   | 4.21e&#8209;02 |
-| Age hayfever or allergic rhinitis diagnosed by doctor           | 20,904        |         | 4.44e&#8209;02 |
-| Other/unspecified seropositiverheumatoid arthritis              | 361,194       | 299     | 4.88e&#8209;02 |
+| Trait description                                               | Sample size   | Cases         | FDR            |
+|:----------------------------------------------------------------|:--------------|:--------------|:---------------|
+| Non-cancer illness code, self-reported: polymyalgia rheumatica  | 361,141       | 753           | 5.22e&#8209;06 |
+| Non-cancer illness code, self-reported: type 1 diabetes         | 361,141       | 318           | 4.71e&#8209;05 |
+| Type 1 diabetes with ketoacidosis                               | 361,194       | 168           | 1.03e&#8209;04 |
+| Age diabetes diagnosed                                          | 16,166        |               | 3.86e&#8209;04 |
+| Milk type used: Other type of milk                              | 360,806       | 4,213         | 5.48e&#8209;04 |
+| Non-cancer illness code, self-reported: appendicitis            | 361,141       | 3,058         | 6.12e&#8209;04 |
+| Diabetic ketoacidosis                                           | 361,194       | 234           | 7.13e&#8209;04 |
+| Rheumatoid Arthritis                                            | 80,799        | 19,234        | 7.46e&#8209;04 |
+| Type 1 diabetes without complications                           | 361,194       | 247           | 1.05e&#8209;03 |
+| Started insulin within one year diagnosis of diabetes           | 16,415        | 1,999         | 1.30e&#8209;03 |
+| Insulin medication (males)                                      | 165,340       | 2,248         | 3.61e&#8209;03 |
+| Medication: insulin product                                     | 361,141       | 3,545         | 5.48e&#8209;03 |
+| Insulin medication (females)                                    | 193,148       | 1,476         | 7.93e&#8209;03 |
+| Type 1 diabetes                                                 | 361,194       | 583           | 1.04e&#8209;02 |
+| Diagnoses - main ICD10: E10 Insulin-dependent diabetes mellitus | 361,194       | 470           | 1.08e&#8209;02 |
+| Treatment/medication code: sulfasalazine                        | 361,141       | 710           | 1.10e&#8209;02 |
+| malabsorption/coeliac disease (self-reported)                   | 361,141       | 1,587         | 3.12e&#8209;02 |
+| Job coding: school inspector, education inspector               | 89,866        | 238           | 3.71e&#8209;02 |
+| Seropositive rheumatoid arthritis                               | 361,194       | 327           | 3.86e&#8209;02 |
+| Non-cancer illness code, self-reported: rheumatoid arthritis    | 361,141       | 4,017         | 4.21e&#8209;02 |
+| Age hayfever or allergic rhinitis diagnosed by doctor           | 20,904        |               | 4.44e&#8209;02 |
+| Other/unspecified seropositiverheumatoid arthritis              | 361,194       | 299           | 4.88e&#8209;02 |
 
 Table: Significant trait associations of LV844 in PhenomeXcan. {#tbl:sup:phenomexcan_assocs:lv844}
 <!-- LV844:phenomexcan_traits_assocs:end -->
@@ -1823,34 +1823,34 @@ Table: Pathways aligned to LV136 from the MultiPLIER models. {#tbl:sup:multiplie
 <!-- LV136:multiplier_pathways:end -->
 
 <!-- LV136:phenomexcan_traits_assocs:start -->
-| Trait description                                               | Sample size   | Cases   | FDR            |
-|:----------------------------------------------------------------|:--------------|:--------|:---------------|
-| Coronary atherosclerosis                                        | 361,194       | 14,334  | 1.84e&#8209;09 |
-| Chronic ischaemic heart disease (ICD10 I25)                     | 361,194       | 12,769  | 3.52e&#8209;09 |
-| Ischaemic heart disease (wide definition)                       | 361,194       | 20,857  | 3.95e&#8209;08 |
-| Coronary Artery Disease                                         | 184,305       | 60,801  | 4.18e&#8209;08 |
-| 3mm strong meridian (right)                                     | 75,410        |         | 5.54e&#8209;05 |
-| 6mm strong meridian (left)                                      | 65,551        |         | 1.35e&#8209;04 |
-| Corneal resistance factor (right)                               | 76,630        |         | 2.02e&#8209;04 |
-| 6mm strong meridian (right)                                     | 66,256        |         | 2.58e&#8209;04 |
-| Heart attack                                                    | 360,420       | 8,288   | 3.75e&#8209;04 |
-| Myocardial infarction                                           | 361,194       | 7,018   | 4.85e&#8209;04 |
-| Myocardial infarction, strict                                   | 361,194       | 7,018   | 4.85e&#8209;04 |
-| 3mm strong meridian (left)                                      | 75,398        |         | 6.65e&#8209;04 |
-| heart attack/myocardial infarction (self-reported)              | 361,141       | 8,239   | 1.07e&#8209;03 |
-| 6mm weak meridian (left)                                        | 65,551        |         | 1.10e&#8209;03 |
-| 6mm weak meridian (right)                                       | 66,256        |         | 1.61e&#8209;03 |
-| Acute myocardial infarction (ICD10 I21)                         | 361,194       | 5,948   | 2.24e&#8209;03 |
-| 3mm weak meridian (right)                                       | 75,410        |         | 3.69e&#8209;03 |
-| 3mm weak meridian (left)                                        | 75,398        |         | 3.96e&#8209;03 |
-| Intra-ocular pressure, Goldmann-correlated (right)              | 76,630        |         | 8.64e&#8209;03 |
-| 6mm asymmetry angle (right)                                     | 41,390        |         | 1.03e&#8209;02 |
-| Corneal resistance factor (left)                                | 76,510        |         | 1.03e&#8209;02 |
-| Other specified disorders of muscle                             | 361,194       | 257     | 1.09e&#8209;02 |
-| Major coronary heart disease event excluding revascularizations | 361,194       | 10,157  | 2.44e&#8209;02 |
-| Major coronary heart disease event                              | 361,194       | 10,157  | 2.44e&#8209;02 |
-| Non-cancer illness code, self-reported: angina                  | 361,141       | 11,370  | 4.53e&#8209;02 |
-| Eye problems/disorders: Glaucoma                                | 117,890       | 5,092   | 4.94e&#8209;02 |
+| Trait description                                               | Sample size   | Cases         | FDR            |
+|:----------------------------------------------------------------|:--------------|:--------------|:---------------|
+| Coronary atherosclerosis                                        | 361,194       | 14,334        | 1.84e&#8209;09 |
+| Chronic ischaemic heart disease (ICD10 I25)                     | 361,194       | 12,769        | 3.52e&#8209;09 |
+| Ischaemic heart disease (wide definition)                       | 361,194       | 20,857        | 3.95e&#8209;08 |
+| Coronary Artery Disease                                         | 184,305       | 60,801        | 4.18e&#8209;08 |
+| 3mm strong meridian (right)                                     | 75,410        |               | 5.54e&#8209;05 |
+| 6mm strong meridian (left)                                      | 65,551        |               | 1.35e&#8209;04 |
+| Corneal resistance factor (right)                               | 76,630        |               | 2.02e&#8209;04 |
+| 6mm strong meridian (right)                                     | 66,256        |               | 2.58e&#8209;04 |
+| Heart attack                                                    | 360,420       | 8,288         | 3.75e&#8209;04 |
+| Myocardial infarction                                           | 361,194       | 7,018         | 4.85e&#8209;04 |
+| Myocardial infarction, strict                                   | 361,194       | 7,018         | 4.85e&#8209;04 |
+| 3mm strong meridian (left)                                      | 75,398        |               | 6.65e&#8209;04 |
+| heart attack/myocardial infarction (self-reported)              | 361,141       | 8,239         | 1.07e&#8209;03 |
+| 6mm weak meridian (left)                                        | 65,551        |               | 1.10e&#8209;03 |
+| 6mm weak meridian (right)                                       | 66,256        |               | 1.61e&#8209;03 |
+| Acute myocardial infarction (ICD10 I21)                         | 361,194       | 5,948         | 2.24e&#8209;03 |
+| 3mm weak meridian (right)                                       | 75,410        |               | 3.69e&#8209;03 |
+| 3mm weak meridian (left)                                        | 75,398        |               | 3.96e&#8209;03 |
+| Intra-ocular pressure, Goldmann-correlated (right)              | 76,630        |               | 8.64e&#8209;03 |
+| 6mm asymmetry angle (right)                                     | 41,390        |               | 1.03e&#8209;02 |
+| Corneal resistance factor (left)                                | 76,510        |               | 1.03e&#8209;02 |
+| Other specified disorders of muscle                             | 361,194       | 257           | 1.09e&#8209;02 |
+| Major coronary heart disease event excluding revascularizations | 361,194       | 10,157        | 2.44e&#8209;02 |
+| Major coronary heart disease event                              | 361,194       | 10,157        | 2.44e&#8209;02 |
+| Non-cancer illness code, self-reported: angina                  | 361,141       | 11,370        | 4.53e&#8209;02 |
+| Eye problems/disorders: Glaucoma                                | 117,890       | 5,092         | 4.94e&#8209;02 |
 
 Table: Significant trait associations of LV136 in PhenomeXcan. {#tbl:sup:phenomexcan_assocs:lv136}
 <!-- LV136:phenomexcan_traits_assocs:end -->
@@ -1880,40 +1880,40 @@ Table: Pathways aligned to LV21 from the MultiPLIER models. {#tbl:sup:multiplier
 <!-- LV21:multiplier_pathways:end -->
 
 <!-- LV21:phenomexcan_traits_assocs:start -->
-| Trait description                                              | Sample size   | Cases   | FDR            |
-|:---------------------------------------------------------------|:--------------|:--------|:---------------|
-| LDL Cholesterol NMR                                            | 13,527        |         | 1.08e&#8209;12 |
-| HDL Cholesterol NMR                                            | 19,270        |         | 3.03e&#8209;11 |
-| Alzheimers Disease                                             | 54,162        | 17,008  | 1.96e&#8209;09 |
-| Triglycerides NMR                                              | 21,559        |         | 2.05e&#8209;09 |
-| Illnesses of mother: Alzheimer's disease/dementia              | 331,041       | 28,507  | 1.36e&#8209;08 |
-| Illnesses of father: Alzheimer's disease/dementia              | 312,666       | 15,022  | 3.15e&#8209;08 |
-| Illnesses of siblings: Alzheimer's disease/dementia            | 279,062       | 1,609   | 1.55e&#8209;07 |
-| Any dementia                                                   | 361,194       | 243     | 5.63e&#8209;07 |
-| Treatment/medication code: simvastatin                         | 361,141       | 40,921  | 2.88e&#8209;06 |
-| Cholesterol lowering medication                                | 193,148       | 24,247  | 4.45e&#8209;05 |
-| High cholesterol (self-reported)                               | 361,141       | 43,957  | 9.90e&#8209;05 |
-| Cholesterol lowering medication                                | 165,340       | 38,057  | 4.86e&#8209;04 |
-| Dementia                                                       | 361,194       | 157     | 9.80e&#8209;04 |
-| Alzheimer’s disease                                            | 361,194       | 119     | 1.33e&#8209;03 |
-| Mean reticulocyte volume                                       | 344,728       |         | 1.76e&#8209;03 |
-| Father's age at death                                          | 266,231       |         | 6.68e&#8209;03 |
-| Illnesses of mother: None of the above (group 1)               | 332,611       | 138,291 | 1.42e&#8209;02 |
-| ECG, phase time                                                | 53,998        |         | 1.60e&#8209;02 |
-| Treatment/medication code: atorvastatin                        | 361,141       | 10,805  | 2.92e&#8209;02 |
-| Mean sphered cell volume                                       | 344,729       |         | 3.33e&#8209;02 |
-| Non-cancer illness code, self-reported: cellulitis             | 361,141       | 232     | 3.40e&#8209;02 |
-| Medication for cholesterol, blood pressure or diabetes (males) | 165,340       | 110,372 | 3.66e&#8209;02 |
-| Mother still alive                                             | 355,029       | 140,246 | 4.96e&#8209;02 |
+| Trait description                                              | Sample size   | Cases         | FDR            |
+|:---------------------------------------------------------------|:--------------|:--------------|:---------------|
+| LDL Cholesterol NMR                                            | 13,527        |               | 1.08e&#8209;12 |
+| HDL Cholesterol NMR                                            | 19,270        |               | 3.03e&#8209;11 |
+| Alzheimers Disease                                             | 54,162        | 17,008        | 1.96e&#8209;09 |
+| Triglycerides NMR                                              | 21,559        |               | 2.05e&#8209;09 |
+| Illnesses of mother: Alzheimer's disease/dementia              | 331,041       | 28,507        | 1.36e&#8209;08 |
+| Illnesses of father: Alzheimer's disease/dementia              | 312,666       | 15,022        | 3.15e&#8209;08 |
+| Illnesses of siblings: Alzheimer's disease/dementia            | 279,062       | 1,609         | 1.55e&#8209;07 |
+| Any dementia                                                   | 361,194       | 243           | 5.63e&#8209;07 |
+| Treatment/medication code: simvastatin                         | 361,141       | 40,921        | 2.88e&#8209;06 |
+| Cholesterol lowering medication                                | 193,148       | 24,247        | 4.45e&#8209;05 |
+| High cholesterol (self-reported)                               | 361,141       | 43,957        | 9.90e&#8209;05 |
+| Cholesterol lowering medication                                | 165,340       | 38,057        | 4.86e&#8209;04 |
+| Dementia                                                       | 361,194       | 157           | 9.80e&#8209;04 |
+| Alzheimer’s disease                                            | 361,194       | 119           | 1.33e&#8209;03 |
+| Mean reticulocyte volume                                       | 344,728       |               | 1.76e&#8209;03 |
+| Father's age at death                                          | 266,231       |               | 6.68e&#8209;03 |
+| Illnesses of mother: None of the above (group 1)               | 332,611       | 138,291       | 1.42e&#8209;02 |
+| ECG, phase time                                                | 53,998        |               | 1.60e&#8209;02 |
+| Treatment/medication code: atorvastatin                        | 361,141       | 10,805        | 2.92e&#8209;02 |
+| Mean sphered cell volume                                       | 344,729       |               | 3.33e&#8209;02 |
+| Non-cancer illness code, self-reported: cellulitis             | 361,141       | 232           | 3.40e&#8209;02 |
+| Medication for cholesterol, blood pressure or diabetes (males) | 165,340       | 110,372       | 3.66e&#8209;02 |
+| Mother still alive                                             | 355,029       | 140,246       | 4.96e&#8209;02 |
 
 Table: Significant trait associations of LV21 in PhenomeXcan. {#tbl:sup:phenomexcan_assocs:lv21}
 <!-- LV21:phenomexcan_traits_assocs:end -->
 
 <!-- LV21:emerge_traits_assocs:start -->
-| Phecode   | Trait description              | Sample size   | Cases   | FDR            |
-|:----------|:-------------------------------|:--------------|:--------|:---------------|
-| 272.1     | Hyperlipidemia                 | 55,843        | 29,195  | 4.22e&#8209;03 |
-| 272       | Disorders of lipoid metabolism | 55,892        | 29,244  | 4.50e&#8209;03 |
+| Phecode   | Trait description              | Sample size   | Cases         | FDR            |
+|:----------|:-------------------------------|:--------------|:--------------|:---------------|
+| 272.1     | Hyperlipidemia                 | 55,843        | 29,195        | 4.22e&#8209;03 |
+| 272       | Disorders of lipoid metabolism | 55,892        | 29,244        | 4.50e&#8209;03 |
 
 Table: Significant trait associations of LV21 in eMERGE. {#tbl:sup:emerge_assocs:lv21}
 <!-- LV21:emerge_traits_assocs:end -->
