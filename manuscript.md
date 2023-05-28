@@ -8,7 +8,7 @@ keywords:
 - drug repurposing
 - clustering of complex traits
 lang: en-US
-date-meta: '2023-03-27'
+date-meta: '2023-05-28'
 author-meta:
 - Milton Pividori
 - Sumei Lu
@@ -38,11 +38,11 @@ header-includes: |
   <meta name="citation_title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="og:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
-  <meta name="dc.date" content="2023-03-27" />
-  <meta name="citation_publication_date" content="2023-03-27" />
-  <meta property="article:published_time" content="2023-03-27" />
-  <meta name="dc.modified" content="2023-03-27T19:49:22+00:00" />
-  <meta property="article:modified_time" content="2023-03-27T19:49:22+00:00" />
+  <meta name="dc.date" content="2023-05-28" />
+  <meta name="citation_publication_date" content="2023-05-28" />
+  <meta property="article:published_time" content="2023-05-28" />
+  <meta name="dc.modified" content="2023-05-28T20:21:29+00:00" />
+  <meta property="article:modified_time" content="2023-05-28T20:21:29+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -115,9 +115,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/a76d581dc1abb5e92063378f74f26ee653e30702/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/a76d581dc1abb5e92063378f74f26ee653e30702/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/a76d581dc1abb5e92063378f74f26ee653e30702/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/6ca59f421f74f888760930b0721969fbc1bcb439/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/6ca59f421f74f888760930b0721969fbc1bcb439/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/6ca59f421f74f888760930b0721969fbc1bcb439/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -139,10 +139,10 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 <!-- 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/a76d581dc1abb5e92063378f74f26ee653e30702/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/6ca59f421f74f888760930b0721969fbc1bcb439/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@a76d581](https://github.com/greenelab/phenoplier_manuscript/tree/a76d581dc1abb5e92063378f74f26ee653e30702)
-on March 27, 2023.
+from [greenelab/phenoplier_manuscript@6ca59f4](https://github.com/greenelab/phenoplier_manuscript/tree/6ca59f421f74f888760930b0721969fbc1bcb439)
+on May 28, 2023.
 </em></small> -->
 
 
@@ -1008,10 +1008,11 @@ This complicates the derivation of an S-MultiXcan-specific solution to compute $
 To account for this, we used a submatrix $\mathbf{R}_{\ell}$ corresponding to genes that are part of LV $\ell$ only (top 1% of genes) instead of the entire matrix $\mathbf{R}$.
 This simplification is conservative since correlations are accounted for top genes only.
 Our simulations ([Supplementary Note 1](#sm:reg:null_sim)) show that the model is approximately well-calibrated and can correct for LVs with adjacent and highly correlated genes at the top (e.g., Figure @fig:reg:nulls:qqplot:lv234).
-The model can also detect LVs associated with relevant traits (Figure @fig:lv246 and Table @tbl:sup:phenomexcan_assocs:lv246) that are replicated in a different cohort (Table @tbl:sup:emerge_assocs:lv246).
+The simulation also identified 127 LVs in which the model was not well-calibrated (e.g., Figure @fig:reg:nulls:qqplot:lv914).
+As this can be attributed to limitations in accurately computing a gene correlation matrix, we excluded these LVs from our main analyses.
 
 In Equation (@eq:reg:corr_genes), for each gene, we only considered tissue models present in S-PrediXcan results, as well as SNPs present in GWAS used as input for the TWAS approaches.
-This is necessary to obtain more accurate correlations estimates [@doi:10.1371/journal.pgen.1007889].
+This is necessary to obtain more accurate correlation estimates [@doi:10.1371/journal.pgen.1007889].
 Therefore, we computed different correlation matrices for PhenomeXcan and eMERGE.
 In PhenomeXcan, most of the GWAS (4,049) were obtained from the UK Biobank using the same pipeline and including the same set of SNPs, so a single correlation matrix was used for this set.
 For the rest, we used a single correlation matrix for each group of traits that shared the same or most of the SNPs.

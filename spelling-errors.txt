@@ -111,9 +111,9 @@ fibroblasts
 func
 GBMF
 gDNA
-Genomic
+genomic
 GenomicSuperSignature
-genotype
+Genotype
 GFP
 Gibco
 GLS
@@ -184,13 +184,13 @@ lipitor
 lipoid
 lipolysis
 lipoprotein
-LIPOPROTEINS
+lipoproteins
 lisinopril
 loadings
 LPL
 LPSstimulated
 Luo
-lv
+LV
 LVs
 MAF
 malabsorption
@@ -226,9 +226,9 @@ neurodegenerative
 neurodevelopmental
 neuropsychiatric
 neutrophil
-Neutrophils
+neutrophils
 NFAT
-Nicotinic
+nicotinic
 NMR
 oC
 OLS
@@ -242,7 +242,7 @@ PCA
 PCR
 PCYT
 perturbagens
-phecode
+Phecode
 phecodes
 PhenomeXcan
 PhenoPLIER
@@ -258,7 +258,7 @@ polybrene
 polygenic
 Polymerase
 polymyalgia
-predixcan
+PrediXcan
 preprocessing
 probit
 proj
