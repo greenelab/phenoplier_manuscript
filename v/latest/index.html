@@ -21,7 +21,7 @@
   <meta name="author" content="Marylyn D. Ritchie" />
   <meta name="author" content="Struan F.A. Grant" />
   <meta name="author" content="Casey S. Greene" />
-  <meta name="dcterms.date" content="2023-03-27" />
+  <meta name="dcterms.date" content="2023-05-28" />
   <meta name="keywords" content="genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits" />
   <title>Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms</title>
   <style>
@@ -66,11 +66,11 @@
   <meta name="citation_title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="og:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
-  <meta name="dc.date" content="2023-03-27" />
-  <meta name="citation_publication_date" content="2023-03-27" />
-  <meta property="article:published_time" content="2023-03-27" />
-  <meta name="dc.modified" content="2023-03-27T19:49:22+00:00" />
-  <meta property="article:modified_time" content="2023-03-27T19:49:22+00:00" />
+  <meta name="dc.date" content="2023-05-28" />
+  <meta name="citation_publication_date" content="2023-05-28" />
+  <meta property="article:published_time" content="2023-05-28" />
+  <meta name="dc.modified" content="2023-05-28T20:21:29+00:00" />
+  <meta property="article:modified_time" content="2023-05-28T20:21:29+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -143,9 +143,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/a76d581dc1abb5e92063378f74f26ee653e30702/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/a76d581dc1abb5e92063378f74f26ee653e30702/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/a76d581dc1abb5e92063378f74f26ee653e30702/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/6ca59f421f74f888760930b0721969fbc1bcb439/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/6ca59f421f74f888760930b0721969fbc1bcb439/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/6ca59f421f74f888760930b0721969fbc1bcb439/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -171,10 +171,10 @@
 <!-- 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/a76d581dc1abb5e92063378f74f26ee653e30702/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/6ca59f421f74f888760930b0721969fbc1bcb439/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@a76d581](https://github.com/greenelab/phenoplier_manuscript/tree/a76d581dc1abb5e92063378f74f26ee653e30702)
-on March 27, 2023.
+from [greenelab/phenoplier_manuscript@6ca59f4](https://github.com/greenelab/phenoplier_manuscript/tree/6ca59f421f74f888760930b0721969fbc1bcb439)
+on May 28, 2023.
 </em></small> -->
 <h2 id="authors">Authors</h2>
 <ul>
@@ -958,9 +958,10 @@ This complicates the derivation of an S-MultiXcan-specific solution to compute <
 To account for this, we used a submatrix <span class="math inline">\(\mathbf{R}_{\ell}\)</span> corresponding to genes that are part of LV <span class="math inline">\(\ell\)</span> only (top 1% of genes) instead of the entire matrix <span class="math inline">\(\mathbf{R}\)</span>.
 This simplification is conservative since correlations are accounted for top genes only.
 Our simulations (<a href="#sm:reg:null_sim">Supplementary Note 1</a>) show that the model is approximately well-calibrated and can correct for LVs with adjacent and highly correlated genes at the top (e.g., Figure <a href="#fig:reg:nulls:qqplot:lv234">9</a>).
-The model can also detect LVs associated with relevant traits (Figure <a href="#fig:lv246">2</a> and Table <a href="#tbl:sup:phenomexcan_assocs:lv246">8</a>) that are replicated in a different cohort (Table <a href="#tbl:sup:emerge_assocs:lv246">9</a>).</p>
+The simulation also identified 127 LVs in which the model was not well-calibrated (e.g., Figure <a href="#fig:reg:nulls:qqplot:lv914">13</a>).
+As this can be attributed to limitations in accurately computing a gene correlation matrix, we excluded these LVs from our main analyses.</p>
 <p>In Equation (<a href="#eq:reg:corr_genes">10</a>), for each gene, we only considered tissue models present in S-PrediXcan results, as well as SNPs present in GWAS used as input for the TWAS approaches.
-This is necessary to obtain more accurate correlations estimates <span class="citation" data-cites="1FFzCXo1s">[<a href="#ref-1FFzCXo1s" role="doc-biblioref">24</a>]</span>.
+This is necessary to obtain more accurate correlation estimates <span class="citation" data-cites="1FFzCXo1s">[<a href="#ref-1FFzCXo1s" role="doc-biblioref">24</a>]</span>.
 Therefore, we computed different correlation matrices for PhenomeXcan and eMERGE.
 In PhenomeXcan, most of the GWAS (4,049) were obtained from the UK Biobank using the same pipeline and including the same set of SNPs, so a single correlation matrix was used for this set.
 For the rest, we used a single correlation matrix for each group of traits that shared the same or most of the SNPs.</p>
