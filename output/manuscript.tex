@@ -3,13 +3,11 @@
 \PassOptionsToPackage{hyphens}{url}
 %
 \documentclass[
-        11pt,
 ]{article}
 \usepackage{amsmath,amssymb}
 \usepackage{mathtools}
 \usepackage{lmodern}
 \usepackage{iftex}
-\usepackage[legalpaper, left=0.5in, right=0.5in, top=1in, bottom=1in]{geometry}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
@@ -145,7 +143,7 @@
   \href{https://github.com/miltondp}{miltondp}
   · \includesvg[width=0.16667in,height=0.16667in]{images/twitter.svg}
   \href{https://twitter.com/miltondp}{miltondp}
-  · \includesvg{images/mastodon.svg}
+  · \includesvg[width=0.16667in,height=0.16667in]{images/mastodon.svg}
   \href{https://genomic.social/@miltondp}{@miltondp@genomic.social}
   Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
   · Funded by The Gordon and Betty Moore Foundation GBMF 4552; The National Human Genome Research Institute (R01 HG010067); The National Human Genome Research Institute (K99HG011898); The Eunice Kennedy Shriver National Institute of Child Health and Human Development (R01 HD109765)
@@ -193,6 +191,12 @@
   Northwestern University
 \item
   \textbf{Blair D. Sullivan}
+  \includesvg[width=0.16667in,height=0.16667in]{images/orcid.svg}
+  \href{https://orcid.org/0000-0001-7720-6208}{0000-0001-7720-6208}
+  · \includesvg[width=0.16667in,height=0.16667in]{images/github.svg}
+  \href{https://github.com/bdsullivan}{bdsullivan}
+  · \includesvg[width=0.16667in,height=0.16667in]{images/twitter.svg}
+  \href{https://twitter.com/blairdsullivan}{blairdsullivan}
   School of Computing, University of Utah, Salt Lake City, UT, USA
 \item
   \textbf{Benjamin F. Voight}
@@ -233,7 +237,7 @@
   \href{https://github.com/cgreene}{cgreene}
   · \includesvg[width=0.16667in,height=0.16667in]{images/twitter.svg}
   \href{https://twitter.com/GreeneScientist}{GreeneScientist}
-  · \includesvg{images/mastodon.svg}
+  · \includesvg[width=0.16667in,height=0.16667in]{images/mastodon.svg}
   \href{https://genomic.social/@greenescientist}{@greenescientist@genomic.social}
   Center for Health AI, University of Colorado School of Medicine, Aurora, CO 80045, USA; Department of Biomedical Informatics, University of Colorado School of Medicine, Aurora, CO 80045, USA
   · Funded by The Gordon and Betty Moore Foundation (GBMF 4552); The National Human Genome Research Institute (R01 HG010067); The National Cancer Institute (R01 CA237170); The Eunice Kennedy Shriver National Institute of Child Health and Human Development (R01 HD109765)
@@ -309,16 +313,19 @@ It has the potential to extract mechanistic insight from statistical association
 \includesvg[width=1\textwidth,height=\textheight]{images/entire_process/entire_process.svg}
 \caption{\textbf{Schematic of the PhenoPLIER framework.}
 \textbf{a)} High-level schematic of PhenoPLIER (a gene module-based method) in the context of TWAS (single-gene) and GWAS (single-variant).
-PhenoPLIER integrates groups of genes co-expressed in specific cell types (gene modules) with gene-trait and gene-drug associations.
-At the bottom-right corner, we show how a drug downregulates two genes (A and C) that are part of the disease-associated Gene module 1.
-\textbf{b)} The integration consists of projecting gene-trait/gene-drug associations from PhenomeXcan/LINCS L1000 (bottom) to a latent space based on gene modules (represented by latent variables/LVs) from MultiPLIER (top).
-This process generates matrices \(\mathbf{\hat{L}}\) and \(\mathbf{\hat{M}}\), where LVs now describe each drug/trait.
-In the middle, we show the three main computational components provided by PhenoPLIER to perform this integration:
-1) an LV-based regression model,
-2) a clustering framework to learn groups of traits,
-and 3) an LV-based drug repurposing approach.
-\textbf{c)} LV603, termed as a neutrophil signature in the original MultiPLIER study, was associated in PhenoPLIER with neutrophil counts and other white blood cells (bottom, showing the top 10 traits for LV603 after projecting gene-trait associations in PhenomeXcan).
-Genes that are part of LV603 were expressed in relevant cell types (top).
+In GWAS, we identify variants associated with traits.
+In TWAS, first, we identify variants that are associated with gene expression levels (eQTLs); then, prediction models based on eQTLs are used to impute gene expression, which is used to compute gene-trait associations.
+Resources such as LINCS L1000 provide information about how a drug perturbs gene expression; at the bottom-right corner, we show how a drug downregulates two genes (A and C).
+In PhenoPLIER, these data types are integrated using groups of genes co-expressed across one or more conditions (such as cell types) that we call gene modules or latent variables/LVs.
+\textbf{b)} The integration process in PhenoPLIER uses low-dimensional representations (matrices \(\mathbf{Z}\) and \(\mathbf{B}\)) learned from large gene expression datasets (top).
+We used gene-drug information \(\mathbf{L}\) from LINCS L1000 and gene-trait associations \(\mathbf{M}\) from TWAS: PhenomeXcan was used as the discovery cohort, and eMERGE as replication (middle).
+PhenoPLIER provides three computational components (bottom):
+1) an LV-based regression model that associates an LV \(j\) (\(\mathbf{Z}_j\)) with a trait \(i\) (\(\mathbf{M}_i\)),
+2) a clustering framework that learns groups of traits from TWAS associations projected into the LV space (\(\hat{\mathbf{M}}\)),
+and 3) an LV-based drug repurposing approach that uses the projection of TWAS (\(\hat{\mathbf{M}}\)) and LINCS L1000 (\(\hat{\mathbf{L}}\)) into the LV space.
+\textbf{c)} Genes that are part of LV603, termed as a neutrophil signature {[}\protect\hyperlink{ref-14rnBunuZ}{44}{]}, were expressed in relevant cell types (top).
+LV603 was associated in PhenoPLIER with neutrophil counts and other white blood cells (bottom, showing the top 10 traits for LV603 after projecting gene-trait associations in PhenomeXcan).
+eQTLs: expression quantitative trait loci;
 MVN: multivariate normal distribution;
 PBMC: peripheral blood mononuclear cells;
 mDCs: myeloid dendritic cells.}\label{fig:entire_process}
@@ -326,8 +333,8 @@ mDCs: myeloid dendritic cells.}\label{fig:entire_process}
 \end{figure}
 
 PhenoPLIER is a flexible computational framework that combines gene-trait and gene-drug associations with gene modules expressed in specific contexts (Figure \ref{fig:entire_process}a).
-The approach uses a latent representation (with latent variables or LVs representing gene modules) derived from a large gene expression compendium (Figure \ref{fig:entire_process}b, top) to integrate TWAS with drug-induced transcriptional responses (Figure \ref{fig:entire_process}b, bottom) for a joint analysis.
-The approach consists in three main components (Figure \ref{fig:entire_process}b, middle, see \protect\hyperlink{sec:methods}{Methods}):
+The approach uses a latent representation (with latent variables or LVs representing gene modules) derived from a large gene expression compendium (Figure \ref{fig:entire_process}b, top) to integrate TWAS with drug-induced transcriptional responses (Figure \ref{fig:entire_process}b, middle) for a joint analysis.
+The approach consists in three main components (Figure \ref{fig:entire_process}b, bottom, see \protect\hyperlink{sec:methods}{Methods}):
 1) an LV-based regression model to compute an association between an LV and a trait,
 2) a clustering framework to learn groups of traits with shared transcriptomic properties,
 and 3) an LV-based drug repurposing approach that links diseases to potential treatments.
@@ -881,7 +888,7 @@ and the cross-correlation matrix between PCs \(Cor(\mathbf{P}_{i}, \mathbf{P}_{j
 Cor(\mathbf{P}_{i}, \mathbf{P}_{j}) & = Cor(\mathbf{T}_{i} \mathbf{V}_{i}^{\top} \mathrm{diag}(\lambda_i)^{-1/2}, \mathbf{T}_{j} \mathbf{V}_{j}^{\top} \mathrm{diag}(\lambda_j)^{-1/2}) \\
 & = \mathrm{diag}(\lambda_i)^{-1/2} \mathbf{V}_{i} (\frac{\mathbf{T}_{i}^{\top} \mathbf{T}_{j}}{n-1}) \mathbf{V}_{j}^{\top} \mathrm{diag}(\lambda_j)^{-1/2},
 \end{split}
-\label{eq:reg:corpp}\end{equation}
+\label{eq:reg:cor_pp}\end{equation}
 
 where \(\frac{\mathbf{T}_{i}^{\top} \mathbf{T}_{j}}{n-1} \in \mathbb{R}^{p_i \times p_j}\) is the cross-correlation matrix between the predicted expression levels of genes \(i\) and \(j\),
 and columns of \(\mathbf{V}_{i}\) and scalars \(\lambda_i\) are the eigenvectors and eigenvalues of \(\mathbf{T}_{i}\), respectively.
@@ -896,7 +903,7 @@ To estimate the correlation of predicted expression levels for genes \(i\) in ti
  & = \frac{ \splitfrac{\sum_{a \in \mathrm{model}_k}{b \in \mathrm{model}_l}} w_a^k w_b^l Cov(X_a, X_b)} {\sqrt{\widehat{\mathrm{var}}(\mathbf{t}_k) \widehat{\mathrm{var}}(\mathbf{t}_l)} } \\
         & = \frac{ \splitfrac{\sum_{a \in \mathrm{model}_k}{b \in \mathrm{model}_l}} w_a^k w_b^l \Gamma_{ab}} {\sqrt{\widehat{\mathrm{var}}(\mathbf{t}_k) \widehat{\mathrm{var}}(\mathbf{t}_l)} },
 \end{split}
-\label{eq:reg:corrgenes}\end{equation}
+\label{eq:reg:corr_genes}\end{equation}
 
 where \(X_a\) is the genotype of SNP \(a\),
 \(w_a^k\) is the weight of SNP \(a\) for gene expression prediction in the tissue model \(k\),
@@ -916,10 +923,11 @@ This complicates the derivation of an S-MultiXcan-specific solution to compute \
 To account for this, we used a submatrix \(\mathbf{R}_{\ell}\) corresponding to genes that are part of LV \(\ell\) only (top 1\% of genes) instead of the entire matrix \(\mathbf{R}\).
 This simplification is conservative since correlations are accounted for top genes only.
 Our simulations (\protect\hyperlink{sm:reg:null_sim}{Supplementary Note 1}) show that the model is approximately well-calibrated and can correct for LVs with adjacent and highly correlated genes at the top (e.g., Figure \ref{fig:reg:nulls:qqplot:lv234}).
-The model can also detect LVs associated with relevant traits (Figure \ref{fig:lv246} and Table \ref{tbl:sup:phenomexcan_assocs:lv246}) that are replicated in a different cohort (Table \ref{tbl:sup:emerge_assocs:lv246}).
+The simulation also identified 127 LVs in which the model was not well-calibrated (e.g., Figure \ref{fig:reg:nulls:qqplot:lv914}).
+As this can be attributed to limitations in accurately computing a gene correlation matrix, we excluded these LVs from our main analyses.
 
-In Equation (\ref{eq:reg:corrgenes}), for each gene, we only considered tissue models present in S-PrediXcan results, as well as SNPs present in GWAS used as input for the TWAS approaches.
-This is necessary to obtain more accurate correlations estimates {[}\protect\hyperlink{ref-1FFzCXo1s}{24}{]}.
+In Equation (\ref{eq:reg:corr_genes}), for each gene, we only considered tissue models present in S-PrediXcan results, as well as SNPs present in GWAS used as input for the TWAS approaches.
+This is necessary to obtain more accurate correlation estimates {[}\protect\hyperlink{ref-1FFzCXo1s}{24}{]}.
 Therefore, we computed different correlation matrices for PhenomeXcan and eMERGE.
 In PhenomeXcan, most of the GWAS (4,049) were obtained from the UK Biobank using the same pipeline and including the same set of SNPs, so a single correlation matrix was used for this set.
 For the rest, we used a single correlation matrix for each group of traits that shared the same or most of the SNPs.
@@ -2211,10 +2219,10 @@ KEGG PROPANOATE METABOLISM & 0.83 & 4.27e-03 \\
 \end{longtable}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.6970}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1136}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.0682}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1212}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.6954}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.0993}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.0993}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1060}}@{}}
 \caption{Significant trait associations of LV246 in PhenomeXcan.
 \label{tbl:sup:phenomexcan_assocs:lv246}}\label{tbl:sup:phenomexcan_assocs:lv246}\tabularnewline
 \toprule()
@@ -2884,10 +2892,10 @@ IRIS MemoryTcell-RO-activated & 0.70 & 2.87e-02 \\
 \end{longtable}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.7561}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.0915}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.0549}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.0976}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.6954}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.0993}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.0993}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1060}}@{}}
 \caption{Significant trait associations of LV57 in PhenomeXcan.
 \label{tbl:sup:phenomexcan_assocs:lv57}}\label{tbl:sup:phenomexcan_assocs:lv57}\tabularnewline
 \toprule()
@@ -2933,11 +2941,11 @@ Hair colour (natural, before greying): Light brown & 360,270 & 147,560 & 4.69e�
 \end{longtable}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1236}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.4270}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1685}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1011}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1798}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1158}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.4000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1579}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1579}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1684}}@{}}
 \caption{Significant trait associations of LV57 in eMERGE.
 \label{tbl:sup:emerge_assocs:lv57}}\label{tbl:sup:emerge_assocs:lv57}\tabularnewline
 \toprule()
@@ -3003,10 +3011,10 @@ KEGG ANTIGEN PROCESSING AND PRESENTATION & 0.80 & 1.35e-03 \\
 \end{longtable}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.6190}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1429}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.0857}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1524}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.5856}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1351}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1351}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1441}}@{}}
 \caption{Significant trait associations of LV844 in PhenomeXcan.
 \label{tbl:sup:phenomexcan_assocs:lv844}}\label{tbl:sup:phenomexcan_assocs:lv844}\tabularnewline
 \toprule()
@@ -3129,10 +3137,10 @@ REACTOME MUSCLE CONTRACTION & 0.75 & 1.49e-02 \\
 \end{longtable}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.6190}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1429}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.0857}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1524}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.5856}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1351}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1351}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1441}}@{}}
 \caption{Significant trait associations of LV136 in PhenomeXcan.
 \label{tbl:sup:phenomexcan_assocs:lv136}}\label{tbl:sup:phenomexcan_assocs:lv136}\tabularnewline
 \toprule()
@@ -3256,10 +3264,10 @@ No pathways significantly enriched & & \\
 \end{longtable}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.6154}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1442}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.0865}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1538}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.5818}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1364}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1364}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1455}}@{}}
 \caption{Significant trait associations of LV21 in PhenomeXcan.
 \label{tbl:sup:phenomexcan_assocs:lv21}}\label{tbl:sup:phenomexcan_assocs:lv21}\tabularnewline
 \toprule()
@@ -3313,11 +3321,11 @@ Mother still alive & 355,029 & 140,246 & 4.96e‑02 \\
 \end{longtable}
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1325}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3855}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1807}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1084}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1928}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1236}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3596}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1685}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1685}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1798}}@{}}
 \caption{Significant trait associations of LV21 in eMERGE.
 \label{tbl:sup:emerge_assocs:lv21}}\label{tbl:sup:emerge_assocs:lv21}\tabularnewline
 \toprule()
