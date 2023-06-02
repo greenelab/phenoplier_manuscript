@@ -100,6 +100,51 @@ if [ "${BUILD_LATEX}" = "true" ]; then
     --data-dir="$PANDOC_DATA_DIR" \
     --defaults=common.yaml \
     --defaults=latex.yaml
+
+  # Make some specific modifications to this manuscript
+  c=`cat <<EOF
+import re
+
+space_pat = re.compile(r"[ \t]+")
+
+with open("output/latex/manuscript.tex", "r") as f:
+    for line in f:
+        if re.search("includegraphics.+\.svg\}$", line):
+            line = line.replace("includegraphics", "includesvg")
+        
+        elif line == r"\usepackage{amsmath,amssymb}" + "\n":
+            new_package = r"""
+              \usepackage{mathtools}
+            """
+            new_package = space_pat.sub("", new_package).strip() + "\n"
+            line = line + new_package
+        
+        elif line == r"\usepackage{calc}" + "\n":
+            new_package = r"""
+              \usepackage[inkscapeformat=pdf,inkscapelatex=false]{svg}
+              \newcommand{\bm}[1]{\boldsymbol{#1}}
+            """
+            new_package = space_pat.sub("", new_package).strip() + "\n"
+            line = line + new_package
+
+        elif line == r"\hypertarget{supplementary-material}{%" + "\n":
+            new_package = r"""
+              \clearpage
+            """
+            new_package = space_pat.sub("", new_package).strip() + "\n"
+            line = new_package + line
+        
+        elif line == r"\hypertarget{crispr-cas9}{%" + "\n":
+            new_package = r"""
+              \clearpage
+            """
+            new_package = space_pat.sub("", new_package).strip() + "\n"
+            line = new_package + line
+
+        print(line, end="")
+EOF`
+  python3 -c "$c" > /tmp/manuscript.tex
+  mv /tmp/manuscript.tex output/latex/manuscript.tex
 fi
 
 # Spellcheck
