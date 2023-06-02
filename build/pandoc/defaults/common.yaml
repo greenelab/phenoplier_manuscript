@@ -9,5 +9,5 @@ filters:
 - citeproc
 wrap: preserve
 metadata:
-  csl: build/assets/style.csl
+  csl: https://raw.githubusercontent.com/citation-style-language/styles/6b7fdff8cb0fb45b342e8ac319634bf18168c73d/dependent/nature-communications.csl
   link-citations: true
