@@ -3,12 +3,12 @@
 \PassOptionsToPackage{hyphens}{url}
 %
 \documentclass[
+  legalpaperpaper,
 ]{article}
 \usepackage{amsmath,amssymb}
 \usepackage{mathtools}
 \usepackage{lmodern}
 \usepackage{iftex}
-\usepackage[legalpaper, left=0.5in, right=0.5in, top=1in, bottom=1in]{geometry}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
@@ -35,6 +35,7 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
+\usepackage[top=1in,left=0.5in,right=0.5in,bottom=1in]{geometry}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -52,7 +53,7 @@
 \makeatother
 % Scale images if necessary, so that they will not overflow the page
 % margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
+% using explicit options in \includesvg[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 % Set default figure placement to htbp
 \makeatletter

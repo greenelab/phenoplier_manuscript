@@ -3,3 +3,10 @@
 to: latex
 output-file: output/latex/manuscript.tex
 standalone: true
+variables:
+  papersize: legalpaper
+  geometry:
+  - top=1in
+  - left=0.5in
+  - right=0.5in
+  - bottom=1in
