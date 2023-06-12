@@ -1581,14 +1581,12 @@ The code and data to reproduce all the analyses in this work are available in \u
 Figure \ref{fig:entire_process}a was created with BioRender.com.
 
 \clearpage
+
 \hypertarget{supplementary-material}{%
 \subsection{Supplementary material}\label{supplementary-material}}
 
-\hypertarget{regression-model-for-lv-trait-associations}{%
-\subsubsection{Regression model for LV-trait associations}\label{regression-model-for-lv-trait-associations}}
-
 \hypertarget{sm:reg:null_sim}{%
-\paragraph{Supplementary Note 1: mean type I error rates and calibration of LV-based regression model}\label{sm:reg:null_sim}}
+\subsubsection{Supplementary Note 1: mean type I error rates and calibration of LV-based regression model}\label{sm:reg:null_sim}}
 
 We assessed our GLS model type I error rates (proportion of \(p\)-values below 0.05) and calibration using a null model of random traits and genotype data from 1000 Genomes Phase III.
 We selected 312 individuals with European ancestry, and then analyzed 1,000 traits drawn from a standard normal distribution \(\mathcal{N}(0,1)\).
@@ -1622,6 +1620,7 @@ We also detected other LVs with higher-than-expected mean type I errors for both
 One example is LV914, shown in Figure \ref{fig:reg:nulls:qqplot:lv914}.
 Inflation in these LVs might be explained by inaccuracies in correlation estimates between the individual-level MultiXcan model and its summary-based version (see Methods).
 Therefore, we flagged those with a type I error rate larger than 0.07 (127 LVs) and excluded them from our main analyses.
+We didn't see signs of inflation when applying the method in real data (Figure \ref{fig:reg:real:qqplots}).
 
 \begin{figure}
 \hypertarget{fig:reg:nulls:qqplots}{%
@@ -1686,11 +1685,9 @@ QQ-plot in PhenomeXcan (left, discovery cohort) across 4,091 traits and 987 LVs,
 \end{figure}
 
 \clearpage
+
 \hypertarget{crispr-cas9}{%
 \subsubsection{CRISPR-Cas9}\label{crispr-cas9}}
-
-\hypertarget{screening-steps}{%
-\paragraph{Screening steps}\label{screening-steps}}
 
 \begin{fignos:tagged-figure}[S1]
 
@@ -1743,7 +1740,7 @@ For both panels A and B, 100 bp ladder was used in Lane 0.}\label{fig:sup:crispr
 \hypertarget{fig:sup:crispr:table1}{%
 \centering
 \includegraphics[width=0.8\textwidth,height=\textheight]{images/crispr/table1.png}
-\caption{}\label{fig:sup:crispr:table1}
+\caption{\textbf{Primers for generating illumina libraries.}}\label{fig:sup:crispr:table1}
 }
 \end{figure}
 
@@ -1763,8 +1760,10 @@ B. Final Illumina library from HS DNA ---showed a single \textasciitilde285bp pe
 
 \end{fignos:tagged-figure}
 
+\clearpage
+
 \hypertarget{gene-modules-enrichment-for-lipids-gene-sets}{%
-\paragraph{Gene modules enrichment for lipids gene-sets}\label{gene-modules-enrichment-for-lipids-gene-sets}}
+\subsubsection{Gene modules enrichment for lipids gene-sets}\label{gene-modules-enrichment-for-lipids-gene-sets}}
 
 \begin{longtable}[]{@{}llll@{}}
 \caption{Gene modules (LVs) nominally enriched for the lipids-increasing gene-set from the CRISPR-screen (\emph{P} \textless{} 0.01). LVs significantly aligned with pathways (FDR \textless{} 0.05) from the MultiPLIER models are shown in boldface.
@@ -1810,11 +1809,9 @@ LV959 & decrease & \emph{TCF7L2}, \emph{PTEN} & 0.0092 \\
 \end{longtable}
 
 \clearpage
-\hypertarget{consensus-clustering-of-traits}{%
-\subsubsection{Consensus clustering of traits}\label{consensus-clustering-of-traits}}
 
 \hypertarget{sm:clustering:null_sim}{%
-\paragraph{Supplementary Note 2: Cluster analyses under the null hypothesis of no structure in the data}\label{sm:clustering:null_sim}}
+\subsubsection{Supplementary Note 2: Cluster analyses under the null hypothesis of no structure in the data}\label{sm:clustering:null_sim}}
 
 For our clustering pipeline, we simulated different escenarios where there is no structure in the input data matrix \(\hat{\mathbf{M}}\) (gene-trait associations from PhenomeXcan projected into the latent gene expression representation).
 For this, we simulated two cases where any groupings of traits are removed:
@@ -1845,8 +1842,10 @@ This means, as expected, that there is no consensus among ensemble partitions ge
 In contrast, using the real data, the consensus clustering approach finds trait pairs that are grouped together across the different members of the ensemble.
 The partitions above the 75th percentile were considered in the main analyses, and are shown in the clustering tree in Figure \ref{fig:clustering:tree}.
 
+\clearpage
+
 \hypertarget{cluster-specific-and-general-transcriptional-processes-associated-with-disease}{%
-\paragraph{Cluster-specific and general transcriptional processes associated with disease}\label{cluster-specific-and-general-transcriptional-processes-associated-with-disease}}
+\subsubsection{Cluster-specific and general transcriptional processes associated with disease}\label{cluster-specific-and-general-transcriptional-processes-associated-with-disease}}
 
 \begin{figure}
 \hypertarget{fig:sup:clustering:novel:heatmap}{%
@@ -1857,6 +1856,8 @@ The plot shows a submatrix of \(\hat{\mathbf{M}}\) for the main trait clusters a
 Standardized values from -6 (lighter color) to 21 (darker color).}\label{fig:sup:clustering:novel:heatmap}
 }
 \end{figure}
+
+\clearpage
 
 \hypertarget{latent-variables-gene-modules-information}{%
 \subsubsection{Latent variables (gene modules) information}\label{latent-variables-gene-modules-information}}
@@ -1958,6 +1959,8 @@ FDR
 No significant associations & & & & \\
 \bottomrule()
 \end{longtable}
+
+\clearpage
 
 \hypertarget{lv246}{%
 \paragraph{LV246}\label{lv246}}
@@ -2096,6 +2099,8 @@ FDR
 \bottomrule()
 \end{longtable}
 
+\clearpage
+
 \hypertarget{lv116}{%
 \paragraph{LV116}\label{lv116}}
 
@@ -2135,6 +2140,8 @@ REACTOME NEGATIVE REGULATORS OF RIG I MDA5 SIGNALING & 0.81 & 1.61e-02 \\
 \bottomrule()
 \end{longtable}
 
+\clearpage
+
 \hypertarget{lv931}{%
 \paragraph{LV931}\label{lv931}}
 
@@ -2163,6 +2170,8 @@ PID TGFBRPATHWAY & 0.71 & 3.99e-02 \\
 \bottomrule()
 \end{longtable}
 
+\clearpage
+
 \hypertarget{lv66}{%
 \paragraph{LV66}\label{lv66}}
 
@@ -2189,6 +2198,8 @@ Pathway & AUC & FDR \\
 REACTOME METABOLISM OF LIPIDS AND LIPOPROTEINS & 0.62 & 3.12e-04 \\
 \bottomrule()
 \end{longtable}
+
+\clearpage
 
 \hypertarget{lv928}{%
 \paragraph{LV928}\label{lv928}}
@@ -2303,6 +2314,8 @@ FDR
 No significant associations & & & & \\
 \bottomrule()
 \end{longtable}
+
+\clearpage
 
 \hypertarget{lv30}{%
 \paragraph{LV30}\label{lv30}}
@@ -2422,6 +2435,8 @@ No significant associations & & & & \\
 \bottomrule()
 \end{longtable}
 
+\clearpage
+
 \hypertarget{lv730}{%
 \paragraph{LV730}\label{lv730}}
 
@@ -2525,6 +2540,8 @@ FDR
 No significant associations & & & & \\
 \bottomrule()
 \end{longtable}
+
+\clearpage
 
 \hypertarget{lv598}{%
 \paragraph{LV598}\label{lv598}}
@@ -2636,6 +2653,8 @@ FDR
 No significant associations & & & & \\
 \bottomrule()
 \end{longtable}
+
+\clearpage
 
 \hypertarget{lv57}{%
 \paragraph{LV57}\label{lv57}}
@@ -2762,6 +2781,8 @@ FDR
 \bottomrule()
 \end{longtable}
 
+\clearpage
+
 \hypertarget{lv844}{%
 \paragraph{LV844}\label{lv844}}
 
@@ -2883,6 +2904,8 @@ FDR
 No significant associations & & & & \\
 \bottomrule()
 \end{longtable}
+
+\clearpage
 
 \hypertarget{lv136}{%
 \paragraph{LV136}\label{lv136}}
@@ -3013,6 +3036,8 @@ FDR
 411.4 & Coronary atherosclerosis & 52,836 & 13,715 & 1.42e‑03 \\
 \bottomrule()
 \end{longtable}
+
+\clearpage
 
 \hypertarget{lv21}{%
 \paragraph{LV21}\label{lv21}}
