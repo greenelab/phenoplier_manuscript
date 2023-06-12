@@ -127,20 +127,6 @@ with open("output/latex/manuscript.tex", "r") as f:
             new_package = space_pat.sub("", new_package).strip() + "\n"
             line = line + new_package
 
-        elif line == r"\hypertarget{supplementary-material}{%" + "\n":
-            new_package = r"""
-              \clearpage
-            """
-            new_package = space_pat.sub("", new_package).strip() + "\n"
-            line = new_package + line
-        
-        elif line == r"\hypertarget{crispr-cas9}{%" + "\n":
-            new_package = r"""
-              \clearpage
-            """
-            new_package = space_pat.sub("", new_package).strip() + "\n"
-            line = new_package + line
-
         print(line, end="")
 EOF`
   python3 -c "$c" > /tmp/manuscript.tex
