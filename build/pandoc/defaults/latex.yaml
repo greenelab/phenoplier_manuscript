@@ -4,7 +4,7 @@ to: latex
 output-file: output/latex/manuscript.tex
 standalone: true
 variables:
-  papersize: legalpaper
+  papersize: a4
   geometry:
   - top=1in
   - left=0.5in
