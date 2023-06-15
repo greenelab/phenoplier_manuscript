@@ -393,7 +393,7 @@ and a lipids-increasing gene-set with six genes: \emph{ACACA}, \emph{DGAT2}, \em
 \textbf{a)} Top cell types/tissues in which LV246's genes are expressed.
 Values in the \(y\)-axis come from matrix \(\mathbf{B}\) in the MultiPLIER models (Figure \ref{fig:entire_process}b, see Methods).
 In the \(x\)-axis, cell types/tissues are sorted by the maximum sample value.
-\textbf{b)} Gene-trait associations (S-MultiXcan; threshold at -log(\(p\))=10) and colocalization probability (fastENLOC) for the top traits in LV246.
+\textbf{b)} Gene-trait associations (unadjusted \(p\)-values from S-MultiXcan\textsuperscript{\protect\hyperlink{ref-1FFzCXo1s}{24}}; threshold at -log(\(p\))=10) and colocalization probability (fastENLOC) for the top traits in LV246.
 The top 40 genes in LV246 are shown, sorted by their LV weight (matrix \(\mathbf{Z}\)), from largest (the top gene \emph{SCD}) to smallest (\emph{FAR2});
 \emph{DGAT2} and \emph{ACACA}, in boldface, are two of the six high-confidence genes in the lipids-increasing gene set from the CRISPR screen.
 Cardiovascular-related traits are in boldface.
@@ -1766,7 +1766,8 @@ B. Final Illumina library from HS DNA ---showed a single \textasciitilde285bp pe
 \subsubsection{Gene modules enrichment for lipids gene-sets}\label{gene-modules-enrichment-for-lipids-gene-sets}}
 
 \begin{longtable}[]{@{}llll@{}}
-\caption{Gene modules (LVs) nominally enriched for the lipids-increasing gene-set from the CRISPR-screen (\emph{P} \textless{} 0.01). LVs significantly aligned with pathways (FDR \textless{} 0.05) from the MultiPLIER models are shown in boldface.
+\caption{Gene modules (LVs) nominally enriched (using FGSEA\textsuperscript{\protect\hyperlink{ref-Z8WXLD67}{51}}) for the lipids-increasing gene-set from the CRISPR-screen (unadjusted \(p\)-values \textless{} 0.01).
+LVs significantly aligned with pathways (FDR \textless{} 0.05) from the MultiPLIER models are shown in boldface.
 \label{tbl:sup:lipids_crispr:modules_enriched_increase}}\label{tbl:sup:lipids_crispr:modules_enriched_increase}\tabularnewline
 \toprule()
 Gene module & Lipids gene-set & Leading edge & p-value \\
@@ -1787,7 +1788,8 @@ LV841 & increase & \emph{ACACA}, \emph{DGAT2} & 0.0096 \\
 \end{longtable}
 
 \begin{longtable}[]{@{}llll@{}}
-\caption{Gene modules (LVs) nominally enriched for the lipids-decreasing gene-set from the CRISPR-screen (\emph{P} \textless{} 0.01). LVs significantly aligned with pathways (FDR \textless{} 0.05) from the MultiPLIER models are shown in boldface.
+\caption{Gene modules (LVs) nominally enriched (using FGSEA\textsuperscript{\protect\hyperlink{ref-Z8WXLD67}{51}}) for the lipids-decreasing gene-set from the CRISPR-screen (unadjusted \(p\)-values \textless{} 0.01).
+LVs significantly aligned with pathways (FDR \textless{} 0.05) from the MultiPLIER models are shown in boldface.
 \label{tbl:sup:lipids_crispr:modules_enriched_decrease}}\label{tbl:sup:lipids_crispr:modules_enriched_decrease}\tabularnewline
 \toprule()
 Gene module & Lipids gene-set & Leading edge & p-value \\
