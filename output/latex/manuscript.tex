@@ -484,31 +484,13 @@ for instance, LV116 and LV931 (Figure \ref{fig:lv116:cell_types}, Supplementary 
 In Figure \ref{fig:lv116:cell_types}, it can be seen that LV116's genes are expressed as an immune response when these cell types are under different stimuli, such as diarrhea caused by different pathogens\textsuperscript{\protect\hyperlink{ref-RliFvowC}{69}}, samples from multiple sclerosis or systemic lupus erythematosus\textsuperscript{\protect\hyperlink{ref-D5XBhzim}{70},\protect\hyperlink{ref-EnoqU4ga}{71}}, or infected with different viruses (such as herpes simplex\textsuperscript{\protect\hyperlink{ref-11eausmiy}{72}}, West Nile virus\textsuperscript{\protect\hyperlink{ref-mtMYROCN}{73}}, \emph{Salmonella typhimurium}\textsuperscript{\protect\hyperlink{ref-1kgcHkGm}{74}}, among others).
 These three LVs (LV246, LV116 and LV931) were among the top 20 modules contributing to the niacin prediction across different cardiovascular traits (Table \ref{tbl:niacin:cardio:top_lvs}).
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.0921}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3026}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6053}}@{}}
-\caption{LVs among the top 20 contributors to the prediction of niacin for five cardiovascular diseases. ``Heart attack, angina, stroke or hypertension'' refers to the UK Biobank data-field 6150. GWAS sample size: Atherosclerosis (361,194 in total and 566 cases), Chronic ischaemic heart disease (361,194 in total and 12,769 cases), Heart attack, angina, stroke or hypertension (360,420 in total and 253,565 cases), Ischaemic heart disease/wide definition (361,194 in total and 20,857 cases), High cholesterol/self-reported (361,141 in total and 43,957 cases). \label{tbl:niacin:cardio:top_lvs}}\label{tbl:niacin:cardio:top_lvs}\tabularnewline
-\toprule()
-\begin{minipage}[b]{\linewidth}\raggedright
-LV
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Cell type
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Disease
-\end{minipage} \\
-\midrule()
-\endfirsthead
-\toprule()
-\begin{minipage}[b]{\linewidth}\raggedright
-LV
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Cell type
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Disease
-\end{minipage} \\
-\midrule()
-\endhead
+\begin{table}
+\caption{LVs among the top 20 contributors to the prediction of niacin for five cardiovascular diseases. ``Heart attack, angina, stroke or hypertension'' refers to the UK Biobank data-field 6150. GWAS sample size: Atherosclerosis (361,194 in total and 566 cases), Chronic ischaemic heart disease (361,194 in total and 12,769 cases), Heart attack, angina, stroke or hypertension (360,420 in total and 253,565 cases), Ischaemic heart disease/wide definition (361,194 in total and 20,857 cases), High cholesterol/self-reported (361,141 in total and 43,957 cases). \label{tbl:niacin:cardio:top_lvs}}\label{tbl:niacin:cardio:top_lvs}%\tabularnewline
+\centering
+\begin{tabular}{lll}
+\toprule
+LV & Cell type & Disease \\
+\midrule
 LV116 & Immune cells, skin & Atherosclerosis (ICD10 I70) \\
 & & Chronic ischaemic heart disease (ICD10 I25) \\
 & & Heart attack, angina, stroke or hypertension \\
@@ -519,8 +501,9 @@ LV931 & Immune cells & Atherosclerosis (ICD10 I70) \\
 LV246 & Adipose tissue, liver & Atherosclerosis (ICD10 I70) \\
 & & High cholesterol (self-reported) \\
 & & Ischaemic heart disease (wide definition) \\
-\bottomrule()
-\end{longtable}
+\bottomrule
+\end{tabular}
+\end{table}
 
 Beyond cardiovascular traits, there are other potentially interesting LVs that could extend our understanding of the mechanisms of niacin.
 For example, LV66, one of the top LVs affected by niacin (Supplementary Figure \ref{fig:sup:lv66}), was mainly expressed in ovarian granulosa cells.
