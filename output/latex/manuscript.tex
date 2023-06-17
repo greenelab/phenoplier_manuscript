@@ -1581,7 +1581,7 @@ We assessed our GLS model type I error rates (proportion of \(p\)-values below 0
 We selected 312 individuals with European ancestry, and then analyzed 1,000 traits drawn from a standard normal distribution \(\mathcal{N}(0,1)\).
 We ran all the standard procedures for the TWAS approaches (S-PrediXcan and S-MultiXcan), including:
 1) a standard GWAS using linear regression under an additive genetic model,
-2) different GWAS processing steps, including harmonization and imputation procedures as defined in\textsuperscript{\protect\hyperlink{ref-SiobXsoB}{116}},
+2) different GWAS processing steps, including harmonization and imputation procedures as defined in\textsuperscript{\protect\hyperlink{ref-SiobXsoB}{1}},
 3) S-PrediXcan and S-MultiXcan analyses.
 Below we provide details for each of these steps.
 
@@ -1591,7 +1591,7 @@ and removing samples with high sex-discrepancy and high-relatedness (first and s
 We included sex and the top 20 principal components as covariates, performing the association test on 5,923,554 variants across all 1,000 random phenotypes.
 
 \textbf{Step 2 - GWAS processing}. These steps include harmonization of GWAS and imputation of \(z\)-scores, which are part of the TWAS pipeline and are needed in order to ensure an acceptable overlap with SNPs in prediction models.
-The scripts to run these steps are available in\textsuperscript{\protect\hyperlink{ref-GPHGnFRN}{117}}.
+The scripts to run these steps are available in\textsuperscript{\protect\hyperlink{ref-GPHGnFRN}{2}}.
 These procedures were run for all 1,000 random phenotypes and generated a total number of 8,325,729 variants, including those with original and imputed \(z\)-scores.
 
 \textbf{Step 3 - TWAS}. We processed the imputed GWAS with S-PrediXcan using the MASHR prediction models on 49 tissues from GTEx v8.
@@ -1785,7 +1785,7 @@ B. Final Illumina library from HS DNA ---showed a single \textasciitilde285bp pe
 \begin{tablenos:tagged-table}[S1]
 
 \begin{longtable}[]{@{}llll@{}}
-\caption{Gene modules (LVs) nominally enriched (using FGSEA\textsuperscript{\protect\hyperlink{ref-Z8WXLD67}{51}}) for the lipids-increasing gene-set from the CRISPR-screen (unadjusted \(p\)-values \textless{} 0.01).
+\caption{Gene modules (LVs) nominally enriched (using FGSEA\textsuperscript{\protect\hyperlink{ref-Z8WXLD67}{3}}) for the lipids-increasing gene-set from the CRISPR-screen (unadjusted \(p\)-values \textless{} 0.01).
 LVs significantly aligned with pathways (FDR \textless{} 0.05) from the MultiPLIER models are shown in boldface.
 \label{tbl:sup:lipids_crispr:modules_enriched_increase}}\label{tbl:sup:lipids_crispr:modules_enriched_increase}\tabularnewline
 \toprule()
@@ -1811,7 +1811,7 @@ LV841 & increase & \emph{ACACA}, \emph{DGAT2} & 0.0096 \\
 \begin{tablenos:tagged-table}[S2]
 
 \begin{longtable}[]{@{}llll@{}}
-\caption{Gene modules (LVs) nominally enriched (using FGSEA\textsuperscript{\protect\hyperlink{ref-Z8WXLD67}{51}}) for the lipids-decreasing gene-set from the CRISPR-screen (unadjusted \(p\)-values \textless{} 0.01).
+\caption{Gene modules (LVs) nominally enriched (using FGSEA\textsuperscript{\protect\hyperlink{ref-Z8WXLD67}{3}}) for the lipids-decreasing gene-set from the CRISPR-screen (unadjusted \(p\)-values \textless{} 0.01).
 LVs significantly aligned with pathways (FDR \textless{} 0.05) from the MultiPLIER models are shown in boldface.
 \label{tbl:sup:lipids_crispr:modules_enriched_decrease}}\label{tbl:sup:lipids_crispr:modules_enriched_decrease}\tabularnewline
 \toprule()
@@ -3222,7 +3222,7 @@ FDR
 \centering
 \includesvg[width=0.8\textwidth,height=\textheight]{images/lvs_analysis/lv136/lv136-cell_types.svg}
 \caption{\textbf{Cell types for LV136.}
-Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours or more\textsuperscript{\protect\hyperlink{ref-VKYS05n1}{118}};}\label{fig:sup:lv136}
+Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours or more\textsuperscript{\protect\hyperlink{ref-VKYS05n1}{4}};}\label{fig:sup:lv136}
 }
 \end{figure}
 
@@ -3370,5 +3370,31 @@ FDR
 \end{figure}
 
 \end{fignos:tagged-figure}
+
+\clearpage
+
+\hypertarget{supplementary_references}{%
+\subsection{Supplementary References}\label{supplementary_references}}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{0}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-SiobXsoB}{}}%
+\CSLLeftMargin{1. }%
+\CSLRightInline{Barbeira, A. N. \emph{et al.} \href{https://doi.org/10.1002/gepi.22346}{Fine‐mapping and QTL tissue‐sharing information improves the reliability of causal gene identification}. \emph{Genetic Epidemiology} \textbf{44}, 854--867 (2020).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-GPHGnFRN}{}}%
+\CSLLeftMargin{2. }%
+\CSLRightInline{\emph{\href{https://github.com/hakyimlab/summary-gwas-imputation}{Harmonization and Imputation Overview}}. (hakyimlab, 2022).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-Z8WXLD67}{}}%
+\CSLLeftMargin{3. }%
+\CSLRightInline{Korotkevich, G. \emph{et al.} Fast gene set enrichment analysis. (2016) doi:\href{https://doi.org/10.1101/060012}{10.1101/060012}.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-VKYS05n1}{}}%
+\CSLLeftMargin{4. }%
+\CSLRightInline{Homo sapiens (ID 232177) - BioProject - NCBI. \url{https://www.ncbi.nlm.nih.gov/bioproject/PRJNA232177}.}
+
+\end{CSLReferences}
+
 
 \end{document}
