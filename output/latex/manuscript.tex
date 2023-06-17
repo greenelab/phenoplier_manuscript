@@ -98,6 +98,22 @@
 \let\LanguageShortHands\languageshorthands
 \def\languageshorthands#1{}
 
+
+%% pandoc-fignos: environment for tagged figures
+\newenvironment{fignos:tagged-figure}[1][]{
+  \let\oldfigurename\figurename
+  \renewcommand{\figurename}{Supplementary Figure}
+}{
+  \let\figurename\oldfigurename
+}
+
+%% pandoc-tablenos: environment for tagged tables
+\newenvironment{tablenos:tagged-table}[1][]{
+  \let\oldtablename\tablename
+  \renewcommand{\tablename}{Supplementary Table}
+}{
+  \let\tablename\oldtablename
+}
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -1556,6 +1572,8 @@ No competing interests were declared.
 \hypertarget{supplementary-information}{%
 \subsection{Supplementary information}\label{supplementary-information}}
 
+\setcounter{figure}{0}
+
 \hypertarget{sm:reg:null_sim}{%
 \subsubsection{Supplementary Note 1: mean type I error rates and calibration of LV-based regression model}\label{sm:reg:null_sim}}
 
@@ -1582,16 +1600,18 @@ Then, S-MultiXcan was ran using the GWAS and S-PrediXcan outputs to generate gen
 Finally, we ran our GLS model (Equation (\ref{eq:reg:model})) to compute an association between each of the 987 LVs in MultiPLIER and the 1,000 S-MultiXcan results on random phenotypes.
 For this, we built a gene correlation matrix specifically for this cohort (see \protect\hyperlink{sec:methods:reg}{Methods}).
 Then, we compared the GLS results with an equivalent, baseline ordinarly least squares (OLS) model assuming independence between genes.
-Figure \ref{fig:reg:nulls:qqplots} compares the distribution of \(p\)-values of the OLS and GLS models.
+Supplementary Figure \ref{fig:reg:nulls:qqplots} compares the distribution of \(p\)-values of the OLS and GLS models.
 The GLS model has a slightly smaller mean type I error rate (0.0558, SD=0.0127) than the baseline OLS model (0.0584, SD=0.0140), and \(p\)-values follow more closely the expected uniform distribution.
-Importantly, the GLS model is able to correct for LVs with adjacent and highly correlated genes at the top such as LV234 (Figure \ref{fig:reg:nulls:qqplot:lv234}), LV847 (Figure \ref{fig:reg:nulls:qqplot:lv847}), LV45 (Figure \ref{fig:reg:nulls:qqplot:lv45}), or LV800 (Figure \ref{fig:reg:nulls:qqplot:lv800}), among others.
+Importantly, the GLS model is able to correct for LVs with adjacent and highly correlated genes at the top such as LV234 (Supplementary Figure \ref{fig:reg:nulls:qqplot:lv234}), LV847 (Supplementary Figure \ref{fig:reg:nulls:qqplot:lv847}), LV45 (Supplementary Figure \ref{fig:reg:nulls:qqplot:lv45}), or LV800 (Supplementary Figure \ref{fig:reg:nulls:qqplot:lv800}), among others.
 In contrast and as expected, the OLS model has higher mean type I errors and smaller-than-expected \(p\)-values in all these cases.
 
 We also detected other LVs with higher-than-expected mean type I errors for both the GLS and OLS models, although they don't have a relatively large number of adjacent genes at the top.
-One example is LV914, shown in Figure \ref{fig:reg:nulls:qqplot:lv914}.
+One example is LV914, shown in Supplementary Figure \ref{fig:reg:nulls:qqplot:lv914}.
 Inflation in these LVs might be explained by inaccuracies in correlation estimates between the individual-level MultiXcan model and its summary-based version (see Methods).
 Therefore, we flagged those with a type I error rate larger than 0.07 (127 LVs) and excluded them from our main analyses.
-We didn't see signs of inflation when applying the method in real data (Figure \ref{fig:reg:real:qqplots}).
+We didn't see signs of inflation when applying the method in real data (Supplementary Figure \ref{fig:reg:real:qqplots}).
+
+\begin{fignos:tagged-figure}[S1]
 
 \begin{figure}
 \hypertarget{fig:reg:nulls:qqplots}{%
@@ -1600,6 +1620,10 @@ We didn't see signs of inflation when applying the method in real data (Figure \
 \caption{\textbf{QQ-plots for OLS (baseline) and GLS (PhenoPLIER) models on random phenotypes.}}\label{fig:reg:nulls:qqplots}
 }
 \end{figure}
+
+\end{fignos:tagged-figure}
+
+\begin{fignos:tagged-figure}[S2]
 
 \begin{figure}
 \hypertarget{fig:reg:nulls:qqplot:lv234}{%
@@ -1610,6 +1634,10 @@ Among the top 1\% of genes in this LV, 17 are located in band 6p22.2, 5 in 6p22.
 }
 \end{figure}
 
+\end{fignos:tagged-figure}
+
+\begin{fignos:tagged-figure}[S3]
+
 \begin{figure}
 \hypertarget{fig:reg:nulls:qqplot:lv847}{%
 \centering
@@ -1618,6 +1646,10 @@ Among the top 1\% of genes in this LV, 17 are located in band 6p22.2, 5 in 6p22.
 Among the top 1\% of genes in this LV, 15 are located in band 6p22.2, 5 in 6p22.1 and 2 in 15q26.1.}\label{fig:reg:nulls:qqplot:lv847}
 }
 \end{figure}
+
+\end{fignos:tagged-figure}
+
+\begin{fignos:tagged-figure}[S4]
 
 \begin{figure}
 \hypertarget{fig:reg:nulls:qqplot:lv45}{%
@@ -1628,6 +1660,10 @@ Among the top 1\% of genes in this LV, 12 are located in band 6p22.2, 6 in 6p22.
 }
 \end{figure}
 
+\end{fignos:tagged-figure}
+
+\begin{fignos:tagged-figure}[S5]
+
 \begin{figure}
 \hypertarget{fig:reg:nulls:qqplot:lv800}{%
 \centering
@@ -1636,6 +1672,10 @@ Among the top 1\% of genes in this LV, 12 are located in band 6p22.2, 6 in 6p22.
 Among the top 1\% of genes in this LV, 16 are located in band 19q13.43, 9 in 19p13.2 and 9 in 19q13.31.}\label{fig:reg:nulls:qqplot:lv800}
 }
 \end{figure}
+
+\end{fignos:tagged-figure}
+
+\begin{fignos:tagged-figure}[S6]
 
 \begin{figure}
 \hypertarget{fig:reg:nulls:qqplot:lv914}{%
@@ -1646,6 +1686,10 @@ Among the top 1\% of genes in this LV, 2 are located in band 13q13.3, 2 in 7p15.
 }
 \end{figure}
 
+\end{fignos:tagged-figure}
+
+\begin{fignos:tagged-figure}[S7]
+
 \begin{figure}
 \hypertarget{fig:reg:real:qqplots}{%
 \centering
@@ -1655,10 +1699,14 @@ QQ-plot in PhenomeXcan (left, discovery cohort) across 4,091 traits and 987 LVs,
 }
 \end{figure}
 
+\end{fignos:tagged-figure}
+
 \clearpage
 
 \hypertarget{crispr-cas9}{%
 \subsubsection{CRISPR-Cas9}\label{crispr-cas9}}
+
+\begin{fignos:tagged-figure}[S8]
 
 \begin{figure}
 \hypertarget{fig:sup:crispr:fig1}{%
@@ -1671,6 +1719,10 @@ Both no-viral transduction Control (A) and lentiviral transduction (B) HepG2 cel
 }
 \end{figure}
 
+\end{fignos:tagged-figure}
+
+\begin{fignos:tagged-figure}[S9]
+
 \begin{figure}
 \hypertarget{fig:sup:crispr:fig2}{%
 \centering
@@ -1681,6 +1733,10 @@ B. HepG2\_lentiV2 with viral transduction stained with LipidSpot™488.
 HepG2\_lentiV2 cells were FAC sorted, 20\% of GFP-High and 20\% of GFP-Low cell populations were collected.}\label{fig:sup:crispr:fig2}
 }
 \end{figure}
+
+\end{fignos:tagged-figure}
+
+\begin{fignos:tagged-figure}[S10]
 
 \begin{figure}
 \hypertarget{fig:sup:crispr:fig3}{%
@@ -1693,6 +1749,10 @@ For both panels A and B, 100 bp ladder was used in Lane 0.}\label{fig:sup:crispr
 }
 \end{figure}
 
+\end{fignos:tagged-figure}
+
+\begin{fignos:tagged-figure}[S11]
+
 \begin{figure}
 \hypertarget{fig:sup:crispr:table1}{%
 \centering
@@ -1700,6 +1760,10 @@ For both panels A and B, 100 bp ladder was used in Lane 0.}\label{fig:sup:crispr
 \caption{\textbf{Primers for generating illumina libraries.}}\label{fig:sup:crispr:table1}
 }
 \end{figure}
+
+\end{fignos:tagged-figure}
+
+\begin{fignos:tagged-figure}[S12]
 
 \begin{figure}
 \hypertarget{fig:sup:crispr:fig4}{%
@@ -1711,10 +1775,14 @@ B. Final Illumina library from HS DNA ---showed a single \textasciitilde285bp pe
 }
 \end{figure}
 
+\end{fignos:tagged-figure}
+
 \clearpage
 
 \hypertarget{gene-modules-enrichment-for-lipids-gene-sets}{%
 \subsubsection{Gene modules enrichment for lipids gene-sets}\label{gene-modules-enrichment-for-lipids-gene-sets}}
+
+\begin{tablenos:tagged-table}[S1]
 
 \begin{longtable}[]{@{}llll@{}}
 \caption{Gene modules (LVs) nominally enriched (using FGSEA\textsuperscript{\protect\hyperlink{ref-Z8WXLD67}{51}}) for the lipids-increasing gene-set from the CRISPR-screen (unadjusted \(p\)-values \textless{} 0.01).
@@ -1737,6 +1805,10 @@ LV890 & increase & \emph{ACACA}, \emph{DGAT2} & 0.0067 \\
 LV841 & increase & \emph{ACACA}, \emph{DGAT2} & 0.0096 \\
 \bottomrule()
 \end{longtable}
+
+\end{tablenos:tagged-table}
+
+\begin{tablenos:tagged-table}[S2]
 
 \begin{longtable}[]{@{}llll@{}}
 \caption{Gene modules (LVs) nominally enriched (using FGSEA\textsuperscript{\protect\hyperlink{ref-Z8WXLD67}{51}}) for the lipids-decreasing gene-set from the CRISPR-screen (unadjusted \(p\)-values \textless{} 0.01).
@@ -1761,6 +1833,8 @@ LV959 & decrease & \emph{TCF7L2}, \emph{PTEN} & 0.0092 \\
 \bottomrule()
 \end{longtable}
 
+\end{tablenos:tagged-table}
+
 \clearpage
 
 \hypertarget{sm:clustering:null_sim}{%
@@ -1778,6 +1852,8 @@ Finally, we computed
 1) stability statistics on the ensemble partitions from different algorithms
 and 2) the agreement of the final consensus partition with the ensemble.
 
+\begin{fignos:tagged-figure}[S13]
+
 \begin{figure}
 \hypertarget{fig:sup:clustering:agreement}{%
 \centering
@@ -1790,7 +1866,9 @@ For the real data scenario, partitions with an agreement above the 75th percenti
 }
 \end{figure}
 
-The results of this analysis (Figure \ref{fig:sup:clustering:agreement}) show that, under the two simulated null scenarios, the agreement of the consensus partitions with the ensemble is very close to zero.
+\end{fignos:tagged-figure}
+
+The results of this analysis (Supplementary Figure \ref{fig:sup:clustering:agreement}) show that, under the two simulated null scenarios, the agreement of the consensus partitions with the ensemble is very close to zero.
 This means, as expected, that there is no consensus among ensemble partitions generated with different clustering algorithms and data representations.
 In contrast, using the real data, the consensus clustering approach finds trait pairs that are grouped together across the different members of the ensemble.
 The partitions above the 75th percentile were considered in the main analyses, and are shown in the clustering tree in Figure \ref{fig:clustering:tree}.
@@ -1799,6 +1877,8 @@ The partitions above the 75th percentile were considered in the main analyses, a
 
 \hypertarget{cluster-specific-and-general-transcriptional-processes-associated-with-disease}{%
 \subsubsection{Cluster-specific and general transcriptional processes associated with disease}\label{cluster-specific-and-general-transcriptional-processes-associated-with-disease}}
+
+\begin{fignos:tagged-figure}[S14]
 
 \begin{figure}
 \hypertarget{fig:sup:clustering:novel:heatmap}{%
@@ -1810,6 +1890,8 @@ Standardized values from -6 (lighter color) to 21 (darker color).}\label{fig:sup
 }
 \end{figure}
 
+\end{fignos:tagged-figure}
+
 \clearpage
 
 \hypertarget{latent-variables-gene-modules-information}{%
@@ -1817,6 +1899,8 @@ Standardized values from -6 (lighter color) to 21 (darker color).}\label{fig:sup
 
 \hypertarget{lv603}{%
 \paragraph{LV603}\label{lv603}}
+
+\begin{tablenos:tagged-table}[S3]
 
 \begin{longtable}[]{@{}lll@{}}
 \caption{Pathways aligned to LV603 from the MultiPLIER models.
@@ -1835,6 +1919,10 @@ PID IL8CXCR2 PATHWAY & 0.81 & 7.04e-03 \\
 SIG PIP3 SIGNALING IN B LYMPHOCYTES & 0.77 & 1.95e-02 \\
 \bottomrule()
 \end{longtable}
+
+\end{tablenos:tagged-table}
+
+\begin{tablenos:tagged-table}[S4]
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.5181}}
@@ -1872,6 +1960,10 @@ Basophill count & 349,856 & & 1.89e‑05 \\
 Treatment/medication code: ispaghula husk & 361,141 & 327 & 1.36e‑02 \\
 \bottomrule()
 \end{longtable}
+
+\end{tablenos:tagged-table}
+
+\begin{tablenos:tagged-table}[S5]
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3580}}
@@ -1913,10 +2005,14 @@ No significant associations & & & & \\
 \bottomrule()
 \end{longtable}
 
+\end{tablenos:tagged-table}
+
 \clearpage
 
 \hypertarget{lv246}{%
 \paragraph{LV246}\label{lv246}}
+
+\begin{tablenos:tagged-table}[S6]
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.7901}}
@@ -1951,6 +2047,10 @@ KEGG PYRUVATE METABOLISM & 0.82 & 2.66e-03 \\
 KEGG PROPANOATE METABOLISM & 0.83 & 4.27e-03 \\
 \bottomrule()
 \end{longtable}
+
+\end{tablenos:tagged-table}
+
+\begin{tablenos:tagged-table}[S7]
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.6954}}
@@ -2009,6 +2109,10 @@ Alzheimer's disease & 361,194 & 119 & 3.61e‑02 \\
 \bottomrule()
 \end{longtable}
 
+\end{tablenos:tagged-table}
+
+\begin{tablenos:tagged-table}[S8]
+
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1325}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3855}}
@@ -2052,10 +2156,14 @@ FDR
 \bottomrule()
 \end{longtable}
 
+\end{tablenos:tagged-table}
+
 \clearpage
 
 \hypertarget{lv116}{%
 \paragraph{LV116}\label{lv116}}
+
+\begin{tablenos:tagged-table}[S9]
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.7606}}
@@ -2093,10 +2201,14 @@ REACTOME NEGATIVE REGULATORS OF RIG I MDA5 SIGNALING & 0.81 & 1.61e-02 \\
 \bottomrule()
 \end{longtable}
 
+\end{tablenos:tagged-table}
+
 \clearpage
 
 \hypertarget{lv931}{%
 \paragraph{LV931}\label{lv931}}
+
+\begin{tablenos:tagged-table}[S10]
 
 \begin{longtable}[]{@{}lll@{}}
 \caption{Pathways aligned to LV931 from the MultiPLIER models.
@@ -2114,6 +2226,10 @@ PID TGFBRPATHWAY & 0.71 & 3.99e-02 \\
 \bottomrule()
 \end{longtable}
 
+\end{tablenos:tagged-table}
+
+\begin{fignos:tagged-figure}[S15]
+
 \begin{figure}
 \hypertarget{fig:sup:lv931}{%
 \centering
@@ -2123,10 +2239,14 @@ PID TGFBRPATHWAY & 0.71 & 3.99e-02 \\
 }
 \end{figure}
 
+\end{fignos:tagged-figure}
+
 \clearpage
 
 \hypertarget{lv66}{%
 \paragraph{LV66}\label{lv66}}
+
+\begin{tablenos:tagged-table}[S11]
 
 \begin{longtable}[]{@{}lll@{}}
 \caption{Pathways aligned to LV66 from the MultiPLIER models.
@@ -2143,6 +2263,10 @@ REACTOME METABOLISM OF LIPIDS AND LIPOPROTEINS & 0.62 & 3.12e-04 \\
 \bottomrule()
 \end{longtable}
 
+\end{tablenos:tagged-table}
+
+\begin{fignos:tagged-figure}[S16]
+
 \begin{figure}
 \hypertarget{fig:sup:lv66}{%
 \centering
@@ -2152,10 +2276,14 @@ REACTOME METABOLISM OF LIPIDS AND LIPOPROTEINS & 0.62 & 3.12e-04 \\
 }
 \end{figure}
 
+\end{fignos:tagged-figure}
+
 \clearpage
 
 \hypertarget{lv928}{%
 \paragraph{LV928}\label{lv928}}
+
+\begin{tablenos:tagged-table}[S12]
 
 \begin{longtable}[]{@{}lll@{}}
 \caption{Pathways aligned to LV928 from the MultiPLIER models.
@@ -2172,6 +2300,10 @@ DMAP ERY3 & 0.81 & 1.16e-24 \\
 DMAP ERY4 & 0.78 & 2.49e-17 \\
 \bottomrule()
 \end{longtable}
+
+\end{tablenos:tagged-table}
+
+\begin{tablenos:tagged-table}[S13]
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.5506}}
@@ -2219,6 +2351,10 @@ Mean corpuscular haemoglobin & 350,472 & & 4.02e‑02 \\
 \bottomrule()
 \end{longtable}
 
+\end{tablenos:tagged-table}
+
+\begin{tablenos:tagged-table}[S14]
+
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3580}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2593}}
@@ -2259,6 +2395,10 @@ No significant associations & & & & \\
 \bottomrule()
 \end{longtable}
 
+\end{tablenos:tagged-table}
+
+\begin{fignos:tagged-figure}[S17]
+
 \begin{figure}
 \hypertarget{fig:sup:lv928}{%
 \centering
@@ -2268,10 +2408,14 @@ No significant associations & & & & \\
 }
 \end{figure}
 
+\end{fignos:tagged-figure}
+
 \clearpage
 
 \hypertarget{lv30}{%
 \paragraph{LV30}\label{lv30}}
+
+\begin{tablenos:tagged-table}[S15]
 
 \begin{longtable}[]{@{}lll@{}}
 \caption{Pathways aligned to LV30 from the MultiPLIER models.
@@ -2289,6 +2433,10 @@ DMAP ERY4 & 0.98 & 5.28e-51 \\
 DMAP ERY5 & 0.98 & 1.96e-49 \\
 \bottomrule()
 \end{longtable}
+
+\end{tablenos:tagged-table}
+
+\begin{tablenos:tagged-table}[S16]
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.5960}}
@@ -2339,6 +2487,10 @@ Illnesses of adopted mother: Chronic bronchitis/emphysema & 2,938 & 238 & 1.92e�
 \bottomrule()
 \end{longtable}
 
+\end{tablenos:tagged-table}
+
+\begin{tablenos:tagged-table}[S17]
+
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3580}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2593}}
@@ -2379,6 +2531,10 @@ No significant associations & & & & \\
 \bottomrule()
 \end{longtable}
 
+\end{tablenos:tagged-table}
+
+\begin{fignos:tagged-figure}[S18]
+
 \begin{figure}
 \hypertarget{fig:sup:lv30}{%
 \centering
@@ -2388,10 +2544,14 @@ No significant associations & & & & \\
 }
 \end{figure}
 
+\end{fignos:tagged-figure}
+
 \clearpage
 
 \hypertarget{lv730}{%
 \paragraph{LV730}\label{lv730}}
+
+\begin{tablenos:tagged-table}[S18]
 
 \begin{longtable}[]{@{}lll@{}}
 \caption{Pathways aligned to LV730 from the MultiPLIER models.
@@ -2407,6 +2567,10 @@ Pathway & AUC & FDR \\
 DMAP MEGA2 & 0.82 & 2.64e-05 \\
 \bottomrule()
 \end{longtable}
+
+\end{tablenos:tagged-table}
+
+\begin{tablenos:tagged-table}[S19]
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.6262}}
@@ -2444,6 +2608,10 @@ Mean platelet (thrombocyte) volume & 350,470 & & 3.47e‑04 \\
 Reason former drinker stopped drinking alcohol: Financial reasons & 12,110 & 233 & 3.71e‑02 \\
 \bottomrule()
 \end{longtable}
+
+\end{tablenos:tagged-table}
+
+\begin{tablenos:tagged-table}[S20]
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3580}}
@@ -2485,6 +2653,10 @@ No significant associations & & & & \\
 \bottomrule()
 \end{longtable}
 
+\end{tablenos:tagged-table}
+
+\begin{fignos:tagged-figure}[S19]
+
 \begin{figure}
 \hypertarget{fig:sup:lv730}{%
 \centering
@@ -2494,10 +2666,14 @@ No significant associations & & & & \\
 }
 \end{figure}
 
+\end{fignos:tagged-figure}
+
 \clearpage
 
 \hypertarget{lv598}{%
 \paragraph{LV598}\label{lv598}}
+
+\begin{tablenos:tagged-table}[S21]
 
 \begin{longtable}[]{@{}lll@{}}
 \caption{Pathways aligned to LV598 from the MultiPLIER models.
@@ -2514,6 +2690,10 @@ PID SYNDECAN 1 PATHWAY & 0.81 & 1.20e-02 \\
 REACTOME COLLAGEN FORMATION & 0.77 & 1.89e-02 \\
 \bottomrule()
 \end{longtable}
+
+\end{tablenos:tagged-table}
+
+\begin{tablenos:tagged-table}[S22]
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.5876}}
@@ -2558,6 +2738,10 @@ Hand grip strength (left) & 359,704 & & 4.15e‑02 \\
 \bottomrule()
 \end{longtable}
 
+\end{tablenos:tagged-table}
+
+\begin{tablenos:tagged-table}[S23]
+
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3580}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2593}}
@@ -2598,6 +2782,10 @@ No significant associations & & & & \\
 \bottomrule()
 \end{longtable}
 
+\end{tablenos:tagged-table}
+
+\begin{fignos:tagged-figure}[S20]
+
 \begin{figure}
 \hypertarget{fig:sup:lv598}{%
 \centering
@@ -2607,10 +2795,14 @@ No significant associations & & & & \\
 }
 \end{figure}
 
+\end{fignos:tagged-figure}
+
 \clearpage
 
 \hypertarget{lv57}{%
 \paragraph{LV57}\label{lv57}}
+
+\begin{tablenos:tagged-table}[S24]
 
 \begin{longtable}[]{@{}lll@{}}
 \caption{Pathways aligned to LV57 from the MultiPLIER models.
@@ -2632,6 +2824,10 @@ PID NFAT TFPATHWAY & 0.74 & 1.52e-02 \\
 IRIS MemoryTcell-RO-activated & 0.70 & 2.87e-02 \\
 \bottomrule()
 \end{longtable}
+
+\end{tablenos:tagged-table}
+
+\begin{tablenos:tagged-table}[S25]
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.6954}}
@@ -2682,6 +2878,10 @@ Hair colour (natural, before greying): Light brown & 360,270 & 147,560 & 4.69e�
 \bottomrule()
 \end{longtable}
 
+\end{tablenos:tagged-table}
+
+\begin{tablenos:tagged-table}[S26]
+
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1158}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.4000}}
@@ -2726,6 +2926,10 @@ FDR
 \bottomrule()
 \end{longtable}
 
+\end{tablenos:tagged-table}
+
+\begin{fignos:tagged-figure}[S21]
+
 \begin{figure}
 \hypertarget{fig:sup:lv57}{%
 \centering
@@ -2734,10 +2938,14 @@ FDR
 }
 \end{figure}
 
+\end{fignos:tagged-figure}
+
 \clearpage
 
 \hypertarget{lv844}{%
 \paragraph{LV844}\label{lv844}}
+
+\begin{tablenos:tagged-table}[S27]
 
 \begin{longtable}[]{@{}lll@{}}
 \caption{Pathways aligned to LV844 from the MultiPLIER models.
@@ -2753,6 +2961,10 @@ Pathway & AUC & FDR \\
 KEGG ANTIGEN PROCESSING AND PRESENTATION & 0.80 & 1.35e-03 \\
 \bottomrule()
 \end{longtable}
+
+\end{tablenos:tagged-table}
+
+\begin{tablenos:tagged-table}[S28]
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.5856}}
@@ -2810,6 +3022,10 @@ Other/unspecified seropositiverheumatoid arthritis & 361,194 & 299 & 4.88e‑02 
 \bottomrule()
 \end{longtable}
 
+\end{tablenos:tagged-table}
+
+\begin{tablenos:tagged-table}[S29]
+
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3580}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2593}}
@@ -2850,6 +3066,10 @@ No significant associations & & & & \\
 \bottomrule()
 \end{longtable}
 
+\end{tablenos:tagged-table}
+
+\begin{fignos:tagged-figure}[S22]
+
 \begin{figure}
 \hypertarget{fig:sup:lv844}{%
 \centering
@@ -2858,10 +3078,14 @@ No significant associations & & & & \\
 }
 \end{figure}
 
+\end{fignos:tagged-figure}
+
 \clearpage
 
 \hypertarget{lv136}{%
 \paragraph{LV136}\label{lv136}}
+
+\begin{tablenos:tagged-table}[S30]
 
 \begin{longtable}[]{@{}lll@{}}
 \caption{Pathways aligned to LV136 from the MultiPLIER models.
@@ -2880,6 +3104,10 @@ REACTOME COLLAGEN FORMATION & 0.87 & 2.00e-04 \\
 REACTOME MUSCLE CONTRACTION & 0.75 & 1.49e-02 \\
 \bottomrule()
 \end{longtable}
+
+\end{tablenos:tagged-table}
+
+\begin{tablenos:tagged-table}[S31]
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.5856}}
@@ -2941,6 +3169,10 @@ Eye problems/disorders: Glaucoma & 117,890 & 5,092 & 4.94e‑02 \\
 \bottomrule()
 \end{longtable}
 
+\end{tablenos:tagged-table}
+
+\begin{tablenos:tagged-table}[S32]
+
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1429}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3377}}
@@ -2981,6 +3213,10 @@ FDR
 \bottomrule()
 \end{longtable}
 
+\end{tablenos:tagged-table}
+
+\begin{fignos:tagged-figure}[S23]
+
 \begin{figure}
 \hypertarget{fig:sup:lv136}{%
 \centering
@@ -2990,10 +3226,14 @@ Pulmonary microvascular endothelial cells were exposed to hypoxia for 24 hours o
 }
 \end{figure}
 
+\end{fignos:tagged-figure}
+
 \clearpage
 
 \hypertarget{lv21}{%
 \paragraph{LV21}\label{lv21}}
+
+\begin{tablenos:tagged-table}[S33]
 
 \begin{longtable}[]{@{}lll@{}}
 \caption{Pathways aligned to LV21 from the MultiPLIER models.
@@ -3009,6 +3249,10 @@ Pathway & AUC & FDR \\
 No pathways significantly enriched & & \\
 \bottomrule()
 \end{longtable}
+
+\end{tablenos:tagged-table}
+
+\begin{tablenos:tagged-table}[S34]
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.5818}}
@@ -3067,6 +3311,10 @@ Mother still alive & 355,029 & 140,246 & 4.96e‑02 \\
 \bottomrule()
 \end{longtable}
 
+\end{tablenos:tagged-table}
+
+\begin{tablenos:tagged-table}[S35]
+
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1236}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3596}}
@@ -3108,6 +3356,10 @@ FDR
 \bottomrule()
 \end{longtable}
 
+\end{tablenos:tagged-table}
+
+\begin{fignos:tagged-figure}[S24]
+
 \begin{figure}
 \hypertarget{fig:sup:lv21}{%
 \centering
@@ -3116,5 +3368,7 @@ FDR
 }\label{fig:sup:lv21}
 }
 \end{figure}
+
+\end{fignos:tagged-figure}
 
 \end{document}
