@@ -98,18 +98,6 @@
 \let\LanguageShortHands\languageshorthands
 \def\languageshorthands#1{}
 
-
-%% pandoc-fignos: environment for tagged figures
-\newenvironment{fignos:tagged-figure}[1][]{
-  \let\oldthefigure\thefigure
-  \let\oldtheHfigure\theHfigure
-  \renewcommand{\thefigure}{#1}
-  \renewcommand{\theHfigure}{#1}
-}{
-  \let\thefigure\oldthefigure
-  \let\theHfigure\oldtheHfigure
-  \addtocounter{figure}{-1}
-}
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -598,7 +586,7 @@ However, these did not replicate in eMERGE.
 This LV was expressed in a wide range of cell types, including blood, breast organoids, myeloma cells, lung fibroblasts, and different cell types from the brain (Supplementary Figure \ref{fig:sup:lv844} and Supplementary Table \ref{tbl:sup:multiplier_pathways:lv844}).
 
 The cardiovascular sub-branch had 129 significant LV-trait associations in PhenomeXcan and 23 in eMERGE.
-LV136, aligned with known collagen formation and muscle contraction pathways (Supplementary Table \ref{tbl:sup:multiplier_pathways:lv136}), was associated with coronary artery disease and keratometry measurements in PhenomeXcan (Supplementary Tables \ref{tbl:sup:phenomexcan_assocs:lv136}).
+LV136, aligned with known collagen formation and muscle contraction pathways (Supplementary Table \ref{tbl:sup:multiplier_pathways:lv136}), was associated with coronary artery disease and keratometry measurements in PhenomeXcan (Supplementary Table \ref{tbl:sup:phenomexcan_assocs:lv136}).
 In eMERGE, this LV was associated with coronary atherosclerosis (phecode: 411.4) (Supplementary Table \ref{tbl:sup:emerge_assocs:lv136}).
 LV136 was expressed in a wide range of cell types, including fibroblasts, mesenchymal stem cells, osteoblasts, pancreatic stellate cells, cardiomyocytes, and adipocytes (Supplementary Figure \ref{fig:sup:lv136}).
 Within the cardiovascular sub-branch, we found neuropsychiatric and neurodevelopmental disorders such as Alzheimer's disease, schizophrenia, and attention deficit hyperactivity disorder (ADHD).
@@ -1672,8 +1660,6 @@ QQ-plot in PhenomeXcan (left, discovery cohort) across 4,091 traits and 987 LVs,
 \hypertarget{crispr-cas9}{%
 \subsubsection{CRISPR-Cas9}\label{crispr-cas9}}
 
-\begin{fignos:tagged-figure}[S1]
-
 \begin{figure}
 \hypertarget{fig:sup:crispr:fig1}{%
 \centering
@@ -1684,10 +1670,6 @@ B. HepG2\_lentiV2 with viral transduction.
 Both no-viral transduction Control (A) and lentiviral transduction (B) HepG2 cells were stained with LipidSpot™488.}\label{fig:sup:crispr:fig1}
 }
 \end{figure}
-
-\end{fignos:tagged-figure}
-
-\begin{fignos:tagged-figure}[S2]
 
 \begin{figure}
 \hypertarget{fig:sup:crispr:fig2}{%
@@ -1700,10 +1682,6 @@ HepG2\_lentiV2 cells were FAC sorted, 20\% of GFP-High and 20\% of GFP-Low cell 
 }
 \end{figure}
 
-\end{fignos:tagged-figure}
-
-\begin{fignos:tagged-figure}[S3]
-
 \begin{figure}
 \hypertarget{fig:sup:crispr:fig3}{%
 \centering
@@ -1715,10 +1693,6 @@ For both panels A and B, 100 bp ladder was used in Lane 0.}\label{fig:sup:crispr
 }
 \end{figure}
 
-\end{fignos:tagged-figure}
-
-\begin{fignos:tagged-figure}[S4]
-
 \begin{figure}
 \hypertarget{fig:sup:crispr:table1}{%
 \centering
@@ -1726,10 +1700,6 @@ For both panels A and B, 100 bp ladder was used in Lane 0.}\label{fig:sup:crispr
 \caption{\textbf{Primers for generating illumina libraries.}}\label{fig:sup:crispr:table1}
 }
 \end{figure}
-
-\end{fignos:tagged-figure}
-
-\begin{fignos:tagged-figure}[S5]
 
 \begin{figure}
 \hypertarget{fig:sup:crispr:fig4}{%
@@ -1740,8 +1710,6 @@ A. Construct for generating Illumina libraries.
 B. Final Illumina library from HS DNA ---showed a single \textasciitilde285bp peak was generated.}\label{fig:sup:crispr:fig4}
 }
 \end{figure}
-
-\end{fignos:tagged-figure}
 
 \clearpage
 
