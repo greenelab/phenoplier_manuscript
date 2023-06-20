@@ -1062,10 +1062,26 @@ A single approximate 285bp peak was expected (Figure \ref{fig:sup:crispr:fig4} B
 Final Illumina library samples were sequenced on Nova-seq 6000.
 Samples were pooled and loaded on an SP flow cell, along with a 20\% PhiX control v3 library spike-in.
 
-\hypertarget{code-and-data-availability}{%
-\subsection{Code and data availability}\label{code-and-data-availability}}
+\hypertarget{data-availability}{%
+\subsection{Data availability}\label{data-availability}}
 
-The code and data to reproduce all the analyses in this work are available at \url{https://github.com/greenelab/phenoplier}.
+All the main datasets generated in this study are available at \url{https://doi.org/10.5281/zenodo.8044955}\textsuperscript{\protect\hyperlink{ref-Bf2hvBbr}{116}} and the GitHub repository \url{https://github.com/greenelab/phenoplier}.
+
+The main input datasets used are TWAS from PhenomeXcan\textsuperscript{\protect\hyperlink{ref-lY5ln3dB}{42}} for 4,091 traits and from the Electronic Medical Records and Genomics (eMERGE) network phase III\textsuperscript{\protect\hyperlink{ref-gZAOkumx}{27}} for 309 traits;
+transcriptional responses to small molecule perturbations from LINCS L1000\textsuperscript{\protect\hyperlink{ref-F7lIlh2N}{43}} that were further preprocessed and mapped to DrugBank IDs from\textsuperscript{\protect\hyperlink{ref-1DJZvtwP1}{54}};
+latent space/gene module models from MultiPLIER\textsuperscript{\protect\hyperlink{ref-14rnBunuZ}{44}}.
+
+\hypertarget{code-availability}{%
+\subsection{Code availability}\label{code-availability}}
+
+The code necessary to reproduce all the analyses in this work is available at \url{https://doi.org/10.5281/zenodo.8044955}\textsuperscript{\protect\hyperlink{ref-Bf2hvBbr}{116}} and the GitHub repository \url{https://github.com/greenelab/phenoplier}.
+
+We used Python 3.8 and R 3.6 with several computational packages.
+The main Python packages used were: Jupyter Lab (2.2), pandas (1.1), matplotlib (3.3), seaborn (0.11), numpy (1.19), scipy (1.5), scikit-learn (0.23), and umap-learn (0.4).
+The main R packages were: Bioconductor (3.10), clusterProfiler (3.14), clustree (0.4), and fgsea (1.17).
+We also developed several scripts and notebooks which are published under an open-source license.
+We documented all the steps necessary to carry out all the analyses.
+We also provide a Docker image to use the same runtime environment we used, and a demo to quickly test the methods on real data.
 
 \hypertarget{references}{%
 \subsection{References}\label{references}}
@@ -1532,16 +1548,20 @@ The code and data to reproduce all the analyses in this work are available at \u
 \CSLLeftMargin{115. }%
 \CSLRightInline{Doench, J. G. \emph{et al.} \href{https://doi.org/10.1038/nbt.3437}{Optimized sgRNA design to maximize activity and minimize off-target effects of CRISPR-Cas9.} \emph{Nat Biotechnol} \textbf{34}, 184--191 (2016).}
 
-\leavevmode\vadjust pre{\hypertarget{ref-SiobXsoB}{}}%
+\leavevmode\vadjust pre{\hypertarget{ref-Bf2hvBbr}{}}%
 \CSLLeftMargin{116. }%
+\CSLRightInline{Pividori, M. \& Greene, C. \emph{greenelab/phenoplier: Improvements in the source code}. (Zenodo, 2023). doi:\href{https://doi.org/10.5281/zenodo.8044956}{10.5281/zenodo.8044956}.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-SiobXsoB}{}}%
+\CSLLeftMargin{117. }%
 \CSLRightInline{Barbeira, A. N. \emph{et al.} \href{https://doi.org/10.1002/gepi.22346}{Fine‐mapping and QTL tissue‐sharing information improves the reliability of causal gene identification}. \emph{Genetic Epidemiology} \textbf{44}, 854--867 (2020).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-GPHGnFRN}{}}%
-\CSLLeftMargin{117. }%
+\CSLLeftMargin{118. }%
 \CSLRightInline{\emph{\href{https://github.com/hakyimlab/summary-gwas-imputation}{Harmonization and Imputation Overview}}. (hakyimlab, 2022).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-VKYS05n1}{}}%
-\CSLLeftMargin{118. }%
+\CSLLeftMargin{119. }%
 \CSLRightInline{Homo sapiens (ID 232177) - BioProject - NCBI. \url{https://www.ncbi.nlm.nih.gov/bioproject/PRJNA232177}.}
 
 \end{CSLReferences}
