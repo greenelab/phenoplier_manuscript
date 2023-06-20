@@ -316,31 +316,6 @@ It has the potential to extract mechanistic insight from statistical association
 \hypertarget{phenoplier-an-integration-framework-based-on-gene-co-expression-patterns}{%
 \subsubsection{PhenoPLIER: an integration framework based on gene co-expression patterns}\label{phenoplier-an-integration-framework-based-on-gene-co-expression-patterns}}
 
-\begin{figure}
-\hypertarget{fig:entire_process}{%
-\centering
-\includegraphics[width=1\textwidth,height=\textheight]{images/entire_process/entire_process.pdf}
-\caption{\textbf{Schematic of the PhenoPLIER framework.}
-\textbf{a)} High-level schematic of PhenoPLIER (a gene module-based method) in the context of TWAS (single-gene) and GWAS (single-variant).
-In GWAS, we identify variants associated with traits.
-In TWAS, first, we identify variants that are associated with gene expression levels (eQTLs); then, prediction models based on eQTLs are used to impute gene expression, which is used to compute gene-trait associations.
-Resources such as LINCS L1000 provide information about how a drug perturbs gene expression; at the bottom-right corner, we show how a drug downregulates two genes (A and C).
-In PhenoPLIER, these data types are integrated using groups of genes co-expressed across one or more conditions (such as cell types) that we call gene modules or latent variables/LVs.
-\textbf{b)} The integration process in PhenoPLIER uses low-dimensional representations (matrices \(\mathbf{Z}\) and \(\mathbf{B}\)) learned from large gene expression datasets (top).
-We used gene-drug information \(\mathbf{L}\) from LINCS L1000 and gene-trait associations \(\mathbf{M}\) from TWAS: PhenomeXcan was used as the discovery cohort, and eMERGE as replication (middle).
-PhenoPLIER provides three computational components (bottom):
-1) an LV-based regression model that associates an LV \(j\) (\(\mathbf{Z}_j\)) with a trait \(i\) (\(\mathbf{M}_i\)),
-2) a clustering framework that learns groups of traits from TWAS associations projected into the LV space (\(\hat{\mathbf{M}}\)),
-and 3) an LV-based drug repurposing approach that uses the projection of TWAS (\(\hat{\mathbf{M}}\)) and LINCS L1000 (\(\hat{\mathbf{L}}\)) into the LV space.
-\textbf{c)} Genes that are part of LV603, termed as a neutrophil signature\textsuperscript{\protect\hyperlink{ref-14rnBunuZ}{44}}, were expressed in relevant cell types (top), with 53 independent samples expressed in Neutrophils, 59 in Granulocytes, and 20 in Whole blood, 56 in PBMC, 8 in mDCs, 29 in Monocytes, and 5 in Epithelial cells (the boxplot shows the 25th, 50th and 75th percentiles while the whiskers extend to the minimum/maximum values).
-LV603 was associated in PhenoPLIER with neutrophil counts and other white blood cells (bottom, showing the top 10 traits for LV603 after projecting gene-trait associations in PhenomeXcan).
-eQTLs: expression quantitative trait loci;
-MVN: multivariate normal distribution;
-PBMC: peripheral blood mononuclear cells;
-mDCs: myeloid dendritic cells.}\label{fig:entire_process}
-}
-\end{figure}
-
 PhenoPLIER is a flexible computational framework that combines gene-trait and gene-drug associations with gene modules expressed in specific contexts (Figure \ref{fig:entire_process}a).
 The approach uses a latent representation (with latent variables or LVs representing gene modules) derived from a large gene expression compendium (Figure \ref{fig:entire_process}b, top) to integrate TWAS with drug-induced transcriptional responses (Figure \ref{fig:entire_process}b, middle) for a joint analysis.
 The approach consists in three main components (Figure \ref{fig:entire_process}b, bottom, see \protect\hyperlink{sec:methods}{Methods}):
@@ -390,26 +365,6 @@ From these, we selected two high-confidence gene sets that either caused a decre
 a lipids-decreasing gene-set with eight genes: \emph{BLCAP}, \emph{FBXW7}, \emph{INSIG2}, \emph{PCYT2}, \emph{PTEN}, \emph{SOX9}, \emph{TCF7L2}, \emph{UBE2J2};
 and a lipids-increasing gene-set with six genes: \emph{ACACA}, \emph{DGAT2}, \emph{HILPDA}, \emph{MBTPS1}, \emph{SCAP}, \emph{SRPR} (Supplementary File 2).
 
-\begin{figure}
-\hypertarget{fig:lv246}{%
-\centering
-\includesvg[width=1\textwidth,height=\textheight]{images/lvs_analysis/lv246/lv246.svg}
-\caption{\textbf{Tissues and traits associated with a gene module related to lipid metabolism (LV246).}
-\textbf{a)} Top cell types/tissues in which LV246's genes are expressed.
-Values in the \(y\)-axis come from matrix \(\mathbf{B}\) in the MultiPLIER models (Figure \ref{fig:entire_process}b, see Methods).
-In the \(x\)-axis, cell types/tissues are sorted by the maximum sample value.
-\textbf{b)} Gene-trait associations (unadjusted \(p\)-values from S-MultiXcan\textsuperscript{\protect\hyperlink{ref-1FFzCXo1s}{24}}; threshold at -log(\(p\))=10) and colocalization probability (fastENLOC) for the top traits in LV246.
-The top 40 genes in LV246 are shown, sorted by their LV weight (matrix \(\mathbf{Z}\)), from largest (the top gene \emph{SCD}) to smallest (\emph{FAR2});
-\emph{DGAT2} and \emph{ACACA}, in boldface, are two of the six high-confidence genes in the lipids-increasing gene set from the CRISPR screen.
-Cardiovascular-related traits are in boldface.
-SGBS: Simpson Golabi Behmel Syndrome;
-CH2DB: CH2 groups to double bonds ratio;
-HDL: high-density lipoprotein;
-RCP: locus regional colocalization probability.
-}\label{fig:lv246}
-}
-\end{figure}
-
 Next, we analyzed all 987 LVs using Fast Gene Set Enrichment Analysis (FGSEA)\textsuperscript{\protect\hyperlink{ref-Z8WXLD67}{51}}, and found 15 LVs nominally enriched (unadjusted \emph{P} \textless{} 0.01) with these lipid-altering gene-sets (Supplementary Tables \ref{tbl:sup:lipids_crispr:modules_enriched_increase} and \ref{tbl:sup:lipids_crispr:modules_enriched_decrease}).
 Among those with reliable sample metadata, LV246, the top LV associated with the lipids-increasing gene-set, contained genes mainly co-expressed in adipose tissue (Figure \ref{fig:lv246}a), which plays a key role in coordinating and regulating lipid metabolism.
 Using our regression framework across all traits in PhenomeXcan, we found that gene weights for this LV were predictive of gene associations for plasma lipids, high cholesterol, and Alzheimer's disease (Supplementary Table \ref{tbl:sup:phenomexcan_assocs:lv246}, FDR \textless{} 1e-23).
@@ -432,17 +387,6 @@ Therefore, a large score for a drug-disease pair indicated that higher (lower) p
 Similarly, for the LV-based approach, we estimated how pharmacological perturbations affected the gene module activity by projecting expression profiles of drugs into our latent representation (Figure \ref{fig:entire_process}b).
 We used a manually-curated gold standard set of drug-disease medical indications\textsuperscript{\protect\hyperlink{ref-O21tn8vf}{53},\protect\hyperlink{ref-10KA5jTBQ}{57}} for 322 drugs across 53 diseases to evaluate the prediction performance.
 
-\begin{figure}
-\hypertarget{fig:drug_disease:roc_pr}{%
-\centering
-\includesvg[width=0.8\textwidth,height=\textheight]{images/drug_disease_prediction/roc_pr_curves.svg}
-\caption{\textbf{Drug-disease prediction performance for gene-based and LV-based approaches.}
-The receiver operating characteristic (ROC) (left) and the precision-recall curves (right) for a gene-based and LV-based approach.
-``Random'' refers to the average precision of a hundred classifiers with randomly permuted scores, where the error band represents the 95\% confidence interval.
-AUC: area under the curve; AP: average precision.}\label{fig:drug_disease:roc_pr}
-}
-\end{figure}
-
 It is important to note that the gene-trait associations and drug-induced expression profiles projected into the latent space represent a compressed version of the entire set of results.
 Despite this information loss, the LV-based method outperformed the gene-based one with an area under the curve of 0.632 and an average precision of 0.858 (Figure \ref{fig:drug_disease:roc_pr}).
 The prediction results suggested that this low-dimensional space captures biologically meaningful patterns that can link pathophysiological processes with the mechanism of action of drugs.
@@ -459,26 +403,6 @@ Since LVs represent interpretable features associated with specific cell types, 
 Notably, LV246 (Figure \ref{fig:lv246}), expressed in adipose tissue and liver and associated with plasma lipids and high cholesterol (Supplementary Table \ref{tbl:sup:phenomexcan_assocs:lv246}), was the 16th most important module in the prediction of niacin as a therapeutic drug for AT.
 Besides the gold standard set, LV246 was among the top modules for other cardiovascular diseases, such as ischaemic heart disease (wide definition, 15th module) and high cholesterol (7th module).
 
-\begin{figure}
-\hypertarget{fig:lv116:cell_types}{%
-\centering
-\includesvg[width=1\textwidth,height=\textheight]{images/lvs_analysis/lv116/lv116-cell_types.svg}
-\caption{\textbf{Top cell types/tissues where LV116's genes are expressed.}
-Values in the \(y\)-axis come from matrix \(\mathbf{B}\) in the MultiPLIER models (Figure \ref{fig:entire_process}b).
-In the \(x\)-axis, cell types/tissues are sorted by the maximum sample value.
-The figure shows a clear immune response with cell types under different stimuli.
-MS: multiple sclerosis;
-HSV: treated with herpes simplex virus;
-WNV: infected with West Nile virus;
-IFNa: treated with interferon-alpha;
-HMDM: human peripheral blood mononuclear cell-derived macrophages;
-Salm: infected with \emph{Salmonella typhimurium};
-Yers: infected with \emph{Yersinia pseudotuberculosis};
-ISM: Interferon Signature Metric;
-SLE: Systemic lupus erythematosus.}\label{fig:lv116:cell_types}
-}
-\end{figure}
-
 The analysis of other top niacin-contributing LVs across different cardiovascular diseases revealed additional mechanisms of action.
 For example, \emph{GPR109A/HCAR2} encodes a G protein-coupled high-affinity niacin receptor in adipocytes and immune cells, including monocytes, macrophages, neutrophils and dendritic cells\textsuperscript{\protect\hyperlink{ref-izbPw2kc}{65},\protect\hyperlink{ref-wI0IjT3i}{66}}.
 It was initially thought that the antiatherogenic effects of niacin were solely due to the inhibition of lipolysis in adipose tissue.
@@ -489,48 +413,12 @@ for instance, LV116 and LV931 (Figure \ref{fig:lv116:cell_types}, Supplementary 
 In Figure \ref{fig:lv116:cell_types}, it can be seen that LV116's genes are expressed as an immune response when these cell types are under different stimuli, such as diarrhea caused by different pathogens\textsuperscript{\protect\hyperlink{ref-RliFvowC}{69}}, samples from multiple sclerosis or systemic lupus erythematosus\textsuperscript{\protect\hyperlink{ref-D5XBhzim}{70},\protect\hyperlink{ref-EnoqU4ga}{71}}, or infected with different viruses (such as herpes simplex\textsuperscript{\protect\hyperlink{ref-11eausmiy}{72}}, West Nile virus\textsuperscript{\protect\hyperlink{ref-mtMYROCN}{73}}, \emph{Salmonella typhimurium}\textsuperscript{\protect\hyperlink{ref-1kgcHkGm}{74}}, among others).
 These three LVs (LV246, LV116 and LV931) were among the top 20 modules contributing to the niacin prediction across different cardiovascular traits (Table \ref{tbl:niacin:cardio:top_lvs}).
 
-\begin{table}
-\caption{LVs among the top 20 contributors to the prediction of niacin for five cardiovascular diseases. ``Heart attack, angina, stroke or hypertension'' refers to the UK Biobank data-field 6150. GWAS sample size: Atherosclerosis (361,194 in total and 566 cases), Chronic ischaemic heart disease (361,194 in total and 12,769 cases), Heart attack, angina, stroke or hypertension (360,420 in total and 253,565 cases), Ischaemic heart disease/wide definition (361,194 in total and 20,857 cases), High cholesterol/self-reported (361,141 in total and 43,957 cases). \label{tbl:niacin:cardio:top_lvs}}\label{tbl:niacin:cardio:top_lvs}%\tabularnewline
-\centering
-\begin{tabular}{lll}
-\toprule
-LV & Cell type & Disease \\
-\midrule
-LV116 & Immune cells, skin & Atherosclerosis (ICD10 I70) \\
-& & Chronic ischaemic heart disease (ICD10 I25) \\
-& & Heart attack, angina, stroke or hypertension \\
-& & Ischaemic heart disease (wide definition) \\
-LV931 & Immune cells & Atherosclerosis (ICD10 I70) \\
-& & Heart attack, angina, stroke or hypertension \\
-& & Ischaemic heart disease (wide definition) \\
-LV246 & Adipose tissue, liver & Atherosclerosis (ICD10 I70) \\
-& & High cholesterol (self-reported) \\
-& & Ischaemic heart disease (wide definition) \\
-\bottomrule
-\end{tabular}
-\end{table}
-
 Beyond cardiovascular traits, there are other potentially interesting LVs that could extend our understanding of the mechanisms of niacin.
 For example, LV66, one of the top LVs affected by niacin (Supplementary Figure \ref{fig:sup:lv66}), was mainly expressed in ovarian granulosa cells.
 This compound has been very recently considered a potential therapeutic for ovarian diseases\textsuperscript{\protect\hyperlink{ref-kLRErKXz}{75},\protect\hyperlink{ref-TovvsrDr}{76}}, as it was found to promote follicle growth and inhibit granulosa cell apoptosis in animal models.
 
 \hypertarget{lvs-reveal-trait-clusters-with-shared-transcriptomic-properties}{%
 \subsubsection{LVs reveal trait clusters with shared transcriptomic properties}\label{lvs-reveal-trait-clusters-with-shared-transcriptomic-properties}}
-
-\begin{figure}
-\hypertarget{fig:clustering:design}{%
-\centering
-\includesvg[width=1\textwidth,height=\textheight]{images/clustering/clustering_design.svg}
-\caption{\textbf{Cluster analysis on traits using the latent gene expression representation.}
-\textbf{a)} The projection of TWAS results on 3,752 traits into the latent gene expression representation is the input data to the clustering process.
-A linear (PCA) and non-linear (UMAP) dimensionality reduction techniques were applied to the input data, and five different clustering algorithms processed all data versions.
-These algorithms derive partitions from the data using different parameters (such as the number of clusters), leading to an ensemble of 4,428 partitions.
-Then, a distance matrix is derived by counting how many times a pair of traits was grouped in different clusters across the ensemble.
-Finally, a consensus function is applied to the distance matrix to generate consolidated partitions with different numbers of clusters (from 2 to \(\sqrt{n}\approx\) 60).
-These final solutions were represented in the clustering tree (Figure \ref{fig:clustering:tree}).
-\textbf{b)} The clusters found by the consensus function were used as labels to train a decision tree classifier on the original input data, which detects the LVs that better differentiate groups of traits.}\label{fig:clustering:design}
-}
-\end{figure}
 
 We used the projection of gene-trait associations into the latent space to find groups of clusters linked by the same transcriptional processes.
 Since individual clustering algorithms have different biases (i.e., assumptions about the data structure), we designed a consensus clustering framework that combines solutions or partitions of traits generated by different methods (\protect\hyperlink{sec:methods:clustering}{Methods}).
@@ -542,30 +430,6 @@ The number of clusters of these partitions (between 5 to 29) was learned from th
 Instead of selecting one of these final solutions with a specific number of clusters, we used a clustering tree\textsuperscript{\protect\hyperlink{ref-xhtEAzx6}{80}} (Figure \ref{fig:clustering:tree}) to examine stable groups of traits across multiple resolutions.
 To understand which latent variables differentiated the group of traits, we trained a decision tree classifier on the input data \(\hat{\mathbf{M}}\) using the clusters found as labels (Figure \ref{fig:clustering:design}b, see \protect\hyperlink{sec:methods:clustering}{Methods}).
 
-\begin{figure}
-\hypertarget{fig:clustering:tree}{%
-\centering
-\includesvg[width=1\textwidth,height=\textheight]{images/clustering/clustering_tree.svg}
-\caption{\textbf{Clustering tree using multiple resolutions for clusters of traits.}
-Each row represents a partition/grouping of the traits, and each circle is a cluster from that partition.
-The number of clusters goes from 5 to 29.
-Arrows indicate how traits in one cluster move across clusters from different partitions.
-Most of the clusters are preserved across different resolutions, showing highly stable solutions even with independent runs of the clustering algorithm.
-RDW: red cell (erythrocyte) distribution width;
-BMI: body mass index;
-WC: waist circumference;
-HC: hip circumference;
-RA: rheumatoid arthritis;
-SLE: systemic lupus erythematosus;
-HTN: Hypertension;
-IBD: inflammatory bowel disease;
-SCZ: Schizophrenia;
-CAD: Coronary artery disease;
-AD: Alzheimer's disease;
-The full lists of traits in each cluster in the last five partitions of the tree (from \(k=16\) to \(k29\)) are in Supplementary Files 3-7.}\label{fig:clustering:tree}
-}
-\end{figure}
-
 We found that phenotypes were grouped into five clear branches, defined by their first node at the top of the Figure \ref{fig:clustering:tree}:
 0) a ``large'' branch that includes most of the traits subdivided only starting at \(k\)=16 (with asthma, subjective well-being traits, and nutrient intake clusters),
 1) heel bone-densitometry measurements,
@@ -575,15 +439,6 @@ We found that phenotypes were grouped into five clear branches, defined by their
 Within these branches, results were relatively stable, with the same traits often clustered together across different resolutions.
 Arrows between clusters show traits moving from one group to another, and this mainly happens between clusters within the ``complex'' branch (4) and between clusters from the ``large'' branch (0) to the ``complex'' branch.
 This behavior is expected since complex diseases are usually associated with shared genetic and environmental factors and are thus hard to categorize into a single cluster.
-
-\begin{figure}
-\hypertarget{fig:clustering:heatmap}{%
-\centering
-\includesvg[width=1\textwidth,height=\textheight]{images/clustering/global_clustermap-plain.svg}
-\caption{\textbf{Cluster-specific and general transcriptional processes associated with different diseases.}
-The plot shows a submatrix of \(\hat{\mathbf{M}}\) for the main trait clusters at \(k\)=29, considering only LVs (rows) that are well-aligned with at least one pathway.}\label{fig:clustering:heatmap}
-}
-\end{figure}
 
 Next, we analyzed which LVs were driving these clusters of traits.
 For this, we trained decision tree classifiers on the input data using each cluster at \(k\)=29 (bottom of Figure \ref{fig:clustering:tree}) as labels (see \protect\hyperlink{sec:methods:clustering}{Methods}).
@@ -1584,6 +1439,161 @@ All authors revised the manuscript and provided critical feedback.
 \subsection{Competing interests statement}\label{competing-interests-statement}}
 
 The authors declare no competing interests.
+
+\clearpage
+
+\hypertarget{tables}{%
+\subsection{Tables}\label{tables}}
+
+\begin{table}[h]
+\caption{LVs among the top 20 contributors to the prediction of niacin for five cardiovascular diseases. ``Heart attack, angina, stroke or hypertension'' refers to the UK Biobank data-field 6150. GWAS sample size: Atherosclerosis (361,194 in total and 566 cases), Chronic ischaemic heart disease (361,194 in total and 12,769 cases), Heart attack, angina, stroke or hypertension (360,420 in total and 253,565 cases), Ischaemic heart disease/wide definition (361,194 in total and 20,857 cases), High cholesterol/self-reported (361,141 in total and 43,957 cases). \label{tbl:niacin:cardio:top_lvs}}\label{tbl:niacin:cardio:top_lvs}%\tabularnewline
+\centering
+\begin{tabular}{lll}
+\toprule
+LV & Cell type & Disease \\
+\midrule
+LV116 & Immune cells, skin & Atherosclerosis (ICD10 I70) \\
+& & Chronic ischaemic heart disease (ICD10 I25) \\
+& & Heart attack, angina, stroke or hypertension \\
+& & Ischaemic heart disease (wide definition) \\
+LV931 & Immune cells & Atherosclerosis (ICD10 I70) \\
+& & Heart attack, angina, stroke or hypertension \\
+& & Ischaemic heart disease (wide definition) \\
+LV246 & Adipose tissue, liver & Atherosclerosis (ICD10 I70) \\
+& & High cholesterol (self-reported) \\
+& & Ischaemic heart disease (wide definition) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\hypertarget{figurecaptions}{%
+\subsection{Figure Legends/Captions}\label{figurecaptions}}
+
+\begin{figure}
+\hypertarget{fig:entire_process}{%
+\centering
+% \includegraphics[width=1\textwidth,height=\textheight]{images/entire_process/entire_process.pdf}
+\caption{\textbf{Schematic of the PhenoPLIER framework.}
+\textbf{a)} High-level schematic of PhenoPLIER (a gene module-based method) in the context of TWAS (single-gene) and GWAS (single-variant).
+In GWAS, we identify variants associated with traits.
+In TWAS, first, we identify variants that are associated with gene expression levels (eQTLs); then, prediction models based on eQTLs are used to impute gene expression, which is used to compute gene-trait associations.
+Resources such as LINCS L1000 provide information about how a drug perturbs gene expression; at the bottom-right corner, we show how a drug downregulates two genes (A and C).
+In PhenoPLIER, these data types are integrated using groups of genes co-expressed across one or more conditions (such as cell types) that we call gene modules or latent variables/LVs.
+\textbf{b)} The integration process in PhenoPLIER uses low-dimensional representations (matrices \(\mathbf{Z}\) and \(\mathbf{B}\)) learned from large gene expression datasets (top).
+We used gene-drug information \(\mathbf{L}\) from LINCS L1000 and gene-trait associations \(\mathbf{M}\) from TWAS: PhenomeXcan was used as the discovery cohort, and eMERGE as replication (middle).
+PhenoPLIER provides three computational components (bottom):
+1) an LV-based regression model that associates an LV \(j\) (\(\mathbf{Z}_j\)) with a trait \(i\) (\(\mathbf{M}_i\)),
+2) a clustering framework that learns groups of traits from TWAS associations projected into the LV space (\(\hat{\mathbf{M}}\)),
+and 3) an LV-based drug repurposing approach that uses the projection of TWAS (\(\hat{\mathbf{M}}\)) and LINCS L1000 (\(\hat{\mathbf{L}}\)) into the LV space.
+\textbf{c)} Genes that are part of LV603, termed as a neutrophil signature\textsuperscript{\protect\hyperlink{ref-14rnBunuZ}{44}}, were expressed in relevant cell types (top), with 53 independent samples expressed in Neutrophils, 59 in Granulocytes, and 20 in Whole blood, 56 in PBMC, 8 in mDCs, 29 in Monocytes, and 5 in Epithelial cells (the boxplot shows the 25th, 50th and 75th percentiles while the whiskers extend to the minimum/maximum values).
+LV603 was associated in PhenoPLIER with neutrophil counts and other white blood cells (bottom, showing the top 10 traits for LV603 after projecting gene-trait associations in PhenomeXcan).
+eQTLs: expression quantitative trait loci;
+MVN: multivariate normal distribution;
+PBMC: peripheral blood mononuclear cells;
+mDCs: myeloid dendritic cells.}\label{fig:entire_process}
+}
+\end{figure}
+
+\begin{figure}
+\hypertarget{fig:lv246}{%
+\centering
+% \includesvg[width=1\textwidth,height=\textheight]{images/lvs_analysis/lv246/lv246.svg}
+\caption{\textbf{Tissues and traits associated with a gene module related to lipid metabolism (LV246).}
+\textbf{a)} Top cell types/tissues in which LV246's genes are expressed.
+Values in the \(y\)-axis come from matrix \(\mathbf{B}\) in the MultiPLIER models (Figure \ref{fig:entire_process}b, see Methods).
+In the \(x\)-axis, cell types/tissues are sorted by the maximum sample value.
+\textbf{b)} Gene-trait associations (unadjusted \(p\)-values from S-MultiXcan\textsuperscript{\protect\hyperlink{ref-1FFzCXo1s}{24}}; threshold at -log(\(p\))=10) and colocalization probability (fastENLOC) for the top traits in LV246.
+The top 40 genes in LV246 are shown, sorted by their LV weight (matrix \(\mathbf{Z}\)), from largest (the top gene \emph{SCD}) to smallest (\emph{FAR2});
+\emph{DGAT2} and \emph{ACACA}, in boldface, are two of the six high-confidence genes in the lipids-increasing gene set from the CRISPR screen.
+Cardiovascular-related traits are in boldface.
+SGBS: Simpson Golabi Behmel Syndrome;
+CH2DB: CH2 groups to double bonds ratio;
+HDL: high-density lipoprotein;
+RCP: locus regional colocalization probability.
+}\label{fig:lv246}
+}
+\end{figure}
+
+\begin{figure}
+\hypertarget{fig:drug_disease:roc_pr}{%
+\centering
+% \includesvg[width=0.8\textwidth,height=\textheight]{images/drug_disease_prediction/roc_pr_curves.svg}
+\caption{\textbf{Drug-disease prediction performance for gene-based and LV-based approaches.}
+The receiver operating characteristic (ROC) (left) and the precision-recall curves (right) for a gene-based and LV-based approach.
+``Random'' refers to the average precision of a hundred classifiers with randomly permuted scores, where the error band represents the 95\% confidence interval.
+AUC: area under the curve; AP: average precision.}\label{fig:drug_disease:roc_pr}
+}
+\end{figure}
+
+\begin{figure}
+\hypertarget{fig:lv116:cell_types}{%
+\centering
+% \includesvg[width=1\textwidth,height=\textheight]{images/lvs_analysis/lv116/lv116-cell_types.svg}
+\caption{\textbf{Top cell types/tissues where LV116's genes are expressed.}
+Values in the \(y\)-axis come from matrix \(\mathbf{B}\) in the MultiPLIER models (Figure \ref{fig:entire_process}b).
+In the \(x\)-axis, cell types/tissues are sorted by the maximum sample value.
+The figure shows a clear immune response with cell types under different stimuli.
+MS: multiple sclerosis;
+HSV: treated with herpes simplex virus;
+WNV: infected with West Nile virus;
+IFNa: treated with interferon-alpha;
+HMDM: human peripheral blood mononuclear cell-derived macrophages;
+Salm: infected with \emph{Salmonella typhimurium};
+Yers: infected with \emph{Yersinia pseudotuberculosis};
+ISM: Interferon Signature Metric;
+SLE: Systemic lupus erythematosus.}\label{fig:lv116:cell_types}
+}
+\end{figure}
+
+\begin{figure}
+\hypertarget{fig:clustering:design}{%
+\centering
+% \includesvg[width=1\textwidth,height=\textheight]{images/clustering/clustering_design.svg}
+\caption{\textbf{Cluster analysis on traits using the latent gene expression representation.}
+\textbf{a)} The projection of TWAS results on 3,752 traits into the latent gene expression representation is the input data to the clustering process.
+A linear (PCA) and non-linear (UMAP) dimensionality reduction techniques were applied to the input data, and five different clustering algorithms processed all data versions.
+These algorithms derive partitions from the data using different parameters (such as the number of clusters), leading to an ensemble of 4,428 partitions.
+Then, a distance matrix is derived by counting how many times a pair of traits was grouped in different clusters across the ensemble.
+Finally, a consensus function is applied to the distance matrix to generate consolidated partitions with different numbers of clusters (from 2 to \(\sqrt{n}\approx\) 60).
+These final solutions were represented in the clustering tree (Figure \ref{fig:clustering:tree}).
+\textbf{b)} The clusters found by the consensus function were used as labels to train a decision tree classifier on the original input data, which detects the LVs that better differentiate groups of traits.}\label{fig:clustering:design}
+}
+\end{figure}
+
+\begin{figure}
+\hypertarget{fig:clustering:tree}{%
+\centering
+% \includesvg[width=1\textwidth,height=\textheight]{images/clustering/clustering_tree.svg}
+\caption{\textbf{Clustering tree using multiple resolutions for clusters of traits.}
+Each row represents a partition/grouping of the traits, and each circle is a cluster from that partition.
+The number of clusters goes from 5 to 29.
+Arrows indicate how traits in one cluster move across clusters from different partitions.
+Most of the clusters are preserved across different resolutions, showing highly stable solutions even with independent runs of the clustering algorithm.
+RDW: red cell (erythrocyte) distribution width;
+BMI: body mass index;
+WC: waist circumference;
+HC: hip circumference;
+RA: rheumatoid arthritis;
+SLE: systemic lupus erythematosus;
+HTN: Hypertension;
+IBD: inflammatory bowel disease;
+SCZ: Schizophrenia;
+CAD: Coronary artery disease;
+AD: Alzheimer's disease;
+The full lists of traits in each cluster in the last five partitions of the tree (from \(k=16\) to \(k29\)) are in Supplementary Files 3-7.}\label{fig:clustering:tree}
+}
+\end{figure}
+
+\begin{figure}
+\hypertarget{fig:clustering:heatmap}{%
+\centering
+% \includesvg[width=1\textwidth,height=\textheight]{images/clustering/global_clustermap-plain.svg}
+\caption{\textbf{Cluster-specific and general transcriptional processes associated with different diseases.}
+The plot shows a submatrix of \(\hat{\mathbf{M}}\) for the main trait clusters at \(k\)=29, considering only LVs (rows) that are well-aligned with at least one pathway.}\label{fig:clustering:heatmap}
+}
+\end{figure}
 
 \clearpage
 
@@ -3414,6 +3424,5 @@ FDR
 \CSLRightInline{Homo sapiens (ID 232177) - BioProject - NCBI. \url{https://www.ncbi.nlm.nih.gov/bioproject/PRJNA232177}.}
 
 \end{CSLReferences}
-
 
 \end{document}
