@@ -1,5 +1,8 @@
 # Steps to build latex file
 
+1. If you have to move Figure Legends at the end, do this after you completed all other steps; otherwise, figures will note be converted from svg to pdf by latex (svg package).
+Then you just copy/paste the figure environments at the right place and remove the includegraphics part.
+
 1. Compile with Manubot:
     ```bash
     # conda activate manubot-phenoplier
