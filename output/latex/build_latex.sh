@@ -7,5 +7,5 @@ latexmk -shell-escape
 pdftk manuscript.pdf cat 1-26 output main_text.pdf
 pdftk manuscript.pdf cat 27-end output supplementary_information.pdf
 
-rm manuscript.pdf
+#rm manuscript.pdf
 
