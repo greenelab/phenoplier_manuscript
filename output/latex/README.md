@@ -17,6 +17,7 @@ Several changes were manually added after generating this file (such as list of 
 
     After compilations, the output files are `main_text.pdf` and `supplementary_information.pdf`.
 
-1. To generate "Supplementary Reference", you can remove all the other files in `content/` and leave the supplemetnary information only, then compile with Manubot (first step), and copy/paste the generated references.
+1. To generate "Supplementary Reference", you can remove all the other files in `content/` and leave the supplementary information only, then compile with Manubot (first step), and copy/paste the generated references.
 This will also allow to see which references are actually being used.
 Then you'll need to manually change the reference numbers in the tex file.
+Remember to remove the supplementary references from the main references.
