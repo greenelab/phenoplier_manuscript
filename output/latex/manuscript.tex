@@ -97,6 +97,7 @@
 % get rid of language-specific shorthands (see #6817):
 \let\LanguageShortHands\languageshorthands
 \def\languageshorthands#1{}
+\usepackage[misc]{ifsym}
 
 
 %% pandoc-fignos: environment for tagged figures
@@ -218,8 +219,8 @@
   · \includesvg[width=0.16667in,height=0.16667in]{images/twitter.svg}
   \href{https://twitter.com/STRUANGRANT}{STRUANGRANT}
 \item
-  \textbf{Casey S. Greene}\textsuperscript{16,2} \\
-  \textsuperscript{\protect\hyperlink{correspondence}{✉}}
+  \textbf{Casey S. Greene}\textsuperscript{16,2}
+  \textsuperscript{\protect\hyperlink{correspondence}{\Letter}} \\
   \includesvg[width=0.16667in,height=0.16667in]{images/orcid.svg}
   \href{https://orcid.org/0000-0001-8713-9213}{0000-0001-8713-9213}
   · \includesvg[width=0.16667in,height=0.16667in]{images/github.svg}
@@ -231,7 +232,7 @@
 \end{itemize}
 
 \leavevmode\vadjust pre{\hypertarget{correspondence}{}}%
-✉ --- Correspondence possible via GitHub Issues
+{\Letter} --- Correspondence possible via GitHub Issues
 or email to
 Casey S. Greene \textless casey.s.greene@cuanschutz.edu\textgreater.
 
