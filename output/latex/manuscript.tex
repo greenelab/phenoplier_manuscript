@@ -750,8 +750,8 @@ As explained before, S-MultiXcan approximates the joint regression parameters in
 This complicates the derivation of an S-MultiXcan-specific solution to compute \(\mathbf{R}\).
 To account for this, we used a submatrix \(\mathbf{R}_{\ell}\) corresponding to genes that are part of LV \(\ell\) only (top 1\% of genes) instead of the entire matrix \(\mathbf{R}\).
 This simplification is conservative since correlations are accounted for top genes only.
-Our simulations (\protect\hyperlink{sm:reg:null_sim}{Supplementary Note 1}) show that the model is approximately well-calibrated and can correct for LVs with adjacent and highly correlated genes at the top (e.g., Figure \ref{fig:reg:nulls:qqplot:lv234}).
-The simulation also identified 127 LVs in which the model was not well-calibrated (e.g., Figure \ref{fig:reg:nulls:qqplot:lv914}).
+Our simulations (\protect\hyperlink{sm:reg:null_sim}{Supplementary Note 1}) show that the model is approximately well-calibrated and can correct for LVs with adjacent and highly correlated genes at the top (e.g., Supplementary Figure \ref{fig:reg:nulls:qqplot:lv234}).
+The simulation also identified 127 LVs in which the model was not well-calibrated (e.g., Supplementary Figure \ref{fig:reg:nulls:qqplot:lv914}).
 As this can be attributed to limitations in accurately computing a gene correlation matrix, we excluded these LVs from our main analyses.
 
 In Equation (\ref{eq:reg:corr_genes}), for each gene, we only considered tissue models present in S-PrediXcan results, as well as SNPs present in GWAS used as input for the TWAS approaches.
@@ -883,7 +883,7 @@ The dry pellet was kept at -80oC for further genomic DNA isolation.
 The rest of the cells (approximately 200M) were kept in 100mm dishes and stained with a fluorescent dye (LipidSpotTM 488, Biotium, Cat. 70065-T).
 In Brief, LipidSpot 488 was diluted to 1:100 with DPBS.
 4ml of staining solution was used for each dish and incubated at 37oC for 30min.
-Cell images were captured through fluorescent microscope EVOS for GFP signal detection (Figure \ref{fig:sup:crispr:fig1}).
+Cell images were captured through fluorescent microscope EVOS for GFP signal detection (Supplementary Figure \ref{fig:sup:crispr:fig1}).
 
 \textbf{Fluorescence-activated cell sorting (FACS).}
 Cells were immediately collected into 50ml tubes (From this point on, keep cells cold), and spun at 500 x g for 5min at 4oC.
@@ -892,17 +892,17 @@ The solution was filter sterilized, and kept at 4oC), with gentle pipetting to m
 The cell solution was then filtered through a cell strainer (Falcon, Cat. 352235) and was kept on ice, protected from light.
 Collected cells were sorted on FACSJazz.
 100um nozzle was used for sorting.
-\textasciitilde20\% of each GFP-High and GFP-Low (Figure \ref{fig:sup:crispr:fig2}) were collected into 15ml tubes.
+\textasciitilde20\% of each GFP-High and GFP-Low (Supplementary Figure \ref{fig:sup:crispr:fig2}) were collected into 15ml tubes.
 After sorting, cells were immediately spun down.
 Pellets were kept at -80oC for further genomic DNA isolation.
 
 \textbf{Genomic DNA isolation and verification.}
 Three conditions of Genomic DNA (Un-Sorted Control, lentiV2 GFP-High, and lentiV2 GFP-Low) were extracted using QIAamp DNA Blood Mini Kit (Qiagen, Cat.51104), followed by UV Spectroscopy (Nanodrop) to access the quality and quantity of the gDNA.
 A total of 80-160ug of gDNA was isolated for each condition.
-sgRNA cassette and lentiviral specific transgene in isolated gDNA were verified through PCR (Figure \ref{fig:sup:crispr:fig3}).
+sgRNA cassette and lentiviral specific transgene in isolated gDNA were verified through PCR (Supplementary Figure \ref{fig:sup:crispr:fig3}).
 
 \textbf{Illumina libraries generation and sequencing.}
-The fragment containing sgRNA cassette was amplified using P5 /P7 primers, as indicated in\textsuperscript{\protect\hyperlink{ref-vNXTnmxp}{115}}, and primer sequences were adapted from Broad Institute protocol (Figure \ref{fig:sup:crispr:table1}).
+The fragment containing sgRNA cassette was amplified using P5 /P7 primers, as indicated in\textsuperscript{\protect\hyperlink{ref-vNXTnmxp}{115}}, and primer sequences were adapted from Broad Institute protocol (Supplementary Figure \ref{fig:sup:crispr:table1}).
 Stagger sequence (0-8nt) was included in P5 and 8bp uniquely barcoded sequence in P7.
 Primers were synthesized through Integrated DNA Technologies (IDT), and each primer was PAGE purified.
 32 PCR reactions were set up for each condition.
@@ -910,10 +910,10 @@ Each 100ul PCR reaction consists of roughly 5ug of gDNA, 5ul of each 10uM P5 and
 ExTaq DNA Polymerase (TaKaRa, Cat. RR001A) was used to amplify the amplicon.
 PCR Thermal Cycler Parameters set as Initial at 95oC for 1min; followed by 24 cycles of Denaturation at 94oC for 30 seconds, Annealing at 52.5oC for 30 seconds, Extension at 72oC for 30 seconds.
 A final Elongation at 72oC for 10 minutes.
-285bp-293bp PCR products were expected (Figure \ref{fig:sup:crispr:fig4} A).
+285bp-293bp PCR products were expected (Supplementary Figure \ref{fig:sup:crispr:fig4} A).
 PCR products within the same condition were pooled and purified using SPRIselect beads (Beckman Coulter, Cat. B23318).
 Purified Illumina libraries were quantitated on Qubit, and the quality of the library was analyzed on Bio-analyzer using High Sensitivity DNA Chip.
-A single approximate 285bp peak was expected (Figure \ref{fig:sup:crispr:fig4} B).
+A single approximate 285bp peak was expected (Supplementary Figure \ref{fig:sup:crispr:fig4} B).
 Final Illumina library samples were sequenced on Nova-seq 6000.
 Samples were pooled and loaded on an SP flow cell, along with a 20\% PhiX control v3 library spike-in.
 
