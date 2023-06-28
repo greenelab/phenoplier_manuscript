@@ -8,7 +8,7 @@ keywords:
 - drug repurposing
 - clustering of complex traits
 lang: en-US
-date-meta: '2023-06-23'
+date-meta: '2023-06-28'
 author-meta:
 - Milton Pividori
 - Sumei Lu
@@ -38,11 +38,11 @@ header-includes: |
   <meta name="citation_title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="og:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
-  <meta name="dc.date" content="2023-06-23" />
-  <meta name="citation_publication_date" content="2023-06-23" />
-  <meta property="article:published_time" content="2023-06-23" />
-  <meta name="dc.modified" content="2023-06-23T21:44:39+00:00" />
-  <meta property="article:modified_time" content="2023-06-23T21:44:39+00:00" />
+  <meta name="dc.date" content="2023-06-28" />
+  <meta name="citation_publication_date" content="2023-06-28" />
+  <meta property="article:published_time" content="2023-06-28" />
+  <meta name="dc.modified" content="2023-06-28T20:33:50+00:00" />
+  <meta property="article:modified_time" content="2023-06-28T20:33:50+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -80,7 +80,7 @@ header-includes: |
   <meta name="citation_author_institution" content="Northwestern University" />
   <meta name="citation_author_orcid" content="0000-0003-0195-7456" />
   <meta name="citation_author" content="Blair D. Sullivan" />
-  <meta name="citation_author_institution" content="School of Computing, University of Utah, Salt Lake City, UT, USA" />
+  <meta name="citation_author_institution" content="Kahlert School of Computing, University of Utah, Salt Lake City, UT, USA" />
   <meta name="citation_author_orcid" content="0000-0001-7720-6208" />
   <meta name="twitter:creator" content="@blairdsullivan" />
   <meta name="citation_author" content="Benjamin F. Voight" />
@@ -116,9 +116,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/4e9bc2c8df551645d6fbfd81aecfc845b3bf32d5/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/4e9bc2c8df551645d6fbfd81aecfc845b3bf32d5/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/4e9bc2c8df551645d6fbfd81aecfc845b3bf32d5/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/0cbc2f389e52fcf3d86abf19100be17d2aa55e6b/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/0cbc2f389e52fcf3d86abf19100be17d2aa55e6b/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/0cbc2f389e52fcf3d86abf19100be17d2aa55e6b/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -140,10 +140,10 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 <!-- 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/4e9bc2c8df551645d6fbfd81aecfc845b3bf32d5/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/0cbc2f389e52fcf3d86abf19100be17d2aa55e6b/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@4e9bc2c](https://github.com/greenelab/phenoplier_manuscript/tree/4e9bc2c8df551645d6fbfd81aecfc845b3bf32d5)
-on June 23, 2023.
+from [greenelab/phenoplier_manuscript@0cbc2f3](https://github.com/greenelab/phenoplier_manuscript/tree/0cbc2f389e52fcf3d86abf19100be17d2aa55e6b)
+on June 28, 2023.
 </em></small> -->
 
 
@@ -257,7 +257,7 @@ on June 23, 2023.
     [blairdsullivan](https://twitter.com/blairdsullivan)
     <br>
   <small>
-     School of Computing, University of Utah, Salt Lake City, UT, USA
+     Kahlert School of Computing, University of Utah, Salt Lake City, UT, USA
   </small>
 
 + **Benjamin F. Voight**
@@ -1174,12 +1174,19 @@ The main input datasets used are TWAS from PhenomeXcan [@doi:10.1126/sciadv.aba2
 transcriptional responses to small molecule perturbations from LINCS L1000 [@doi:10.1016/j.cell.2017.10.049] that were further preprocessed and mapped to DrugBank IDs from [@doi:10.5281/zenodo.47223];
 latent space/gene module models from MultiPLIER [@doi:10.1016/j.cels.2019.04.003].
 
+The data used from PhenomeXcan, LINCS L1000, and MultiPLIER are publicly available.
+All significant results reported for the eMERGE and Penn Medicine BioBank (PMBB) phenome-wide TWAS are contained in [@doi:10.1101/2021.10.21.21265225].
+The individual-level PMBB raw datasets can not be made publicly available due to institutional privacy policy.
+Please contact Penn Medicine Biobank ([https://pmbb.med.upenn.edu/pmbb/](https://pmbb.med.upenn.edu/pmbb/)) for requests of access to data.
+eMERGE network phase III data is available on dbGAP (Accession: phs001584.v2.p2).
+
 
 ## Code availability
 
 The code necessary to reproduce all the analyses in this work is available at [https://doi.org/10.5281/zenodo.8071382](https://doi.org/10.5281/zenodo.8071382) [@doi:10.5281/zenodo.8071382] and the GitHub repository [https://github.com/greenelab/phenoplier](https://github.com/greenelab/phenoplier).
 
-We used Python 3.8 and R 3.6 with several computational packages.
+For the CRISPR screening, we used FlowJo v10.7 and FACS Jazz Software v1.1.
+For data analysis, we used Python 3.8 and R 3.6 with several computational packages.
 The main Python packages used were: Jupyter Lab (2.2), pandas (1.1), matplotlib (3.3), seaborn (0.11), numpy (1.19), scipy (1.5), scikit-learn (0.23), and umap-learn (0.4).
 The main R packages were: Bioconductor (3.10), clusterProfiler (3.14), clustree (0.4), and fgsea (1.17).
 We also developed several scripts and notebooks which are published under an open-source license.
@@ -1206,6 +1213,24 @@ the National Heart, Lung, and Blood Institute (R01 HL163854 to Q. Feng);
 the National Institute of Diabetes and Digestive and Kidney Diseases (DK126194 to B.F. Voight);
 the Daniel B. Burke Endowed Chair for Diabetes Research to S.F.A. Grant.
 
+The Phase III of the eMERGE Network was initiated and funded by the NHGRI through the following grants:
+U01 HG8657 (Group Health Cooperative/University of Washington);
+U01 HG8685 (Brigham and Womens Hospital);
+U01 HG8672 (Vanderbilt University Medical Center);
+U01 HG8666 (Cincinnati Childrens Hospital Medical Center);
+U01 HG6379 (Mayo Clinic);
+U01 HG8679 (Geisinger Clinic);
+U01 HG8680 (Columbia University Health Sciences);
+U01 HG8684 (Childrens Hospital of Philadelphia);
+U01 HG8673 (Northwestern University);
+U01 HG8701 (Vanderbilt University Medical Center serving as the Coordinating Center);
+U01 HG8676 (Partners Healthcare/Broad Institute);
+and U01 HG8664 (Baylor College of Medicine).
+
+The Penn Medicine BioBank (PMBB) is funded by the Perelman School of Medicine at the University of Pennsylvania, a gift from the Smilow family, and the National Center for Advancing Translational Sciences of the National Institutes of Health under CTSA Award Number UL1TR001878.
+We thank D. Birtwell, H. Williams, P. Baumann and M. Risman for informatics support regarding the PMBB.
+We thank the staff of the Regeneron Genetics Center for whole-exome sequencing of DNA from PMBB participants.
+
 Figure {@fig:entire_process}a was created with BioRender.com.
 
 
@@ -1214,7 +1239,9 @@ Figure {@fig:entire_process}a was created with BioRender.com.
 M. Pividori and C.S. Greene conceived and designed the study.
 M. Pividori designed the computational methods, performed the experiments, analyzed the data, interpreted the results, and drafted the manuscript.
 C.S. Greene supervised the entire project and provided critical guidance throughout the study.
-S. Lu and C. Su performed the CRISPR screen with the supervision of S.F.A. Grant.
+S. Lu, C. Su, and M.E. Johnson performed the CRISPR screen with the supervision of S.F.A. Grant.
+B. Li provided the TWAS results for eMERGE for replication, and this analysis was supervised by M.D. Ritchie.
+W. Wei, Q. Feng, B. Namjou, K. Kiryluk, I. Kullo, Y. Luo, and M.D. Ritchie, as part of the eMERGE consortium, provided critical feedback regarding the analyses of this data.
 All authors revised the manuscript and provided critical feedback.
 
 ## Competing interests statement
@@ -1306,7 +1333,7 @@ QQ-plot in PhenomeXcan (left, discovery cohort) across 4,091 traits and 987 LVs,
 A. HepG2_lentiV2_Ctrl with no-viral transduction.
 B. HepG2_lentiV2 with viral transduction.
 Both no-viral transduction Control (A) and lentiviral transduction (B) HepG2 cells were stained with LipidSpot™488.
-The CRISPR screening process was performed once, but we conducted two selections (high and low fluorescence) with a control of no/before selection. Subsequently, we generated three technical replicates for the RNA-seq libraries under each condition. In order to mitigate false positives resulting from the single-screen process, we overlapped the candidates from multiple pairwise differential analyses and selected the genes that were consistent between selections.
+The CRISPR screening process was performed once, but we conducted two selections (high and low fluorescence) with a control of no/before selection. Subsequently, we generated three technical replicates for the DNA-seq libraries under each condition. In order to mitigate false positives resulting from the single-screen process, we overlapped the candidates from multiple pairwise differential analyses and selected the genes that were consistent between selections.
 ](images/crispr/figure1.png "EVOS Fluorescence Microscope Image Capture"){#fig:sup:crispr:fig1 tag="S8" width="80%"}
 
 
@@ -1323,7 +1350,7 @@ HepG2_lentiV2 cells were FAC sorted, 20% of GFP-High and 20% of GFP-Low cell pop
 A. 20nt sgRNA cassette was verified in lentiV2 transduced genomic DNA population, 163 bp PCR product obtained, while WT HepG2 didn’t possess the cassette, thus, no PCR product.
 B. lentiviral-specific transgene WPRE was verified in lentiV2 transduced genomic DNA population, while no transduced WT didn’t have the transgene, therefore, no 173 bp PCR product observed.
 For both panels A and B, 100 bp ladder was used in Lane 0.
-The CRISPR screening process was performed once, but we conducted two selections (high and low fluorescence) with a control of no/before selection. Subsequently, we generated three technical replicates for the RNA-seq libraries under each condition. In order to mitigate false positives resulting from the single-screen process, we overlapped the candidates from multiple pairwise differential analyses and selected the genes that were consistent between selections.
+The CRISPR screening process was performed once, but we conducted two selections (high and low fluorescence) with a control of no/before selection. Subsequently, we generated three technical replicates for the DNA-seq libraries under each condition. In order to mitigate false positives resulting from the single-screen process, we overlapped the candidates from multiple pairwise differential analyses and selected the genes that were consistent between selections.
 ](images/crispr/figure3.png "Verification of sgRNA cassette and lentiV2 transgene"){#fig:sup:crispr:fig3 tag="S10" width="80%"}
 
 
@@ -1336,7 +1363,7 @@ The CRISPR screening process was performed once, but we conducted two selections
 **Illumina library generation.**
 A. Construct for generating Illumina libraries.
 B. Final Illumina library from HS DNA ---showed a single ~285bp peak was generated.
-The CRISPR screening process was performed once, but we conducted two selections (high and low fluorescence) with a control of no/before selection. Subsequently, we generated three technical replicates for the RNA-seq libraries under each condition. In order to mitigate false positives resulting from the single-screen process, we overlapped the candidates from multiple pairwise differential analyses and selected the genes that were consistent between selections.
+The CRISPR screening process was performed once, but we conducted two selections (high and low fluorescence) with a control of no/before selection. Subsequently, we generated three technical replicates for the DNA-seq libraries under each condition. In order to mitigate false positives resulting from the single-screen process, we overlapped the candidates from multiple pairwise differential analyses and selected the genes that were consistent between selections.
 ](images/crispr/figure4.png "Illumina library generation"){#fig:sup:crispr:fig4 tag="S12" width="80%"}
 
 

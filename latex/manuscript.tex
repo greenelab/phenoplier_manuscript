@@ -247,7 +247,7 @@ Casey S. Greene \textless casey.s.greene@cuanschutz.edu\textgreater.
 \textsuperscript{7} Department of Medicine, Division of Nephrology, Vagelos College of Physicians \& Surgeons, Columbia University, New York, New York, USA.
 \textsuperscript{8} Mayo Clinic.
 \textsuperscript{9} Northwestern University.
-\textsuperscript{10} School of Computing, University of Utah, Salt Lake City, UT, USA.
+\textsuperscript{10} Kahlert School of Computing, University of Utah, Salt Lake City, UT, USA.
 \textsuperscript{11} Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA.
 \textsuperscript{12} Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA.
 \textsuperscript{13} Institute for Translational Medicine and Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA.
@@ -926,12 +926,19 @@ The main input datasets used are TWAS from PhenomeXcan\textsuperscript{\protect\
 transcriptional responses to small molecule perturbations from LINCS L1000\textsuperscript{\protect\hyperlink{ref-F7lIlh2N}{43}} that were further preprocessed and mapped to DrugBank IDs from\textsuperscript{\protect\hyperlink{ref-1DJZvtwP1}{54}};
 latent space/gene module models from MultiPLIER\textsuperscript{\protect\hyperlink{ref-14rnBunuZ}{44}}.
 
+The data used from PhenomeXcan, LINCS L1000, and MultiPLIER are publicly available.
+All significant results reported for the eMERGE and Penn Medicine BioBank (PMBB) phenome-wide TWAS are contained in\textsuperscript{\protect\hyperlink{ref-gZAOkumx}{27}}.
+The individual-level PMBB raw datasets can not be made publicly available due to institutional privacy policy.
+Please contact Penn Medicine Biobank (\url{https://pmbb.med.upenn.edu/pmbb/}) for requests of access to data.
+eMERGE network phase III data is available on dbGAP (Accession: phs001584.v2.p2).
+
 \hypertarget{code-availability}{%
 \subsection{Code availability}\label{code-availability}}
 
 The code necessary to reproduce all the analyses in this work is available at \url{https://doi.org/10.5281/zenodo.8071382}\textsuperscript{\protect\hyperlink{ref-cygmsEBt}{116}} and the GitHub repository \url{https://github.com/greenelab/phenoplier}.
 
-We used Python 3.8 and R 3.6 with several computational packages.
+For the CRISPR screening, we used FlowJo v10.7 and FACS Jazz Software v1.1.
+For data analysis, we used Python 3.8 and R 3.6 with several computational packages.
 The main Python packages used were: Jupyter Lab (2.2), pandas (1.1), matplotlib (3.3), seaborn (0.11), numpy (1.19), scipy (1.5), scikit-learn (0.23), and umap-learn (0.4).
 The main R packages were: Bioconductor (3.10), clusterProfiler (3.14), clustree (0.4), and fgsea (1.17).
 We also developed several scripts and notebooks which are published under an open-source license.
@@ -1423,6 +1430,24 @@ the National Heart, Lung, and Blood Institute (R01 HL163854 to Q. Feng);
 the National Institute of Diabetes and Digestive and Kidney Diseases (DK126194 to B.F. Voight);
 the Daniel B. Burke Endowed Chair for Diabetes Research to S.F.A. Grant.
 
+The Phase III of the eMERGE Network was initiated and funded by the NHGRI through the following grants:
+U01 HG8657 (Group Health Cooperative/University of Washington);
+U01 HG8685 (Brigham and Womens Hospital);
+U01 HG8672 (Vanderbilt University Medical Center);
+U01 HG8666 (Cincinnati Childrens Hospital Medical Center);
+U01 HG6379 (Mayo Clinic);
+U01 HG8679 (Geisinger Clinic);
+U01 HG8680 (Columbia University Health Sciences);
+U01 HG8684 (Childrens Hospital of Philadelphia);
+U01 HG8673 (Northwestern University);
+U01 HG8701 (Vanderbilt University Medical Center serving as the Coordinating Center);
+U01 HG8676 (Partners Healthcare/Broad Institute);
+and U01 HG8664 (Baylor College of Medicine).
+
+The Penn Medicine BioBank (PMBB) is funded by the Perelman School of Medicine at the University of Pennsylvania, a gift from the Smilow family, and the National Center for Advancing Translational Sciences of the National Institutes of Health under CTSA Award Number UL1TR001878.
+We thank D. Birtwell, H. Williams, P. Baumann and M. Risman for informatics support regarding the PMBB.
+We thank the staff of the Regeneron Genetics Center for whole-exome sequencing of DNA from PMBB participants.
+
 Figure \ref{fig:entire_process}a was created with BioRender.com.
 
 \hypertarget{author-contributions-statement}{%
@@ -1431,7 +1456,9 @@ Figure \ref{fig:entire_process}a was created with BioRender.com.
 M. Pividori and C.S. Greene conceived and designed the study.
 M. Pividori designed the computational methods, performed the experiments, analyzed the data, interpreted the results, and drafted the manuscript.
 C.S. Greene supervised the entire project and provided critical guidance throughout the study.
-S. Lu and C. Su performed the CRISPR screen with the supervision of S.F.A. Grant.
+S. Lu, C. Su, and M.E. Johnson performed the CRISPR screen with the supervision of S.F.A. Grant.
+B. Li provided the TWAS results for eMERGE for replication, and this analysis was supervised by M.D.~Ritchie.
+W. Wei, Q. Feng, B. Namjou, K. Kiryluk, I. Kullo, Y. Luo, and M.D.~Ritchie, as part of the eMERGE consortium, provided critical feedback regarding the analyses of this data.
 All authors revised the manuscript and provided critical feedback.
 
 \hypertarget{competing-interests-statement}{%
@@ -1744,7 +1771,7 @@ QQ-plot in PhenomeXcan (left, discovery cohort) across 4,091 traits and 987 LVs,
 A. HepG2\_lentiV2\_Ctrl with no-viral transduction.
 B. HepG2\_lentiV2 with viral transduction.
 Both no-viral transduction Control (A) and lentiviral transduction (B) HepG2 cells were stained with LipidSpot™488.
-The CRISPR screening process was performed once, but we conducted two selections (high and low fluorescence) with a control of no/before selection. Subsequently, we generated three technical replicates for the RNA-seq libraries under each condition. In order to mitigate false positives resulting from the single-screen process, we overlapped the candidates from multiple pairwise differential analyses and selected the genes that were consistent between selections.}\label{fig:sup:crispr:fig1}
+The CRISPR screening process was performed once, but we conducted two selections (high and low fluorescence) with a control of no/before selection. Subsequently, we generated three technical replicates for the DNA-seq libraries under each condition. In order to mitigate false positives resulting from the single-screen process, we overlapped the candidates from multiple pairwise differential analyses and selected the genes that were consistent between selections.}\label{fig:sup:crispr:fig1}
 }
 \end{figure}
 
@@ -1775,7 +1802,7 @@ HepG2\_lentiV2 cells were FAC sorted, 20\% of GFP-High and 20\% of GFP-Low cell 
 A. 20nt sgRNA cassette was verified in lentiV2 transduced genomic DNA population, 163 bp PCR product obtained, while WT HepG2 didn't possess the cassette, thus, no PCR product.
 B. lentiviral-specific transgene WPRE was verified in lentiV2 transduced genomic DNA population, while no transduced WT didn't have the transgene, therefore, no 173 bp PCR product observed.
 For both panels A and B, 100 bp ladder was used in Lane 0.
-The CRISPR screening process was performed once, but we conducted two selections (high and low fluorescence) with a control of no/before selection. Subsequently, we generated three technical replicates for the RNA-seq libraries under each condition. In order to mitigate false positives resulting from the single-screen process, we overlapped the candidates from multiple pairwise differential analyses and selected the genes that were consistent between selections.}\label{fig:sup:crispr:fig3}
+The CRISPR screening process was performed once, but we conducted two selections (high and low fluorescence) with a control of no/before selection. Subsequently, we generated three technical replicates for the DNA-seq libraries under each condition. In order to mitigate false positives resulting from the single-screen process, we overlapped the candidates from multiple pairwise differential analyses and selected the genes that were consistent between selections.}\label{fig:sup:crispr:fig3}
 }
 \end{figure}
 
@@ -1802,7 +1829,7 @@ The CRISPR screening process was performed once, but we conducted two selections
 \caption{\textbf{Illumina library generation.}
 A. Construct for generating Illumina libraries.
 B. Final Illumina library from HS DNA ---showed a single \textasciitilde285bp peak was generated.
-The CRISPR screening process was performed once, but we conducted two selections (high and low fluorescence) with a control of no/before selection. Subsequently, we generated three technical replicates for the RNA-seq libraries under each condition. In order to mitigate false positives resulting from the single-screen process, we overlapped the candidates from multiple pairwise differential analyses and selected the genes that were consistent between selections.}\label{fig:sup:crispr:fig4}
+The CRISPR screening process was performed once, but we conducted two selections (high and low fluorescence) with a control of no/before selection. Subsequently, we generated three technical replicates for the DNA-seq libraries under each condition. In order to mitigate false positives resulting from the single-screen process, we overlapped the candidates from multiple pairwise differential analyses and selected the genes that were consistent between selections.}\label{fig:sup:crispr:fig4}
 }
 \end{figure}
 
