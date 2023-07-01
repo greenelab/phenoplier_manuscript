@@ -8,7 +8,7 @@ keywords:
 - drug repurposing
 - clustering of complex traits
 lang: en-US
-date-meta: '2023-06-28'
+date-meta: '2023-07-01'
 author-meta:
 - Milton Pividori
 - Sumei Lu
@@ -38,11 +38,11 @@ header-includes: |
   <meta name="citation_title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="og:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
-  <meta name="dc.date" content="2023-06-28" />
-  <meta name="citation_publication_date" content="2023-06-28" />
-  <meta property="article:published_time" content="2023-06-28" />
-  <meta name="dc.modified" content="2023-06-28T20:33:50+00:00" />
-  <meta property="article:modified_time" content="2023-06-28T20:33:50+00:00" />
+  <meta name="dc.date" content="2023-07-01" />
+  <meta name="citation_publication_date" content="2023-07-01" />
+  <meta property="article:published_time" content="2023-07-01" />
+  <meta name="dc.modified" content="2023-07-01T18:01:38+00:00" />
+  <meta property="article:modified_time" content="2023-07-01T18:01:38+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -116,9 +116,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/0cbc2f389e52fcf3d86abf19100be17d2aa55e6b/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/0cbc2f389e52fcf3d86abf19100be17d2aa55e6b/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/0cbc2f389e52fcf3d86abf19100be17d2aa55e6b/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/66d20bd8aad49749c3fe842e3d1edbec7bb1b6ac/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/66d20bd8aad49749c3fe842e3d1edbec7bb1b6ac/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/66d20bd8aad49749c3fe842e3d1edbec7bb1b6ac/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -140,10 +140,10 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 <!-- 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/0cbc2f389e52fcf3d86abf19100be17d2aa55e6b/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/66d20bd8aad49749c3fe842e3d1edbec7bb1b6ac/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@0cbc2f3](https://github.com/greenelab/phenoplier_manuscript/tree/0cbc2f389e52fcf3d86abf19100be17d2aa55e6b)
-on June 28, 2023.
+from [greenelab/phenoplier_manuscript@66d20bd](https://github.com/greenelab/phenoplier_manuscript/tree/66d20bd8aad49749c3fe842e3d1edbec7bb1b6ac)
+on July 1, 2023.
 </em></small> -->
 
 
@@ -1211,7 +1211,8 @@ the National Institute of Aging (R01AG069900 to W. Wei),
 the National Institute of General Medical Sciences (R01 GM139891 to W. Wei);
 the National Heart, Lung, and Blood Institute (R01 HL163854 to Q. Feng);
 the National Institute of Diabetes and Digestive and Kidney Diseases (DK126194 to B.F. Voight);
-the Daniel B. Burke Endowed Chair for Diabetes Research to S.F.A. Grant.
+the Daniel B. Burke Endowed Chair for Diabetes Research to S.F.A. Grant;
+the Robert L. McNeil Jr. Endowed Fellowship in Translational Medicine and Therapeutics to C. Skarke.
 
 The Phase III of the eMERGE Network was initiated and funded by the NHGRI through the following grants:
 U01 HG8657 (Group Health Cooperative/University of Washington);

@@ -28,7 +28,7 @@ Behmel
 Benecol
 Benjamini
 Binglan
-BioBank
+Biobank
 Bioconductor
 biomechanics
 BioRender
@@ -120,7 +120,7 @@ func
 GBMF
 gDNA
 Geisinger
-Genomic
+genomic
 GenomicSuperSignature
 Genotype
 GFP
@@ -155,8 +155,8 @@ Hochberg
 HSV
 HTN
 HWE
-hypercholesterolemia
-Hyperlipidemia
+Hypercholesterolemia
+hyperlipidemia
 hypoxia
 IBD
 ICA
@@ -164,7 +164,7 @@ ICD
 IDT
 IFNa
 Iftikhar
-illumina
+Illumina
 INSIG
 INTEGRIN
 interpretability
@@ -185,7 +185,7 @@ LDL
 LDLR
 lentiCRIS
 lentiV
-Lentiviral
+lentiviral
 levothyroxine
 LINCS
 LipidSpot
@@ -194,12 +194,12 @@ lipitor
 lipoid
 lipolysis
 lipoprotein
-LIPOPROTEINS
+lipoproteins
 loadings
 LPL
 LPSstimulated
 Luo
-lv
+LV
 LVs
 MAF
 malabsorption
@@ -251,7 +251,7 @@ PCA
 PCR
 PCYT
 perturbagens
-phecode
+Phecode
 phecodes
 phenome
 phenomexcan
@@ -263,7 +263,7 @@ pipetting
 Pividori
 plasmids
 pleiotropy
-PLIER
+plier
 PMBB
 polybrene
 polygenic
@@ -361,7 +361,7 @@ thrombophlebitis
 titer
 titrated
 transcriptional
-Transcriptome
+transcriptome
 transcriptomes
 transcriptomic
 transduced
@@ -374,7 +374,7 @@ typhimurium
 UBE
 ug
 Ulcerative
-umap
+UMAP
 unadjusted
 univariate
 Vagelos
