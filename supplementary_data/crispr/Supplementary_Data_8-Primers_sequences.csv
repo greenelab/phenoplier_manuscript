@@ -1,0 +1,31 @@
+Primers for Generating Illumina Libraries  (see Supplementary Figure 11 for more details):,
+P5/P7 flowcell attachment sequence,
+Illumina sequencing primer,
+Vector primer binding sequence,
+Stagger region / Barcode region,
+P5 primer:,
+5'AATGATACGGCGACCACCGAGATCT ACACTCTTTCCCTACACGACGCTCTTCCGATCT[s]TTGTGGAAAGGACGAAACACCG,
+P7 primer:,
+5'CAAGCAGAAGACGGCATACGAGAT NNNNNNNN GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT CCAATTCCCACTCCTTTCAAGACCT,
+P5 Stagger Region sequences ([s]),
+,"Stagger Sequence to include in P5 primer, 5’-3'"
+P5 0nt,
+P5 1nt,C
+P5 2nt,GC
+P5 3nt,AGC
+P5 4nt,CAAC
+P5 6nt,TGCACC
+P5 7nt,ACGCAAC
+P5 8nt,GAAGACCC
+,
+P7 barcode (index) sequences (NNNNNNNN),
+,"Sequence to include in P7 primer, 5’-3’"
+P7-001,CGGTTCAA
+P7-002,GCTGGATT
+P7-003,TAACTCGG
+P7-004,TAACAGTT
+P7-005,"ATACTCAA,"
+P7-006,GCTGAGAA
+P7-007,ATTGGAGG
+P7-008,TAGTCTAA.
+P7-009,CGGTGACC
