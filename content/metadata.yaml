@@ -28,57 +28,57 @@ authors:
   
   - name: Sumei Lu
     affiliations:
-      - Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
+      - Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA 19104, USA
 
   - name: Binglan Li
     orcid: 0000-0002-0103-6107
     affiliations:
-      - Department of Biomedical Data Science, Stanford University, Stanford, CA, USA
+      - Department of Biomedical Data Science, Stanford University, Stanford, CA 94305, USA.
 
   - name: Chun Su
     orcid:  0000-0001-6388-8666
     github: sckinta
     affiliations:
-      - Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
+      - Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA 19104, USA
 
   - name: Matthew E. Johnson
     affiliations:
-      - Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
+      - Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA 19104, USA
 
   - name: Wei-Qi Wei
     affiliations:
-      - Vanderbilt University Medical Center
+      - Vanderbilt University Medical Center, Nashville, TN 37232, USA
 
   - name: Qiping Feng
     orcid: 0000-0002-6213-793X
     affiliations:
-      - Vanderbilt University Medical Center
+      - Vanderbilt University Medical Center, Nashville, TN 37232, USA
 
   - name: Bahram Namjou
     affiliations:
-      - Cincinnati Children's Hospital Medical Center
+      - Cincinnati Children's Hospital Medical Center, Cincinnati, OH 45229, USA
 
   - name: Krzysztof Kiryluk
     orcid: 0000-0002-5047-6715
     twitter: kirylukk
     affiliations:
-      - Department of Medicine, Division of Nephrology, Vagelos College of Physicians & Surgeons, Columbia University, New York, New York
+      - Department of Medicine, Division of Nephrology, Vagelos College of Physicians \& Surgeons, Columbia University, New York, NY 10032, USA
 
   - name: Iftikhar Kullo
     affiliations:
-      - Mayo Clinic
+      - Mayo Clinic, Rochester, MN 55905, USA
 
   - name: Yuan Luo
     orcid: 0000-0003-0195-7456
     affiliations:
-      - Northwestern University
+      - Northwestern University, Chicago, IL 60611, USA
 
   - name: Blair D. Sullivan
     github: bdsullivan
     orcid: 0000-0001-7720-6208
     twitter: blairdsullivan
     affiliations:
-      - Kahlert School of Computing, University of Utah, Salt Lake City, UT, USA
+      - Kahlert School of Computing, University of Utah, Salt Lake City, UT 84112, USA
 
   - name: Benjamin F. Voight
     orcid: 0000-0002-6205-9994
@@ -108,7 +108,7 @@ authors:
     orcid: 0000-0003-2025-5302
     twitter: STRUANGRANT
     affiliations:
-      - Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
+      - Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA 19104, USA
       - Division of Endocrinology and Diabetes, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
       - Division of Human Genetics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
       - Department of Pediatrics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA
