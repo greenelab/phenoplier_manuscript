@@ -274,7 +274,7 @@ MultiPLIER's models provide this information by linking LVs to samples, which ma
 An example of this is shown in Figure \ref{fig:entire_process}c.
 In the original MultiPLIER study, the authors reported that one of the latent variables, identified as LV603, was associated with a known neutrophil pathway and highly correlated with neutrophil count estimates from whole blood RNA-seq profiles\textsuperscript{\protect\hyperlink{ref-18TSqd1tG}{50}}.
 We analyzed LV603 using PhenoPLIER and found that
-1) neutrophil counts and other white blood cell traits were ranked among the top 10 traits out of 4,091 (Figure \ref{fig:entire_process}c, bottom), and basophils count and percentage were significantly associated with this LV when using our regression method (Supplementary Table \ref{tbl:sup:phenomexcan_assocs:lv603}),
+1) neutrophil counts and other white blood cell traits were ranked among the top 10 traits out of 4,091 (Figure \ref{fig:entire_process}c, bottom), and basophils count and percentage were significantly associated with this LV when using our regression method (Supplementary Table 4),
 and 2) LV603's genes were expressed in highly relevant cell types (Figure \ref{fig:entire_process}c, top).
 These initial results suggested that groups of functionally related and co-expressed genes tend to correspond to groups of trait-associated genes, and the approach can link transcriptional mechanisms from large and diverse dataset collections to complex traits.
 
@@ -294,10 +294,10 @@ From these, we selected two high-confidence gene sets that either caused a decre
 a lipids-decreasing gene-set with eight genes: \emph{BLCAP}, \emph{FBXW7}, \emph{INSIG2}, \emph{PCYT2}, \emph{PTEN}, \emph{SOX9}, \emph{TCF7L2}, \emph{UBE2J2};
 and a lipids-increasing gene-set with six genes: \emph{ACACA}, \emph{DGAT2}, \emph{HILPDA}, \emph{MBTPS1}, \emph{SCAP}, \emph{SRPR} (Supplementary Data 2).
 
-Next, we analyzed all 987 LVs using Fast Gene Set Enrichment Analysis (FGSEA)\textsuperscript{\protect\hyperlink{ref-Z8WXLD67}{51}}, and found 15 LVs nominally enriched (unadjusted \emph{P} \textless{} 0.01) with these lipid-altering gene-sets (Supplementary Tables \ref{tbl:sup:lipids_crispr:modules_enriched_increase} and \ref{tbl:sup:lipids_crispr:modules_enriched_decrease}).
+Next, we analyzed all 987 LVs using Fast Gene Set Enrichment Analysis (FGSEA)\textsuperscript{\protect\hyperlink{ref-Z8WXLD67}{51}}, and found 15 LVs nominally enriched (unadjusted \emph{P} \textless{} 0.01) with these lipid-altering gene-sets (Supplementary Tables 1 and 2).
 Among those with reliable sample metadata, LV246, the top LV associated with the lipids-increasing gene-set, contained genes mainly co-expressed in adipose tissue (Figure \ref{fig:lv246}a), which plays a key role in coordinating and regulating lipid metabolism.
-Using our regression framework across all traits in PhenomeXcan, we found that gene weights for this LV were predictive of gene associations for plasma lipids, high cholesterol, and Alzheimer's disease (Supplementary Table \ref{tbl:sup:phenomexcan_assocs:lv246}, FDR \textless{} 1e-23).
-These lipids-related associations also replicated across the 309 traits in eMERGE (Supplementary Table \ref{tbl:sup:emerge_assocs:lv246}), where LV246 was significantly associated with hypercholesterolemia (phecode: 272.11, FDR \textless{} 4e-9), hyperlipidemia (phecode: 272.1, FDR \textless{} 4e-7) and disorders of lipoid metabolism (phecode: 272, FDR \textless{} 4e-7).
+Using our regression framework across all traits in PhenomeXcan, we found that gene weights for this LV were predictive of gene associations for plasma lipids, high cholesterol, and Alzheimer's disease (Supplementary Table 7, FDR \textless{} 1e-23).
+These lipids-related associations also replicated across the 309 traits in eMERGE (Supplementary Table 8), where LV246 was significantly associated with hypercholesterolemia (phecode: 272.11, FDR \textless{} 4e-9), hyperlipidemia (phecode: 272.1, FDR \textless{} 4e-7) and disorders of lipoid metabolism (phecode: 272, FDR \textless{} 4e-7).
 
 Two high-confidence genes from our CRISPR screening, \emph{DGAT2} and \emph{ACACA}, are responsible for encoding enzymes for triglycerides and fatty acid synthesis and were among the highest-weighted genes of LV246 (Figure \ref{fig:lv246}b, in boldface).
 However, in contrast to other members of LV246, \emph{DGAT2} and \emph{ACACA} were not associated nor colocalized with any of the cardiovascular-related traits and thus would not have been prioritized by TWAS alone;
@@ -329,7 +329,7 @@ Niacin was one of the drugs in the gold standard set indicated for atheroscleros
 We observed that this compound was predicted by the gene-based and LV-based approach as a medical indication for coronary artery disease (CAD), with scores above the mean (0.51 and 0.96, respectively).
 For AT, the LV-based approach predicted niacin as a therapeutic drug with a score of 0.52, whereas the gene-based method assigned a negative score of -0.01 (below the mean).
 Since LVs represent interpretable features associated with specific cell types, we analyzed which LVs positively contributed to these predictions (i.e., with an opposite direction between niacin and the disease).
-Notably, LV246 (Figure \ref{fig:lv246}), expressed in adipose tissue and liver and associated with plasma lipids and high cholesterol (Supplementary Table \ref{tbl:sup:phenomexcan_assocs:lv246}), was the 16th most important module in the prediction of niacin as a therapeutic drug for AT.
+Notably, LV246 (Figure \ref{fig:lv246}), expressed in adipose tissue and liver and associated with plasma lipids and high cholesterol (Supplementary Table 7), was the 16th most important module in the prediction of niacin as a therapeutic drug for AT.
 Besides the gold standard set, LV246 was among the top modules for other cardiovascular diseases, such as ischaemic heart disease (wide definition, 15th module) and high cholesterol (7th module).
 
 The analysis of other top niacin-contributing LVs across different cardiovascular diseases revealed additional mechanisms of action.
@@ -338,12 +338,12 @@ It was initially thought that the antiatherogenic effects of niacin were solely 
 However, it has been shown that nicotinic acid can reduce atherosclerosis progression independently of its antidyslipidemic activity by activating \emph{GPR109A} in immune cells\textsuperscript{\protect\hyperlink{ref-1Bz0jRHYo}{67}}, thus boosting anti-inflammatory processes\textsuperscript{\protect\hyperlink{ref-1DblG8swn}{68}}.
 In addition, flushing, a common adverse effect of niacin, is also produced by the activation of GPR109A in Langerhans cells (macrophages of the skin).
 This alternative mechanism for niacin could have been hypothesized by examining the cell types where the top-contributing modules are expressed:
-for instance, LV116 and LV931 (Figure \ref{fig:lv116:cell_types}, Supplementary Figure \ref{fig:sup:lv931}, and Supplementary Tables \ref{tbl:sup:multiplier_pathways:lv116} and \ref{tbl:sup:multiplier_pathways:lv931}) were the top two modules for AT, with a strong signature in monocytes, macrophages, neutrophils, dendritic cells, among others.
+for instance, LV116 and LV931 (Figure \ref{fig:lv116:cell_types}, Supplementary Figure 15, and Supplementary Tables 9 and 10) were the top two modules for AT, with a strong signature in monocytes, macrophages, neutrophils, dendritic cells, among others.
 In Figure \ref{fig:lv116:cell_types}, it can be seen that LV116's genes are expressed as an immune response when these cell types are under different stimuli, such as diarrhea caused by different pathogens\textsuperscript{\protect\hyperlink{ref-RliFvowC}{69}}, samples from multiple sclerosis or systemic lupus erythematosus\textsuperscript{\protect\hyperlink{ref-D5XBhzim}{70},\protect\hyperlink{ref-EnoqU4ga}{71}}, or infected with different viruses (such as herpes simplex\textsuperscript{\protect\hyperlink{ref-11eausmiy}{72}}, West Nile virus\textsuperscript{\protect\hyperlink{ref-mtMYROCN}{73}}, \emph{Salmonella typhimurium}\textsuperscript{\protect\hyperlink{ref-1kgcHkGm}{74}}, among others).
 These three LVs (LV246, LV116 and LV931) were among the top 20 modules contributing to the niacin prediction across different cardiovascular traits (Table \ref{tbl:niacin:cardio:top_lvs}).
 
 Beyond cardiovascular traits, there are other potentially interesting LVs that could extend our understanding of the mechanisms of niacin.
-For example, LV66, one of the top LVs affected by niacin (Supplementary Figure \ref{fig:sup:lv66}), was mainly expressed in ovarian granulosa cells.
+For example, LV66, one of the top LVs affected by niacin (Supplementary Figure 16), was mainly expressed in ovarian granulosa cells.
 This compound has been very recently considered a potential therapeutic for ovarian diseases\textsuperscript{\protect\hyperlink{ref-kLRErKXz}{75},\protect\hyperlink{ref-TovvsrDr}{76}}, as it was found to promote follicle growth and inhibit granulosa cell apoptosis in animal models.
 
 \hypertarget{lvs-reveal-trait-clusters-with-shared-transcriptomic-properties}{%
@@ -354,7 +354,7 @@ Since individual clustering algorithms have different biases (i.e., assumptions 
 Consensus or ensemble approaches have been recommended to avoid several pitfalls when performing cluster analysis on biological data\textsuperscript{\protect\hyperlink{ref-14dCeRkua}{77}}.
 Since diversity in the ensemble is crucial for these methods, we generated different data versions which were processed using different methods with varying sets of parameters (Figure \ref{fig:clustering:design}a).
 Then, a consensus function combines the ensemble into a consolidated solution, which has been shown to outperform any individual member of the ensemble\textsuperscript{\protect\hyperlink{ref-uw3AnEgA}{78},\protect\hyperlink{ref-cuROQDFa}{79}}.
-Our clustering pipeline generated 15 final consensus clustering solutions (Supplementary Figure \ref{fig:sup:clustering:agreement}).
+Our clustering pipeline generated 15 final consensus clustering solutions (Supplementary Figure 13).
 The number of clusters of these partitions (between 5 to 29) was learned from the data by selecting the partitions with the largest agreement with the ensemble\textsuperscript{\protect\hyperlink{ref-uw3AnEgA}{78}}.
 Instead of selecting one of these final solutions with a specific number of clusters, we used a clustering tree\textsuperscript{\protect\hyperlink{ref-xhtEAzx6}{80}} (Figure \ref{fig:clustering:tree}) to examine stable groups of traits across multiple resolutions.
 To understand which latent variables differentiated the group of traits, we trained a decision tree classifier on the input data \(\hat{\mathbf{M}}\) using the clusters found as labels (Figure \ref{fig:clustering:design}b, see \protect\hyperlink{sec:methods:clustering}{Methods}).
@@ -372,30 +372,30 @@ This behavior is expected since complex diseases are usually associated with sha
 Next, we analyzed which LVs were driving these clusters of traits.
 For this, we trained decision tree classifiers on the input data using each cluster at \(k\)=29 (bottom of Figure \ref{fig:clustering:tree}) as labels (see \protect\hyperlink{sec:methods:clustering}{Methods}).
 This procedure yielded the top LVs that were most discriminative for each cluster.
-Several of these LVs were well-aligned to existing pathways (Figure \ref{fig:clustering:heatmap}), whereas others were not aligned to prior knowledge but still expressed in relevant tissues (Supplementary Figure \ref{fig:sup:clustering:novel:heatmap}).
+Several of these LVs were well-aligned to existing pathways (Figure \ref{fig:clustering:heatmap}), whereas others were not aligned to prior knowledge but still expressed in relevant tissues (Supplementary Figure 14).
 In Figure \ref{fig:clustering:heatmap}, it can be seen that some LVs were highly specific to certain traits, while others were associated with a wide range of different phenotypes, thus potentially involved in more general biological functions.
 We used our regression framework to determine whether these LVs were significantly associated with different traits.
-For example, LVs such as LV928 and LV30, which were well-aligned to early progenitors of the erythrocytes lineage\textsuperscript{\protect\hyperlink{ref-Zk82GvJV}{82}} (Supplementary Tables \ref{tbl:sup:multiplier_pathways:lv928} and \ref{tbl:sup:multiplier_pathways:lv30}), were predominantly expressed in early differentiation stages of erythropoiesis (Supplementary Figures \ref{fig:sup:lv928} and \ref{fig:sup:lv30}) and strongly associated with different assays on red blood cells (FDR \textless{} 0.05; Supplementary Tables \ref{tbl:sup:phenomexcan_assocs:lv928}, \ref{tbl:sup:emerge_assocs:lv928}, and \ref{tbl:sup:emerge_assocs:lv30}).
-In contrast, other LVs were highly specific, such as LV730, which is expressed in thrombocytes from different cancer samples (Supplementary Figures \ref{fig:sup:lv730} and Supplementary Table \ref{tbl:sup:multiplier_pathways:lv730}), and strongly associated with hematological assays on platelets (FDR \textless{} 0.05, Supplementary Table \ref{tbl:sup:phenomexcan_assocs:lv730});
-or LV598, whose genes were expressed in corneal endothelial cells (Supplementary Figures \ref{fig:sup:lv598} and Supplementary Table \ref{tbl:sup:multiplier_pathways:lv598}) and associated with keratometry measurements (Supplementary Table \ref{tbl:sup:phenomexcan_assocs:lv598}).
+For example, LVs such as LV928 and LV30, which were well-aligned to early progenitors of the erythrocytes lineage\textsuperscript{\protect\hyperlink{ref-Zk82GvJV}{82}} (Supplementary Tables 12 and 15), were predominantly expressed in early differentiation stages of erythropoiesis (Supplementary Figures 17 and 18) and strongly associated with different assays on red blood cells (FDR \textless{} 0.05; Supplementary Tables 13, 14, and 17).
+In contrast, other LVs were highly specific, such as LV730, which is expressed in thrombocytes from different cancer samples (Supplementary Figures 19 and Supplementary Table 18), and strongly associated with hematological assays on platelets (FDR \textless{} 0.05, Supplementary Table 19);
+or LV598, whose genes were expressed in corneal endothelial cells (Supplementary Figures 20 and Supplementary Table 21) and associated with keratometry measurements (Supplementary Table 22).
 
 The sub-branches of autoimmune and cardiovascular diseases merged together at \(k=10\) (middle of Figure \ref{fig:clustering:tree}), so we expected to find LVs that specifically affect one or both of these types of diseases.
-For example, LV57, expressed in T cells (Supplementary Figure \ref{fig:sup:lv57} and Supplementary Table \ref{tbl:sup:multiplier_pathways:lv57}), was the most strongly associated gene module with autoimmune disorders in PhenomeXcan (Supplementary Table \ref{tbl:sup:phenomexcan_assocs:lv57}), with significant associations with hypothyroidism that were replicated in eMERGE (Supplementary Table \ref{tbl:sup:emerge_assocs:lv57}).
+For example, LV57, expressed in T cells (Supplementary Figure 21 and Supplementary Table 24), was the most strongly associated gene module with autoimmune disorders in PhenomeXcan (Supplementary Table 25), with significant associations with hypothyroidism that were replicated in eMERGE (Supplementary Table 26).
 However, this LV was also strongly associated with deep venous thrombosis in both PhenomeXcan and eMERGE.
-On the other hand, LV844 was more autoimmune-specific, with associations to polymyalgia rheumatica, type 1 diabetes, rheumatoid arthritis, and celiac disease in PhenomeXcan (Supplementary Table \ref{tbl:sup:phenomexcan_assocs:lv844}).
+On the other hand, LV844 was more autoimmune-specific, with associations to polymyalgia rheumatica, type 1 diabetes, rheumatoid arthritis, and celiac disease in PhenomeXcan (Supplementary Table 28).
 However, these did not replicate in eMERGE.
-This LV was expressed in a wide range of cell types, including blood, breast organoids, myeloma cells, lung fibroblasts, and different cell types from the brain (Supplementary Figure \ref{fig:sup:lv844} and Supplementary Table \ref{tbl:sup:multiplier_pathways:lv844}).
+This LV was expressed in a wide range of cell types, including blood, breast organoids, myeloma cells, lung fibroblasts, and different cell types from the brain (Supplementary Figure 22 and Supplementary Table 27).
 
 The cardiovascular sub-branch had 129 significant LV-trait associations in PhenomeXcan and 23 in eMERGE.
-LV136, aligned with known collagen formation and muscle contraction pathways (Supplementary Table \ref{tbl:sup:multiplier_pathways:lv136}), was associated with coronary artery disease and keratometry measurements in PhenomeXcan (Supplementary Table \ref{tbl:sup:phenomexcan_assocs:lv136}).
-In eMERGE, this LV was associated with coronary atherosclerosis (phecode: 411.4) (Supplementary Table \ref{tbl:sup:emerge_assocs:lv136}).
-LV136 was expressed in a wide range of cell types, including fibroblasts, mesenchymal stem cells, osteoblasts, pancreatic stellate cells, cardiomyocytes, and adipocytes (Supplementary Figure \ref{fig:sup:lv136}).
+LV136, aligned with known collagen formation and muscle contraction pathways (Supplementary Table 30), was associated with coronary artery disease and keratometry measurements in PhenomeXcan (Supplementary Table 31).
+In eMERGE, this LV was associated with coronary atherosclerosis (phecode: 411.4) (Supplementary Table 32).
+LV136 was expressed in a wide range of cell types, including fibroblasts, mesenchymal stem cells, osteoblasts, pancreatic stellate cells, cardiomyocytes, and adipocytes (Supplementary Figure 23).
 Within the cardiovascular sub-branch, we found neuropsychiatric and neurodevelopmental disorders such as Alzheimer's disease, schizophrenia, and attention deficit hyperactivity disorder (ADHD).
 These disorders were previously linked to the cardiovascular system\textsuperscript{\protect\hyperlink{ref-10qjLoufR}{83}--\protect\hyperlink{ref-13t4TuFeJ}{86}} and share several risk factors, including hypertension, high cholesterol, obesity, smoking, among others\textsuperscript{\protect\hyperlink{ref-D83Aqhga}{87},\protect\hyperlink{ref-9BGyO071}{88}}.
 However, our results grouped these diseases by potentially shared transcriptional processes expressed in specific tissues/cell types.
-Alzheimer's disease (not present in eMERGE), for instance, was significantly associated with LV21 in PhenomeXcan (Supplementary Table \ref{tbl:sup:phenomexcan_assocs:lv21}).
-LV21, a gene module not aligned to prior pathways, was strongly expressed in a variety of soft tissue sarcomas, monocytes/macrophages (including microglia from cortex samples), and aortic valves (Supplementary Figure \ref{fig:sup:lv21} and Supplementary Table \ref{tbl:sup:multiplier_pathways:lv21}).
-This LV was also strongly associated with lipids and high cholesterol in PhenomeXcan and hyperlipidemia (phecode: 272.1) in eMERGE (Supplementary Table \ref{tbl:sup:emerge_assocs:lv21}).
+Alzheimer's disease (not present in eMERGE), for instance, was significantly associated with LV21 in PhenomeXcan (Supplementary Table 34).
+LV21, a gene module not aligned to prior pathways, was strongly expressed in a variety of soft tissue sarcomas, monocytes/macrophages (including microglia from cortex samples), and aortic valves (Supplementary Figure 24 and Supplementary Table 33).
+This LV was also strongly associated with lipids and high cholesterol in PhenomeXcan and hyperlipidemia (phecode: 272.1) in eMERGE (Supplementary Table 35).
 As discussed previously, macrophages play a key role in the reverse cholesterol transport and thus atherogenesis\textsuperscript{\protect\hyperlink{ref-idlBgtFz}{89}}, and lipid metabolism in microglia has been recently identified as an important factor in the development of neurodegenerative diseases\textsuperscript{\protect\hyperlink{ref-18I4ish9s}{90}}.
 
 \hypertarget{discussion}{%
@@ -680,8 +680,8 @@ As explained before, S-MultiXcan approximates the joint regression parameters in
 This complicates the derivation of an S-MultiXcan-specific solution to compute \(\mathbf{R}\).
 To account for this, we used a submatrix \(\mathbf{R}_{\ell}\) corresponding to genes that are part of LV \(\ell\) only (top 1\% of genes) instead of the entire matrix \(\mathbf{R}\).
 This simplification is conservative since correlations are accounted for top genes only.
-Our simulations (\protect\hyperlink{sm:reg:null_sim}{Supplementary Note 1}) show that the model is approximately well-calibrated and can correct for LVs with adjacent and highly correlated genes at the top (e.g., Supplementary Figure \ref{fig:reg:nulls:qqplot:lv234}).
-The simulation also identified 127 LVs in which the model was not well-calibrated (e.g., Supplementary Figure \ref{fig:reg:nulls:qqplot:lv914}).
+Our simulations (\protect\hyperlink{sm:reg:null_sim}{Supplementary Note 1}) show that the model is approximately well-calibrated and can correct for LVs with adjacent and highly correlated genes at the top (e.g., Supplementary Figure 2).
+The simulation also identified 127 LVs in which the model was not well-calibrated (e.g., Supplementary Figure 6).
 As this can be attributed to limitations in accurately computing a gene correlation matrix, we excluded these LVs from our main analyses.
 
 In Equation (\ref{eq:reg:corr_genes}), for each gene, we only considered tissue models present in S-PrediXcan results, as well as SNPs present in GWAS used as input for the TWAS approaches.
@@ -752,7 +752,7 @@ This procedure generated a final ensemble of 4,428 partitions of 3,752 traits.
 Finally, we used spectral clustering on \(\mathbf{D}\) to derive the final consensus partitions.
 \(\mathbf{D}\) was first transformed into a similarity matrix by applying an RBF kernel \(\mathrm{exp}(-\gamma \mathbf{D}^2)\) using four different values for \(\gamma\) that we empirically determined to work best.
 Therefore, for each \(k\) between 2 and 60, we derived four consensus partitions and selected the one that maximized Equation (\ref{eq:consensus:obj_func}).
-We further filtered this set of 59 solutions to keep only those with an ensemble agreement larger than the 75th percentile (Supplementary Figure \ref{fig:sup:clustering:agreement}), leaving a total of 15 final consensus partitions shown in Figure \ref{fig:clustering:tree}.
+We further filtered this set of 59 solutions to keep only those with an ensemble agreement larger than the 75th percentile (Supplementary Figure 13), leaving a total of 15 final consensus partitions shown in Figure \ref{fig:clustering:tree}.
 
 The input data in our clustering pipeline undergoes several linear and nonlinear transformations, including PCA, UMAP and the ensemble transformation using the EAC paradigm (distance matrix \(\mathbf{D}\)).
 Although consensus clustering has clear advantages for biological data\textsuperscript{\protect\hyperlink{ref-S7LBsfcF}{114}}, this set of data transformations complicates the interpretation of results.
@@ -813,7 +813,7 @@ The dry pellet was kept at -80oC for further genomic DNA isolation.
 The rest of the cells (approximately 200M) were kept in 100mm dishes and stained with a fluorescent dye (LipidSpotTM 488, Biotium, Cat. 70065-T).
 In Brief, LipidSpot 488 was diluted to 1:100 with DPBS.
 4ml of staining solution was used for each dish and incubated at 37oC for 30min.
-Cell images were captured through fluorescent microscope EVOS for GFP signal detection (Supplementary Figure \ref{fig:sup:crispr:fig1}).
+Cell images were captured through fluorescent microscope EVOS for GFP signal detection (Supplementary Figure 8).
 
 \textbf{Fluorescence-activated cell sorting (FACS).}
 Cells were immediately collected into 50ml tubes (From this point on, keep cells cold), and spun at 500 x g for 5min at 4oC.
@@ -822,17 +822,17 @@ The solution was filter sterilized, and kept at 4oC), with gentle pipetting to m
 The cell solution was then filtered through a cell strainer (Falcon, Cat. 352235) and was kept on ice, protected from light.
 Collected cells were sorted on FACSJazz.
 100um nozzle was used for sorting.
-\textasciitilde20\% of each GFP-High and GFP-Low (Supplementary Figure \ref{fig:sup:crispr:fig2}) were collected into 15ml tubes.
+\textasciitilde20\% of each GFP-High and GFP-Low (Supplementary Figure 9) were collected into 15ml tubes.
 After sorting, cells were immediately spun down.
 Pellets were kept at -80oC for further genomic DNA isolation.
 
 \textbf{Genomic DNA isolation and verification.}
 Three conditions of Genomic DNA (Un-Sorted Control, lentiV2 GFP-High, and lentiV2 GFP-Low) were extracted using QIAamp DNA Blood Mini Kit (Qiagen, Cat.51104), followed by UV Spectroscopy (Nanodrop) to access the quality and quantity of the gDNA.
 A total of 80-160ug of gDNA was isolated for each condition.
-sgRNA cassette and lentiviral specific transgene in isolated gDNA were verified through PCR (Supplementary Figure \ref{fig:sup:crispr:fig3}).
+sgRNA cassette and lentiviral specific transgene in isolated gDNA were verified through PCR (Supplementary Figure 10).
 
 \textbf{Illumina libraries generation and sequencing.}
-The fragment containing sgRNA cassette was amplified using P5 /P7 primers, as indicated in\textsuperscript{\protect\hyperlink{ref-vNXTnmxp}{115}}, and primer sequences were adapted from Broad Institute protocol (Supplementary Figure \ref{fig:sup:crispr:table1}).
+The fragment containing sgRNA cassette was amplified using P5 /P7 primers, as indicated in\textsuperscript{\protect\hyperlink{ref-vNXTnmxp}{115}}, and primer sequences were adapted from Broad Institute protocol (Supplementary Figure 11).
 Stagger sequence (0-8nt) was included in P5 and 8bp uniquely barcoded sequence in P7.
 Primers were synthesized through Integrated DNA Technologies (IDT), and each primer was PAGE purified.
 32 PCR reactions were set up for each condition.
@@ -840,10 +840,10 @@ Each 100ul PCR reaction consists of roughly 5ug of gDNA, 5ul of each 10uM P5 and
 ExTaq DNA Polymerase (TaKaRa, Cat. RR001A) was used to amplify the amplicon.
 PCR Thermal Cycler Parameters set as Initial at 95oC for 1min; followed by 24 cycles of Denaturation at 94oC for 30 seconds, Annealing at 52.5oC for 30 seconds, Extension at 72oC for 30 seconds.
 A final Elongation at 72oC for 10 minutes.
-285bp-293bp PCR products were expected (Supplementary Figure \ref{fig:sup:crispr:fig4} A).
+285bp-293bp PCR products were expected (Supplementary Figure 12 A).
 PCR products within the same condition were pooled and purified using SPRIselect beads (Beckman Coulter, Cat. B23318).
 Purified Illumina libraries were quantitated on Qubit, and the quality of the library was analyzed on Bio-analyzer using High Sensitivity DNA Chip.
-A single approximate 285bp peak was expected (Supplementary Figure \ref{fig:sup:crispr:fig4} B).
+A single approximate 285bp peak was expected (Supplementary Figure 12 B).
 Final Illumina library samples were sequenced on Nova-seq 6000.
 Samples were pooled and loaded on an SP flow cell, along with a 20\% PhiX control v3 library spike-in.
 
