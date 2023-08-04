@@ -1,0 +1,1570 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  a4paper,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{mathtools}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[top=1in,left=0.5in,right=0.5in,bottom=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\usepackage[inkscapeformat=pdf,inkscapelatex=false]{svg}
+\newcommand{\bm}[1]{\boldsymbol{#1}}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{american}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\usepackage[misc]{ifsym}
+
+
+%% pandoc-fignos: environment for tagged figures
+\newenvironment{fignos:tagged-figure}[1][]{
+  \let\oldfigurename\figurename
+  \renewcommand{\figurename}{Supplementary Figure}
+}{
+  \let\figurename\oldfigurename
+}
+
+%% pandoc-tablenos: environment for tagged tables
+\newenvironment{tablenos:tagged-table}[1][]{
+  \let\oldtablename\tablename
+  \renewcommand{\tablename}{Supplementary Table}
+}{
+  \let\tablename\oldtablename
+}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms},
+  pdfauthor={Milton PividoriSumei LuBinglan LiChun SuMatthew E. JohnsonWei-Qi WeiQiping FengBahram NamjouKrzysztof KirylukIftikhar KulloYuan LuoBlair D. SullivanBenjamin F. VoightCarsten SkarkeMarylyn D. RitchieStruan F.A. GrantCasey S. Greene},
+  pdflang={en-US},
+  pdfkeywords={genetic studies, functional genomics, gene co-expression, therapeutic targets, drug repurposing, clustering of complex traits},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\emph{A DOI-citable version of this manuscript is available at \url{https://doi.org/10.1101/2021.07.05.450786}}.
+
+\hypertarget{authors}{%
+\subsection{Author list}\label{authors}}
+
+Milton Pividori\textsuperscript{1,2},
+Sumei Lu\textsuperscript{3},
+Binglan Li\textsuperscript{4},
+Chun Su\textsuperscript{3},
+Matthew E. Johnson\textsuperscript{3},
+Wei-Qi Wei\textsuperscript{5},
+Qiping Feng\textsuperscript{5},
+Bahram Namjou\textsuperscript{6},
+Krzysztof Kiryluk\textsuperscript{7},
+Iftikhar Kullo\textsuperscript{8},
+Yuan Luo\textsuperscript{9},
+Blair D. Sullivan\textsuperscript{10},
+Benjamin F. Voight\textsuperscript{11,12,13},
+Carsten Skarke\textsuperscript{13},
+Marylyn D. Ritchie\textsuperscript{1},
+Struan F.A. Grant\textsuperscript{3,14,15,1},
+eMERGE Consortium\textsuperscript{*} \&
+Casey S. Greene~\textsuperscript{\protect\hyperlink{correspondence}{\Letter}} \textsuperscript{16,2}
+
+\leavevmode\vadjust pre{\hypertarget{correspondence}{}}%
+{\Letter} --- Correspondence possible via email to
+Casey S. Greene \textless casey.s.greene@cuanschutz.edu\textgreater.
+
+\hypertarget{affiliations}{%
+\subsection{Affiliations}\label{affiliations}}
+
+\textsuperscript{1} Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA.
+\textsuperscript{2} Department of Biomedical Informatics, University of Colorado School of Medicine, Aurora, CO 80045, USA.
+\textsuperscript{3} Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA 19104, USA.
+\textsuperscript{4} Department of Biomedical Data Science, Stanford University, Stanford, CA 94305, USA.
+\textsuperscript{5} Vanderbilt University Medical Center, Nashville, TN 37232, USA.
+\textsuperscript{6} Cincinnati Children's Hospital Medical Center, Cincinnati, OH 45229, USA.
+\textsuperscript{7} Department of Medicine, Division of Nephrology, Vagelos College of Physicians \& Surgeons, Columbia University, New York, NY 10032, USA.
+\textsuperscript{8} Mayo Clinic, Rochester, MN 55905, USA.
+\textsuperscript{9} Northwestern University, Chicago, IL 60611, USA.
+\textsuperscript{10} Kahlert School of Computing, University of Utah, Salt Lake City, UT 84112, USA.
+\textsuperscript{11} Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA.
+\textsuperscript{12} Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA.
+\textsuperscript{13} Institute for Translational Medicine and Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA.
+\textsuperscript{14} Division of Endocrinology and Diabetes, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA.
+\textsuperscript{15} Division of Human Genetics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA; Department of Pediatrics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA.
+\textsuperscript{16} Center for Health AI, University of Colorado School of Medicine, Aurora, CO 80045, USA.
+\textsuperscript{*}A list of authors and their affiliations appears at the end of the paper.
+
+
+\hypertarget{abstract}{%
+\subsection{Abstract}\label{abstract}}
+
+Genes act in concert with each other in specific contexts to perform their functions.
+Determining how these genes influence complex traits requires a mechanistic understanding of expression regulation across different conditions.
+It has been shown that this insight is critical for developing new therapies.
+Transcriptome-wide association studies have helped uncover the role of individual genes in disease-relevant mechanisms.
+However, modern models of the architecture of complex traits predict that gene-gene interactions play a crucial role in disease origin and progression.
+Here we introduce PhenoPLIER, a computational approach that maps gene-trait associations and pharmacological perturbation data into a common latent representation for a joint analysis.
+This representation is based on modules of genes with similar expression patterns across the same conditions.
+We observe that diseases are significantly associated with gene modules expressed in relevant cell types, and our approach is accurate in predicting known drug-disease pairs and inferring mechanisms of action.
+Furthermore, using a CRISPR screen to analyze lipid regulation, we find that functionally important players lack associations but are prioritized in trait-associated modules by PhenoPLIER.
+By incorporating groups of co-expressed genes, PhenoPLIER can contextualize genetic associations and reveal potential targets missed by single-gene strategies.
+
+\hypertarget{introduction}{%
+\subsection{Introduction}\label{introduction}}
+
+Genes work together in context-specific networks to carry out different functions\textsuperscript{\protect\hyperlink{ref-e0tRKjE5}{1},\protect\hyperlink{ref-CVF61Un5}{2}}.
+Variations in these genes can change their functional role and, at a higher level, affect disease-relevant biological processes\textsuperscript{\protect\hyperlink{ref-Om8ZhS06}{3}}.
+In this context, determining how genes influence complex traits requires mechanistically understanding expression regulation across different cell types\textsuperscript{\protect\hyperlink{ref-9Pr9idng}{4}--\protect\hyperlink{ref-nhaocxmR}{6}}, which in turn should lead to improved treatments\textsuperscript{\protect\hyperlink{ref-REXpV7nA}{7},\protect\hyperlink{ref-PgEwSS4Q}{8}}.
+Previous studies have described different regulatory DNA elements\textsuperscript{\protect\hyperlink{ref-1DoyZS7y0}{5},\protect\hyperlink{ref-15J98V2qM}{9}--\protect\hyperlink{ref-xRGqPsT2}{12}} including genetic effects on gene expression across different tissues\textsuperscript{\protect\hyperlink{ref-9Pr9idng}{4}}.
+Integrating functional genomics data and GWAS data\textsuperscript{\protect\hyperlink{ref-WFslDIWl}{13},\protect\hyperlink{ref-WFslDIWl}{13}--\protect\hyperlink{ref-z8MQTAnJ}{15}} has improved the identification of these transcriptional mechanisms that, when dysregulated, commonly result in tissue- and cell lineage-specific pathology\textsuperscript{\protect\hyperlink{ref-O0e3EhY6}{16}--\protect\hyperlink{ref-wNE0EQlN}{18}}.
+
+Given the availability of gene expression data across several tissues\textsuperscript{\protect\hyperlink{ref-9Pr9idng}{4},\protect\hyperlink{ref-6SPTvFXq}{19}--\protect\hyperlink{ref-57TjOMEA}{21}}, an effective approach to identify these biological processes is the transcription-wide association study (TWAS), which integrates expression quantitative trait loci (eQTLs) data to provide a mechanistic interpretation for GWAS findings.
+TWAS relies on testing whether perturbations in gene regulatory mechanisms mediate the association between genetic variants and human diseases\textsuperscript{\protect\hyperlink{ref-yEdRP9Xx}{22}--\protect\hyperlink{ref-Z8bvDdVq}{25}}, and these approaches have been highly successful not only in understanding disease etiology at the transcriptome level\textsuperscript{\protect\hyperlink{ref-ktVcsmYD}{26}--\protect\hyperlink{ref-zwpq2IXD}{28}} but also in disease-risk prediction (polygenic scores)\textsuperscript{\protect\hyperlink{ref-hSYqogYZ}{29}} and drug repurposing\textsuperscript{\protect\hyperlink{ref-17oeJ0CXy}{30}} tasks.
+However, TWAS works at the individual gene level, which does not capture more complex interactions at the network level.
+
+These gene-gene interactions play a crucial role in current theories of the architecture of complex traits, such as the omnigenic model\textsuperscript{\protect\hyperlink{ref-vpIDZCSa}{31}}, which suggests that methods need to incorporate this complexity to disentangle disease-relevant mechanisms.
+Widespread gene pleiotropy, for instance, reveals the highly interconnected nature of transcriptional networks\textsuperscript{\protect\hyperlink{ref-pZZn28he}{32},\protect\hyperlink{ref-PDWEwciL}{33}}, where potentially all genes expressed in disease-relevant cell types have a non-zero effect on the trait\textsuperscript{\protect\hyperlink{ref-vpIDZCSa}{31},\protect\hyperlink{ref-LXvTZzEA}{34}}.
+One way to learn these gene-gene interactions is using the concept of gene module: a group of genes with similar expression profiles across different conditions\textsuperscript{\protect\hyperlink{ref-CVF61Un5}{2},\protect\hyperlink{ref-jrAMOJCD}{35},\protect\hyperlink{ref-SjGoBywE}{36}}.
+In this context, several unsupervised approaches have been proposed to infer these gene-gene connections by extracting gene modules from co-expression patterns\textsuperscript{\protect\hyperlink{ref-S4e4WaP3}{37}--\protect\hyperlink{ref-VzZoy0BD}{39}}.
+Matrix factorization techniques like independent or principal component analysis (ICA/PCA) have shown superior performance in this task\textsuperscript{\protect\hyperlink{ref-1BVbSrr6M}{40}} since they capture local expression effects from a subset of samples and can handle modules overlap effectively.
+Therefore, integrating genetic studies with gene modules extracted using unsupervised learning could further improve our understanding of disease origin\textsuperscript{\protect\hyperlink{ref-SjGoBywE}{36}} and progression\textsuperscript{\protect\hyperlink{ref-S56q1qoc}{41}}.
+
+Here we propose PhenoPLIER, an omnigenic approach that provides a gene module perspective to genetic studies.
+The flexibility of our method allows integrating different data modalities into the same representation for a joint analysis.
+We show that this module perspective can infer how groups of functionally-related genes influence complex traits, detect shared and distinct transcriptomic properties among traits, and predict how pharmacological perturbations affect genes' activity to exert their effects.
+PhenoPLIER maps gene-trait associations and drug-induced transcriptional responses into a common latent representation.
+For this, we integrate thousands of gene-trait associations (using TWAS from PhenomeXcan\textsuperscript{\protect\hyperlink{ref-lY5ln3dB}{42}}) and transcriptional profiles of drugs (from LINCS L1000\textsuperscript{\protect\hyperlink{ref-F7lIlh2N}{43}}) into a low-dimensional space learned from public gene expression data on tens of thousands of RNA-seq samples (recount2\textsuperscript{\protect\hyperlink{ref-6SPTvFXq}{19},\protect\hyperlink{ref-14rnBunuZ}{44}}).
+We use a latent representation defined by a matrix factorization approach\textsuperscript{\protect\hyperlink{ref-14rnBunuZ}{44},\protect\hyperlink{ref-Ki2ij7zE}{45}} that extracts gene modules with certain sparsity constraints and preferences for those that align with prior knowledge (pathways).
+When mapping gene-trait associations to this reduced expression space, we observe that diseases are significantly associated with gene modules expressed in relevant cell types: such as hypothyroidism with T cells, corneal endothelial cells with keratometry measurements, hematological assays on specific blood cell types, plasma lipids with adipose tissue, and neuropsychiatric disorders with different brain cell types.
+Moreover, since PhenoPLIER can use models derived from large and heterogeneous RNA-seq datasets, we can also identify modules associated with cell types under specific stimuli or disease states.
+We observe that significant module-trait associations in PhenomeXcan (our discovery cohort) replicated in the Electronic Medical Records and Genomics (eMERGE) network phase III\textsuperscript{\protect\hyperlink{ref-gZAOkumx}{27},\protect\hyperlink{ref-wfqjCerX}{46}} (our replication cohort).
+Furthermore, we perform a CRISPR screen to analyze lipid regulation in HepG2 cells.
+We observe more robust trait associations with modules than with individual genes, even when single genes known to be involved in lipid metabolism did not reach genome-wide significance.
+Compared to a single-gene approach, our module-based method also better predicts FDA-approved drug-disease links by capturing tissue-specific pathophysiological mechanisms linked with the mechanism of action of drugs (e.g., niacin with cardiovascular traits via a known immune mechanism).
+This improved drug-disease prediction suggests that modules may provide a better means to examine drug-disease relationships than individual genes.
+Finally, exploring the phenotype-module space reveals stable trait clusters associated with relevant tissues, including a complex branch involving lipids with cardiovascular, autoimmune, and neuropsychiatric disorders.
+In summary, instead of considering single genes associated with different complex traits, PhenoPLIER incorporates groups of genes that act together to carry out different functions in specific cell types.
+This approach improves robustness in detecting and interpreting genetic associations, and here we show how it can prioritize alternative and potentially more promising candidate targets even when known single gene associations are not detected.
+The approach represents a conceptual shift in the interpretation of genetic studies.
+It has the potential to extract mechanistic insight from statistical associations to enhance the understanding of complex diseases and their therapeutic modalities.
+
+\hypertarget{results}{%
+\subsection{Results}\label{results}}
+
+\hypertarget{phenoplier-an-integration-framework-based-on-gene-co-expression-patterns}{%
+\subsubsection{PhenoPLIER: an integration framework based on gene co-expression patterns}\label{phenoplier-an-integration-framework-based-on-gene-co-expression-patterns}}
+
+PhenoPLIER is a flexible computational framework that combines gene-trait and gene-drug associations with gene modules expressed in specific contexts (Figure \ref{fig:entire_process}a).
+The approach uses a latent representation (with latent variables or LVs representing gene modules) derived from a large gene expression compendium (Figure \ref{fig:entire_process}b, top) to integrate TWAS with drug-induced transcriptional responses (Figure \ref{fig:entire_process}b, middle) for a joint analysis.
+The approach consists in three main components (Figure \ref{fig:entire_process}b, bottom, see \protect\hyperlink{sec:methods}{Methods}):
+1) an LV-based regression model to compute an association between an LV and a trait,
+2) a clustering framework to learn groups of traits with shared transcriptomic properties,
+and 3) an LV-based drug repurposing approach that links diseases to potential treatments.
+We performed extensive simulations for our regression model (\protect\hyperlink{sm:reg:null_sim}{Supplementary Note 1}) and clustering framework (\protect\hyperlink{sm:clustering:null_sim}{Supplementary Note 2}) to ensure proper calibration and expected results under a model of no association.
+
+We used TWAS results from PhenomeXcan\textsuperscript{\protect\hyperlink{ref-lY5ln3dB}{42}} and the eMERGE network\textsuperscript{\protect\hyperlink{ref-gZAOkumx}{27}} as discovery and replication cohorts, respectively (\protect\hyperlink{sec:methods:twas}{Methods}).
+PhenomeXcan provides gene-trait associations for 4,091 different diseases and traits from the UK Biobank\textsuperscript{\protect\hyperlink{ref-nmJxPpE5}{47}} and other studies, whereas the analyses on eMERGE were performed across 309 phecodes.
+TWAS results were derived using two statistical methods (see \protect\hyperlink{sec:methods:predixcan}{Methods}):
+1) Summary-MultiXcan (S-MultiXcan) associations were used for the regression and clustering components,
+and 2) Summary-PrediXcan (S-PrediXcan) associations were used for the drug repurposing component.
+In addition, we also used colocalization results, which provide a probability of overlap between the GWAS and eQTL signals.
+For the drug-repurposing approach, we used transcriptional responses to small molecule perturbations from LINCS L1000\textsuperscript{\protect\hyperlink{ref-F7lIlh2N}{43}} comprising 1,170 compounds.
+
+The latent gene expression representation was obtained from the MultiPLIER models\textsuperscript{\protect\hyperlink{ref-14rnBunuZ}{44}}, which were derived by applying a matrix factorization method (the pathway-level information extractor or PLIER\textsuperscript{\protect\hyperlink{ref-Ki2ij7zE}{45}}) to recount2\textsuperscript{\protect\hyperlink{ref-6SPTvFXq}{19}} -- a uniformly-curated collection of transcript-level gene expression quantified by RNA-seq in a large, diverse set of samples collected across a range of disease states, cell types differentiation stages, and various stimuli (see \protect\hyperlink{sec:methods:multiplier}{Methods}).
+The MultiPLIER models extracted 987 LVs by optimizing data reconstruction but also the alignment of LVs with prior knowledge/pathways.
+
+Each LV or gene module represents a group of weighted genes expressed together in the same tissues and cell types as a functional unit.
+Since LVs might represent a functional set of genes regulated by the same transcriptional program\textsuperscript{\protect\hyperlink{ref-1FVd2WW6G}{48},\protect\hyperlink{ref-DN7TyZzb}{49}}, we conjecture that the projection of TWAS and pharmacologic perturbations data into this latent space could provide a better mechanistic understanding.
+For this projection of different data modalities into the same space, PhenoPLIER converts gene associations to an LV score: all genes' standardized effect sizes for a trait (from TWAS) or differential expression values for a drug (from pharmacologic perturbation data) are multiplied by the LV genes' weights and summed, producing a single value.
+Instead of looking at individual genes, this process links different traits and drugs to functionally-related groups of genes or LVs.
+PhenoPLIER uses LVs annotations about the specific conditions where the group of genes is expressed, such as cell types and tissues, even at specific developmental stages, disease stages or under distinct stimuli.
+Although this is not strictly necessary for PhenoPLIER to work, these annotations can dramatically improve the interpretability of results.
+MultiPLIER's models provide this information by linking LVs to samples, which may be annotated for experimental conditions (represented by matrix \(\mathbf{B}\) at the top of Figure \ref{fig:entire_process}b) in which genes in an LV are expressed.
+An example of this is shown in Figure \ref{fig:entire_process}c.
+In the original MultiPLIER study, the authors reported that one of the latent variables, identified as LV603, was associated with a known neutrophil pathway and highly correlated with neutrophil count estimates from whole blood RNA-seq profiles\textsuperscript{\protect\hyperlink{ref-18TSqd1tG}{50}}.
+We analyzed LV603 using PhenoPLIER and found that
+1) neutrophil counts and other white blood cell traits were ranked among the top 10 traits out of 4,091 (Figure \ref{fig:entire_process}c, bottom), and basophils count and percentage were significantly associated with this LV when using our regression method (Supplementary Table 4),
+and 2) LV603's genes were expressed in highly relevant cell types (Figure \ref{fig:entire_process}c, top).
+These initial results suggested that groups of functionally related and co-expressed genes tend to correspond to groups of trait-associated genes, and the approach can link transcriptional mechanisms from large and diverse dataset collections to complex traits.
+
+Therefore, PhenoPLIER allows the user to address specific questions, namely:
+do disease-associated genes belong to modules expressed in specific tissues and cell types?
+Are these cell type-specific modules associated with \emph{different} diseases, thus potentially representing a ``network pleiotropy'' example from an omnigenic point of view\textsuperscript{\protect\hyperlink{ref-vpIDZCSa}{31}}?
+Is there a subset of module's genes that is closer to the definition of ``core'' genes (i.e., directly affecting the trait with no mediated regulation of other genes\textsuperscript{\protect\hyperlink{ref-LXvTZzEA}{34}}) and thus represents alternative and potentially better candidate targets?
+Are drugs perturbing these transcriptional mechanisms, and can they suggest potential mechanisms of action?
+
+\hypertarget{lvs-link-genes-that-alter-lipid-accumulation-with-relevant-traits-and-tissues}{%
+\subsubsection{LVs link genes that alter lipid accumulation with relevant traits and tissues}\label{lvs-link-genes-that-alter-lipid-accumulation-with-relevant-traits-and-tissues}}
+
+Our first experiment attempted to answer whether genes in a disease-relevant LV could represent potential therapeutic targets.
+For this, the first step was to obtain a set of genes strongly associated with a phenotype of interest.
+Therefore, we performed a fluorescence-based CRISPR-Cas9 in the HepG2 cell line and identified 462 genes associated with lipid regulation (\protect\hyperlink{sec:methods:crispr}{Methods}).
+From these, we selected two high-confidence gene sets that either caused a decrease or increase of lipids:
+a lipids-decreasing gene-set with eight genes: \emph{BLCAP}, \emph{FBXW7}, \emph{INSIG2}, \emph{PCYT2}, \emph{PTEN}, \emph{SOX9}, \emph{TCF7L2}, \emph{UBE2J2};
+and a lipids-increasing gene-set with six genes: \emph{ACACA}, \emph{DGAT2}, \emph{HILPDA}, \emph{MBTPS1}, \emph{SCAP}, \emph{SRPR} (Supplementary Data 2).
+
+Next, we analyzed all 987 LVs using Fast Gene Set Enrichment Analysis (FGSEA)\textsuperscript{\protect\hyperlink{ref-Z8WXLD67}{51}}, and found 15 LVs nominally enriched (unadjusted \emph{P} \textless{} 0.01) with these lipid-altering gene-sets (Supplementary Tables 1 and 2).
+Among those with reliable sample metadata, LV246, the top LV associated with the lipids-increasing gene-set, contained genes mainly co-expressed in adipose tissue (Figure \ref{fig:lv246}a), which plays a key role in coordinating and regulating lipid metabolism.
+Using our regression framework across all traits in PhenomeXcan, we found that gene weights for this LV were predictive of gene associations for plasma lipids, high cholesterol, and Alzheimer's disease (Supplementary Table 7, FDR \textless{} 1e-23).
+These lipids-related associations also replicated across the 309 traits in eMERGE (Supplementary Table 8), where LV246 was significantly associated with hypercholesterolemia (phecode: 272.11, FDR \textless{} 4e-9), hyperlipidemia (phecode: 272.1, FDR \textless{} 4e-7) and disorders of lipoid metabolism (phecode: 272, FDR \textless{} 4e-7).
+
+Two high-confidence genes from our CRISPR screening, \emph{DGAT2} and \emph{ACACA}, are responsible for encoding enzymes for triglycerides and fatty acid synthesis and were among the highest-weighted genes of LV246 (Figure \ref{fig:lv246}b, in boldface).
+However, in contrast to other members of LV246, \emph{DGAT2} and \emph{ACACA} were not associated nor colocalized with any of the cardiovascular-related traits and thus would not have been prioritized by TWAS alone;
+instead, other members of LV246, such as \emph{SCD}, \emph{LPL}, \emph{FADS2}, \emph{HMGCR}, and \emph{LDLR}, were significantly associated and colocalized with lipid-related traits.
+This lack of association of two high-confidence genes from our CRISPR screen might be explained from an omnigenic point of view\textsuperscript{\protect\hyperlink{ref-LXvTZzEA}{34}}.
+Assuming that the TWAS models for \emph{DGAT2} and \emph{ACACA} capture all common \emph{cis}-eQTLs (the only genetic component of gene expression that TWAS can capture) and there are no rare \emph{cis}-eQTLs, these two genes might represent ``core'' genes (i.e., they directly affect the trait with no mediated regulation of other genes), and many of the rest in the LV are ``peripheral'' genes that \emph{trans}-regulate them.
+
+\hypertarget{lvs-predict-drug-disease-pairs-better-than-single-genes}{%
+\subsubsection{LVs predict drug-disease pairs better than single genes}\label{lvs-predict-drug-disease-pairs-better-than-single-genes}}
+
+We next determined how substituting LVs for individual genes predicted known treatment-disease relationships.
+For this, we used the transcriptional responses to small molecule perturbations profiled in LINCS L1000\textsuperscript{\protect\hyperlink{ref-F7lIlh2N}{43}}, which were further processed and mapped to DrugBank IDs\textsuperscript{\protect\hyperlink{ref-6PR8LEXK}{52}--\protect\hyperlink{ref-1DJZvtwP1}{54}}.
+Based on an established drug repurposing strategy that matches reversed transcriptome patterns between genes and drug-induced perturbations\textsuperscript{\protect\hyperlink{ref-1ClBKizD7}{55},\protect\hyperlink{ref-mZjkE1xU}{56}}, we adopted a previously described framework that uses imputed transcriptomes from TWAS to prioritize drug candidates\textsuperscript{\protect\hyperlink{ref-17oeJ0CXy}{30}}.
+For this, we computed a drug-disease score by calculating the negative dot product between the \(z\)-scores for a disease (from TWAS) and the \(z\)-scores for a drug (from LINCS) across sets of genes of different sizes (see \protect\hyperlink{sec:methods:drug}{Methods}).
+Therefore, a large score for a drug-disease pair indicated that higher (lower) predicted expression values of disease-associated genes are down (up)-regulated by the drug, thus predicting a potential treatment.
+Similarly, for the LV-based approach, we estimated how pharmacological perturbations affected the gene module activity by projecting expression profiles of drugs into our latent representation (Figure \ref{fig:entire_process}b).
+We used a manually-curated gold standard set of drug-disease medical indications\textsuperscript{\protect\hyperlink{ref-O21tn8vf}{53},\protect\hyperlink{ref-10KA5jTBQ}{57}} for 322 drugs across 53 diseases to evaluate the prediction performance.
+
+It is important to note that the gene-trait associations and drug-induced expression profiles projected into the latent space represent a compressed version of the entire set of results.
+Despite this information loss, the LV-based method outperformed the gene-based one with an area under the curve of 0.632 and an average precision of 0.858 (Figure \ref{fig:drug_disease:roc_pr}).
+The prediction results suggested that this low-dimensional space captures biologically meaningful patterns that can link pathophysiological processes with the mechanism of action of drugs.
+
+We examined a specific drug-disease pair to determine whether the LVs driving the prediction were biologically plausible.
+Nicotinic acid (niacin) is a B vitamin widely used clinically to treat lipid disorders, although there is controversy on its clinical utility in preventing cardiovascular disease\textsuperscript{\protect\hyperlink{ref-bRPc66OD}{58}--\protect\hyperlink{ref-ZGvG75Bj}{60}}.
+Niacin exerts its effects on multiple tissues, although its mechanisms are not well understood\textsuperscript{\protect\hyperlink{ref-LVihFr3g}{61}--\protect\hyperlink{ref-13meq3Hgt}{64}}.
+This compound can increase high-density lipoprotein (HDL) by inhibiting an HDL catabolism receptor in the liver.
+Niacin also inhibits diacylglycerol acyltransferase--2 (DGAT2), which decreases the production of low-density lipoproteins (LDL) either by modulating triglyceride synthesis in hepatocytes or by inhibiting adipocyte triglyceride lipolysis\textsuperscript{\protect\hyperlink{ref-LVihFr3g}{61}}.
+Niacin was one of the drugs in the gold standard set indicated for atherosclerosis (AT) and coronary artery disease (CAD).
+We observed that this compound was predicted by the gene-based and LV-based approach as a medical indication for coronary artery disease (CAD), with scores above the mean (0.51 and 0.96, respectively).
+For AT, the LV-based approach predicted niacin as a therapeutic drug with a score of 0.52, whereas the gene-based method assigned a negative score of -0.01 (below the mean).
+Since LVs represent interpretable features associated with specific cell types, we analyzed which LVs positively contributed to these predictions (i.e., with an opposite direction between niacin and the disease).
+Notably, LV246 (Figure \ref{fig:lv246}), expressed in adipose tissue and liver and associated with plasma lipids and high cholesterol (Supplementary Table 7), was the 16th most important module in the prediction of niacin as a therapeutic drug for AT.
+Besides the gold standard set, LV246 was among the top modules for other cardiovascular diseases, such as ischaemic heart disease (wide definition, 15th module) and high cholesterol (7th module).
+
+The analysis of other top niacin-contributing LVs across different cardiovascular diseases revealed additional mechanisms of action.
+For example, \emph{GPR109A/HCAR2} encodes a G protein-coupled high-affinity niacin receptor in adipocytes and immune cells, including monocytes, macrophages, neutrophils and dendritic cells\textsuperscript{\protect\hyperlink{ref-izbPw2kc}{65},\protect\hyperlink{ref-wI0IjT3i}{66}}.
+It was initially thought that the antiatherogenic effects of niacin were solely due to the inhibition of lipolysis in adipose tissue.
+However, it has been shown that nicotinic acid can reduce atherosclerosis progression independently of its antidyslipidemic activity by activating \emph{GPR109A} in immune cells\textsuperscript{\protect\hyperlink{ref-1Bz0jRHYo}{67}}, thus boosting anti-inflammatory processes\textsuperscript{\protect\hyperlink{ref-1DblG8swn}{68}}.
+In addition, flushing, a common adverse effect of niacin, is also produced by the activation of GPR109A in Langerhans cells (macrophages of the skin).
+This alternative mechanism for niacin could have been hypothesized by examining the cell types where the top-contributing modules are expressed:
+for instance, LV116 and LV931 (Figure \ref{fig:lv116:cell_types}, Supplementary Figure 15, and Supplementary Tables 9 and 10) were the top two modules for AT, with a strong signature in monocytes, macrophages, neutrophils, dendritic cells, among others.
+In Figure \ref{fig:lv116:cell_types}, it can be seen that LV116's genes are expressed as an immune response when these cell types are under different stimuli, such as diarrhea caused by different pathogens\textsuperscript{\protect\hyperlink{ref-RliFvowC}{69}}, samples from multiple sclerosis or systemic lupus erythematosus\textsuperscript{\protect\hyperlink{ref-D5XBhzim}{70},\protect\hyperlink{ref-EnoqU4ga}{71}}, or infected with different viruses (such as herpes simplex\textsuperscript{\protect\hyperlink{ref-11eausmiy}{72}}, West Nile virus\textsuperscript{\protect\hyperlink{ref-mtMYROCN}{73}}, \emph{Salmonella typhimurium}\textsuperscript{\protect\hyperlink{ref-1kgcHkGm}{74}}, among others).
+These three LVs (LV246, LV116 and LV931) were among the top 20 modules contributing to the niacin prediction across different cardiovascular traits (Table \ref{tbl:niacin:cardio:top_lvs}).
+
+Beyond cardiovascular traits, there are other potentially interesting LVs that could extend our understanding of the mechanisms of niacin.
+For example, LV66, one of the top LVs affected by niacin (Supplementary Figure 16), was mainly expressed in ovarian granulosa cells.
+This compound has been very recently considered a potential therapeutic for ovarian diseases\textsuperscript{\protect\hyperlink{ref-kLRErKXz}{75},\protect\hyperlink{ref-TovvsrDr}{76}}, as it was found to promote follicle growth and inhibit granulosa cell apoptosis in animal models.
+
+\hypertarget{lvs-reveal-trait-clusters-with-shared-transcriptomic-properties}{%
+\subsubsection{LVs reveal trait clusters with shared transcriptomic properties}\label{lvs-reveal-trait-clusters-with-shared-transcriptomic-properties}}
+
+We used the projection of gene-trait associations into the latent space to find groups of clusters linked by the same transcriptional processes.
+Since individual clustering algorithms have different biases (i.e., assumptions about the data structure), we designed a consensus clustering framework that combines solutions or partitions of traits generated by different methods (\protect\hyperlink{sec:methods:clustering}{Methods}).
+Consensus or ensemble approaches have been recommended to avoid several pitfalls when performing cluster analysis on biological data\textsuperscript{\protect\hyperlink{ref-14dCeRkua}{77}}.
+Since diversity in the ensemble is crucial for these methods, we generated different data versions which were processed using different methods with varying sets of parameters (Figure \ref{fig:clustering:design}a).
+Then, a consensus function combines the ensemble into a consolidated solution, which has been shown to outperform any individual member of the ensemble\textsuperscript{\protect\hyperlink{ref-uw3AnEgA}{78},\protect\hyperlink{ref-cuROQDFa}{79}}.
+Our clustering pipeline generated 15 final consensus clustering solutions (Supplementary Figure 13).
+The number of clusters of these partitions (between 5 to 29) was learned from the data by selecting the partitions with the largest agreement with the ensemble\textsuperscript{\protect\hyperlink{ref-uw3AnEgA}{78}}.
+Instead of selecting one of these final solutions with a specific number of clusters, we used a clustering tree\textsuperscript{\protect\hyperlink{ref-xhtEAzx6}{80}} (Figure \ref{fig:clustering:tree}) to examine stable groups of traits across multiple resolutions.
+To understand which latent variables differentiated the group of traits, we trained a decision tree classifier on the input data \(\hat{\mathbf{M}}\) using the clusters found as labels (Figure \ref{fig:clustering:design}b, see \protect\hyperlink{sec:methods:clustering}{Methods}).
+
+We found that phenotypes were grouped into five clear branches, defined by their first node at the top of the Figure \ref{fig:clustering:tree}:
+0) a ``large'' branch that includes most of the traits subdivided only starting at \(k\)=16 (with asthma, subjective well-being traits, and nutrient intake clusters),
+1) heel bone-densitometry measurements,
+2) hematological assays on red blood cells,
+3) physical measures, including spirometry and body impedance, and anthropometric traits with fat-free and fat mass measures in separate sub-branches, and
+4) a ``complex'' branch including keratometry measurements, assays on white blood cells and platelets, skin and hair color traits, autoimmune disorders, and cardiovascular diseases (which also included other cardiovascular-related traits such as hand-grip strength\textsuperscript{\protect\hyperlink{ref-aBVh8zt1}{81}}, and environmental/behavioral factors such as physical activity and diet) (see Supplementary Data 3-7 for all clustering results).
+Within these branches, results were relatively stable, with the same traits often clustered together across different resolutions.
+Arrows between clusters show traits moving from one group to another, and this mainly happens between clusters within the ``complex'' branch (4) and between clusters from the ``large'' branch (0) to the ``complex'' branch.
+This behavior is expected since complex diseases are usually associated with shared genetic and environmental factors and are thus hard to categorize into a single cluster.
+
+Next, we analyzed which LVs were driving these clusters of traits.
+For this, we trained decision tree classifiers on the input data using each cluster at \(k\)=29 (bottom of Figure \ref{fig:clustering:tree}) as labels (see \protect\hyperlink{sec:methods:clustering}{Methods}).
+This procedure yielded the top LVs that were most discriminative for each cluster.
+Several of these LVs were well-aligned to existing pathways (Figure \ref{fig:clustering:heatmap}), whereas others were not aligned to prior knowledge but still expressed in relevant tissues (Supplementary Figure 14).
+In Figure \ref{fig:clustering:heatmap}, it can be seen that some LVs were highly specific to certain traits, while others were associated with a wide range of different phenotypes, thus potentially involved in more general biological functions.
+We used our regression framework to determine whether these LVs were significantly associated with different traits.
+For example, LVs such as LV928 and LV30, which were well-aligned to early progenitors of the erythrocytes lineage\textsuperscript{\protect\hyperlink{ref-Zk82GvJV}{82}} (Supplementary Tables 12 and 15), were predominantly expressed in early differentiation stages of erythropoiesis (Supplementary Figures 17 and 18) and strongly associated with different assays on red blood cells (FDR \textless{} 0.05; Supplementary Tables 13, 14, and 17).
+In contrast, other LVs were highly specific, such as LV730, which is expressed in thrombocytes from different cancer samples (Supplementary Figures 19 and Supplementary Table 18), and strongly associated with hematological assays on platelets (FDR \textless{} 0.05, Supplementary Table 19);
+or LV598, whose genes were expressed in corneal endothelial cells (Supplementary Figures 20 and Supplementary Table 21) and associated with keratometry measurements (Supplementary Table 22).
+
+The sub-branches of autoimmune and cardiovascular diseases merged together at \(k=10\) (middle of Figure \ref{fig:clustering:tree}), so we expected to find LVs that specifically affect one or both of these types of diseases.
+For example, LV57, expressed in T cells (Supplementary Figure 21 and Supplementary Table 24), was the most strongly associated gene module with autoimmune disorders in PhenomeXcan (Supplementary Table 25), with significant associations with hypothyroidism that were replicated in eMERGE (Supplementary Table 26).
+However, this LV was also strongly associated with deep venous thrombosis in both PhenomeXcan and eMERGE.
+On the other hand, LV844 was more autoimmune-specific, with associations to polymyalgia rheumatica, type 1 diabetes, rheumatoid arthritis, and celiac disease in PhenomeXcan (Supplementary Table 28).
+However, these did not replicate in eMERGE.
+This LV was expressed in a wide range of cell types, including blood, breast organoids, myeloma cells, lung fibroblasts, and different cell types from the brain (Supplementary Figure 22 and Supplementary Table 27).
+
+The cardiovascular sub-branch had 129 significant LV-trait associations in PhenomeXcan and 23 in eMERGE.
+LV136, aligned with known collagen formation and muscle contraction pathways (Supplementary Table 30), was associated with coronary artery disease and keratometry measurements in PhenomeXcan (Supplementary Table 31).
+In eMERGE, this LV was associated with coronary atherosclerosis (phecode: 411.4) (Supplementary Table 32).
+LV136 was expressed in a wide range of cell types, including fibroblasts, mesenchymal stem cells, osteoblasts, pancreatic stellate cells, cardiomyocytes, and adipocytes (Supplementary Figure 23).
+Within the cardiovascular sub-branch, we found neuropsychiatric and neurodevelopmental disorders such as Alzheimer's disease, schizophrenia, and attention deficit hyperactivity disorder (ADHD).
+These disorders were previously linked to the cardiovascular system\textsuperscript{\protect\hyperlink{ref-10qjLoufR}{83}--\protect\hyperlink{ref-13t4TuFeJ}{86}} and share several risk factors, including hypertension, high cholesterol, obesity, smoking, among others\textsuperscript{\protect\hyperlink{ref-D83Aqhga}{87},\protect\hyperlink{ref-9BGyO071}{88}}.
+However, our results grouped these diseases by potentially shared transcriptional processes expressed in specific tissues/cell types.
+Alzheimer's disease (not present in eMERGE), for instance, was significantly associated with LV21 in PhenomeXcan (Supplementary Table 34).
+LV21, a gene module not aligned to prior pathways, was strongly expressed in a variety of soft tissue sarcomas, monocytes/macrophages (including microglia from cortex samples), and aortic valves (Supplementary Figure 24 and Supplementary Table 33).
+This LV was also strongly associated with lipids and high cholesterol in PhenomeXcan and hyperlipidemia (phecode: 272.1) in eMERGE (Supplementary Table 35).
+As discussed previously, macrophages play a key role in the reverse cholesterol transport and thus atherogenesis\textsuperscript{\protect\hyperlink{ref-idlBgtFz}{89}}, and lipid metabolism in microglia has been recently identified as an important factor in the development of neurodegenerative diseases\textsuperscript{\protect\hyperlink{ref-18I4ish9s}{90}}.
+
+\hypertarget{discussion}{%
+\subsection{Discussion}\label{discussion}}
+
+We have introduced a novel computational strategy that integrates statistical associations from TWAS with groups of genes (gene modules) that have similar expression patterns across the same cell types.
+Our key innovation is that we project gene-trait associations through a latent representation derived not strictly from measures of normal tissue but also from cell types under a variety of stimuli and at various developmental stages.
+This improves interpretation by going beyond statistical associations to infer cell type-specific features of complex phenotypes.
+Our approach can identify disease-relevant cell types from summary statistics, and several disease-associated gene modules were replicated in eMERGE.
+Using a CRISPR screen to analyze lipid regulation, we found that our gene module-based approach can prioritize causal genes even when single gene associations are not detected.
+We interpret these findings with an omnigenic perspective of ``core'' and ``peripheral'' genes, suggesting that the approach can identify genes that directly affect the trait with no mediated regulation of other genes and thus prioritize alternative and potentially more attractive therapeutic targets.
+
+Using our gene module perspective, we also integrated drug-induced transcriptional profiles, which allowed us to connect diseases, drugs, and cell types.
+We showed that the LV-based drug-repurposing approach outperformed the gene-based one when predicting drug-disease links for 322 drugs across 53 diseases.
+Furthermore, and beyond statistical prediction, we focused on cardiovascular traits and a particular drug, niacin, to show that the approach connects pathophysiological processes with known mechanisms of action, including those in adipose tissue, immune cells, and ovarian granulosa cells.
+Our LV-based approach could be helpful in generating novel hypotheses to evaluate potential mechanisms of action, or even adverse effects, of known or experimental drugs.
+
+We found that the analysis of associations through latent representations provided reasonable groupings of diseases and traits affected by shared and distinct transcriptional mechanisms expressed in highly relevant tissues.
+Our cluster analysis approach also detected the LVs that were most discriminative for each cluster.
+Several of these LVs were also significantly associated with different traits.
+Some LVs were strongly aligned with known pathways, but others (like LV57) were not, which might represent novel disease-relevant mechanisms.
+In some cases, the features/LVs linked to phenotypes appear to be associated with specific cell types.
+Associations with such cell type marker genes may reveal potentially causal cell types for a phenotype with more precision.
+We observed modules expressed primarily in one tissue (such as adipose in LV246 or ovary in LV66).
+Others appeared to be expressed in many contexts, which may capture pathways associated with related complex diseases.
+For example, LV136 is associated with cardiovascular disease and measures of corneal biomechanics and is expressed in fibroblasts, osteoblasts, pancreas, liver, and cardiomyocytes, among others.
+Other examples include LV844, expressed in whole blood samples and associated with a range of autoimmune diseases;
+or LV57, which is clearly expressed in T cells and strongly associated with autoimmune and venous thromboembolism.
+From an omnigenic point of view, these patterns might represent cases of ``network pleiotropy,'' where the same cell types mediate molecularly related traits.
+To our knowledge, projection through a representation learned on complementary but distinct datasets is a novel approach to identifying cell type and pathway effects on complex phenotypes that is computationally simple to implement.
+
+We also demonstrated that clustering trees, introduced initially as a means to examine developmental processes in single-cell data, provide a multi-resolution grouping of phenotypes based on latent variable associations.
+We employed hard-partitioning algorithms (one trait belongs exclusively to one cluster) where the distance between two traits takes into account all gene modules.
+However, it is also plausible for two complex diseases to share only a few biological processes instead of being similar across most of them.
+Another important consideration is that our TWAS results were derived from a large set of GWAS of different sample sizes and qualities.
+Although the potential issues derived from this data heterogeneity were addressed before performing our cluster analyses on traits, data preprocessing steps are always challenging and might not avoid bias altogether.
+Considering groups of related diseases was previously shown to be more powerful in detecting shared genetic etiology\textsuperscript{\protect\hyperlink{ref-LyJmyoQr}{91},\protect\hyperlink{ref-veADXImD}{92}}, and clustering trees provide a way to explore such relationships in the context of latent variables.
+
+Finally, we developed an LV-based regression framework to detect whether gene modules are associated with a trait using TWAS \(p\)-values.
+We used PhenomeXcan as a discovery cohort across four thousand traits, and many LV-trait associations replicated in eMERGE.
+In PhenomeXcan, we found 3,450 significant LV-trait associations (FDR \textless{} 0.05) with 686 LVs (out of 987) associated with at least one trait and 1,176 traits associated with at least one LV.
+In eMERGE, we found 196 significant LV-trait associations, with 116 LVs associated with at least one trait/phecode and 81 traits with at least one LV.
+We only focused on a few disease types from our trait clusters, but the complete set of associations on other disease domains is available in our \href{https://github.com/greenelab/phenoplier}{Github repository} for future research.
+As noted in \protect\hyperlink{sec:methods:reg}{Methods}, one limitation of the regression approach is that the gene-gene correlations are only approximately accurate, which could lead to false positives if the correlation among the top genes in a module is not precisely captured.
+The regression model, however, is approximately well-calibrated, and we did not observe inflation when running the method in real data.
+
+Our approach rests on the assumption that gene modules with coordinated expression patterns will also manifest coordinated pathological effects.
+Our implementation in this work integrates two complementary approaches.
+The first is MultiPLIER, which extracts latent variables from large expression datasets, and these LVs could represent either real transcriptional processes or technical factors (``batch effects'').
+We used a previously published model derived from recount2, which was designed to analyze rare disorders but might not be the optimal latent representation for the wide range of complex diseases considered here.
+Also, the underlying factorization method rests on linear combinations of variables, which could miss important and more complex co-expression patterns.
+In addition, recount2, the training dataset used, has since been surpassed in size and scale by other resources\textsuperscript{\protect\hyperlink{ref-Nz3IMEzd}{20},\protect\hyperlink{ref-TPVeG4GP}{93}}.
+However, it is important to note that our models impose very few assumptions on the latent expression representation.
+Therefore, we should be able to easily replace MultiPLIER with other similar approaches like GenomicSuperSignature\textsuperscript{\protect\hyperlink{ref-X4fhSCkz}{94}}.
+The second approach we used in this study is TWAS, where we are only considering the hypothesis that GWAS loci affect traits via changes in gene expression.
+Other effects, such as coding variants disrupting protein-protein interactions, are not captured.
+Additionally, TWAS has several limitations that can lead to false positives\textsuperscript{\protect\hyperlink{ref-l6ogswV3}{95},\protect\hyperlink{ref-ndd3tW4g}{96}}.
+Like GWAS, which generally detects groups of associated variants in linkage disequilibrium (LD), TWAS usually identifies several genes within the same locus\textsuperscript{\protect\hyperlink{ref-Z8bvDdVq}{25},\protect\hyperlink{ref-AxVJwanp}{97}}.
+This is due to sharing of GWAS variants in gene expression models, correlated expression of nearby genes, or even correlation of their predicted expression due to eQTLs in LD, among others\textsuperscript{\protect\hyperlink{ref-l6ogswV3}{95}}.
+Our LV-based regression framework, however, accounts for these gene-gene correlations in TWAS reasonably well.
+
+Our findings are concordant with previous studies showing that drugs with genetic support are more likely to succeed through the drug development pipeline\textsuperscript{\protect\hyperlink{ref-REXpV7nA}{7},\protect\hyperlink{ref-17oeJ0CXy}{30}}.
+In this case, projecting association results through latent variables better prioritized disease-treatment pairs than considering single-gene effects alone.
+An additional benefit is that the latent variables driving predictions represent interpretable genetic features that can be examined to infer potential mechanisms of action.
+Here we prioritized drugs for diseases with very different tissue etiologies, and a challenge of the approach is to select the most appropriate tissue model from TWAS to find reversed transcriptome patterns between genes and drug-induced perturbations.
+
+Ultimately, the quality of the representations is essential to performance.
+Here we used a representation derived from a factorization of bulk RNA-seq data.
+Detailed perturbation datasets and single-cell profiling of tissues, with and without perturbagens, and at various stages of development provide an avenue to generate higher quality and more interpretable representations.
+On the other hand, the key to interpretability is driven by the annotation of sample metadata.
+New approaches to infer and annotate with structured metadata are promising and can be directly applied to existing data\textsuperscript{\protect\hyperlink{ref-fnDaLjFy}{98}}.
+Rapid improvements in both areas set the stage for latent variable projections to be widely applied to disentangle the genetic basis of complex human phenotypes.
+By providing a new perspective for a mechanistic understanding of statistical associations from TWAS, our method can generate testable hypotheses for the post-GWAS functional characterization of complex diseases, which will likely be an area of great importance in the coming years.
+
+\hypertarget{sec:methods}{%
+\subsection{Methods}\label{sec:methods}}
+
+PhenoPLIER is a framework that combines different computational approaches to integrate gene-trait associations and drug-induced transcriptional responses with groups of functionally-related genes (referred to as gene modules or latent variables/LVs).
+Gene-trait associations are computed using the PrediXcan family of methods, whereas latent variables are inferred by the MultiPLIER models applied on large gene expression compendia.
+PhenoPLIER provides
+1) a regression model to compute an LV-trait association,
+2) a consensus clustering approach applied to the latent space to learn shared and distinct transcriptomic properties between traits, and
+3) an interpretable, LV-based drug repurposing framework.
+We provide the details of these methods below.
+
+\hypertarget{sec:methods:predixcan}{%
+\subsubsection{The PrediXcan family of methods for gene-based associations}\label{sec:methods:predixcan}}
+
+We used Summary-PrediXcan (S-PrediXcan)\textsuperscript{\protect\hyperlink{ref-vLyTudUB}{99}} and Summary-MultiXcan (S-MultiXcan)\textsuperscript{\protect\hyperlink{ref-1FFzCXo1s}{24}} as the gene-based statistical approaches, which belong to the PrediXcan family of methods\textsuperscript{\protect\hyperlink{ref-Z8bvDdVq}{25}}.
+We broadly refer to these approaches as TWAS (transcription-wide association studies).
+S-PrediXcan, the summary-based version of PrediXcan, computes the univariate association between a trait and a gene's predicted expression in a single tissue.
+In contrast, S-MultiXcan, the summary-based version of MultiXcan, computes the joint association between a gene's predicted expression in all tissues and a trait.
+S-PrediXcan and S-MultiXcan only need GWAS summary statistics instead of individual-level genotype and phenotype data.
+
+Here we briefly provide the details about these TWAS methods that are necessary to explain our regression framework later (see the referenced articles for more information).
+In the following, we refer to \(\mathbf{y}\) as a vector of traits for \(n\) individuals that is centered for convenience (so that no intercept is necessary);
+\(\tilde{\mathbf{t}}_l = \sum_{a \in \mathrm{model}_l} w_{a}^{l} X_{a}\) is the gene's predicted expression for all individuals in tissue \(l\), \(X_a\) is the genotype of SNP \(a\) and \(w_{a}\) its weight in the tissue prediction model \(l\);
+and \(\mathbf{t}_l\) is the standardized version of \(\tilde{\mathbf{t}}_l\) with mean equal to zero and standard deviation equal to one.
+
+S-PrediXcan\textsuperscript{\protect\hyperlink{ref-vLyTudUB}{99}} is the summary version of PrediXcan\textsuperscript{\protect\hyperlink{ref-Z8bvDdVq}{25}}.
+PrediXcan models the trait as a linear function of the gene's expression on a single tissue using the univariate model
+
+\begin{equation}
+\mathbf{y} = \mathbf{t}_l \gamma_l + \bm{\epsilon}_l,
+\label{eq:predixcan}\end{equation}
+
+where \(\hat{\gamma}_l\) is the estimated effect size or regression coefficient, and \(\bm{\epsilon}_l\) are the error terms with variance \(\sigma_{\epsilon}^{2}\).
+The significance of the association is assessed by computing the \(z\)-score \(\hat{z}_{l}=\hat{\gamma}_l / \mathrm{se}(\hat{\gamma}_l)\) for a gene's tissue model \(l\).
+PrediXcan needs individual-level data to fit this model, whereas S-PrediXcan approximates PrediXcan \(z\)-scores using only GWAS summary statistics with the expression
+
+\begin{equation}
+\hat{z}_{l} \approx \sum_{a \in model_{l}} w_a^l \frac{\hat{\sigma}_a}{\hat{\sigma}_l} \frac{\hat{\beta}_a}{\mathrm{se}(\hat{\beta}_a)},
+\label{eq:spredixcan}\end{equation}
+
+where \(\hat{\sigma}_a\) is the variance of SNP \(a\), \(\hat{\sigma}_l\) is the variance of the predicted expression of a gene in tissue \(l\), and \(\hat{\beta}_a\) is the estimated effect size of SNP \(a\) from the GWAS.
+In these TWAS methods, the genotype variances and covariances are always estimated using the Genotype-Tissue Expression project (GTEx v8)\textsuperscript{\protect\hyperlink{ref-9Pr9idng}{4}} as the reference panel.
+Since S-PrediXcan provides tissue-specific direction of effects (for instance, whether a higher or lower predicted expression of a gene confers more or less disease risk), we used the \(z\)-scores in our drug repurposing approach (described below).
+
+S-MultiXcan\textsuperscript{\protect\hyperlink{ref-1FFzCXo1s}{24}}, on the other hand, is the summary version of MultiXcan.
+MultiXcan is more powerful than PrediXcan in detecting gene-trait associations, although it does not provide the direction of effects.
+Its main output is the \(p\)-value (obtained with an F-test) of the multiple tissue model
+
+\begin{equation}
+\begin{split}
+\mathbf{y} & = \sum_{l=1}^{p} \mathbf{t}_l g_l + \mathbf{e} \\
+ & = \mathbf{T} \mathbf{g} + \mathbf{e},
+\end{split}
+\label{eq:multixcan}\end{equation}
+
+where \(\mathbf{T}\) is a matrix with \(p\) columns \(\mathbf{t}_l\),
+\(\hat{g}_l\) is the estimated effect size for the predicted gene expression in tissue \(l\) (and thus \(\hat{\mathbf{g}}\) is a vector with \(p\) estimated effect sizes \(\hat{g}_l\)),
+and \(\mathbf{e}\) are the error terms with variance \(\sigma_{e}^{2}\).
+Given the high correlation between predicted expression values for a gene across different tissues, MultiXcan uses the principal components (PCs) of \(\mathbf{T}\) to avoid collinearity issues.
+S-MultiXcan derives the joint regression estimates (effect sizes and their variances) in Equation (\ref{eq:multixcan}) using the marginal estimates from S-PrediXcan in Equation (\ref{eq:spredixcan}).
+Under the null hypothesis of no association, \(\hat{\mathbf{g}}^{\top} \frac{\mathbf{T}^{\top}\mathbf{T}}{\sigma_{e}^{2}} \hat{\mathbf{g}} \sim \chi_{p}^{2}\), and therefore the significance of the association in S-MultiXcan is estimated with
+
+\begin{equation}
+\begin{split}
+\frac{\hat{\mathbf{g}}^{\top} (\mathbf{T}^{\top}\mathbf{T}) \hat{\mathbf{g}}}{\sigma_{e}^{2}} & \approx \bm{\hat{\gamma}}^{\top} \frac{\sqrt{n-1}}{\sigma_{\epsilon}} \left(\frac{\mathbf{T}^{\top} \mathbf{T}}{n-1}\right)^{-1} \frac{\sqrt{n-1}}{\sigma_{\epsilon}} \bm{\hat{\gamma}} \\
+ & = \hat{\mathbf{z}}^{\top} Cor(\mathbf{T})^{-1} \hat{\mathbf{z}},
+\end{split}
+\label{eq:smultixcan}\end{equation}
+
+where \(\hat{\mathbf{z}}\) is a vector with \(p\) \(z\)-scores (Equation (\ref{eq:spredixcan})) for each tissue available for the gene,
+and \(Cor(\mathbf{T})\) is the autocorrelation matrix of \(\mathbf{T}\).
+Since \(\mathbf{T}^{\top}\mathbf{T}\) is singular for many genes, S-MultiXcan computes the pseudo-inverse \(Cor(\mathbf{T})^{+}\) using the \(k\) top PCs, and thus \(\hat{\mathbf{z}}^{\top} Cor(\mathbf{T})^{+} \hat{\mathbf{z}} \sim \chi_k^2\).
+To arrive at this expression, S-MultiXcan uses the conservative approximation \(\sigma_{e}^{2} \approx \sigma_{\epsilon}^{2}\), that is, the variance of the error terms in the joint regression is approximately equal to the residual variance of the marginal regressions.
+Another important point is that \(Cor(\mathbf{T})\) is estimated using a global genotype covariance matrix, whereas marginal \(\hat{z}_l\) in Equation (\ref{eq:spredixcan}) are approximated using tissue-specific genotype covariances.
+Although S-MultiXcan yields highly concordant estimates compared with MultiXcan, results are not perfectly correlated across genes\textsuperscript{\protect\hyperlink{ref-1FFzCXo1s}{24}}.
+As we explain later, these differences are important for our LV-based regression model when computing the gene-gene correlation matrix.
+We used S-MultiXcan results for our LV-based regression model and our cluster analyses of traits.
+
+\hypertarget{sec:methods:twas}{%
+\subsubsection{TWAS resources}\label{sec:methods:twas}}
+
+We used two large TWAS resources from different cohorts for discovery and replication, all obtained from European ancestries.
+PhenomeXcan\textsuperscript{\protect\hyperlink{ref-lY5ln3dB}{42}}, our discovery cohort, provides results on 4,091 traits across different categories.
+Supplementary Data 1 has all the details about the included GWAS, sample size and disease/trait categories.
+In PhenomeXcan, these publicly available GWAS summary statistics were used to compute
+1) gene-based associations with the PrediXcan family of methods (described before), and
+2) a posterior probability of colocalization between GWAS loci and \emph{cis}-eQTL with fastENLOC\textsuperscript{\protect\hyperlink{ref-lY5ln3dB}{42},\protect\hyperlink{ref-ndd3tW4g}{96}}.
+We refer to the matrix of \(z\)-scores from S-PrediXcan (Equation (\ref{eq:spredixcan})) across \(q\) traits and \(m\) genes in tissue \(t\) as \(\mathbf{M}^{t} \in \mathbb{R}^{q \times m}\).
+As explained later, matrices \(\mathbf{M}^{t}\) were used in our LV-based drug repurposing framework since they provide direction of effects.
+The S-MultiXcan results (22,515 gene associations across 4,091 traits) were used in our LV-based regression framework and our cluster analyses of traits.
+For the cluster analyses, we used the \(p\)-values converted to \(z\)-scores: \(\mathbf{M}=\Phi^{-1}(1 - p/2)\), where \(\Phi^{-1}\) is the probit function.
+Higher \(z\)-scores correspond to stronger associations.
+
+Our discovery cohort was eMERGE\textsuperscript{\protect\hyperlink{ref-wfqjCerX}{46}}, where the same TWAS methods were run on 309 phecodes\textsuperscript{\protect\hyperlink{ref-gZAOkumx}{27}} across different categories (more information about traits are available in\textsuperscript{\protect\hyperlink{ref-gZAOkumx}{27}}).
+We used these results to replicate the associations found with our LV-based regression framework in PhenomeXcan.
+
+\hypertarget{sec:methods:multiplier}{%
+\subsubsection{MultiPLIER and Pathway-level information extractor (PLIER)}\label{sec:methods:multiplier}}
+
+MultiPLIER\textsuperscript{\protect\hyperlink{ref-14rnBunuZ}{44}} extracts patterns of co-expressed genes from recount2\textsuperscript{\protect\hyperlink{ref-6SPTvFXq}{19}} (without including GTEx samples), a large gene expression dataset.
+The approach applies the pathway-level information extractor method (PLIER)\textsuperscript{\protect\hyperlink{ref-Ki2ij7zE}{45}}, which performs unsupervised learning using prior knowledge (canonical pathways) to reduce technical noise.
+PLIER uses a matrix factorization approach that deconvolutes gene expression data into a set of latent variables (LV), where each LV represents a gene module.
+The MultiPLIER models reduced the dimensionality in recount2 to 987 LVs.
+
+Given a gene expression dataset \(\mathbf{Y}^{m \times c}\) with \(m\) genes and \(c\) experimental conditions and a prior knowledge matrix \(\mathbf{C} \in \{0,1\}^{m \times p}\) for \(p\) MSigDB pathways\textsuperscript{\protect\hyperlink{ref-1CbVoEpNJ}{100}} (so that \(\mathbf{C}_{ij} = 1\) if gene \(i\) belongs to pathway \(j\)), PLIER finds \(\mathbf{U}\), \(\mathbf{Z}\), and \(\mathbf{B}\) minimizing
+
+\begin{equation}
+||\mathbf{Y} - \mathbf{Z}\mathbf{B}||^{2}_{F} + \lambda_1 ||\mathbf{Z} - \mathbf{C}\mathbf{U}||^{2}_{F} + \lambda_2 ||\mathbf{B}||^{2}_{F} + \lambda_3 ||\mathbf{U}||_{L^1}
+\label{eq:met:plier_func}\end{equation}
+
+subject to \(\mathbf{U}>0, \mathbf{Z}>0\);
+\(\mathbf{Z}^{m \times l}\) are the gene loadings with \(l\) latent variables,
+\(\mathbf{B}^{l \times c}\) is the latent space for \(c\) conditions,
+\(\mathbf{U}^{p \times l}\) specifies which of the \(p\) prior-information pathways in \(\mathbf{C}\) are represented for each LV,
+and \(\lambda_i\) are different regularization parameters used in the training step.
+\(\mathbf{Z}\) is a low-dimensional representation of the gene space where each LV aligns as much as possible to prior knowledge, and it might represent either a known or novel gene module (i.e., a meaningful biological pattern) or noise.
+
+For our drug repurposing and cluster analyses, we used this model to project gene-trait (from TWAS) and gene-drug associations (from LINCS L1000) into this low-dimensional gene module space.
+For instance, TWAS associations \(\mathbf{M}\) (either from S-PrediXcan or S-MultiXcan) were projected using
+
+\begin{equation}
+\hat{\mathbf{M}} = (\mathbf{Z}^{\top} \mathbf{Z} + \lambda_{2} \mathbf{I})^{-1} \mathbf{Z}^{\top} \mathbf{M},
+\label{eq:proj}\end{equation}
+
+where \(\hat{\mathbf{M}}^{l \times q}\) is a matrix where traits are represented by gene modules instead of single genes.
+As explained later, we used the same approach to project drug-induced transcriptional profiles in LINCS L1000 to obtain a representation of drugs using gene modules.
+
+\hypertarget{sec:methods:reg}{%
+\subsubsection{Regression model for LV-trait associations}\label{sec:methods:reg}}
+
+We adapted the gene-set analysis framework from MAGMA\textsuperscript{\protect\hyperlink{ref-19XiXgYmd}{101}} to TWAS.
+We used a competitive test to predict gene-trait associations from TWAS using gene weights from an LV, testing whether top-weighted genes for an LV are more strongly associated with the phenotype than other genes with relatively small or zero weights.
+Thus, we fit the model
+
+\begin{equation}
+\mathbf{m}=\beta_{0} + \mathbf{s} \beta_{s} + \sum_{i} \mathbf{x}_{i} \beta_{i} + \bm{\epsilon},
+\label{eq:reg:model}\end{equation}
+
+where \(\mathbf{m}\) is a vector of S-MultiXcan gene \(p\)-values for a trait (with a \(-log_{10}\) transformation);
+\(\mathbf{s}\) is a binary indicator vector with \(s_{\ell}=1\) for the top 1\% of genes with the largest loadings for LV \(\ell\) (from \(\mathbf{Z}_{\ell}\)) and zero otherwise;
+\(\mathbf{x}_{i}\) is a gene property used as a covariate;
+\(\beta\) are effect sizes (with \(\beta_{0}\) as the intercept);
+and \(\bm{\epsilon} \sim \mathrm{MVN}(0, \sigma^{2} \mathbf{R})\) is a vector of error terms with a multivariate normal distribution (MVN) where \(\mathbf{R}\) is the matrix of gene correlations.
+
+The model tests the null hypothesis \(\beta_{s} = 0\) against the one-sided hypothesis \(\beta_{s} > 0\).
+Therefore, \(\beta_{s}\) reflects the difference in trait associations between genes that are part of LV \(\ell\) and genes outside of it.
+Following the MAGMA framework, we used two gene properties as covariates:
+1) \emph{gene size}, defined as the number of PCs retained in S-MultiXcan,
+and 2) \emph{gene density}, defined as the ratio of the number of PCs to the number of tissues available.
+
+Since the error terms \(\bm{\epsilon}\) could be correlated, we cannot assume they have independent normal distributions as in a standard linear regression model.
+In the PrediXcan family of methods, the predicted expression of a pair of genes could be correlated if they share eQTLs or if these are in LD\textsuperscript{\protect\hyperlink{ref-l6ogswV3}{95}}.
+Therefore, we used a generalized least squares approach to account for these correlations.
+The gene-gene correlation matrix \(\mathbf{R}\) was approximated by computing the correlations between the model sum of squares (SSM) for each pair of genes under the null hypothesis of no association.
+These correlations are derived from the individual-level MultiXcan model (Equation (\ref{eq:multixcan})), where the predicted expression matrix \(\mathbf{T}_{i} \in \mathbb{R}^{n \times p_i}\) of a gene \(i\) across \(p_i\) tissues is projected into its top \(k_i\) PCs, resulting in matrix \(\mathbf{P}_{i} \in \mathbb{R}^{n \times k_i}\).
+From the MAGMA framework, we know that the SSM for each gene is proportial to \(\mathbf{y}^{\top} \mathbf{P}_{i} \mathbf{P}_{i}^{\top} \mathbf{y}\).
+Under the null hypothesis of no association, the covariances between the SSM of genes \(i\) and \(j\) is therefore given by \(2 \times \mathrm{Trace}(\mathbf{P}_{i}^{\top} \mathbf{P}_{j} \mathbf{P}_{j}^{\top} \mathbf{P}_{i})\).
+The standard deviations of each SSM are given by \(\sqrt{2 \times k_{i}} \times (n - 1)\).
+Therefore, the correlation between the SSMs for genes \(i\) and \(j\) can be written as follows:
+
+\begin{equation}
+\begin{split}
+\mathbf{R}_{ij} & = \frac{2 \times \mathrm{Tr}(\mathbf{P}_{i}^{\top} \mathbf{P}_{j} \mathbf{P}_{j}^{\top} \mathbf{P}_{i})}{\sqrt{2 \times k_{i}} \times \sqrt{2 \times k_{j}} \times (n - 1)^2} \\
+& = \frac{2 \times \mathrm{Tr}(Cor(\mathbf{P}_{i}, \mathbf{P}_{j}) \times Cor(\mathbf{P}_{j}, \mathbf{P}_{i}))}{\sqrt{2 \times k_{i}} \times \sqrt{2 \times k_{j}}},
+\end{split}
+\label{eq:reg:r}\end{equation}
+
+where columns \(\mathbf{P}\) are standardized,
+\(\mathrm{Tr}\) is the trace of a matrix,
+and the cross-correlation matrix between PCs \(Cor(\mathbf{P}_{i}, \mathbf{P}_{j}) \in \mathbb{R}^{k_i \times k_j}\) is given by
+
+\begin{equation}
+\begin{split}
+Cor(\mathbf{P}_{i}, \mathbf{P}_{j}) & = Cor(\mathbf{T}_{i} \mathbf{V}_{i}^{\top} \mathrm{diag}(\lambda_i)^{-1/2}, \mathbf{T}_{j} \mathbf{V}_{j}^{\top} \mathrm{diag}(\lambda_j)^{-1/2}) \\
+& = \mathrm{diag}(\lambda_i)^{-1/2} \mathbf{V}_{i} (\frac{\mathbf{T}_{i}^{\top} \mathbf{T}_{j}}{n-1}) \mathbf{V}_{j}^{\top} \mathrm{diag}(\lambda_j)^{-1/2},
+\end{split}
+\label{eq:reg:cor_pp}\end{equation}
+
+where \(\frac{\mathbf{T}_{i}^{\top} \mathbf{T}_{j}}{n-1} \in \mathbb{R}^{p_i \times p_j}\) is the cross-correlation matrix between the predicted expression levels of genes \(i\) and \(j\),
+and columns of \(\mathbf{V}_{i}\) and scalars \(\lambda_i\) are the eigenvectors and eigenvalues of \(\mathbf{T}_{i}\), respectively.
+S-MultiXcan keeps only the top eigenvectors using a condition number threshold of \(\frac{\max(\lambda_i)}{\lambda_i} < 30\).
+To estimate the correlation of predicted expression levels for genes \(i\) in tissue \(k\) and gene \(j\) in tissue \(l\), \((\mathbf{t}_k^i, \mathbf{t}_l^j)\) (\(\mathbf{t}_k^i\) is the \(k\)th column of \(\mathbf{T}_{i}\)), we used\textsuperscript{\protect\hyperlink{ref-1FFzCXo1s}{24}}
+
+\begin{equation}
+\begin{split}
+\frac{(\mathbf{T}_{i}^{\top} \mathbf{T}_{j})_{kl}}{n-1} & = Cor(\mathbf{t}_k^i, \mathbf{t}_l^j) \\
+  & = \frac{ Cov(\mathbf{t}_k, \mathbf{t}_l) } { \sqrt{\widehat{\mathrm{var}}(\mathbf{t}_k) \widehat{\mathrm{var}}(\mathbf{t}_l)} } \\
+  & = \frac{ Cov(\sum_{a \in \mathrm{model}_k} w_a^k X_a, \sum_{b \in \mathrm{model}_l} w_b^l X_b) }  {\sqrt{\widehat{\mathrm{var}}(\mathbf{t}_k) \widehat{\mathrm{var}}(\mathbf{t}_l)} } \\
+  & = \frac{ \sum_{\substack{a \in \mathrm{model}_k \\ b \in \mathrm{model}_l}} w_a^k w_b^l Cov(X_a, X_b)} {\sqrt{\widehat{\mathrm{var}}(\mathbf{t}_k) \widehat{\mathrm{var}}(\mathbf{t}_l)} } \\
+  & = \frac{ \sum_{\substack{a \in \mathrm{model}_k \\ b \in \mathrm{model}_l}} w_a^k w_b^l \Gamma_{ab}} {\sqrt{\widehat{\mathrm{var}}(\mathbf{t}_k) \widehat{\mathrm{var}}(\mathbf{t}_l)} },
+\end{split}
+\label{eq:reg:corr_genes}\end{equation}
+
+where \(X_a\) is the genotype of SNP \(a\),
+\(w_a^k\) is the weight of SNP \(a\) for gene expression prediction in the tissue model \(k\),
+and \(\Gamma = \widehat{\mathrm{var}}(\mathbf{X}) = (\mathbf{X} - \bar{\mathbf{X}})^{\top} (\mathbf{X} - \bar{\mathbf{X}}) / (n-1)\) is the genotype covariance matrix using GTEx v8 as the reference panel, which is the same used in all TWAS methods described here.
+The variance of the predicted expression values of gene \(i\) in tissue \(k\) is estimated as\textsuperscript{\protect\hyperlink{ref-vLyTudUB}{99}}:
+
+\begin{equation}
+\begin{split}
+\widehat{\mathrm{var}}(\mathbf{t}_k^i) & = (\mathbf{W}^k)^\top \Gamma^k \mathbf{W}^k \\
+        & = \sum_{\substack{a \in \mathrm{model}_k \\ b \in \mathrm{model}_k}} w_a^k w_b^k \Gamma_{ab}^k.
+\end{split}
+\label{eq:reg:var_gene}\end{equation}
+
+Note that, since we used the MultiXcan regression model (Equation (\ref{eq:multixcan})), \(\mathbf{R}\) is only an approximation of gene correlations in S-MultiXcan.
+As explained before, S-MultiXcan approximates the joint regression parameters in MultiXcan using the marginal regression estimates from S-PrediXcan in (\ref{eq:spredixcan}) with some simplifying assumptions and different genotype covariance matrices.
+This complicates the derivation of an S-MultiXcan-specific solution to compute \(\mathbf{R}\).
+To account for this, we used a submatrix \(\mathbf{R}_{\ell}\) corresponding to genes that are part of LV \(\ell\) only (top 1\% of genes) instead of the entire matrix \(\mathbf{R}\).
+This simplification is conservative since correlations are accounted for top genes only.
+Our simulations (\protect\hyperlink{sm:reg:null_sim}{Supplementary Note 1}) show that the model is approximately well-calibrated and can correct for LVs with adjacent and highly correlated genes at the top (e.g., Supplementary Figure 2).
+The simulation also identified 127 LVs in which the model was not well-calibrated (e.g., Supplementary Figure 6).
+As this can be attributed to limitations in accurately computing a gene correlation matrix, we excluded these LVs from our main analyses.
+
+In Equation (\ref{eq:reg:corr_genes}), for each gene, we only considered tissue models present in S-PrediXcan results, as well as SNPs present in GWAS used as input for the TWAS approaches.
+This is necessary to obtain more accurate correlation estimates\textsuperscript{\protect\hyperlink{ref-1FFzCXo1s}{24}}.
+Therefore, we computed different correlation matrices for PhenomeXcan and eMERGE.
+In PhenomeXcan, most of the GWAS (4,049) were obtained from the UK Biobank using the same pipeline and including the same set of SNPs, so a single correlation matrix was used for this set.
+For the rest, we used a single correlation matrix for each group of traits that shared the same or most of the SNPs.
+
+We ran our regression model for all 987 LVs across the 4,091 traits in PhenomeXcan.
+For replication, we ran the model in the 309 phecodes in eMERGE.
+We adjusted the \(p\)-values using the Benjamini-Hochberg procedure.
+
+\hypertarget{sec:methods:drug}{%
+\subsubsection{LV-based drug repurposing approach}\label{sec:methods:drug}}
+
+For the drug-disease prediction, we derived an LV-based method based on a drug repositioning framework previously used for psychiatry traits\textsuperscript{\protect\hyperlink{ref-17oeJ0CXy}{30}}, where individual/single genes associated with a trait are anticorrelated with expression profiles for drugs.
+We compared our LV-based method with this previously published, single-gene approach.
+For the single-gene method, we computed a drug-disease score by multiplying each S-PrediXcan set of signed \(z\)-scores in tissue \(t\), \(\mathbf{M}^t\), with another set of signed \(z\)-scores from transcriptional responses profiled in LINCS L1000\textsuperscript{\protect\hyperlink{ref-F7lIlh2N}{43}}, \(\mathbf{L}^{c \times m}\) (for \(c\) compounds).
+Here \(\mathbf{M}^t\) contains information about whether a higher or lower predicted expression of a gene is associated with disease risk, whereas \(\mathbf{L}\) indicates whether a drug increases or decreases the expression of a gene.
+Therefore, these two matrices can be multiplied to compute a score for a drug-disease pair.
+The result of this product is \(\mathbf{D}^{t,k}=-1 \cdot \mathbf{M}^{t,k} \mathbf{L}^\top\), where \(k\) refers to the number of most significant gene associations in \(\mathbf{M}^t\) for each trait.
+As suggested in\textsuperscript{\protect\hyperlink{ref-17oeJ0CXy}{30}}, \(k\) could be either all genes or the top 50, 100, 250, and 500; then, we averaged score ranks across all \(k\) and obtained \(\mathbf{D}^t\).
+Finally, for each drug-disease pair, we took the maximum prediction score across all tissues: \(\mathbf{D}_{ij} = \max \{ \mathbf{D}_{ij}^t \mid \forall t \}\).
+
+The same procedure was used for the LV-based approach, where we projected \(\mathbf{M}^{t}\) and \(\mathbf{L}\) into the gene module latent space using Equation (\ref{eq:proj}), leading to \(\hat{\mathbf{M}}^t\) and \(\hat{\mathbf{L}}^{l \times c}\), respectively.
+Finally, \(\mathbf{D}^{t,k}=-1 \cdot \hat{\mathbf{L}}^{\top} \hat{\mathbf{M}}^{t,k}\), where in this case \(k\) could be all LVs or the top 5, 10, 25 and 50 (since we have an order of magnitude less LVs than genes).
+
+Since the gold standard of drug-disease medical indications is described with Disease Ontology IDs (DOID)\textsuperscript{\protect\hyperlink{ref-1FsruosUW}{102}}, we mapped PhenomeXcan traits to the Experimental Factor Ontology\textsuperscript{\protect\hyperlink{ref-9okjVu3s}{103}} using\textsuperscript{\protect\hyperlink{ref-16RTdMKxI}{104}}, and then to DOID.
+
+\hypertarget{sec:methods:clustering}{%
+\subsubsection{Consensus clustering of traits}\label{sec:methods:clustering}}
+
+We performed two preprocessing steps on the S-MultiXcan results before the cluster analysis.
+First, we combined results in \(\mathbf{M}\) (with \(p\)-values converted to \(z\)-scores, as described before) for traits that mapped to the same Experimental Factor Ontology (EFO)\textsuperscript{\protect\hyperlink{ref-9okjVu3s}{103}} term using the Stouffer's method: \(\sum w_i M_{ij} / \sqrt{\sum w_i^2}\), where \(w_i\) is a weight based on the GWAS sample size for trait \(i\), and \(M_{ij}\) is the \(z\)-score for gene \(j\).
+Second, we divided all \(z\)-scores for each trait \(i\) by their sum to reduce the effect of highly polygenic traits: \(M_{ij} / \sum M_{ij}\).
+Finally, we projected this data matrix using Equation (\ref{eq:proj}), obtaining \(\hat{\mathbf{M}}\) with \(n\)=3,752 traits and \(l\)=987 LVs as the input of our clustering pipeline.
+
+A partitioning of \(\hat{\mathbf{M}}\) with \(n\) traits into \(k\) clusters is represented as a label vector \(\pi \in \mathbb{N}^n\).
+Consensus clustering approaches consist of two steps:
+1) the generation of an ensemble \(\Pi\) with \(r\) partitions of the dataset: \(\Pi=\{\pi_1, \pi_2, \ldots, \pi_r\}\),
+and 2) the combination of the ensemble into a consolidated solution defined as:
+
+\begin{equation}
+\pi^* = \mathrm{arg}\,\underset{\hat{\pi}}{\max} Q(\{ \lvert \mathcal{L}^i \lvert \phi(\hat{\pi}_{\mathcal{L}^i}, \pi_{i \mathcal{L}^i}) \mid i \in \{1,\ldots,r\} \}),
+\label{eq:consensus:obj_func}\end{equation}
+
+where \(\mathcal{L}^i\) is a set of data indices with known cluster labels for partition \(i\),
+\(\phi\colon \mathbb{N}^n \times \mathbb{N}^n \to \mathbb{R}\) is a function that measures the similarity between two partitions,
+and \(Q\) is a measure of central tendency, such as the mean or median.
+We used the adjusted Rand index (ARI)\textsuperscript{\protect\hyperlink{ref-e4AuoW8N}{105}} for \(\phi\) and the median for \(Q\).
+To obtain \(\pi^*\), we define a consensus function \(\Gamma\colon \mathbb{N}^{n \times r} \to \mathbb{N}^n\) with \(\Pi\) as the input.
+We used consensus functions based on the evidence accumulation clustering (EAC) paradigm\textsuperscript{\protect\hyperlink{ref-cuROQDFa}{79}}, where \(\Pi\) is first transformed into a distance matrix
+\(\mathbf{D}_{ij} = d_{ij} / r\),
+where \(d_{ij}\) is the number of times traits \(i\) and \(j\) were grouped in different clusters across all \(r\) partitions in \(\Pi\).
+Then, \(\Gamma\) can be any similarity-based clustering algorithm, which is applied on \(\mathbf{D}\) to derive the final partition \(\pi^*\).
+
+For the ensemble generation step, we used different algorithms to create a highly diverse set of partitions (see Figure \ref{fig:clustering:design}) since diversity is an important property for ensembles\textsuperscript{\protect\hyperlink{ref-8js8Q3pF}{106}--\protect\hyperlink{ref-t5p3UpxZ}{108}}.
+We used three data representations: the raw dataset, its projection into the top 50 principal components, and the embedding learned by UMAP\textsuperscript{\protect\hyperlink{ref-157h5hA34}{109}} using 50 components.
+For each of these, we applied five clustering algorithms covering a wide range of different assumptions on the data structure: \(k\)-means\textsuperscript{\protect\hyperlink{ref-MxGpAiPu}{110}}, spectral clustering\textsuperscript{\protect\hyperlink{ref-x3CT24TB}{111}}, a Gaussian mixture model (GMM), hierarchical clustering, and DBSCAN\textsuperscript{\protect\hyperlink{ref-JrL3iQea}{112}}.
+For \(k\)-means, spectral clustering and GMM, we specified a range of \(k\) between 2 and \(\sqrt{n} \approx 60\), and for each \(k\) we generated five partitions using random seeds.
+For hierarchical clustering, for each \(k\), we generated four partitions using common linkage criteria: ward, complete, average and single.
+For DBSCAN, we combined different ranges for parameters \(\epsilon\) (the maximum distance between two data points to be considered part of the same neighborhood) and \emph{minPts} (the minimum number of data points in a neighborhood for a data point to be considered a core point), based on the procedure in\textsuperscript{\protect\hyperlink{ref-FB7XPWl6}{113}}.
+Specifically, we used \emph{minPts} values from 2 to 125.
+For each data representation (raw, PCA and UMAP), we determined a plausible range of \(\epsilon\) values by observing the distribution of the mean distance of the \emph{minPts}-nearest neighbors across all data points.
+Since some combinations of \emph{minPts} and \(\epsilon\) might not produce a meaningful partition (for instance, when all points are detected as noisy or only one cluster is found), we resampled partitions generated by DBSCAN to ensure an equal representation of this algorithm in the ensemble.
+This procedure generated a final ensemble of 4,428 partitions of 3,752 traits.
+
+Finally, we used spectral clustering on \(\mathbf{D}\) to derive the final consensus partitions.
+\(\mathbf{D}\) was first transformed into a similarity matrix by applying an RBF kernel \(\mathrm{exp}(-\gamma \mathbf{D}^2)\) using four different values for \(\gamma\) that we empirically determined to work best.
+Therefore, for each \(k\) between 2 and 60, we derived four consensus partitions and selected the one that maximized Equation (\ref{eq:consensus:obj_func}).
+We further filtered this set of 59 solutions to keep only those with an ensemble agreement larger than the 75th percentile (Supplementary Figure 13), leaving a total of 15 final consensus partitions shown in Figure \ref{fig:clustering:tree}.
+
+The input data in our clustering pipeline undergoes several linear and nonlinear transformations, including PCA, UMAP and the ensemble transformation using the EAC paradigm (distance matrix \(\mathbf{D}\)).
+Although consensus clustering has clear advantages for biological data\textsuperscript{\protect\hyperlink{ref-S7LBsfcF}{114}}, this set of data transformations complicates the interpretation of results.
+To circumvent this, we used a supervised learning approach to detect which gene modules/LVs are the most important for each cluster of traits (Figure \ref{fig:clustering:design}b).
+Note that we did not use this supervised model for prediction but only to learn which features (LVs) were most discriminative for each cluster.
+For this, we used the highest resolution partition (\(k\)=29, although any could be used) to train a decision tree model using each of the clusters as labels and the projected data \(\hat{\mathbf{M}}\) as the training samples.
+For each \(k\), we built a set of binary labels with the current cluster's traits as the positive class and the rest of the traits as the negative class.
+Then, we selected the LV in the root node of the trained model only if its threshold was positive and larger than one standard deviation.
+Next, we removed this LV from \(\hat{\mathbf{M}}\) (regardless of being previously selected or not) and trained the model again.
+We repeated this procedure 20 times to extract the top 20 LVs that better discriminate traits in a cluster from the rest.
+
+In \protect\hyperlink{sm:clustering:null_sim}{Supplementary Note 2}, we performed several analyses under a null hypothesis of no structure in the data to verify that the clustering results detected by this pipeline were real.
+
+\hypertarget{sec:methods:crispr}{%
+\subsubsection{CRISPR-Cas9 screening}\label{sec:methods:crispr}}
+
+\textbf{Cell culture.}
+HepG2 cells were obtained from ATCC (ATCC® HB-8065™), and maintained in Eagle's Minimum Essential Medium with L-Glutamine (EMEM, Cat. 112-018-101, Quality Biology) supplemented with 10\% Fetal Bovine Serum (FBS, Gibco, Cat.16000-044), and 1\% Pen/Strep (Gibco, Cat.15140-122).
+Cells were kept at 37oC in a humidity-controlled incubator with 5\% CO2, and were maintained at a density not exceeding more than 80\% confluency in Collagen-I coated flasks.
+
+\textbf{Genome-wide lentiviral pooled CRISPR-Cas9 library.}
+3rd lentiviral generation, Broad GPP genome-wide Human Brunello CRISPR knockout Pooled library was provided by David Root and John Doench from Addgene (Cat. 73179-LV), and was used for HepG2 cell transduction.
+It consists of 76,441 sgRNAs, and targets 19,114 genes in the human genome with an average of 4 sgRNAs per gene.
+Each 20nt sgRNA cassette was inserted into the lentiCRIS-PRv2 backbone between U6 promoter and gRNA scaffold.
+Through cell transduction, the lentiviral vectors which encode Cas9 were used to deliver the sgRNA cassette containing plasmids into cells during cell replication.
+Unsuccessful transduced cells were excluded through puromycin selection.
+
+\textbf{Lentiviral titer determination.}
+No-spin lentiviral transduction was utilized for the screen.
+In a Collagen-I coated 6-wells plate, approximate 2.5 M cells were seeded each well in the presence of 8ug/ml polybrene (Millipore Sigma, Cat. TR-1003 G), and a different titrated virus volume (e.g., 0, 50, 100, 200, 250, and 400ul) was assigned to each well.
+EMEM complete media was added to make the final volume of 1.24ml.
+16-18hrs post-transduction, virus/polybrene-containing media was removed from each well.
+Cells were washed twice with 1x DPBS and replaced with fresh EMEM.
+At 24h, cells in each well were trypsinized, diluted (e.g.,1:10), and seeded in pairs of wells of 6-well plates.
+At 60hr post-transduction, cell media in each well was replaced with fresh EMEM.
+2ug/ml of puromycin (Gibco, Cat. A1113803) was added to one well out of the pair.
+2-5 days after puromycin selection, or the 0 virus well treated with puromycin had no survival of cells, cells in both wells with/without puromycin were collected and counted for viability.
+Percentage of Infection (PI\%) was obtained by comparing the cell numbers with/without puromycin selection within each pair.
+By means of Poisson's distribution theory, when transduction efficiency (PI\%) is between 30-50\%, which corresponds to an MOI (Multiplicity of Infection) of \textasciitilde0.35-0.70.
+At MOI close to 0.3, around 25\% of cells are infected, and the majority of those infected cells are predicted to have only one copy of the virus.
+Therefore, a volume of virus (120ul) yielding 30-40\% of transduction efficiency was chosen for further large-scale viral transduction.
+
+\textbf{Lentiviral Transduction in HepG2 Using Brunello CRISPR Knockout Pooled Library.}
+In order to achieve a coverage (representation) of at least 500 cells per sgRNA, and at an MOI between 0.3-0.4 to ensure 95\% of infected cells get only one viral particle per cell, \textasciitilde200M cells were initiated for the screen.
+Transduction was carried out in a similar fashion as described above.
+Briefly, 2.5M cells were seeded in each well of 14 6-well plates, along with 8ug/ml of polybrene.
+A volume of 120ul of the virus was added to each experimental well.
+18hrs post-transduction, virus/PB mix medium was removed, and cells in each well were collected, counted, and pooled into T175 flasks.
+At 60hr post-transduction, 2ug/ml of puromycin was added to each flask.
+Mediums were changed every two days with fresh EMEM, topped with 2ug/ml puromycin.
+Seven days after puromycin selection, cells were collected, pooled, counted, and replated.
+
+\textbf{Fluorescent dye staining.}
+9 days after puromycin selection, cells were assigned to 2 groups.
+20-30M cells were collected as Unsorted Control.
+The cell pellet was spun down at 500 x g for 5min at 4oC.
+The dry pellet was kept at -80oC for further genomic DNA isolation.
+The rest of the cells (approximately 200M) were kept in 100mm dishes and stained with a fluorescent dye (LipidSpotTM 488, Biotium, Cat. 70065-T).
+In Brief, LipidSpot 488 was diluted to 1:100 with DPBS.
+4ml of staining solution was used for each dish and incubated at 37oC for 30min.
+Cell images were captured through fluorescent microscope EVOS for GFP signal detection (Supplementary Figure 8).
+
+\textbf{Fluorescence-activated cell sorting (FACS).}
+Cells were immediately collected into 50ml tubes (From this point on, keep cells cold), and spun at 500 x g for 5min at 4oC.
+After DPBS wash, cell pellets were resuspended with FACS Sorting Buffer (1x DPBS without Ca2+/Mg2+, 2.5mM EDTA, 25mM HEPES, 1\% BSA.
+The solution was filter sterilized, and kept at 4oC), with gentle pipetting to make single cells.
+The cell solution was then filtered through a cell strainer (Falcon, Cat. 352235) and was kept on ice, protected from light.
+Collected cells were sorted on FACSJazz.
+100um nozzle was used for sorting.
+\textasciitilde20\% of each GFP-High and GFP-Low (Supplementary Figure 9) were collected into 15ml tubes.
+After sorting, cells were immediately spun down.
+Pellets were kept at -80oC for further genomic DNA isolation.
+
+\textbf{Genomic DNA isolation and verification.}
+Three conditions of Genomic DNA (Un-Sorted Control, lentiV2 GFP-High, and lentiV2 GFP-Low) were extracted using QIAamp DNA Blood Mini Kit (Qiagen, Cat.51104), followed by UV Spectroscopy (Nanodrop) to access the quality and quantity of the gDNA.
+A total of 80-160ug of gDNA was isolated for each condition.
+sgRNA cassette and lentiviral specific transgene in isolated gDNA were verified through PCR (Supplementary Figure 10).
+
+\textbf{Illumina libraries generation and sequencing.}
+The fragment containing sgRNA cassette was amplified using P5 /P7 primers, as indicated in\textsuperscript{\protect\hyperlink{ref-vNXTnmxp}{115}}, and primer sequences were adapted from Broad Institute protocol (Supplementary Figure 11).
+Stagger sequence (0-8nt) was included in P5 and 8bp uniquely barcoded sequence in P7.
+Primers were synthesized through Integrated DNA Technologies (IDT), and each primer was PAGE purified.
+32 PCR reactions were set up for each condition.
+Each 100ul PCR reaction consists of roughly 5ug of gDNA, 5ul of each 10uM P5 and P7.
+ExTaq DNA Polymerase (TaKaRa, Cat. RR001A) was used to amplify the amplicon.
+PCR Thermal Cycler Parameters set as Initial at 95oC for 1min; followed by 24 cycles of Denaturation at 94oC for 30 seconds, Annealing at 52.5oC for 30 seconds, Extension at 72oC for 30 seconds.
+A final Elongation at 72oC for 10 minutes.
+285bp-293bp PCR products were expected (Supplementary Figure 12 A).
+PCR products within the same condition were pooled and purified using SPRIselect beads (Beckman Coulter, Cat. B23318).
+Purified Illumina libraries were quantitated on Qubit, and the quality of the library was analyzed on Bio-analyzer using High Sensitivity DNA Chip.
+A single approximate 285bp peak was expected (Supplementary Figure 12 B).
+Final Illumina library samples were sequenced on Nova-seq 6000.
+Samples were pooled and loaded on an SP flow cell, along with a 20\% PhiX control v3 library spike-in.
+
+\hypertarget{data-availability}{%
+\subsection{Data availability}\label{data-availability}}
+
+All the main datasets generated in this study are available at \url{https://doi.org/10.5281/zenodo.8071382}\textsuperscript{\protect\hyperlink{ref-cygmsEBt}{116}} and the GitHub repository \url{https://github.com/greenelab/phenoplier}.
+
+The main input datasets used are TWAS from PhenomeXcan\textsuperscript{\protect\hyperlink{ref-lY5ln3dB}{42}} for 4,091 traits and from the Electronic Medical Records and Genomics (eMERGE) network phase III\textsuperscript{\protect\hyperlink{ref-gZAOkumx}{27}} for 309 traits;
+transcriptional responses to small molecule perturbations from LINCS L1000\textsuperscript{\protect\hyperlink{ref-F7lIlh2N}{43}} that were further preprocessed and mapped to DrugBank IDs from\textsuperscript{\protect\hyperlink{ref-1DJZvtwP1}{54}};
+latent space/gene module models from MultiPLIER\textsuperscript{\protect\hyperlink{ref-14rnBunuZ}{44}}.
+
+The data used from PhenomeXcan, LINCS L1000, and MultiPLIER are publicly available.
+All significant results reported for the eMERGE and Penn Medicine BioBank (PMBB) phenome-wide TWAS are contained in\textsuperscript{\protect\hyperlink{ref-gZAOkumx}{27}}.
+The individual-level PMBB raw datasets can not be made publicly available due to institutional privacy policy.
+Please contact Penn Medicine Biobank (\url{https://pmbb.med.upenn.edu/pmbb/}) for requests of access to data.
+eMERGE network phase III data is available on dbGAP (Accession: phs001584.v2.p2).
+
+\hypertarget{code-availability}{%
+\subsection{Code availability}\label{code-availability}}
+
+The code necessary to reproduce all the analyses in this work is available at \url{https://doi.org/10.5281/zenodo.8071382}\textsuperscript{\protect\hyperlink{ref-cygmsEBt}{116}} and the GitHub repository \url{https://github.com/greenelab/phenoplier}.
+
+For the CRISPR screening, we used FlowJo v10.7 and FACS Jazz Software v1.1.
+For data analysis, we used Python 3.8 and R 3.6 with several computational packages.
+The main Python packages used were: Jupyter Lab (2.2), pandas (1.1), matplotlib (3.3), seaborn (0.11), numpy (1.19), scipy (1.5), scikit-learn (0.23), and umap-learn (0.4).
+The main R packages were: Bioconductor (3.10), clusterProfiler (3.14), clustree (0.4), and fgsea (1.17).
+We also developed several scripts and notebooks which are published under an open-source license.
+We documented all the steps necessary to carry out all the analyses.
+We also provide a Docker image to use the same runtime environment we used, and a demo to quickly test the methods on real data.
+
+\hypertarget{references}{%
+\subsection{References}\label{references}}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{0}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-e0tRKjE5}{}}%
+\CSLLeftMargin{1. }%
+\CSLRightInline{Lage, K. \emph{et al.} \href{https://doi.org/10.1073/pnas.0810772105}{A large-scale analysis of tissue-specific pathology and gene expression of human disease genes and complexes.} \emph{Proc Natl Acad Sci U S A} \textbf{105}, 20870--5 (2008).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-CVF61Un5}{}}%
+\CSLLeftMargin{2. }%
+\CSLRightInline{Greene, C. S. \emph{et al.} \href{https://doi.org/10.1038/ng.3259}{Understanding multicellular function and disease with human tissue-specific networks}. \emph{Nat Genet} \textbf{47}, 569--576 (2015).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-Om8ZhS06}{}}%
+\CSLLeftMargin{3. }%
+\CSLRightInline{de Leeuw, C. A., Stringer, S., Dekkers, I. A., Heskes, T. \& Posthuma, D. \href{https://doi.org/10.1038/s41467-018-06022-6}{Conditional and interaction gene-set analysis reveals novel functional pathways for blood pressure}. \emph{Nat Commun} \textbf{9}, (2018).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-9Pr9idng}{}}%
+\CSLLeftMargin{4. }%
+\CSLRightInline{\emph{et al.} \href{https://doi.org/10.1126/science.aaz1776}{The GTEx Consortium atlas of genetic regulatory effects across human tissues}. \emph{Science} \textbf{369}, 1318--1330 (2020).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-1DoyZS7y0}{}}%
+\CSLLeftMargin{5. }%
+\CSLRightInline{Meuleman, W. \emph{et al.} \href{https://doi.org/10.1038/s41586-020-2559-3}{Index and biological spectrum of human DNase I hypersensitive sites}. \emph{Nature} \textbf{584}, 244--251 (2020).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-nhaocxmR}{}}%
+\CSLLeftMargin{6. }%
+\CSLRightInline{Hekselman, I. \& Yeger-Lotem, E. \href{https://doi.org/10.1038/s41576-019-0200-9}{Mechanisms of tissue and cell-type specificity in heritable traits and~diseases}. \emph{Nat Rev Genet} \textbf{21}, 137--150 (2020).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-REXpV7nA}{}}%
+\CSLLeftMargin{7. }%
+\CSLRightInline{Nelson, M. R. \emph{et al.} \href{https://doi.org/10.1038/ng.3314}{The support of human genetic evidence for approved drug indications}. \emph{Nat Genet} \textbf{47}, 856--860 (2015).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-PgEwSS4Q}{}}%
+\CSLLeftMargin{8. }%
+\CSLRightInline{King, E. A., Davis, J. W. \& Degner, J. F. \href{https://doi.org/10.1371/journal.pgen.1008489}{Are drug targets with genetic support twice as likely to be approved? Revised estimates of the impact of genetic support for drug mechanisms on the probability of drug approval}. \emph{PLoS Genet} \textbf{15}, e1008489 (2019).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-15J98V2qM}{}}%
+\CSLLeftMargin{9. }%
+\CSLRightInline{\href{https://doi.org/10.1038/nature11247}{An integrated encyclopedia of DNA elements in the human genome}. \emph{Nature} \textbf{489}, 57--74 (2012).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-sLkFMFZj}{}}%
+\CSLLeftMargin{10. }%
+\CSLRightInline{Kundaje, A. \emph{et al.} \href{https://doi.org/10.1038/nature14248}{Integrative analysis of 111 reference human epigenomes}. \emph{Nature} \textbf{518}, 317--330 (2015).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-SxuuTQTQ}{}}%
+\CSLLeftMargin{11. }%
+\CSLRightInline{Andersson, R. \emph{et al.} \href{https://doi.org/10.1038/nature12787}{An atlas of active enhancers across human cell types and tissues}. \emph{Nature} \textbf{507}, 455--461 (2014).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-xRGqPsT2}{}}%
+\CSLLeftMargin{12. }%
+\CSLRightInline{Boix, C. A., James, B. T., Park, Y. P., Meuleman, W. \& Kellis, M. \href{https://doi.org/10.1038/s41586-020-03145-z}{Regulatory genomic circuitry of human disease loci by integrative epigenomics}. \emph{Nature} \textbf{590}, 300--307 (2021).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-WFslDIWl}{}}%
+\CSLLeftMargin{13. }%
+\CSLRightInline{Finucane, H. K. \emph{et al.} \href{https://doi.org/10.1038/s41588-018-0081-4}{Heritability enrichment of specifically expressed genes identifies disease-relevant tissues and cell types}. \emph{Nat Genet} \textbf{50}, 621--629 (2018).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-aIyQY5ZT}{}}%
+\CSLLeftMargin{14. }%
+\CSLRightInline{Gallagher, M. D. \& Chen-Plotkin, A. S. \href{https://doi.org/10.1016/j.ajhg.2018.04.002}{The Post-GWAS Era: From Association to Function}. \emph{The American Journal of Human Genetics} \textbf{102}, 717--730 (2018).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-z8MQTAnJ}{}}%
+\CSLLeftMargin{15. }%
+\CSLRightInline{Pers, T. H. \emph{et al.} \href{https://doi.org/10.1038/ncomms6890}{Biological interpretation of genome-wide association studies using predicted gene functions}. \emph{Nat Commun} \textbf{6}, (2015).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-O0e3EhY6}{}}%
+\CSLLeftMargin{16. }%
+\CSLRightInline{Cai, J. J. \& Petrov, D. A. \href{https://doi.org/10.1093/gbe/evq019}{Relaxed purifying selection and possibly high rate of adaptation in primate lineage-specific genes.} \emph{Genome Biol Evol} \textbf{2}, 393--409 (2010).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-18jYvPauB}{}}%
+\CSLLeftMargin{17. }%
+\CSLRightInline{Winter, E. E., Goodstadt, L. \& Ponting, C. P. \href{https://doi.org/10.1101/gr.1924004}{Elevated rates of protein secretion, evolution, and disease among tissue-specific genes.} \emph{Genome Res} \textbf{14}, 54--61 (2004).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-wNE0EQlN}{}}%
+\CSLLeftMargin{18. }%
+\CSLRightInline{Lage, K. \emph{et al.} \href{https://doi.org/10.1073/pnas.0810772105}{A large-scale analysis of tissue-specific pathology and gene expression of human disease genes and complexes}. \emph{Proc. Natl. Acad. Sci. U.S.A.} \textbf{105}, 20870--20875 (2008).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-6SPTvFXq}{}}%
+\CSLLeftMargin{19. }%
+\CSLRightInline{Collado-Torres, L. \emph{et al.} \href{https://doi.org/10.1038/nbt.3838}{Reproducible RNA-seq analysis using recount2}. \emph{Nat Biotechnol} \textbf{35}, 319--321 (2017).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-Nz3IMEzd}{}}%
+\CSLLeftMargin{20. }%
+\CSLRightInline{Lachmann, A. \emph{et al.} \href{https://doi.org/10.1038/s41467-018-03751-6}{Massive mining of publicly available RNA-seq data from human and mouse}. \emph{Nat Commun} \textbf{9}, (2018).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-57TjOMEA}{}}%
+\CSLLeftMargin{21. }%
+\CSLRightInline{Lee, H.-C. \emph{et al.} \href{https://doi.org/10.1186/s13040-020-00216-9}{Identification of therapeutic targets from genetic association studies using hierarchical component analysis}. \emph{BioData Mining} \textbf{13}, (2020).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-yEdRP9Xx}{}}%
+\CSLLeftMargin{22. }%
+\CSLRightInline{Tang, S. \emph{et al.} \href{https://doi.org/10.1371/journal.pgen.1009482}{Novel Variance-Component TWAS method for studying complex human diseases with applications to Alzheimer's dementia}. \emph{PLoS Genet} \textbf{17}, e1009482 (2021).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-1D63fEEPb}{}}%
+\CSLLeftMargin{23. }%
+\CSLRightInline{Gusev, A. \emph{et al.} \href{https://doi.org/10.1038/ng.3506}{Integrative approaches for large-scale transcriptome-wide association studies}. \emph{Nat Genet} \textbf{48}, 245--252 (2016).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-1FFzCXo1s}{}}%
+\CSLLeftMargin{24. }%
+\CSLRightInline{Barbeira, A. N. \emph{et al.} \href{https://doi.org/10.1371/journal.pgen.1007889}{Integrating predicted transcriptome from multiple tissues improves association detection}. \emph{PLoS Genet} \textbf{15}, e1007889 (2019).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-Z8bvDdVq}{}}%
+\CSLLeftMargin{25. }%
+\CSLRightInline{Gamazon, E. R. \emph{et al.} \href{https://doi.org/10.1038/ng.3367}{A gene-based association method for mapping traits using reference transcriptome data}. \emph{Nat Genet} \textbf{47}, 1091--1098 (2015).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-ktVcsmYD}{}}%
+\CSLLeftMargin{26. }%
+\CSLRightInline{Rodriguez-Fontenla, C. \& Carracedo, A. \href{https://doi.org/10.1038/s41398-021-01378-8}{UTMOST, a single and cross-tissue TWAS (Transcriptome Wide Association Study), reveals new ASD (Autism Spectrum Disorder) associated genes.} \emph{Transl Psychiatry} \textbf{11}, 256 (2021).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-gZAOkumx}{}}%
+\CSLLeftMargin{27. }%
+\CSLRightInline{Li, B. \emph{et al.} Multi-ancestry gene-trait connection landscape using electronic health record (EHR) linked biobank data. (2021) doi:\href{https://doi.org/10.1101/2021.10.21.21265225}{10.1101/2021.10.21.21265225}.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-zwpq2IXD}{}}%
+\CSLLeftMargin{28. }%
+\CSLRightInline{Pividori, M., Schoettler, N., Nicolae, D. L., Ober, C. \& Im, H. K. \href{https://doi.org/10.1016/s2213-2600(19)30055-4}{Shared and distinct genetic risk factors for childhood-onset and adult-onset asthma: genome-wide and transcriptome-wide studies.} \emph{Lancet Respir Med} \textbf{7}, 509--522 (2019).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-hSYqogYZ}{}}%
+\CSLLeftMargin{29. }%
+\CSLRightInline{Liang, Y. \emph{et al.} \href{https://doi.org/10.1186/s13059-021-02591-w}{Polygenic transcriptome risk scores (PTRS) can improve portability of polygenic risk scores across ancestries}. \emph{Genome Biol} \textbf{23}, (2022).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-17oeJ0CXy}{}}%
+\CSLLeftMargin{30. }%
+\CSLRightInline{So, H.-C. \emph{et al.} \href{https://doi.org/10.1038/nn.4618}{Analysis of genome-wide association data highlights candidates for drug repositioning in psychiatry}. \emph{Nat Neurosci} \textbf{20}, 1342--1349 (2017).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-vpIDZCSa}{}}%
+\CSLLeftMargin{31. }%
+\CSLRightInline{Boyle, E. A., Li, Y. I. \& Pritchard, J. K. \href{https://doi.org/10.1016/j.cell.2017.05.038}{An Expanded View of Complex Traits: From Polygenic to Omnigenic}. \emph{Cell} \textbf{169}, 1177--1186 (2017).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pZZn28he}{}}%
+\CSLLeftMargin{32. }%
+\CSLRightInline{Watanabe, K. \emph{et al.} \href{https://doi.org/10.1038/s41588-019-0481-0}{A global overview of pleiotropy and genetic architecture in complex traits}. \emph{Nat Genet} \textbf{51}, 1339--1348 (2019).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-PDWEwciL}{}}%
+\CSLLeftMargin{33. }%
+\CSLRightInline{Pickrell, J. K. \emph{et al.} \href{https://doi.org/10.1038/ng.3570}{Detection and interpretation of shared genetic influences on 42 human traits}. \emph{Nat Genet} \textbf{48}, 709--717 (2016).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-LXvTZzEA}{}}%
+\CSLLeftMargin{34. }%
+\CSLRightInline{Liu, X., Li, Y. I. \& Pritchard, J. K. \href{https://doi.org/10.1016/j.cell.2019.04.014}{Trans Effects on Gene Expression Can Drive Omnigenic Inheritance}. \emph{Cell} \textbf{177}, 1022--1034.e6 (2019).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-jrAMOJCD}{}}%
+\CSLLeftMargin{35. }%
+\CSLRightInline{Gerstein, M. B. \emph{et al.} \href{https://doi.org/10.1038/nature11245}{Architecture of the human regulatory network derived from ENCODE data.} \emph{Nature} \textbf{489}, 91--100 (2012).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-SjGoBywE}{}}%
+\CSLLeftMargin{36. }%
+\CSLRightInline{Alsina, L. \emph{et al.} \href{https://doi.org/10.1038/ni.3028}{A narrow repertoire of transcriptional modules responsive to pyogenic bacteria is impaired in patients carrying loss-of-function mutations in MYD88 or IRAK4.} \emph{Nat Immunol} \textbf{15}, 1134--42 (2014).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-S4e4WaP3}{}}%
+\CSLLeftMargin{37. }%
+\CSLRightInline{Eisen, M. B., Spellman, P. T., Brown, P. O. \& Botstein, D. \href{https://doi.org/10.1073/pnas.95.25.14863}{Cluster analysis and display of genome-wide expression patterns.} \emph{Proc Natl Acad Sci U S A} \textbf{95}, 14863--8 (1998).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-f2r8LLIn}{}}%
+\CSLLeftMargin{38. }%
+\CSLRightInline{Chaussabel, D. \& Baldwin, N. \href{https://doi.org/10.1038/nri3642}{Democratizing systems immunology with modular transcriptional repertoire analyses.} \emph{Nat Rev Immunol} \textbf{14}, 271--80 (2014).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-VzZoy0BD}{}}%
+\CSLLeftMargin{39. }%
+\CSLRightInline{D\textquotesingle haeseleer, P. \href{https://doi.org/10.1038/nbt1205-1499}{How does gene expression clustering work?} \emph{Nat Biotechnol} \textbf{23}, 1499--501 (2005).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-1BVbSrr6M}{}}%
+\CSLLeftMargin{40. }%
+\CSLRightInline{Saelens, W., Cannoodt, R. \& Saeys, Y. \href{https://doi.org/10.1038/s41467-018-03424-4}{A comprehensive evaluation of module detection methods for gene expression data}. \emph{Nat Commun} \textbf{9}, (2018).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-S56q1qoc}{}}%
+\CSLLeftMargin{41. }%
+\CSLRightInline{Chaussabel, D. \emph{et al.} \href{https://doi.org/10.1016/j.immuni.2008.05.012}{A modular analysis framework for blood genomics studies: application to systemic lupus erythematosus.} \emph{Immunity} \textbf{29}, 150--64 (2008).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-lY5ln3dB}{}}%
+\CSLLeftMargin{42. }%
+\CSLRightInline{Pividori, M. \emph{et al.} \href{https://doi.org/10.1126/sciadv.aba2083}{PhenomeXcan: Mapping the genome to the phenome through the transcriptome}. \emph{Sci. Adv.} \textbf{6}, (2020).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-F7lIlh2N}{}}%
+\CSLLeftMargin{43. }%
+\CSLRightInline{Subramanian, A. \emph{et al.} \href{https://doi.org/10.1016/j.cell.2017.10.049}{A Next Generation Connectivity Map: L1000 Platform and the First 1,000,000 Profiles}. \emph{Cell} \textbf{171}, 1437--1452.e17 (2017).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-14rnBunuZ}{}}%
+\CSLLeftMargin{44. }%
+\CSLRightInline{Taroni, J. N. \emph{et al.} \href{https://doi.org/10.1016/j.cels.2019.04.003}{MultiPLIER: A Transfer Learning Framework for Transcriptomics Reveals Systemic Features of Rare Disease}. \emph{Cell Systems} \textbf{8}, 380--394.e4 (2019).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-Ki2ij7zE}{}}%
+\CSLLeftMargin{45. }%
+\CSLRightInline{Mao, W., Zaslavsky, E., Hartmann, B. M., Sealfon, S. C. \& Chikina, M. \href{https://doi.org/10.1038/s41592-019-0456-1}{Pathway-level information extractor (PLIER) for gene expression data}. \emph{Nat Methods} \textbf{16}, 607--610 (2019).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-wfqjCerX}{}}%
+\CSLLeftMargin{46. }%
+\CSLRightInline{Gottesman, O. \emph{et al.} \href{https://doi.org/10.1038/gim.2013.72}{The Electronic Medical Records and Genomics (eMERGE) Network: past, present, and future}. \emph{Genetics in Medicine} \textbf{15}, 761--771 (2013).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-nmJxPpE5}{}}%
+\CSLLeftMargin{47. }%
+\CSLRightInline{Bycroft, C. \emph{et al.} \href{https://doi.org/10.1038/s41586-018-0579-z}{The UK Biobank resource with deep phenotyping and genomic data}. \emph{Nature} \textbf{562}, 203--209 (2018).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-1FVd2WW6G}{}}%
+\CSLLeftMargin{48. }%
+\CSLRightInline{Myers, C. L., Barrett, D. R., Hibbs, M. A., Huttenhower, C. \& Troyanskaya, O. G. \href{https://doi.org/10.1186/1471-2164-7-187}{Finding function: evaluation methods for functional genomic data}. \emph{BMC Genomics} \textbf{7}, (2006).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-DN7TyZzb}{}}%
+\CSLLeftMargin{49. }%
+\CSLRightInline{Zhou, N. \emph{et al.} \href{https://doi.org/10.1186/s13059-019-1835-8}{The CAFA challenge reports improved protein function prediction and new functional annotations for hundreds of genes through experimental screens}. \emph{Genome Biol} \textbf{20}, (2019).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-18TSqd1tG}{}}%
+\CSLLeftMargin{50. }%
+\CSLRightInline{Becht, E. \emph{et al.} \href{https://doi.org/10.1186/s13059-016-1070-5}{Estimating the~population abundance of tissue-infiltrating immune and stromal cell populations using gene expression}. \emph{Genome Biol} \textbf{17}, (2016).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-Z8WXLD67}{}}%
+\CSLLeftMargin{51. }%
+\CSLRightInline{Korotkevich, G. \emph{et al.} Fast gene set enrichment analysis. (2016) doi:\href{https://doi.org/10.1101/060012}{10.1101/060012}.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-6PR8LEXK}{}}%
+\CSLLeftMargin{52. }%
+\CSLRightInline{Law, V. \emph{et al.} \href{https://doi.org/10.1093/nar/gkt1068}{DrugBank 4.0: shedding new light on drug metabolism}. \emph{Nucl. Acids Res.} \textbf{42}, D1091--D1097 (2013).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-O21tn8vf}{}}%
+\CSLLeftMargin{53. }%
+\CSLRightInline{Himmelstein, D. S. \emph{et al.} \href{https://doi.org/10.7554/elife.26726}{Systematic integration of biomedical knowledge prioritizes drugs for repurposing}. \emph{eLife} \textbf{6}, (2017).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-1DJZvtwP1}{}}%
+\CSLLeftMargin{54. }%
+\CSLRightInline{Himmelstein, D., Brueggeman, L. \& Baranzini, S. Dhimmel/Lincs V2.0: Refined Consensus Signatures From Lincs L1000. Preprint at \url{https://doi.org/10.5281/zenodo.47223} (2016).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-1ClBKizD7}{}}%
+\CSLLeftMargin{55. }%
+\CSLRightInline{Dudley, J. T. \emph{et al.} \href{https://doi.org/10.1126/scitranslmed.3002648}{Computational Repositioning of the Anticonvulsant Topiramate for Inflammatory Bowel Disease}. \emph{Sci. Transl. Med.} \textbf{3}, (2011).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-mZjkE1xU}{}}%
+\CSLLeftMargin{56. }%
+\CSLRightInline{Sirota, M. \emph{et al.} \href{https://doi.org/10.1126/scitranslmed.3001318}{Discovery and Preclinical Validation of Drug Indications Using Compendia of Public Gene Expression Data}. \emph{Sci. Transl. Med.} \textbf{3}, (2011).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-10KA5jTBQ}{}}%
+\CSLLeftMargin{57. }%
+\CSLRightInline{Himmelstein, D. S., Pouya Khankhanian, Hessler, C. S., Green, A. J. \& Baranzini, S. E. Dhimmel/Indications V1.0. Pharmacotherapydb: The Open Catalog Of Drug Therapies For Disease. Preprint at \url{https://doi.org/10.5281/zenodo.47664} (2016).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-bRPc66OD}{}}%
+\CSLLeftMargin{58. }%
+\CSLRightInline{\emph{et al.} \href{https://doi.org/10.1056/nejmoa1107579}{Niacin in patients with low HDL cholesterol levels receiving intensive statin therapy.} \emph{N Engl J Med} \textbf{365}, 2255--67 (2011).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-13ZGxHjQ5}{}}%
+\CSLLeftMargin{59. }%
+\CSLRightInline{\emph{et al.} \href{https://doi.org/10.1056/nejmoa1300955}{Effects of extended-release niacin with laropiprant in high-risk patients.} \emph{N Engl J Med} \textbf{371}, 203--12 (2014).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-ZGvG75Bj}{}}%
+\CSLLeftMargin{60. }%
+\CSLRightInline{D\textquotesingle Andrea, E., Hey, S. P., Ramirez, C. L. \& Kesselheim, A. S. \href{https://doi.org/10.1001/jamanetworkopen.2019.2224}{Assessment of the Role of Niacin in Managing Cardiovascular Disease Outcomes: A Systematic Review and Meta-analysis.} \emph{JAMA Netw Open} \textbf{2}, e192224 (2019).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-LVihFr3g}{}}%
+\CSLLeftMargin{61. }%
+\CSLRightInline{Kamanna, V. S. \& Kashyap, M. L. \href{https://doi.org/10.1016/j.amjcard.2008.02.029}{Mechanism of Action of Niacin}. \emph{The American Journal of Cardiology} \textbf{101}, S20--S26 (2008).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-7OgaYjeL}{}}%
+\CSLLeftMargin{62. }%
+\CSLRightInline{Romani, M., Hofer, D. C., Katsyuba, E. \& Auwerx, J. \href{https://doi.org/10.1194/jlr.s092007}{Niacin: an old lipid drug in a new NAD+ dress}. \emph{Journal of Lipid Research} \textbf{60}, 741--746 (2019).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-OOAkmacQ}{}}%
+\CSLLeftMargin{63. }%
+\CSLRightInline{Boden, W. E., Sidhu, M. S. \& Toth, P. P. \href{https://doi.org/10.1177/1074248413514481}{The therapeutic role of niacin in dyslipidemia management.} \emph{J Cardiovasc Pharmacol Ther} \textbf{19}, 141--58 (2013).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-13meq3Hgt}{}}%
+\CSLLeftMargin{64. }%
+\CSLRightInline{Tuteja, S. \& Rader, D. J. \href{https://doi.org/10.1038/clpt.2014.79}{High-density lipoproteins in the prevention of cardiovascular disease: changing the paradigm.} \emph{Clin Pharmacol Ther} \textbf{96}, 48--56 (2014).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-izbPw2kc}{}}%
+\CSLLeftMargin{65. }%
+\CSLRightInline{OFFERMANNS, S. \href{https://doi.org/10.1016/j.tips.2006.05.008}{The nicotinic acid receptor GPR109A (HM74A or PUMA-G) as a new therapeutic target}. \emph{Trends in Pharmacological Sciences} \textbf{27}, 384--390 (2006).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-wI0IjT3i}{}}%
+\CSLLeftMargin{66. }%
+\CSLRightInline{Maciejewski-Lenoir, D. \emph{et al.} \href{https://doi.org/10.1038/sj.jid.5700586}{Langerhans Cells Release Prostaglandin D2 in Response to Nicotinic Acid}. \emph{Journal of Investigative Dermatology} \textbf{126}, 2637--2646 (2006).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-1Bz0jRHYo}{}}%
+\CSLLeftMargin{67. }%
+\CSLRightInline{Lukasova, M., Malaval, C., Gille, A., Kero, J. \& Offermanns, S. \href{https://doi.org/10.1172/jci41651}{Nicotinic acid inhibits progression of atherosclerosis in mice through its receptor GPR109A expressed by immune cells}. \emph{J. Clin. Invest.} \textbf{121}, 1163--1173 (2011).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-1DblG8swn}{}}%
+\CSLLeftMargin{68. }%
+\CSLRightInline{Yvan-Charvet, L., Wang, N. \& Tall, A. R. \href{https://doi.org/10.1161/atvbaha.108.179283}{Role of HDL, ABCA1, and ABCG1 Transporters in Cholesterol Efflux and Immune Responses}. \emph{ATVB} \textbf{30}, 139--143 (2010).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-RliFvowC}{}}%
+\CSLLeftMargin{69. }%
+\CSLRightInline{DeBerg, H. A. \emph{et al.} \href{https://doi.org/10.1371/journal.pone.0192082}{Shared and organism-specific host responses to childhood diarrheal diseases revealed by whole blood transcript profiling}. \emph{PLoS ONE} \textbf{13}, e0192082 (2018).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-D5XBhzim}{}}%
+\CSLLeftMargin{70. }%
+\CSLRightInline{Linsley, P. S., Speake, C., Whalen, E. \& Chaussabel, D. \href{https://doi.org/10.1371/journal.pone.0109760}{Copy Number Loss of the Interferon Gene Cluster in Melanomas Is Linked to Reduced T Cell Infiltrate and Poor Patient Prognosis}. \emph{PLoS ONE} \textbf{9}, e109760 (2014).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-EnoqU4ga}{}}%
+\CSLLeftMargin{71. }%
+\CSLRightInline{Hung, T. \emph{et al.} \href{https://doi.org/10.1126/science.aac7442}{The Ro60 autoantigen binds endogenous retroelements and regulates inflammatory gene expression}. \emph{Science} \textbf{350}, 455--459 (2015).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-11eausmiy}{}}%
+\CSLLeftMargin{72. }%
+\CSLRightInline{Homo sapiens (ID 258384) - BioProject - NCBI. \url{https://www.ncbi.nlm.nih.gov/bioproject/PRJNA258384}.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-mtMYROCN}{}}%
+\CSLLeftMargin{73. }%
+\CSLRightInline{Qian, F. \emph{et al.} \href{https://doi.org/10.3390/v5071664}{Identification of Genes Critical for Resistance to Infection by West Nile Virus Using RNA-Seq Analysis}. \emph{Viruses} \textbf{5}, 1664--1681 (2013).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-1kgcHkGm}{}}%
+\CSLLeftMargin{74. }%
+\CSLRightInline{Blischak, J. D., Tailleux, L., Mitrano, A., Barreiro, L. B. \& Gilad, Y. \href{https://doi.org/10.1038/srep16882}{Mycobacterial infection induces a specific human innate immune response}. \emph{Sci Rep} \textbf{5}, (2015).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-kLRErKXz}{}}%
+\CSLLeftMargin{75. }%
+\CSLRightInline{Wang, S. \emph{et al.} \href{https://doi.org/10.1159/000495051}{Niacin Inhibits Apoptosis and Rescues Premature Ovarian Failure}. \emph{Cell Physiol Biochem} \textbf{50}, 2060--2070 (2018).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-TovvsrDr}{}}%
+\CSLLeftMargin{76. }%
+\CSLRightInline{Asadi, N. \emph{et al.} \href{https://doi.org/10.1071/rd20306}{Chronic niacin administration ameliorates ovulation, histological changes in the ovary and adiponectin concentrations in a rat model of polycystic ovary syndrome}. \emph{Reprod. Fertil. Dev.} \textbf{33}, 447 (2021).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-14dCeRkua}{}}%
+\CSLLeftMargin{77. }%
+\CSLRightInline{Ronan, T., Qi, Z. \& Naegle, K. M. \href{https://doi.org/10.1126/scisignal.aad1932}{Avoiding common pitfalls when clustering biological data}. \emph{Sci. Signal.} \textbf{9}, (2016).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-uw3AnEgA}{}}%
+\CSLLeftMargin{78. }%
+\CSLRightInline{Strehl, A. \& Joydeep, G. \href{https://www.jmlr.org/papers/v3/strehl02a.html}{Cluster Ensembles -- A Knowledge Reuse Framework for Combining Multiple Partitions}. \emph{Journal of Machine Learning Research} \textbf{3}, 583--617 (2002).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-cuROQDFa}{}}%
+\CSLLeftMargin{79. }%
+\CSLRightInline{Fred, A. L. N. \& Jain, A. K. \href{https://doi.org/10.1109/tpami.2005.113}{Combining multiple clusterings using evidence accumulation}. \emph{IEEE Trans. Pattern Anal. Mach. Intell.} \textbf{27}, 835--850 (2005).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-xhtEAzx6}{}}%
+\CSLLeftMargin{80. }%
+\CSLRightInline{Zappia, L. \& Oshlack, A. \href{https://doi.org/10.1093/gigascience/giy083}{Clustering trees: a visualization for evaluating clusterings at multiple resolutions}. \emph{GigaScience} \textbf{7}, (2018).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-aBVh8zt1}{}}%
+\CSLLeftMargin{81. }%
+\CSLRightInline{Leong, D. P. \emph{et al.} \href{https://doi.org/10.1016/s0140-6736(14)62000-6}{Prognostic value of grip strength: findings from the Prospective Urban Rural Epidemiology (PURE) study.} \emph{Lancet} \textbf{386}, 266--73 (2015).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-Zk82GvJV}{}}%
+\CSLLeftMargin{82. }%
+\CSLRightInline{Novershtern, N. \emph{et al.} \href{https://doi.org/10.1016/j.cell.2011.01.004}{Densely Interconnected Transcriptional Circuits Control Cell States in Human Hematopoiesis}. \emph{Cell} \textbf{144}, 296--309 (2011).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-10qjLoufR}{}}%
+\CSLLeftMargin{83. }%
+\CSLRightInline{Rugulies, R. \href{https://doi.org/10.1016/s0749-3797(02)00439-7}{Depression as a predictor for coronary heart disease. a review and meta-analysis.} \emph{Am J Prev Med} \textbf{23}, 51--61 (2002).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-j2Sl4DAE}{}}%
+\CSLLeftMargin{84. }%
+\CSLRightInline{Gale, C. R., Batty, G. D., Osborn, D. P. J., Tynelius, P. \& Rasmussen, F. \href{https://doi.org/10.1161/circulationaha.113.002065}{Mental Disorders Across the Adult Life Course and Future Coronary Heart Disease}. \emph{Circulation} \textbf{129}, 186--193 (2014).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-17LYMnG9n}{}}%
+\CSLLeftMargin{85. }%
+\CSLRightInline{Hayes, J. F., Marston, L., Walters, K., King, M. B. \& Osborn, D. P. J. \href{https://doi.org/10.1192/bjp.bp.117.202606}{Mortality gap for people with bipolar disorder and schizophrenia: UK-based cohort study 2000--2014}. \emph{Br J Psychiatry} \textbf{211}, 175--181 (2017).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-13t4TuFeJ}{}}%
+\CSLLeftMargin{86. }%
+\CSLRightInline{Tublin, J. M., Adelstein, J. M., del Monte, F., Combs, C. K. \& Wold, L. E. \href{https://doi.org/10.1161/circresaha.118.313563}{Getting to the Heart of Alzheimer Disease}. \emph{Circ Res} \textbf{124}, 142--149 (2019).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-D83Aqhga}{}}%
+\CSLLeftMargin{87. }%
+\CSLRightInline{Attems, J. \& Jellinger, K. A. \href{https://doi.org/10.1186/s12916-014-0206-2}{The overlap between vascular disease and Alzheimer's disease - lessons from pathology}. \emph{BMC Med} \textbf{12}, (2014).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-9BGyO071}{}}%
+\CSLLeftMargin{88. }%
+\CSLRightInline{Rosendorff, C., Beeri, M. S. \& Silverman, J. M. \href{https://doi.org/10.1111/j.1076-7460.2007.06696.x}{Cardiovascular Risk Factors for Alzheimer\textquotesingle s Disease}. \emph{Amer J Geriatric Cardiol} \textbf{16}, 143--149 (2007).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-idlBgtFz}{}}%
+\CSLLeftMargin{89. }%
+\CSLRightInline{Ohashi, R., Mu, H., Wang, X., Yao, Q. \& Chen, C. \href{https://doi.org/10.1093/qjmed/hci136}{Reverse cholesterol transport and cholesterol efflux in atherosclerosis}. \emph{QJM: An International Journal of Medicine} \textbf{98}, 845--856 (2005).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-18I4ish9s}{}}%
+\CSLLeftMargin{90. }%
+\CSLRightInline{Loving, B. A. \& Bruce, K. D. \href{https://doi.org/10.3389/fphys.2020.00393}{Lipid and Lipoprotein Metabolism in Microglia}. \emph{Front. Physiol.} \textbf{11}, (2020).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-LyJmyoQr}{}}%
+\CSLLeftMargin{91. }%
+\CSLRightInline{Ferreira, M. A. \emph{et al.} \href{https://doi.org/10.1038/ng.3985}{Shared genetic origin of asthma, hay fever and eczema elucidates allergic disease biology}. \emph{Nat Genet} \textbf{49}, 1752--1757 (2017).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-veADXImD}{}}%
+\CSLLeftMargin{92. }%
+\CSLRightInline{Zhu, Z. \emph{et al.} \href{https://doi.org/10.1038/s41588-018-0121-0}{A genome-wide cross-trait analysis from UK Biobank highlights the shared genetic architecture of asthma and allergic diseases}. \emph{Nat Genet} \textbf{50}, 857--864 (2018).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-TPVeG4GP}{}}%
+\CSLLeftMargin{93. }%
+\CSLRightInline{Wilks, C. \emph{et al.} recount3: summaries and queries for large-scale RNA-seq expression and splicing. (2021) doi:\href{https://doi.org/10.1101/2021.05.21.445138}{10.1101/2021.05.21.445138}.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-X4fhSCkz}{}}%
+\CSLLeftMargin{94. }%
+\CSLRightInline{Oh, S. \emph{et al.} \href{https://doi.org/10.1038/s41467-022-31411-3}{GenomicSuperSignature facilitates interpretation of RNA-seq experiments through robust, efficient comparison to public databases}. \emph{Nat Commun} \textbf{13}, (2022).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-l6ogswV3}{}}%
+\CSLLeftMargin{95. }%
+\CSLRightInline{Wainberg, M. \emph{et al.} \href{https://doi.org/10.1038/s41588-019-0385-z}{Opportunities and challenges for transcriptome-wide association studies}. \emph{Nat Genet} \textbf{51}, 592--599 (2019).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-ndd3tW4g}{}}%
+\CSLLeftMargin{96. }%
+\CSLRightInline{Hukku, A. \emph{et al.} \href{https://doi.org/10.1016/j.ajhg.2020.11.012}{Probabilistic colocalization of genetic variants from complex and molecular traits: promise and limitations}. \emph{The American Journal of Human Genetics} \textbf{108}, 25--35 (2021).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-AxVJwanp}{}}%
+\CSLLeftMargin{97. }%
+\CSLRightInline{Gusev, A. \emph{et al.} \href{https://doi.org/10.1038/s41588-018-0092-1}{Transcriptome-wide association study of schizophrenia and chromatin activity yields mechanistic disease insights}. \emph{Nat Genet} \textbf{50}, 538--548 (2018).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-fnDaLjFy}{}}%
+\CSLLeftMargin{98. }%
+\CSLRightInline{Hawkins, N. T., Maldaver, M., Yannakopoulos, A., Guare, L. A. \& Krishnan, A. Systematic tissue annotations of --omics samples by modeling unstructured metadata. (2021) doi:\href{https://doi.org/10.1101/2021.05.10.443525}{10.1101/2021.05.10.443525}.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-vLyTudUB}{}}%
+\CSLLeftMargin{99. }%
+\CSLRightInline{Barbeira, A. N. \emph{et al.} \href{https://doi.org/10.1038/s41467-018-03621-1}{Exploring the phenotypic consequences of tissue specific gene expression variation inferred from GWAS summary statistics}. \emph{Nat Commun} \textbf{9}, (2018).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-1CbVoEpNJ}{}}%
+\CSLLeftMargin{100. }%
+\CSLRightInline{Liberzon, A. \emph{et al.} \href{https://doi.org/10.1016/j.cels.2015.12.004}{The Molecular Signatures Database Hallmark Gene Set Collection}. \emph{Cell Systems} \textbf{1}, 417--425 (2015).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-19XiXgYmd}{}}%
+\CSLLeftMargin{101. }%
+\CSLRightInline{de Leeuw, C. A., Mooij, J. M., Heskes, T. \& Posthuma, D. \href{https://doi.org/10.1371/journal.pcbi.1004219}{MAGMA: Generalized Gene-Set Analysis of GWAS Data}. \emph{PLoS Comput Biol} \textbf{11}, e1004219 (2015).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-1FsruosUW}{}}%
+\CSLLeftMargin{102. }%
+\CSLRightInline{Schriml, L. M. \emph{et al.} \href{https://doi.org/10.1093/nar/gky1032}{Human Disease Ontology 2018 update: classification, content and workflow expansion}. \emph{Nucleic Acids Research} \textbf{47}, D955--D962 (2018).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-9okjVu3s}{}}%
+\CSLLeftMargin{103. }%
+\CSLRightInline{Malone, J. \emph{et al.} \href{https://doi.org/10.1093/bioinformatics/btq099}{Modeling sample variables with an Experimental Factor Ontology}. \emph{Bioinformatics} \textbf{26}, 1112--1118 (2010).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-16RTdMKxI}{}}%
+\CSLLeftMargin{104. }%
+\CSLRightInline{\emph{\href{https://github.com/EBISPOT/EFO-UKB-mappings}{Mapping UK Biobank to the Experimental Factor Ontology (EFO)}}. (EBISPOT, 2022).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-e4AuoW8N}{}}%
+\CSLLeftMargin{105. }%
+\CSLRightInline{Hubert, L. \& Arabie, P. \href{https://doi.org/10.1007/bf01908075}{Comparing partitions}. \emph{Journal of Classification} \textbf{2}, 193--218 (1985).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-8js8Q3pF}{}}%
+\CSLLeftMargin{106. }%
+\CSLRightInline{Pividori, M., Stegmayer, G. \& Milone, D. H. \href{https://doi.org/10.1016/j.ins.2016.04.027}{Diversity control for improving the analysis of consensus clustering}. \emph{Information Sciences} \textbf{361-362}, 120--134 (2016).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-rcTMvL18}{}}%
+\CSLLeftMargin{107. }%
+\CSLRightInline{Iam-On, N., Boongoen, T., Garrett, S. \& Price, C. \href{https://doi.org/10.1109/tpami.2011.84}{A Link-Based Approach to the Cluster Ensemble Problem}. \emph{IEEE Trans. Pattern Anal. Mach. Intell.} \textbf{33}, 2396--2409 (2011).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-t5p3UpxZ}{}}%
+\CSLLeftMargin{108. }%
+\CSLRightInline{Yu, Z. \emph{et al.} \href{https://doi.org/10.1016/j.patcog.2014.04.005}{Hybrid clustering solution selection strategy}. \emph{Pattern Recognition} \textbf{47}, 3362--3375 (2014).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-157h5hA34}{}}%
+\CSLLeftMargin{109. }%
+\CSLRightInline{McInnes, L., Healy, J. \& Melville, J. \emph{UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction}. \emph{arXiv} \url{https://arxiv.org/abs/1802.03426} (2020).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-MxGpAiPu}{}}%
+\CSLLeftMargin{110. }%
+\CSLRightInline{Arthur, D. \& Vassilvitskii, S. \href{http://ilpubs.stanford.edu:8090/778/1/2006-13.pdf}{k-means++: the advantages of careful seeding}. \emph{Proceedings of the Eighteenth Annual ACM-SIAM Symposium on Discrete Algorithms} 1027--1035 (2007).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-x3CT24TB}{}}%
+\CSLLeftMargin{111. }%
+\CSLRightInline{Ng, A., Jordan, M. \& Weiss, Y. \href{https://ai.stanford.edu/~ang/papers/nips01-spectral.pdf}{On Spectral Clustering: Analysis and an algorithm}. \emph{Advances in Neural Information Processing Systems} 849--856 (2001).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-JrL3iQea}{}}%
+\CSLLeftMargin{112. }%
+\CSLRightInline{Ester, M., Kriegel, H.-P., Sander, J. \& Xu, X. \href{https://www.aaai.org/Papers/KDD/1996/KDD96-037.pdf}{A Density-Based Algorithm for Discovering Clusters in Large Spatial Databases with Noise}. \emph{Proceedings of the Second International Conference on Knowledge Discovery and Data Mining} 226--231 (1996).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-FB7XPWl6}{}}%
+\CSLLeftMargin{113. }%
+\CSLRightInline{Rahmah, N. \& Sitanggang, I. S. \href{https://doi.org/10.1088/1755-1315/31/1/012012}{Determination of Optimal Epsilon (Eps) Value on DBSCAN Algorithm to Clustering Data on Peatland Hotspots in Sumatra}. \emph{IOP Conf. Ser.: Earth Environ. Sci.} \textbf{31}, 012012 (2016).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-S7LBsfcF}{}}%
+\CSLLeftMargin{114. }%
+\CSLRightInline{Ronan, T., Qi, Z. \& Naegle, K. M. \href{https://doi.org/10.1126/scisignal.aad1932}{Avoiding common pitfalls when clustering biological data.} \emph{Sci Signal} \textbf{9}, re6 (2016).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-vNXTnmxp}{}}%
+\CSLLeftMargin{115. }%
+\CSLRightInline{Doench, J. G. \emph{et al.} \href{https://doi.org/10.1038/nbt.3437}{Optimized sgRNA design to maximize activity and minimize off-target effects of CRISPR-Cas9.} \emph{Nat Biotechnol} \textbf{34}, 184--191 (2016).}
+
+\leavevmode\vadjust pre{\hypertarget{ref-cygmsEBt}{}}%
+\CSLLeftMargin{116. }%
+\CSLRightInline{Pividori, M. \& Greene, C. \emph{greenelab/phenoplier: a computational framework to integrate genetic studies with gene co-expression patterns}. (Zenodo, 2023). doi:\href{https://doi.org/10.5281/zenodo.8071382}{10.5281/zenodo.8071382}.}
+
+\end{CSLReferences}
+
+\hypertarget{acknowledgements}{%
+\subsection{Acknowledgements}\label{acknowledgements}}
+
+This study was funded by:
+the Gordon and Betty Moore Foundation (GBMF 4552 to C.S. Greene; GBMF 4560 to B.D. Sullivan),
+the National Human Genome Research Institute (R01 HG010067 to C.S. Greene, S.F.A. Grant and B.D. Sullivan; K99 HG011898 and R00 HG011898 to M. Pividori; U01 HG011181 to W. Wei),
+the National Cancer Institute (R01 CA237170 to C.S. Greene),
+the Eunice Kennedy Shriver National Institute of Child Health and Human Development (R01 HD109765 to C.S. Greene),
+the National Institute of Aging (R01AG069900 to W. Wei),
+the National Institute of General Medical Sciences (R01 GM139891 to W. Wei);
+the National Heart, Lung, and Blood Institute (R01 HL163854 to Q. Feng);
+the National Institute of Diabetes and Digestive and Kidney Diseases (DK126194 to B.F. Voight);
+the Daniel B. Burke Endowed Chair for Diabetes Research to S.F.A. Grant;
+the Robert L. McNeil Jr.~Endowed Fellowship in Translational Medicine and Therapeutics to C. Skarke.
+
+The Phase III of the eMERGE Network was initiated and funded by the NHGRI through the following grants:
+U01 HG8657 (Group Health Cooperative/University of Washington);
+U01 HG8685 (Brigham and Womens Hospital);
+U01 HG8672 (Vanderbilt University Medical Center);
+U01 HG8666 (Cincinnati Childrens Hospital Medical Center);
+U01 HG6379 (Mayo Clinic);
+U01 HG8679 (Geisinger Clinic);
+U01 HG8680 (Columbia University Health Sciences);
+U01 HG8684 (Childrens Hospital of Philadelphia);
+U01 HG8673 (Northwestern University);
+U01 HG8701 (Vanderbilt University Medical Center serving as the Coordinating Center);
+U01 HG8676 (Partners Healthcare/Broad Institute);
+and U01 HG8664 (Baylor College of Medicine).
+
+The Penn Medicine BioBank (PMBB) is funded by the Perelman School of Medicine at the University of Pennsylvania, a gift from the Smilow family, and the National Center for Advancing Translational Sciences of the National Institutes of Health under CTSA Award Number UL1TR001878.
+We thank D. Birtwell, H. Williams, P. Baumann and M. Risman for informatics support regarding the PMBB.
+We thank the staff of the Regeneron Genetics Center for whole-exome sequencing of DNA from PMBB participants.
+
+Figure \ref{fig:entire_process}a was created with BioRender.com.
+
+\hypertarget{author-contributions-statement}{%
+\subsection{Author contributions statement}\label{author-contributions-statement}}
+
+M.P. and C.S.G. conceived and designed the study.
+M.P. designed the computational methods, performed the experiments, analyzed the data, interpreted the results, and drafted the manuscript.
+C.S.G. supervised the entire project and provided critical guidance throughout the study.
+S.L., C.S., and M.E.J. performed the CRISPR screen with the supervision of S.F.A.G.
+B.L. provided the TWAS results for eMERGE for replication, and this analysis was supervised by M.D.R.
+W.W., Q.F., B.N., K.K., I.K., Y.L., and M.D.R., as part of the eMERGE consortium, provided feedback regarding the analyses of this data.
+B.S., B.V., and C.S. provided critical feedback.
+
+\hypertarget{competing-interests-statement}{%
+\subsection{Competing interests statement}\label{competing-interests-statement}}
+
+The authors declare no competing interests.
+
+\clearpage
+
+\hypertarget{tables}{%
+\subsection{Tables}\label{tables}}
+
+\begin{table}[h]
+\caption{\textbf{LVs among the top 20 contributors to the prediction of niacin for five cardiovascular diseases.} ``Heart attack, angina, stroke or hypertension'' refers to the UK Biobank data-field 6150. GWAS sample size: Atherosclerosis (361,194 in total and 566 cases), Chronic ischaemic heart disease (361,194 in total and 12,769 cases), Heart attack, angina, stroke or hypertension (360,420 in total and 253,565 cases), Ischaemic heart disease/wide definition (361,194 in total and 20,857 cases), High cholesterol/self-reported (361,141 in total and 43,957 cases). \label{tbl:niacin:cardio:top_lvs}}\label{tbl:niacin:cardio:top_lvs}%\tabularnewline
+\centering
+\begin{tabular}{lll}
+\toprule
+LV & Cell type & Disease \\
+\midrule
+LV116 & Immune cells, skin & Atherosclerosis (ICD10 I70) \\
+& & Chronic ischaemic heart disease (ICD10 I25) \\
+& & Heart attack, angina, stroke or hypertension \\
+& & Ischaemic heart disease (wide definition) \\
+LV931 & Immune cells & Atherosclerosis (ICD10 I70) \\
+& & Heart attack, angina, stroke or hypertension \\
+& & Ischaemic heart disease (wide definition) \\
+LV246 & Adipose tissue, liver & Atherosclerosis (ICD10 I70) \\
+& & High cholesterol (self-reported) \\
+& & Ischaemic heart disease (wide definition) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\hypertarget{figurecaptions}{%
+\subsection{Figure Legends/Captions}\label{figurecaptions}}
+
+\begin{figure}
+\hypertarget{fig:entire_process}{%
+\centering
+% \includegraphics[width=1\textwidth,height=\textheight]{images/entire_process/entire_process.pdf}
+\caption{\textbf{Schematic of the PhenoPLIER framework.}
+\textbf{a)} High-level schematic of PhenoPLIER (a gene module-based method) in the context of TWAS (single-gene) and GWAS (single-variant).
+In GWAS, we identify variants associated with traits.
+In TWAS, first, we identify variants that are associated with gene expression levels (eQTLs); then, prediction models based on eQTLs are used to impute gene expression, which is used to compute gene-trait associations.
+Resources such as LINCS L1000 provide information about how a drug perturbs gene expression; at the bottom-right corner, we show how a drug downregulates two genes (A and C).
+In PhenoPLIER, these data types are integrated using groups of genes co-expressed across one or more conditions (such as cell types) that we call gene modules or latent variables/LVs. Created with BioRender.com.
+\textbf{b)} The integration process in PhenoPLIER uses low-dimensional representations (matrices \(\mathbf{Z}\) and \(\mathbf{B}\)) learned from large gene expression datasets (top).
+We used gene-drug information \(\mathbf{L}\) from LINCS L1000 and gene-trait associations \(\mathbf{M}\) from TWAS: PhenomeXcan was used as the discovery cohort, and eMERGE as replication (middle).
+PhenoPLIER provides three computational components (bottom):
+1) an LV-based regression model that associates an LV \(j\) (\(\mathbf{Z}_j\)) with a trait \(i\) (\(\mathbf{M}_i\)),
+2) a clustering framework that learns groups of traits from TWAS associations projected into the LV space (\(\hat{\mathbf{M}}\)),
+and 3) an LV-based drug repurposing approach that uses the projection of TWAS (\(\hat{\mathbf{M}}\)) and LINCS L1000 (\(\hat{\mathbf{L}}\)) into the LV space.
+\textbf{c)} Genes that are part of LV603, termed as a neutrophil signature\textsuperscript{\protect\hyperlink{ref-14rnBunuZ}{44}}, were expressed in relevant cell types (top), with 53 independent samples expressed in Neutrophils, 59 in Granulocytes, and 20 in Whole blood, 56 in PBMC, 8 in mDCs, 29 in Monocytes, and 5 in Epithelial cells (the boxplot shows the 25th, 50th and 75th percentiles while the whiskers extend to the minimum/maximum values).
+LV603 was associated in PhenoPLIER with neutrophil counts and other white blood cells (bottom, showing the top 10 traits for LV603 after projecting gene-trait associations in PhenomeXcan).
+eQTLs: expression quantitative trait loci;
+MVN: multivariate normal distribution;
+PBMC: peripheral blood mononuclear cells;
+mDCs: myeloid dendritic cells.}\label{fig:entire_process}
+}
+\end{figure}
+
+\begin{figure}
+\hypertarget{fig:lv246}{%
+\centering
+% \includesvg[width=1\textwidth,height=\textheight]{images/lvs_analysis/lv246/lv246.svg}
+\caption{\textbf{Tissues and traits associated with a gene module related to lipid metabolism (LV246).}
+\textbf{a)} Top cell types/tissues in which LV246's genes are expressed.
+Values in the \(y\)-axis come from matrix \(\mathbf{B}\) in the MultiPLIER models (Figure \ref{fig:entire_process}b, see Methods).
+In the \(x\)-axis, cell types/tissues are sorted by the maximum sample value.
+\textbf{b)} Gene-trait associations (unadjusted \(p\)-values from S-MultiXcan\textsuperscript{\protect\hyperlink{ref-1FFzCXo1s}{24}}; threshold at -log(\(p\))=10) and colocalization probability (fastENLOC) for the top traits in LV246.
+The top 40 genes in LV246 are shown, sorted by their LV weight (matrix \(\mathbf{Z}\)), from largest (the top gene \emph{SCD}) to smallest (\emph{FAR2});
+\emph{DGAT2} and \emph{ACACA}, in boldface, are two of the six high-confidence genes in the lipids-increasing gene set from the CRISPR screen.
+Cardiovascular-related traits are in boldface.
+SGBS: Simpson Golabi Behmel Syndrome;
+CH2DB: CH2 groups to double bonds ratio;
+HDL: high-density lipoprotein;
+RCP: locus regional colocalization probability.
+}\label{fig:lv246}
+}
+\end{figure}
+
+\begin{figure}
+\hypertarget{fig:drug_disease:roc_pr}{%
+\centering
+% \includesvg[width=0.8\textwidth,height=\textheight]{images/drug_disease_prediction/roc_pr_curves.svg}
+\caption{\textbf{Drug-disease prediction performance for gene-based and LV-based approaches.}
+The receiver operating characteristic (ROC) (left) and the precision-recall curves (right) for a gene-based and LV-based approach.
+``Random'' refers to the average precision of a hundred classifiers with randomly permuted scores, where the error band represents the 95\% confidence interval.
+AUC: area under the curve; AP: average precision.}\label{fig:drug_disease:roc_pr}
+}
+\end{figure}
+
+\begin{figure}
+\hypertarget{fig:lv116:cell_types}{%
+\centering
+% \includesvg[width=1\textwidth,height=\textheight]{images/lvs_analysis/lv116/lv116-cell_types.svg}
+\caption{\textbf{Top cell types/tissues where LV116's genes are expressed.}
+Values in the \(y\)-axis come from matrix \(\mathbf{B}\) in the MultiPLIER models (Figure \ref{fig:entire_process}b).
+In the \(x\)-axis, cell types/tissues are sorted by the maximum sample value.
+The figure shows a clear immune response with cell types under different stimuli.
+MS: multiple sclerosis;
+HSV: treated with herpes simplex virus;
+WNV: infected with West Nile virus;
+IFNa: treated with interferon-alpha;
+HMDM: human peripheral blood mononuclear cell-derived macrophages;
+Salm: infected with \emph{Salmonella typhimurium};
+Yers: infected with \emph{Yersinia pseudotuberculosis};
+ISM: Interferon Signature Metric;
+SLE: Systemic lupus erythematosus.}\label{fig:lv116:cell_types}
+}
+\end{figure}
+
+\begin{figure}
+\hypertarget{fig:clustering:design}{%
+\centering
+% \includesvg[width=1\textwidth,height=\textheight]{images/clustering/clustering_design.svg}
+\caption{\textbf{Cluster analysis on traits using the latent gene expression representation.}
+\textbf{a)} The projection of TWAS results on 3,752 traits into the latent gene expression representation is the input data to the clustering process.
+A linear (PCA) and non-linear (UMAP) dimensionality reduction techniques were applied to the input data, and five different clustering algorithms processed all data versions.
+These algorithms derive partitions from the data using different parameters (such as the number of clusters), leading to an ensemble of 4,428 partitions.
+Then, a distance matrix is derived by counting how many times a pair of traits was grouped in different clusters across the ensemble.
+Finally, a consensus function is applied to the distance matrix to generate consolidated partitions with different numbers of clusters (from 2 to \(\sqrt{n}\approx\) 60).
+These final solutions were represented in the clustering tree (Figure \ref{fig:clustering:tree}).
+\textbf{b)} The clusters found by the consensus function were used as labels to train a decision tree classifier on the original input data, which detects the LVs that better differentiate groups of traits.}\label{fig:clustering:design}
+}
+\end{figure}
+
+\begin{figure}
+\hypertarget{fig:clustering:tree}{%
+\centering
+% \includesvg[width=1\textwidth,height=\textheight]{images/clustering/clustering_tree.svg}
+\caption{\textbf{Clustering tree using multiple resolutions for clusters of traits.}
+Each row represents a partition/grouping of the traits, and each circle is a cluster from that partition.
+The number of clusters goes from 5 to 29.
+Arrows indicate how traits in one cluster move across clusters from different partitions.
+Most of the clusters are preserved across different resolutions, showing highly stable solutions even with independent runs of the clustering algorithm.
+RDW: red cell (erythrocyte) distribution width;
+BMI: body mass index;
+WC: waist circumference;
+HC: hip circumference;
+RA: rheumatoid arthritis;
+SLE: systemic lupus erythematosus;
+HTN: Hypertension;
+IBD: inflammatory bowel disease;
+SCZ: Schizophrenia;
+CAD: Coronary artery disease;
+AD: Alzheimer's disease;
+The full lists of traits in each cluster in the last five partitions of the tree (from \(k=16\) to \(k=29\)) are in Supplementary Data 3-7.}\label{fig:clustering:tree}
+}
+\end{figure}
+
+\begin{figure}
+\hypertarget{fig:clustering:heatmap}{%
+\centering
+% \includesvg[width=1\textwidth,height=\textheight]{images/clustering/global_clustermap-plain.svg}
+\caption{\textbf{Cluster-specific and general transcriptional processes associated with different diseases.}
+The plot shows a submatrix of \(\hat{\mathbf{M}}\) for the main trait clusters at \(k\)=29, considering only LVs (rows) that are well-aligned with at least one pathway.}\label{fig:clustering:heatmap}
+}
+\end{figure}
+
+\clearpage
+
+\hypertarget{emergeconsortium}{%
+\subsection{eMERGE Consortium}\label{emergeconsortium}}
+
+Wei-Qi Wei\textsuperscript{5},
+Qiping Feng\textsuperscript{5},
+Bahram Namjou\textsuperscript{6},
+Krzysztof Kiryluk\textsuperscript{7},
+Iftikhar Kullo\textsuperscript{8},
+Yuan Luo\textsuperscript{9} \&
+Marylyn D. Ritchie\textsuperscript{1}
+
+\clearpage
+
+\end{document}

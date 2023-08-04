@@ -62,7 +62,7 @@ confluency
 covariances
 covariate
 covariates
-CRISPR
+crispr
 Crohns
 Ctrl
 CTSA
@@ -120,9 +120,9 @@ func
 GBMF
 gDNA
 Geisinger
-genomic
+Genomic
 GenomicSuperSignature
-Genotype
+genotype
 GFP
 Gibco
 GLS
@@ -155,7 +155,7 @@ Hochberg
 HSV
 HTN
 HWE
-Hypercholesterolemia
+hypercholesterolemia
 hyperlipidemia
 hypoxia
 IBD
@@ -164,7 +164,7 @@ ICD
 IDT
 IFNa
 Iftikhar
-Illumina
+illumina
 INSIG
 INTEGRIN
 interpretability
@@ -194,7 +194,7 @@ lipitor
 lipoid
 lipolysis
 lipoprotein
-lipoproteins
+LIPOPROTEINS
 loadings
 LPL
 LPSstimulated
@@ -219,7 +219,7 @@ Millipore
 miltondp
 minPts
 molecularly
-monocytes
+Monocytes
 mononuclear
 MSigDB
 MultiXcan
@@ -232,7 +232,7 @@ Nephrology
 neurodegenerative
 neurodevelopmental
 neuropsychiatric
-Neutrophil
+neutrophil
 neutrophils
 NFAT
 NHGRI
@@ -251,10 +251,10 @@ PCA
 PCR
 PCYT
 perturbagens
-Phecode
+phecode
 phecodes
 phenome
-phenomexcan
+PhenomeXcan
 PhenoPLIER
 phenotypes
 PhiX
@@ -263,13 +263,13 @@ pipetting
 Pividori
 plasmids
 pleiotropy
-plier
+PLIER
 PMBB
 polybrene
 polygenic
 Polymerase
 polymyalgia
-PrediXcan
+predixcan
 preprocessed
 preprocessing
 probit
@@ -361,7 +361,7 @@ thrombophlebitis
 titer
 titrated
 transcriptional
-transcriptome
+Transcriptome
 transcriptomes
 transcriptomic
 transduced
@@ -374,7 +374,7 @@ typhimurium
 UBE
 ug
 Ulcerative
-UMAP
+umap
 unadjusted
 univariate
 Vagelos

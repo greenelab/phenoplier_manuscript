@@ -8,7 +8,7 @@ keywords:
 - drug repurposing
 - clustering of complex traits
 lang: en-US
-date-meta: '2023-07-01'
+date-meta: '2023-08-04'
 author-meta:
 - Milton Pividori
 - Sumei Lu
@@ -38,11 +38,11 @@ header-includes: |
   <meta name="citation_title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="og:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
-  <meta name="dc.date" content="2023-07-01" />
-  <meta name="citation_publication_date" content="2023-07-01" />
-  <meta property="article:published_time" content="2023-07-01" />
-  <meta name="dc.modified" content="2023-07-01T18:01:38+00:00" />
-  <meta property="article:modified_time" content="2023-07-01T18:01:38+00:00" />
+  <meta name="dc.date" content="2023-08-04" />
+  <meta name="citation_publication_date" content="2023-08-04" />
+  <meta property="article:published_time" content="2023-08-04" />
+  <meta name="dc.modified" content="2023-08-04T18:12:17+00:00" />
+  <meta property="article:modified_time" content="2023-08-04T18:12:17+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -54,33 +54,33 @@ header-includes: |
   <meta name="citation_author_orcid" content="0000-0002-3035-4403" />
   <meta name="twitter:creator" content="@miltondp" />
   <meta name="citation_author" content="Sumei Lu" />
-  <meta name="citation_author_institution" content="Center for Spatial and Functional Genomics, Children&#39;s Hospital of Philadelphia, Philadelphia, PA, 19104, USA" />
+  <meta name="citation_author_institution" content="Center for Spatial and Functional Genomics, Children&#39;s Hospital of Philadelphia, Philadelphia, PA 19104, USA" />
   <meta name="citation_author" content="Binglan Li" />
-  <meta name="citation_author_institution" content="Department of Biomedical Data Science, Stanford University, Stanford, CA, USA" />
+  <meta name="citation_author_institution" content="Department of Biomedical Data Science, Stanford University, Stanford, CA 94305, USA." />
   <meta name="citation_author_orcid" content="0000-0002-0103-6107" />
   <meta name="citation_author" content="Chun Su" />
-  <meta name="citation_author_institution" content="Center for Spatial and Functional Genomics, Children&#39;s Hospital of Philadelphia, Philadelphia, PA, 19104, USA" />
+  <meta name="citation_author_institution" content="Center for Spatial and Functional Genomics, Children&#39;s Hospital of Philadelphia, Philadelphia, PA 19104, USA" />
   <meta name="citation_author_orcid" content="0000-0001-6388-8666" />
   <meta name="citation_author" content="Matthew E. Johnson" />
-  <meta name="citation_author_institution" content="Center for Spatial and Functional Genomics, Children&#39;s Hospital of Philadelphia, Philadelphia, PA, 19104, USA" />
+  <meta name="citation_author_institution" content="Center for Spatial and Functional Genomics, Children&#39;s Hospital of Philadelphia, Philadelphia, PA 19104, USA" />
   <meta name="citation_author" content="Wei-Qi Wei" />
-  <meta name="citation_author_institution" content="Vanderbilt University Medical Center" />
+  <meta name="citation_author_institution" content="Vanderbilt University Medical Center, Nashville, TN 37232, USA" />
   <meta name="citation_author" content="Qiping Feng" />
-  <meta name="citation_author_institution" content="Vanderbilt University Medical Center" />
+  <meta name="citation_author_institution" content="Vanderbilt University Medical Center, Nashville, TN 37232, USA" />
   <meta name="citation_author_orcid" content="0000-0002-6213-793X" />
   <meta name="citation_author" content="Bahram Namjou" />
-  <meta name="citation_author_institution" content="Cincinnati Children&#39;s Hospital Medical Center" />
+  <meta name="citation_author_institution" content="Cincinnati Children&#39;s Hospital Medical Center, Cincinnati, OH 45229, USA" />
   <meta name="citation_author" content="Krzysztof Kiryluk" />
-  <meta name="citation_author_institution" content="Department of Medicine, Division of Nephrology, Vagelos College of Physicians &amp; Surgeons, Columbia University, New York, New York" />
+  <meta name="citation_author_institution" content="Department of Medicine, Division of Nephrology, Vagelos College of Physicians \&amp; Surgeons, Columbia University, New York, NY 10032, USA" />
   <meta name="citation_author_orcid" content="0000-0002-5047-6715" />
   <meta name="twitter:creator" content="@kirylukk" />
   <meta name="citation_author" content="Iftikhar Kullo" />
-  <meta name="citation_author_institution" content="Mayo Clinic" />
+  <meta name="citation_author_institution" content="Mayo Clinic, Rochester, MN 55905, USA" />
   <meta name="citation_author" content="Yuan Luo" />
-  <meta name="citation_author_institution" content="Northwestern University" />
+  <meta name="citation_author_institution" content="Northwestern University, Chicago, IL 60611, USA" />
   <meta name="citation_author_orcid" content="0000-0003-0195-7456" />
   <meta name="citation_author" content="Blair D. Sullivan" />
-  <meta name="citation_author_institution" content="Kahlert School of Computing, University of Utah, Salt Lake City, UT, USA" />
+  <meta name="citation_author_institution" content="Kahlert School of Computing, University of Utah, Salt Lake City, UT 84112, USA" />
   <meta name="citation_author_orcid" content="0000-0001-7720-6208" />
   <meta name="twitter:creator" content="@blairdsullivan" />
   <meta name="citation_author" content="Benjamin F. Voight" />
@@ -98,7 +98,7 @@ header-includes: |
   <meta name="citation_author_orcid" content="0000-0002-1208-1720" />
   <meta name="twitter:creator" content="@MarylynRitchie" />
   <meta name="citation_author" content="Struan F.A. Grant" />
-  <meta name="citation_author_institution" content="Center for Spatial and Functional Genomics, Children&#39;s Hospital of Philadelphia, Philadelphia, PA, 19104, USA" />
+  <meta name="citation_author_institution" content="Center for Spatial and Functional Genomics, Children&#39;s Hospital of Philadelphia, Philadelphia, PA 19104, USA" />
   <meta name="citation_author_institution" content="Division of Endocrinology and Diabetes, Children&#39;s Hospital of Philadelphia, Philadelphia, PA, 19104, USA" />
   <meta name="citation_author_institution" content="Division of Human Genetics, Children&#39;s Hospital of Philadelphia, Philadelphia, PA, 19104, USA" />
   <meta name="citation_author_institution" content="Department of Pediatrics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA" />
@@ -116,9 +116,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/66d20bd8aad49749c3fe842e3d1edbec7bb1b6ac/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/66d20bd8aad49749c3fe842e3d1edbec7bb1b6ac/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/66d20bd8aad49749c3fe842e3d1edbec7bb1b6ac/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/01398b0990ea0f8bbdbb98e79c0585e2d905a51f/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/01398b0990ea0f8bbdbb98e79c0585e2d905a51f/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/01398b0990ea0f8bbdbb98e79c0585e2d905a51f/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -140,10 +140,10 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 <!-- 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/66d20bd8aad49749c3fe842e3d1edbec7bb1b6ac/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/01398b0990ea0f8bbdbb98e79c0585e2d905a51f/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@66d20bd](https://github.com/greenelab/phenoplier_manuscript/tree/66d20bd8aad49749c3fe842e3d1edbec7bb1b6ac)
-on July 1, 2023.
+from [greenelab/phenoplier_manuscript@01398b0](https://github.com/greenelab/phenoplier_manuscript/tree/01398b0990ea0f8bbdbb98e79c0585e2d905a51f)
+on August 4, 2023.
 </em></small> -->
 
 
@@ -171,7 +171,7 @@ on July 1, 2023.
 + **Sumei Lu**
   <br>
   <small>
-     Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
+     Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA 19104, USA
   </small>
 
 + **Binglan Li**
@@ -180,7 +180,7 @@ on July 1, 2023.
     [0000-0002-0103-6107](https://orcid.org/0000-0002-0103-6107)
     <br>
   <small>
-     Department of Biomedical Data Science, Stanford University, Stanford, CA, USA
+     Department of Biomedical Data Science, Stanford University, Stanford, CA 94305, USA.
   </small>
 
 + **Chun Su**
@@ -191,19 +191,19 @@ on July 1, 2023.
     [sckinta](https://github.com/sckinta)
     <br>
   <small>
-     Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
+     Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA 19104, USA
   </small>
 
 + **Matthew E. Johnson**
   <br>
   <small>
-     Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA
+     Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA 19104, USA
   </small>
 
 + **Wei-Qi Wei**
   <br>
   <small>
-     Vanderbilt University Medical Center
+     Vanderbilt University Medical Center, Nashville, TN 37232, USA
   </small>
 
 + **Qiping Feng**
@@ -212,13 +212,13 @@ on July 1, 2023.
     [0000-0002-6213-793X](https://orcid.org/0000-0002-6213-793X)
     <br>
   <small>
-     Vanderbilt University Medical Center
+     Vanderbilt University Medical Center, Nashville, TN 37232, USA
   </small>
 
 + **Bahram Namjou**
   <br>
   <small>
-     Cincinnati Children's Hospital Medical Center
+     Cincinnati Children's Hospital Medical Center, Cincinnati, OH 45229, USA
   </small>
 
 + **Krzysztof Kiryluk**
@@ -229,13 +229,13 @@ on July 1, 2023.
     [kirylukk](https://twitter.com/kirylukk)
     <br>
   <small>
-     Department of Medicine, Division of Nephrology, Vagelos College of Physicians & Surgeons, Columbia University, New York, New York
+     Department of Medicine, Division of Nephrology, Vagelos College of Physicians \& Surgeons, Columbia University, New York, NY 10032, USA
   </small>
 
 + **Iftikhar Kullo**
   <br>
   <small>
-     Mayo Clinic
+     Mayo Clinic, Rochester, MN 55905, USA
   </small>
 
 + **Yuan Luo**
@@ -244,7 +244,7 @@ on July 1, 2023.
     [0000-0003-0195-7456](https://orcid.org/0000-0003-0195-7456)
     <br>
   <small>
-     Northwestern University
+     Northwestern University, Chicago, IL 60611, USA
   </small>
 
 + **Blair D. Sullivan**
@@ -257,7 +257,7 @@ on July 1, 2023.
     [blairdsullivan](https://twitter.com/blairdsullivan)
     <br>
   <small>
-     Kahlert School of Computing, University of Utah, Salt Lake City, UT, USA
+     Kahlert School of Computing, University of Utah, Salt Lake City, UT 84112, USA
   </small>
 
 + **Benjamin F. Voight**
@@ -303,7 +303,7 @@ on July 1, 2023.
     [STRUANGRANT](https://twitter.com/STRUANGRANT)
     <br>
   <small>
-     Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA; Division of Endocrinology and Diabetes, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA; Division of Human Genetics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA; Department of Pediatrics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA; Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA
+     Center for Spatial and Functional Genomics, Children's Hospital of Philadelphia, Philadelphia, PA 19104, USA; Division of Endocrinology and Diabetes, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA; Division of Human Genetics, Children's Hospital of Philadelphia, Philadelphia, PA, 19104, USA; Department of Pediatrics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA; Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, 19104, USA
   </small>
 
 + **Casey S. Greene**
@@ -408,7 +408,7 @@ Air pollution linked to neurodegeneration markers
 In GWAS, we identify variants associated with traits.
 In TWAS, first, we identify variants that are associated with gene expression levels (eQTLs); then, prediction models based on eQTLs are used to impute gene expression, which is used to compute gene-trait associations.
 Resources such as LINCS L1000 provide information about how a drug perturbs gene expression; at the bottom-right corner, we show how a drug downregulates two genes (A and C).
-In PhenoPLIER, these data types are integrated using groups of genes co-expressed across one or more conditions (such as cell types) that we call gene modules or latent variables/LVs.
+In PhenoPLIER, these data types are integrated using groups of genes co-expressed across one or more conditions (such as cell types) that we call gene modules or latent variables/LVs. Created with BioRender.com.
 **b)** The integration process in PhenoPLIER uses low-dimensional representations (matrices $\mathbf{Z}$ and $\mathbf{B}$) learned from large gene expression datasets (top).
 We used gene-drug information $\mathbf{L}$ from LINCS L1000 and gene-trait associations $\mathbf{M}$ from TWAS: PhenomeXcan was used as the discovery cohort, and eMERGE as replication (middle).
 PhenoPLIER provides three computational components (bottom):
@@ -475,7 +475,7 @@ For this, the first step was to obtain a set of genes strongly associated with a
 Therefore, we performed a fluorescence-based CRISPR-Cas9 in the HepG2 cell line and identified 462 genes associated with lipid regulation ([Methods](#sec:methods:crispr)).
 From these, we selected two high-confidence gene sets that either caused a decrease or increase of lipids:
 a lipids-decreasing gene-set with eight genes: *BLCAP*, *FBXW7*, *INSIG2*, *PCYT2*, *PTEN*, *SOX9*, *TCF7L2*, *UBE2J2*;
-and a lipids-increasing gene-set with six genes: *ACACA*, *DGAT2*, *HILPDA*, *MBTPS1*, *SCAP*, *SRPR* (Supplementary File 2).
+and a lipids-increasing gene-set with six genes: *ACACA*, *DGAT2*, *HILPDA*, *MBTPS1*, *SCAP*, *SRPR* (Supplementary Data 2).
 
 
 ![
@@ -600,7 +600,7 @@ These three LVs (LV246, LV116 and LV931) were among the top 20 modules contribut
 |       |                       | High cholesterol (self-reported)             |
 |       |                       | Ischaemic heart disease (wide definition)    |
 
-Table: LVs among the top 20 contributors to the prediction of niacin for five cardiovascular diseases. "Heart attack, angina, stroke or hypertension" refers to the UK Biobank data-field 6150. GWAS sample size: Atherosclerosis (361,194 in total and 566 cases), Chronic ischaemic heart disease (361,194 in total and 12,769 cases), Heart attack, angina, stroke or hypertension (360,420 in total and 253,565 cases), Ischaemic heart disease/wide definition (361,194 in total and 20,857 cases), High cholesterol/self-reported (361,141 in total and 43,957 cases).  {#tbl:niacin:cardio:top_lvs}
+Table: **LVs among the top 20 contributors to the prediction of niacin for five cardiovascular diseases.** "Heart attack, angina, stroke or hypertension" refers to the UK Biobank data-field 6150. GWAS sample size: Atherosclerosis (361,194 in total and 566 cases), Chronic ischaemic heart disease (361,194 in total and 12,769 cases), Heart attack, angina, stroke or hypertension (360,420 in total and 253,565 cases), Ischaemic heart disease/wide definition (361,194 in total and 20,857 cases), High cholesterol/self-reported (361,141 in total and 43,957 cases).  {#tbl:niacin:cardio:top_lvs}
 
 
 Beyond cardiovascular traits, there are other potentially interesting LVs that could extend our understanding of the mechanisms of niacin.
@@ -652,7 +652,7 @@ SCZ: Schizophrenia;
 CAD: Coronary artery disease;
 AD: Alzheimer's disease;
 <!--  -->
-The full lists of traits in each cluster in the last five partitions of the tree (from $k=16$ to $k=29$) are in Supplementary Files 3-7.
+The full lists of traits in each cluster in the last five partitions of the tree (from $k=16$ to $k=29$) are in Supplementary Data 3-7.
 ](images/clustering/clustering_tree.svg "Clustering tree on groups of traits"){#fig:clustering:tree width="100%"}
 
 
@@ -661,7 +661,7 @@ We found that phenotypes were grouped into five clear branches, defined by their
 1) heel bone-densitometry measurements,
 2) hematological assays on red blood cells,
 3) physical measures, including spirometry and body impedance, and anthropometric traits with fat-free and fat mass measures in separate sub-branches, and
-4) a "complex" branch including keratometry measurements, assays on white blood cells and platelets, skin and hair color traits, autoimmune disorders, and cardiovascular diseases (which also included other cardiovascular-related traits such as hand-grip strength [@pmid:25982160], and environmental/behavioral factors such as physical activity and diet) (see Supplementary Files 3-7 for all clustering results).
+4) a "complex" branch including keratometry measurements, assays on white blood cells and platelets, skin and hair color traits, autoimmune disorders, and cardiovascular diseases (which also included other cardiovascular-related traits such as hand-grip strength [@pmid:25982160], and environmental/behavioral factors such as physical activity and diet) (see Supplementary Data 3-7 for all clustering results).
 Within these branches, results were relatively stable, with the same traits often clustered together across different resolutions.
 Arrows between clusters show traits moving from one group to another, and this mainly happens between clusters within the "complex" branch (4) and between clusters from the "large" branch (0) to the "complex" branch.
 This behavior is expected since complex diseases are usually associated with shared genetic and environmental factors and are thus hard to categorize into a single cluster.
@@ -866,7 +866,7 @@ We used S-MultiXcan results for our LV-based regression model and our cluster an
 
 We used two large TWAS resources from different cohorts for discovery and replication, all obtained from European ancestries.
 PhenomeXcan [@doi:10.1126/sciadv.aba2083], our discovery cohort, provides results on 4,091 traits across different categories.
-Supplementary File 1 has all the details about the included GWAS, sample size and disease/trait categories.
+Supplementary Data 1 has all the details about the included GWAS, sample size and disease/trait categories.
 In PhenomeXcan, these publicly available GWAS summary statistics were used to compute
 1) gene-based associations with the PrediXcan family of methods (described before), and
 2) a posterior probability of colocalization between GWAS loci and *cis*-eQTL with fastENLOC [@doi:10.1126/sciadv.aba2083; @doi:10.1016/j.ajhg.2020.11.012].
@@ -1357,6 +1357,7 @@ The CRISPR screening process was performed once, but we conducted two selections
 
 ![
 **Primers for generating illumina libraries.**
+Sequences are provided in a readable format in Supplementary Data 8.
 ](images/crispr/table1.png "Primers for Generating Illumina Libraries"){#fig:sup:crispr:table1 tag="S11" width="80%"}
 
 
