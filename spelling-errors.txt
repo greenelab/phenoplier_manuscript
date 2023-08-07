@@ -155,7 +155,7 @@ Hochberg
 HSV
 HTN
 HWE
-hypercholesterolemia
+Hypercholesterolemia
 hyperlipidemia
 hypoxia
 IBD
@@ -185,7 +185,7 @@ LDL
 LDLR
 lentiCRIS
 lentiV
-lentiviral
+Lentiviral
 levothyroxine
 LINCS
 LipidSpot
@@ -232,7 +232,7 @@ Nephrology
 neurodegenerative
 neurodevelopmental
 neuropsychiatric
-neutrophil
+Neutrophil
 neutrophils
 NFAT
 NHGRI
@@ -254,7 +254,7 @@ perturbagens
 phecode
 phecodes
 phenome
-PhenomeXcan
+phenomexcan
 PhenoPLIER
 phenotypes
 PhiX
@@ -269,7 +269,7 @@ polybrene
 polygenic
 Polymerase
 polymyalgia
-predixcan
+PrediXcan
 preprocessed
 preprocessing
 probit
@@ -299,7 +299,7 @@ repurposing
 resampled
 restimulated
 resuspended
-reticulocyte
+Reticulocyte
 revascularizations
 rheumatica
 Risman
@@ -361,7 +361,7 @@ thrombophlebitis
 titer
 titrated
 transcriptional
-Transcriptome
+transcriptome
 transcriptomes
 transcriptomic
 transduced
@@ -374,7 +374,7 @@ typhimurium
 UBE
 ug
 Ulcerative
-umap
+UMAP
 unadjusted
 univariate
 Vagelos

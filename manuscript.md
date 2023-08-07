@@ -8,7 +8,7 @@ keywords:
 - drug repurposing
 - clustering of complex traits
 lang: en-US
-date-meta: '2023-08-04'
+date-meta: '2023-08-07'
 author-meta:
 - Milton Pividori
 - Sumei Lu
@@ -38,11 +38,11 @@ header-includes: |
   <meta name="citation_title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="og:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
   <meta property="twitter:title" content="Projecting genetic associations through gene expression patterns highlights disease etiology and drug mechanisms" />
-  <meta name="dc.date" content="2023-08-04" />
-  <meta name="citation_publication_date" content="2023-08-04" />
-  <meta property="article:published_time" content="2023-08-04" />
-  <meta name="dc.modified" content="2023-08-04T18:12:17+00:00" />
-  <meta property="article:modified_time" content="2023-08-04T18:12:17+00:00" />
+  <meta name="dc.date" content="2023-08-07" />
+  <meta name="citation_publication_date" content="2023-08-07" />
+  <meta property="article:published_time" content="2023-08-07" />
+  <meta name="dc.modified" content="2023-08-07T22:20:43+00:00" />
+  <meta property="article:modified_time" content="2023-08-07T22:20:43+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -50,6 +50,7 @@ header-includes: |
   <meta name="citation_journal_title" content="Manubot" />
   <meta name="citation_technical_report_institution" content="Manubot" />
   <meta name="citation_author" content="Milton Pividori" />
+  <meta name="citation_author_institution" content="Department of Biomedical Informatics, University of Colorado School of Medicine, Aurora, CO 80045, USA" />
   <meta name="citation_author_institution" content="Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
   <meta name="citation_author_orcid" content="0000-0002-3035-4403" />
   <meta name="twitter:creator" content="@miltondp" />
@@ -116,9 +117,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/phenoplier_manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/phenoplier_manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/01398b0990ea0f8bbdbb98e79c0585e2d905a51f/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/01398b0990ea0f8bbdbb98e79c0585e2d905a51f/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/01398b0990ea0f8bbdbb98e79c0585e2d905a51f/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/phenoplier_manuscript/v/7d34cc190bee376f82f2953a49129aabf320602c/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/7d34cc190bee376f82f2953a49129aabf320602c/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/phenoplier_manuscript/v/7d34cc190bee376f82f2953a49129aabf320602c/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -140,10 +141,10 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 <!-- 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/phenoplier_manuscript/v/01398b0990ea0f8bbdbb98e79c0585e2d905a51f/))
+([permalink](https://greenelab.github.io/phenoplier_manuscript/v/7d34cc190bee376f82f2953a49129aabf320602c/))
 was automatically generated
-from [greenelab/phenoplier_manuscript@01398b0](https://github.com/greenelab/phenoplier_manuscript/tree/01398b0990ea0f8bbdbb98e79c0585e2d905a51f)
-on August 4, 2023.
+from [greenelab/phenoplier_manuscript@7d34cc1](https://github.com/greenelab/phenoplier_manuscript/tree/7d34cc190bee376f82f2953a49129aabf320602c)
+on August 7, 2023.
 </em></small> -->
 
 
@@ -164,7 +165,7 @@ on August 4, 2023.
     [\@miltondp@genomic.social](https://genomic.social/@miltondp)
     <br>
   <small>
-     Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
+     Department of Biomedical Informatics, University of Colorado School of Medicine, Aurora, CO 80045, USA; Department of Genetics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
      · Funded by The Gordon and Betty Moore Foundation GBMF 4552; The National Human Genome Research Institute (R01 HG010067); The National Human Genome Research Institute (K99HG011898); The Eunice Kennedy Shriver National Institute of Child Health and Human Development (R01 HD109765)
   </small>
 
