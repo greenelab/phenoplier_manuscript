@@ -28,7 +28,7 @@ Behmel
 Benecol
 Benjamini
 Binglan
-Biobank
+BioBank
 Bioconductor
 biomechanics
 BioRender
@@ -113,7 +113,7 @@ fastENLOC
 FBS
 FBXW
 Feng
-fgsea
+FGSEA
 fibroblasts
 FlowJo
 func
@@ -155,7 +155,7 @@ Hochberg
 HSV
 HTN
 HWE
-hypercholesterolemia
+Hypercholesterolemia
 Hyperlipidemia
 hypoxia
 IBD
@@ -164,7 +164,7 @@ ICD
 IDT
 IFNa
 Iftikhar
-illumina
+Illumina
 INSIG
 INTEGRIN
 interpretability
@@ -233,10 +233,10 @@ neurodegenerative
 neurodevelopmental
 neuropsychiatric
 neutrophil
-neutrophils
+Neutrophils
 NFAT
 NHGRI
-Nicotinic
+nicotinic
 NMR
 numpy
 oC
@@ -251,10 +251,10 @@ PCA
 PCR
 PCYT
 perturbagens
-Phecode
+phecode
 phecodes
 phenome
-PhenomeXcan
+phenomexcan
 PhenoPLIER
 phenotypes
 PhiX
@@ -299,13 +299,13 @@ repurposing
 resampled
 restimulated
 resuspended
-reticulocyte
+Reticulocyte
 revascularizations
 rheumatica
 Risman
 Ritchie
 RO
-ROC
+roc
 rosuvastatin
 runtime
 Salm
@@ -361,7 +361,7 @@ thrombophlebitis
 titer
 titrated
 transcriptional
-Transcriptome
+transcriptome
 transcriptomes
 transcriptomic
 transduced
@@ -374,7 +374,7 @@ typhimurium
 UBE
 ug
 Ulcerative
-UMAP
+umap
 unadjusted
 univariate
 Vagelos
